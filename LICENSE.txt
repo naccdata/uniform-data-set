@@ -1,3 +1,3 @@
-All REDCap documents contain copyrighted materials whose use is restricted under the terms specified on the web page
-https://naccdata.org/data-collection/guidelines-copyright
+The documents in this repository contain copyrighted materials whose use is restricted under the terms specified on the web page
+https://naccdata.org/data-collection/guidelines-copyright.
 
