@@ -10,9 +10,10 @@ For details on working in the browser, see
 
 > Note: When you are done with your edits, under **Commit Changes** you should edit the commit message, and then choose "Create a new branch for this commit and start a pull request"
 
-It is easiest to manage documents as Markdown, which is indicated by a file with a `.md` extension. 
-These files will need to use the [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-format.
+Create new documents as Markdown files (a file with a `.md` extension) in the `docs` directory.
+Use the [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+format to make sure they display correctly on the site.
+
 More detail on writing documentation on GitHub is available under **Writing on GitHub** in the GitHub [Get Started](https://docs.github.com/en/get-started) docs.
 
 ## Forms
