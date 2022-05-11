@@ -27,6 +27,23 @@ To get your local copy (aka, clone) of this repository, do the following:
 2. Choose a directory where you want to have your local copy of this repository.
 2. [Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
+## Forms
+
+The artifacts for different form sets are located in the `forms` directory.
+
+```bash
+.
+└── forms
+    ├── bds
+    ├── cls
+    ├── covid
+    ├── ds
+    ├── ftld
+    ├── lbd
+    ├── np
+    └── uds
+```
+
 ## Contributing
 
 You can contribute to this project in a few ways:
