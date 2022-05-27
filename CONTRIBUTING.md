@@ -36,6 +36,54 @@ To edit a document in a branch
 
 ## Forms
 
+Each form set is broken out into individual instruments for each form. 
+For instance, the Down Syndrome module has five forms and the corresponding directory structure is
+
+```bash
+forms/ds
+├── a1d
+├── b1d
+├── b2d
+├── c1d
+└── d1d
+```
+
+where each directory contains the exported instrument for the form.
+
+### Adding/Updating an individual instrument
+
+Before adding or updating a new instrument, create a new branch with an appropriate name using Git.
+For instance, to add the initial A1D form for the Down Syndrome module, we could use
+
+```bash
+git checkout -b add-initial-ds-a1d
+```
+
+To export an individual instrument in REDCap
+
+1. Open the Designer
+2. For the instrument you want to export, click the `Choose action` dropdown next to the instrument, and select `Download instrument ZIP`.
+
+This will save the downloaded file to the default location for your browser and OS settings.
+
+On a Mac with the default settings, the file will be unzipped and saved in your `Downloads` directory with a name corresponding to the instrument name (e.g., `Downloads/FormA1dParticipantHe_2022-05-27_0749`).
+In this case, to move the file into the repository 
+
+1. Make sure there is a directory for your instrument.
+   For A1D of Down Syndrome module, this should be a directory `forms/ds/a1d`.
+   All of these should already exist, but if not you can create the directory.
+   If you aren't sure how, please ask.
+2. Copy the file into the instrument directory.
+   For A1D, the command would be `cp ~/Downloads/FormA1dParticipantHe_2022-05-27_0749/*.* forms/ds/a1d`
+3. Commit your changes and then push the branch to GitHub.
+
+
+On a Windows machine, ...
+
+
+
 ## Tools
 
+NACC leadership needs to choose a license.
+Please make sure the code license is established in the repository before adding code.
 
