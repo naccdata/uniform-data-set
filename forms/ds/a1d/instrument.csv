@@ -1,11 +1,12 @@
 "Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+a1d_instructions,form_a1d_participant_health_history,,descriptive,"INSTRUCTIONS: This form is to be completed by intake interviewer based on ADC scheduling records, subject interview, medical records, and proxy co-participant report (as needed). For additional clarification and examples, see Down Syndrome Module Coding Guidebook for Initial Visit Packet, Form A1D. Check only one box per question. ",,,,,,,,,,,,,
 dsdayprg,form_a1d_participant_health_history,"What are the participant's weekday activities?",radio,"Day program","0, No | 1, Yes | 9, Unknown",,,,,,,y,,1a,activities,,
 dswrkshp,form_a1d_participant_health_history,,radio,Workshops,"0, No | 1, Yes | 9, Unknown",,,,,,,y,,1b,activities,,
 dshome,form_a1d_participant_health_history,,radio,"Stays at home","0, No | 1, Yes | 9, Unknown",,,,,,,y,,1c,activities,,
 dsjob,form_a1d_participant_health_history,,radio,"Community paid job","0, No | 1, Yes | 9, Unknown",,,,,,,y,,1d,activities,,
 dsothac,form_a1d_participant_health_history,,radio,Other,"0, No | 1, Yes | 9, Unknown",,,,,,,y,,1e,activities,,
 dsothacx,form_a1d_participant_health_history,,text,"Other weekday activity: Specify",,,,,,,"[dsothac] = ""1""",y,,1e.1,,,
-dsmomage,form_a1d_participant_health_history,,text,"Age of participant's mother at participant's birth",,"10-60; 999=unknown",integer,0,999,,,y,,2,,,
+dsmomage,form_a1d_participant_health_history,,text,"Age of participant's mother at participant's birth",,"10-60; 999=unknown",integer,10,999,,,y,,2,,,
 dsmomage_warning,form_a1d_participant_health_history,,descriptive,"<div class=""rich-text-field-label""><p><span style=""color: #e03e2d;"">Invalid age - must be between 10 and 60. Enter 999 if unknown.</span></p></div>",,,,,,,"[dsmomage] <10 or ([dsmomage] >60 and [dsmomage] != 999)",,,,,,
 dschdasd,form_a1d_participant_health_history,,radio,"Congenital heart disease - atrial septal defect","0, Absent | 1, Present - resolved | 2, Present - repaired | 3, Present - unrepaired | 9, Unknown",,,,,,,y,,3,,,
 dschdvsd,form_a1d_participant_health_history,,radio,"Congenital heart disease - ventricular septal defect","0, Absent | 1, Present - resolved | 2, Present - repaired | 3, Present - unrepaired | 9, Unknown",,,,,,,y,,4,,,
@@ -24,17 +25,17 @@ dsosteo,form_a1d_participant_health_history,,radio,"Musculoskeletal conditions -
 dsgout,form_a1d_participant_health_history,,radio,"Musculoskeletal conditions - gout","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",,,,,,,y,,16,,,
 dsataxsu,form_a1d_participant_health_history,,radio,"Musculoskeletal conditions - atlanto-axial subluxation","0, Absent | 1, Present | 9, Unknown",,,,,,,y,,17,,,
 dsfract,form_a1d_participant_health_history,,radio,"Musculoskeletal conditions - fractures in the past five years","0, No | 1, Yes {dsfractx} | 9, Unknown",,,,,,,y,,18,,,
-dsfractx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsfract] = ""1""",y,,18a,,,
+dsfractx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsfract] = ""1""",y,,18a,,," @PLACEHOLDER='Specify'"
 dshypoth,form_a1d_participant_health_history,,radio,"Endocrine/metabolic conditions - hypothyroidism","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",,,,,,,y,,19,,,
 dshashim,form_a1d_participant_health_history,,radio,"Endocrine/metabolic conditions - Hashimoto's thyroiditis","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",,,,,,,y,,20,,,
 dshyper,form_a1d_participant_health_history,,radio,"Endocrine/metabolic conditions - hyperthyroidism","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",,,,,,,y,,21,,,
 dsthymed,form_a1d_participant_health_history,,radio,"Endocrine/metabolic conditions - currently on thyroid replacement medication","0, No | 1, Yes {dsthymex} | 9, Unknown",,,,,,,y,,22,,,
-dsthymex,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsthymed] = '1'",y,,22a,,,
+dsthymex,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsthymed] = '1'",y,,22a,,," @PLACEHOLDER='Specify'"
 dsvddef,form_a1d_participant_health_history,,radio,"Endocrine/metabolic conditions - vitamin D deficiency","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",,,,,,,y,,23,,,
 dsmenstr,form_a1d_participant_health_history,,radio,"Menstrual history - has the participant ever menstruated?","0, No | 1, Yes, active | 2, Yes, menopausal | 9, Unknown/not applicable",,,,,,,y,,24,,,
-dsmnsage,form_a1d_participant_health_history,,text,"Menstrual history - age of onset of menses",,"8-20; 888=not applicable, 999=unknown",integer,0,999,,,y,,25,,,
+dsmnsage,form_a1d_participant_health_history,,text,"Menstrual history - age of onset of menses",,"8-20; 888=not applicable, 999=unknown",integer,8,999,,,y,,25,,,
 dsmnsage_warning,form_a1d_participant_health_history,,descriptive,"<div class=""rich-text-field-label""><p><span style=""color: #e03e2d;"">Invalid age - must be between 8 and 20. Enter 888 if not applicable or 999 if unknown.</span></p></div>",,,,,,,"[dsmnsage] <8 or ([dsmnsage] >20 and [dsmnsage] != 888 and [dsmnsage] != 999)",,,,,,
-dsmnpage,form_a1d_participant_health_history,,text,"Menstrual history - age of onset of menopause",,"20-65; 888=not applicable, 999=unknown",integer,0,999,,,y,,26,,,
+dsmnpage,form_a1d_participant_health_history,,text,"Menstrual history - age of onset of menopause",,"20-65; 888=not applicable, 999=unknown",integer,20,999,,,y,,26,,,
 dsmnpage_warning,form_a1d_participant_health_history,,descriptive,"<div class=""rich-text-field-label""><p><span style=""color: #e03e2d;"">Invalid age - must be between 20 and 65. Enter 888 if not applicable or 999 if unknown.</span></p></div>",,,,,,,"[dsmnpage] <20 or ([dsmnpage] >65 and [dsmnpage] != 888 and [dsmnpage] != 999)",,,,,,
 dshrt,form_a1d_participant_health_history,,radio,"Hormone replacement therapy - has the participant received HRT?","0, No | 1, Yes | 9, Unknown",,,,,,,y,,27,,,
 dsagehrt,form_a1d_participant_health_history,,text,"Hormone replacement therapy - at what age did HRT begin?",,"0-110; 888=not applicable, 999=unknown",integer,0,999,,,y,,28,,,
@@ -45,30 +46,30 @@ dsaniron,form_a1d_participant_health_history,,radio,"Hematopoietic/lymphatic dis
 dsanfol,form_a1d_participant_health_history,,radio,"Hematopoietic/lymphatic disease - anemia with folate deficiency","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",,,,,,,y,,32,,,
 dslupus,form_a1d_participant_health_history,,radio,"Autoimmune conditions - lupus","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",,,,,,,y,,33,,,
 dsntrpn,form_a1d_participant_health_history,,radio,"Autoimmune conditions - chronic neutropenia","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",,,,,,,y,,34,,,
-dstumor,form_a1d_participant_health_history,,radio,"Cancer - solid tumor","0, No | 1, Yes (specify primary site) {dstumorx} | 9, Unknown",,,,,,,y,,35,,,
-dstumorx,form_a1d_participant_health_history,,text,"Specify primary site",,,,,,,"[dstumor] = '1'",y,,35a,,,
+dstumor,form_a1d_participant_health_history,,radio,"Cancer - solid tumor","0, No | 1, Yes {dstumorx} | 9, Unknown",,,,,,,y,,35,,,
+dstumorx,form_a1d_participant_health_history,,text,"Specify primary site",,,,,,,"[dstumor] = '1'",y,,35a,,," @PLACEHOLDER='specify primary site'"
 dsleukem,form_a1d_participant_health_history,,radio,"Cancer - leukemia","0, No | 1, Yes, childhood transient myeloproliferative disorder | 2, Yes, childhood leukemia | 3, Yes, adult onset leukemia | 9, Unknown",,,,,,,y,,36,,,
 dshrtrpr,form_a1d_participant_health_history,,radio,"Major surgical procedures - congenital heart-defect repair","0, No | 1, Yes {dshrtrpx} | 9, Unknown",,,,,,,y,,37,,,
-dshrtrpx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dshrtrpr] = '1'",y,,37.1,,,
+dshrtrpx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dshrtrpr] = '1'",y,,37.1,,," @PLACEHOLDER='Specify'"
 dshrtryr,form_a1d_participant_health_history,,text,"Year of most recent congenital heart-defect repair",,9999=unknown,integer,1900,9999,,"[dshrtrpr] = '1'",y,,37a,,,
 dscrdsrg,form_a1d_participant_health_history,,radio,"Major surgical procedures - adult cardiac surgery","0, No | 1, Yes {dscrdsrx} | 9, Unknown",,,,,,,y,,38,,,
-dscrdsrx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dscrdsrg] = '1'",y,,38.1,,,
+dscrdsrx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dscrdsrg] = '1'",y,,38.1,,," @PLACEHOLDER='Specify'"
 dscrdsyr,form_a1d_participant_health_history,,text,"Year of most recent adult cardiac surgery",,9999=unknown,integer,1900,9999,,"[dscrdsrg] = '1'",y,,38a,,,
 dsspin,form_a1d_participant_health_history,,radio,"Major surgical procedures - spinal surgery","0, No | 1, Yes {dsspinx} | 9, Unknown",,,,,,,y,,39,,,
-dsspinx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsspin] = '1'",y,,39.1,,,
+dsspinx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsspin] = '1'",y,,39.1,,," @PLACEHOLDER='Specify'"
 dsspinyr,form_a1d_participant_health_history,,text,"Year of most recent spinal surgery",,9999=unknown,integer,1900,9999,,"[dsspin] = '1'",y,,39a,,,
 dslworth,form_a1d_participant_health_history,,radio,"Major surgical procedures - lower-extremity orthopedic surgery","0, No | 1, Yes {dslwortx} | 9, Unknown",,,,,,,y,,40,,,
-dslwortx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dslworth] = '1'",y,,40.1,,,
+dslwortx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dslworth] = '1'",y,,40.1,,," @PLACEHOLDER='Specify'"
 dslworyr,form_a1d_participant_health_history,,text,"Year of most recent lower-extremity orthopedic surgery",,9999=unknown,integer,1900,9999,,"[dslworth] = '1'",y,,40a,,,
 dsuporth,form_a1d_participant_health_history,,radio,"Major surgical procedures - upper-extremity orthopedic surgery","0, No | 1, Yes {dsuportx} | 9, Unknown",,,,,,,y,,41,,,
-dsuportx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsuporth] = '1'",y,,41.1,,,
+dsuportx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsuporth] = '1'",y,,41.1,,," @PLACEHOLDER='Specify'"
 dsuporyr,form_a1d_participant_health_history,,text,"Year of most recent upper-extremity orthopedic surgery",,9999=unknown,integer,1900,9999,,"[dsuporth] = '1'",y,,41a,,,
 dsthysrg,form_a1d_participant_health_history,,radio,"Major surgical procedures - thyroid surgery","0, No | 1, Yes {dsthysrx} | 9, Unknown",,,,,,,y,,42,,,
-dsthysrx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsthysrg] = '1'",y,,42.1,,,
+dsthysrx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsthysrg] = '1'",y,,42.1,,," @PLACEHOLDER='Specify'"
 dsthysyr,form_a1d_participant_health_history,,text,"Year of most recent thyroid surgery",,9999=unknown,integer,1900,9999,,"[dsthysrg] = '1'",y,,42a,,,
 dsoncsrg,form_a1d_participant_health_history,,radio,"Major surgical procedures - oncology surgery","0, No | 1, Yes {dsoncsrx} | 9, Unknown",,,,,,,y,,43,,,
-dsoncsrx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsoncsrg] = '1'",y,,43.1,,,
+dsoncsrx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsoncsrg] = '1'",y,,43.1,,," @PLACEHOLDER='Specify'"
 dsoncsyr,form_a1d_participant_health_history,,text,"Year of most recent oncology surgery",,9999=unknown,integer,1900,9999,,"[dsoncsrg] = '1'",y,,43a,,,
 dsothsrg,form_a1d_participant_health_history,,radio,"Major surgical procedures - other surgery","0, No | 1, Yes {dsothsrx} | 9, Unknown",,,,,,,y,,44,,,
-dsothsrx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsothsrg] = '1'",y,,44.1,,,
+dsothsrx,form_a1d_participant_health_history,,text,Specify,,,,,,,"[dsothsrg] = '1'",y,,44.1,,," @PLACEHOLDER='Specify'"
 dsothsyr,form_a1d_participant_health_history,,text,"Year of most recent other surgery",,9999=unknown,integer,1900,9999,,"[dsothsrg] = '1'",y,,44a,,,
