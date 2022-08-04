@@ -1,0 +1,7 @@
+# this directory is used as the pfish config directory when using the
+# dev container in vscode.
+
+# Ignore the actual config files 
+*
+# but keep this file to include the directory
+!.gitignore

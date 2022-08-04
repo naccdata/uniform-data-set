@@ -1,0 +1,55 @@
+#!/bin/sh
+
+# rcpull
+# A wrapper script for invoking rcpull with docker
+# Put this script in $PATH as `rcpull`
+#
+# Inspired by https://spin.atomicobject.com/2015/11/30/command-line-tools-docker/
+
+PROGNAME="$(basename $0)"
+
+VERSION="1.2.1"
+
+# Helper functions for guards
+error(){
+  error_code=$1
+  echo "ERROR: $2" >&2
+  echo "($PROGNAME wrapper version: $VERSION, error code: $error_code )" &>2
+  exit $1
+}
+check_cmd_in_path(){
+  cmd=$1
+  which $cmd > /dev/null 2>&1 || error 1 "$cmd not found!"
+}
+
+# Guards (checks for dependencies)
+check_cmd_in_path docker
+#check_cmd_in_path docker-machine
+#docker-machine active > /dev/null 2>&1 || error 2 "No active docker-machine VM found."
+
+# ensure a configuration directory
+CONFIG_DIR=$HOME/.rcpull
+mkdir -p $CONFIG_DIR
+
+if [ "$#" -eq 0 ]; then
+  echo "Expected one or more arguments\nFor more details, run\n rcpull --help" >&2
+elif [ $1 = "update" ]; then
+  echo "Updating rcpull v.$VERSION (see: https://github.com/naccdata/rcpull#updating)"
+  exec docker pull "naccdata/rcpull:$VERSION"
+elif [ $1 = "version" ]; then
+  echo "rcpull version " $VERSION
+else
+  # Set up mounted volumes, environment, and run containerized rcpull script:
+  # - use host network
+  # - run interactively
+  # - mount current working directory as working directory in container
+  # - mount user .rcpull directory as config directory in container
+  # - set container working directory
+  exec docker run \
+    --net=host \
+    --interactive --tty --rm \
+    --volume "$PWD":/wd \
+    --volume "$CONFIG_DIR:/script/config" \
+    --workdir /wd \
+    "naccdata/rcpull:$VERSION" "$@"
+fi
