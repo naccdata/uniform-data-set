@@ -53,10 +53,9 @@ To **modify** a document in a branch
 
 ## Forms
 
-### Adding forms
 Forms are stored in a directory for each form set.
-This directory contains the XML export
-and data dictionary for the REDCap project, along with subdirectories for each instrument of the project.
+This directory contains the XML export and data dictionary for the REDCap project, 
+along with subdirectories for each instrument of the project.
 These instruments correspond to the individual forms and any other instruments in the project.
 
 For instance, the Down Syndrome project looks like
@@ -85,6 +84,28 @@ forms/ds
 
 plus any documentation files that accompany the form.
 These may include form PDFs, and quality rules for the form in a CSV.
+
+### Adding forms
+
+To add a new form set, follow the Git workflow to create and switch into a new 
+branch with a name that indicates which forms are being added.
+
+1. If it does not already exist, create a directory for the form set, use a 
+   lowercase abbreviation for the name.
+   Examples of existing names are `ds` for the Down Syndrome Module, and `uds` 
+   for the UDS.
+2. If a REDCap project for the forms already exists, export both the XML and
+   data dictionary (CSV) for the project and place them in the top directory.
+   Then export each individual instrument and add the exported files to the 
+   directory.
+   Instruments are exported as zip files, which will uncompress to a directory.
+   Move this directory into the form set directory and rename to the (lowercase)
+   name of the form.
+3. Add and commit the new files to the branch.
+
+> Note: if at any point you have a directory that doesn't have any contents,
+add an empty file named `.gitkeep` to the directory and commit the file
+
 
 ## Tools
 
