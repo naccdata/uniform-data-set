@@ -1,3 +1,4 @@
+"""Module of methods to manage paths and directories"""
 import os
 
 
