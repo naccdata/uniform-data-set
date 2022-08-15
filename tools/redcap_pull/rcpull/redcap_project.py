@@ -8,6 +8,7 @@ import os
 import re
 
 from paths import makedirectory
+from redcap_connection import REDCapConnectionError
 
 def pull(*, reader, project_path: str) -> None:
     """Implements pull actions for the named project.
@@ -16,25 +17,37 @@ def pull(*, reader, project_path: str) -> None:
       project_path - the local path to project
       project_name - the project key
     """
-    # TODO: handle exception
-    metadata = create_project_metadata(reader=reader,
-                                       project_path=project_path)
-    write_file(path=project_path,
-               filename="project.json",
-               content=json.dumps(metadata, indent=2))
+    try:
+        metadata = create_project_metadata(reader=reader,
+                                          project_path=project_path)
+    except REDCapConnectionError as error:
+        logging.error("Could not retrieve project information\n%s", error)
+        return
 
+    write_file(path=project_path,
+            filename="project.json",
+            content=json.dumps(metadata, indent=2))
     project_name = metadata['title'].replace(' ', '')
-    # TODO: handle exception
-    project_xml = reader.get_project_xml()
-    write_file(path=project_path,
-               filename=f"{project_name}_project.xml",
-               content=project_xml)
 
-    # TODO: handle exception
-    project_data_dictionary = reader.get_data_dictionary()
+    try:
+        project_xml = reader.get_project_xml()
+    except REDCapConnectionError as error:
+        logging.error("Could not retrieve project XML\n%s", error)
+        return
+
     write_file(path=project_path,
-               filename=f"{project_name}_data_dictionary.csv",
-               content=project_data_dictionary)
+            filename=f"{project_name}_project.xml",
+            content=project_xml)
+
+    try:
+        project_data_dictionary = reader.get_data_dictionary()
+    except REDCapConnectionError as error:
+        logging.error("Could not retrieve project information\n%s", error)
+        return
+
+    write_file(path=project_path,
+            filename=f"{project_name}_data_dictionary.csv",
+            content=project_data_dictionary)
 
     for instrument in metadata['instruments'].values():
         pull_instrument(reader=reader,
@@ -51,8 +64,12 @@ def pull_instrument(*, reader, name: str, path: str) -> None:
       path: the local path for writing instrument files.
     """
     logging.info("Pulling instrument %s to directory %s", name, path)
-    # TODO: handle exception
-    data_dictionary = reader.get_data_dictionary(form=name)
+    try:
+        data_dictionary = reader.get_data_dictionary(form=name)
+    except REDCapConnectionError as error:
+        logging.error("Unable to pull instrument %s\n%s", name, error)
+        return
+
     write_file(path=path, filename="instrument.csv", content=data_dictionary)
     #TODO: need settings.csv content
 
@@ -102,10 +119,8 @@ def create_project_metadata(*, reader, project_path: str) -> Mapping[str, Any]:
       REDCapConnectionError if requests fail.
     """
     directories = list_directories(project_path)
-    # TODO: handle exception
     project_info = reader.get_project_info()
     metadata = {'title': project_info['project_title'], 'instruments': {}}
-    # TODO: handle exception
     instruments = reader.get_instruments()
     matching_names = match_instrument_directories(instrument_list=instruments,
                                                   directory_list=directories)
@@ -168,7 +183,7 @@ def match_instrument_directories(*, instrument_list: List[Mapping[str, str]],
       directory_list: the list of directories
 
     Returns:
-      Map of instrument names to lists of matching directory names
+      Map of instrument names to lists of matching directory namess
     """
     instrument_map = dict()
     for instrument in instrument_list:
