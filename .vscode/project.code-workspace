@@ -1,0 +1,15 @@
+{
+    "folders": [
+        {
+            "name": "ROOT",
+            "path": "../"
+        },
+        {
+            "name": "tools/redcap_pull",
+            "path": "../tools/redcap_pull"
+        }
+    ],
+    "settings": {
+
+    }
+}
