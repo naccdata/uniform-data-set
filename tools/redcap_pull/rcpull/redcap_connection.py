@@ -109,6 +109,12 @@ class REDCapConnectionError(Exception):
         self._error = error
         self._message = message
 
+    def __str__(self) -> str:
+        if self.error:
+            return f"{self.message}\n{self.error}"
+
+        return self.message
+
     @property
     def error(self):
         """The exception causing this error."""
