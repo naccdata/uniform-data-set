@@ -59,5 +59,7 @@
 
 	"mounts": [
 		"source=${localEnv:FORMPATH},target=/home/vscode/forms,type=bind,consistency=cached"
-	]
+	],
+
+	"runArgs": ["--net=host"]
 }
