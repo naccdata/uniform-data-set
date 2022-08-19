@@ -1,6 +1,23 @@
 # Contributing
 
+## Git workflow
+
+In limited scenarios, you can add or edit files on GitHub, but in general you will need to [use Git](https://docs.github.com/en/get-started/using-git) to manage your changes and share them to the repository.
+An [example of contributing to an existing repository](https://docs.github.com/en/get-started/using-git/about-git#example-contribute-to-an-existing-repository) is given in those documents.
+
+The steps there are:
+1. Clone the repository and change into the directory.
+2. Create a new branch for your changes.
+3. Switch to the new branch.
+4. Make whatever changes are needed.
+5. Add the changes to the branch.
+6. Commit the changes.
+7. Push the branch to GitHub.
+
+
 ## Documentation
+
+Documentation is stored in the `docs` directory.
 
 ### Creating/Editing Markdown Documentation
 You can do this either with a local clone, or by creating and editing files directly in the browser.
@@ -19,15 +36,15 @@ More detail on writing documentation on GitHub is available under **Writing on G
 
 ### Using Word files
 
-To add or edit Word documents, you will need to create a local clone.
+To add or modify Word documents, you will need to follow the Git workflow above.
 
-To add a document
+To **add** a document
 
-1. Create a new branch with a descriptive name for the addition.
-2. Place your document in the `docs` directory of this repo.
+1. Create and switch to a new branch with a descriptive name for the addition.
+2. Place your document in the `docs` directory of this repository.
 3. Add the document with git, commit the changes, and push the branch.
 
-To edit a document in a branch
+To **modify** a document in a branch
 
 1. Checkout the branch
 2. Open the word document from the docs directory in your clone, and save your work

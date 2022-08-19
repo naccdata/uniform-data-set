@@ -20,7 +20,7 @@ This project does not yet have any releases.
 To work on/with this project, you will need to get a copy of the files in the repository.
 You do this using [git](https://git-scm.com).
 
-If you are completely new to git and GitHub, there are are a number of online resources but a good place to start for this project is [Using Git](https://docs.github.com/en/get-started/using-git) in the [GitHub Docs](https://docs.github.com/).
+If you are completely new to git and GitHub, there are are a number of online resources, but a good place to start for this project is [Using Git](https://docs.github.com/en/get-started/using-git) in the [GitHub Docs](https://docs.github.com/).
 
 To get your local copy (aka, clone) of this repository, do the following:
 1. [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git).
