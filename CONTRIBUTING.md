@@ -53,60 +53,54 @@ To **modify** a document in a branch
 
 ## Forms
 
-Forms are stored in a directory for each form set.
-This directory contains the XML export and data dictionary for the REDCap project, 
-along with subdirectories for each instrument of the project.
-These instruments correspond to the individual forms and any other instruments in the project.
-
-For instance, the Down Syndrome project looks like
+Each form set is broken out into individual instruments for each form. 
+For instance, the Down Syndrome module has five forms and the corresponding directory structure is
 
 ```bash
 forms/ds
-├── DownSyndromeModule.REDCap.xml
-├── DownSyndromeModule_data_dictionary.csv
 ├── a1d
 ├── b1d
 ├── b2d
 ├── c1d
-├── d1d
-└── formheader
+└── d1d
 ```
 
-The directory for each instrument contains the exported instrument files
+where each directory contains the exported instrument for the form.
+
+### Adding/Updating an individual instrument
+
+Before adding or updating a new instrument, create a new branch with an appropriate name using Git.
+For instance, to add the initial A1D form for the Down Syndrome module, we could use
 
 ```bash
-forms/ds
-└── a1d
-    ├── OriginID.txt
-    ├── instrument.csv
-    └── survey_settings.csv
+git checkout -b add-initial-ds-a1d
 ```
 
-plus any documentation files that accompany the form.
-These may include form PDFs, and quality rules for the form in a CSV.
+To export an individual instrument in REDCap
 
-### Adding forms
+1. Open the Designer
+2. For the instrument you want to export, click the `Choose action` dropdown next to the instrument, and select `Download instrument ZIP`.
 
-To add a new form set, follow the Git workflow to create and switch into a new 
-branch with a name that indicates which forms are being added.
+This will save the downloaded file to the default location for your browser and OS settings.
 
-1. If it does not already exist, create a directory for the form set, use a 
-   lowercase abbreviation for the name.
-   Examples of existing names are `ds` for the Down Syndrome Module, and `uds` 
-   for the UDS.
-2. If a REDCap project for the forms already exists, export both the XML and
-   data dictionary (CSV) for the project and place them in the top directory.
-   Then export each individual instrument and add the exported files to the 
-   directory.
-   Instruments are exported as zip files, which will uncompress to a directory.
-   Move this directory into the form set directory and rename to the (lowercase)
-   name of the form.
-3. Add and commit the new files to the branch.
+On a Mac with the default settings, the file will be unzipped and saved in your `Downloads` directory with a name corresponding to the instrument name (e.g., `Downloads/FormA1dParticipantHe_2022-05-27_0749`).
+In this case, to move the file into the repository 
 
-> Note: if at any point you have a directory that doesn't have any contents,
-add an empty file named `.gitkeep` to the directory and commit the file
+1. Make sure there is a directory for your instrument.
+   For A1D of Down Syndrome module, this should be a directory `forms/ds/a1d`.
+   All of these should already exist, but if not you can create the directory.
+   If you aren't sure how, please ask.
+2. Copy the file into the instrument directory.
+   For A1D, the command would be `cp ~/Downloads/FormA1dParticipantHe_2022-05-27_0749/*.* forms/ds/a1d`
+3. Commit your changes and then push the branch to GitHub.
+
+
+On a Windows machine, ...
+
 
 
 ## Tools
 
+NACC leadership needs to choose a license.
+Please make sure the code license is established in the repository before adding code.
 
