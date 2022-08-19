@@ -14,7 +14,6 @@ The steps there are:
 6. Commit the changes.
 7. Push the branch to GitHub.
 
-
 ## Documentation
 
 Documentation is stored in the `docs` directory.
@@ -31,6 +30,8 @@ For details on working in the browser, see
 Create new documents as Markdown files (a file with a `.md` extension) in the `docs` directory.
 Use the [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 format to make sure they display correctly on the site.
+
+Images should be placed in the `docs/images` directory, and can be included in a markdown document.
 
 More detail on writing documentation on GitHub is available under **Writing on GitHub** in the GitHub [Get Started](https://docs.github.com/en/get-started) docs.
 
@@ -79,24 +80,25 @@ git checkout -b add-initial-ds-a1d
 To export an individual instrument in REDCap
 
 1. Open the Designer
-2. For the instrument you want to export, click the `Choose action` dropdown next to the instrument, and select `Download instrument ZIP`.
+   ![Location of designer link](docs/images/designer.png)
+2. For the instrument you want to export, click the `Choose action` dropdown next to the instrument, 
+   ![Instrument action](docs/images/instrument-action.png)
+   and select `Download instrument ZIP`.
+   ![Download button](docs/images/instrument-download.png)
 
 This will save the downloaded file to the default location for your browser and OS settings.
-
 On a Mac with the default settings, the file will be unzipped and saved in your `Downloads` directory with a name corresponding to the instrument name (e.g., `Downloads/FormA1dParticipantHe_2022-05-27_0749`).
+On a Windows machine, you will likely have to unzip the file using the File Manager.
+
 In this case, to move the file into the repository 
 
 1. Make sure there is a directory for your instrument.
    For A1D of Down Syndrome module, this should be a directory `forms/ds/a1d`.
-   All of these should already exist, but if not you can create the directory.
+   All of these should already exist for most projects, but if not you can create the directory.
    If you aren't sure how, please ask.
 2. Copy the file into the instrument directory.
-   For A1D, the command would be `cp ~/Downloads/FormA1dParticipantHe_2022-05-27_0749/*.* forms/ds/a1d`
+   For A1D, the command on a Mac would be `cp ~/Downloads/FormA1dParticipantHe_2022-05-27_0749/*.* forms/ds/a1d`
 3. Commit your changes and then push the branch to GitHub.
-
-
-On a Windows machine, ...
-
 
 
 ## Tools
