@@ -82,9 +82,9 @@ To export an individual instrument in REDCap
 1. Open the Designer\
    ![Location of designer link](docs/images/designer.png)
 2. For the instrument you want to export, click the `Choose action` dropdown next to the instrument,\ 
-   ![Instrument action](docs/images/instrument-action.png | width=250)
+   <img src="docs/images/instrument-action.png" width=250 >
    and select `Download instrument ZIP`.\
-   ![Download button](docs/images/instrument-download.png | width=250)
+   <img src="docs/images/instrument-download.png" width=250>
 
 This will save the downloaded file to the default location for your browser and OS settings.
 On a Mac with the default settings, the file will be unzipped and saved in your `Downloads` directory with a name corresponding to the instrument name (e.g., `Downloads/FormA1dParticipantHe_2022-05-27_0749`).
