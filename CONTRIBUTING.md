@@ -1,5 +1,17 @@
 # Contributing
 
+## Getting started
+
+To work on/with this project, you will need to get a copy of the files in the repository.
+You do this using [git](https://git-scm.com).
+
+If you are completely new to git and GitHub, there are are a number of online resources, but a good place to start for this project is [Using Git](https://docs.github.com/en/get-started/using-git) in the [GitHub Docs](https://docs.github.com/).
+
+To get your local copy (aka, clone) of this repository, do the following:
+1. [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git).
+2. Choose a directory where you want to have your local copy of this repository.
+2. [Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
 ## Git workflow
 
 In limited scenarios, you can add or edit files on GitHub, but in general you will need to [use Git](https://docs.github.com/en/get-started/using-git) to manage your changes and share them to the repository.
