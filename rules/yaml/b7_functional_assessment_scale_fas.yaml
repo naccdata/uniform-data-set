@@ -1,0 +1,294 @@
+bills:
+  type: integer
+  required: true
+  #BILLS must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  #List of longitudinal checks
+  temporalrules:
+    #Specify the variable name to order the records
+    orderby: visit_date
+    constraints:
+      #BILLS=3 (dependent) at one visit and then BILLS=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #BILLS=8 (Not applicable/Never did) at a follow-up visit but BILLS was =0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+taxes:
+  type: integer
+  required: true
+  #TAXES must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  temporalrules:
+    orderby: visit_date
+    constraints:
+      #TAXES=3 (dependent) at one visit and then TAXES=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #TAXES=8 (Not applicable/Never did) at a follow-up visit but TAXES was =0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+shopping:
+  type: integer
+  required: true
+  #SHOPPING must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  temporalrules:
+    orderby: visit_date
+    constraints:
+      #SHOPPING=3 (dependent) at one visit and then SHOPPING=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #SHOPPING=8 (Not applicable/Never did) at a follow-up visit but SHOPPING was =0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+games:
+  type: integer
+  required: true
+  #GAMES must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  temporalrules:
+    orderby: visit_date
+    constraints:
+      #GAMES=3 (dependent) at one visit and then GAMES=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #GAMES=8 (Not applicable/Never did) at a follow-up visit but GAMES was =0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+stove:
+  type: integer
+  required: true
+  #STOVE must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  temporalrules:
+    orderby: visit_date
+    constraints:
+      #STOVE=3 (dependent) at one visit and then STOVE=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #STOVE=8 (Not applicable/Never did) at a follow-up visit but STOVE was =0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+mealprep:
+  type: integer
+  required: true
+  #MEALPREP must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  #List of compatibility checks
+  compatibility:
+    #IF STOVE=0 (normal), MEALPREP should not =3 (dependent)
+    - if:
+        stove:
+          allowed:
+            - 0
+      then:
+        forbidden:
+          - 3
+    #IF STOVE=3 (dependent), MEALPREP should not =0 (normal)
+    - if:
+        stove:
+          allowed:
+            - 3
+      then:
+        forbidden:
+          - 0
+  #List of longitudinal checks
+  temporalrules:
+    #Specify the variable name to order the records
+    orderby: visit_date
+    constraints:
+      #IF MEALPREP=3 (dependent) at previous visit, then 
+      #MEALPREP cannot be 0 (normal) at the current visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #IF MEALPREP was =0 (Normal) at the previous visit, then
+      #MEALPREP cannot be 8 (Not applicable/Never did) at current visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+events:
+  type: integer
+  required: true
+  #EVENTS must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  temporalrules:
+    orderby: visit_date
+    constraints:
+      #EVENTS=3 (dependent) at one visit and then EVENTS=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #EVENTS=8 (Not applicable/Never did) at a follow-up visit but EVENTS was =0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+payattn:
+  type: integer
+  required: true
+  #PAYATTN must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  temporalrules:
+    orderby: visit_date
+    constraints:
+      #PAYATTN=3 (dependent) at one visit and then PAYATTN=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #PAYATTN=8 (Not applicable/Never did) at a follow-up visit but PAYATTN was =0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+remdates:
+  type: integer
+  required: true
+  #REMDATES must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  temporalrules:
+    orderby: visit_date
+    constraints:
+      #REMDATES=3 (dependent) at one visit and then REMDATES=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #REMDATES=8 (Not applicable/Never did) at a follow-up visit but  was REMDATES=0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8
+travel:
+  type: integer
+  required: true
+  #TRAVEL must be an integer between 0 and 3, or =8 (NA) or =9 (Unkown)
+  anyof:
+    - min: 0
+      max: 3
+    - allowed:
+        - 8
+        - 9
+  temporalrules:
+    orderby: visit_date
+    constraints:
+      #TRAVEL=3 (dependent) at one visit and then TRAVEL=0 (normal) at the following visit
+      - previous:
+          allowed:
+            - 3
+        current:
+          forbidden:
+            - 0
+      #TRAVEL=8 (Not applicable/Never did) at a follow-up visit but TRAVEL was =0 (Normal) at the preceding visit
+      - previous:
+          allowed:
+            - 0
+        current:
+          forbidden:
+            - 8

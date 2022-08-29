@@ -1,0 +1,272 @@
+{
+    "bills": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "taxes": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "shopping": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "games": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "stove": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "mealprep": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "compatibility": [
+            {
+                "if": {"stove": {"allowed": [0]}},
+                "then": {"forbidden": [3]}
+            },
+            {
+                "if": {"stove": {"allowed": [3]}},
+                "then": {"forbidden": [0]}
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "events": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "payattn": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "remdates": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    },
+    "travel": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 3
+            },
+            {
+                "allowed":[8, 9]
+            }
+        ],
+        "temporalrules": {
+            "orderby": "visit_date",
+            "constraints":[
+                {
+                    "previous": {"allowed": [3]},
+                    "current": {"forbidden": [0]}
+                },
+                {
+                    "previous": {"allowed": [0]},
+                    "current": {"forbidden": [8]}
+                }
+            ]
+        }
+    }
+}
