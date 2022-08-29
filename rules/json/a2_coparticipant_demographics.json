@@ -1,0 +1,69 @@
+{
+    "inrelto": {
+        "type": "integer",
+        "required": true,
+        "min": 1,
+        "max": 6
+    },
+    "inknown": {
+        "type": "integer",
+        "required": true,
+        "anyof":[
+            {
+                "min": 0,
+                "max": 120
+            },
+            {
+                "allowed":[999]
+            }
+        ]
+    },
+    "inlivwth": {
+        "type": "integer",
+        "required": true,
+        "min": 0,
+        "max": 1,
+        "compatibility": [
+            {
+                "if": {"inrelto": {"allowed": [1]}},
+                "then": {"forbidden": [0]}
+            },
+            {
+                "if": {"livsitua": {"allowed": [1]}},
+                "then": {"forbidden": [1]}
+            }
+        ]
+    },
+    "incntmod": {
+        "type": "integer",
+        "required": true,
+        "min": 1,
+        "max": 6
+    },
+    "incntmdx": {
+        "type": "string",
+        "nullable": true,
+        "compatibility": [
+            {
+                "if": {"incntmod": {"allowed": [6]}},
+                "then": {"nullable": false}
+            },
+            {
+                "if": {"incntmod": {"min": 1, "max":5}},
+                "then": {"nullable": true, "filled": false}
+            }
+        ]
+    },
+    "incntfrq": {
+        "type": "integer",
+        "required": true,
+        "min": 1,
+        "max": 6
+    },
+    "inrely": {
+        "type": "integer",
+        "required": true,
+        "min": 0,
+        "max": 1
+    }
+}
