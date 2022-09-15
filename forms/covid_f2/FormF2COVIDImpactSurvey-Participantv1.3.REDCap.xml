@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Form F2: COVID Impact Survey - Participant v1.3" AsOfDateTime="2022-09-15T15:43:50" CreationDateTime="2022-09-15T15:43:50" SourceSystem="REDCap" SourceSystemVersion="12.3.3">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Form F2: COVID Impact Survey - Participant v1.3" AsOfDateTime="2022-09-15T15:46:14" CreationDateTime="2022-09-15T15:46:14" SourceSystem="REDCap" SourceSystemVersion="12.3.3">
 <Study OID="Project.FormF2COVIDImpactSurveyPartici">
 <GlobalVariables>
 	<StudyName>Form F2: COVID Impact Survey - Participant v1.3</StudyName>
@@ -14,14 +14,6 @@
 	<redcap:Purpose>4</redcap:Purpose>
 	<redcap:PurposeOther></redcap:PurposeOther>
 	<redcap:ProjectNotes></redcap:ProjectNotes>
-	<redcap:SurveyQueueCustomText></redcap:SurveyQueueCustomText>
-	<redcap:SurveyQueueHide>0</redcap:SurveyQueueHide>
-	<redcap:DataMartProjectEnabled>0</redcap:DataMartProjectEnabled>
-	<redcap:DatamartAllowRepeatRevision>0</redcap:DatamartAllowRepeatRevision>
-	<redcap:DatamartAllowCreateRevision>0</redcap:DatamartAllowCreateRevision>
-	<redcap:DatamartCronEnabled>0</redcap:DatamartCronEnabled>
-	<redcap:HideFilledForms>1</redcap:HideFilledForms>
-	<redcap:FormActivationSurveyAutocontinue>0</redcap:FormActivationSurveyAutocontinue>
 	<redcap:MissingDataCodes></redcap:MissingDataCodes>
 	<redcap:ProtectedEmailMode>0</redcap:ProtectedEmailMode>
 	<redcap:ProtectedEmailModeCustomText></redcap:ProtectedEmailModeCustomText>
@@ -33,23 +25,6 @@
 		<redcap:Surveys form_name="form_f2_covid_impact_survey_participant" title="Form F2 Covid Impact Survey - Participant" instructions="" offline_instructions="" acknowledgement="&lt;p&gt;&lt;strong&gt;Thank you for taking the survey.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Have a nice day!&lt;/p&gt;" stop_action_acknowledgement="" stop_action_delete_response="0" question_by_section="1" display_page_number="1" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" end_survey_redirect_next_survey="0" end_survey_redirect_next_survey_logic="" theme="" text_size="1" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="0" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="HIDDEN" response_limit="" response_limit_include_partials="1" response_limit_custom_text="&lt;p&gt;Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached.&lt;/p&gt;" survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_save_to_field="" pdf_save_to_event_id="" pdf_save_translated="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="1" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5="" survey_width_percent="" survey_show_font_resize="1" survey_btn_text_prev_page="" survey_btn_text_next_page="" survey_btn_text_submit="" survey_btn_hide_submit="0" survey_btn_hide_submit_logic=""/>
 	</redcap:SurveysGroup>
-	<redcap:UserRolesGroup>
-		<redcap:UserRoles role_name="Project Requestor" unique_role_name="U-2134EW9RL7" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[participant_and_site_information,1][form_f2_covid_impact_survey_participant,1][calculations,1]" data_import_tool="0" data_comparison_tool="0" data_logging="0" file_repository="0" double_data="0" user_rights="0" data_access_groups="0" graphical="1" reports="0" design="0" calendar="1" data_entry="[participant_and_site_information,3][form_f2_covid_impact_survey_participant,3][calculations,1]" api_export="0" api_import="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="0" record_delete="0" dts="0" participants="1" data_quality_design="0" data_quality_execute="0" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config=""/>
-	</redcap:UserRolesGroup>
-	<redcap:ReportsGroup>
-		<redcap:Reports title="Survey duration (in minutes)" unique_report_name="R-412EYJNANP" report_order="1" user_access="ALL" user_edit_access="ALL" description="&lt;p&gt;Mean for Q1-8 (in minutes): [aggregate-mean:q1to8duration]&lt;/p&gt;
-&lt;p&gt;Median for Q1-8 (in minutes): [aggregate-median:q1to8duration]&lt;/p&gt;
-&lt;p&gt;Mean for Q9 (in minutes): [aggregate-mean:q9duration]&lt;/p&gt;
-&lt;p&gt;Median for Q9 (in minutes): [aggregate-median:q9duration]&lt;/p&gt;
-&lt;p&gt;Mean for Q10 (in minutes): [aggregate-mean:q10duration]&lt;/p&gt;
-&lt;p&gt;Median for Q10 (in minutes): [aggregate-median:q10duration]&lt;/p&gt;
-&lt;p&gt;Mean for Q11-16 (in minutes): [aggregate-mean:q11to16duration]&lt;/p&gt;
-&lt;p&gt;Median for Q11-16 (in minutes): [aggregate-median:q11to16duration]&lt;/p&gt;
-&lt;p&gt;Mean duration for entire F2 survey (in minutes): [aggregate-mean:total_duration_f2]&lt;/p&gt;
-&lt;p&gt;Median duration for entire F2 survey (in minutes): [aggregate-median:total_duration_f2]&lt;/p&gt;" combine_checkbox_values="0" output_dags="0" output_survey_fields="0" output_missing_data_codes="0" remove_line_breaks_in_values="1" orderby_field1="record_id" orderby_sort1="ASC" orderby_field2="" orderby_sort2="" orderby_field3="" orderby_sort3="" advanced_logic="" filter_type="EVENT" dynamic_filter1="f3_participation" dynamic_filter2="" dynamic_filter3="" hash="" short_url="" is_public="0" report_display_include_repeating_fields="1" report_display_header="BOTH" report_display_data="BOTH" limiter_logic="" redcap_reports_fields="record_id,q1to8duration,q9duration,q10duration,q11to16duration,total_duration_f2,total_survey_duration" redcap_reports_filter_dags="" redcap_reports_filter_events="" ID="d04d5003325c314117f803a6ead6b45503e8dd8b"/>
-		<redcap:Reports title="Survey responses" unique_report_name="R-921MCA9L8P" report_order="2" user_access="ALL" user_edit_access="ALL" description="" combine_checkbox_values="1" output_dags="0" output_survey_fields="0" output_missing_data_codes="0" remove_line_breaks_in_values="1" orderby_field1="record_id" orderby_sort1="ASC" orderby_field2="" orderby_sort2="" orderby_field3="" orderby_sort3="" advanced_logic="" filter_type="EVENT" dynamic_filter1="form_f2_covid_impact_survey_participant_complete" dynamic_filter2="f3_participation" dynamic_filter3="" hash="" short_url="" is_public="0" report_display_include_repeating_fields="1" report_display_header="BOTH" report_display_data="BOTH" limiter_logic="" redcap_reports_fields="record_id,f2_completion_time,form_f2_covid_impact_survey_participant_complete" redcap_reports_filter_dags="" redcap_reports_filter_events="" ID="190c4a70068f9453e2320b650e94869a1306adb0"/>
-		<redcap:Reports title="Participants who want assistance with vaccination appt" unique_report_name="R-941W8AWWWK" report_order="3" user_access="ALL" user_edit_access="ALL" description="" combine_checkbox_values="0" output_dags="0" output_survey_fields="0" output_missing_data_codes="0" remove_line_breaks_in_values="1" orderby_field1="record_id" orderby_sort1="ASC" orderby_field2="" orderby_sort2="" orderby_field3="" orderby_sort3="" advanced_logic="" filter_type="EVENT" dynamic_filter1="" dynamic_filter2="" dynamic_filter3="" hash="" short_url="" is_public="0" report_display_include_repeating_fields="1" report_display_header="BOTH" report_display_data="BOTH" limiter_logic="" redcap_reports_fields="record_id,initials,f2_form_date" redcap_reports_filter_dags="" redcap_reports_filter_events="" ID="66c4d1ec6dadbb7073bb7c5132e479ca4d2b59cf"/>
-	</redcap:ReportsGroup>
 	<redcap:ProjectDashboardsGroup>
 		<redcap:ProjectDashboards title="Survey dissemination instructions for F2 (Participant)" body="&lt;h5&gt;&lt;strong&gt;To disseminate this survey in-person&lt;/strong&gt;&lt;/h5&gt;
 &lt;h6&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;In preparation for dissemination:&lt;/span&gt;&lt;/h6&gt;
@@ -165,11 +140,8 @@
 &lt;/ul&gt;
 &lt;p&gt; &lt;/p&gt;" dash_order="2" user_access="ALL" is_public="0" ID="2a79f14120945873482b7823caabe2fcde848722"/>
 	</redcap:ProjectDashboardsGroup>
-	<redcap:MultilanguageSettingsGroup>
-		<redcap:MultilanguageSettings settings="YToxNTp7czo3OiJ2ZXJzaW9uIjtzOjY6IjEyLjMuMyI7czo1OiJsYW5ncyI7YTowOnt9czo5OiJwcm9qZWN0SWQiO3M6MzoiMTMzIjtzOjE1OiJkZXNpZ25hdGVkRmllbGQiO3M6MDoiIjtzOjY6InN0YXR1cyI7czozOiJkZXYiO3M6NToiZGVidWciO2I6MDtzOjc6InJlZkxhbmciO3M6MDoiIjtzOjEyOiJmYWxsYmFja0xhbmciO3M6MDoiIjtzOjg6ImRpc2FibGVkIjtiOjA7czoyNToiaGlnaGxpZ2h0TWlzc2luZ0RhdGFlbnRyeSI7YjowO3M6MjI6ImhpZ2hsaWdodE1pc3NpbmdTdXJ2ZXkiO2I6MDtzOjEyOiJhbGVydFNvdXJjZXMiO2E6MDp7fXM6MTQ6ImV4Y2x1ZGVkQWxlcnRzIjthOjA6e31zOjE0OiJleGNsdWRlZEZpZWxkcyI7YTowOnt9czoxNjoiZXhjbHVkZWRTZXR0aW5ncyI7YTowOnt9fQ=="/>
-	</redcap:MultilanguageSettingsGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.FormF2COVIDImpactSurveyPartici_2022-09-15_1543" Name="Form F2: COVID Impact Survey - Participant v1.3" redcap:RecordIdField="record_id">
+<MetaDataVersion OID="Metadata.FormF2COVIDImpactSurveyPartici_2022-09-15_1546" Name="Form F2: COVID Impact Survey - Participant v1.3" redcap:RecordIdField="record_id">
 	<FormDef OID="Form.participant_and_site_information" Name="Participant and Site Information" Repeating="No" redcap:FormName="participant_and_site_information">
 		<ItemGroupRef ItemGroupOID="participant_and_site_information.record_id" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="participant_and_site_information.participant_and_site_information_complete" Mandatory="No"/>
