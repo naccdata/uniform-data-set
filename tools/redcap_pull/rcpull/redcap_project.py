@@ -45,7 +45,7 @@ def pull(*, reader, project_path: str) -> None:
             logging.error("Could not retrieve project information\n%s", error)
             return
 
-    project_name = metadata['title'].replace(' ', '')
+    project_name = metadata['title'].replace(' ', '').replace(':', '')
 
     try:
         project_xml = reader.get_project_xml()
@@ -54,7 +54,7 @@ def pull(*, reader, project_path: str) -> None:
         return
 
     write_file(file_path=os.path.join(project_path,
-                                      f"{project_name}_project.xml"),
+                                      f"{project_name}.REDCap.xml"),
                content=project_xml)
 
     try:
