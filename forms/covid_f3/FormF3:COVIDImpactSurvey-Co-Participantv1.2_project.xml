@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Form F3: COVID Impact Survey - Co-Participant v1.2" AsOfDateTime="2022-09-15T15:13:33" CreationDateTime="2022-09-15T15:13:33" SourceSystem="REDCap" SourceSystemVersion="12.3.3">
+<Study OID="Project.FormF3COVIDImpactSurveyCoParti">
+<GlobalVariables>
+	<StudyName>Form F3: COVID Impact Survey - Co-Participant v1.2</StudyName>
+	<StudyDescription>This file contains the metadata, events, and data for REDCap project "Form F3: COVID Impact Survey - Co-Participant v1.2".</StudyDescription>
+	<ProtocolName>Form F3: COVID Impact Survey - Co-Participant v1.2</ProtocolName>
+	<redcap:RecordAutonumberingEnabled>1</redcap:RecordAutonumberingEnabled>
+	<redcap:CustomRecordLabel>Participant ID: [pt_id]</redcap:CustomRecordLabel>
+	<redcap:SecondaryUniqueField></redcap:SecondaryUniqueField>
+	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
+	<redcap:SurveysEnabled>1</redcap:SurveysEnabled>
+	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
+	<redcap:Purpose>4</redcap:Purpose>
+	<redcap:PurposeOther></redcap:PurposeOther>
+	<redcap:ProjectNotes></redcap:ProjectNotes>
+	<redcap:SurveyQueueCustomText></redcap:SurveyQueueCustomText>
+	<redcap:SurveyQueueHide>0</redcap:SurveyQueueHide>
+	<redcap:DataMartProjectEnabled>0</redcap:DataMartProjectEnabled>
+	<redcap:DatamartAllowRepeatRevision>0</redcap:DatamartAllowRepeatRevision>
+	<redcap:DatamartAllowCreateRevision>0</redcap:DatamartAllowCreateRevision>
+	<redcap:DatamartCronEnabled>0</redcap:DatamartCronEnabled>
+	<redcap:HideFilledForms>1</redcap:HideFilledForms>
+	<redcap:FormActivationSurveyAutocontinue>0</redcap:FormActivationSurveyAutocontinue>
+	<redcap:MissingDataCodes></redcap:MissingDataCodes>
+	<redcap:ProtectedEmailMode>0</redcap:ProtectedEmailMode>
+	<redcap:ProtectedEmailModeCustomText></redcap:ProtectedEmailModeCustomText>
+	<redcap:ProtectedEmailModeTrigger>PIPING</redcap:ProtectedEmailModeTrigger>
+	<redcap:ProtectedEmailModeLogo></redcap:ProtectedEmailModeLogo>
+	<redcap:SurveysGroup>
+		<redcap:Surveys form_name="participant_and_site_information" title="F3: Participant and Site Information" instructions="" offline_instructions="" acknowledgement="&lt;p&gt;&lt;strong&gt;Thank you for taking the survey.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Have a nice day!&lt;/p&gt;" stop_action_acknowledgement="" stop_action_delete_response="0" question_by_section="0" display_page_number="1" question_auto_numbering="1" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" end_survey_redirect_next_survey="1" end_survey_redirect_next_survey_logic="" theme="" text_size="1" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="0" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="HIDDEN" response_limit="" response_limit_include_partials="1" response_limit_custom_text="&lt;p&gt;Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached.&lt;/p&gt;" survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_save_to_field="" pdf_save_to_event_id="" pdf_save_translated="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="1" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5="" survey_width_percent="" survey_show_font_resize="1" survey_btn_text_prev_page="" survey_btn_text_next_page="" survey_btn_text_submit="" survey_btn_hide_submit="0" survey_btn_hide_submit_logic=""/>
+		<redcap:Surveys form_name="form_f3_covid_impact_survey_coparticipant" title="Form F3: COVID Impact Survey - Co-Participant" instructions="" offline_instructions="" acknowledgement="&lt;p&gt;&lt;strong&gt;Thank you for taking the survey.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Have a nice day!&lt;/p&gt;" stop_action_acknowledgement="" stop_action_delete_response="0" question_by_section="1" display_page_number="1" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" end_survey_redirect_next_survey="0" end_survey_redirect_next_survey_logic="" theme="" text_size="1" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="0" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="HIDDEN" response_limit="" response_limit_include_partials="1" response_limit_custom_text="&lt;p&gt;Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached.&lt;/p&gt;" survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_save_to_field="" pdf_save_to_event_id="" pdf_save_translated="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="1" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5="" survey_width_percent="" survey_show_font_resize="1" survey_btn_text_prev_page="" survey_btn_text_next_page="" survey_btn_text_submit="" survey_btn_hide_submit="0" survey_btn_hide_submit_logic=""/>
+	</redcap:SurveysGroup>
+	<redcap:UserRolesGroup>
+		<redcap:UserRoles role_name="Project Requestor" unique_role_name="U-119WAHKLC9" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[participant_and_site_information,1][form_f3_covid_impact_survey_coparticipant,1]" data_import_tool="0" data_comparison_tool="0" data_logging="0" file_repository="0" double_data="0" user_rights="0" data_access_groups="0" graphical="1" reports="0" design="0" calendar="1" data_entry="[participant_and_site_information,3][form_f3_covid_impact_survey_coparticipant,3]" api_export="0" api_import="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="0" record_delete="0" dts="0" participants="1" data_quality_design="0" data_quality_execute="0" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config=""/>
+	</redcap:UserRolesGroup>
+	<redcap:ReportsGroup>
+		<redcap:Reports title="Survey duration (in minutes)" unique_report_name="R-3848TC83KP" report_order="1" user_access="ALL" user_edit_access="ALL" description="" combine_checkbox_values="0" output_dags="0" output_survey_fields="0" output_missing_data_codes="0" remove_line_breaks_in_values="1" orderby_field1="record_id" orderby_sort1="ASC" orderby_field2="" orderby_sort2="" orderby_field3="" orderby_sort3="" advanced_logic="" filter_type="EVENT" dynamic_filter1="form_f3_covid_impact_surveycoparticipant_complete" dynamic_filter2="" dynamic_filter3="" hash="" short_url="" is_public="0" report_display_include_repeating_fields="1" report_display_header="BOTH" report_display_data="BOTH" limiter_logic="" redcap_reports_fields="record_id,total_duration_f3" redcap_reports_filter_dags="" redcap_reports_filter_events="" ID="ccd04939f25266ed88d9dbb3eb298866911b04f4"/>
+		<redcap:Reports title="Survey responses" unique_report_name="R-4257TDT99M" report_order="2" user_access="ALL" user_edit_access="ALL" description="" combine_checkbox_values="1" output_dags="0" output_survey_fields="0" output_missing_data_codes="0" remove_line_breaks_in_values="1" orderby_field1="record_id" orderby_sort1="ASC" orderby_field2="" orderby_sort2="" orderby_field3="" orderby_sort3="" advanced_logic="" filter_type="EVENT" dynamic_filter1="" dynamic_filter2="" dynamic_filter3="" hash="" short_url="" is_public="0" report_display_include_repeating_fields="1" report_display_header="BOTH" report_display_data="BOTH" limiter_logic="" redcap_reports_fields="record_id,f3surveystarttime,surveycompletiontime,total_duration_f3,form_f3_covid_impact_survey_coparticipant_complete" redcap_reports_filter_dags="" redcap_reports_filter_events="" ID="0aed854dc1ed3c76a4caff5ed4057ff16817cf30"/>
+		<redcap:Reports title="Needs not addressed" unique_report_name="R-738AMRCD34" report_order="3" user_access="ALL" user_edit_access="ALL" description="" combine_checkbox_values="0" output_dags="0" output_survey_fields="0" output_missing_data_codes="0" remove_line_breaks_in_values="1" orderby_field1="surveycompletiontime" orderby_sort1="ASC" orderby_field2="" orderby_sort2="" orderby_field3="" orderby_sort3="" advanced_logic="" filter_type="EVENT" dynamic_filter1="" dynamic_filter2="" dynamic_filter3="" hash="" short_url="" is_public="0" report_display_include_repeating_fields="1" report_display_header="BOTH" report_display_data="BOTH" limiter_logic="" redcap_reports_fields="record_id,pt_id,initials,surveycompletiontime" redcap_reports_filter_dags="" redcap_reports_filter_events="" ID="fc7a734dba518f032608dfeb04f4eeb79f025aa7"/>
+	</redcap:ReportsGroup>
+	<redcap:ProjectDashboardsGroup>
+		<redcap:ProjectDashboards title="Survey dissemination instructions for F3 (Co-Participant)" body="&lt;p&gt;If you wish to customize the text that displays on the survey completion (after the &#039;submit&#039; button is clicked):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;list-style-type: none;&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to Designer (via the left-hand navigation bar in the Project Home and Design section)&lt;/li&gt;
+&lt;li&gt;Click on Survey Settings for the Form F3 Covid Impact Survey - Co-Participant instrument&lt;/li&gt;
+&lt;li&gt;Scroll down to the Survey Termination Options section&lt;/li&gt;
+&lt;li&gt;Enter your text into the &#039;Survey Completion Text&#039; box&lt;/li&gt;
+&lt;li&gt;Scroll down and click on the &#039;save changes&#039; button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;&lt;strong&gt;To disseminate this survey in-person&lt;/strong&gt;&lt;/h5&gt;
+&lt;h6&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;In preparation for dissemination:&lt;/span&gt;&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Bookmark the public survey link on the device that the Co-participant will be completing the survey
+&lt;ul&gt;
+&lt;li&gt;To access the public survey link, on the tablet:
+&lt;ul&gt;
+&lt;li&gt;open the browser and log into your institutions&#039; REDCap site&lt;/li&gt;
+&lt;li&gt;click on the project that contains the survey&lt;/li&gt;
+&lt;li&gt;click on Survey Distribution Tools (found on the left-hand navigation bar in the Data Collection section)&lt;/li&gt;
+&lt;li&gt;click the &#039;open public survey&#039; button. This will open a new tab with the survey. Use browser tools to bookmark the page (consider adding it as a button to the home screen) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Bookmark the Record Status Dashboard page of the project
+&lt;ul&gt;
+&lt;li&gt;To access the record status dashboard, on the tablet:
+&lt;ul&gt;
+&lt;li&gt;open the browser and log into your institutions&#039; REDCap site&lt;/li&gt;
+&lt;li&gt;click on the project that contains the survey&lt;/li&gt;
+&lt;li&gt;click on Record Status Dashboard (found on the left-hand navigation bar in the Data Collection section)&lt;/li&gt;
+&lt;li&gt;Use browser tools to bookmark the page (consider adding it as a button to the home screen) 
+&lt;ul&gt;
+&lt;li&gt;Note: when a person clicks on this bookmark, they will be prompted to log into REDCap.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;When the Co-participant is with you:&lt;/span&gt;&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;Click on the public survey link (the one that you bookmarked on the tablet)&lt;/li&gt;
+&lt;li&gt;Enter the participant ID, ADRC number and your initials&lt;/li&gt;
+&lt;li&gt;After you click submit, the Co-participant survey is loaded onto the screen. Hand the device to the Co-participant.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h6&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;If the Co-participant needs to return to the survey&lt;/span&gt;&lt;/h6&gt;
+&lt;p&gt;If the Co-participant accidentally closes the browser tab or for some other reason starts but does not complete the survey and needs to return to it, you will need to log into REDCap, retrieve their specific survey and give them access to it. To do that:&lt;/p&gt;
+&lt;p&gt;1. Click on your bookmarked Record Status Dashboard page&lt;/p&gt;
+&lt;p&gt;2. Find the Co-participant&#039;s record in that list.&lt;/p&gt;
+&lt;p&gt;3. Click on the circle that aligns with the survey.&lt;/p&gt;
+&lt;p&gt;4. Click on &#039;Survey Options&#039;&lt;/p&gt;
+&lt;p&gt;5. Select &#039;open survey &lt;span style=&quot;color: #e03e2d;&quot;&gt;&lt;strong&gt;&amp; Log out&#039;&lt;/strong&gt;&lt;/span&gt;. This is important because it prevents the Co-participant from accessing the project and seeing other people&#039;s responses. &lt;/p&gt;
+&lt;p&gt;6. Hand the tablet to the Co-participant.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;background-color: #f1c40f;&quot;&gt;If you have questions, please click on the &#039;Contact REDCap administrator&#039; button found on the left-hand navigation bar in the Help &amp; Information section.&lt;/span&gt;&lt;/p&gt;
+&lt;h5&gt;&lt;strong&gt;To disseminate this survey via email&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;1. Log into your institution&#039;s REDCap site.&lt;/p&gt;
+&lt;p&gt;2. Click on the project that contains the survey.&lt;/p&gt;
+&lt;p&gt;3. Click on &#039;Add/Edit Records&#039; (via the left-hand navigation bar in the Data Collection section).&lt;/p&gt;
+&lt;p&gt;4. Click on the circle that aligns with Participant and Site Information.&lt;/p&gt;
+&lt;p&gt;5. Enter the participant ID, your site name and your initials. &lt;/p&gt;
+&lt;p&gt;6. Click on &#039;save &amp; go to next form&#039;&lt;/p&gt;
+&lt;p&gt;    -you may have to click on the drop-down arrow on the &#039;save&#039; button to see the option for &#039;save &amp; go to next form&#039;&lt;/p&gt;
+&lt;p&gt;7. Click the &#039;Survey Options&#039; button and select &#039;compose survey invitation&#039;&lt;/p&gt;
+&lt;p&gt;8. Select the address from which you wish to send the survey&lt;/p&gt;
+&lt;p&gt;9. Enter the Co-participant&#039;s email address&lt;/p&gt;
+&lt;p&gt;10. Enter a subject line&lt;/p&gt;
+&lt;p&gt;11. Add any custom text that you&#039;d like to the message section of the invitation. HOWEVER: do not delete [ survey-link ] or [ survey-url ]. Those are smart variables which will turn into a unique survey link for the Co-participant once you hit send.&lt;/p&gt;
+&lt;p&gt;12. Click &#039;send&#039;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;background-color: #f1c40f;&quot;&gt;If you have questions, please click on the &#039;Contact REDCap administrator&#039; button found on the left-hand navigation bar in the Help &amp; Information section.&lt;/span&gt;&lt;/p&gt;" dash_order="1" user_access="ALL" is_public="0" ID="c837307a9a2ad4d08ca61a4f1bd848ba3d6890fc"/>
+		<redcap:ProjectDashboards title="An overview of this project (F3 - Co-Participant)" body="&lt;h6&gt;&lt;strong&gt;Instruments&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;There are 2 data collection instruments in this project:&lt;/p&gt;
+&lt;p&gt;1. Participant and Site Information&lt;/p&gt;
+&lt;p&gt;2. The Co-participant survey&lt;/p&gt;
+&lt;p&gt;The Participant and Site Information instrument is completed by the Examiner. The instrument captures the center name, participant ID and examiner initials. Behind the scenes, REDCap will capture the date/time that the examiner fills out that instrument. &lt;/p&gt;
+&lt;p&gt;The Co-participant survey is filled out by the Co-participant. Included in the survey are timestamp fields which will calculate, behind-the-scenes, how long it takes the Co-participant to complete the survey. &lt;/p&gt;
+&lt;h6&gt;&lt;strong&gt;Records&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Each record represents a Co-participant. For your convenience, the participant ID has been added as a custom record label. This means that when viewing records, the participant&#039;s ID number will be written next to the record number. When using &#039;Add/Edit&#039; records, records will display in order of the participant ID. (The participant ID is related to the participant, not the Co-Participant).&lt;/p&gt;
+&lt;h6&gt;&lt;strong&gt;Survey Duration report&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;There is a built-in report that captures the survey duration. You will find that on the left-hand navigation bar in the Reports section. The report is called &#039;Survey duration (in minutes)&#039;. &lt;/p&gt;
+&lt;h6&gt;&lt;strong&gt;Survey responses report&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;There is a built-in report that captures all of the participant responses, regardless of if they completed the survey. You will find that on the left-hand navigation bar in the Reports section. It is called &#039;Survey responses&#039;. You can click on the live filter at the top of the report to limit it to just completed responses. &lt;/p&gt;
+&lt;h6&gt;&lt;strong&gt;Needs not addressed report&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;There is a built-in report that lists the details provided by the Co-Participant if they indicated that they have needs that have not been addressed. You will find that on the left-hand navigation bar in the Reports section. The report is called &#039;Needs not addressed&#039;. &lt;/p&gt;
+&lt;h6&gt;&lt;strong&gt;Adding users to the project&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Anyone on staff who will need access to the project (to email survey invitations, retrieve partially-completed survey responses, view responses, view calculations, etc) should be added as a user to the project. If you are unfamiliar with how to add users to the project, please contact your REDCap administrator. You can do that by clicking on the blue &#039;Contact REDCap administrator&#039; button found on the left-hand navigation bar in the Help &amp; Information section.&lt;/p&gt;
+&lt;h6&gt;&lt;strong&gt;If you wish to customize the text that displays on the survey completion (after the &#039;submit&#039; button is clicked):&lt;/strong&gt;&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li style=&quot;list-style-type: none;&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to Designer (via the left-hand navigation bar in the Project Home and Design section)&lt;/li&gt;
+&lt;li&gt;Click on Survey Settings for the Form F3 Covid Impact Survey - Co-Participant instrument&lt;/li&gt;
+&lt;li&gt;Scroll down to the Survey Termination Options section&lt;/li&gt;
+&lt;li&gt;Enter your text into the &#039;Survey Completion Text&#039; box&lt;/li&gt;
+&lt;li&gt;Scroll down and click on the &#039;save changes&#039; button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;" dash_order="2" user_access="ALL" is_public="0" ID="2952aeca0fe15cf310ede96c437acb94b2b208f1"/>
+	</redcap:ProjectDashboardsGroup>
+	<redcap:MultilanguageSettingsGroup>
+		<redcap:MultilanguageSettings settings="YToxNTp7czo3OiJ2ZXJzaW9uIjtzOjY6IjEyLjMuMyI7czo1OiJsYW5ncyI7YTowOnt9czo5OiJwcm9qZWN0SWQiO3M6MzoiMTM0IjtzOjE1OiJkZXNpZ25hdGVkRmllbGQiO3M6MDoiIjtzOjY6InN0YXR1cyI7czozOiJkZXYiO3M6NToiZGVidWciO2I6MDtzOjc6InJlZkxhbmciO3M6MDoiIjtzOjEyOiJmYWxsYmFja0xhbmciO3M6MDoiIjtzOjg6ImRpc2FibGVkIjtiOjA7czoyNToiaGlnaGxpZ2h0TWlzc2luZ0RhdGFlbnRyeSI7YjowO3M6MjI6ImhpZ2hsaWdodE1pc3NpbmdTdXJ2ZXkiO2I6MDtzOjEyOiJhbGVydFNvdXJjZXMiO2E6MDp7fXM6MTQ6ImV4Y2x1ZGVkQWxlcnRzIjthOjA6e31zOjE0OiJleGNsdWRlZEZpZWxkcyI7YTowOnt9czoxNjoiZXhjbHVkZWRTZXR0aW5ncyI7YTowOnt9fQ=="/>
+	</redcap:MultilanguageSettingsGroup>
+</GlobalVariables>
+<MetaDataVersion OID="Metadata.FormF3COVIDImpactSurveyCoParti_2022-09-15_1513" Name="Form F3: COVID Impact Survey - Co-Participant v1.2" redcap:RecordIdField="record_id">
+	<FormDef OID="Form.participant_and_site_information" Name="Participant and Site Information" Repeating="No" redcap:FormName="participant_and_site_information">
+		<ItemGroupRef ItemGroupOID="participant_and_site_information.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="participant_and_site_information.participant_and_site_information_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.form_f3_covid_impact_survey_coparticipant" Name="Form F3: COVID Impact Survey - Co-Participant" Repeating="No" redcap:FormName="form_f3_covid_impact_survey_coparticipant">
+		<ItemGroupRef ItemGroupOID="form_f3_covid_impact_survey_coparticipant.f3_survey_inst" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="form_f3_covid_impact_survey_coparticipant.c19coiso" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="form_f3_covid_impact_survey_coparticipant.c19codis" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="form_f3_covid_impact_survey_coparticipant.c19kfam" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="form_f3_covid_impact_survey_coparticipant.c19kage" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="form_f3_covid_impact_survey_coparticipant.thank_you_f3" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="form_f3_covid_impact_survey_coparticipant.surveycompletiontime" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="form_f3_covid_impact_survey_coparticipant.form_f3_covid_impact_survey_coparticipant_complete" Mandatory="No"/>
+	</FormDef>
+	<ItemGroupDef OID="participant_and_site_information.record_id" Name="Participant and Site Information" Repeating="No">
+		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
+		<ItemRef ItemOID="f2_instructions_for_center" Mandatory="No" redcap:Variable="f2_instructions_for_center"/>
+		<ItemRef ItemOID="pt_id" Mandatory="No" redcap:Variable="pt_id"/>
+		<ItemRef ItemOID="adcid" Mandatory="No" redcap:Variable="adcid"/>
+		<ItemRef ItemOID="initials" Mandatory="No" redcap:Variable="initials"/>
+		<ItemRef ItemOID="f2_form_date" Mandatory="No" redcap:Variable="f2_form_date"/>
+		<ItemRef ItemOID="copyright" Mandatory="No" redcap:Variable="copyright"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="participant_and_site_information.participant_and_site_information_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="participant_and_site_information_complete" Mandatory="No" redcap:Variable="participant_and_site_information_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_f3_covid_impact_survey_coparticipant.f3_survey_inst" Name="Form F3: COVID Impact Survey - Co-Participant" Repeating="No">
+		<ItemRef ItemOID="f3_survey_inst" Mandatory="No" redcap:Variable="f3_survey_inst"/>
+		<ItemRef ItemOID="f3surveystarttime" Mandatory="No" redcap:Variable="f3surveystarttime"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_f3_covid_impact_survey_coparticipant.c19coiso" Name=" " Repeating="No">
+		<ItemRef ItemOID="c19coiso" Mandatory="Yes" redcap:Variable="c19coiso"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_f3_covid_impact_survey_coparticipant.c19codis" Name="Form F3: COVID Impact Survey - Co-Participant" Repeating="No">
+		<ItemRef ItemOID="c19codis" Mandatory="Yes" redcap:Variable="c19codis"/>
+		<ItemRef ItemOID="c19coctl" Mandatory="Yes" redcap:Variable="c19coctl"/>
+		<ItemRef ItemOID="c19cpestcp" Mandatory="Yes" redcap:Variable="c19cpestcp"/>
+		<ItemRef ItemOID="c19amtstcp" Mandatory="Yes" redcap:Variable="c19amtstcp"/>
+		<ItemRef ItemOID="c19conn" Mandatory="Yes" redcap:Variable="c19conn"/>
+		<ItemRef ItemOID="c19care" Mandatory="Yes" redcap:Variable="c19care"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_f3_covid_impact_survey_coparticipant.c19kfam" Name="What kind of care assistance, if any, has become harder to access?" Repeating="No">
+		<ItemRef ItemOID="c19kfam" Mandatory="Yes" redcap:Variable="c19kfam"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_f3_covid_impact_survey_coparticipant.c19kage" Name="Form F3: COVID Impact Survey - Co-Participant" Repeating="No">
+		<ItemRef ItemOID="c19kage" Mandatory="Yes" redcap:Variable="c19kage"/>
+		<ItemRef ItemOID="c19kact" Mandatory="Yes" redcap:Variable="c19kact"/>
+		<ItemRef ItemOID="c19kove" Mandatory="Yes" redcap:Variable="c19kove"/>
+		<ItemRef ItemOID="c19kfac" Mandatory="Yes" redcap:Variable="c19kfac"/>
+		<ItemRef ItemOID="c19kapp" Mandatory="Yes" redcap:Variable="c19kapp"/>
+		<ItemRef ItemOID="c19koth" Mandatory="Yes" redcap:Variable="c19koth"/>
+		<ItemRef ItemOID="c19kothx" Mandatory="Yes" redcap:Variable="c19kothx"/>
+		<ItemRef ItemOID="c19core" Mandatory="Yes" redcap:Variable="c19core"/>
+		<ItemRef ItemOID="c19copre" Mandatory="Yes" redcap:Variable="c19copre"/>
+		<ItemRef ItemOID="c19cospx" Mandatory="Yes" redcap:Variable="c19cospx"/>
+		<ItemRef ItemOID="c10cospx" Mandatory="No" redcap:Variable="c10cospx"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_f3_covid_impact_survey_coparticipant.thank_you_f3" Name=" " Repeating="No">
+		<ItemRef ItemOID="thank_you_f3" Mandatory="No" redcap:Variable="thank_you_f3"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_f3_covid_impact_survey_coparticipant.surveycompletiontime" Name="Form F3: COVID Impact Survey - Co-Participant" Repeating="No">
+		<ItemRef ItemOID="surveycompletiontime" Mandatory="No" redcap:Variable="surveycompletiontime"/>
+		<ItemRef ItemOID="total_duration_f3" Mandatory="No" redcap:Variable="total_duration_f3"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_f3_covid_impact_survey_coparticipant.form_f3_covid_impact_survey_coparticipant_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="form_f3_covid_impact_survey_coparticipant_complete" Mandatory="No" redcap:Variable="form_f3_covid_impact_survey_coparticipant_complete"/>
+	</ItemGroupDef>
+	<ItemDef OID="record_id" Name="record_id" DataType="text" Length="999" redcap:Variable="record_id" redcap:FieldType="text">
+		<Question><TranslatedText>Record ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="f2_instructions_for_center" Name="f2_instructions_for_center" DataType="text" Length="999" redcap:Variable="f2_instructions_for_center" redcap:FieldType="descriptive">
+		<Question><TranslatedText>     Instructions for the Center       This updated COVID-19 survey is an optional form to be filled out by either the participant (if CDR® Dementia Staging Instrument score = 0 or 0.5) or co-participant/caregiver on behalf of the research participant (if CDR® &gt; 0.5); alternatively, it may be administered by study personnel. Participants may decline to answer questions. If Centers want to obtain information on additional issues related to COVID-19, they may do so locally, but any additional material will not be collected for NACC.    This form serves as an update to the original COVID-19 impact Survey released in summer 2020, and reflects on several important updates since that time, including vaccinations, repeat infections, evolving understanding of the long-term impacts of COVID-19 particularly on cognitive function, and broader psychosocial stressors which occurred in the same timeline as the initial and subsequent waves of the pandemic. In addition, it is recognized that many of these aspects of the COVID-19 pandemic may have been experienced differently person to person as well as community to community. The survey is intended to capture a summative experience since the onset of the pandemic, may be used either during initial or follow-up visits, and is potentially adaptable to delivery between those times. Attached to this participant form is a supplemental form for co-participants/caregivers of participants with a CDR® &gt; 0.5. This survey is also optional for Centers. Again, if Centers want to obtain information on additional caregiver issues related to COVID-19, they may do so locally, but this additional material will not be collected for NACC. These surveys may be administered by Centers in conjunction with, or unique and separate from, annual in-person or telephone UDS visits. The timing and option to participate in collection of this important data is entirely up to the individual Centers that are part of the NIA ADRC Program. Each Center should consider administering these surveys to as many participants as possible through either mail, telephone, video, and/or in-person contacts. Centers will need to provide information to participants about local vaccination availability for unvaccinated participants that request information. We have tried to capture important scientific information regarding COVID-19 exposure, medical consequences, and impact on social situations; on cognitive, psychiatric, and behavioral issues; and on caregiver burden and related issues. This information may prove to be extremely useful in our understanding of the impact of such a pandemic on the aging population today and the future.</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;p&gt; &lt;/p&gt; &lt;table style=&quot;border-collapse: collapse; width: 101.01156069364163%; height: 53px; background-color: #97a9ca; border-color: #316297; border-style: solid;&quot; border=&quot;1&quot;&gt; &lt;tbody&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 100%; height: 35px; background-color: #316297; text-align: left;&quot;&gt;&lt;span style=&quot;color: #ffffff;&quot;&gt;&lt;strong&gt;Instructions for the Center&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;div class=&quot;page&quot; title=&quot;Page 2&quot;&gt; &lt;div class=&quot;layoutArea&quot;&gt; &lt;div class=&quot;column&quot;&gt; &lt;p&gt;This updated COVID-19 survey is an optional form to be filled out by either the participant (if CDR® Dementia Staging Instrument score = 0 or 0.5) or co-participant/caregiver on behalf of the research participant (if CDR® &gt; 0.5); alternatively, it may be administered by study personnel. Participants may decline to answer questions. If Centers want to obtain information on additional issues related to COVID-19, they may do so locally, but any additional material will not be collected for NACC.&lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;p&gt;This form serves as an update to the original COVID-19 impact Survey released in summer 2020, and reflects on several important updates since that time, including vaccinations, repeat infections, evolving understanding of the long-term impacts of COVID-19 particularly on cognitive function, and broader psychosocial stressors which occurred in the same timeline as the initial and subsequent waves of the pandemic. In addition, it is recognized that many of these aspects of the COVID-19 pandemic may have been experienced differently person to person as well as community to community. The survey is intended to capture a summative experience since the onset of the pandemic, may be used either during initial or follow-up visits, and is potentially adaptable to delivery between those times.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Attached to this participant form is a supplemental form&lt;/strong&gt; for co-participants/caregivers of participants with a CDR® &gt; 0.5. This survey is also optional for Centers. Again, if Centers want to obtain information on additional caregiver issues related to COVID-19, they may do so locally, but this additional material will not be collected for NACC.&lt;/p&gt; &lt;p&gt;These surveys may be administered by Centers in conjunction with, or unique and separate from, annual in-person or telephone UDS visits. The timing and option to participate in collection of this important data is entirely up to the individual Centers that are part of the NIA ADRC Program. Each Center should consider administering these surveys to as many participants as possible through either mail, telephone, video, and/or in-person contacts. Centers will need to provide information to participants about local vaccination availability for unvaccinated participants that request information.&lt;/p&gt; &lt;p&gt;We have tried to capture important scientific information regarding COVID-19 exposure, medical consequences, and impact on social situations; on cognitive, psychiatric, and behavioral issues; and on caregiver burden and related issues. This information may prove to be extremely useful in our understanding of the impact of such a pandemic on the aging population today and the future.&lt;/p&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="pt_id" Name="pt_id" DataType="text" Length="999" redcap:Variable="pt_id" redcap:FieldType="text">
+		<Question><TranslatedText>Participant id</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="adcid" Name="adcid" DataType="text" Length="4" redcap:Variable="adcid" redcap:FieldType="select" redcap:TextValidationType="autocomplete">
+		<Question><TranslatedText>ADRC Name</TranslatedText></Question>
+		<CodeListRef CodeListOID="adcid.choices"/>
+	</ItemDef>
+	<ItemDef OID="initials" Name="initials" DataType="text" Length="999" redcap:Variable="initials" redcap:FieldType="text">
+		<Question><TranslatedText>Examiner&#039;s Initials</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="f2_form_date" Name="f2_form_date" DataType="partialDatetime" Length="999" redcap:Variable="f2_form_date" redcap:FieldType="text" redcap:TextValidationType="datetime_ymd" redcap:FieldAnnotation="@NOW-SERVER @HIDDEN-SURVEY">
+		<Question><TranslatedText>Form Date</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="copyright" Name="copyright" DataType="text" Length="999" redcap:Variable="copyright" redcap:FieldType="descriptive">
+		<Question><TranslatedText>   Copyright© 2020, 2022 University of Washington. Created and published by the ADRC Clinical Task Force (Allan Levey, MD PhD, Chair) and the National Alzheimer&#039;s Coordinating Center (U24 AG072122 - Walter A. Kukull, PhD, Director). All rights reserved.   </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;table style=&quot;border-collapse: collapse; width: 101.01156069364163%; height: 53px; background-color: #97a9ca; border-color: #316297; border-style: solid;&quot; border=&quot;1&quot;&gt; &lt;tbody&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 100%; height: 35px; background-color: #316297; text-align: left;&quot;&gt;&lt;span style=&quot;color: #ffffff;&quot;&gt;&lt;strong&gt;Copyright© 2020, 2022 University of Washington. Created and published by the ADRC Clinical Task Force (Allan Levey, MD PhD, Chair) and the National Alzheimer&#039;s Coordinating Center (U24 AG072122 - Walter A. Kukull, PhD, Director). All rights reserved.&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="participant_and_site_information_complete" Name="participant_and_site_information_complete" DataType="text" Length="1" redcap:Variable="participant_and_site_information_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="participant_and_site_information_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="f3_survey_inst" Name="f3_survey_inst" DataType="text" Length="999" redcap:Variable="f3_survey_inst" redcap:FieldType="descriptive">
+		<Question><TranslatedText>     The following COVID-19 survey is an optional form we would like you to fill out (alternatively, the survey may be administered to you by research study staff). We are asking these questions because COVID-19 has presented very new challenges for us all, and we would like to learn about your experience. We also would like to learn how COVID-19 may have affected your well-being and your ability to support the research participant as their co-participant/caregiver. You may decline to answer any of these questions, and it is alright to do so, but please answer as many of the questions as you feel comfortable with. Your research Center may also have additional questions regarding COVID-19.           </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;p&gt; &lt;/p&gt; &lt;table style=&quot;border-collapse: collapse; width: 101.01156069364163%; height: 53px; background-color: #97a9ca; border-color: #316297; border-style: solid;&quot; border=&quot;1&quot;&gt; &lt;tbody&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 70%; height: 35px; background-color: #baf4f7; text-align: left;&quot;&gt;The following COVID-19 survey is an &lt;span style=&quot;text-decoration: underline;&quot;&gt;optional form&lt;/span&gt; we would like you to fill out (alternatively, the survey may be administered to you by research study staff). We are asking these questions because COVID-19 has presented very new challenges for us all, and we would like to learn about your experience. We also would like to learn how COVID-19 may have affected your well-being and your ability to support the research participant as their co-participant/caregiver. You may decline to answer any of these questions, and it is alright to do so, but please answer as many of the questions as you feel comfortable with. Your research Center may also have additional questions regarding COVID-19.&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;div class=&quot;page&quot; title=&quot;Page 2&quot;&gt; &lt;div class=&quot;layoutArea&quot;&gt; &lt;div class=&quot;column&quot;&gt; &lt;p&gt; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="f3surveystarttime" Name="f3surveystarttime" DataType="partialDatetime" Length="999" redcap:Variable="f3surveystarttime" redcap:FieldType="text" redcap:TextValidationType="datetime_ymd" redcap:CustomAlignment="LV" redcap:FieldAnnotation="@NOW-SERVER @HIDDEN-SURVEY">
+		<Question><TranslatedText>Survey start time</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="c19coiso" Name="c19coiso" DataType="text" Length="1" redcap:Variable="c19coiso" redcap:FieldType="radio" redcap:SectionHeader=" " redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>On a scale of 1-5, how isolated or cut off from family and friends have you felt due to the COVID-19 pandemic?</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19coiso.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19codis" Name="c19codis" DataType="text" Length="1" redcap:Variable="c19codis" redcap:FieldType="radio" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>On a scale of 1-5, how disruptive has the COVID-19 pandemic been to your everyday life?</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19codis.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19coctl" Name="c19coctl" DataType="text" Length="1" redcap:Variable="c19coctl" redcap:FieldType="radio" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>On a scale of 1-5, since the start of the COVID-19 pandemic, how often have you felt that you were unable to control the important things in your life?</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19coctl.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19cpestcp" Name="c19cpestcp" DataType="text" Length="1" redcap:Variable="c19cpestcp" redcap:FieldType="radio" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>On a scale of 1-6 (with 1 being &quot;I can shake off stress&quot; and 6 being &quot;Stress eats away at me&quot;) how would you rate your ability to handle stress?</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;p&gt;On a scale of 1-6 (with 1 being &quot;I can shake off stress&quot; and 6 being &quot;Stress eats away at me&quot;) how would you rate your ability to handle stress?&lt;/p&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+		<CodeListRef CodeListOID="c19cpestcp.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19amtstcp" Name="c19amtstcp" DataType="text" Length="1" redcap:Variable="c19amtstcp" redcap:FieldType="radio" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>In the past year, on a scale of 1-6 with 1 being &quot;no stress&quot; and 6 being &quot;extreme stress&quot; how would you rate the amount of stress in your life (at home and at work)?</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;p&gt;In the past year, on a scale of 1-6 with 1 being &quot;no stress&quot; and 6 being &quot;extreme stress&quot; how would you rate the amount of stress in your life (at home and at work)?&lt;/p&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+		<CodeListRef CodeListOID="c19amtstcp.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19conn" Name="c19conn" DataType="text" Length="1" redcap:Variable="c19conn" redcap:FieldType="radio" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>Regarding your feelings of connectedness with friends and family during the COVID-19 pandemic, did you feel or have you felt...</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19conn.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19care" Name="c19care" DataType="text" Length="1" redcap:Variable="c19care" redcap:FieldType="radio" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>Has the COVID-19 pandemic affected your ability to provide care for the research participant?</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19care.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19kfam" Name="c19kfam" DataType="text" Length="1" redcap:Variable="c19kfam" redcap:FieldType="radio" redcap:SectionHeader="What kind of care assistance, if any, has become harder to access?" redcap:RequiredField="y" redcap:MatrixGroupName="care_assistance">
+		<Question><TranslatedText>Respite by family or friends</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19kfam.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19kage" Name="c19kage" DataType="text" Length="1" redcap:Variable="c19kage" redcap:FieldType="radio" redcap:RequiredField="y" redcap:MatrixGroupName="care_assistance">
+		<Question><TranslatedText>Paid respite by care agencies</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19kage.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19kact" Name="c19kact" DataType="text" Length="1" redcap:Variable="c19kact" redcap:FieldType="radio" redcap:RequiredField="y" redcap:MatrixGroupName="care_assistance">
+		<Question><TranslatedText>Day activity programs</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19kact.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19kove" Name="c19kove" DataType="text" Length="1" redcap:Variable="c19kove" redcap:FieldType="radio" redcap:RequiredField="y" redcap:MatrixGroupName="care_assistance">
+		<Question><TranslatedText>Overnight or extended-stay respite care</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19kove.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19kfac" Name="c19kfac" DataType="text" Length="1" redcap:Variable="c19kfac" redcap:FieldType="radio" redcap:RequiredField="y" redcap:MatrixGroupName="care_assistance">
+		<Question><TranslatedText>Ability to find skilled residential facility placement</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19kfac.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19kapp" Name="c19kapp" DataType="text" Length="1" redcap:Variable="c19kapp" redcap:FieldType="radio" redcap:RequiredField="y" redcap:MatrixGroupName="care_assistance">
+		<Question><TranslatedText>Medical care including physician appointments</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19kapp.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19koth" Name="c19koth" DataType="text" Length="1" redcap:Variable="c19koth" redcap:FieldType="radio" redcap:RequiredField="y" redcap:MatrixGroupName="care_assistance">
+		<Question><TranslatedText>Other {c19kothx}</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19koth.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19kothx" Name="c19kothx" DataType="text" Length="999" redcap:Variable="c19kothx" redcap:FieldType="text" redcap:RequiredField="y" redcap:BranchingLogic="[c19koth] = &#039;1&#039;" redcap:CustomAlignment="LV" redcap:FieldAnnotation="@PLACEHOLDER=&#039;Specify&#039;">
+		<Question><TranslatedText>Other kind of care assistance</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="c19core" Name="c19core" DataType="text" Length="1" redcap:Variable="c19core" redcap:FieldType="radio" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>On a scale of 1-5, how much has the COVID-19 pandemic changed your willingness to allow or encourage your care partner&#039;s participation in clinical research if it requires in-person visits to the research clinic?</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;p&gt;On a scale of 1-5, how much has the COVID-19 pandemic changed your willingness to allow or encourage your care partner&#039;s participation in clinical research if it requires in-person visits to the research clinic?&lt;/p&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+		<CodeListRef CodeListOID="c19core.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19copre" Name="c19copre" DataType="text" Length="1" redcap:Variable="c19copre" redcap:FieldType="radio" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>On a scale of 1-5, how much has the COVID-19 pandemic changed your own personal willingness to participate in clinical research, irrespective of whether in-person or telephone/remote visits are used?</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;p&gt;On a scale of 1-5, how much has the COVID-19 pandemic changed your own personal willingness to participate in clinical research, irrespective of whether in-person or telephone/remote visits are used?&lt;/p&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+		<CodeListRef CodeListOID="c19copre.choices"/>
+	</ItemDef>
+	<ItemDef OID="c19cospx" Name="c19cospx" DataType="boolean" Length="1" redcap:Variable="c19cospx" redcap:FieldType="yesno" redcap:RequiredField="y" redcap:CustomAlignment="LV">
+		<Question><TranslatedText>Do you have specific care needs that are not addressed above?</TranslatedText></Question>
+		<CodeListRef CodeListOID="c19cospx.choices"/>
+	</ItemDef>
+	<ItemDef OID="c10cospx" Name="c10cospx" DataType="text" Length="999" redcap:Variable="c10cospx" redcap:FieldType="textarea" redcap:BranchingLogic="[c19cospx] = &#039;1&#039;" redcap:CustomAlignment="LH" redcap:FieldAnnotation="@CHARLIMIT=100">
+		<Question><TranslatedText>Please list any care needs (both yours and the research participant&#039;s) that are not being met
+because of the COVID-19 pandemic:</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;p&gt;Please list any care needs (both yours and the research participant&#039;s) that are not being met&lt;br /&gt;because of the COVID-19 pandemic:&lt;/p&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="thank_you_f3" Name="thank_you_f3" DataType="text" Length="999" redcap:Variable="thank_you_f3" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Thank you for taking the time to answer these questions. </TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="surveycompletiontime" Name="surveycompletiontime" DataType="partialDatetime" Length="999" redcap:Variable="surveycompletiontime" redcap:FieldType="text" redcap:TextValidationType="datetime_ymd" redcap:FieldAnnotation="@NOW-SERVER @HIDDEN-SURVEY">
+		<Question><TranslatedText>Survey completion time</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="total_duration_f3" Name="total_duration_f3" DataType="float" Length="999" redcap:Variable="total_duration_f3" redcap:FieldType="calc" redcap:Calculation="datediff([f3surveystarttime], [surveycompletiontime], &#039;m&#039;)" redcap:FieldAnnotation="@HIDDEN-SURVEY">
+		<Question><TranslatedText>Total duration for F3</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="form_f3_covid_impact_survey_coparticipant_complete" Name="form_f3_covid_impact_survey_coparticipant_complete" DataType="text" Length="1" redcap:Variable="form_f3_covid_impact_survey_coparticipant_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="form_f3_covid_impact_survey_coparticipant_complete.choices"/>
+	</ItemDef>
+	<CodeList OID="adcid.choices" Name="adcid" DataType="text" redcap:Variable="adcid">
+		<CodeListItem CodedValue="33"><Decode><TranslatedText>Arizona ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Boston University ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="65"><Decode><TranslatedText>Cleveland ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>Columbia University ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="49"><Decode><TranslatedText>Duke/UNC ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="6"><Decode><TranslatedText>Emory University, Goizueta ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="41"><Decode><TranslatedText>1Florida</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Indiana University ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="9"><Decode><TranslatedText>Johns Hopkins ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="7"><Decode><TranslatedText>Massachusetts ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="10"><Decode><TranslatedText>Mayo Clinic ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="11"><Decode><TranslatedText>Mount Sinai School of Medicine ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="NACC"><Decode><TranslatedText>NACC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="46"><Decode><TranslatedText>Nevada Exploratory ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="48"><Decode><TranslatedText>New Mexico Exploratory ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="13"><Decode><TranslatedText>Northwestern ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="12"><Decode><TranslatedText>NYU ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="14"><Decode><TranslatedText>Oregon Health and Science University, ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="21"><Decode><TranslatedText>Penn ADRC / Penn Memory Center</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="15"><Decode><TranslatedText>Rush University Alzheimer&#039;s Disease Center</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="67"><Decode><TranslatedText>South Texas ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="39"><Decode><TranslatedText>Stanford ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="28"><Decode><TranslatedText>UAB Exploratory ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="16"><Decode><TranslatedText>UC Davis ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="31"><Decode><TranslatedText>UC Irvine, ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="18"><Decode><TranslatedText>UCSD Shiley-Marcos ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="35"><Decode><TranslatedText>UCSF ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="38"><Decode><TranslatedText>University of Kansas ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="19"><Decode><TranslatedText>University of Kentucky ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="43"><Decode><TranslatedText>University of Michigan ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="22"><Decode><TranslatedText>University of Pittsburgh ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="26"><Decode><TranslatedText>University of Washington ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="30"><Decode><TranslatedText>USC ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="47"><Decode><TranslatedText>Vanderbilt Exploratory ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="42"><Decode><TranslatedText>Wake Forest University, ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="27"><Decode><TranslatedText>Washington University Knight ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="37"><Decode><TranslatedText>Wisconsin ADRC</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="40"><Decode><TranslatedText>Yale University ADRC</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="participant_and_site_information_complete.choices" Name="participant_and_site_information_complete" DataType="text" redcap:Variable="participant_and_site_information_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19coiso.choices" Name="c19coiso" DataType="text" redcap:Variable="c19coiso">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>1 = Not at all isolated</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>2 = A little isolated</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>3 = Somewhat isolated</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>4 = Very isolated</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>5 = Extremely isolated</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19codis.choices" Name="c19codis" DataType="text" redcap:Variable="c19codis">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>1 = Not at all disruptive</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>2 = A little disruptive</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>3 = Somewhat disruptive</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>4 = Very disruptive</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>5 = Extremely disruptive</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19coctl.choices" Name="c19coctl" DataType="text" redcap:Variable="c19coctl">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>1= Never</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>2= Almost never</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>3= Sometimes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>4= Fairly often</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>5= Very often</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19cpestcp.choices" Name="c19cpestcp" DataType="text" redcap:Variable="c19cpestcp">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>1= I can shake off stress</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>2</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>3</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>4</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>5</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="6"><Decode><TranslatedText>6= Stress eats away at me</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19amtstcp.choices" Name="c19amtstcp" DataType="text" redcap:Variable="c19amtstcp">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>1= No Stress</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>2</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>3</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>4</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>5</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="6"><Decode><TranslatedText>6= Extreme Stress</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19conn.choices" Name="c19conn" DataType="text" redcap:Variable="c19conn">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Less connected</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>About the same level of connection</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>More connected</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19care.choices" Name="c19care" DataType="text" redcap:Variable="c19care">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>It is easier to provide care</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>I am managing the same as always</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>It is somewhat more difficult to provide care</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>It is extremely difficult to provide care</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19kfam.choices" Name="c19kfam" DataType="text" redcap:Variable="c19kfam">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19kage.choices" Name="c19kage" DataType="text" redcap:Variable="c19kage">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19kact.choices" Name="c19kact" DataType="text" redcap:Variable="c19kact">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19kove.choices" Name="c19kove" DataType="text" redcap:Variable="c19kove">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19kfac.choices" Name="c19kfac" DataType="text" redcap:Variable="c19kfac">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19kapp.choices" Name="c19kapp" DataType="text" redcap:Variable="c19kapp">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19koth.choices" Name="c19koth" DataType="text" redcap:Variable="c19koth">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19core.choices" Name="c19core" DataType="text" redcap:Variable="c19core">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>1 = Not at all</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>2 = A little</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>3 = Somewhat</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>4 = Very</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>5 = Extremely</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19copre.choices" Name="c19copre" DataType="text" redcap:Variable="c19copre">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>1 = Not at all</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>2 = A little</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>3 = Somewhat</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>4 = Very</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>5 = Extremely</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Decline to answer</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="c19cospx.choices" Name="c19cospx" DataType="boolean" redcap:Variable="c19cospx">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="form_f3_covid_impact_survey_coparticipant_complete.choices" Name="form_f3_covid_impact_survey_coparticipant_complete" DataType="text" redcap:Variable="form_f3_covid_impact_survey_coparticipant_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+</MetaDataVersion>
+</Study>
+</ODM>
