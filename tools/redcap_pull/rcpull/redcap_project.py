@@ -2,13 +2,31 @@
 Methods for handling project actions.
 """
 from typing import Any, List, Mapping
-import json
 import logging
 import os
 import re
 
-from paths import makedirectory
+from paths import makedirectory, write_file
 from redcap_connection import REDCapConnectionError
+import project_metadata
+
+
+def pull_metadata(*, reader, project_path: str) -> None:
+    """Creates project metadata for the project.
+    
+    Args:
+      reader: the project reader for the project
+      project_path: the path for the project files
+    """
+    metadata = create_project_metadata(reader=reader,
+                                       project_path=project_path)
+    if not metadata:
+        logging.error("Failed to create project")
+        return
+
+    project_metadata.write_metadata(project_path=project_path,
+                                    metadata=metadata)
+
 
 def pull(*, reader, project_path: str) -> None:
     """Implements pull actions for the named project.
@@ -17,16 +35,15 @@ def pull(*, reader, project_path: str) -> None:
       project_path - the local path to project
       project_name - the project key
     """
-    try:
-        metadata = create_project_metadata(reader=reader,
-                                          project_path=project_path)
-    except REDCapConnectionError as error:
-        logging.error("Could not retrieve project information\n%s", error)
-        return
+    metadata = project_metadata.get_metadata(project_path=project_path)
+    if not metadata:
+        try:
+            metadata = create_project_metadata(reader=reader,
+                                               project_path=project_path)
+        except REDCapConnectionError as error:
+            logging.error("Could not retrieve project information\n%s", error)
+            return
 
-    write_file(path=project_path,
-            filename="project.json",
-            content=json.dumps(metadata, indent=2))
     project_name = metadata['title'].replace(' ', '')
 
     try:
@@ -35,9 +52,9 @@ def pull(*, reader, project_path: str) -> None:
         logging.error("Could not retrieve project XML\n%s", error)
         return
 
-    write_file(path=project_path,
-            filename=f"{project_name}_project.xml",
-            content=project_xml)
+    write_file(file_path=os.path.join(project_path,
+                                      f"{project_name}_project.xml"),
+               content=project_xml)
 
     try:
         project_data_dictionary = reader.get_data_dictionary()
@@ -45,17 +62,34 @@ def pull(*, reader, project_path: str) -> None:
         logging.error("Could not retrieve project information\n%s", error)
         return
 
-    write_file(path=project_path,
-            filename=f"{project_name}_data_dictionary.csv",
-            content=project_data_dictionary)
+    write_file(file_path=os.path.join(project_path,
+                                      f"{project_name}_data_dictionary.csv"),
+               content=project_data_dictionary)
 
     for instrument in metadata['instruments'].values():
-        pull_instrument(reader=reader,
-                        name=instrument['instrument'],
-                        path=instrument['directory'])
+        path = os.path.join(project_path, instrument['directory'])
+        download_instrument(reader=reader,
+                            name=instrument['instrument'],
+                            path=path)
 
 
-def pull_instrument(*, reader, name: str, path: str) -> None:
+def pull_instrument(*, reader, instrument: str, path: str) -> None:
+    """Pull the instrument to the project files.
+    
+    Args:
+      reader: the ProjectReader for the project
+      name: the name of the instrument
+      path: the local path for writing instrument files
+    """
+    instrument_obj = project_metadata.get_instrument(project_path=path,
+                                                     key=instrument)
+    file_path = os.path.join(path, instrument['directory'])
+    download_instrument(reader=reader,
+                        name=instrument_obj['instrument'],
+                        path=file_path)
+
+
+def download_instrument(*, reader, name: str, path: str) -> None:
     """Pull the data dictionary for the instrument and write to the path.
 
     Args:
@@ -70,7 +104,8 @@ def pull_instrument(*, reader, name: str, path: str) -> None:
         logging.error("Unable to pull instrument %s\n%s", name, error)
         return
 
-    write_file(path=path, filename="instrument.csv", content=data_dictionary)
+    write_file(file_path=os.path.join(path, "instrument.csv"),
+               content=data_dictionary)
     #TODO: need settings.csv content
 
 
@@ -96,32 +131,35 @@ def choose_directory_name(*, instrument_name: str,
     return directory_name
 
 
-def write_file(*, path: str, filename: str, content: str) -> None:
-    """Writes the content to the indicated file in the given path.
-
-    Args:
-      path: the path to write the file.
-      filename: the name of the file.
-      content: the string content of the file.
-    """
-    file_path = os.path.join(path, filename)
-    with open(file_path, 'w', encoding='utf-8') as file:
-        file.write(content)
-
-
 def create_project_metadata(*, reader, project_path: str) -> Mapping[str, Any]:
-    """Creates the metadata object for the project.
+    """Creates a metadata object for the project
+
+    Pulls project information from REDCap using the project reader, and
+    creates the project directory and metadata.
 
     Args:
       reader: the ProjectReader for the project.
 
-    Raises:
-      REDCapConnectionError if requests fail.
+    Returns:
+        The metadata object if created, None otherwise
     """
+
+    try:
+        project_info = reader.get_project_info()
+    except REDCapConnectionError as error:
+        logging.error("Could not retrieve project information\n%s", error)
+        return None
+
+    metadata = project_metadata.create_metadata(
+        title=project_info['project_title'])
+
+    try:
+        instruments = reader.get_instruments()
+    except REDCapConnectionError as error:
+        logging.error("Could not retrieve project instruments\n%s", error)
+        return None
+
     directories = list_directories(project_path)
-    project_info = reader.get_project_info()
-    metadata = {'title': project_info['project_title'], 'instruments': {}}
-    instruments = reader.get_instruments()
     matching_names = match_instrument_directories(instrument_list=instruments,
                                                   directory_list=directories)
     for name, directory_list in matching_names.items():
@@ -144,15 +182,15 @@ def create_project_metadata(*, reader, project_path: str) -> Mapping[str, Any]:
             logging.info("Creating directory %s for instrument %s", directory,
                          name)
             instrument_path = os.path.join(project_path, directory)
+            # TODO: move this out to avoid sideeffects (?)
             makedirectory(instrument_path)
         else:
             directory = directory_list[0]
-            instrument_path = os.path.join(project_path, directory)
 
-        metadata['instruments'][directory] = {
-            'directory': os.path.join(project_path, directory),
-            'instrument': name
-        }
+        project_metadata.add_instrument_object(metadata=metadata,
+                                               key=directory,
+                                               instrument=name,
+                                               directory=directory)
 
     return metadata
 
@@ -174,8 +212,9 @@ def list_directories(path) -> List[str]:
     return directories
 
 
-def match_instrument_directories(*, instrument_list: List[Mapping[str, str]],
-                                 directory_list: List[str]) -> Mapping[str,List[str]]:
+def match_instrument_directories(
+        *, instrument_list: List[Mapping[str, str]],
+        directory_list: List[str]) -> Mapping[str, List[str]]:
     """Returns directories whose names are substrings of the instrument names.
 
     Args:

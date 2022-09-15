@@ -10,7 +10,7 @@ import sys
 from config import (add_config, get_named_config, set_default_instance,
                     show_config)
 from redcap_connection import ProjectReader, REDCapConnectionError
-from redcap_project import pull
+from redcap_project import pull, pull_metadata, pull_instrument
 
 logging.basicConfig(level=logging.INFO)
 
@@ -61,6 +61,7 @@ def get_argument_parser():
     # pull command
     parser_pull = subparsers.add_parser("pull")
     add_component_arguments(parser_pull, action="pull")
+
     parser_pull.set_defaults(func=do_pull)
 
     return parser
@@ -124,6 +125,14 @@ def add_component_arguments(parser, *, action):
         default=os.getcwd())
 
     parser.add_argument("-n", "--name", help="configuration name", type=str)
+    parser.add_argument("-i",
+                        "--instrument",
+                        help=f"the instrument to {action}",
+                        type=str)
+    parser.add_argument("-m",
+                        "--metadata",
+                        help=f"{action} the project metadata",
+                        action='store_true')
 
 
 def do_pull(args) -> None:
@@ -140,6 +149,14 @@ def do_pull(args) -> None:
     reader = ProjectReader.create(token=configuration['token'],
                                   url=configuration['url'])
     path = configuration['path']
+
+    if args.metadata:
+        pull_metadata(reader=reader, project_path=path)
+        return
+
+    if args.instrument:
+        pull_instrument(reader=reader, path=path, instrument=args.instrument)
+
     try:
         pull(reader=reader, project_path=path)
     except REDCapConnectionError as error:
