@@ -1,0 +1,17 @@
+{
+  "title": "Form F2: COVID Impact Survey - Participant v1.3",
+  "instruments": {
+    "participant_and_site_information": {
+      "instrument": "participant_and_site_information",
+      "directory": "participant_and_site_information"
+    },
+    "f2": {
+      "instrument": "form_f2_covid_impact_survey_participant",
+      "directory": "f2"
+    },
+    "calculations": {
+      "instrument": "calculations",
+      "directory": "calculations"
+    }
+  }
+}

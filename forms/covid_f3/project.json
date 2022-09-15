@@ -1,0 +1,13 @@
+{
+  "title": "Form F3: COVID Impact Survey - Co-Participant v1.2",
+  "instruments": {
+    "participant_and_site_information": {
+      "instrument": "participant_and_site_information",
+      "directory": "participant_and_site_information"
+    },
+    "f3": {
+      "instrument": "form_f3_covid_impact_survey_coparticipant",
+      "directory": "f3"
+    }
+  }
+}
