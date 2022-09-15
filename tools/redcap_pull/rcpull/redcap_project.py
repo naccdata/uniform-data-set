@@ -35,6 +35,7 @@ def pull(*, reader, project_path: str) -> None:
       project_path - the local path to project
       project_name - the project key
     """
+    makedirectory(project_path)
     metadata = project_metadata.get_metadata(project_path=project_path)
     if not metadata:
         try:
