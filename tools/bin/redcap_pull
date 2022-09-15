@@ -1,0 +1,2 @@
+#!/bin/bash
+python $SCRIPT_DIR/rcpull/redcap_pull.py "$@"
