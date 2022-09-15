@@ -1,5 +1,17 @@
 # Contributing
 
+## Getting started
+
+To work on/with this project, you will need to get a copy of the files in the repository.
+You do this using [git](https://git-scm.com).
+
+If you are completely new to git and GitHub, there are are a number of online resources, but a good place to start for this project is [Using Git](https://docs.github.com/en/get-started/using-git) in the [GitHub Docs](https://docs.github.com/).
+
+To get your local copy (aka, clone) of this repository, do the following:
+1. [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git).
+2. Choose a directory where you want to have your local copy of this repository.
+2. [Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
 ## Git workflow
 
 In limited scenarios, you can add or edit files on GitHub, but in general you will need to [use Git](https://docs.github.com/en/get-started/using-git) to manage your changes and share them to the repository.
@@ -13,7 +25,6 @@ The steps there are:
 5. Add the changes to the branch.
 6. Commit the changes.
 7. Push the branch to GitHub.
-
 
 ## Documentation
 
@@ -31,6 +42,8 @@ For details on working in the browser, see
 Create new documents as Markdown files (a file with a `.md` extension) in the `docs` directory.
 Use the [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 format to make sure they display correctly on the site.
+
+Images should be placed in the `docs/images` directory, and can be included in a markdown document.
 
 More detail on writing documentation on GitHub is available under **Writing on GitHub** in the GitHub [Get Started](https://docs.github.com/en/get-started) docs.
 
@@ -53,60 +66,58 @@ To **modify** a document in a branch
 
 ## Forms
 
-Forms are stored in a directory for each form set.
-This directory contains the XML export and data dictionary for the REDCap project, 
-along with subdirectories for each instrument of the project.
-These instruments correspond to the individual forms and any other instruments in the project.
-
-For instance, the Down Syndrome project looks like
+Each form set is broken out into individual instruments for each form. 
+For instance, the Down Syndrome module has five forms and the corresponding directory structure is
 
 ```bash
 forms/ds
-├── DownSyndromeModule.REDCap.xml
-├── DownSyndromeModule_data_dictionary.csv
 ├── a1d
 ├── b1d
 ├── b2d
 ├── c1d
-├── d1d
-└── formheader
+└── d1d
 ```
 
-The directory for each instrument contains the exported instrument files
+where each directory contains the exported instrument for the form.
+
+### Adding/Updating an individual instrument
+
+Before adding or updating a new instrument, create a new branch with an appropriate name using Git.
+For instance, to add the initial A1D form for the Down Syndrome module, we could use
 
 ```bash
-forms/ds
-└── a1d
-    ├── OriginID.txt
-    ├── instrument.csv
-    └── survey_settings.csv
+git checkout -b add-initial-ds-a1d
 ```
 
-plus any documentation files that accompany the form.
-These may include form PDFs, and quality rules for the form in a CSV.
+To export an individual instrument in REDCap
 
-### Adding forms
+1. Open the Designer\
+   ![Location of designer link](docs/images/designer.png)
+2. For the instrument you want to export, click the `Choose action` dropdown next to the instrument,
 
-To add a new form set, follow the Git workflow to create and switch into a new 
-branch with a name that indicates which forms are being added.
+   <img src="docs/images/instrument-action.png" width=650 >
 
-1. If it does not already exist, create a directory for the form set, use a 
-   lowercase abbreviation for the name.
-   Examples of existing names are `ds` for the Down Syndrome Module, and `uds` 
-   for the UDS.
-2. If a REDCap project for the forms already exists, export both the XML and
-   data dictionary (CSV) for the project and place them in the top directory.
-   Then export each individual instrument and add the exported files to the 
-   directory.
-   Instruments are exported as zip files, which will uncompress to a directory.
-   Move this directory into the form set directory and rename to the (lowercase)
-   name of the form.
-3. Add and commit the new files to the branch.
+   and select `Download instrument ZIP`. 
+   
+   <img src="docs/images/instrument-download.png" width=650>
 
-> Note: if at any point you have a directory that doesn't have any contents,
-add an empty file named `.gitkeep` to the directory and commit the file
+This will save the downloaded file to the default location for your browser and OS settings.
+On a Mac with the default settings, the file will be unzipped and saved in your `Downloads` directory with a name corresponding to the instrument name (e.g., `Downloads/FormA1dParticipantHe_2022-05-27_0749`).
+On a Windows machine, you will likely have to unzip the file using the File Manager.
+
+In this case, to move the file into the repository 
+
+1. Make sure there is a directory for your instrument.
+   For A1D of Down Syndrome module, this should be a directory `forms/ds/a1d`.
+   All of these should already exist for most projects, but if not you can create the directory.
+   If you aren't sure how, please ask.
+2. Copy the file into the instrument directory.
+   For A1D, the command on a Mac would be `cp ~/Downloads/FormA1dParticipantHe_2022-05-27_0749/*.* forms/ds/a1d`
+3. Commit your changes and then push the branch to GitHub.
 
 
 ## Tools
 
+NACC leadership needs to choose a license.
+Please make sure the code license is established in the repository before adding code.
 

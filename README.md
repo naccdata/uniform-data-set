@@ -1,31 +1,32 @@
 # REDCap Uniform Data Set
 
-Repository for REDCap artifacts for the UDS and UDS Module forms and associated software tools.
+Repository for artifacts for the [UDS and UDS Module forms](https://naccdata.org/data-collection/forms-documentation/uds-3) including
+
+- REDCap projects and instrument files for forms
+- QC rules, and
+- associated software tools.
 
 This repository represents a collaborative effort involving members of NACC, and several ADRCs.
 
 ## Licensing
 
-The forms included in this repository are copyrighted.
-Detailed copyright statements and usage restrictions may be found on the [NACC website](https://naccdata.org/data-collection/guidelines-copyright).
+- The forms included in this repository are copyrighted.
+  Detailed copyright statements and usage restrictions are available on the [NACC website](https://naccdata.org/data-collection/guidelines-copyright).
+  Non-ADRC researchers who wish to use the forms in this repository should [complete and return a permission request](https://files.alz.washington.edu/nacc-permission-form.pdf).
 
-Code in this repository is licensed under the XXXX license.
+- Code in this repository is licensed under the Mozilla Public License Version 2.0.
+
+## Disclaimer
+
+*The unreleased contents of this repository should be considered a work in 
+progress and should not be used for technical or clinical research decisions.*
 
 ## Getting a release
 
 This project does not yet have any releases.
 
-## Getting started
+Once available, releases can be found on the repository [releases page](https://github.com/naccdata/uniform-data-set/releases).
 
-To work on/with this project, you will need to get a copy of the files in the repository.
-You do this using [git](https://git-scm.com).
-
-If you are completely new to git and GitHub, there are are a number of online resources, but a good place to start for this project is [Using Git](https://docs.github.com/en/get-started/using-git) in the [GitHub Docs](https://docs.github.com/).
-
-To get your local copy (aka, clone) of this repository, do the following:
-1. [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git).
-2. Choose a directory where you want to have your local copy of this repository.
-2. [Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ## Forms
 
@@ -43,6 +44,9 @@ The artifacts for different form sets are located in the `forms` directory.
     ├── np
     └── uds
 ```
+
+Each directory contains a REDCap project XML file, the project data dictionary, 
+and a subdirectory for each instrument of the project.
 
 ## Contributing
 

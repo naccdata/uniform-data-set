@@ -1,0 +1,77 @@
+inrelto:
+  type: integer
+  required: true
+  #INRELTO must be between 1-6
+  min: 1
+  max: 6
+inknown:
+  type: integer
+  required: true
+  #INKNOWN must be between 0-120, or =999 (Unknown)
+  anyof:
+    - min: 0
+      max: 120
+    - allowed:
+        - 999
+inlivwth:
+  type: integer
+  required: true
+  #INLIVWTH must be 0 or 1
+  min: 0
+  max: 1
+  #List of compatibility checks
+  compatibility:
+    #IF INRELTO=1 then INLIVWTH cannot equal 0
+    - if:
+        inrelto:
+          allowed:
+            - 1
+      then:
+        forbidden:
+          - 0
+    #IF LIVSITUA=1 then INLIVWTH cannot equal 1
+    - if:
+        livsitua:
+          allowed:
+            - 1
+      then:
+        forbidden:
+          - 1
+incntmod:
+  type: integer
+  required: true
+  #INCNTMOD must be between 1-6
+  min: 1
+  max: 6
+incntmdx:
+  type: string
+  nullable: true
+  #List of compatibility checks
+  compatibility:
+    #If INCNTMOD=6 (Other) then INCNTMDX cannot be blank
+    - if:
+        incntmod:
+          allowed:
+            - 6
+      then:
+        nullable: false
+    #If INCNTMOD!=6 then INCNTMDX should be blank
+    - if:
+        incntmod:
+          min: 1
+          max: 5
+      then:
+        nullable: true
+        filled: false
+incntfrq:
+  type: integer
+  required: true
+  #INCNTFRQ must be between 1-6
+  min: 1
+  max: 6
+inrely:
+  type: integer
+  required: true
+  #INRELY must be 0 or 1
+  min: 0
+  max: 1
