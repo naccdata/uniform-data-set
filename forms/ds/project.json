@@ -1,0 +1,29 @@
+{
+  "title": "Down Syndrome Module",
+  "instruments": {
+    "header": {
+      "instrument": "form_header",
+      "directory": "header"
+    },
+    "a1d": {
+      "instrument": "form_a1d_participant_health_history",
+      "directory": "a1d"
+    },
+    "b1d": {
+      "instrument": "form_b1d_ntg_early_detection_screen_for_dementia",
+      "directory": "b1d"
+    },
+    "b2d": {
+      "instrument": "form_b2d_dld_summary_page",
+      "directory": "b2d"
+    },
+    "c1d": {
+      "instrument": "form_c1d_neuropsychological_battery_scores",
+      "directory": "c1d"
+    },
+    "d1d": {
+      "instrument": "form_d1d_clinican_exam_and_diagnosis",
+      "directory": "d1d"
+    }
+  }
+}
