@@ -13,7 +13,7 @@ import project_metadata
 
 def pull_metadata(*, reader, project_path: str) -> None:
     """Creates project metadata for the project.
-    
+
     Args:
       reader: the project reader for the project
       project_path: the path for the project files
@@ -78,7 +78,7 @@ def pull(*, reader, project_path: str) -> None:
 
 def pull_instrument(*, reader, instrument: str, path: str) -> None:
     """Pull the instrument to the project files.
-    
+
     Args:
       reader: the ProjectReader for the project
       name: the name of the instrument
