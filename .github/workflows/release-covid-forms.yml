@@ -1,0 +1,26 @@
+on:
+  push:
+    tags:
+      - "covid_*"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create directory
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/.github/create_directory.sh"
+          "${GITHUB_WORKSPACE}/.github/create_directory.sh" covid_f2
+
+      - name: Zip directory
+        run: (cd build/forms && zip -r ../../covid_f2.zip covid_f2/*)
+
+      - name: Push release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: covid_f2.zip
