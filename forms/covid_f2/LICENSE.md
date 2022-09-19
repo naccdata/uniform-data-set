@@ -1,0 +1,2 @@
+The documents in this directory contain copyrighted materials whose use is restricted under the terms specified on the web page
+https://naccdata.org/data-collection/guidelines-copyright.
