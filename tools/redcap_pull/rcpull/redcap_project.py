@@ -13,7 +13,7 @@ import project_metadata
 
 def pull_metadata(*, reader, project_path: str) -> None:
     """Creates project metadata for the project.
-    
+
     Args:
       reader: the project reader for the project
       project_path: the path for the project files
@@ -45,7 +45,8 @@ def pull(*, reader, project_path: str) -> None:
             logging.error("Could not retrieve project information\n%s", error)
             return
 
-    project_name = metadata['title'].replace(' ', '').replace(':', '')
+        project_metadata.write_metadata(project_path=project_path,
+                                        metadata=metadata)
 
     try:
         project_xml = reader.get_project_xml()
@@ -53,6 +54,7 @@ def pull(*, reader, project_path: str) -> None:
         logging.error("Could not retrieve project XML\n%s", error)
         return
 
+    project_name = metadata['title'].replace(' ', '').replace(':', '')
     write_file(file_path=os.path.join(project_path,
                                       f"{project_name}.REDCap.xml"),
                content=project_xml)
@@ -76,7 +78,7 @@ def pull(*, reader, project_path: str) -> None:
 
 def pull_instrument(*, reader, instrument: str, path: str) -> None:
     """Pull the instrument to the project files.
-    
+
     Args:
       reader: the ProjectReader for the project
       name: the name of the instrument
