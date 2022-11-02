@@ -1,0 +1,56 @@
+Form ,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values/ranges/characters, etc. are allowed for this field?"
+B3,IVP,UPDRS is normal,PDNORMAL,No,0-1
+B4,IVP,1. Speech,SPEECH,No,"0-4, 8"
+B5,IVP,1a. Speech untestable (specify),SPEECHX,No,
+B6,IVP,2. Facial expression,FACEXP,No,"0-4, 8"
+B7,IVP,2a. Facial expression untestable (specify),FACEXPX,No,
+B8,IVP,"3a. Tremor at rest - face, lips, chin",TRESTFAC,No,"0-4, 8"
+B9,IVP,"3a1. Tremor at rest - face, lips, chin untestable (specify)",TRESTFAX,No,
+B10,IVP,3b. Tremor at rest - right hand,TRESTRHD,No,"0-4, 8"
+B11,IVP,3b1. Tremor at rest - right hand untestable (specify),TRESTRHX,No,
+B12,IVP,3c. Tremor at rest - left hand,TRESTLHD,No,"0-4, 8"
+B13,IVP,3c1. Tremor at rest - left hand untestable (specify),TRESTLHX,No,
+B14,IVP,3d. Tremor at rest - right foot,TRESTRFT,No,"0-4, 8"
+B15,IVP,3d1. Tremor at rest - right foot untestable (specify),TRESTRFX,No,
+B16,IVP,3e. Tremor at rest - left foot,TRESTLFT,No,"0-4, 8"
+B17,IVP,3e1. Tremor at rest - left foot untestable (specify),TRESTLFX,No,
+B18,IVP,4a. Action or postural tremor of hands - right hand,TRACTRHD,No,"0-4, 8"
+B19,IVP,4a1. Action or postural tremor of hands - right hand untestable (specify),TRACTRHX,No,
+B20,IVP,4b. Action or postural tremor of hands - left hand,TRACTLHD,No,"0-4, 8"
+B21,IVP,4b1. Action or postural tremor of hands - left hand untestable (specify),TRACTLHX,No,
+B22,IVP,5a. Rigidity - neck,RIGDNECK,No,"0-4, 8"
+B23,IVP,5a1. Rigidity - neck untestable (specify),RIGDNEX,No,
+B24,IVP,5b. Rigidity - right upper extremity ,RIGDUPRT,No,"0-4, 8"
+B25,IVP,5b1. Rigidity - right upper extremity untestable (specify),RIGDUPRX,No,
+B26,IVP,5c. Rigidity - left upper extremity ,RIGDUPLF,No,"0-4, 8"
+B27,IVP,5c1. Rigidity - left upper extremity untestable (specify),RIGDUPLX,No,
+B28,IVP,5d. Rigidity - right lower extremity,RIGDLORT,No,"0-4, 8"
+B29,IVP,5d1. Rigidity - right lower extremity untestable (specify),RIGDLORX,No,
+B30,IVP,5e. Rigidity - left lower extremity,RIGDLOLF,No,"0-4, 8"
+B31,IVP,5e1. Rigidity - left lower extremity untestable (specify),RIGDLOLX,No,
+B32,IVP,6a. Finger taps - right hand,TAPSRT,No,"0-4, 8"
+B33,IVP,6a1. Finger taps - right hand untestable (specify),TAPSRTX,No,
+B34,IVP,6b. Finger taps - left hand,TAPSLF,No,"0-4, 8"
+B35,IVP,6b1. Finger taps - left hand untestable (specify),TAPSLFX,No,
+B36,IVP,7a. Hand movements - right hand,HANDMOVR,No,"0-4, 8"
+B37,IVP,7a1. Hand movements - right hand untestable (specify),HANDMVRX,No,
+B38,IVP,7b. Hand movements - left hand,HANDMOVL,No,"0-4, 8"
+B39,IVP,7b1. Hand movements - left hand untestable (specify),HANDMVLX,No,
+B40,IVP,8a. Rapid alternating movement of hands - right hand,HANDALTR,No,"0-4, 8"
+B41,IVP,8a1. Rapid alternating movement of hands - right hand untestable (specify),HANDATRX,No,
+B42,IVP,8b. Rapid alternating movement of hands - left hand ,HANDALTL,No,"0-4, 8"
+B43,IVP,8b1. Rapid alternating movements of hands - left hand untestable (specify),HANDATLX,No,
+B44,IVP,9a. Leg agility - right leg,LEGRT,No,"0-4, 8"
+B45,IVP,9a1. Leg agility - right leg untestable (specify),LEGRTX,No,
+B46,IVP,9b. Leg agility - left leg,LEGLF,No,"0-4, 8"
+B47,IVP,9b1. Leg agility - left leg untestable (specify),LEGLFX,No,
+B48,IVP,10. Arising from chair,ARISING,No,"0-4, 8"
+B49,IVP,10a. Arising from chair untestable (specify),ARISINGX,No,
+B50,IVP,11. Posture,POSTURE,No,"0-4, 8"
+B51,IVP,11a. Posture untestable (specify),POSTUREX,No,
+B52,IVP,12. Gait,GAIT,No,"0-4, 8"
+B53,IVP,12a. Gait untestable (specify),GAITX,No,
+B54,IVP,13. Posture stability,POSSTAB,No,"0-4, 8"
+B55,IVP,13a. Posture stability untestable (specify),POSSTABX,No,
+B56,IVP,14. Body bradykinesia and hypokinesia,BRADYKIN,No,"0-4, 8"
+B57,IVP,14a. Body bradykinesia and hypokinesia untestable (specify),BRADYKIX,No,
