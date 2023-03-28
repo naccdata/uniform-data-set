@@ -34,7 +34,7 @@ A5D2,IVP,3a4. Carotid artery surgery or stenting?,ANGIOCP,Conditional (e.g. skip
 A5D2,IVP,3a5. Age at most recent carotid artery surgery or stenting,CAROTIDAGE,Conditional (e.g. skip pattern),"10-110, 999"
 A5D2,IVP,3b. Transient ischemic attack (TIA),CBTIA,Always,"0-2, 9"
 A5D2,IVP,3b1. Age at most recent TIA,TIAAGE,Conditional (e.g. skip pattern),"10-110, 999"
-A5D2,IVP,4a. Parkinson’s disease (PD),PD,Always,"0, 1, 9"
+A5D2,IVP,4a. Parkinsonâ€™s disease (PD),PD,Always,"0, 1, 9"
 A5D2,IVP,4a1. Age at estimated PD symptom onset,PDAGE,Conditional (e.g. skip pattern),"10-110, 999"
 A5D2,IVP,"4b. Other parkinsonism disorder (e.g., DLB)",PDOTHR,Always,"0, 1, 9"
 A5D2,IVP,4b1. Age at parkinsonism disorder diagnosis,PDOTHRAGE,Conditional (e.g. skip pattern),"10-110, 999"
@@ -83,13 +83,13 @@ A5D2,IVP,5f2a. Upper extremity affected by arthritis,ARTHUPEX,Conditional (e.g. 
 A5D2,IVP,5f2b. Lower extremity affected by arthritis,ARTHLOEX,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5f2c. Spine affected by arthritis,ARTHSPIN,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5f2d. Region affected by arthritis unknown,ARTHUNK,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,5g. Incontinence—urinary (occurring at least weekly),INCONTU,Always,"0-2, 9"
-A5D2,IVP,5h. Incontinence—bowel (occurring at least weekly),INCONTF,Always,"0-2, 9"
+A5D2,IVP,5g. Incontinenceâ€”urinary (occurring at least weekly),INCONTU,Always,"0-2, 9"
+A5D2,IVP,5h. Incontinenceâ€”bowel (occurring at least weekly),INCONTF,Always,"0-2, 9"
 A5D2,IVP,5i. Sleep apnea,APNEA,Always,"0-2, 9"
 A5D2,IVP,5i1. Typical use of breathing machine (e.g. CPAP) at night over the past 12 months,CPAP,Conditional (e.g. skip pattern),"0-2, 9"
 A5D2,IVP,5i2. Typical use of an oral device for sleep apnea at night over the past 12 months?,APNEAORAL,Conditional (e.g. skip pattern),"0-2, 9"
 A5D2,IVP,5j. REM sleep behavior disorder (RBD),RBD,Always,"0-2, 9"
-A5D2,IVP,5k. Hyposomnia/Insomnia (occurring at least weekly or requiring medication),INSOM,Always,"0-2, 9"
+A5D2,IVP,5k. Hyposomnia/Insomnia (occurring at least weekly or requiring medication),INSOMN,Always,"0-2, 9"
 A5D2,IVP,5l. Other sleep disorder,OTHSLEEP,Always,"0-2, 9"
 A5D2,IVP,5l1. Specify other sleep disorder,OTHSLEEX,Conditional (e.g. skip pattern),Any characters or numbers
 A5D2,IVP,"5m. Cancer (excluding non-melanoma skin cancer), primary or metastatic",CANCER,Always,"0-2, 9"
