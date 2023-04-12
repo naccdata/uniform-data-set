@@ -35,5 +35,5 @@ B8,I,4o. Vertical +/- horizontal gaze palsy,VHGAZEPAL,Conditional (e.g. skip pat
 B8,I,4p. Dysarthria*,DYSARTH,Conditional (e.g. skip pattern),"0,1,8"
 B8,I,4q. Apraxia of speech,APRAXSP,Conditional (e.g. skip pattern),"0,1,8"
 B8,I,5. Gait,GAITABN,Conditional (e.g. skip pattern),"0,1,8"
-B8,I,5a. Finding,GAITFIND,Conditional (e.g. skip pattern),7-Jan
+B8,I,5a. Finding,GAITFIND,Conditional (e.g. skip pattern),1-7
 B8,I,5a1. Other gait (Specify),GAITOTHRX,Conditional (e.g. skip pattern),text
