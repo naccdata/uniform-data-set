@@ -49,6 +49,7 @@ A1,I,20. ADI national percentile,ADINAT,Conditional (e.g. skip pattern),"1-100,o
 A1,I,21. Participant's primary occupation throughout their working life,PRIOCC,Conditional (e.g. skip pattern),"100-731, or blank"
 A1,I,22. ADRC enrollment type:,SOURCENW,Always,Integers 1-2
 A1,I,23. Principal referral source,REFERSC,Always,"Integers 1-6,8,9"
+A1,I,24a. Principal referral source - other (specify),REFERSCX,Conditional (e.g. skip pattern),text
 A1,I,"24. If the referral source was a self-referral or a nonprofessional contact, how did the referral source learn of the ADRC?",REFLEARNED,Conditional (e.g. skip pattern),"Integers 1-10,88,99"
 A1,I,24a. Center social media - specify,REFCTRSOCX,Conditional (e.g. skip pattern),text
 A1,I,24b. Center registry - specify,REFCTRREGX,Conditional (e.g. skip pattern),text
