@@ -1,12 +1,14 @@
 Form ,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values/ranges/characters, etc. are allowed for this field?"
-A4a,IVP,1. Has the participant ever been enrolled in a clinical trial of a treatment expected to modify ADRD biomarkers or been prescribed a clinical treatment expected to modify ADRD biomarkers?,TRTBIOMARK,Always,"Integers 0-1, 9"
+A4a,IVP,1. Has the participant ever been prescribed or been enrolled in a clinical trial of a treatment expected to modify ADRD biomarkers?,TRTBIOMARK,Always,"Integers 0-1, 9"
 A4a,IVP,2a1a. Primary Drug Target - Amyloid Beta (1),TARGETAB1,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2a1b. Primary Drug Target - Tau (1),TARGETTAU1,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2a1c. Primary Drug Target - Inflammation (1),TARGETINF1,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2a1d. Primary Drug Target - Synaptic plasticity/neuroprotection (1),TARGETSYN1,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2a1e. Primary Drug Target - Other target(s) (1),TARGETOTH1,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"2a1e1. Primary Drug Target - Other target(s), specify (1)",TARGETOTX1,Conditional (e.g. skip pattern),text
-A4a,IVP,2a2. Specific treatment and/or trial (1),TRTTRIAL1,Conditional (e.g. skip pattern),text
+A4a,IVP,2a2a. Specific treatment and/or trial (1),TRTTRIAL1,Conditional (e.g. skip pattern),text
+A4a,IVP,2a2b. Specific treatment and/or trial - NCT identifier (1),NCTNUM1,Conditional (e.g. skip pattern),text
+A4a,IVP,2a2c. Specific treatment and/or trial - ALZNET identifier (1),ALZNET1,Conditional (e.g. skip pattern),text
 A4a,IVP,2a3a. Start date (month) (1),STARTMO1,Conditional (e.g. skip pattern),Integers 1-12
 A4a,IVP,2a3b. Start date (year) (1),STARTYEAR1,Conditional (e.g. skip pattern),1990-present
 A4a,IVP,2a4a. End date (month) (1),ENDMO1,Conditional (e.g. skip pattern),Integers 1-12
@@ -19,7 +21,9 @@ A4a,IVP,2b1c. Primary Drug Target - Inflammation (2),TARGETINF2,Conditional (e.g
 A4a,IVP,2b1d. Primary Drug Target - Synaptic plasticity/neuroprotection (2),TARGETSYN2,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2b1e. Primary Drug Target - Other target(s) (2),TARGETOTH2,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"2b1e1. Primary Drug Target - Other target(s), specify (2)",TARGETOTX2,Conditional (e.g. skip pattern),text
-A4a,IVP,2b2. Specific treatment and/or trial (2),TRTTRIAL2,Conditional (e.g. skip pattern),text
+A4a,IVP,2b2a. Specific treatment and/or trial (2),TRTTRIAL2,Conditional (e.g. skip pattern),text
+A4a,IVP,2b2b. Specific treatment and/or trial - NCT identifier (2),NCTNUM2,Conditional (e.g. skip pattern),text
+A4a,IVP,2b2c. Specific treatment and/or trial - ALZNET identifier (2),ALZNET2,Conditional (e.g. skip pattern),text
 A4a,IVP,2b3a. Start date (month) (2),STARTMO2,Conditional (e.g. skip pattern),Integers 1-12
 A4a,IVP,2b3b. Start date (year) (2),STARTYEAR2,Conditional (e.g. skip pattern),1990-present
 A4a,IVP,2b4a. End date (month) (2),ENDMO2,Conditional (e.g. skip pattern),Integers 1-12
@@ -32,7 +36,9 @@ A4a,IVP,2c1c. Primary Drug Target - Inflammation (3),TARGETINF3,Conditional (e.g
 A4a,IVP,2c1d. Primary Drug Target - Synaptic plasticity/neuroprotection (3),TARGETSYN3,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2c1e. Primary Drug Target - Other target(s) (3),TARGETOTH3,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"2c1e1. Primary Drug Target - Other target(s), specify (3)",TARGETOTX3,Conditional (e.g. skip pattern),text
-A4a,IVP,2c2. Specific treatment and/or trial (3),TRTTRIAL3,Conditional (e.g. skip pattern),text
+A4a,IVP,2c2a. Specific treatment and/or trial (3),TRTTRIAL3,Conditional (e.g. skip pattern),text
+A4a,IVP,2c2b. Specific treatment and/or trial - NCT identifier (3),NCTNUM3,Conditional (e.g. skip pattern),text
+A4a,IVP,2c2c. Specific treatment and/or trial - ALZNET identifier (3),ALZNET3,Conditional (e.g. skip pattern),text
 A4a,IVP,2c3a. Start date (month) (3),STARTMO3,Conditional (e.g. skip pattern),Integers 1-12
 A4a,IVP,2c3b. Start date (year) (3),STARTYEAR3,Conditional (e.g. skip pattern),1990-present
 A4a,IVP,2c4a. End date (month) (3),ENDMO3,Conditional (e.g. skip pattern),Integers 1-12
@@ -45,7 +51,9 @@ A4a,IVP,2d1c. Primary Drug Target - Inflammation (4),TARGETINF4,Conditional (e.g
 A4a,IVP,2d1d. Primary Drug Target - Synaptic plasticity/neuroprotection (4),TARGETSYN4,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2d1e. Primary Drug Target - Other target(s) (4),TARGETOTH4,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"2d1e1. Primary Drug Target - Other target(s), specify (4)",TARGETOTX4,Conditional (e.g. skip pattern),text
-A4a,IVP,2d2. Specific treatment and/or trial (4),TRTTRIAL4,Conditional (e.g. skip pattern),text
+A4a,IVP,2d2a. Specific treatment and/or trial (4),TRTTRIAL4,Conditional (e.g. skip pattern),text
+A4a,IVP,2d2b. Specific treatment and/or trial - NCT identifier (4),NCTNUM4,Conditional (e.g. skip pattern),text
+A4a,IVP,2d2c. Specific treatment and/or trial - ALZNET identifier (4),ALZNET4,Conditional (e.g. skip pattern),text
 A4a,IVP,2d3a. Start date (month) (4),STARTMO4,Conditional (e.g. skip pattern),Integers 1-12
 A4a,IVP,2d3b. Start date (year) (4),STARTYEAR4,Conditional (e.g. skip pattern),1990-present
 A4a,IVP,2d4a. End date (month) (4),ENDMO4,Conditional (e.g. skip pattern),Integers 1-12
@@ -58,7 +66,9 @@ A4a,IVP,2e1c. Primary Drug Target - Inflammation (5),TARGETINF5,Conditional (e.g
 A4a,IVP,2e1d. Primary Drug Target - Synaptic plasticity/neuroprotection (5),TARGETSYN5,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2e1e. Primary Drug Target - Other target(s) (5),TARGETOTH5,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"2e1e1. Primary Drug Target - Other target(s), specify (5)",TARGETOTX5,Conditional (e.g. skip pattern),text
-A4a,IVP,2e2. Specific treatment and/or trial (5),TRTTRIAL5,Conditional (e.g. skip pattern),text
+A4a,IVP,2e2a. Specific treatment and/or trial (5),TRTTRIAL5,Conditional (e.g. skip pattern),text
+A4a,IVP,2e2b. Specific treatment and/or trial - NCT identifier (5),NCTNUM5,Conditional (e.g. skip pattern),text
+A4a,IVP,2e2c. Specific treatment and/or trial - ALZNET identifier (5),ALZNET5,Conditional (e.g. skip pattern),text
 A4a,IVP,2e3a. Start date (month) (5),STARTMO5,Conditional (e.g. skip pattern),Integers 1-12
 A4a,IVP,2e3b. Start date (year) (5),STARTYEAR5,Conditional (e.g. skip pattern),1990-present
 A4a,IVP,2e4a. End date (month) (5),ENDMO5,Conditional (e.g. skip pattern),Integers 1-12
@@ -71,7 +81,9 @@ A4a,IVP,2f1c. Primary Drug Target - Inflammation (6),TARGETINF6,Conditional (e.g
 A4a,IVP,2f1d. Primary Drug Target - Synaptic plasticity/neuroprotection (6),TARGETSYN6,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2f1e. Primary Drug Target - Other target(s) (6),TARGETOTH6,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"2f1e1. Primary Drug Target - Other target(s), specify (6)",TARGETOTX6,Conditional (e.g. skip pattern),text
-A4a,IVP,2f2. Specific treatment and/or trial (6),TRTTRIAL6,Conditional (e.g. skip pattern),text
+A4a,IVP,2f2a. Specific treatment and/or trial (6),TRTTRIAL6,Conditional (e.g. skip pattern),text
+A4a,IVP,2f2b. Specific treatment and/or trial - NCT identifier (6),NCTNUM6,Conditional (e.g. skip pattern),text
+A4a,IVP,2f2c. Specific treatment and/or trial - ALZNET identifier (6),ALZNET6,Conditional (e.g. skip pattern),text
 A4a,IVP,2f3a. Start date (month) (6),STARTMO6,Conditional (e.g. skip pattern),Integers 1-12
 A4a,IVP,2f3b. Start date (year) (6),STARTYEAR6,Conditional (e.g. skip pattern),1990-present
 A4a,IVP,2f4a. End date (month) (6),ENDMO6,Conditional (e.g. skip pattern),Integers 1-12
@@ -84,7 +96,9 @@ A4a,IVP,2g1c. Primary Drug Target - Inflammation (7),TARGETINF7,Conditional (e.g
 A4a,IVP,2g1d. Primary Drug Target - Synaptic plasticity/neuroprotection (7),TARGETSYN7,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2g1e. Primary Drug Target - Other target(s) (7),TARGETOTH7,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"2g1e1. Primary Drug Target - Other target(s), specify (7)",TARGETOTX7,Conditional (e.g. skip pattern),text
-A4a,IVP,2g2. Specific treatment and/or trial (7),TRTTRIAL7,Conditional (e.g. skip pattern),text
+A4a,IVP,2g2a. Specific treatment and/or trial (7),TRTTRIAL7,Conditional (e.g. skip pattern),text
+A4a,IVP,2g2b. Specific treatment and/or trial - NCT identifier (7),NCTNUM7,Conditional (e.g. skip pattern),text
+A4a,IVP,2g2c. Specific treatment and/or trial - ALZNET identifier (7),ALZNET7,Conditional (e.g. skip pattern),text
 A4a,IVP,2g3a. Start date (month) (7),STARTMO7,Conditional (e.g. skip pattern),Integers 1-12
 A4a,IVP,2g3b. Start date (year) (7),STARTYEAR7,Conditional (e.g. skip pattern),1990-present
 A4a,IVP,2g4a. End date (month) (7),ENDMO7,Conditional (e.g. skip pattern),Integers 1-12
@@ -97,7 +111,9 @@ A4a,IVP,2h1c. Primary Drug Target - Inflammation (8),TARGETINF8,Conditional (e.g
 A4a,IVP,2h1d. Primary Drug Target - Synaptic plasticity/neuroprotection (8),TARGETSYN8,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2h1e. Primary Drug Target - Other target(s) (8),TARGETOTH8,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"2h1e1. Primary Drug Target - Other target(s), specify (8)",TARGETOTX8,Conditional (e.g. skip pattern),text
-A4a,IVP,2h2. Specific treatment and/or trial (8),TRTTRIAL8,Conditional (e.g. skip pattern),text
+A4a,IVP,2h2a. Specific treatment and/or trial (8),TRTTRIAL8,Conditional (e.g. skip pattern),text
+A4a,IVP,2h2b. Specific treatment and/or trial - NCT identifier (8),NCTNUM8,Conditional (e.g. skip pattern),text
+A4a,IVP,2h2c. Specific treatment and/or trial - ALZNET identifier (8),ALZNET8,Conditional (e.g. skip pattern),text
 A4a,IVP,2h3a. Start date (month) (8),STARTMO8,Conditional (e.g. skip pattern),Integers 1-12
 A4a,IVP,2h3b. Start date (year) (8),STARTYEAR8,Conditional (e.g. skip pattern),1990-present
 A4a,IVP,2h4a. End date (month) (8),ENDMO8,Conditional (e.g. skip pattern),Integers 1-12
@@ -109,4 +125,3 @@ A4a,IVP,3a1. Adverse events to modify ADRD biomarkers - Amyloid related imaging 
 A4a,IVP,3a2. Adverse events to modify ADRD biomarkers - Amyloid related imaging abnormalities-hemorrhage (ARIA-H),ARIAH,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,3a3. Adverse events to modify ADRD biomarkers - Other,ADVERSEOTH,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,"3a3a. Adverse events to modify ADRD biomarkers - Other, specify",ADVERSEOTX,Conditional (e.g. skip pattern),text
-,,,,,
