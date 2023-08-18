@@ -1,106 +1,76 @@
 Form,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values/ranges/characters, etc. are allowed for this field?"
 B9,IVP,1. Does the participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOG,Yes,"0-1,8"
-B9,IVP,2. Does the participant report a decline in any behavioral domain (relative to stable baseline prior to onset of current syndrome)?,DECBEH,Yes,"0-1,8"
-B9,IVP,3. Does the participant report a decline in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOT,Yes,"0-1,8"
-B9,IVP,4. Does the participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYM,Yes,"0-1, 8"
-B9,IVP,5. Does the co-participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOGIN,Yes,"0-1,8"
-B9,IVP,6. Does the co-participant report a decline in any behavioral domain (relative to stable baseline prior to onset of current syndrome)?,DECBEHIN,Yes,"0-1,8"
-B9,IVP,7. Does the co-participant report a change in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOTIN,Yes,"0-1,8"
-B9,IVP,8. Does the co-participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYMIN,Yes,"0-1,8"
-B9,IVP,"9. Based on the clinician’s judgment, is the participant currently experiencing meaningful impairment in cognition?",DECCLOG,Yes,0-1
-B9,IVP,10a. Indicate whether the participant currently is meaningfully impaired in memory.,COGMEM,No,"0-1, 9"
-B9,IVP,"10a1. IF YES, at what age did memory impairment begin?",MEMAGE,No,9-110
-B9,IVP,10b. Indicate whether the participant currently is meaningfully impaired in orientation.,COGORI,No,"0-1, 9"
-B9,IVP,"10b1. IF YES, at what age did orientation impairment begin?",ORIAGE,No,9-110
-B9,IVP,"10c.Indicate whether the participant currently is meaningfully impaired in executive function (judgment, planning, and problem-solving)",COGJUDG,No,"0-1, 9"
-B9,IVP,"10c1. IF YES, at what age did executive function impairment begin?",JUDGAGE,No,9-110
-B9,IVP,10d. Indicate whether the participant currently is meaningfully impaired in language,COGLANG,No,"0-1, 9"
-B9,IVP,"10d1. IF YES, at what age did language impairment begin?",LANGAGE,No,9-110
-B9,IVP,10e. Indicate whether the participant currently is meaningfully impaired in visuospatial function,COGVIS,No,"0-1, 9"
-B9,IVP,"10e1. IF YES, at what age did visuospatial function impairment begin?",VISAGE,No,9-110
-B9,IVP,10f. Indicate whether the participant currently is meaningfully impaired in attention/concentration,COGATTN,No,"0-1, 9"
-B9,IVP,"10f1. IF YES, at what age did attention/concentration impairment begin?",ATTNAGE,No,9-110
-B9,IVP,10g. Indicate whether the participant currently has fluctuating cognition,COGFLUC,No,"0-1, 9"
-B9,IVP,"10g1. IF YES, at what age did fluctuating cognition problem begin?",COGFLAGO,No,9-110
-B9,IVP,10h. Indicate whether the participant currently is meaningfully impaired in other cognitive domains,COGOTHR,No,0-1
-B9,IVP,10h1. Specify other cognitive domains,COGOTHRX,No,Any numbers or characters
-B9,IVP,"10h2. IF YES, at what age did impairment in this domain(s) begin?",OTHRAGE,No,9-110
-B9,IVP,11. Indicate the mode of onset for the most prominent cognitive problem that is causing the participant's complaints and/or affecting the participant's function.,COGMODE,No,"1-4, 99"
-B9,IVP,11a. Specify other mode of onset of cognitive symptoms,COGMODEX,No,Any numbers or characters
-B9,IVP,"12. Based on the clinician’s judgment, is the participant currently experiencing any kind of behavioral symptoms?",DECCLBE,Yes,0-1
-B9,IVP,"13a. Participant currently manifests meaningful change in behavior — Apathy, withdrawal",BEAPATHY,No,"0-1, 9"
-B9,IVP,"13a1. IF YES, at what age did apathy/withdrawal begin?",APATHYAGE,No,9-110
-B9,IVP,13b. Participant currently manifests meaningful change in behavior — Depressed mood,BEDEP,No,"0-1, 9"
-B9,IVP,"13b1. IF YES, at what age did the current period of depressive symptoms begin?",DEPAGE,No,9-110
-B9,IVP,13c. Participant currently manifests meaningful change in behavior - Euphoria,BEEUPH,No,"0-1, 9"
-B9,IVP,"13c1. If YES, at what age did the euphoric symptoms begin?",EUPHAGE,No,9-110
-B9,IVP,13d. Participant currently manifests meaningful change in behavior - Substance use,BESUBAB,No,"0-1, 9"
-B9,IVP,13d1a. Alcohol use,ALCUSE,No,"1, blank"
-B9,IVP,13d1b. Sedative/hypnotic use,SEDUSE,No,"1, blank"
-B9,IVP,13d1c. Opiate use,OPIATEUSE,No,"1, blank"
-B9,IVP,13d1d. Cocaine use,COCAINEUSE,No,"1, blank"
-B9,IVP,13d1e. Other substance use,OTHSUBUSE,No,"1, blank"
-B9,IVP,13d1e1. Specify other substance use,OTHSUBUSEX,No,Any numbers or characters
-B9,IVP,"13d2. If YES, at which age did change in substance abuse begin?",SUBSAGE,No,9-110
-B9,IVP,13e1. Participant currently manifests meaningful change in behavior — Psychosis — Visual hallucinations,BEVHALL,No,"0-1, 9"
-B9,IVP,"13e1a. IF YES, do their hallucinations include patterns that are not definite objects, such as pixellation of flat uniform surfaces?",BEVPATT,No,"0-1, 9"
-B9,IVP,"13e1b. IF YES, do their hallucinations include well formed and detailed images of objects or people, either as independent images or as part of other objects?",BEVWELL,No,"0-1, 9"
-B9,IVP,"13e1c. IF YES, at what age did visual hallucinations begin?",BEVHAGO,No,9-110
-B9,IVP,13e2. Participant currently manifests meaningful change in behavior — Psychosis — Auditory hallucinations,BEAHALL,No,"0-1, 9"
-B9,IVP,"13e2a. IF YES, do the auditory hallucinations include simple sounds like knocks or other simple sounds?",BEAHSIMP,No,"0-1, 9"
-B9,IVP,"13e2b. IF YES, do the auditory hallucinations include complex sounds like voices speaking words, or music?",BEAHCOMP,No,"0-1, 9"
-B9,IVP,"13e2c. IF YES, at what age did auditory hallucinations begin?",AHALLAGE,No,9-110
-B9,IVP,"13e3. Participant currently manifests meaningful change in behavior — Psychosis — Abnormal, false, or delusional beliefs",BEDEL,No,"0-1, 9"
-B9,IVP,"13e3a. IF YES, at what age did abnormal, false or delusional beliefs begin?",DELAGE,No,9-110
-B9,IVP,13f.Participant currently manifests meaningful change in behavior — Disinhibition,BEDISIN,No,"0-1, 9"
-B9,IVP,"13f1. IF YES, at what age did disinhibition begin?",DISINAGE,No,9-110
-B9,IVP,13g. Participant currently manifests meaningful change in behavior — Explosive anger,BEANGER,No,"0-1, 9"
-B9,IVP,"13g1. IF YES, at what age did the bouts of explosive anger begin?",ANGERAGE,No,9-110
-B9,IVP,13h. Participant currently manifests meaningful change in behavior — Irritability,BEIRRIT,No,"0-1, 9"
-B9,IVP,"13h1. IF YES, at what age did irritability begin?",IRRITAGE,No,9-110
-B9,IVP,13i. Participant currently manifests meaningful change in behavior — Agitation,BEAGIT,No,"0-1, 9"
-B9,IVP,"13i1. IF YES, at what age did agitation begin?",AGITAGE,No,9-110
-B9,IVP,13j. Participant currently manifests meaningful change in behavior — Aggression,BEAGGRS,No,"0-1, 9"
-B9,IVP,"13j1. IF YES, at what age did aggression begin?",AGGRSAGE,No,9-110
-B9,IVP,13k. Participant currently manifests meaningful change in behavior — Personality change,BEPERCH,No,"0-1, 9"
-B9,IVP,"13k1. IF YES, at what age did personality change begin?",PERCHAGE,No,9-110
-B9,IVP,13l. Participant currently manifests meaningful change in behavior — Loss of empathy,BEEMPATH,No,"0-1, 9"
-B9,IVP,"13l1. IF YES, at what age did the loss of empathy begin?",EMPATHAGE,No,9-110
-B9,IVP,13m. Participant currently manifests meaningful change in behavior — REM sleep behavior disorder,BEREM,No,"0-1, 9"
-B9,IVP,"13m1. IF YES, at what age did the dream enactment behavior begin?",BEREMAGO,No,9-110
-B9,IVP,13m2. Was REM sleep behavior disorder confirmed by polysomnography?,BEREMCONF,No,"0-1, 9"
-B9,IVP,13n. Participant currently manifests meaningful change in behavior — Anxiety,BEANX,No,"0-1, 9"
-B9,IVP,"13n1. IF YES, at what age did anxiety begin?",ANXAGE,No,9-110
-B9,IVP,13o. Participant currently manifests meaningful change in behavior — Obsessions/compulsions,BEOBCOM,No,"0-1, 9"
-B9,IVP,"13o1. IF YES, at what age obsessions and/or compulsions begin?",OBCOMAGE,No,9-110
-B9,IVP,13p. Participant currently manifests meaningful change in behavior — Other,BEOTHR,No,0-1
-B9,IVP,"13p1. Participant currently manifests meaningful change in behavior - Other, specify:",BEOTHRX,No,Any numbers or characters
-B9,IVP,"13p2. If YES, at which age did impairment in this domain(s) begin?",BEOTHRAGE,No,9-110
-B9,IVP,14. Overall mode of onset for behavioral symptoms,BEMODE,No,"1-4, 99"
-B9,IVP,14a. Other mode of onset - specify,BEMODEX,No,Any numbers or characters
-B9,IVP,"15. Based on the clinician’s judgment, is the participant currently experiencing any motor symptoms?",DECCLMOT,Yes,0-1
-B9,IVP,16a. Indicate whether the participant currently has meaningful changes in motor function — Gait disorder,MOGAIT,No,"0-1, 9"
-B9,IVP,"16a1. IF YES, at what age did gait disorder begin?",GAITAGE,No,9-110
-B9,IVP,16b. Indicate whether the participant currently has meaningful changes in motor function — Falls,MOFALLS,No,"0-1, 9"
-B9,IVP,"16b1. IF YES, at what age did the falls begin?",FALLSAGE,No,9-110
-B9,IVP,16c. Indicate whether the participant currently has meaningful changes in motor function — Tremor,MOTREM,No,"0-1, 9"
-B9,IVP,"16c1. IF YES, at what age did tremors begin?",TREMAGE,No,9-110
-B9,IVP,16d. Indicate whether the participant currently has meaningful changes in motor function — Slowness,MOSLOW,No,"0-1, 9"
-B9,IVP,"16d1. IF YES, at what age did slowness begin?",SLOWAGE,No,9-110
-B9,IVP,16e. Indicate whether the participant currently has meaningful changes in motor function — Change in facial expression,MOFACE,No,"0-1, 9"
-B9,IVP,"16e1. IF YES, at what age did the change in facial expression begin?",FACEAGE,No,9-110
-B9,IVP,16f. Indicate whether the participant currently has meaningful changes in motor function — Limb weakness,MOLIMB,No,"0-1, 9"
-B9,IVP,"16f1. IF YES, at what age did the limb weakness begin?",LIMBAGE,No,9-110
-B9,IVP,16g. Indicate whether the participant currently has meaningful changes in motor function — Change in speech,MOSPEECH,No,"0-1, 9"
-B9,IVP,"16g1. IF YES, at what age did the speech changes begin?",SPEECHAGE,No,9-110
-B9,IVP,17. Indicate the mode of onset for the most prominent motor problem that is causing the participant's complaints and/or affecting the participant's function.,MOMODE,No,"1-4, 99"
-B9,IVP,"17a. Indicate mode of onset for the most prominent motor problem that is causing the participant's complains and or affecting the participant's function - Other, specify",MOMODEX,No,Any numbers or characters
-B9,IVP,18. Were changes in motor function suggestive of parkinsonism?,MOMOPARK,No,"0-1, 9"
-B9,IVP,"18a. IF YES, at what age did the motor symptoms suggestive of parkinsonism begin?",PARKAGE,No,9-110
-B9,IVP,19. Were changes in motor function suggestive of amyotrophic lateral sclerosis? ,MOMOALS,No,"0-1, 9"
-B9,IVP,"19a. IF YES, at what age did the motor symptoms suggestive of ALS begin?",ALSAGE,No,9-110
-B9,IVP,20. Overall course of decline of cognitive / behavorial / motor syndrome:,COURSE,Yes,"1-5, 8-9"
-B9,IVP,21. Indicate the predominant domain that was first recognized as changed in the participant:,FRSTCHG,Yes,"1-3, 8-9"
+B9,IVP,2. Does the participant report a decline in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOT,Yes,"0-1,8"
+B9,IVP,3. Does the participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYM,Yes,"0-1, 8"
+B9,IVP,4. Does the co-participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOGIN,Yes,"0-1,8"
+B9,IVP,5. Does the co-participant report a change in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOTIN,Yes,"0-1,8"
+B9,IVP,6. Does the co-participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYMIN,Yes,"0-1,8"
+B9,IVP,"7. Has the participant had declines in any cognitive domain, behavioral domain, or neuropsychiatric/behavioral symptoms?",DECCLIN,Yes,0-1
+B9,IVP,"8. Based on the clinician’s judgment, is the participant currently experiencing meaningful impairment in cognition?",DECCLCOG,No,0-1
+B9,IVP,9a. Indicate whether the participant currently is meaningfully impaired in memory.,COGMEM,No,"0-1, 9"
+B9,IVP,9b. Indicate whether the participant currently is meaningfully impaired in orientation.,COGORI,No,"0-1, 9"
+B9,IVP,"9c.Indicate whether the participant currently is meaningfully impaired in executive function (judgment, planning, and problem-solving)",COGJUDG,No,"0-1, 9"
+B9,IVP,9d. Indicate whether the participant currently is meaningfully impaired in language,COGLANG,No,"0-1, 9"
+B9,IVP,9e. Indicate whether the participant currently is meaningfully impaired in visuospatial function,COGVIS,No,"0-1, 9"
+B9,IVP,9f. Indicate whether the participant currently is meaningfully impaired in attention/concentration,COGATTN,No,"0-1, 9"
+B9,IVP,9g. Indicate whether the participant currently has fluctuating cognition,COGFLUC,No,"0-1, 9"
+B9,IVP,9h. Other cognitive impairment,COGOTHR,No,0-1
+B9,IVP,9h1. Specify other cognitive domains,COGOTHRX,No,Any numbers or characters
+B9,IVP,"9i. If any of the cognitive-related behavioral symptoms in Q9a-Q9h are present, at what age did they begin?",COGAGE,No,9-110
+B9,IVP,10. Indicate the mode of onset for the most prominent cognitive problem that is causing the participant's complaints and/or affecting the participant's function.,COGMODE,No,"1-4, 99"
+B9,IVP,10a. Specify other mode of onset of cognitive symptoms,COGMODEX,No,Any numbers or characters
+B9,IVP,"11. Based on the clinician’s judgment, is the participant currently experiencing any kind of behavioral symptoms?",DECCLBE,No,0-1
+B9,IVP,"12a. Participant currently manifests meaningful change in behavior — Apathy, withdrawal",BEAPATHY,No,"0-1, 9"
+B9,IVP,12b. Participant currently manifests meaningful change in behavior — Depressed mood,BEDEP,No,"0-1, 9"
+B9,IVP,12c. Participant currently manifests meaningful change in behavior — Anxiety,BEANX,No,"0-1, 9"
+B9,IVP,12d. Participant currently manifests meaningful change in behavior - Euphoria,BEEUPH,No,"0-1, 9"
+B9,IVP,12e. Participant currently manifests meaningful change in behavior — Irritability,BEIRRIT,No,"0-1, 9"
+B9,IVP,12f. Participant currently manifests meaningful change in behavior — Agitation,BEAGIT,No,"0-1, 9"
+B9,IVP,"12g. If any of the mood-related behavioral symptoms in Q12a-Q12f are present, at what age did they begin?",BEHAGE,No,9-110
+B9,IVP,12h. Participant currently manifests meaningful change in behavior — Psychosis — Visual hallucinations,BEVHALL,No,"0-1, 9"
+B9,IVP,"12h1. IF YES, do their hallucinations include patterns that are not definite objects, such as pixelation of flat uniform surfaces?",BEVPATT,No,"0-1, 9"
+B9,IVP,"12h2. IF YES, do their hallucinations include well formed and detailed images of objects or people, either as independent images or as part of other objects?",BEVWELL,No,"0-1, 9"
+B9,IVP,12i. Participant currently manifests meaningful change in behavior — Psychosis — Auditory hallucinations,BEAHALL,No,"0-1, 9"
+B9,IVP,"12i1. IF YES, do the auditory hallucinations include simple sounds like knocks or other simple sounds?",BEAHSIMP,No,"0-1, 9"
+B9,IVP,"12i2. IF YES, do the auditory hallucinations include complex sounds like voices speaking words, or music?",BEAHCOMP,No,"0-1, 9"
+B9,IVP,"12j. Participant currently manifests meaningful change in behavior — Psychosis — Abnormal, false, or delusional beliefs",BEDEL,No,"0-1, 9"
+B9,IVP,12k. Participant currently manifests meaningful change in behavior — Aggression,BEAGGRS,No,"0-1, 9"
+B9,IVP,"12l. If any of the psychosis and impulse control-related behavioral symptoms in Q12h-Q12k are present, at what age did they begin?",PSYCHAGE,No,9-110
+B9,IVP,12m. Participant currently manifests meaningful change in behavior — Disinhibition,BEDISIN,No,"0-1, 9"
+B9,IVP,12n. Participant currently manifests meaningful change in behavior — Personality change,BEPERCH,No,"0-1, 9"
+B9,IVP,12o. Participant currently manifests meaningful change in behavior — Loss of empathy,BEEMPATH,No,"0-1, 9"
+B9,IVP,12p. Participant currently manifests meaningful change in behavior — Obsessions/compulsions,BEOBCOM,No,"0-1, 9"
+B9,IVP,12q. Participant currently manifests meaningful change in behavior — Explosive anger,BEANGER,No,"0-1, 9"
+B9,IVP,12r. Participant currently manifests meaningful change in behavior - Substance use,BESUBAB,No,"0-1, 9"
+B9,IVP,12r1a. Alcohol use,ALCUSE,No,"1, blank"
+B9,IVP,12r1b. Sedative/hypnotic use,SEDUSE,No,"1, blank"
+B9,IVP,12r1c. Opiate use,OPIATEUSE,No,"1, blank"
+B9,IVP,12r1d. Cocaine use,COCAINEUSE,No,"1, blank"
+B9,IVP,12r1e. Other substance use,OTHSUBUSE,No,"1, blank"
+B9,IVP,12r1e1. Specify other substance use,OTHSUBUSEX,No,Any numbers or characters
+B9,IVP,"12s. If any of the personality-related behavioral symptoms in Q12m-Q12r are present, at what age did they begin?",PERCHAGE,No,9-110
+B9,IVP,12t. Participant currently manifests meaningful change in behavior — REM sleep behavior disorder,BEREM,No,"0-1, 9"
+B9,IVP,"12t1. IF YES, at what age did the dream enactment behavior begin?",BEREMAGO,No,9-110
+B9,IVP,12t2. Was REM sleep behavior disorder confirmed by polysomnography?,BEREMCONF,No,"0-1, 9"
+B9,IVP,12u. Other behavioral symptom,BEOTHR,No,0-1
+B9,IVP,"12u1. Participant currently manifests meaningful change in behavior - Other, specify:",BEOTHRX,No,Any numbers or characters
+B9,IVP,13. Overall mode of onset for behavioral symptoms,BEMODE,No,"1-4, 99"
+B9,IVP,13a. Other mode of onset - specify,BEMODEX,No,Any numbers or characters
+B9,IVP,"14. Based on the clinician’s judgment, is the participant currently experiencing any motor symptoms?",DECCLMOT,No,0-1
+B9,IVP,15a. Indicate whether the participant currently has meaningful changes in motor function — Gait disorder,MOGAIT,No,"0-1, 9"
+B9,IVP,15b. Indicate whether the participant currently has meaningful changes in motor function — Falls,MOFALLS,No,"0-1, 9"
+B9,IVP,15c. Indicate whether the participant currently has meaningful changes in motor function — Slowness,MOSLOW,No,"0-1, 9"
+B9,IVP,15d. Indicate whether the participant currently has meaningful changes in motor function — Tremor,MOTREM,No,"0-1, 9"
+B9,IVP,15e. Indicate whether the participant currently has meaningful changes in motor function — Limb weakness,MOLIMB,No,"0-1, 9"
+B9,IVP,15f. Indicate whether the participant currently has meaningful changes in motor function — Change in facial expression,MOFACE,No,"0-1, 9"
+B9,IVP,15g. Indicate whether the participant currently has meaningful changes in motor function — Change in speech,MOSPEECH,No,"0-1, 9"
+B9,IVP,"15h. If changes in motor function are present in 15a-15g, at what age did they begin?",MOTORAGE,No,15-110
+B9,IVP,16. Indicate the mode of onset for the most prominent motor problem that is causing the participant's complaints and/or affecting the participant's function.,MOMODE,No,"1-4, 99"
+B9,IVP,"16a. Indicate mode of onset for the most prominent motor problem that is causing the participant's complains and or affecting the participant's function - Other, specify",MOMODEX,No,Any numbers or characters
+B9,IVP,17. Were changes in motor function suggestive of parkinsonism?,MOMOPARK,No,"0-1, 9"
+B9,IVP,18. Were changes in motor function suggestive of amyotrophic lateral sclerosis? ,MOMOALS,No,"0-1, 9"
+B9,IVP,19. Overall course of decline of cognitive / behavorial / motor syndrome:,COURSE,No,"1-5, 8-9"
+B9,IVP,20. Indicate the predominant domain that was first recognized as changed in the participant:,FRSTCHG,No,"1-3, 8-9"
 ,,,,,
 ,,,,,
 ,,,,,
