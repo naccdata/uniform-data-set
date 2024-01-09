@@ -1,4 +1,4 @@
-Form,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values/ranges/characters, etc. are allowed for this field?"
+Form ,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values/ranges/characters, etc. are allowed for this field?"
 B3,IVP,UPDRS is normal,PDNORMAL,No,0-1
 B3,IVP,1. Speech,SPEECH,No,"0-4, 8"
 B3,IVP,1a. Speech untestable (specify),SPEECHX,No,
@@ -54,3 +54,4 @@ B3,IVP,13. Posture stability,POSSTAB,No,"0-4, 8"
 B3,IVP,13a. Posture stability untestable (specify),POSSTABX,No,
 B3,IVP,14. Body bradykinesia and hypokinesia,BRADYKIN,No,"0-4, 8"
 B3,IVP,14a. Body bradykinesia and hypokinesia untestable (specify),BRADYKIX,No,
+B3,IVP,15. Total UPDRS Score ,TOTALUPDRS,No,"0-108, 888"
