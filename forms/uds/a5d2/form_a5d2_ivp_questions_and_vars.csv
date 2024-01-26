@@ -5,7 +5,7 @@ A5D2,IVP,1c. Average number of packs smoked per day,PACKSPER,Conditional (e.g. s
 A5D2,IVP,1d. Has participant smoked within the last 30 days?,TOBAC30,Conditional (e.g. skip pattern),"0, 1, 9"
 A5D2,IVP,"1e. If the participant quit smoking, specify the age at which they last smoked (i.e., quit)",QUITSMOK,Conditional (e.g. skip pattern),"8-110, 888, 999"
 A5D2,IVP,"1f. In the past 12 months, how often has the participant had a drink containing alcohol?",ALCFREQYR,Always,"0-4, 9"
-A5D2,IVP,"1g. On a day when the participant drinks alcoholic beverages, how many standard drinks does the participant typically consume?",ALCDRINKS,Conditional (e.g. skip pattern),"1-5, 9"
+A5D2,IVP,"1g. On a day when the participant drinks alcoholic beverages, how many standard drinks does the participant typically consume?",ALCDRINKS,Conditional (e.g. skip pattern),1-5 9
 A5D2,IVP,"1h. In the past 12 months, how often did the participant have six or more drinks containing alcohol in one day?",ALCBINGE,Conditional (e.g. skip pattern),"0-4, 9"
 A5D2,IVP,"1i1. Participant used substances including prescription or recreational drugs that caused significant impairment in work, legal, driving, or social areas within the past 12 months",SUBSTYEAR,Always,"0, 1, 9"
 A5D2,IVP,"1i2. Participant used substances including prescription or recreational drugs that caused significant impairment in work, legal, driving, or social areas prior to 12 months ago",SUBSTPAST,Always,"0, 1, 9"
@@ -34,32 +34,34 @@ A5D2,IVP,3a4. Carotid artery surgery or stenting?,ANGIOCP,Conditional (e.g. skip
 A5D2,IVP,3a5. Age at most recent carotid artery surgery or stenting,CAROTIDAGE,Conditional (e.g. skip pattern),"10-110, 999"
 A5D2,IVP,3b. Transient ischemic attack (TIA),CBTIA,Always,"0-2, 9"
 A5D2,IVP,3b1. Age at most recent TIA,TIAAGE,Conditional (e.g. skip pattern),"10-110, 999"
-A5D2,IVP,4a. Parkinsonâ€™s disease (PD),PD,Always,"0, 1, 9"
+A5D2,IVP,4a. Parkinson’s disease (PD),PD,Always,"0, 1, 9"
 A5D2,IVP,4a1. Age at estimated PD symptom onset,PDAGE,Conditional (e.g. skip pattern),"10-110, 999"
 A5D2,IVP,"4b. Other parkinsonism disorder (e.g., DLB)",PDOTHR,Always,"0, 1, 9"
 A5D2,IVP,4b1. Age at parkinsonism disorder diagnosis,PDOTHRAGE,Conditional (e.g. skip pattern),"10-110, 999"
-A5D2,IVP,4c. Seizures (excluding childhood febrile seizures),SEIZURES,Always,"0-2, 9"
-A5D2,IVP,4c1. Age at first seizure (excluding childhood febrile seizures),SEIZAGE,Conditional (e.g. skip pattern),"0-110, 999"
-A5D2,IVP,4c2. How many seizures has the participant had in the past 12 months?,SEIZNUM,Conditional (e.g. skip pattern),"0-2, 9"
-A5D2,IVP,4d. Normal-pressure hydrocephalus,HYDROCEPH,Always,"0-2, 9"
-A5D2,IVP,"4e. Repetitive head impacts (e.g. from contact sports, intimate partner violence, or military duty), regardless of whether it caused symptoms.",HEADIMP,Always,"0, 1, 9"
-A5D2,IVP,4e1a. Source of exposure for repeated hits to the head: American football,IMPAMFOOT,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1b. Source of exposure for repeated hits to the head: Soccer,IMPSOCCER,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1c. Source of exposure for repeated hits to the head: Ice hockey,IMPHOCKEY,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1d. Source of exposure for repeated hits to the head: Boxing or mixed martial arts,IMPBOXING,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1e. Source of exposure for repeated hits to the head: Other contact sport,IMPSPORT,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1f. Source of exposure for repeated hits to the head: Intimate partner violence,IMPIPV,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1g. Source of exposure for repeated hits to the head: Military service,IMPMILIT,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1h. Source of exposure for repeated hits to the head: Physical assault,IMPASSAULT,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1i. Source of exposure for repeated hits to the head: Other cause,IMPOTHER,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,4e1i1. Specify other source of exposure for repeated hits to the head,IMPOTHERX,Conditional (e.g. skip pattern),Any characters or numbers
-A5D2,IVP,4e2. Indicate the total length of time in years that the participant was exposed to repeated hits to the head (e.g. playing American football for 7 years),IMPYEARS,Conditional (e.g. skip pattern),"0-110, 999"
-A5D2,IVP,"4f. Head injury (e.g. in a vehicle accident, being hit by an object, in a fall, while playing sports or biking, in an assault, or during military service) that resulted in a period of feeling ""dazed or confused,"" being unable to recall details of the injury, or loss of consciousness (if multiple head injuries, consider most severe episode).",HEADINJURY,Always,"0, 1, 9"
-A5D2,IVP,"4f1. After a head injury, what was the longest period of time that the participant was unconscious?",HEADINJUNC,Conditional (e.g. skip pattern),"0-4, 8, 9"
-A5D2,IVP,"4f2. After a head injury, what was the longest period that the participant was ""dazed or confused"" or unable to recall details of the injury?",HEADINJCON,Conditional (e.g. skip pattern),"0-4, 8, 9"
-A5D2,IVP,"4f3. Total number of head injuries in which the participant felt ""dazed or confused"", unable to recall details of the injury or experienced loss of consciousness?",HEADINJNUM,Conditional (e.g. skip pattern),"0-4, 9"
-A5D2,IVP,"4f4. Age of first head injury that resulted in a period of feeling ""dazed or confused,"" being unable to recall details of the injury, or loss of consciousness",FIRSTTBI,Conditional (e.g. skip pattern),"0-110, 999"
-A5D2,IVP,"4f5. Age of most recent head injury that resulted in a period of feeling ""dazed or confused,"" being unable to recall details of the injury, or loss of consciousness",LASTTBI,Conditional (e.g. skip pattern),"0-110, 999"
+A5D2,IVP,4c. Epilepsy and/or history of seizures (excluding childhood febrile seizures),SEIZURES,Always,"0-2, 9"
+A5D2,IVP,4c1. How many seizures has the participant had in the past 12 months?,SEIZNUM,Conditional (e.g. skip pattern),"0-2, 9"
+A5D2,IVP,4c2. Age at first seizure (excluding childhood febrile seizures),SEIZAGE,Conditional (e.g. skip pattern),"0-110, 999"
+A5D2,IVP,4d. Chronic headaches,HEADACHE,Always,"0-2, 9"
+A5D2,IVP,4e. Multiple sclerosis,MS,Always,"0-2, 9"
+A5D2,IVP,4f. Normal-pressure hydrocephalus,HYDROCEPH,Always,"0-2, 9"
+A5D2,IVP,"4g. Repetitive head impacts (e.g. from contact sports, intimate partner violence, or military duty), regardless of whether it caused symptoms.",HEADIMP,Always,"0, 1, 9"
+A5D2,IVP,4g1a. Source of exposure for repeated hits to the head: American football,IMPAMFOOT,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1b. Source of exposure for repeated hits to the head: Soccer,IMPSOCCER,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1c. Source of exposure for repeated hits to the head: Ice hockey,IMPHOCKEY,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1d. Source of exposure for repeated hits to the head: Boxing or mixed martial arts,IMPBOXING,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1e. Source of exposure for repeated hits to the head: Other contact sport,IMPSPORT,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1f. Source of exposure for repeated hits to the head: Intimate partner violence,IMPIPV,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1g. Source of exposure for repeated hits to the head: Military service,IMPMILIT,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1h. Source of exposure for repeated hits to the head: Physical assault,IMPASSAULT,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1i. Source of exposure for repeated hits to the head: Other cause,IMPOTHER,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,4g1i1. Specify other source of exposure for repeated hits to the head,IMPOTHERX,Conditional (e.g. skip pattern),Any characters or numbers
+A5D2,IVP,4g2. Indicate the total length of time in years that the participant was exposed to repeated hits to the head (e.g. playing American football for 7 years),IMPYEARS,Conditional (e.g. skip pattern),"0-110, 999"
+A5D2,IVP,"4h. Head injury (e.g. in a vehicle accident, being hit by an object, in a fall, while playing sports or biking, in an assault, or during military service) that resulted in a period of feeling ""dazed or confused,"" being unable to recall details of the injury, or loss of consciousness (if multiple head injuries, consider most severe episode).",HEADINJURY,Always,"0, 1, 9"
+A5D2,IVP,"4h1. After a head injury, what was the longest period of time that the participant was unconscious?",HEADINJUNC,Conditional (e.g. skip pattern),"0-4, 8, 9"
+A5D2,IVP,"4h2. After a head injury, what was the longest period that the participant was ""dazed or confused"" or unable to recall details of the injury?",HEADINJCON,Conditional (e.g. skip pattern),"0-4, 8, 9"
+A5D2,IVP,"4h3. Total number of head injuries in which the participant felt ""dazed or confused"", unable to recall details of the injury or experienced loss of consciousness?",HEADINJNUM,Conditional (e.g. skip pattern),"0-4, 9"
+A5D2,IVP,"4h4. Age of first head injury that resulted in a period of feeling ""dazed or confused,"" being unable to recall details of the injury, or loss of consciousness",FIRSTTBI,Conditional (e.g. skip pattern),"0-110, 999"
+A5D2,IVP,"4h5. Age of most recent head injury that resulted in a period of feeling ""dazed or confused,"" being unable to recall details of the injury, or loss of consciousness",LASTTBI,Conditional (e.g. skip pattern),"0-110, 999"
 A5D2,IVP,5a. Diabetes,DIABETES,Always,"0-2, 9"
 A5D2,IVP,5a1. Diabetes type,DIABTYPE,Conditional (e.g. skip pattern),"1-3, 9"
 A5D2,IVP,5a2a. Diabetes treated with: Insulin,DIABINS,Conditional (e.g. skip pattern),1 or blank
@@ -83,8 +85,8 @@ A5D2,IVP,5f2a. Upper extremity affected by arthritis,ARTHUPEX,Conditional (e.g. 
 A5D2,IVP,5f2b. Lower extremity affected by arthritis,ARTHLOEX,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5f2c. Spine affected by arthritis,ARTHSPIN,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5f2d. Region affected by arthritis unknown,ARTHUNK,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,5g. Incontinenceâ€”urinary (occurring at least weekly),INCONTU,Always,"0-2, 9"
-A5D2,IVP,5h. Incontinenceâ€”bowel (occurring at least weekly),INCONTF,Always,"0-2, 9"
+A5D2,IVP,5g. Incontinence—urinary (occurring at least weekly),INCONTU,Always,"0-2, 9"
+A5D2,IVP,5h. Incontinence—bowel (occurring at least weekly),INCONTF,Always,"0-2, 9"
 A5D2,IVP,5i. Sleep apnea,APNEA,Always,"0-2, 9"
 A5D2,IVP,5i1. Typical use of breathing machine (e.g. CPAP) at night over the past 12 months,CPAP,Conditional (e.g. skip pattern),"0-2, 9"
 A5D2,IVP,5i2. Typical use of an oral device for sleep apnea at night over the past 12 months?,APNEAORAL,Conditional (e.g. skip pattern),"0-2, 9"
@@ -92,17 +94,27 @@ A5D2,IVP,5j. REM sleep behavior disorder (RBD),RBD,Always,"0-2, 9"
 A5D2,IVP,5k. Hyposomnia/Insomnia (occurring at least weekly or requiring medication),INSOMN,Always,"0-2, 9"
 A5D2,IVP,5l. Other sleep disorder,OTHSLEEP,Always,"0-2, 9"
 A5D2,IVP,5l1. Specify other sleep disorder,OTHSLEEX,Conditional (e.g. skip pattern),Any characters or numbers
-A5D2,IVP,"5m. Cancer (excluding non-melanoma skin cancer), primary or metastatic",CANCER,Always,"0-2, 9"
-A5D2,IVP,5m1. Type of Cancer,CANCERTYPE,Conditional (e.g. skip pattern),"1, 2, 9"
-A5D2,IVP,5m2. Specify primary cancer site,CANSITE,Conditional (e.g. skip pattern),Any characters or numbers
+A5D2,IVP,"5m. Cancer, primary or metastatic (Report all known diagnoses. Exclude  non-melanoma skin cancer.)",CANCER,Always,"0-2, 9"
+A5D2,IVP,5m1a. Type of cancer: Primary/non-metastatic,CANCERPRIM,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m1b. Type of cancer: Metastatic,CANCERMETA,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m1b1. Type of metastatic cancer: Metatstic to brain,CANCMETBR,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m1b2. Type of metastatic cancer: Metastatic to sites other than brain,CANCMETOTH,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m1c. Type of cancer: Unknown,CANCERUNK,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m2a. Primary site of cancer: Blood,CANCBLOOD,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m2b. Primary site of cancer: Breast,CANCBREAST,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m2c. Primary site of cancer: Colon,CANCCOLON,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m2d. Primary site of cancer: Lung,CANCLUNG,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m2e. Primary site of cancer: Prostate,CANCPROST,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m2f. Primary site of cancer: Other,CANCOTHER,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m2f1. Specify other primary site of cancer,CANCOTHERX,Conditional (e.g. skip pattern),Any characters or numbers
 A5D2,IVP,5m3a. Type of cancer treatment: Radiation,CANCRAD,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5m3b. Type of cancer treatment: Surgical resection,CANCRESECT,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5m3c. Type of cancer treatment: Immunotherapy,CANCIMMUNO,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5m3d. Type of cancer treatment: Bone marrow transplant,CANCBONE,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5m3e. Type of cancer treatment: Chemotherapy,CANCCHEMO,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5m3f. Type of cancer treatment: Hormone therapy,CANCHORM,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,5m3g. Type of cancer treatment: Other,CANCOTHER,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,5m3g1. Specify other type of cancer treatment,CANCOTHERX,Conditional (e.g. skip pattern),Any characters or numbers
+A5D2,IVP,5m3g. Type of cancer treatment: Other,CANCTROTH,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5m3g1. Specify other type of cancer treatment,CANCTROTHX,Conditional (e.g. skip pattern),Any characters or numbers
 A5D2,IVP,5m4. Age at most recent cancer diagnosis,CANCERAGE,Conditional (e.g. skip pattern),"0-110, 999"
 A5D2,IVP,5n. COVID-19 infection,COVID19,Always,"0-2, 9"
 A5D2,IVP,5n1. COVID-19 infection requiring hospitalization?,COVIDHOSP,Conditional (e.g. skip pattern),"0, 1, 9"
@@ -117,8 +129,9 @@ A5D2,IVP,5s. Human Immunodeficiency Virus (HIV),HIVDIAG,Always,"0-2, 9"
 A5D2,IVP,5s1. Age at HIV diagnosis,HIVAGE,Conditional (e.g. skip pattern),"0-110, 999"
 A5D2,IVP,5t. Other medical conditions or procedures,OTHCOND,Always,"0-2, 9"
 A5D2,IVP,5t1. Specify other medical conditions or procedures,OTHCONDX,Conditional (e.g. skip pattern),Any characters or numbers
-A5D2,IVP,6a. Major depressive disorder (DSM-5-TR criteria),DEPRESSION,Always,"0-2, 9"
-A5D2,IVP,6a1. Treatment,DEPRTREAT,Conditional (e.g. skip pattern),"0, 1"
+A5D2,IVP,6a1. Major depressive disorder (DSM-5-TR criteria),MAJORDEP,Always,"0-2, 9"
+A5D2,IVP,6a2. Other specified depressive disorder (DSm-5-TR criteria),OTHERDEP,Always,"0-2, 9"
+A5D2,IVP,6a3. Choose if treated or untreated,DEPRTREAT,Conditional (e.g. skip pattern),"0, 1"
 A5D2,IVP,6b. Bipolar disorder (DSM-5-TR criteria),BIPOLAR,Always,"0-2, 9"
 A5D2,IVP,6c. Schizophrenia or other psychosis disorder (DSM-5-TR criteria),SCHIZ,Always,"0-2, 9"
 A5D2,IVP,6d. Anxiety disorder (DSM-5-TR criteria),ANXIETY,Always,"0-2, 9"
@@ -138,32 +151,19 @@ A5D2,IVP,7c2. Participant has stopped having menstrual periods due to hysterecto
 A5D2,IVP,7c3. Participant has stopped having menstrual periods due to surgical removal of both ovaries,NOMENSSURG,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,7c4. Participant has stopped having menstrual periods due to chemotherapy for cancer or another condition,NOMENSCHEM,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,7c5. Participant has stopped having menstrual periods due to radiation treatment or other damage/injury to reproductive organs,NOMENSRAD,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,"7c6. Participant has stopped having menstrual periods due to hormonal supplements (e.g. the Pill, injections, Mirena, HRT)",NOMENSHORM,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,7c7. Participant has stopped having menstrual periods due to anti-estrogen medication,NOMENSESTR,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,7c8. Unsure of reason participant has stopped having menstrual periods,NOMENSUNK,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,7c9. Other reason participant has stopped having menstrual periods,NOMENSOTH,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,7c9a. Specify other reason participant has stopped having menstrual periods,NOMENSOTHX,Conditional (e.g. skip pattern),Any characters or numbers
-A5D2,IVP,7d. Has the participant taken female hormone replacement pills or patches (e.g. estrogen)?,HRT,Conditional (e.g. skip pattern),"0, 1, 9"
-A5D2,IVP,7d1. Total number of years participant has taken female hormone replacement pills,HRTYEARS,Conditional (e.g. skip pattern),"0-70, 99"
-A5D2,IVP,7d2. Age at first use of female hormone replacement pills,HRTSTRTAGE,Conditional (e.g. skip pattern),"10-70, 99"
-A5D2,IVP,7d3. Age at last use of female hormone replacement pills,HRTENDAGE,Conditional (e.g. skip pattern),"10-70, 88, 99"
-A5D2,IVP,7e. Has the participant ever taken birth control pills?,BCPILLS,Conditional (e.g. skip pattern),"0, 1, 9"
-A5D2,IVP,7e1. Total number of years participant has taken birth control pills,BCPILLSYR,Conditional (e.g. skip pattern),"0-50, 99"
-A5D2,IVP,7e2. Age at first use of birth control pills,BCSTARTAGE,Conditional (e.g. skip pattern),"10-70, 99"
-A5D2,IVP,7e3. Age at last use of birth control pills,BCENDAGE,Conditional (e.g. skip pattern),"10-70, 88, 99"
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
+A5D3,IVP,"7c6. Participant has stopped having menstrual periods due to hormonal supplements (e.g. the Pill, injections, Mirena, HRT)",NOMENSHORM,Conditional (e.g. skip pattern),1 or blank
+A5D4,IVP,7c7. Participant has stopped having menstrual periods due to anti-estrogen medication,NOMENSESTR,Conditional (e.g. skip pattern),1 or blank
+A5D5,IVP,7c8. Unsure of reason participant has stopped having menstrual periods,NOMENSUNK,Conditional (e.g. skip pattern),1 or blank
+A5D6,IVP,7c9. Other reason participant has stopped having menstrual periods,NOMENSOTH,Conditional (e.g. skip pattern),1 or blank
+A5D7,IVP,7c9a. Specify other reason participant has stopped having menstrual periods,NOMENSOTHX,Conditional (e.g. skip pattern),Any characters or numbers
+A5D8,IVP,7d. Has the participant taken female hormone replacement pills or patches (e.g. estrogen)?,HRT,Conditional (e.g. skip pattern),"0, 1, 9"
+A5D9,IVP,7d1. Total number of years participant has taken female hormone replacement pills,HRTYEARS,Conditional (e.g. skip pattern),"0-70, 99"
+A5D10,IVP,7d2. Age at first use of female hormone replacement pills,HRTSTRTAGE,Conditional (e.g. skip pattern),"10-70, 99"
+A5D11,IVP,7d3. Age at last use of female hormone replacement pills,HRTENDAGE,Conditional (e.g. skip pattern),"10-70, 88, 99"
+A5D12,IVP,7e. Has the participant ever taken birth control pills?,BCPILLS,Conditional (e.g. skip pattern),"0, 1, 9"
+A5D13,IVP,7e1. Total number of years participant has taken birth control pills,BCPILLSYR,Conditional (e.g. skip pattern),"0-50, 99"
+A5D14,IVP,7e2. Age at first use of birth control pills,BCSTARTAGE,Conditional (e.g. skip pattern),"10-70, 99"
+A5D15,IVP,7e3. Age at last use of birth control pills,BCENDAGE,Conditional (e.g. skip pattern),"10-70, 88, 99"
 ,,,,,
 ,,,,,
 ,,,,,
