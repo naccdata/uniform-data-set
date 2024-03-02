@@ -86,7 +86,7 @@ A1,I,10a. How many years of education have you completed?,EDUC,Always,"Integers 
 A1,I,10b. What is your highest achieved level of education?,LVLEDUC,Always,"Integers 1-6, 9"
 A1,I,11. What is your current marital status?,MARISTAT,Always,"Integers 1-6, 9"
 A1,I,12. What is your living situation?,LIVSITUA,Always,"Integers 1-6, 9"
-A1,I,13. What is your primary type of residence?,RESIDENC,Always,"Integers 1-5, 9"
+A1,I,13. What is your primary type of residence?,RESIDENC,Always,"Integers 1-4, 6, 9"
 A1,I,14. What are the first three digits of the ZIP code of your primary residence?,ZIP,Conditional (e.g. skip pattern),"006-999, or blank"
 A1,I,"15. Have you ever served on active duty in the U.S. Armed Forces, military Reserves, or National Guard?",SERVED,Always,"Integers 0-1,9"
 A1,I,16. Have you ever obtained medical care or prescription drugs from a Veterans Affairs (VA) facility?,MEDVA,Conditional (e.g. skip pattern),"Integers 0-1,9"
