@@ -4,7 +4,7 @@ C2T,IVP,"1a1. Was any part of the MoCA administered? If No, enter reason code",M
 C2T,IVP,1b. Language of MoCA administration:,MOCALAN,Conditional (e.g. skip pattern),Integers 1-3
 C2T,IVP,1b1. Langauge of MoCA administration--Other: Specify,MOCALANX,Conditional (e.g. skip pattern),text
 C2T,IVP,1c. Participant was unable to complete one or more sections due to hearing impairment,MOCAHEAR,Conditional (e.g. skip pattern),Integers 0-1
-C2T,IVP,1d. Total Raw Score -- Uncorrected,MOCATOTS,Conditional (e.g. skip pattern),"Integers 0-22, 88"
+C2T,IVP,1d. Total Raw Score -- Uncorrected,MOCBTOTS,Conditional (e.g. skip pattern),"Integers 0-22, 88"
 C2T,IVP,1e. Attention -- Digits,MOCADIGI,Conditional (e.g. skip pattern),"Integers 0-2, 95-98"
 C2T,IVP,1f. Attention -- Letter A,MOCALETT,Conditional (e.g. skip pattern),"Integers 0-1, 95-98"
 C2T,IVP,1g. Attention -- Serial 7s,MOCASER7,Conditional (e.g. skip pattern),"Integers 0-3, 95-98"
