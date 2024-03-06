@@ -19,7 +19,7 @@ B9,IVP,9h1. Specify other cognitive domains,COGOTHRX,No,Any numbers or character
 B9,IVP,"9i. If any of the cognitive-related behavioral symptoms in 9a-9h are present, at what age did they begin?",COGAGE,No,9-110
 B9,IVP,10. Indicate the mode of onset for the most prominent cognitive problem that is causing the participant's complaints and/or affecting the participant's function.,COGMODE,No,"1-4, 99"
 B9,IVP,10a. Specify other mode of onset of cognitive symptoms,COGMODEX,No,Any numbers or characters
-B9,IVP,"11. Based on the clinician’s judgment, is the participant currently experiencing any kind of behavioral symptoms?",DECCLBE,No,0-1
+B9,IVP,"11. Based on the clinician’s judgment, does the participant manifest clinically meaningful neuropsychiatric symptoms or meaningful change in behavior?",DECCLBE,No,0-1
 B9,IVP,"12a. Participant currently manifests meaningful change in behavior — Apathy, withdrawal",BEAPATHY,No,"0-1, 9"
 B9,IVP,12b. Participant currently manifests meaningful change in behavior — Depressed mood,BEDEP,No,"0-1, 9"
 B9,IVP,12c. Participant currently manifests meaningful change in behavior — Anxiety,BEANX,No,"0-1, 9"
@@ -33,7 +33,7 @@ B9,IVP,"12h2. IF YES, do their hallucinations include well formed and detailed i
 B9,IVP,12i. Participant currently manifests meaningful change in behavior — Psychosis — Auditory hallucinations,BEAHALL,No,"0-1, 9"
 B9,IVP,"12i1. IF YES, do the auditory hallucinations include simple sounds like knocks or other simple sounds?",BEAHSIMP,No,"0-1, 9"
 B9,IVP,"12i2. IF YES, do the auditory hallucinations include complex sounds like voices speaking words, or music?",BEAHCOMP,No,"0-1, 9"
-B9,IVP,"12j. Participant currently manifests meaningful change in behavior — Psychosis — Abnormal, false, or delusional beliefs",BEDEL,No,"0-1, 9"
+B9,IVP,12j. Participant currently manifests meaningful change in behavior — Delusions ,BEDEL,No,"0-1, 9"
 B9,IVP,12k. Participant currently manifests meaningful change in behavior — Aggression,BEAGGRS,No,"0-1, 9"
 B9,IVP,"12l. If any of the psychosis and impulse control-related behavioral symptoms in 12h-12k are present, at what age did they begin?",PSYCHAGE,No,9-110
 B9,IVP,12m. Participant currently manifests meaningful change in behavior — Disinhibition,BEDISIN,No,"0-1, 9"
@@ -46,8 +46,9 @@ B9,IVP,12r1a. Alcohol use,ALCUSE,No,"1, blank"
 B9,IVP,12r1b. Sedative/hypnotic use,SEDUSE,No,"1, blank"
 B9,IVP,12r1c. Opiate use,OPIATEUSE,No,"1, blank"
 B9,IVP,12r1d. Cocaine use,COCAINEUSE,No,"1, blank"
-B9,IVP,12r1e. Other substance use,OTHSUBUSE,No,"1, blank"
-B9,IVP,12r1e1. Specify other substance use,OTHSUBUSEX,No,Any numbers or characters
+B9,IVP,12r1e. Cannabis use,CANNABUSE,No,"1, blank"
+B9,IVP,12r1f. Other substance use,OTHSUBUSE,No,"1, blank"
+B9,IVP,12r1f1. Specify other substance use,OTHSUBUSEX,No,Any numbers or characters
 B9,IVP,"12s. If any of the personality-related behavioral symptoms in 12m-12r are present, at what age did they begin?",PERCHAGE,No,9-110
 B9,IVP,12t. Participant currently manifests meaningful change in behavior — REM sleep behavior disorder,BEREM,No,"0-1, 9"
 B9,IVP,"12t1. IF YES, at what age did the dream enactment behavior begin?",BEREMAGO,No,9-110
@@ -56,11 +57,11 @@ B9,IVP,12u. Other behavioral symptom,BEOTHR,No,0-1
 B9,IVP,"12u1. Participant currently manifests meaningful change in behavior - Other, specify:",BEOTHRX,No,Any numbers or characters
 B9,IVP,13. Overall mode of onset for behavioral symptoms,BEMODE,No,"1-4, 99"
 B9,IVP,13a. Other mode of onset - specify,BEMODEX,No,Any numbers or characters
-B9,IVP,"14. Based on the clinician’s judgment, is the participant currently experiencing any motor symptoms?",DECCLMOT,No,0-1
+B9,IVP,"14. Based on the clinician’s judgment, is the participant currently experiencing any meaningful changes in motor function?",DECCLMOT,No,0-1
 B9,IVP,15a. Indicate whether the participant currently has meaningful changes in motor function — Gait disorder,MOGAIT,No,"0-1, 9"
 B9,IVP,15b. Indicate whether the participant currently has meaningful changes in motor function — Falls,MOFALLS,No,"0-1, 9"
 B9,IVP,15c. Indicate whether the participant currently has meaningful changes in motor function — Slowness,MOSLOW,No,"0-1, 9"
-B9,IVP,15d. Indicate whether the participant currently has meaningful changes in motor function — Tremor,MOTREM,No,"0-1, 9"
+B9,IVP,15d. Indicate whether the participant currently has meaningful changes in motor function — Tremors,MOTREM,No,"0-1, 9"
 B9,IVP,15e. Indicate whether the participant currently has meaningful changes in motor function — Limb weakness,MOLIMB,No,"0-1, 9"
 B9,IVP,15f. Indicate whether the participant currently has meaningful changes in motor function — Change in facial expression,MOFACE,No,"0-1, 9"
 B9,IVP,15g. Indicate whether the participant currently has meaningful changes in motor function — Change in speech,MOSPEECH,No,"0-1, 9"
