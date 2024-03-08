@@ -1,0 +1,161 @@
+﻿"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+b4_title,b4_cdr_dementia_staging_instrument,,descriptive,"<div class=""rich-text-field-label""><h6><strong>Form B4:</strong><span style=""font-weight: normal;""> CDR<sup>© </sup>Dementia Staging Instrument</span><br /><span style=""font-size: 8pt; font-weight: normal;"">PLUS</span><span style=""font-weight: normal;""> NACC FTLD Behavior & Language Domains (CDR<sup>© </sup>Plus NACC FTLD)</span></h6> <hr /></div>",,,,,,,,,,,,,
+ivp_b4_instructions,b4_cdr_dementia_staging_instrument,,descriptive,"<div class=""rich-text-field-label""><p><span style=""font-weight: normal;""><em>INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional, based on co-participant report and behavioral and neurological exam of the participant. In the extremely rare instances when no co-participant is available, the clinician or other trained health professional must complete this form using all other available information and his/her best clinical judgment. Score only as decline from previous level due to <u>cognitive loss</u>, not impairment due to other factors, such as physical disability. </em></span><em><span style=""font-weight: normal;"">For information on the required online CDR training, see the</span> </em><a href=""https://files.alz.washington.edu/documentation/uds3-ivp-guidebook.pdf"" target=""_blank"" rel=""noopener"">UDS Coding Guidebook</a><em> <span style=""font-weight: normal;"">for</span> </em>Form B4.</p></div>",,,,,,,,,,,,,
+b4_section1,b4_cdr_dementia_staging_instrument,,descriptive,"<div class=""rich-text-field-label""><table style=""border-collapse: collapse; width: 100%; height: 63.3125px; background-color: #ffffff;"" border=""0"" cellpadding=""4px""> <tbody> <tr style=""height: 35px;""> <td style=""width: 98.3027%; background-color: #236fa1; height: 34.3125px;""><span style=""color: #ffffff;"">Section 1: CDR<sup>©</sup> Dementia Staging Instrument<sup>1</sup></span></td> </tr> <tr style=""height: 35px;""> <td style=""width: 98.3027%; background-color: #c2e0f4; height: 18px;""><span style=""color: #ffffff;""><span style=""color: #ffffff;""><span style=""color: #000000;"">Impairment</span></span><br /></span></td> </tr> </tbody> </table></div>",,,,,,,,,,,,,
+memory,b4_cdr_dementia_staging_instrument,,radio,"1. Memory","0, <b>None = 0</b><br/>No memory loss, or slight inconsistent forgetfulness | 0.5, <b>Questionable = 0.5 </b><br>Consistent slight forgetfulness; partial recollection of events; ""benign"" forgetfulness | 1, <b>Mild = 1</b> <br/>Moderate memory loss, more marked for recent events; defect interferes with everyday activities | 2, <b>Moderate = 2 </b><br/>Severe memory loss; only highly learned material retained; new material rapidly lost | 3, <b>Severe = 3 </b><br/>Severe memory loss; only fragments remain | 99, <b>Not Applicable</b>",,,,,,,y,LV,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+orient,b4_cdr_dementia_staging_instrument,,radio,"2. Orientation","0, <b>None = 0</b> <br/>Fully oriented | 0.5, <b>Questionable = 0.5</b> <br>Fully oriented except for slight difficulty with time relationships | 1, <b>Mild = 1 </b><br/>Moderate difficulty with time relationships; oriented for place at examination; may have geographic disorientation elsewhere | 2, <b>Moderate = 2 </b><br/>Severe difficulty with time relationships; usually disoriented to time, often to place | 3, <b>Severe = 3 </b><br/>Oriented to person only | 99, <b>Not Applicable</b>",,,,,,,y,LV,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+judgment,b4_cdr_dementia_staging_instrument,,radio,"3. Judgment & Problem Solving","0, <b>None = 0 </b><br/>Solves everyday problems, handles business & financial affairs well; judgment good in relation to past performance | 0.5, <b>Questionable = 0.5 </b><br>Slight impairment in solving problems, similarities, and differences | 1, <b>Mild = 1 </b><br/>Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained | 2, <b>Moderate = 2 </b><br/>Severely impaired in handling problems, similarities, and differences; social judgment usually impaired | 3, <b>Severe = 3</b> <br/>Unable to make judgments or solve problems | 99, <b>Not Applicable</b>",,,,,,,y,LV,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+commun,b4_cdr_dementia_staging_instrument,,radio,"4. Community Affairs","0, <b>None = 0 </b><br/>Independent function at usual level in job, shopping, volunteer and social groups | 0.5, <b>Questionable = 0.5 </b><br>Slight impairment in these activities | 1, <b>Mild = 1 </b><br/>Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection | 2, <b>Moderate = 2 </b><br/>No pretense of independent function outside the home; appears well enough to be taken to functions outside the family home | 3, <b>Severe = 3 </b><br/>No pretense of independent function outside the home; appears too ill to be taken to functions outside the family home | 99, <b>Not Applicable</b>",,,,,,,y,LV,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+homehobb,b4_cdr_dementia_staging_instrument,,radio,"5. Home & Hobbies","0, <b>None = 0 </b><br/>Life at home, hobbies, and intellectual interests well maintained | 0.5, <b>Questionable = 0.5 </b><br>Life at home, hobbies, and intellectual interests slightly impaired | 1, <b>Mild = 1 </b><br/>Mild but definite impairment of function at home; more difficult chores abandoned; more complicated hobbies and interests abandoned | 2, <b>Moderate = 2 </b><br/>Only simple chores preserved; very restricted interests, poorly maintained | 3, <b>Severe = 3 </b><br/>No significant function in the home | 99, <b>Not Applicable</b>",,,,,,,y,LV,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+perscare,b4_cdr_dementia_staging_instrument,,radio,"6. Personal Care","0, <b>None / Questionable = 0</b><br/>Fully capable of self-care | 1, <b>Mild = 1 </b><br/>Needs prompting | 2, <b>Moderate = 2 </b><br/>Requires assistance in dressing, hygiene, keeping of personal effects | 3, <b>Severe = 3 </b><br/>Requires much help with personal care; frequent incontinence | 99, <b>Not Applicable</b>",,,,,,,y,LV,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+b4_warning1,b4_cdr_dementia_staging_instrument,,descriptive," <div style=""border: 1px solid #FF0000;background:#F1948A; color: #000000; text-align:center;padding:12px;"">WARNING: CDR Sum of Boxes will only be calculated if questions 1-6 have valid responses.</div>",,,,,,,"[memory] = '' or 
+ [orient] = ''  or 
+ [judgment] = ''  or 
+ [commun] = ''  or 
+ [homehobb] = ''  or 
+ [perscare] = ''",,,,,,
+cdrsum,b4_cdr_dementia_staging_instrument,,calc,"<p>7. CDR Sum of Boxes</p>","if([dssub]='1', '99',  
+if( ([memory] = '' or
+[orient] = ''  or
+[judgment] = ''  or
+[commun] = ''  or
+[homehobb] = ''  or
+[perscare] = '' ), '', 
+
+sum([memory],[orient],[judgment],[commun],[homehobb],[perscare])
+))",,,,,,,,,,,,
+b4_calc_cdrglob,b4_cdr_dementia_staging_instrument,,calc,"<div class=""rich-text-field-label""><p>8. Global CDR</p></div>","if([dssub]='1', '99', 
+//calculate rare scenarios first, they supercede basic scoring
+
+//for a tie on one side, choose closest score to memory
+if( ([b4_calc_ltmem]=4 or [b4_calc_gtmem]=4) and 
+sum(if([b4_calc_eq05]=2,1,0), if([b4_calc_eq1]=2,1,0), if([b4_calc_eq2]=2,1,0),
+if([b4_calc_eq3]=2,1,0), if([b4_calc_eq0]=2,1,0))=2,
+    if(min([b4_calc_05diff], [b4_calc_1diff], [b4_calc_2diff])=[b4_calc_05diff], '0.5', 
+    if(min([b4_calc_05diff], [b4_calc_1diff], [b4_calc_2diff])=[b4_calc_1diff], '1', 
+    if(min([b4_calc_05diff], [b4_calc_1diff], [b4_calc_2diff])=[b4_calc_2diff], '2', ''))),
+
+//When only one or two secondary categories are given the same score as M, CDR = M
+//as long as no more than two secondary categories are on either side of M.
+if(([b4_calc_eqmem]=1 or [b4_calc_eqmem]=2) and [b4_calc_ltmem]<=2 and [b4_calc_gtmem]<=2,[memory],
+
+//scenarios where 4 items gt or lt memory
+//these can only be a certain number of combinations, so handle these directly
+if([b4_calc_gtmem]>=4 and [memory]=1 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3], [b4_calc_eq0])=[b4_calc_eq2], 2, 
+if([b4_calc_gtmem]>=4 and [memory]=1 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3], [b4_calc_eq0])=[b4_calc_eq3], 3, 
+if([b4_calc_ltmem]>=4 and [memory]=3 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3], [b4_calc_eq0])=[b4_calc_eq2], 2, 
+if([b4_calc_ltmem]>=4 and [memory]=3 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3], [b4_calc_eq0])=[b4_calc_eq1], 1, 
+if([b4_calc_ltmem]>=4 and [memory]=3 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3], [b4_calc_eq0])=[b4_calc_eq05], 0.5, 
+if([b4_calc_ltmem]>=4 and [memory]=2 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3], [b4_calc_eq0])=[b4_calc_eq1], 1, 
+if([b4_calc_ltmem]>=4 and [memory]=2 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3], [b4_calc_eq0])=[b4_calc_eq05], 0.5, 
+
+
+//basic scoring rules
+if([memory]=0 and [b4_calc_gtmem]< 2, 0,
+if([memory]=0 and [b4_calc_gtmem]>=2, 0.5,
+if([memory]=0.5 and [b4_calc_gtmem]>=3, 1,
+if([memory]=0.5 and [b4_calc_gtmem]< 3, 0.5,
+if([memory]>=1 and [b4_calc_eqmem]>=3, [memory],
+if([memory]>=1 and [b4_calc_ltmem]=3 and [b4_calc_gtmem]=2 , [memory],
+if([memory]>=1 and [b4_calc_ltmem]=2 and [b4_calc_gtmem]=3 , [memory],
+
+//specific tie scenarios not captured yet
+if([memory]>=1 and [b4_calc_gtmem]>=3 and [b4_calc_ltmem] < 2 , [b4_calc_othties],
+if([memory]>=1 and [b4_calc_ltmem]>=3 and [b4_calc_gtmem] < 2 , [b4_calc_othties],
+if([memory]>=1, min(3, [b4_calc_othties]),
+
+//if we see any 9999 global scores we missed something!
+9999))))))))))))))))))))",,,,,,,,,,,,
+b4_embed2,b4_cdr_dementia_staging_instrument,,descriptive,"<div class=""rich-text-field-label""><table style=""border-collapse: collapse; width: 100%;"" border=""1""> <tbody> <tr> <td style=""width: 75.0688%; background-color: #c2e0f4;""> <p>REDCap has automatically calculated the Global CDR score for this particpant. Please enter this value in the space provided below (8. Global CDR). You may confirm this calculation using the NACC calculator (<a href=""https://naccdata.org/data-collection/tools-calculators/cdr"" target=""_blank"" rel=""noopener"">CDR® Dementia Staging Instrument Calculator)</a></p> </td> <td style=""width: 24.9312%; text-align: center;"">{b4_calc_cdrglob}</td> </tr> </tbody> </table></div>",,,,,,,,,,,,,
+cdrglob,b4_cdr_dementia_staging_instrument,,dropdown,"<div class=""rich-text-field-label""><p>Manual Data Entry of Calculated Global CDR</p></div>","0, 0 | 0.5, 0.5 | 1, 1 | 2, 2 | 3, 3 | 99, 99",,autocomplete,,,,,y,,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+b4_embed1,b4_cdr_dementia_staging_instrument,,descriptive,"<div class=""rich-text-field-label""><table style=""border-collapse: collapse; width: 100%;"" border=""1""> <tbody> <tr> <td style=""width: 25.0708%; background-color: #c2e0f4; text-align: left;"">7. CDR Sum of Boxes</td> <td style=""width: 25.0708%; background-color: #ecf0f1; text-align: center;"">{cdrsum}</td> <td style=""width: 24.9292%; background-color: #c2e0f4;""> <p>8. Global CDR</p> <p><a href=""https://naccdata.org/data-collection/tools-calculators/cdr"" target=""_blank"" rel=""noopener"">CDR® Dementia Staging Instrument Calculator</a></p> </td> <td style=""width: 25.0708%; text-align: center;"">{cdrglob}</td> </tr> </tbody> </table></div>",,,,,,,,,,,,,
+b4_warning2,b4_cdr_dementia_staging_instrument,,descriptive," <div style=""border: 1px solid #FF0000;background:#F1948A; color: #000000; text-align:center;padding:12px;"">WARNING: CDR Global Score entered into Question 8 is different than the calculated score shown above. Please review and confirm you wish to enter a different global score than calculated by REDCap. </div>",,,,,,,"[cdrglob] !="""" and [cdrglob] != [b4_calc_cdrglob]",,,,,,
+b4_calc_eqmem,b4_cdr_dementia_staging_instrument,,calc,"Number of secondary items equal to memory","sum(
+if([memory]=[orient],1,0) ,
+if([memory]=[judgment],1,0) ,
+if([memory]=[commun],1,0) ,
+if([memory]=[homehobb],1,0) ,
+if([memory]=[perscare],1,0) 
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_ltmem,b4_cdr_dementia_staging_instrument,,calc,"Number of secondary items less than memory","sum(
+if([memory]>[orient],1,0) ,
+if([memory]>[judgment],1,0) ,
+if([memory]>[commun],1,0) ,
+if([memory]>[homehobb],1,0) ,
+if([memory]>[perscare],1,0) 
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_gtmem,b4_cdr_dementia_staging_instrument,,calc,"Number of secondary items greater than memory","sum(
+if([memory]<[orient],1,0) ,
+if([memory]<[judgment],1,0) ,
+if([memory]<[commun],1,0) ,
+if([memory]<[homehobb],1,0) ,
+if([memory]<[perscare],1,0) 
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_eq05,b4_cdr_dementia_staging_instrument,,calc,"Number of secondary items == 0.5","sum(
+if([orient]=0.5 and [orient] != [memory],1,0) ,
+if([judgment]=0.5 and [judgment] !=[memory],1,0) ,
+if([commun]=0.5 and [commun] !=[memory],1,0) ,
+if([homehobb]=0.5 and [homehobb] !=[memory],1,0) ,
+if([perscare]=0.5 and [perscare]!=[memory],1,0) 
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_eq1,b4_cdr_dementia_staging_instrument,,calc,"Number of secondary items == 1","sum(
+if([orient]=1 and [orient] != [memory],1,0) ,
+if([judgment]=1 and [judgment] !=[memory],1,0) ,
+if([commun]=1 and [commun] !=[memory],1,0) ,
+if([homehobb]=1 and [homehobb] !=[memory],1,0) ,
+if([perscare]=1 and [perscare]!=[memory],1,0) 
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_eq2,b4_cdr_dementia_staging_instrument,,calc,"Number of secondary items == 2","sum(
+if([orient]=2 and [orient] != [memory],1,0) ,
+if([judgment]=2 and [judgment] !=[memory],1,0) ,
+if([commun]=2 and [commun] !=[memory],1,0) ,
+if([homehobb]=2 and [homehobb] !=[memory],1,0) ,
+if([perscare]=2 and [perscare]!=[memory],1,0) 
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_eq3,b4_cdr_dementia_staging_instrument,,calc,"Number of secondary items == 3","sum(
+if([orient]=3 and [orient] != [memory],1,0) ,
+if([judgment]=3 and [judgment] !=[memory],1,0) ,
+if([commun]=3 and [commun] !=[memory],1,0) ,
+if([homehobb]=3 and [homehobb] !=[memory],1,0) ,
+if([perscare]=3 and [perscare]!=[memory],1,0) 
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_eq0,b4_cdr_dementia_staging_instrument,,calc,"Number of secondary items == 0","sum(
+if([orient]=0 and [orient] != [memory],1,0) ,
+if([judgment]=0 and [judgment] !=[memory],1,0) ,
+if([commun]=0 and [commun] !=[memory],1,0) ,
+if([homehobb]=0 and [homehobb] !=[memory],1,0) ,
+if([perscare]=0 and [perscare]!=[memory],1,0) 
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_05diff,b4_cdr_dementia_staging_instrument,,calc,"Memory Diff -  Secondary Scores==0.5","if( [b4_calc_eq05] > 1, abs(0.5 - [memory]), ''
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_1diff,b4_cdr_dementia_staging_instrument,,calc,"Memory Diff -  Secondary Scores==1","if( [b4_calc_eq1] > 1, abs(1 - [memory]), ''
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_2diff,b4_cdr_dementia_staging_instrument,,calc,"Memory Diff -  Secondary Scores==2","if( [b4_calc_eq2] > 1, abs(2 - [memory]), ''
+)",,,,,,,,,,,," @HIDDEN"
+b4_calc_othties,b4_cdr_dementia_staging_instrument,,calc,"Additional Rules for scoring  various tie scenarios","//additional tie scenarios based on memory scores or rare item permutations
+if( (([b4_calc_ltmem]=3 and [b4_calc_gtmem]=1) or
+    ([b4_calc_ltmem]=1 and [b4_calc_gtmem]=3)) and
+    [b4_calc_eqmem]=1 and 
+    max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=1, [memory],
+if([memory]=3 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq2], '2',
+if([memory]=3 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq1], '1',
+if([memory]=3 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq05], '0.5',  
+if([memory]=3 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq0], '0.5',
+if([memory]=2 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq2], '2',
+if([memory]=2 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq1], '1',
+if([memory]=2 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq3], '3',
+if([memory]=2 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq05], '0.5',  
+if([memory]=2 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq0], '0.5',
+if([memory]=1 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq1], '1',
+if([memory]=1 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq05], '0.5',  
+if([memory]=1 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq0], '0.5',
+if([memory]=1 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq2], '2',
+if([memory]=1 and max([b4_calc_eq05], [b4_calc_eq1],  [b4_calc_eq2], [b4_calc_eq3],[b4_calc_eq0])=[b4_calc_eq3], '3',
+ 9999)))))))))))))))",,,,,,,,,,,," @HIDDEN"
+b4_reference1,b4_cdr_dementia_staging_instrument,,descriptive,"<p><span style=""font-weight: normal;""><sup>1</sup>Morris JC. The Clinical Dementia Rating (CDR): Current version and scoring rules. Neurology 43(11):2412-4, 1993. Copyright© Lippincott, Williams & Wilkins. Reproduced by permission.</span></p><hr color=#236fa1></hr>",,,,,,,,,,,,,
+b4_section2,b4_cdr_dementia_staging_instrument,,descriptive,"<div class=""rich-text-field-label""><table style=""border-collapse: collapse; width: 100%; height: 62.3125px; background-color: #ffffff;"" border=""0"" cellpadding=""4px""> <tbody> <tr style=""height: 34.3125px;""> <td style=""width: 98.3027%; background-color: #236fa1; height: 34.3125px;""><span style=""color: #ffffff;"">Section 2 - NACC FTLD Behavior & Language Domains</span></td> </tr> <tr style=""height: 28px;""> <td style=""width: 98.3027%; background-color: #c2e0f4; height: 28px;""><span style=""color: #ffffff;""><span style=""color: #ffffff;""><span style=""color: #000000;"">Impairment</span></span><br /></span></td> </tr> </tbody> </table></div>",,,,,,,,,,,,,
+comport,b4_cdr_dementia_staging_instrument,,radio,"<div class=""rich-text-field-label""><p>9. Behavior, Comportment, & Personality<sup>2</sup></p></div>","0, <b>None = 0</b><br/>Socially appropriate behavior | 0.5, <b>Questionable = 0.5</b><br>Questionable changes in comportment, empathy, appropriateness of actions | 1, <b>Mild = 1</b><br/>Mild but definite changes in behavior | 2, <b>Moderate = 2</b><br/>Moderate behavioral changes, affecting interpersonal relationships and interactions in a significant manner | 3, <b>Severe = 3</b><br/>Severe behavioral changes, making interpersonal interactions all unidirectional | 99, <b>Not Applicable</b>",,,,,,,y,LV,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+cdrlang,b4_cdr_dementia_staging_instrument,,radio,"10. Language<sup>3</sup>","0, <b>None = 0 </b><br/>No language difficulty or occasional mild tip-of-the-tongue | 0.5, <b>Questionable = 0.5</b><br>Consistent mild word-finding difficulties; simplification of word choice; circumlocution; decreased phrase length; and/or mild comprehension difficulties | 1, <b>Mild = 1</b><br/>Moderate word-finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech and/or reduced comprehension in conversation and reading | 2, <b>Moderate = 2</b><br/>Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective | 3, <b>Severe = 3</b><br/>Severe comprehension deficits; no intelligible speech | 99, <b>Not Applicable</b>",,,,,,,y,LV,,,," @IF([dssub]='1', @DEFAULT='99', @HIDECHOICE='99')"
+b4_reference2,b4_cdr_dementia_staging_instrument,,descriptive,"<p><span style=""font-weight: normal;""><sup>2</sup>Excerpted from the Frontotemporal Demential Multicenter Instrument & MR Study (Mayo Clinic, UCSF, UCLA, UW). </span><span style=""font-weight: normal;""><sup>3</sup>Excerpted from the PPA-CDR: A modification </span><span style=""font-weight: normal;"">of the CDR for assessing dementia severity in patients with primary progressive aphasia (Johnson N, Weintraub S, Mesulam MM), 2002.</span></p><hr color=#236fa1></hr>",,,,,,,,,,,,,
+b4_footer,b4_cdr_dementia_staging_instrument,,descriptive,"<p><span style=""color: #3598db;"">NATIONAL ALZHEIMER'S COORDINATING CENTER | (206) 543-8637 | naccmail@uw.edu |</span> <span style=""text-decoration: underline;""><a href=""https://naccdata.org/"" target=""_blank"" rel=""noopener"">naccdata.org</a></span><br /><strong>UDS <span style=""font-weight: normal;"">(Version 4.0, Month Year)</span> <span style=""color: red;"">[instrument-label]</span></strong></p>
+",,,,,,,,,,,,,
