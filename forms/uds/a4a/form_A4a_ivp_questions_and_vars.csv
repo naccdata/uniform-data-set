@@ -1,5 +1,5 @@
 Form ,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values/ranges/characters, etc. are allowed for this field?"
-A4a,IVP,1. Has the participant ever been prescribed or been enrolled in a clinical trial of a treatment expected to modify ADRD biomarkers?,TRTBIOMARK,Always,"Integers 0-1, 9"
+A4a,IVP,1. Has the participant ever been prescribed a treatment or been enrolled in a clinical trial of a treatment expected to modify ADRD biomarkers?,TRTBIOMARK,Always,"Integers 0-1, 9"
 A4a,IVP,2a1a. Primary Drug Target - Amyloid Beta (1),TARGETAB1,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2a1b. Primary Drug Target - Tau (1),TARGETTAU1,Conditional (e.g. skip pattern),1 or blank
 A4a,IVP,2a1c. Primary Drug Target - Inflammation (1),TARGETINF1,Conditional (e.g. skip pattern),1 or blank
