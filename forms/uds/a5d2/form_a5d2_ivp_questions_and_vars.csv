@@ -66,8 +66,10 @@ A5D2,IVP,5a. Diabetes,DIABETES,Always,"0-2, 9"
 A5D2,IVP,5a1. Diabetes type,DIABTYPE,Conditional (e.g. skip pattern),"1-3, 9"
 A5D2,IVP,5a2a. Diabetes treated with: Insulin,DIABINS,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5a2b. Diabetes treated with: Oral medications,DIABMEDS,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,5a2c. Diabetes treated with: Diet,DIABDIET,Conditional (e.g. skip pattern),1 or blank
-A5D2,IVP,5a2d. Diabetes treated with: Unknown,DIABUNK,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5a2c. GLP-1 receptor activators,DIABGLP1,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,"5a2d. Other non-insulin, non-GLP-1 receptor activator injection medication",DIABRECACT,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5a2e. Diabetes treated with: Diet,DIABDIET,Conditional (e.g. skip pattern),1 or blank
+A5D2,IVP,5a2f. Diabetes treated with: Unknown,DIABUNK,Conditional (e.g. skip pattern),1 or blank
 A5D2,IVP,5a3. Age at diabetes diagnosis,DIABAGE,Conditional (e.g. skip pattern),"0-110, 999"
 A5D2,IVP,5b. Hypertension (or taking medication for hypertension),HYPERTEN,Always,"0-2, 9"
 A5D2,IVP,5b1. Age at hypertension diagnosis,HYPERTAGE,Conditional (e.g. skip pattern),"10-110, 999"
@@ -89,7 +91,7 @@ A5D2,IVP,5g. Incontinence—urinary (occurring at least weekly),INCONTU,Always,"0-
 A5D2,IVP,5h. Incontinence—bowel (occurring at least weekly),INCONTF,Always,"0-2, 9"
 A5D2,IVP,5i. Sleep apnea,APNEA,Always,"0-2, 9"
 A5D2,IVP,5i1. Typical use of breathing machine (e.g. CPAP) at night over the past 12 months,CPAP,Conditional (e.g. skip pattern),"0-2, 9"
-A5D2,IVP,5i2. Typical use of an oral device for sleep apnea at night over the past 12 months?,APNEAORAL,Conditional (e.g. skip pattern),"0-2, 9"
+A5D2,IVP,5i2. Typical use of an oral device or implanted breathing pacemaker for sleep apnea at night over the past 12 months?,APNEAORAL,Conditional (e.g. skip pattern),"0-2, 9"
 A5D2,IVP,5j. REM sleep behavior disorder (RBD),RBD,Always,"0-2, 9"
 A5D2,IVP,5k. Hyposomnia/Insomnia (occurring at least weekly or requiring medication),INSOMN,Always,"0-2, 9"
 A5D2,IVP,5l. Other sleep disorder,OTHSLEEP,Always,"0-2, 9"
