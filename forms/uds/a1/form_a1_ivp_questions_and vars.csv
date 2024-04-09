@@ -1,109 +1,109 @@
-Form,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values_ranges_characters, etc. are allowed for this field?"
-A1,I,1a. Participant's month of birth,BIRTHMO,Always,Integers 1-12
-A1,I,1b. Participant's year of birth,BIRTHYR,Always,1850 - current year minus 15
-A1,I,2. In which country or region did you spend most of your childhood?,CHLDHDCTRY,Always,text
-A1,I,3a. Race--White,RACEWHITE,Always,1 or blank
-A1,I,3a1. Race--White--German,ETHGERMAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3a2. Race--White--Irish,ETHIRISH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3a3. Race--White--English,ETHENGLISH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3a4. Race--White--Italian,ETHITALIAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3a5. Race--White--Polish,ETHPOLISH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3a6. Race--White--French,ETHFRENCH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3a7. Race--White--Other,ETHWHIOTH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3a7a. Race--White--Other (specify),ETHWHIOTHX,Conditional (e.g. skip pattern),text
-A1,I,3b. Race--Hispanic or Latino,ETHISPANIC,Always,1 or blank
-A1,I,3b1. Race--Hispanic or Latino--Mexican or Mexican American,ETHMEXICAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3b2. Race--Hispanic or Latino--Puerto Rican,ETHPUERTO,Conditional (e.g. skip pattern),1 or blank
-A1,I,3b3. Race--Hispanic or Latino--Cuban,ETHCUBAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3b4. Race--Hispanic or Latino--Salvadoran,ETHSALVA,Conditional (e.g. skip pattern),1 or blank
-A1,I,3b5. Race--Hispanic or Latino--Dominican,ETHDOMIN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3b6. Race--Hispanic or Latino--Colombian,ETHCOLOM,Conditional (e.g. skip pattern),1 or blank
-A1,I,3b7. Race--Hispanic or Latino--Other,ETHHISOTH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3b7a. Race--Hispanic or Latino--Other (Specify),ETHHISOTHX,Conditional (e.g. skip pattern),text
-A1,I,3c. Race--Black or African American,RACEBLACK,Always,1 or blank
-A1,I,3c1. Race--Black or African American--African American,ETHAFAMER,Conditional (e.g. skip pattern),1 or blank
-A1,I,3c2. Race--Black or African American--Jamaican,ETHJAMAICA,Conditional (e.g. skip pattern),1 or blank
-A1,I,3c3. Race--Black or African American--Haitian,ETHHAITIAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3c4. Race--Black or African American--Nigerian,ETHNIGERIA,Conditional (e.g. skip pattern),1 or blank
-A1,I,3c5. Race--Back or African American--Ethiopian,ETHETHIOP,Conditional (e.g. skip pattern),1 or blank
-A1,I,3c6. Race--Black or African American--Somali,ETHSOMALI,Conditional (e.g. skip pattern),1 or blank
-A1,I,3c7. Race--Black or African American--Other,ETHBLKOTH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3c7a. Race--Black or African American--Other (Specify),ETHBLKOTHX,Conditional (e.g. skip pattern),text
-A1,I,3d. Race--Asian,RACEASIAN,Always,1 or blank
-A1,I,3d1. Race--Asian--Chinese,ETHCHINESE,Conditional (e.g. skip pattern),1 or blank
-A1,I,3d2. Race--Asian--Filipino,ETHFILIP,Conditional (e.g. skip pattern),1 or blank
-A1,I,3d3. Race--Asian--Asian Indian,ETHINDIA,Conditional (e.g. skip pattern),1 or blank
-A1,I,3d4. Race--Asian--Vietnamese,ETHVIETNAM,Conditional (e.g. skip pattern),1 or blank
-A1,I,3d5. Race--Asian--Korean,ETHKOREAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3d6. Race--Asian--Japanese,ETHJAPAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3d7. Race--Asian--Other,ETHASNOTH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3d7a. Race--Asian--Other (Specify),ETHASNOTHX,Conditional (e.g. skip pattern),text
-A1,I,3e. Race--American Indian or Alaska Native,RACEAIAN,Always,1 or blank
-A1,I,3e1. Race--American Indian or Alaska Native (Specify),RACEAIANX,Conditional (e.g. skip pattern),text
-A1,I,3f. Race--Middle Eastern or North African,RACEMENA,Always,1 or blank
-A1,I,3f1. Race--Middle Eastern or North African--Lebanese,ETHLEBANON,Conditional (e.g. skip pattern),1 or blank
-A1,I,3f2. Race--Middle Eastern or North African--Iranian,ETHIRAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3f3. Race--Middle Eastern or North African--Egyptian,ETHEGYPT,Conditional (e.g. skip pattern),1 or blank
-A1,I,3f4. Race--Middle Eastern or North African--Syrian,ETHSYRIA,Conditional (e.g. skip pattern),1 or blank
-A1,I,3f5. Race--Middle Eastern or North African--Moroccan,ETHMOROCCO,Conditional (e.g. skip pattern),1 or blank
-A1,I,3f6. Race--Middle Eastern or North African--Israeli,ETHISRAEL,Conditional (e.g. skip pattern),1 or blank
-A1,I,3f7. Race--Middle Eastern or North African--Other,ETHMENAOTH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3f7a. Race--Middle Eastern or North African--Other (Specify),ETHMENAOTX,Conditional (e.g. skip pattern),text
-A1,I,3g. Race--Native Hawaiian or Pacific Islander,RACENHPI,Always,1 or blank
-A1,I,3g1. Race--Native Hawaiian or Pacific Islander--Native Hawaiian,ETHHAWAII,Conditional (e.g. skip pattern),1 or blank
-A1,I,3g2. Race--Native Hawaiian or Pacific Islander--Samoan,ETHSAMOAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3g3. Race--Native Hawaiian or Pacific Islander--Chamorro,ETHCHAMOR,Conditional (e.g. skip pattern),1 or blank
-A1,I,3g4. Race--Native Hawaiian or Pacific Islander--Tongan,ETHTONGAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3g5. Race--Native Hawaiian or Pacific Islander--Fijian,ETHFIJIAN,Conditional (e.g. skip pattern),1 or blank
-A1,I,3g6. Race--Native Hawaiian or Pacific Islander--Marshallese,ETHMARSHAL,Conditional (e.g. skip pattern),1 or blank
-A1,I,3g7. Race--Native Hawaiian or Pacific Islander--Other,ETHNHPIOTH,Conditional (e.g. skip pattern),1 or blank
-A1,I,3g7a. Race--Native Hawaiian or Pacific Islander--Other (Specify),ETHNHPIOTX,Conditional (e.g. skip pattern),text
-A1,I,3h. Race--Don't know,RACEUNKN,Always,1 or blank
-A1,I,4a. Gender--Man,GENMAN,Always,1 or blank
-A1,I,4b. Gender--Woman,GENWOMAN,Always,1 or blank
-A1,I,4c. Gender--Transgender man,GENTRMAN,Always,1 or blank
-A1,I,4d. Gender--Transgender woman,GENTRWOMAN,Always,1 or blank
-A1,I,4e. Gender--Non-binary/genderqueer,GENNONBI,Always,1 or blank
-A1,I,4f. Gender--Two-spirit,GENTWOSPIR,Always,1 or blank
-A1,I,4g. Gender--I use a different term (specify),GENOTH,Always,1 or blank
-A1,I,4g1. Gender--I use a different term specify,GENOTHX,Conditional (e.g. skip pattern),text
-A1,I,4h. Gender--Don't know,GENDKN,Always,1 or blank
-A1,I,4i. Gender--Prefer not to answer,GENNOANS,Always,1 or blank
-A1,I,"5. What sex were you assigned at birth, on your original birth certificate?",BIRTHSEX,Always,"Integers 1-2,8, 9"
-A1,I,"6. Have you ever been diagnosed by a medical doctor or other health professional with an intersex condition or a ""Difference of Sex Development (DSD)"" or were you born with (or developed naturally in puberty) genitals, reproductive organs, and/or chromosomal patterns that do not fit standard definitions of male or female?",INTERSEX,Always,"Integers 0-1,8,9"
-A1,I,7a. Sexual Orientation--Lesbian or Gay,SEXORNGAY,Always,1 or blank
-A1,I,7b. Sexual Orientation--Straight/Heterosexual,SEXORNHET,Always,1 or blank
-A1,I,7c. Sexual Orientation--Bisexual,SEXORNBI,Always,1 or blank
-A1,I,7d. Sexual Orientation--Two-Spirit,SEXORNTWOS,Always,1 or blank
-A1,I,7e. Sexual Orientation--I use a different term,SEXORNOTH,Always,1 or blank
-A1,I,7e1. Sexual Orientation--I use a different term (specify),SEXORNOTHX,Conditional (e.g. skip pattern),text
-A1,I,7f. Sexual Orientation--Don't know,SEXORNDNK,Always,1 or blank
-A1,I,7g. Sexual Orientation--Prefer not to answer,SEXORNNOAN,Always,1 or blank
-A1,I,8. What is your primary language?,PREDOMLAN,Always,"Integer 1-3, 8, 9"
-A1,I,8a. Participant's primary language--Other(specify),PREDOMLANX,Conditional (e.g. skip pattern),text
-A1,I,9. Are you left- or right-handed?,HANDED,Always,"Integers 1-3, 9"
-A1,I,10a. How many years of education have you completed?,EDUC,Always,"Integers 0-36, 99"
-A1,I,10b. What is your highest achieved level of education?,LVLEDUC,Always,"Integers 1-6, 9"
-A1,I,11. What is your current marital status?,MARISTAT,Always,"Integers 1-6, 9"
-A1,I,12. What is your living situation?,LIVSITUA,Always,"Integers 1-6, 9"
-A1,I,13. What is your primary type of residence?,RESIDENC,Always,"Integers 1-4, 6, 9"
-A1,I,14. What are the first three digits of the ZIP code of your primary residence?,ZIP,Conditional (e.g. skip pattern),"006-999, or blank"
-A1,I,"15. Have you ever served on active duty in the U.S. Armed Forces, military Reserves, or National Guard?",SERVED,Always,"Integers 0-1,9"
-A1,I,16. Have you ever obtained medical care or prescription drugs from a Veterans Affairs (VA) facility?,MEDVA,Conditional (e.g. skip pattern),"Integers 0-1,9"
-A1,I,17. How much time each week do you spend performing activities that cause large increases in breathing or heart rate for at least 10 minutes continuously?,EXRTIME,Always,"Integers 1-4,8,9"
-A1,I,18. Do you feel like your memory is becoming worse?,MEMWORS,Always,"Integers 0-2,9"
-A1,I,19. About how often do you have trouble remembering things?,MEMTROUB,Always,"Integers 1-5,9"
-A1,I,"20. Compared to 10 years ago, would you say that your memory is much worse, a little worse, the same, a little better, or much better?",MEMTEN,Always,"Integers 1-5,9"
-A1,I,21. ADI state-only decile,ADISTATE,Conditional (e.g. skip pattern),"1-10, or blank"
-A1,I,22. ADI national percentile,ADINAT,Conditional (e.g. skip pattern),"1-100,or blank"
-A1,I,23. Participant's primary occupation throughout their working life,PRIOCC,Conditional (e.g. skip pattern),"100-731, or blank"
-A1,I,24. ADRC enrollment type:,SOURCENW,Always,Integers 1-2
-A1,I,25. Principal referral source,REFERSC,Always,"Integers 1-6,8,9"
-A1,I,25a. Principal referral source - other (specify),REFERSCX,Conditional (e.g. skip pattern),text
-A1,I,"26. If the referral source was a self-referral or a nonprofessional contact, how did the referral source learn of the ADRC?",REFLEARNED,Conditional (e.g. skip pattern),"Integers 1-10,88,99"
-A1,I,26a. Center social media - specify,REFCTRSOCX,Conditional (e.g. skip pattern),text
-A1,I,26b. Center registry - specify,REFCTRREGX,Conditional (e.g. skip pattern),text
-A1,I,26c. Other website - specify,REFOTHWEBX,Conditional (e.g. skip pattern),text
-A1,I,26d. Other media - specify,REFOTHMEDX,Conditional (e.g. skip pattern),text
-A1,I,26e. Other registry - specify,REFOTHREGX,Conditional (e.g. skip pattern),text
-A1,I,26f. Other - specify,REFOTHX,Conditional (e.g. skip pattern),text
+Form,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values_ranges_characters, etc. are allowed for this field?",Data type
+A1,I,1a. Participant's month of birth,BIRTHMO,Always,Integers 1-12,Integer
+A1,I,1b. Participant's year of birth,BIRTHYR,Always,1850 - current year minus 15,Integer
+A1,I,2. In which country or region did you spend most of your childhood?,CHLDHDCTRY,Always,text,String
+A1,I,3a. Race--American Indian or Alaska Native,RACEAIAN,Always,1 or blank,Integer
+A1,I,3a1. Race--American Indian or Alaska Native (Specify),RACEAIANX,Conditional (e.g. skip pattern),text,String
+A1,I,3b. Race--Asian,RACEASIAN,Always,1 or blank,Integer
+A1,I,3b1. Race--Asian--Chinese,ETHCHINESE,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3b2. Race--Asian--Asian Indian,ETHINDIA,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3b3. Race--Asian--Filipino,ETHFILIP,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3b4. Race--Asian--Vietnamese,ETHVIETNAM,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3b5. Race--Asian--Korean,ETHKOREAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3b6. Race--Asian--Japanese,ETHJAPAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3b7. Race--Asian--Other,ETHASNOTH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3b7a. Race--Asian--Other (Specify),ETHASNOTHX,Conditional (e.g. skip pattern),text,String
+A1,I,3c. Race--Black or African American,RACEBLACK,Always,1 or blank,Integer
+A1,I,3c1. Race--Black or African American--African American,ETHAFAMER,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3c2. Race--Black or African American--Jamaican,ETHJAMAICA,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3c3. Race--Black or African American--Haitian,ETHHAITIAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3c4. Race--Black or African American--Nigerian,ETHNIGERIA,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3c5. Race--Back or African American--Ethiopian,ETHETHIOP,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3c6. Race--Black or African American--Somali,ETHSOMALI,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3c7. Race--Black or African American--Other,ETHBLKOTH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3c7a. Race--Black or African American--Other (Specify),ETHBLKOTHX,Conditional (e.g. skip pattern),text,String
+A1,I,3d. Race--Hispanic or Latino,ETHISPANIC,Always,1 or blank,Integer
+A1,I,3d1. Race--Hispanic or Latino--Mexican,ETHMEXICAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3d2. Race--Hispanic or Latino--Puerto Rican,ETHPUERTO,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3d3. Race--Hispanic or Latino--Salvadoran,ETHSALVA,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3d4. Race--Hispanic or Latino--Cuban,ETHCUBAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3d5. Race--Hispanic or Latino--Dominican,ETHDOMIN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3d6. Race--Hispanic or Latino--Guatemalan,ETHGUATEM,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3d7. Race--Hispanic or Latino--Other,ETHHISOTH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3d7a. Race--Hispanic or Latino--Other (Specify),ETHHISOTHX,Conditional (e.g. skip pattern),text,String
+A1,I,3e. Race--Middle Eastern or North African,RACEMENA,Always,1 or blank,Integer
+A1,I,3e1. Race--Middle Eastern or North African--Lebanese,ETHLEBANON,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3e2. Race--Middle Eastern or North African--Iranian,ETHIRAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3e3. Race--Middle Eastern or North African--Egyptian,ETHEGYPT,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3e4. Race--Middle Eastern or North African--Syrian,ETHSYRIA,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3e5. Race--Middle Eastern or North African--Iraqi,ETHIRAQI,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3e6. Race--Middle Eastern or North African--Israeli,ETHISRAEL,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3e7. Race--Middle Eastern or North African--Other,ETHMENAOTH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3e7a. Race--Middle Eastern or North African--Other (Specify),ETHMENAOTX,Conditional (e.g. skip pattern),text,String
+A1,I,3f. Race--Native Hawaiian or Pacific Islander,RACENHPI,Always,1 or blank,Integer
+A1,I,3f1. Race--Native Hawaiian or Pacific Islander--Native Hawaiian,ETHHAWAII,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3f2. Race--Native Hawaiian or Pacific Islander--Samoan,ETHSAMOAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3f3. Race--Native Hawaiian or Pacific Islander--Chamorro,ETHCHAMOR,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3f4. Race--Native Hawaiian or Pacific Islander--Tongan,ETHTONGAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3f5. Race--Native Hawaiian or Pacific Islander--Fijian,ETHFIJIAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3f6. Race--Native Hawaiian or Pacific Islander--Marshallese,ETHMARSHAL,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3f7. Race--Native Hawaiian or Pacific Islander--Other,ETHNHPIOTH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3f7a. Race--Native Hawaiian or Pacific Islander--Other (Specify),ETHNHPIOTX,Conditional (e.g. skip pattern),text,String
+A1,I,3g. Race--White,RACEWHITE,Always,1 or blank,Integer
+A1,I,3g3. Race--White--English,ETHENGLISH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3g1. Race--White--German,ETHGERMAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3g2. Race--White--Irish,ETHIRISH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3g4. Race--White--Italian,ETHITALIAN,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3g5. Race--White--Polish,ETHPOLISH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3g6. Race--White--Scottish,ETHSCOTT,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3g7. Race--White--Other,ETHWHIOTH,Conditional (e.g. skip pattern),1 or blank,Integer
+A1,I,3g7a. Race--White--Other (specify),ETHWHIOTHX,Conditional (e.g. skip pattern),text,String
+A1,I,3h. Race--Don't know,RACEUNKN,Always,1 or blank,Integer
+A1,I,4a. Gender--Man,GENMAN,Always,1 or blank,Integer
+A1,I,4b. Gender--Woman,GENWOMAN,Always,1 or blank,Integer
+A1,I,4c. Gender--Transgender man,GENTRMAN,Always,1 or blank,Integer
+A1,I,4d. Gender--Transgender woman,GENTRWOMAN,Always,1 or blank,Integer
+A1,I,4e. Gender--Non-binary/genderqueer,GENNONBI,Always,1 or blank,Integer
+A1,I,4f. Gender--Two-spirit,GENTWOSPIR,Always,1 or blank,Integer
+A1,I,4g. Gender--I use a different term (specify),GENOTH,Always,1 or blank,Integer
+A1,I,4g1. Gender--I use a different term specify,GENOTHX,Conditional (e.g. skip pattern),text,String
+A1,I,4h. Gender--Don't know,GENDKN,Always,1 or blank,Integer
+A1,I,4i. Gender--Prefer not to answer,GENNOANS,Always,1 or blank,Integer
+A1,I,"5. What sex were you assigned at birth, on your original birth certificate?",BIRTHSEX,Always,"Integers 1-2,8, 9",Integer
+A1,I,"6. Have you ever been diagnosed by a medical doctor or other health professional with an intersex condition or a ""Difference of Sex Development (DSD)"" or were you born with (or developed naturally in puberty) genitals, reproductive organs, and/or chromosomal patterns that do not fit standard definitions of male or female?",INTERSEX,Always,"Integers 0-1,8,9",Integer
+A1,I,7a. Sexual Orientation--Lesbian or Gay,SEXORNGAY,Always,1 or blank,Integer
+A1,I,7b. Sexual Orientation--Straight/Heterosexual,SEXORNHET,Always,1 or blank,Integer
+A1,I,7c. Sexual Orientation--Bisexual,SEXORNBI,Always,1 or blank,Integer
+A1,I,7d. Sexual Orientation--Two-Spirit,SEXORNTWOS,Always,1 or blank,Integer
+A1,I,7e. Sexual Orientation--I use a different term,SEXORNOTH,Always,1 or blank,Integer
+A1,I,7e1. Sexual Orientation--I use a different term (specify),SEXORNOTHX,Conditional (e.g. skip pattern),text,String
+A1,I,7f. Sexual Orientation--Don't know,SEXORNDNK,Always,1 or blank,Integer
+A1,I,7g. Sexual Orientation--Prefer not to answer,SEXORNNOAN,Always,1 or blank,Integer
+A1,I,8. What is your primary language?,PREDOMLAN,Always,"Integer 1-3, 8, 9",Integer
+A1,I,8a. Participant's primary language--Other(specify),PREDOMLANX,Conditional (e.g. skip pattern),text,String
+A1,I,9. Are you left- or right-handed?,HANDED,Always,"Integers 1-3, 9",Integer
+A1,I,10a. How many years of education have you completed?,EDUC,Always,"Integers 0-36, 99",Integer
+A1,I,10b. What is your highest achieved level of education?,LVLEDUC,Always,"Integers 1-6, 9",Integer
+A1,I,11. What is your current marital status?,MARISTAT,Always,"Integers 1-6, 9",Integer
+A1,I,12. What is your living situation?,LIVSITUA,Always,"Integers 1-6, 9",Integer
+A1,I,13. What is your primary type of residence?,RESIDENC,Always,"Integers 1-4, 6, 9",Integer
+A1,I,14. What are the first three digits of the ZIP code of your primary residence?,ZIP,Conditional (e.g. skip pattern),"006-999, or blank",String
+A1,I,"15. Have you ever served on active duty in the U.S. Armed Forces, military Reserves, or National Guard?",SERVED,Always,"Integers 0-1,9",Integer
+A1,I,16. Have you ever obtained medical care or prescription drugs from a Veterans Affairs (VA) facility?,MEDVA,Conditional (e.g. skip pattern),"Integers 0-1,9",Integer
+A1,I,17. How much time each week do you spend performing activities that cause large increases in breathing or heart rate for at least 10 minutes continuously?,EXRTIME,Always,"Integers 1-4,8,9",Integer
+A1,I,18. Do you feel like your memory is becoming worse?,MEMWORS,Always,"Integers 0-2,9",Integer
+A1,I,19. About how often do you have trouble remembering things?,MEMTROUB,Always,"Integers 1-5,9",Integer
+A1,I,"20. Compared to 10 years ago, would you say that your memory is much worse, a little worse, the same, a little better, or much better?",MEMTEN,Always,"Integers 1-5,9",Integer
+A1,I,21. ADI state-only decile,ADISTATE,Conditional (e.g. skip pattern),"1-10, or blank",String
+A1,I,22. ADI national percentile,ADINAT,Conditional (e.g. skip pattern),"1-100,or blank",String
+A1,I,23. Participant's primary occupation throughout their working life,PRIOCC,Conditional (e.g. skip pattern),"100-731, or blank",String
+A1,I,24. ADRC enrollment type:,SOURCENW,Always,Integers 1-2,Integer
+A1,I,25. Principal referral source,REFERSC,Always,"Integers 1-6,8,9",Integer
+A1,I,25a. Principal referral source - other (specify),REFERSCX,Conditional (e.g. skip pattern),text,String
+A1,I,"26. If the referral source was a self-referral or a nonprofessional contact, how did the referral source learn of the ADRC?",REFLEARNED,Conditional (e.g. skip pattern),"Integers 1-10,88,99",Integer
+A1,I,26a. Center social media - specify,REFCTRSOCX,Conditional (e.g. skip pattern),text,String
+A1,I,26b. Center registry - specify,REFCTRREGX,Conditional (e.g. skip pattern),text,String
+A1,I,26c. Other website - specify,REFOTHWEBX,Conditional (e.g. skip pattern),text,String
+A1,I,26d. Other media - specify,REFOTHMEDX,Conditional (e.g. skip pattern),text,String
+A1,I,26e. Other registry - specify,REFOTHREGX,Conditional (e.g. skip pattern),text,String
+A1,I,26f. Other - specify,REFOTHX,Conditional (e.g. skip pattern),text,String
