@@ -67,8 +67,8 @@ D1b,IVP,13. Lewy body disease,LBDIS,Conditional (e.g. skip pattern),1 or blank
 D1b,IVP,"13a. Primary, contributing, or non-contributing - Lewy body disease",LBDIF,Conditional (e.g. skip pattern),Integers 1-3
 D1b,IVP,14. Frontotemporal lobar degeneration,FTLD,Conditional (e.g. skip pattern),1 or blank
 D1b,IVP,"14a. Primary, contributing, or non-contributing - Frontotemporal lobar degeneration",FTLDIF,Conditional (e.g. skip pattern),Integers 1-3
-D1b,IVP,14ba. Primary supranuclear palsy (PSP),PSP,Conditional (e.g. skip pattern),1 or blank
-D1b,IVP,"14b1a. Primary, contributing, or non-contributing - Primary supranuclear palsy (PSP)",PSPIF,Conditional (e.g. skip pattern),Integers 1-3
+D1b,IVP,14b1. Progressive supranuclear palsy (PSP),PSP,Conditional (e.g. skip pattern),1 or blank
+D1b,IVP,"14b1a. Primary, contributing, or non-contributing - Progressive supranuclear palsy (PSP)",PSPIF,Conditional (e.g. skip pattern),Integers 1-3
 D1b,IVP,14b2. Corticobasal degeneration (CBD),CORT,Conditional (e.g. skip pattern),1 or blank
 D1b,IVP,"14b2a. Primary, contributing, or non-contributing - Corticobasal degeneration (CBD)",CORTIF,Conditional (e.g. skip pattern),Integers 1-3
 D1b,IVP,14b3. FTLD with motor neuron disease,FTLDMO,Conditional (e.g. skip pattern),1 or blank
