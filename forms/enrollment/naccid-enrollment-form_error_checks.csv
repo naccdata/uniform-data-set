@@ -23,16 +23,7 @@ enrl-m-021,021,Error,enrl,ENRLGENOTHX,Missingness,ENRLGENOTHX conditionally pres
 enrl-m-022,022,Error,enrl,ENRLGENOTHX,Missingness,ENRLGENOTHX conditionally blank,If ENRLGENOTH is blank then ENRLGENOTHX must be blank,If Q4g. ENRLGENOTH (gender other) is blank then Q4g1. ENRLGENOTHX (gender other specify) must be blank,IF ENRLGENOTH=0 and ENRLGENOTHX is not blank,n/a,n/a,Yes,n/a
 enrl-c-023,023,Error,enrl,ENRLGENDKN,Conformity,ENRLGENDKN conforms,ENRLGENDKN must be blank or 1,Q4h. ENRLGENDKN (gender do not know) must be blank or 1,IF ENRLGENDKN is not blank or ENRLGENDKN  is not 1,n/a,n/a,Yes,n/a
 enrl-c-024,024,Error,enrl,ENRLGENNOANS,Conformity,ENRLGENNOANS conforms,ENRLGENNOANS must be blank or 1,Q4i. ENRLGENNOANS (gender no answer) must be 0 or 1,IF ENRLGENNOANS is not blank or ENRLGENNOANS  is not 1,n/a,n/a,Yes,n/a
-enrl-m-025,025,Error,enrl,"ENRLGENMAN
-ENRLGENWOMAN
-ENRLGENTRMAN
-ENRLGENTRWOMAN
-ENRLGENNONBI
-ENRLGENTWOSPIR
-ENRLGENOTH
-ENRLGENOTHX
-ENRLGENDKN
-ENRLGENNOANS",Missingness,At least one gender must be checked,"At least one of the following variables must be equal to 1: ENRLGENMAN, ENRLGENWOMAN, ENRLGENTRMAN, ENRLGENTRWOMAN, ENRLGENNONBI, ENRLGENTWOSPIR, ENRLGENOTH, ENRLGENDKN, ENRLGENNOANS","At least one of the following variables must be equal to 1: Q4a. ENRLGENMAN, Q4b. ENRLGENWOMAN, Q4c. ENRLGENTRMAN, Q4d. ENRLGENTRWOMAN, Q4e. ENRLGENNONBI, Q4f. ENRLGENTWOSPIR, Q4g. ENRLGENOTH, Q4h. ENRLGENDKN, Q4i. ENRLGENNOANS",IF ENRLGENMAN ne 1 and ENRLGENWOMAN ne 1 and ENRLGENTRMAN ne 1 and ENRLGENTRWOMAN ne 1 and ENRLGENNONBI ne 1 and ENRLGENTWOSPIR ne 1 and ENRLGENOTH ne 1 and ENRLGENDKN ne 1 and ENRLGENNOANS ne 1,"ENRLGENMAN
+enrl-m-025,025,Error,enrl,"ENRLGENMAN",Missingness,At least one gender must be checked,"At least one of the following variables must be equal to 1: ENRLGENMAN, ENRLGENWOMAN, ENRLGENTRMAN, ENRLGENTRWOMAN, ENRLGENNONBI, ENRLGENTWOSPIR, ENRLGENOTH, ENRLGENDKN, ENRLGENNOANS","At least one of the following variables must be equal to 1: Q4a. ENRLGENMAN, Q4b. ENRLGENWOMAN, Q4c. ENRLGENTRMAN, Q4d. ENRLGENTRWOMAN, Q4e. ENRLGENNONBI, Q4f. ENRLGENTWOSPIR, Q4g. ENRLGENOTH, Q4h. ENRLGENDKN, Q4i. ENRLGENNOANS",IF ENRLGENMAN ne 1 and ENRLGENWOMAN ne 1 and ENRLGENTRMAN ne 1 and ENRLGENTRWOMAN ne 1 and ENRLGENNONBI ne 1 and ENRLGENTWOSPIR ne 1 and ENRLGENOTH ne 1 and ENRLGENDKN ne 1 and ENRLGENNOANS ne 1,"ENRLGENMAN
 ENRLGENWOMAN
 ENRLGENTRMAN
 ENRLGENTRWOMAN
@@ -52,7 +43,7 @@ enrl-m-032,032,Error,enrl,OLDADCID,Missingness,OLDADCID conditionally present,If
 enrl-m-033,033,Error,enrl,OLDADCID,Missingness,OLDADCID conditionally absent,If PREVENRL=0 or 9 (No or Unknown) then OLDADCID must be blank,If Q6. PREVENRL (Previously enrolled at an ADRC?)=0 or 9 (No or Unknown) then Q6a. OLDADCID (Previous ADCID) must be blank,IF PREVENRL in (0 or 9) and OLDADCID not blank,n/a,n/a,Yes,n/a
 enrl-c-034,034,Error,enrl,OLDADCID,Conformity,OLDADCID conforms,OLDADCID must be a valid code in list_of_adcids,Q6a. OLDADCID (Previous ADCID) must be a valid code in list_of_adcids,IF OLDADCID is not in list_of_adcids,n/a,n/a,No,n/a
 enrl-m-035,035,Error,enrl,NACCIDKNWN,Missingness,NACCIDKNWN conditionally present,If ENRLTYPE=2 (Transfer) then NACCIDKNWN cannot be blank,If Q1. ENRLTYPE (Assign NACCID or transfer?)=2 (Transfer) then Q7. NACCIDKNWN (Is NACCID known) cannot be blank,IF ENRLTYPE=2 and NACCIDKNWN=blank,n/a,n/a,Yes,n/a
-enrl-m-036,036,Error,enrl,NACCIDKNWN,Missingness,NACCIDKNWN conditionally absent,If ENRLTYPE=1 (Assign NACCID) then NACCIDKNWN must be blank,If Q1. ENRLTYPE (Assign NACCID or transfer?)=1 (Assign NACCID) then Q7. NACCIDKNWN (Is NACCID known?) must be blank,IF ENRLTYPE=1 and NACCIDKNWN not blank,n/a,n/a,Yes,n/a
+enrl-m-036,036,Error,enrl,NACCIDKNWN,Missingness,NACCIDKNWN conditionally absent,If ENRLTYPE=1 (Assign NACCID) then NACCIDKNWN must be blank or 8 (Not a transfer),If Q1. ENRLTYPE (Assign NACCID or transfer?)=1 (Assign NACCID) then Q7. NACCIDKNWN (Is NACCID known?) must be blank or 8 (Not a transfer),IF ENRLTYPE=1 and NACCIDKNWN ne (8 or blank),n/a,n/a,Yes,n/a
 enrl-c-037,037,Error,enrl,NACCIDKNWN,Conformity,NACCIDKNWN conforms,"NACCIDKNWN must be an integer between 0 and 1, or 8 (Not a transfer)","Q7. NACCIDKNWN (Is NACCID known?) must be an integer between 0 and 1, or 8 (Not a transfer)",IF NACCIDKNWN<0 or (NACCIDKNWN>1 and ne 8),n/a,n/a,Yes,n/a
 enrl-m-038,038,Error,enrl,NACCID,Missingness,NACCID conditionally present,If NACCIDKNWN=1 (Yes) then NACCID cannot be blank,If Q7. NACCIDKNWN (Is NACCID known?)=1 (Yes) then Q7a. NACCID cannot be blank,IF NACCIDKNWN=1 and NACCID=blank,n/a,n/a,Yes,n/a
 enrl-m-039,039,Error,enrl,NACCID,Missingness,NACCID conditionally absent,If NACCIDKNWN=0 or 8 (No or Not a transfer) then NACCID must be blank,If Q7. NACCIDKNWN (Is NACCID known?)=0 or 8 (No or Not a transfer) then Q7a. NACCID must be blank,IF NACCIDKNWN in (0 or 8) and NACCID not blank,n/a,n/a,Yes,n/a
