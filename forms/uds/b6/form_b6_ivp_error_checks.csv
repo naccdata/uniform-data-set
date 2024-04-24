@@ -1,5 +1,5 @@
 Form ,Packet,Variable,Error_alert test name,Short test Description (English),Full test Description (English),Test Description Logic,Form(s) compared in test,Variable(s) compared in test,Error or alert?,Can be done in REDCap?,Type of test,Were these variables_concepts previous versions of UDS?,Questions for domain experts
-B6,I,NOGDS,NOGDS conforms,NOGDS must be an integer between 0-1,QG1. NOGDS (Check if GDS not attempted) must be an integer between 0 and 1.,If NOGDS < 0 or NOGDS > 1,n/a,n/a,Error,Yes,Conformity,Yes,
+B6,I,NOGDS,NOGDS conforms,NOGDS must be blank or 1,QG1. NOGDS (Check if GDS not attempted) must be blank or 1,If NOGDS ne (1 or blank),n/a,n/a,Error,Yes,Conformity,Yes,
 B6,I,SATIS,SATIS must be present,SATIS cannot be blank,Q1. SATIS (Satisfied with life?) cannot be blank,If SATIS = blank,n/a,n/a,Error,Yes,Missingness,Yes,
 B6,I,SATIS,SATIS conforms,"SATIS must be an integer between 0-1, or =9 (Did not answer)","Q1. SATIS (Satisfied with life?) must be an integer between 0-1, or =9 (Did not answer)",If SATIS <0 or (SATIS > 1 and ne 9),n/a,n/a,Error,Yes,Conformity,Yes,
 B6,I,DROPACT,DROPACT must be present,DROPACT cannot be blank,Q2. DROPACT (Dropped interests/activities?) cannot be blank,If DROPACT = blank,n/a,n/a,Error,Yes,Missingness,Yes,
