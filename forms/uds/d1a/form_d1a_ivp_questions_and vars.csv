@@ -57,7 +57,7 @@ D1a,I,12a,Bipolar disorder (primary/contributing/non-contributing),BIPOLDIF,Cond
 D1a,I,13,Schizophrenia or other psychotic disorder (present),SCHIZOP,Conditional (e.g. skip pattern),1 or blank,Integer
 D1a,I,13a,Schizophrenia or other psychotic disorder (primary/contributing/non-contributing),SCHIZOIF,Conditional (e.g. skip pattern),1-3,Integer
 D1a,I,14,Anxiety disorder (present),ANXIET,Conditional (e.g. skip pattern),1 or blank,Integer
-D1a,I,14a,Anxiety disorder (primary/contributing/non-contributing),ANXIETIF,Conditional (e.g. skip pattern),1 or blank,Integer
+D1a,I,14a,Anxiety disorder (primary/contributing/non-contributing),ANXIETIF,Conditional (e.g. skip pattern),1-3,Integer
 D1a,I,14b,Generalized Anxiety Disorder,GENANX,Conditional (e.g. skip pattern),1 or blank,Integer
 D1a,I,14c,Panic Disorder,PANICDISDX,Conditional (e.g. skip pattern),1 or blank,Integer
 D1a,I,14d,Obsessive-compulsive disorder (OCD),OCDDX,Conditional (e.g. skip pattern),1 or blank,Integer
