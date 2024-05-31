@@ -1,5 +1,5 @@
 form_name,packet,question,var_name,missingness,conformity,data_type
-a1,I,0a. A1 Participant Demographics - Form date,FRMDATEA1,Always,mm/dd/yyyy,Date
+a1,I,0a. A1 Participant Demographics - Form date,FRMDATEA1,Always,mm/dd/yyyy or yyyy/mm/dd,Date
 a1,I,0b. A1 Participant Demographics - Examiner's initials,INITIALSA1,No,text,String
 a1,I,0c. A1 Participant Demographics - Language,LANGA1,Always,Integers 1-2,Integer
 a1,I,0d. A1 Participant Demographics - In-person or remote?,MODEA1,Always,Integers 1-2,Integer
