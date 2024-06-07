@@ -1,4 +1,4 @@
-form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+﻿form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
 a4,I,0a. A4 Participant Medications - Form date,FRMDATEA4,Condtional,mm/dd/yyyy or yyyy/mm/dd,,Date,
 a4,I,0b. A4 Participant Medications - Examiner's initials,INITIALSA4,No,text,,String,
 a4,I,0c. A4 Participant Medications - Language,LANGA4,Condtional,Integers 1-2,"1, English|2, Spanish",Integer,
