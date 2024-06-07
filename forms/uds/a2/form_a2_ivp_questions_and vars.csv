@@ -1,12 +1,19 @@
-Form,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values_ranges_characters, etc. are allowed for this field?"
-a3,I,1. What is the co-participant’s relationship to the participant?,INRELTO,Always,Integers 1-6
-a4,I,2. How long has the co-participant known the participant?,INKNOWN,Always,"0-120, 999"
-a5,I,3. Does the co-participant live with the participant?,INLIVWTH,Always,Integers 0-1
-a6,I,4. What is the primary mode of contact with the participant?,INCNTMOD,Conditional (e.g. skip pattern),Integers 1-6
-a7,I,4a. Primary mode of contact with the participant - Other (specify),INCNTMDX,Conditional (e.g. skip pattern),text
-a8,I,4a1. What is the approximate frequency of contact?,INCNTFRQ,Conditional (e.g. skip pattern),Integers 1-6
-a9,I,4a2. What is the average amount of time spent in contact with the participant during each encounter?,INCNTTIM,Conditional (e.g. skip pattern),Integers 1-5
-a10,I,5. Is there a question about the co-participant’s reliability?,INRELY,Always,Integers 0-1
-a11,I,6. Do you feel like the participant's memory is becoming worse?,INMEMWORS,Always,"Integers 0-2, 9"
-a12,I,7. About how often does the participant have trouble remembering things?,INMEMTROUB,Always,"Integers 1-5, 9"
-a13,I,"8. Compared to 10 years ago, would you say that the participant's memory is much worse, a little worse, the same, a little better, or much better?",INMEMTEN,Always,"Integers 1-5, 9"
+form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+a2,I,0a. A2 Co-Participant Demographics - Form date,FRMDATEA2,Condtional,mm/dd/yyyy or yyyy/mm/dd,,Date,
+a2,I,0b. A2 Co-Participant Demographics - Examiner's initials,INITIALSA2,No,text,,String,
+a2,I,0c. A2 Co-Participant Demographics - Language,LANGA2,Condtional,Integers 1-2,"1, English|2, Spanish",Integer,
+a2,I,"0d. A2 Co-Participant Demographics - In-person, remote, or not completed?",MODEA2,Always,Integers 1-3,"1, In-person|2, Remote|3, Not completed",Integer,
+a2,I,"0d1. If 'A2 Co-Participant Demographics' form was completed remotely, specify reason",RMREASA2,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea2]='2'
+a2,I,0d1a. What modality was used to collect this remote 'A2 Co-Participant Demographics' form?,RMMODEA2,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modea2]='2'
+a2,I,"0d2. If 'A2 Co-Participant Demographics' not submitted, specify reason",A2NOT,Condtional,Integers 94-98,"94, No co-participant|95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal",Integer,[modea2]='3'
+a2,I,1. What is the co-participant’s relationship to the participant?,INRELTO,Always,Integers 1-6,"1, Spouse, partner, or companion (include ex-spouse, ex-partner, fiancé(e), boyfriend, girlfriend)|2, Child (by blood or through marriage or adoption)|3, Sibling (by blood or through marriage or adoption)|4, Other relative (by blood or through marriage or adoption)|5, Friend, neighbor, or someone known through family, friends, work, or community (e.g., church)|6, Paid caregiver, health care provider, or clinician",Integer,
+a2,I,2. How long has the co-participant known the participant?,INKNOWN,Always,"0-120, 999","0, 0|1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|13, 13|14, 14|15, 15|16, 16|17, 17|18, 18|19, 19|20, 20|21, 21|22, 22|23, 23|24, 24|25, 25|26, 26|27, 27|28, 28|29, 29|30, 30|31, 31|32, 32|33, 33|34, 34|35, 35|36, 36|37, 37|38, 38|39, 39|40, 40|41, 41|42, 42|43, 43|44, 44|45, 45|46, 46|47, 47|48, 48|49, 49|50, 50|51, 51|52, 52|53, 53|54, 54|55, 55|56, 56|57, 57|58, 58|59, 59|60, 60|61, 61|62, 62|63, 63|64, 64|65, 65|66, 66|67, 67|68, 68|69, 69|70, 70|71, 71|72, 72|73, 73|74, 74|75, 75|76, 76|77, 77|78, 78|79, 79|80, 80|81, 81|82, 82|83, 83|84, 84|85, 85|86, 86|87, 87|88, 88|89, 89|90, 90|91, 91|92, 92|93, 93|94, 94|95, 95|96, 96|97, 97|98, 98|99, 99|100, 100|101, 101|102, 102|103, 103|104, 104|105, 105|106, 106|107, 107|108, 108|109, 109|110, 110|111, 111|112, 112|113, 113|114, 114|115, 115|116, 116|117, 117|118, 118|119, 119|120, 120|999, 999 = Unknown",Integer,
+a2,I,3. Does the co-participant live with the participant?,INLIVWTH,Always,Integers 0-1,"0, No|1, Yes",Integer,
+a2,I,4. What is the primary mode of contact with the participant?,INCNTMOD,Conditional (e.g. skip pattern),Integers 1-6,"1, In-person|2, Telephone|3, Video conferencing|4, Texting or email|5, Social media platforms|6, Other",Integer,[inlivwth] = '0'
+a2,I,4a. Primary mode of contact with the participant - Other (specify),INCNTMDX,Conditional (e.g. skip pattern),text,,String,[incntmod]='6'
+a2,I,4a1. What is the approximate frequency of contact?,INCNTFRQ,Conditional (e.g. skip pattern),Integers 1-6,"1, Daily|2, At least three times per week|3, Weekly|4, At least three times per month|5, Monthly|6, Less than once a month",Integer,[inlivwth] = '0'
+a2,I,4a2. What is the average amount of time spent in contact with the participant during each encounter?,INCNTTIM,Conditional (e.g. skip pattern),Integers 1-5,"1, Less than 5 minutes (appropriate for texting or email and may be applicable to other modes of contact as well)|2, 5-15 minutes|3, 15-30 minutes|4, 30-60 minutes|5, Longer than one hour",Integer,[inlivwth] = '0'
+a2,I,5. Is there a question about the co-participant’s reliability?,INRELY,Always,Integers 0-1,"0, No|1, Yes",Integer,
+a2,I,6. Do you feel like the participant's memory is becoming worse?,INMEMWORS,Always,"Integers 0-2, 9","0, No|1, Yes, but this does not worry me|2, Yes, and this worries me|9, Unknown",Integer,
+a2,I,7. About how often does the participant have trouble remembering things?,INMEMTROUB,Always,"Integers 1-5, 9","1, Never|2, Rarely|3, Sometimes|4, Often|5, Very Often|9, Unknown",Integer,
+a2,I,"8. Compared to 10 years ago, would you say that the participant's memory is much worse, a little worse, the same, a little better, or much better?",INMEMTEN,Always,"Integers 1-5, 9","1, Much better|2, A little better|3, The same|4, A little worse|5, Much worse|9, Unknown",Integer,
