@@ -66,7 +66,7 @@ To **modify** a document in a branch
 
 ## Forms
 
-Each form set is broken out into individual instruments for each form. 
+Each form set is broken out into individual instruments for each form.
 For instance, the Down Syndrome module has five forms and the corresponding directory structure is
 
 ```bash
@@ -97,15 +97,15 @@ To export an individual instrument in REDCap
 
    <img src="docs/images/instrument-action.png" width=650 >
 
-   and select `Download instrument ZIP`. 
-   
+   and select `Download instrument ZIP`.
+
    <img src="docs/images/instrument-download.png" width=650>
 
 This will save the downloaded file to the default location for your browser and OS settings.
 On a Mac with the default settings, the file will be unzipped and saved in your `Downloads` directory with a name corresponding to the instrument name (e.g., `Downloads/FormA1dParticipantHe_2022-05-27_0749`).
 On a Windows machine, you will likely have to unzip the file using the File Manager.
 
-In this case, to move the file into the repository 
+In this case, to move the file into the repository
 
 1. Make sure there is a directory for your instrument.
    For A1D of Down Syndrome module, this should be a directory `forms/ds/a1d`.
@@ -118,6 +118,6 @@ In this case, to move the file into the repository
 
 ## Tools
 
-NACC leadership needs to choose a license.
-Please make sure the code license is established in the repository before adding code.
+### redcap_pull
+
 

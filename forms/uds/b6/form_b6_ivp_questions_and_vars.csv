@@ -1,0 +1,25 @@
+﻿form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+b6,I,0a. B6 Behavioral Assessment: GDS - Form date,FRMDATEB6,Condtional,mm/dd/yyyy,,Date,
+b6,I,0b. B6 Behavioral Assessment: GDS - Examiner's initials,INITIALSB6,No,text,,String,
+b6,I,0c. B6 Behavioral Assessment: GDS - Language,LANGB6,Condtional,Integers 1-2,"1, English|2, Spanish",Integer,
+b6,I,"0d. B6 Behavioral Assessment: GDS - In-person, remote, or not completed?",MODEB6,Always,Integers 1-3,"1, In-person|2, Remote|3, Not completed",Integer,
+b6,I,"0d1. If 'B6 Behavioral Assessment: GDS' form was completed remotely, specify reason",RMREASB6,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb6]='2'
+b6,I,0d1a. What modality was used to collect this remote 'B6 Behavioral Assessment: GDS' form?,RMMODEB6,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb6]='2'
+b6,I,"0d2. If 'B6 Behavioral Assessment: GDS' not submitted, specify reason",B6NOT,Condtional,Integers 95-98,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal",Integer,[modeb6]='3'
+b6,I,"G1. Check this box and enter “88” below for the Total GDS Score if and only if the subject:  1.) does not attempt the GDS, or 2.) answers fewer than 12 questions.",NOGDS,Conditional,1 or blank,"1, Not able to complete the GDS",Integer,
+b6,I,1. Are you basically satisfied with your life?,SATIS,Always,"Integers 0-1, 9","0, Yes|1, No|9, Did not answer",Integer,
+b6,I,2. Have you dropped many of your activities and interests?,DROPACT,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,3. Do you feel that your life is empty?,EMPTY,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,4. Do you often get bored?,BORED,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,5. Are you in good spirits most of the time?,SPIRITS,Always,"Integers 0-1, 9","0, Yes|1, No|9, Did not answer",Integer,
+b6,I,6. Are you afraid that something bad is going to happen to you?,AFRAID,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,7. Do you feel happy most of the time?,HAPPY,Always,"Integers 0-1, 9","0, Yes|1, No|9, Did not answer",Integer,
+b6,I,8. Do you often feel helpless?,HELPLESS,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,"9. Do you prefer to stay at home, rather than going out and doing new things?",STAYHOME,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,10. Do you feel you have more problems with memory than most?,MEMPROB,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,11. Do you think it is wonderful to be alive now?,WONDRFUL,Always,"Integers 0-1, 9","0, Yes|1, No|9, Did not answer",Integer,
+b6,I,12. Do you feel pretty worthless the way you are now?,WRTHLESS,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,13. Do you feel full of energy?,ENERGY,Always,"Integers 0-1, 9","0, Yes|1, No|9, Did not answer",Integer,
+b6,I,14. Do you feel that your situation is hopeless?,HOPELESS,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,15. Do you think that most people are better off than you are?,BETTER,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,
+b6,I,16. Sum all checked answers for a Total GDS Score ,GDS,Always,"Integers 0-15, 88","0-15, 88 = Did not complete",Integer,
