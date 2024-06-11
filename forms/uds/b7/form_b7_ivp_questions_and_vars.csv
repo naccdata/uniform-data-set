@@ -1,4 +1,4 @@
-﻿form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 b7,I,0a. B7 Functional Assessment: FAS - Form date,FRMDATEB7,Condtional,mm/dd/yyyy,,Date,
 b7,I,0b. B7 Functional Assessment: FAS - Examiner's initials,INITIALSB7,No,text,,String,
 b7,I,0c. B7 Functional Assessment: FAS - Language,LANGB7,Condtional,Integers 1-2,"1, English|2, Spanish",Integer,

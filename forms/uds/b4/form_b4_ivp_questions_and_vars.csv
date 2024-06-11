@@ -1,4 +1,4 @@
-﻿form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 b4,I,0a. B4 Global Staging-CDR: Clinical Dementia Rating - Form date,FRMDATEB4,Always,mm/dd/yyyy,,Date,
 b4,I,0b. B4 Global Staging-CDR: Clinical Dementia Rating - Examiner's initials,INITIALSB4,No,text,,String,
 b4,I,0c. B4 Global Staging-CDR: Clinical Dementia Rating - Language,LANGB4,Always,Integers 1-2,"1, English|2, Spanish",Integer,

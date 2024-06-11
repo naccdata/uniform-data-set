@@ -1,4 +1,4 @@
-﻿form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 d1a,I,0a. D1a Clinical Diagnosis - Form date,FRMDATED1A,Always,mm/dd/yyyy,,Date,
 d1a,I,0b. D1a Clinical Diagnosis - Examiner's initials,INITIALSD1A,No,text,,String,
 d1a,I,0c. D1a Clinical Diagnosis - Language,LANGD1A,Always,Integers 1-2,"1, English|2, Spanish",Integer,

@@ -1,4 +1,4 @@
-﻿form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 a2,I,0a. A2 Co-Participant Demographics - Form date,FRMDATEA2,Condtional,mm/dd/yyyy or yyyy/mm/dd,,Date,
 a2,I,0b. A2 Co-Participant Demographics - Examiner's initials,INITIALSA2,No,text,,String,
 a2,I,0c. A2 Co-Participant Demographics - Language,LANGA2,Condtional,Integers 1-2,"1, English|2, Spanish",Integer,

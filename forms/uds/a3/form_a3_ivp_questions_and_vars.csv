@@ -1,4 +1,4 @@
-﻿form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 a3,I,0a. A3 Participant Family History - Form date,FRMDATEA3,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 a3,I,0b. A3 Participant Family History - Examiner's initials,INITIALSA3,No,text,,String,
 a3,I,0c. A3 Participant Family History - Language,LANGA3,Always,Integers 1-2,"1, English|2, Spanish",Integer,

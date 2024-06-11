@@ -1,4 +1,4 @@
-﻿form_name,packet,question,var_name,missingness,conformity,resonse_labels,data_type,branching_logic
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 header,I,PTID,PTID,Yes,Any text,"Follow your Center’s Patient ID scheme; use same ID as in MDS, if subject is enrolled in MDS.",String,
 header,I,ADC name,ADCID,Yes,Integer,Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids,Integer,
 header,I,ADC Visit Number,VISITNUM,Yes,Any text,Can be determined by Center. The Center may use its existing visit number scheme. It is not required to start with 1.,String,
