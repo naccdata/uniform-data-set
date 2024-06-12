@@ -1,57 +1,62 @@
-Form ,Packet,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values/ranges/characters, etc. are allowed for this field?"
-B3,IVP,UPDRS is normal,PDNORMAL,No,0-1
-B3,IVP,1. Speech,SPEECH,No,"0-4, 8"
-B3,IVP,1a. Speech untestable (specify),SPEECHX,No,
-B3,IVP,2. Facial expression,FACEXP,No,"0-4, 8"
-B3,IVP,2a. Facial expression untestable (specify),FACEXPX,No,
-B3,IVP,"3a. Tremor at rest - face, lips, chin",TRESTFAC,No,"0-4, 8"
-B3,IVP,"3a1. Tremor at rest - face, lips, chin untestable (specify)",TRESTFAX,No,
-B3,IVP,3b. Tremor at rest - right hand,TRESTRHD,No,"0-4, 8"
-B3,IVP,3b1. Tremor at rest - right hand untestable (specify),TRESTRHX,No,
-B3,IVP,3c. Tremor at rest - left hand,TRESTLHD,No,"0-4, 8"
-B3,IVP,3c1. Tremor at rest - left hand untestable (specify),TRESTLHX,No,
-B3,IVP,3d. Tremor at rest - right foot,TRESTRFT,No,"0-4, 8"
-B3,IVP,3d1. Tremor at rest - right foot untestable (specify),TRESTRFX,No,
-B3,IVP,3e. Tremor at rest - left foot,TRESTLFT,No,"0-4, 8"
-B3,IVP,3e1. Tremor at rest - left foot untestable (specify),TRESTLFX,No,
-B3,IVP,4a. Action or postural tremor of hands - right hand,TRACTRHD,No,"0-4, 8"
-B3,IVP,4a1. Action or postural tremor of hands - right hand untestable (specify),TRACTRHX,No,
-B3,IVP,4b. Action or postural tremor of hands - left hand,TRACTLHD,No,"0-4, 8"
-B3,IVP,4b1. Action or postural tremor of hands - left hand untestable (specify),TRACTLHX,No,
-B3,IVP,5a. Rigidity - neck,RIGDNECK,No,"0-4, 8"
-B3,IVP,5a1. Rigidity - neck untestable (specify),RIGDNEX,No,
-B3,IVP,5b. Rigidity - right upper extremity ,RIGDUPRT,No,"0-4, 8"
-B3,IVP,5b1. Rigidity - right upper extremity untestable (specify),RIGDUPRX,No,
-B3,IVP,5c. Rigidity - left upper extremity ,RIGDUPLF,No,"0-4, 8"
-B3,IVP,5c1. Rigidity - left upper extremity untestable (specify),RIGDUPLX,No,
-B3,IVP,5d. Rigidity - right lower extremity,RIGDLORT,No,"0-4, 8"
-B3,IVP,5d1. Rigidity - right lower extremity untestable (specify),RIGDLORX,No,
-B3,IVP,5e. Rigidity - left lower extremity,RIGDLOLF,No,"0-4, 8"
-B3,IVP,5e1. Rigidity - left lower extremity untestable (specify),RIGDLOLX,No,
-B3,IVP,6a. Finger taps - right hand,TAPSRT,No,"0-4, 8"
-B3,IVP,6a1. Finger taps - right hand untestable (specify),TAPSRTX,No,
-B3,IVP,6b. Finger taps - left hand,TAPSLF,No,"0-4, 8"
-B3,IVP,6b1. Finger taps - left hand untestable (specify),TAPSLFX,No,
-B3,IVP,7a. Hand movements - right hand,HANDMOVR,No,"0-4, 8"
-B3,IVP,7a1. Hand movements - right hand untestable (specify),HANDMVRX,No,
-B3,IVP,7b. Hand movements - left hand,HANDMOVL,No,"0-4, 8"
-B3,IVP,7b1. Hand movements - left hand untestable (specify),HANDMVLX,No,
-B3,IVP,8a. Rapid alternating movement of hands - right hand,HANDALTR,No,"0-4, 8"
-B3,IVP,8a1. Rapid alternating movement of hands - right hand untestable (specify),HANDATRX,No,
-B3,IVP,8b. Rapid alternating movement of hands - left hand ,HANDALTL,No,"0-4, 8"
-B3,IVP,8b1. Rapid alternating movements of hands - left hand untestable (specify),HANDATLX,No,
-B3,IVP,9a. Leg agility - right leg,LEGRT,No,"0-4, 8"
-B3,IVP,9a1. Leg agility - right leg untestable (specify),LEGRTX,No,
-B3,IVP,9b. Leg agility - left leg,LEGLF,No,"0-4, 8"
-B3,IVP,9b1. Leg agility - left leg untestable (specify),LEGLFX,No,
-B3,IVP,10. Arising from chair,ARISING,No,"0-4, 8"
-B3,IVP,10a. Arising from chair untestable (specify),ARISINGX,No,
-B3,IVP,11. Posture,POSTURE,No,"0-4, 8"
-B3,IVP,11a. Posture untestable (specify),POSTUREX,No,
-B3,IVP,12. Gait,GAIT,No,"0-4, 8"
-B3,IVP,12a. Gait untestable (specify),GAITX,No,
-B3,IVP,13. Posture stability,POSSTAB,No,"0-4, 8"
-B3,IVP,13a. Posture stability untestable (specify),POSSTABX,No,
-B3,IVP,14. Body bradykinesia and hypokinesia,BRADYKIN,No,"0-4, 8"
-B3,IVP,14a. Body bradykinesia and hypokinesia untestable (specify),BRADYKIX,No,
-B3,IVP,15. Total UPDRS Score ,TOTALUPDRS,No,"0-108, 888"
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+b3,I,0a. B3 UPDRS-Parkinson's - Form date,FRMDATEB3,Condtional,mm/dd/yyyy,,Date,
+b3,I,0b. B3 UPDRS-Parkinson's - Examiner's initials,INITIALSB3,No,text,,String,
+b3,I,0c. B3 UPDRS-Parkinson's - Language,LANGB3,Condtional,Integers 1-2,"1, English|2, Spanish",Integer,
+b3,I,0d. B3 UPDRS-Parkinson's - In-person or not completed?,MODEB3,Always,"Integers 1,3","1, In-person|3, Not completed",Integer,
+b3,I,"0d1. If 'B3 UPDRS-Parkinson's' not submitted, specify reason",B3NOT,Condtional,Integers 94-98,"94, Remote visit|95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal",Integer,"[modeb3]=""3"""
+b3,I,UPDRS is normal,PDNORMAL,No,1 or blank,,Integer,
+b3,I,1. Speech,SPEECH,Conditional,"0-4, 8","0, Normal|1, Slight loss of expression, diction and/or volume|2, Monotone, slurred but understandable; moderately impaired.|3, Marked impairment, difficult to understand|4, Unintelligible|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,1a. Speech untestable (specify),SPEECHX,Conditional,text,,String,[speech] = '8'
+b3,I,2. Facial expression,FACEXP,Conditional,"0-4, 8","0, Normal|1, Minimal hypomimia, could be normal ""poker face""|2, Slight but definitely abnormal diminution of facial expression|3, Moderate hypomimia; lips parted some of the time|4, Masked or fixed facies with severe or complete loss of facial expression; lips parted 1/4 inches or more|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,2a. Facial expression untestable (specify),FACEXPX,Conditional,text,,String,[facexp] = '8'
+b3,I,"3a. Tremor at rest - face, lips, chin",TRESTFAC,Conditional,"0-4, 8","0, Absent|1, Slight and infrequently present|2, Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present|3, Moderate in amplitude and present most of the time|4, Marked in amplitude and present most of the time|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,"3a1. Tremor at rest - face, lips, chin untestable (specify)",TRESTFAX,Conditional,text,,String,[trestfac] = '8'
+b3,I,3b. Tremor at rest - right hand,TRESTRHD,Conditional,"0-4, 8","0, Absent|1, Slight and infrequently present|2, Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present|3, Moderate in amplitude and present most of the time|4, Marked in amplitude and present most of the time|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,3b1. Tremor at rest - right hand untestable (specify),TRESTRHX,Conditional,text,,String,[trestrhd] = '8'
+b3,I,3c. Tremor at rest - left hand,TRESTLHD,Conditional,"0-4, 8","0, Absent|1, Slight and infrequently present|2, Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present|3, Moderate in amplitude and present most of the time|4, Marked in amplitude and present most of the time|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,3c1. Tremor at rest - left hand untestable (specify),TRESTLHX,Conditional,text,,String,[trestlhd] = '8'
+b3,I,3d. Tremor at rest - right foot,TRESTRFT,Conditional,"0-4, 8","0, Absent|1, Slight and infrequently present|2, Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present|3, Moderate in amplitude and present most of the time|4, Marked in amplitude and present most of the time|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,3d1. Tremor at rest - right foot untestable (specify),TRESTRFX,Conditional,text,,String,[trestrft] = '8'
+b3,I,3e. Tremor at rest - left foot,TRESTLFT,Conditional,"0-4, 8","0, Absent|1, Slight and infrequently present|2, Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present|3, Moderate in amplitude and present most of the time|4, Marked in amplitude and present most of the time|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,3e1. Tremor at rest - left foot untestable (specify),TRESTLFX,Conditional,text,,String,[trestlft] = '8'
+b3,I,4a. Action or postural tremor of hands - right hand,TRACTRHD,Conditional,"0-4, 8","0, Absent|1, Slight; present with action|2, Moderate in amplitude, present with action|3, Moderate in amplitude with posture holding as well as action|4, Marked in amplitude; interferes with feeding|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,4a1. Action or postural tremor of hands - right hand untestable (specify),TRACTRHX,Conditional,text,,String,[tractrhd] = '8'
+b3,I,4b. Action or postural tremor of hands - left hand,TRACTLHD,Conditional,"0-4, 8","0, Absent|1, Slight; present with action|2, Moderate in amplitude, present with action|3, Moderate in amplitude with posture holding as well as action|4, Marked in amplitude; interferes with feeding|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,4b1. Action or postural tremor of hands - left hand untestable (specify),TRACTLHX,Conditional,text,,String,[tractlhd] = '8'
+b3,I,5a. Rigidity - neck,RIGDNECK,Conditional,"0-4, 8","0, Absent|1, Slight or detectable only when activated by mirror or other movements|2, Mild to moderate|3, Marked, but full range of motion easily achieved|4, Severe; range of motion achieved with difficulty|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,5a1. Rigidity - neck untestable (specify),RIGDNEX,Conditional,text,,String,[rigdneck] = '8'
+b3,I,5b. Rigidity - right upper extremity ,RIGDUPRT,Conditional,"0-4, 8","0, Absent|1, Slight or detectable only when activated by mirror or other movements|2, Mild to moderate|3, Marked, but full range of motion easily achieved|4, Severe; range of motion achieved with difficulty|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,5b1. Rigidity - right upper extremity untestable (specify),RIGDUPRX,Conditional,text,,String,[rigduprt] = '8'
+b3,I,5c. Rigidity - left upper extremity ,RIGDUPLF,Conditional,"0-4, 8","0, Absent|1, Slight or detectable only when activated by mirror or other movements|2, Mild to moderate|3, Marked, but full range of motion easily achieved|4, Severe; range of motion achieved with difficulty|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,5c1. Rigidity - left upper extremity untestable (specify),RIGDUPLX,Conditional,text,,String,[rigduplf] = '8'
+b3,I,5d. Rigidity - right lower extremity,RIGDLORT,Conditional,"0-4, 8","0, Absent|1, Slight or detectable only when activated by mirror or other movements|2, Mild to moderate|3, Marked, but full range of motion easily achieved|4, Severe; range of motion achieved with difficulty|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,5d1. Rigidity - right lower extremity untestable (specify),RIGDLORX,Conditional,text,,String,[rigdlort] = '8'
+b3,I,5e. Rigidity - left lower extremity,RIGDLOLF,Conditional,"0-4, 8","0, Absent|1, Slight or detectable only when activated by mirror or other movements|2, Mild to moderate|3, Marked, but full range of motion easily achieved|4, Severe; range of motion achieved with difficulty|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,5e1. Rigidity - left lower extremity untestable (specify),RIGDLOLX,Conditional,text,,String,[rigdlolf] = '8'
+b3,I,6a. Finger taps - right hand,TAPSRT,Conditional,"0-4, 8","0, Normal|1, Mild slowing and/or reduction in amplitude|2, Moderately impaired; definite and early fatiguing; may have occasional arrests in movement|3, Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement|4, Can barely perform the task.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,6a1. Finger taps - right hand untestable (specify),TAPSRTX,Conditional,text,,String,[tapsrt] = '8'
+b3,I,6b. Finger taps - left hand,TAPSLF,Conditional,"0-4, 8","0, Normal|1, Mild slowing and/or reduction in amplitude|2, Moderately impaired; definite and early fatiguing; may have occasional arrests in movement|3, Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement|4, Can barely perform the task.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,6b1. Finger taps - left hand untestable (specify),TAPSLFX,Conditional,text,,String,[tapslf] = '8'
+b3,I,7a. Hand movements - right hand,HANDMOVR,Conditional,"0-4, 8","0, Normal|1, Mild slowing and/or reduction in amplitude|2, Moderately impaired; definite and early fatiguing; may have occasional arrests in movement|3, Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement|4, Can barely perform the task.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,7a1. Hand movements - right hand untestable (specify),HANDMVRX,Conditional,text,,String,[handmovr] = '8'
+b3,I,7b. Hand movements - left hand,HANDMOVL,Conditional,"0-4, 8","0, Normal|1, Mild slowing and/or reduction in amplitude|2, Moderately impaired; definite and early fatiguing; may have occasional arrests in movement|3, Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement|4, Can barely perform the task.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,7b1. Hand movements - left hand untestable (specify),HANDMVLX,Conditional,text,,String,[handmovl] = '8'
+b3,I,8a. Rapid alternating movement of hands - right hand,HANDALTR,Conditional,"0-4, 8","0, Normal|1, Mild slowing and/or reduction in amplitude|2, Moderately impaired; definite and early fatiguing; may have occasional arrests in movement|3, Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement|4, Can barely perform the task.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,8a1. Rapid alternating movement of hands - right hand untestable (specify),HANDATRX,Conditional,text,,String,[handaltr] = '8'
+b3,I,8b. Rapid alternating movement of hands - left hand ,HANDALTL,Conditional,"0-4, 8","0, Normal|1, Mild slowing and/or reduction in amplitude|2, Moderately impaired; definite and early fatiguing; may have occasional arrests in movement|3, Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement|4, Can barely perform the task.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,8b1. Rapid alternating movements of hands - left hand untestable (specify),HANDATLX,Conditional,text,,String,[handaltl] = '8'
+b3,I,9a. Leg agility - right leg,LEGRT,Conditional,"0-4, 8","0, Normal|1, Mild slowing and/or reduction in amplitude|2, Moderately impaired; definite and early fatiguing; may have occasional arrests in movement|3, Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement|4, Can barely perform the task.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,9a1. Leg agility - right leg untestable (specify),LEGRTX,Conditional,text,,String,[legrt] = '8'
+b3,I,9b. Leg agility - left leg,LEGLF,Conditional,"0-4, 8","0, Normal|1, Mild slowing and/or reduction in amplitude|2, Moderately impaired; definite and early fatiguing; may have occasional arrests in movement|3, Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement|4, Can barely perform the task.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,9b1. Leg agility - left leg untestable (specify),LEGLFX,Conditional,text,,String,[leglf] = '8'
+b3,I,10. Arising from chair,ARISING,Conditional,"0-4, 8","0, Normal|1, Slow; or may need more than one attempt|2, Pushes self up from arms of seat|3, Tends to fall back and may have to try more than one time, but can get up without help.|4, Unable to arise without help|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,10a. Arising from chair untestable (specify),ARISINGX,Conditional,text,,String,[arising] = '8'
+b3,I,11. Posture,POSTURE,Conditional,"0-4, 8","0, Normal|1, Not quite erect, slightly stooped posture; could be normal for older person.|2, Moderately stooped posture, definitely abnormal; can be slightly leaning to one side.|3, Severely stooped posture with kyphosis; can be moderately leaning to one side.|4, Marked flexion with extreme abnormality of posture.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,11a. Posture untestable (specify),POSTUREX,Conditional,text,,String,[posture] = '8'
+b3,I,12. Gait,GAIT,Conditional,"0-4, 8","0, Normal|1, Walks slowly; may shuffle with short steps, but no festination (hastening steps) or propulsion.|2, Walks with difficulty, but requires little or no assistance; may have some festination, short steps, or propulsion.|3, Severe disturbance of gait requiring assistance.|4, Cannot walk at all, even with assistance.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,12a. Gait untestable (specify),GAITX,Conditional,text,,String,[gait] = '8'
+b3,I,13. Posture stability,POSSTAB,Conditional,"0-4, 8","0, Normal erect|1, Retropulsion, but recovers unaided.|2, Absence of posturnal response; would fall if not caught by examiner.|3, Very unstable, tends to lose balance spontaneously.|4, Unable to stand without assistance.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,13a. Posture stability untestable (specify),POSSTABX,Conditional,text,,String,[posstab] = '8'
+b3,I,14. Body bradykinesia and hypokinesia,BRADYKIN,Conditional,"0-4, 8","0, None|1, Minimal slowness, giving movement a deliberate character; could be normal for some persons; possibly reduced amplitude|2, Mild degree of slowness and poverty or movement which is definitely abnormal. Alternatively, some reduced amplitude.|3, Moderate slowness, poverty or small amplitude of movement|4, Marked slowness, poverty or small amplitude of movement.|8, Untestable",Integer,[pdnormal] ne '1'
+b3,I,14a. Body bradykinesia and hypokinesia untestable (specify),BRADYKIX,Conditional,text,,String,[bradykin] = '8'
+b3,I,15. Total UPDRS Score ,TOTALUPDRS,Conditional,"0-108, 888","0-108, 888 = One or more items untestable",Integer,
