@@ -34,7 +34,10 @@ def main(root_directory, output_filename):
                     # Remove newline characters from all values
                     df = df.map(clean_newlines)
                     # Append the data to the combined DataFrame
-                    combined_df = pd.concat([combined_df, df], ignore_index=True,)
+                    if 'header' in file:
+                        combined_df = pd.concat([df, combined_df], ignore_index=True)
+                    else:
+                        combined_df = pd.concat([combined_df, df], ignore_index=True)
                 except Exception as e:
                     print(f'File {file} threw an exception: {e}')
 
