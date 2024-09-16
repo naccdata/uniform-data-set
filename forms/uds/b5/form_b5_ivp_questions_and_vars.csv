@@ -1,7 +1,7 @@
-form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-b5,I,0a. B5 Behavioral Assessment: NPI-Q - Form date,FRMDATEB5,Condtional,mm/dd/yyyy,,Date,
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+b5,I,0a. B5 Behavioral Assessment: NPI-Q - Form date,FRMDATEB5,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b5,I,0b. B5 Behavioral Assessment: NPI-Q - Examiner's initials,INITIALSB5,No,text,,String,
-b5,I,0c. B5 Behavioral Assessment: NPI-Q - Language,LANGB5,Condtional,Integers 1-2,"1, English|2, Spanish",Integer,
+b5,I,0c. B5 Behavioral Assessment: NPI-Q - Language,LANGB5,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 b5,I,"0d. B5 Behavioral Assessment: NPI-Q - In-person, remote, or not completed?",MODEB5,Always,Integers 1-3,"1, In-person|2, Remote|3, Not completed",Integer,
 b5,I,"0d1. If 'B5 Behavioral Assessment: NPI-Q' form was completed remotely, specify reason",RMREASB5,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb5]='2'
 b5,I,0d1a. What modality was used to collect this remote 'B5 Behavioral Assessment: NPI-Q' form?,RMMODEB5,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb5]='2'
