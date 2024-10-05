@@ -1,7 +1,7 @@
-form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-b7,I,0a. B7 Functional Assessment: FAS - Form date,FRMDATEB7,Condtional,mm/dd/yyyy,,Date,
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+b7,I,0a. B7 Functional Assessment: FAS - Form date,FRMDATEB7,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b7,I,0b. B7 Functional Assessment: FAS - Examiner's initials,INITIALSB7,No,text,,String,
-b7,I,0c. B7 Functional Assessment: FAS - Language,LANGB7,Condtional,Integers 1-2,"1, English|2, Spanish",Integer,
+b7,I,0c. B7 Functional Assessment: FAS - Language,LANGB7,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 b7,I,"0d. B7 Functional Assessment: FAS - In-person, remote, or not completed?",MODEB7,Always,Integers 1-3,"1, In-person|2, Remote|3, Not completed",Integer,
 b7,I,"0d1. If 'B7 Functional Assessment: FAS'  form was completed remotely, specify reason",RMREASB7,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb7]='2'
 b7,I,0d1a. What modality was used to collect this remote 'B7 Functional Assessment: FAS' form?,RMMODEB7,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb7]='2'
