@@ -1,0 +1,27 @@
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+c5f,IF,0a. C5F Interpersonal Reactivity Index - Form date,FRMDATEC5F,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+c5f,IF,0b. C5F Interpersonal Reactivity Index - Examiner's initials,INITIALSC5F,No,text,,String,
+c5f,IF,0c. C5F Interpersonal Reactivity Index - Language,LANGAC5F,Always,Integers 1-2,"1, English|2, Spanish",Integer,
+c5f,IF,0d. C5F Interpersonal Reactivity Index - Submitted?,MODEC5F,Always,Integers 0-1,"0, Not completed | 1, In-person",Integer,
+c5f,IF,"0d1. If 'C5F Interpersonal Reactivity Index' not submitted, specify reason",C5FNOT,Conditional,Integers 95-99,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal|99, Unknown or inadequate information",Integer,[modec5f]='0'
+c5f,IF,0. This questionnaire was completed,FTDCPC5F,Always,Integers 0-2,"0 = Independently by informant, as described in Instructions to the center | 1 = Via in-person interview of informant by clinic staff | 2 = Via telephone interview of informant by clinic staff",Integer,
+c5f,IF,0a. Sex of informant,FTDINSEX,Always,Integers 1-2,1 = Male | 2 = Female,Integer,
+c5f,IF,0b1. Informant’s month of birth,FTDINFMO,Always,Integers 1-12,,Integer,
+c5f,IF,0b2. Informant’s year of birth,FTDINFYR,Always,Integers 1900-1990,,Integer,
+c5f,IF,0c. Informant’s relationship to subject,FTDINFRE,Always,Integers 1-6,"1 = Spouse or spouse equivalent | 2 = Child | 3 = Daughter- or son-in law |4 = Parent | 5 = Sibling | 6 = Other (other relative, friend, neighbor, paid caregiver)",Integer,
+c5f,IF,"1. The subject shows tender, concerned feelings for people less fortunate than him/her",FTDFEEL,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,"2. The subject sometimes finds it difficult to see things from the ""other guy’s"" point of view.",FTDDIFF,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,3. Sometimes the subject does NOT feel very sorry for other people when they are having problems,FTDSORR,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,4. The subject tries to look at everybody’s side of a disagreement before he/she makes a decision,FTDSIDE,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,"5. If the subject sees somebody being taken advantage of, the subject feels kind of protective towards him/her",FTDADVAN,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,6. The subject is likely to try to understand others better by imagining how things look from their perspective,FTDIMAG,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,7. Other people’s misfortunes do NOT usually disturb the subject a great deal,FTDMISF,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,"8. If the subject is sure he/she is right about something, he/she doesn’t waste much time listening to other people’s arguments",FTDWASTE,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,"9. If the subject sees someone being treated unfairly, the subject doesn’t feel much pity for him/her",FTDPITY,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,10. The subject is often quite touched by things he/she sees happen,FTDQTOUC,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,11. The subject believes that there are two sides to every question and tries to look at both of them,FTDSIDES,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,12. I would describe the subject as a pretty soft-hearted person,FTDSOFTH,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,"13. If the subject is upset at someone, the subject usually tries to put him/herself in ""the other person’s shoes"" for a while",FTDUPSET,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,"14. Before criticizing me, the subject is likely to imagine how he/she would feel if he/she were in my place",FTDCRITI,No,Integers 1-5,1 – 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
+c5f,IF,15. Empathic Concern Score (EC),FTDIRIEC,Always,"Integers 7-35, and 88",7-35 | 88 = Some questions were not answered,Integer,
+c5f,IF,16. Perspective-taking Score (PT),FTDIRIPT,Always,"Integers 7-35, and 88",7-35 | 88 = Some questions were not answered,Integer,
