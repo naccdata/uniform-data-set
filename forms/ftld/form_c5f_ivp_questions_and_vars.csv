@@ -1,7 +1,7 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 c5f,IF,0a. C5F Interpersonal Reactivity Index - Form date,FRMDATEC5F,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 c5f,IF,0b. C5F Interpersonal Reactivity Index - Examiner's initials,INITIALSC5F,No,text,,String,
-c5f,IF,0c. C5F Interpersonal Reactivity Index - Language,LANGAC5F,Always,Integers 1-2,"1, English|2, Spanish",Integer,
+c5f,IF,0c. C5F Interpersonal Reactivity Index - Language,LANGC5F,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 c5f,IF,0d. C5F Interpersonal Reactivity Index - Submitted?,MODEC5F,Always,Integers 0-1,"0, Not completed | 1, In-person",Integer,
 c5f,IF,"0d1. If 'C5F Interpersonal Reactivity Index' not submitted, specify reason",C5FNOT,Conditional,Integers 95-99,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal|99, Unknown or inadequate information",Integer,[modec5f]='0'
 c5f,IF,0. This questionnaire was completed,FTDCPC5F,Always,Integers 0-2,"0 = Independently by informant, as described in Instructions to the center | 1 = Via in-person interview of informant by clinic staff | 2 = Via telephone interview of informant by clinic staff",Integer,
