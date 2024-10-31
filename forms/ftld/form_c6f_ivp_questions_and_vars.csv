@@ -1,7 +1,7 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 c6f,IF,0a. C6F Revised Self-monitoring Scale - Form date,FRMDATEC6F,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 c6f,IF,0b. C6F Revised Self-monitoring Scale - Examiner's initials,INITIALSC6F,No,text,,String,
-c6f,IF,0c. C6F Revised Self-monitoring Scale - Language,LANGAC6F,Always,Integers 1-2,"1, English|2, Spanish",Integer,
+c6f,IF,0c. C6F Revised Self-monitoring Scale - Language,LANGC6F,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 c6f,IF,0d. C6F Revised Self-monitoring Scale - Submitted?,MODEC6F,Always,Integers 0-1,"0, Not completed | 1, In-person",Integer,
 c6f,IF,"0d1. If 'C6F Revised Self-monitoring Scale' not submitted, specify reason",C6FNOT,Conditional,Integers 95-99,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal|99, Unknown or inadequate information",Integer,[modec6f]='0'
 c6f,IF,0. How was this questionnaire was completed,FTDCPC6F,Always,Integers 0-2,"0 = Independently by informant, as described in Instructions to the center | 1 = Via in-person interview of informant by clinic staff | 2 = Via telephone interview of informant by clinic staff",Integer,
