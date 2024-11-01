@@ -1,0 +1,52 @@
+error_code,error_no,error_type,form_name,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
+enrl-m-001,001,Error,enrl,ADCID,Missingness,ADCID must be present,ADCID cannot be blank,Header variable ADCID cannot be blank,IF ADCID=blank ,,,Yes,
+enrl-c-002,002,Error,enrl,ADCID,Conformity,ADCID conforms,ADCID must be a valid code in list_of_adcids,Header variable ADCID must be a valid code in list_of_adcids,IF ADCID is not in list_of_adcids,,,No,
+enrl-m-003,003,Error,enrl,PTID,Missingness,PTID must be present, PTID cannot be blank,Header variable PTID cannot be blank,IF PTID=blank,,,Yes,
+enrl-m-004,004,Error,enrl,FRMDATE_ENRL,Missingness,FRMDATE_ENRL must be present,FRMDATE_ENRL cannot be blank,Header variable FRMDATE_ENRL cannot be blank,IF FRMDATE_ENRL=blank,,,Yes,
+enrl-c-005,005,Error,enrl,FRMDATE_ENRL,Conformity,FRMDATE_ENRL conforms,FRMDATE_ENRL must be in mm-dd-yyyy or yyyy-mm-dd format,Header variable FRMDATE_ENRL must be in mm-dd-yyyy or yyyy-mm-dd format,IF FRMDATE_ENRL not in (mm-dd-yyyy or yyyy-mm-dd),,,Yes,
+enrl-m-006,006,Error,enrl,ENRLTYPE,Missingness,ENRLTYPE must be present,ENRLTYPE cannot be blank,Q1. ENRLTYPE (Assign NACCID or transfer?) cannot be blank,IF ENRLTYPE=blank,,,Yes,
+enrl-c-007,007,Error,enrl,ENRLTYPE,Conformity,ENRLTYPE conforms,ENRLTYPE must be an integer between 1 and 2,Q1. ENRLTYPE (Assign NACCID or transfer?) must be an integer between 1 and 2,IF ENRLTYPE<1 or ENRLTYPE>2,,,Yes,
+enrl-m-008,008,Error,enrl,ENRLBIRTHMO,Missingness,ENRLBIRTHMO must be present,ENRLBIRTHMO cannot be blank,Q2a. ENRLBIRTHMO (birth month) cannot be blank,IF ENRLBIRTHMO=blank,,,Yes,
+enrl-c-009,009,Error,enrl,ENRLBIRTHMO,Conformity,ENRLBIRTHMO conforms,ENRLBIRTHMO must be between 1 and 12,Q2a. ENRLBIRTHMO (birth month) must be between 1 and 12,IF ENRLBIRTHMO <1 or ENRLBIRTHMO>12,,,Yes,
+enrl-m-010,010,Error,enrl,ENRLBIRTHYR,Missingness,ENRLBIRTHYR must be present,ENRLBIRTHYR cannot be blank,Q2b. ENRLBIRTHYR (birth year) cannot be blank,IF ENRLBIRTHYR=blank,,,Yes,
+enrl-c-011,011,Error,enrl,ENRLBIRTHYR,Conformity,ENRLBIRTHYR conforms,ENRLBIRTHYR must be between 1850 and current year minus 15,Q2b. ENRLBIRTHYR (birth year) must be between 1850 and current year minus 15,IF ENRLBIRTHYR<1850 or ENRLBIRTHYR>current year minus 15,,,Yes,
+enrl-m-012,012,Error,enrl,ENRLEDUC,Missingness,ENRLEDUC must be present,ENRLEDUC cannot be blank,Q3. ENRLEDUC (years of education) cannot be blank,IF ENRLEDUC=blank,,,Yes,
+enrl-c-013,013,Error,enrl,ENRLEDUC,Conformity,ENRLEDUC conforms,"ENRLEDUC must be between 0 and 36, or 99 ","Q3. ENRLEDUC (years of education) must be between 0 and 36, or 99",IF ENRLEDUC<0 or (ENRLEDUC>36 and ENRLEDUC is not 99),,,Yes,
+enrl-c-014,014,Error,enrl,ENRLGENMAN,Conformity,ENRLGENMAN conforms,ENRLGENMAN must be blank or 1,Q4a. ENRLGENMAN (gender man) must be blank or 1,IF ENRLGENMAN is not blank or ENRLGENMAN  is not 1,,,Yes,
+enrl-c-015,015,Error,enrl,ENRLGENWOMAN,Conformity,ENRLGENWOMAN conforms,ENRLGENWOMAN must be blank or 1,Q4b. ENRLGENWOMAN (gender woman) must be blank or 1,IF ENRLGENWOMAN is not blank or ENRLGENWOMAN  is not 1,,,Yes,
+enrl-c-016,016,Error,enrl,ENRLGENTRMAN,Conformity,ENRLGENTRMAN conforms,ENRLGENTRMAN must be blank or 1,Q4c. ENRLGENTRMAN (gender transman) must be blank or 1,IF ENRLGENTRMAN is not blank or ENRLGENTRMAN  is not 1,,,Yes,
+enrl-c-017,017,Error,enrl,ENRLGENTRWOMAN,Conformity,ENRLGENTRWOMAN conforms,ENRLGENTRWOMAN must be blank or 1,Q4d. ENRLGENTRWOMAN (gender transwoman) must be blank or 1,IF ENRLGENTRWOMAN is not blank or ENRLGENTRWOMAN  is not 1,,,Yes,
+enrl-c-018,018,Error,enrl,ENRLGENNONBI,Conformity,ENRLGENNONBI conforms,ENRLGENNONBI must be blank or 1,Q4e. ENRLGENNONBI (gender nonbinary) must be blank or 1,IF ENRLGENNONBI is not blank or ENRLGENNONBI  is not 1,,,Yes,
+enrl-c-019,019,Error,enrl,ENRLGENTWOSPIR,Conformity,ENRLGENTWOSPIR conforms,ENRLGENTWOSPIR must be blank or 1,Q4f. ENRLGENTWOSPIR (gender two spirit) must be blank or 1,IF ENRLGENTWOSPIR is not blank or ENRLGENTWOSPIR  is not 1,,,Yes,
+enrl-c-020,020,Error,enrl,ENRLGENOTH,Conformity,ENRLGENOTH conforms,ENRLGENOTH must be blank or 1,Q4g. ENRLGENOTH (gender other) must be blank or 1,IF ENRLGENOTH is not blank or ENRLGENOTH  is not 1,,,Yes,
+enrl-m-021,021,Error,enrl,ENRLGENOTHX,Missingness,ENRLGENOTHX conditionally present,If ENRLGENOTH is 1 then ENRLGENOTHX cannot be blank,If Q4g. ENRLGENOTH (gender other) is 1 then Q4g1. ENRLGENOTHX (gender other specify) cannot be blank,IF ENRLGENOTH=1 and ENRLGENOTHX=blank,,,Yes,
+enrl-m-022,022,Error,enrl,ENRLGENOTHX,Missingness,ENRLGENOTHX conditionally blank,If ENRLGENOTH is blank then ENRLGENOTHX must be blank,If Q4g. ENRLGENOTH (gender other) is blank then Q4g1. ENRLGENOTHX (gender other specify) must be blank,IF ENRLGENOTH=0 and ENRLGENOTHX is not blank,,,Yes,
+enrl-c-023,023,Error,enrl,ENRLGENDKN,Conformity,ENRLGENDKN conforms,ENRLGENDKN must be blank or 1,Q4h. ENRLGENDKN (gender do not know) must be blank or 1,IF ENRLGENDKN is not blank or ENRLGENDKN  is not 1,,,Yes,
+enrl-c-024,024,Error,enrl,ENRLGENNOANS,Conformity,ENRLGENNOANS conforms,ENRLGENNOANS must be blank or 1,Q4i. ENRLGENNOANS (gender no answer) must be 0 or 1,IF ENRLGENNOANS is not blank or ENRLGENNOANS  is not 1,,,Yes,
+enrl-m-025,025,Error,enrl,ENRLGENMAN,Missingness,At least one gender must be checked,"At least one of the following variables must be equal to 1: ENRLGENMAN, ENRLGENWOMAN, ENRLGENTRMAN, ENRLGENTRWOMAN, ENRLGENNONBI, ENRLGENTWOSPIR, ENRLGENOTH, ENRLGENDKN, ENRLGENNOANS","At least one of the following variables must be equal to 1: Q4a. ENRLGENMAN, Q4b. ENRLGENWOMAN, Q4c. ENRLGENTRMAN, Q4d. ENRLGENTRWOMAN, Q4e. ENRLGENNONBI, Q4f. ENRLGENTWOSPIR, Q4g. ENRLGENOTH, Q4h. ENRLGENDKN, Q4i. ENRLGENNOANS",IF ENRLGENMAN ne 1 and ENRLGENWOMAN ne 1 and ENRLGENTRMAN ne 1 and ENRLGENTRWOMAN ne 1 and ENRLGENNONBI ne 1 and ENRLGENTWOSPIR ne 1 and ENRLGENOTH ne 1 and ENRLGENDKN ne 1 and ENRLGENNOANS ne 1,,"ENRLGENMAN
+ENRLGENWOMAN
+ENRLGENTRMAN
+ENRLGENTRWOMAN
+ENRLGENNONBI
+ENRLGENTWOSPIR
+ENRLGENOTH
+ENRLGENOTHX
+ENRLGENDKN
+ENRLGENNOANS",No,
+enrl-m-026,026,Error,enrl,GUIDAVAIL,Missingness,GUIDAVAIL must be present,GUIDAVAIL cannot be blank,Q5. GUIDAVAIL (Do they have a GUID?) cannot be blank,IF GUIDAVAIL=blank,,,Yes,
+enrl-c-027,027,Error,enrl,GUIDAVAIL,Conformity,GUIDAVAIL conforms,GUIDAVAIL must be an integer between 0 and 1,Q5. GUIDAVAIL (Do they have a GUID?) must be an integer between 0 and 1,IF GUIDAVAIL<0 or GUIDAVAIL>1,,,Yes,
+enrl-m-028,028,Error,enrl,GUID,Missingness,GUID conditionally present,If GUIDAVAIL=1 (Yes) then GUID cannot be blank,If Q5. GUIDAVAIL (Do they have a GUID?)=1 (Yes) then Q5a. GUID cannot be blank,IF GUIDAVAIL=1 and GUID=blank,,,Yes,
+enrl-m-029,029,Error,enrl,GUID,Missingness,GUID conditionally absent,If GUIDAVAIL=0 (No) then GUID must be blank,If Q5. GUIDAVAIL (Do they have a GUID?)=0 (No) then Q5a. GUID must be blank,IF GUIDAVAIL=0 and GUID not blank,,,Yes,
+enrl-m-030,030,Error,enrl,PREVENRL,Missingness,PREVENRL must be present,PREVENRL cannot be blank,Q6. PREVENRL (Previously enrolled at an ADRC?) cannot be blank,IF PREVENRL=blank,,,Yes,
+enrl-c-031,031,Error,enrl,PREVENRL,Conformity,PREVENRL conforms,"PREVENRL must be an integer between 0 and 1, or 9 (Unknown)","Q6. PREVENRL (Previously enrolled at an ADRC?) must be an integer between 0 and 1, or 9 (Unknown)",IF PREVENRL<0 or (PREVENRL>1 and ne 9),,,Yes,
+enrl-m-032,032,Error,enrl,OLDADCID,Missingness,OLDADCID conditionally present,If PREVENRL=1 (Yes) then OLDADCID cannot be blank,If Q6. PREVENRL (Previously enrolled at an ADRC?)=1 (Yes) then Q6a. OLDADCID (Previous ADCID) cannot be blank,IF PREVENRL=1 and OLDADCID=blank,,,Yes,
+enrl-m-033,033,Error,enrl,OLDADCID,Missingness,OLDADCID conditionally absent,If PREVENRL=0 or 9 (No or Unknown) then OLDADCID must be blank,If Q6. PREVENRL (Previously enrolled at an ADRC?)=0 or 9 (No or Unknown) then Q6a. OLDADCID (Previous ADCID) must be blank,IF PREVENRL in (0 or 9) and OLDADCID not blank,,,Yes,
+enrl-c-034,034,Error,enrl,OLDADCID,Conformity,OLDADCID conforms,OLDADCID must be a valid code in list_of_adcids,Q6a. OLDADCID (Previous ADCID) must be a valid code in list_of_adcids,IF OLDADCID is not in list_of_adcids,,,No,
+enrl-m-035,035,Error,enrl,NACCIDKNWN,Missingness,NACCIDKNWN conditionally present,If ENRLTYPE=2 (Transfer) then NACCIDKNWN must be 0 or 1,If Q1. ENRLTYPE (Assign NACCID or transfer?)=2 (Transfer) then Q7. NACCIDKNWN (Is NACCID known) must be 0 or 1 (No or Yes),IF ENRLTYPE=2 and NACCIDKNWN ne (0 or 1),,,Yes,
+enrl-m-036,036,Error,enrl,NACCIDKNWN,Missingness,NACCIDKNWN conditionally absent,If ENRLTYPE=1 (Assign NACCID) then NACCIDKNWN must be blank or 8 (Not a transfer),If Q1. ENRLTYPE (Assign NACCID or transfer?)=1 (Assign NACCID) then Q7. NACCIDKNWN (Is NACCID known?) must be blank  or 8 (Not a transfer),IF ENRLTYPE=1 and NACCIDKNWN ne (8 or blank),,,Yes,
+enrl-c-037,037,Error,enrl,NACCIDKNWN,Conformity,NACCIDKNWN conforms,"NACCIDKNWN must be an integer between 0 and 1, or 8 (Not a transfer)","Q7. NACCIDKNWN (Is NACCID known?) must be an integer between 0 and 1, or 8 (Not a transfer)",IF NACCIDKNWN<0 or (NACCIDKNWN>1 and ne 8),,,Yes,
+enrl-m-038,038,Error,enrl,NACCID,Missingness,NACCID conditionally present,If NACCIDKNWN=1 (Yes) then NACCID cannot be blank,If Q7. NACCIDKNWN (Is NACCID known?)=1 (Yes) then Q7a. NACCID cannot be blank,IF NACCIDKNWN=1 and NACCID=blank,,,Yes,
+enrl-m-039,039,Error,enrl,NACCID,Missingness,NACCID conditionally absent,If NACCIDKNWN=0 or 8 (No or Not a transfer) then NACCID must be blank,If Q7. NACCIDKNWN (Is NACCID known?)=0 or 8 (No or Not a transfer) then Q7a. NACCID must be blank,IF NACCIDKNWN in (0 or 8) and NACCID not blank,,,Yes,
+enrl-m-040,040,Error,enrl,PTIDCONF,Missingness,PTIDCONF must be present,PTIDCONF cannot be blank,Q8. PTIDCONF (Confirm PTID) cannot be blank,IF PTIDCONF=blank,,,Yes,
+enrl-m-041,041,Error,enrl,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Header variable FORMVER cannot be blank,IF FORMVER=blank,,,Yes,
+enrl-c-042,042,Error,enrl,FORMVER,Conformity,FORMVER conforms,FORMVER must equal 1,Header variable FORMVER must equal 1,IF FORMVER ne 1,,,Yes,
