@@ -3,6 +3,7 @@ Q#,Question,Variable,MISSINGNESS: Is this required to be present if this form is
 0b,PTID,PTID,Always,,String,No conformity checks for PTID
 0c,Form date,FRMDATE_ENRL,Always,mm/dd/yyyy,Date,"I know this var is >10 characters, but I think I'd prefer them to match our proposed header variables for UDSv4 rather than meet our made-up character limit. Jessica agrees!"
 0d,Initials,INITIALS_ENRL,No,text,String,No error checks for INITITALS (confirmed with Janene that we have never checked this for either conformity or missingness)
+0e,Form version,FORMVER,Always,1,Numeric,
 1,Is this to assign a NACCID for the first time or to transfer a participant?,ENRLTYPE,Always,1-2,Integer,
 2a,Participant's month of birth,ENRLBIRTHMO,Always,Integers 1-12,Integer,"I know this var is >10 characters, but I think I'd prefer them to match the UDSv4 A1 variables rather than meet our made-up character limit. Jessica agrees"
 2b,Participant's year of birth,ENRLBIRTHYR,Always,1850 - current year minus 15,Integer,"I know this var is >10 characters, but I think I'd prefer them to match the UDSv4 A1 variables rather than meet our made-up character limit. Jessica agrees"
