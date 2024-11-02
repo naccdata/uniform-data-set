@@ -7,42 +7,42 @@ a4,I,"0d1. If 'A4 Participant Medications' form was completed remotely, specify 
 a4,I,0d1a. What modality was used to collect this remote 'A4 Participant Medications' form?,RMMODEA4,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modea4]='2'
 a4,I,1. Is the participant currently taking any medications?,ANYMEDS,Yes,Integers 0-1,"0, No|1, Yes",Integer,
 a4,I,Medication 1,RXNORMID1,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
-a4,I,Medication 2,RXNORMID2,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 3,RXNORMID3,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 4,RXNORMID4,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 5,RXNORMID5,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 6,RXNORMID6,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 7,RXNORMID7,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 8,RXNORMID8,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 9,RXNORMID9,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 10,RXNORMID10,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 11,RXNORMID11,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 12,RXNORMID12,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 13,RXNORMID13,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 14,RXNORMID14,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 15,RXNORMID15,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 16,RXNORMID16,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 17,RXNORMID17,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 18,RXNORMID18,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 19,RXNORMID19,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 20,RXNORMID20,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 21,RXNORMID21,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 22,RXNORMID22,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 23,RXNORMID23,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 24,RXNORMID24,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 25,RXNORMID25,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 26,RXNORMID26,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 27,RXNORMID27,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 28,RXNORMID28,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 29,RXNORMID29,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 30,RXNORMID30,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 31,RXNORMID31,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 32,RXNORMID32,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 33,RXNORMID33,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 34,RXNORMID34,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 35,RXNORMID35,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 36,RXNORMID36,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 37,RXNORMID37,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 38,RXNORMID38,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 39,RXNORMID39,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
-a4,I,Medication 40,RXNORMID40,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,
+a4,I,Medication 2,RXNORMID2,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 3,RXNORMID3,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 4,RXNORMID4,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 5,RXNORMID5,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 6,RXNORMID6,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 7,RXNORMID7,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 8,RXNORMID8,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 9,RXNORMID9,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 10,RXNORMID10,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 11,RXNORMID11,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 12,RXNORMID12,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 13,RXNORMID13,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 14,RXNORMID14,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 15,RXNORMID15,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 16,RXNORMID16,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 17,RXNORMID17,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 18,RXNORMID18,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 19,RXNORMID19,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 20,RXNORMID20,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 21,RXNORMID21,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 22,RXNORMID22,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 23,RXNORMID23,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 24,RXNORMID24,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 25,RXNORMID25,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 26,RXNORMID26,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 27,RXNORMID27,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 28,RXNORMID28,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 29,RXNORMID29,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 30,RXNORMID30,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 31,RXNORMID31,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 32,RXNORMID32,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 33,RXNORMID33,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 34,RXNORMID34,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 35,RXNORMID35,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 36,RXNORMID36,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 37,RXNORMID37,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 38,RXNORMID38,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 39,RXNORMID39,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
+a4,I,Medication 40,RXNORMID40,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
