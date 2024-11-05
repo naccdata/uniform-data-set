@@ -1,0 +1,22 @@
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+b6l,IL,0a. B6L Mayo Sleep Questionnaire — Participant - Form date,FRMDATEB6L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+b6l,IL,0b. B6L Mayo Sleep Questionnaire — Participant - Examiner's initials,INITIALSB6L,No,text,,String,
+b6l,IL,"0. Is the participant too cognitively impaired (e.g., CDR>1) to complete this form?",LBSPCGIM,Always,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,"1. Have you ever been told that you seem to “act out your dreams” while sleeping (punched or flailed arms in the air, shouted or screamed)?",LBSPDRM,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,1a1. How many months or years has this been going on? (years),LBSPYRS,Conditional,Integers 0-99,0 – 99,Num,
+b6l,IL,1a2. How many months or years has this been going on? (months),LBSPMOS,Conditional,Integers 0-11,0 – 11,Num,
+b6l,IL,"1b. Have you ever been injured from these behaviors (bruises, cuts, broken bones)?",LBSPINJS,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,"1c. Has a bedpartner ever been injured from these behaviors (bruises, blows, pulled hair)?",LBSPINJP,Conditional,"Inetgers 0-1, and 8",0 = No | 1 = Yes | 8 = No bedpartner,Num,
+b6l,IL,"1d. Have you had dreams of being chased or attacked, or that involve defending yourself?",LBSPCHAS,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,1e. Have you been told that you make movements while sleeping that seem to match the details of your dream?,LBSPMOVE,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,2. Have you been told that your legs repeatedly jerk or twitch during sleep (not just when falling asleep)?,LBSPLEGS,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,"3. Does a restless, nervous, tingly, or creepy-crawly feeling in your legs make it hard to fall or stay asleep?",LBSPNERV,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,Blank if Question 0 LBSPCGIM = 1 (Yes)
+b6l,IL,3a. Do you experience an irresistible urge to move the legs at those times?,LBSPURGL,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,3b. Do the uncomfortable leg sensations decrease when you move them or when you walk around?,LBSPSENS,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,3c. When do these sensations seem to be worse?,LBSPWORS,Conditional,Inetgers 1-2,1 = Before 6:00 p.m. | 2 = After 6:00 p.m.,Num,
+b6l,IL,4. Have you ever walked around the bedroom or house in your sleep?,LBSPWALK,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,Blank if Question 0 LBSPCGIM = 1 (Yes)
+b6l,IL,5. Have you ever snorted or choked yourself awake?,LBSPAWAK,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,Blank if Question 0 LBSPCGIM = 1 (Yes)
+b6l,IL,6. Have you ever been told that you stop breathing in your sleep?,LBSPBRTH,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,Blank if Question 0 LBSPCGIM = 1 (Yes)
+b6l,IL,"6a. Are you currently being treated for this (e.g., CPAP)?",LBSPTRT,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,
+b6l,IL,"7. Do you experience leg cramps at night (e.g., also called a “charlie horse” with intense pain in cer-tain muscles in the leg)?",LBSPCRMP,Conditional,Inetgers 0-1,0 = No | 1 = Yes,Num,Blank if Question 0 LBSPCGIM = 1 (Yes)
+b6l,IL,8. Rate your general level of alertness for the past 3 weeks on a scale from 0 to 10:,LBSPALRT,Conditional,Inetgers 1-10,"1 – 10; 0 = Sleep all day, 10 = Fully and normally awake",Num,Blank if Question 0 LBSPCGIM = 1 (Yes)
