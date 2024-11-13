@@ -17,7 +17,7 @@ b1l,FL,26a. Standing position diastolic blood pressure,LBSSTNDI,Always,"Integers
 b1l,FL,26b. Sitting position diastolic blood pressure,LBSITDI,Always,"Integers 20 – 150, 888",20 – 150; 888 = Not assessed,Integer,
 b1l,FL,27a. Standing position heart rate,LBSSTNHT,Always,"Integers 33 – 180, 888",33 – 180; 888 = Not assessed,Integer,
 b1l,FL,27b. Sitting position heart rate,LBSITHR,Always,"Integers 33 – 180, 888",33 – 180; 888 = Not assessed,Integer,
-b1l,FL,28. Age of onset of probable REM sleep behavior disorder,LBSAGERM,Always,"Integers 15 – 110,  888, 999",15 – 110; 777 = Provided at previous visit;  888 = Not applicable; 999 = Unknown,Integer,
+b1l,FL,28. Age of onset of probable REM sleep behavior disorder,LBSAGERM,Always,"Integers 15 – 110, 777, 888, 999",15 – 110; 777 = Provided at previous visit;  888 = Not applicable; 999 = Unknown,Integer,
 b1l,FL,29. Age of onset of impaired smell,LBSAGESM,Always,"Integers 15 – 110,  777, 888, 999",15 – 110; 777 = Provided at previous visit;  888 = Not applicable; 999 = Unknown,Integer,
 b1l,FL,30. Age of onset of gait disorder,LBSAGEGT,Always,"Integers 9 – 110,  777, 888,  999",9 – 110; 777 = Provided at previous visit;  888 = Not applicable; 999 = Unknown,Integer,
 b1l,FL,31. Age of onset of falls,LBSAGEFL,Always,"Integers 9 – 110,  777, 888,  999",9 – 110; 777 = Provided at previous visit;  888 = Not applicable; 999 = Unknown,Integer,
