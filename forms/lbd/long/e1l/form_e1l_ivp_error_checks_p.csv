@@ -1,2 +1,2 @@
 error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
-e1l-lbdivp-p-1001,1001,Error,e1l,IL,FRMDATEE1L,Plausibility,FRMDATEE1L earliest date allowed,FRMDATEE1L must not be from date before form was released,Q0a. FRMDATEE1L (E1L form date) must not be from date before form was released (2017),IF FRMDATEXX before (01/01/2017),,,,,
+e1l-lbdivp-p-1001,1001,Error,e1l,IL,FRMDATEE1L,Plausibility,FRMDATEE1L earliest date allowed,FRMDATEE1L must not be from date before form was released,Q0a. FRMDATEE1L (E1L form date) must not be from date before form was released (2017),IF FRMDATEE1L before (01/01/2017),,,,,
