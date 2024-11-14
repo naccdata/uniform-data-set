@@ -1,13 +1,10 @@
-form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-d1a,I,0a. D1a Clinical Diagnosis - Form date,FRMDATED1A,Always,mm/dd/yyyy,,Date,
+﻿form_name,packet,question,var_name,missingness,missingness,conformity,response_labels,data_type
+d1a,I,0a. D1a Clinical Diagnosis - Form date,FRMDATED1A,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 d1a,I,0b. D1a Clinical Diagnosis - Examiner's initials,INITIALSD1A,No,text,,String,
 d1a,I,0c. D1a Clinical Diagnosis - Language,LANGD1A,Always,Integers 1-2,"1, English|2, Spanish",Integer,
-d1a,I,0d. D1a Clinical Diagnosis - In-person or remote?,MODED1A,Always,Integers 1-2,"1, In-person|2, Remote",Integer,
-d1a,I,"0d1. If 'D1a Clinical Diagnosis'  form was completed remotely, specify reason",RMREASD1A,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[moded1a]='2'
-d1a,I,0d1a. What modality was used to collect this remote 'D1a Clinical Diagnosis' form?,RMMODED1A,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[moded1a]='2'
 d1a,I,1. Diagnosis method—responses in this form are based on diagnosis by a:,DXMETHOD,Always,Integers 1-3,"1, Single clinician|2, Formal consensus panel|3, Other <i>(e.g., Two or more clinicians or other informal group)</i>",Integer,
 d1a,I,2. Does the participant have unimpaired cognition & behavior ,NORMCOG,Always,Integers 0-1,"0, No|1, Yes",Integer,
-d1a,I,2a. Does the participant report 1) significant concerns about changes in cognition AND 2) no neuropsychological evidence of decline AND 3) no functional decline?,SCD,Always,Integers 0-1,"0, No|1, Yes",Integer,[normcog]='1'
+d1a,I,2a. Does the participant report 1) significant concerns about changes in cognition AND 2) no neuropsychological evidence of decline AND 3) no functional decline?,SCD,Conditional (e.g. skip pattern),Integers 0-1,"0, No|1, Yes",Integer,[normcog]='1'
 d1a,I,"2b. As a clinician, are you confident that the subjective cognitive decline is clinically meaningful?",SCDDXCONF,Conditional (e.g. skip pattern),Integers 0-1,"0, No|1, Yes",Integer,[scd]='1'
 d1a,I,3. Does the participant meet criteria for dementia?,DEMENTED,Conditional (e.g. skip pattern),Integers 0-1,"0, No|1, Yes",Integer,[normcog] ='0'
 d1a,I,4a1. MCI criteria - Clinical concern about decline in cognition compared to participant’s prior level of lifelong or usual cognitive function,MCICRITCLN,Conditional (e.g. skip pattern),1 or blank,,Integer,
@@ -38,7 +35,7 @@ d1a,I,8a. Amnestic predominant syndrome,AMNDEM,Conditional (e.g. skip pattern),1
 d1a,I,8b. Dysexecutive predominant syndrome,DYEXECSYN,Conditional (e.g. skip pattern),1 or blank,,Integer,
 d1a,I,8c. Primary visual presentation (such as posterior cortical atrophy (PCA) syndrome),PCA,Conditional (e.g. skip pattern),1 or blank,,Integer,
 d1a,I,8d. Primary progressive aphasia (PPA) syndrome,PPASYN,Conditional (e.g. skip pattern),1 or blank,,Integer,
-d1a,I,8d1. Primary progressive aphasia (PPA) syndrome - type,PPASYNT,Conditional (e.g. skip pattern),Integers 1-5,"1, Logopenic PPA|2, Semantic PPA|3, Nonfluent/agrammatic PPA|4, Primary progressive apraxia of speech|5, PPA other/not otherwise specified",Integer,[ppasyn] = '1'
+d1a,I,8d1. Primary progressive aphasia (PPA) syndrome - type,PPASYNT,Conditional (e.g. skip pattern),Integers 1-5,"1, Semantic PPA|2, Logopenic PPA|3, Nonfluent/agrammatic PPA|4, Primary progressive apraxia of speech|5, PPA other/not otherwise specified",Integer,[ppasyn] = '1'
 d1a,I,8e. Behavioral variant frontotemporal (bvFTD) syndrome,FTDSYN,Conditional (e.g. skip pattern),1 or blank,,Integer,
 d1a,I,8f. Lewy body syndrome,LBDSYN,Conditional (e.g. skip pattern),1 or blank,,Integer,
 d1a,I,8f1. Lewy body syndrome - type,LBDSYNT,Conditional (e.g. skip pattern),Integers 1-3,"1, Dementia with Lewy bodies|2, Parkinson's disease|3, Parkinson's disease dementia syndrome",Integer,[lbdsyn] = 1
@@ -54,60 +51,60 @@ d1a,I,8l1. Other syndrome (specify),OTHSYNX,Conditional (e.g. skip pattern),text
 d1a,I,"9a. Indicate the source(s) of information used to assign the clinical syndrome - Clinical information (history, CDR)",SYNINFCLIN,Conditional (e.g. skip pattern),1 or blank,,Integer,
 d1a,I,9b. Indicate the source(s) of information used to assign the clinical syndrome - Cognitive testing,SYNINFCTST,Conditional (e.g. skip pattern),1 or blank,,Integer,
 d1a,I,"9c. Indicate the source(s) of information used to assign the clinical syndrome -   Biomarkers (MRI, PET, CSF, plasma)",SYNINFBIOM,Conditional (e.g. skip pattern),1 or blank,,Integer,
-d1a,I,10. Major depressive disorder (present),MAJDEPDX,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,10. Major depressive disorder (present),MAJDEPDX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,10a. Major depressive disorder (primary/contributing/non-contributing),MAJDEPDIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[majdepdx] = 1
-d1a,I,11. Other specified depressive disorder (present),OTHDEPDX,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,11. Other specified depressive disorder (present),OTHDEPDX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,11a. Other specified depressive disorder (primary/contributing/non-contributing),OTHDEPDIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[othdepdx] = 1
-d1a,I,12. Bipolar disorder (present),BIPOLDX,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,12. Bipolar disorder (present),BIPOLDX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,12a. Bipolar disorder (primary/contributing/non-contributing),BIPOLDIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[bipoldx] = 1
-d1a,I,13. Schizophrenia or other psychotic disorder (present),SCHIZOP,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,13. Schizophrenia or other psychotic disorder (present),SCHIZOP,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,13a. Schizophrenia or other psychotic disorder (primary/contributing/non-contributing),SCHIZOIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[schizop] = 1
-d1a,I,14. Anxiety disorder (present),ANXIET,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,14. Anxiety disorder (present),ANXIET,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,14a. Anxiety disorder (primary/contributing/non-contributing),ANXIETIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[anxiet] = 1
-d1a,I,14b. Generalized Anxiety Disorder,GENANX,Conditional (e.g. skip pattern),1 or blank,,Integer,
-d1a,I,14c. Panic Disorder,PANICDISDX,Conditional (e.g. skip pattern),1 or blank,,Integer,
-d1a,I,14d. Obsessive-compulsive disorder (OCD),OCDDX,Conditional (e.g. skip pattern),1 or blank,,Integer,
-d1a,I,14e. Other anxiety disorder,OTHANXD,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,14b. Generalized Anxiety Disorder,GENANX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
+d1a,I,14c. Panic Disorder,PANICDISDX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
+d1a,I,14d. Obsessive-compulsive disorder (OCD),OCDDX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
+d1a,I,14e. Other anxiety disorder,OTHANXD,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,14e1. Other anxiety disorder (specify),OTHANXDX,Conditional (e.g. skip pattern),text,,String,[othanxd] = 1
-d1a,I,15. Post-traumatic stress disorder (PTSD) (present),PTSDDX,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,15. Post-traumatic stress disorder (PTSD) (present),PTSDDX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,15a. Post-traumatic stress disorder (PTSD) (primary/contributing/non-contributing),PTSDDXIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[ptsddx] = 1
-d1a,I,"16. Developmental neuropsychiatric disorders (e.g., autism spectrum disorder (ASD), attention-deficit hyperactivity disorder (ADHD), dyslexia) (present)",NDEVDIS,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,"16. Developmental neuropsychiatric disorders (e.g., autism spectrum disorder (ASD), attention-deficit hyperactivity disorder (ADHD), dyslexia) (present)",NDEVDIS,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,"16a. Developmental neuropsychiatric disorders (e.g., autism spectrum disorder (ASD), attention-deficit hyperactivity disorder (primary/contributing/non-contributing)",NDEVDISIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[ndevdis] = 1
-d1a,I,17. Delirium (present),DELIR,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,17. Delirium (present),DELIR,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,17a. Delirium (primary/contributing/non-contributing),DELIRIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[delir] = 1
-d1a,I,18. Other psychiatric disorder (present),OTHPSY,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,18. Other psychiatric disorder (present),OTHPSY,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,18a. Other psychiatric disorder (primary/contributing/non-contributing),OTHPSYIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[othpsy] = 1
 d1a,I,18b. Other psychiatric disorder (specify),OTHPSYX,Conditional (e.g. skip pattern),text,,String,
-d1a,I,19. Traumatic brain injury (present),TBIDX,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,19. Traumatic brain injury (present),TBIDX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,19a. Traumatic brain injury (primary/contributing/non-contributing),TBIDXIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[tbidx] = 1
-d1a,I,20. Epilepsy (present),EPILEP,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,20. Epilepsy (present),EPILEP,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,20a. Epilepsy (primary/contributing/non-contributing),EPILEPIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[epilep] = 1
-d1a,I,21. Normal-pressure hydrocephalus (present),HYCEPH,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,21. Normal-pressure hydrocephalus (present),HYCEPH,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,21a. Normal-pressure hydrocephalus (primary/contributing/non-contributing),HYCEPHIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[hyceph] = 1
-d1a,I,22. CNS Neoplasm (present),NEOP,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,22. CNS Neoplasm (present),NEOP,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,22a. CNS Neoplasm (primary/contributing/non-contributing),NEOPIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[neop] = 1
 d1a,I,22b. CNS Neoplasm - benign or malignant,NEOPSTAT,Conditional (e.g. skip pattern),Integers 1-2,"1, Benign|2, Malignant",Integer,[neop] = 1
-d1a,I,23. Human Immunodeficiency Virus (HIV) infection (present),HIV,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,23. Human Immunodeficiency Virus (HIV) infection (present),HIV,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,23a. Human Immunodeficiency Virus (HIV) infection (primary/contributing/non-contributing),HIVIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[hiv] = 1
-d1a,I,24. Post COVID-19 cognitive impairment (present),POSTC19,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,24. Post COVID-19 cognitive impairment (present),POSTC19,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,24a. Post COVID-19 cognitive impairment (primary/contributing/non-contributing),POSTC19IF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[postc19] = 1
-d1a,I,"25. Sleep apnea (i.e., obstructive, central, mixed or complex sleep apnea) (present)",APNEADX,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,"25. Sleep apnea (i.e., obstructive, central, mixed or complex sleep apnea) (present)",APNEADX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,"25a. Sleep apnea (i.e., obstructive, central, mixed or complex sleep apnea) (primary/contributing/non-contributing)",APNEADXIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[apneadx] = 1
-d1a,I,"26. Cognitive impairment due to other neurologic, genetic, infectious conditions (not listed above), or systemic disease/medical illness (as indicated on Form A5/D2) (present)",OTHCOGILL,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,"26. Cognitive impairment due to other neurologic, genetic, infectious conditions (not listed above), or systemic disease/medical illness (as indicated on Form A5/D2) (present)",OTHCOGILL,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,"26a. Cognitive impairment due to other neurologic, genetic, infectious conditions (not listed above), or systemic disease/medical illness (as indicated on Form A5/D2) (primary/contributing/non-contributing)",OTHCILLIF ,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[othcogill] = 1
 d1a,I,"26b. Specify cognitive impairment due to other neurologic, genetic, infection conditions or systemic disease",OTHCOGILLX,Conditional (e.g. skip pattern),text,,String,
-d1a,I,27. Cognitive impairment due to alcohol abuse (present),ALCDEM,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,27. Cognitive impairment due to alcohol abuse (present),ALCDEM,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,27a. Cognitive impairment due to alcohol abuse (primary/contributing/non-contributing),ALCDEMIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[alcdem] = 1
-d1a,I,28. Cognitive impairment due to substance use or abuse (present),IMPSUB,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,28. Cognitive impairment due to substance use or abuse (present),IMPSUB,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,28a. Cognitive impairment due to substance use or abuse (primary/contributing/non-contributing),IMPSUBIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[impsub] = 1
-d1a,I,29. Cognitive impairment due to medications (present),MEDS,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,29. Cognitive impairment due to medications (present),MEDS,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,29a. Cognitive impairment due to medications (primary/contributing/non-contributing),MEDSIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[meds] = 1
-d1a,I,30. Cognitive impairment not otherwise specified (NOS) (present),COGOTH,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,30. Cognitive impairment not otherwise specified (NOS) (present),COGOTH,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,30a. Cognitive impairment NOS (primary/contributing/non-contributing),COGOTHIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cogoth] = 1
 d1a,I,30b. Cognitive impairment NOS (specify),COGOTHX,Conditional (e.g. skip pattern),text,,String,[cogoth] = 1
-d1a,I,31. Cognitive impairment not otherwise specified (NOS) (present),COGOTH2,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,31. Cognitive impairment not otherwise specified (NOS) (present),COGOTH2,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,31a. Cognitive impairment NOS (primary/contributing/non-contributing),COGOTH2F,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cogoth2] = 1
 d1a,I,31b. Cognitive impairment NOS (specify),COGOTH2X,Conditional (e.g. skip pattern),text,,String,[cogoth2] = 1
-d1a,I,32. Cognitive impairment not otherwise specified (NOS) (present),COGOTH3,Conditional (e.g. skip pattern),1 or blank,,Integer,
+d1a,I,32. Cognitive impairment not otherwise specified (NOS) (present),COGOTH3,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1a,I,32a. Cognitive impairment NOS (primary/contributing/non-contributing),COGOTH3F,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cogoth3] = 1
 d1a,I,32b. Cognitive impairment NOS (specify),COGOTH3X,Conditional (e.g. skip pattern),text,,String,[cogoth3] = 1
