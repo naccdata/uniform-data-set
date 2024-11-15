@@ -25,7 +25,7 @@ c2f,IF,19. Tell someone the ending of a movie they haven’t seen?,FTDMOVE,Conditi
 c2f,IF,20. Hug a stranger without asking first?,FTDHUGS,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,21. Talk out loud during a movie at the theater?,FTDLOUD,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,22. Tell a coworker you think they have lost weight?,FTDLOST,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
-c2f,IF,23. SNQ22 Total Score,FTDSNTOT,No,"Integers 0-22, and 88, blank",0 – 22 | 88 = Some scores missing,Integer,Blank if Question 0 FTDCPC2F in (95 -98) or if subquestions not answered
-c2f,IF,24. SNQ22 Break Score,FTDSNTBS,No,"Integers 0-12, and 88, blank",0 – 12 | 88 = Some scores missing,Integer,Blank if Question 0 FTDCPC2F in (95 -98) or if subquestions not answered
-c2f,IF,25. SNQ22 Overadhere Score,FTDSNTOS,No,"Integers 0-10, and 88, blank",0 – 10 | 88 = Some scores missing,Integer,Blank if Question 0 FTDCPC2F in (95 -98) or if subquestions not answered
-c2f,IF,26. SNQ22 Yes/No Ratio Score,FTDSNRAT,No,"Integers 0.00-22.00, and 88.88, blank",0.00 – 22.00 | 88.99 = Some scores missing or total Yes = 0 or total No = 0,Numeric,Blank if Question 0 FTDCPC2F in (95 -98) or if subquestions not answered
+c2f,IF,23. SNQ22 Total Score,FTDSNTOT,No,"Integers 0-22, and 88, blank",0 – 22 | 88 = Some scores missing,Integer,Blank if Question 0 FTDCPC2F in (95 -98) 
+c2f,IF,24. SNQ22 Break Score,FTDSNTBS,No,"Integers 0-12, and 88, blank",0 – 12 | 88 = Some scores missing,Integer,Blank if Question 0 FTDCPC2F in (95 -98) 
+c2f,IF,25. SNQ22 Overadhere Score,FTDSNTOS,No,"Integers 0-10, and 88, blank",0 – 10 | 88 = Some scores missing,Integer,Blank if Question 0 FTDCPC2F in (95 -98)
+c2f,IF,26. SNQ22 Yes/No Ratio Score,FTDSNRAT,No,"Integers 0.00-22.00, and 88.88, blank",0.00 – 22.00 | 88.88 = Some scores missing or total Yes = 0 or total No = 0,Numeric,Blank if Question 0 FTDCPC2F in (95 -98) 
