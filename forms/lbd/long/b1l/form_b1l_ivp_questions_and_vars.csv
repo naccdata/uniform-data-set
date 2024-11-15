@@ -28,7 +28,7 @@ b1l,IL,8. Does the participant report having difficulty tolerating cold weather?
 b1l,IL,9. Does the participant report having difficulty tolerating hot weather?,LBSTOLHT,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
-b1l,IL,"10. Does the participant expe-rience double vision (two separate real objects, and not blurred vision)?",LBSDBVIS,Always,"0-1, 9","0 = No
+b1l,IL,"10. Does the participant experience double vision (two separate real objects, and not blurred vision)?",LBSDBVIS,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
 b1l,IL,11. Does the participant have problems with constipation?,LBSCONST,Always,"0-1, 9","0 = No
