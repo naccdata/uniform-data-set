@@ -4,9 +4,9 @@ a3a,IF,0b. A3a Record of Consent for Biologic Specimen Use - Examiner's initials
 a3a,IF,0c. A3a Record of Consent for Biologic Specimen Use - Language,LANGA3A,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 a3a,IF,0d. A3a Record of Consent for Biologic Specimen Use - Submitted?,MODEA3A,Always,Integers 0-1,"0, Not completed | 1, In-person",Integer,
 a3a,IF,"0d1. If 'A3a Record of Consent for Biologic Specimen Use' not submitted, specify reason",A3ANOT,Conditional,Integers 95-99,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal|99, Unknown or inadequate information",Integer,[modea3a]='0'
-a3a,IF,1. What relative’s consent is being recorded on this form?,FTDRELCO,Always,Integers 1-4,1 = Mother 2 = Father 3= Sibling 4 = Child,Integer,
-a3a,IF,1. Sibling’s birth year,FTDSIBBY,Conditional,1885 – 2000,1885 – 2000,Integer,Blank if Question 1 FTDRELCO ne 3 (Sibling)
-a3a,IF,1. Child’s birth year,FTDCHDBY,Conditional,1920 – 2000,1920 – 2000,Integer,Blank if Question 1 FTDRELCO ne 4 (Child)
+a3a,IF,1. What relativeâ€™s consent is being recorded on this form?,FTDRELCO,Always,Integers 1-4,1 = Mother 2 = Father 3= Sibling 4 = Child,Integer,
+a3a,IF,1. Siblingâ€™s birth year,FTDSIBBY,Conditional,1885 â€“ 2000,1885 â€“ 2000,Integer,Blank if Question 1 FTDRELCO ne 3 (Sibling)
+a3a,IF,1. Childâ€™s birth year,FTDCHDBY,Conditional,1920 â€“ 2000,1920 â€“ 2000,Integer,Blank if Question 1 FTDRELCO ne 4 (Child)
 a3a,IF,1a. I permit my sample to be stored and used in future research of neurologic disease at (home institution),FTDSTORE,Always,Integers 0-1,0 = No | 1 = Yes,Integer,
 a3a,IF,"1b. I permit my sample to be stored and used in future research at (home institution) to learn about, prevent, or treat other health problems.",FTDSLEAR,Always,Integers 0-1,0 = No | 1 = Yes,Integer,
-a3a,IF,"1c. There is a small chance that some commercial value may result from my sample at the National Cell Repository for Alzheimer’s Disease (NCRAD). If that would happen, I would not be offered a share in any profits. I permit (home institution) to give my sample to researchers at other institutions.",FTDCOMME,Always,Integers 0-1,0 = No | 1 = Yes,Integer,
+a3a,IF,"1c. There is a small chance that some commercial value may result from my sample at the National Cell Repository for Alzheimerâ€™s Disease (NCRAD). If that would happen, I would not be offered a share in any profits. I permit (home institution) to give my sample to researchers at other institutions.",FTDCOMME,Always,Integers 0-1,0 = No | 1 = Yes,Integer,
