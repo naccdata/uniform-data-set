@@ -1,11 +1,10 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 b1l,IL,0a. B1L Clinical Symptoms and Exam - Form date,FRMDATEB1L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b1l,IL,0b. B1L Clinical Symptoms and Exam - Examiner's initials,INITIALSB1L,No,text,,String,
-b1l,IL,1. Does the participant drib-ble saliva during the day?,LBSSALIV,Always,"0-1, 9","0 = No
+b1l,IL,1. Does the participant dribble saliva during the day?,LBSSALIV,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
-b1l,IL,"2. Does the participant have
-difficulty swallowing?",LBSSWALL,Always,"0-1, 9","0 = No
+b1l,IL,2. Does the participant have difficulty swallowing?,LBSSWALL,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
 b1l,IL,3. Does the participant have altered interest in sex?,LBSINSEX,Always,"0-1, 9","0 = No
@@ -17,9 +16,7 @@ b1l,IL,4. Does the participant have problems having sex?,LBSPRSEX,Always,"0-1, 9
 b1l,IL,5. Does the participant have a recent change in weight (not related to dieting)?,LBSWEIGH,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
-b1l,IL,"6. Does the participant
-report a change in the
-ability to taste or smell?",LBSSMELL,Always,"0-1, 9","0 = No
+b1l,IL,6. Does the participant report a change in the ability to taste or smell?,LBSSMELL,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
 b1l,IL,7. Does the participant experience excessive sweating (not related to hot weather)?,LBSSWEAT,Always,"0-1, 9","0 = No
@@ -31,7 +28,7 @@ b1l,IL,8. Does the participant report having difficulty tolerating cold weather?
 b1l,IL,9. Does the participant report having difficulty tolerating hot weather?,LBSTOLHT,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
-b1l,IL,"10. Does the participant expe-rience double vision (two separate real objects, and not blurred vision)?",LBSDBVIS,Always,"0-1, 9","0 = No
+b1l,IL,"10. Does the participant experience double vision (two separate real objects, and not blurred vision)?",LBSDBVIS,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
 b1l,IL,11. Does the participant have problems with constipation?,LBSCONST,Always,"0-1, 9","0 = No
