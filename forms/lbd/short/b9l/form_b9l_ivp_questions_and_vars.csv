@@ -1,0 +1,15 @@
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+b9l,IL,0a. B9L Scopa Sleep — Co-participant - Form date,FRMDATEB9L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+b9l,IL,0b. B9L Scopa Sleep — Co-participant - Examiner's initials,INITIALSB9L,No,text,,String,
+b9l,IL,1. Had trouble falling asleep when they went to bed at night,CONSFALL,Never,Integers 0-3 or blank,"0 = not at all, 1 = a little, 2 = quite a bit, 3 = a lot",Integer,Blank if unknown
+b9l,IL,2. Felt that they have woken too often,CONSWKOF,Never,Integers 0-3 or blank,"0 = not at all, 1 = a little, 2 = quite a bit, 3 = a lot",Integer,Blank if unknown
+b9l,IL,3. Felt that they have been lying awake for too long at night,CONSLYAW,Never,Integers 0-3 or blank,"0 = not at all, 1 = a little, 2 = quite a bit, 3 = a lot",Integer,Blank if unknown
+b9l,IL,4. Felt that they have woken too early in the morning,CONSWKER,Never,Integers 0-3 or blank,"0 = not at all, 1 = a little, 2 = quite a bit, 3 = a lot",Integer,Blank if unknown
+b9l,IL,5. Felt they have had too little sleep at night,CONSLTTL,Never,Integers 0-3 or blank,"0 = not at all, 1 = a little, 2 = quite a bit, 3 = a lot",Integer,Blank if unknown
+b9l,IL,"6. Overall, how well has the participant slept at night during the past month?",SCCORATE,Never,Integers 1-7 or blank,"1= very well, 2 = well, 3 = rather well, 4 = not well but not badly, 5 = rather badly, 6 = badly, 7 = very badly",Integer,Blank if unknown
+b9l,IL,7. Fallen asleep unexpectedly during the day or in the evening,CODSUNEX,Never,Integers 0-3 or blank,"0 = never, 1 = sometimes, 2 = regularly, 3 = often",Integer,Blank if unknown
+b9l,IL,8. Fallen asleep while sitting peacefully,CODSSITP,Never,Integers 0-3 or blank,"0 = never, 1 = sometimes, 2 = regularly, 3 = often",Integer,Blank if unknown
+b9l,IL,9. Fallen asleep while watching TV or reading,CODSWATV,Never,Integers 0-3 or blank,"0 = never, 1 = sometimes, 2 = regularly, 3 = often",Integer,Blank if unknown
+b9l,IL,10. Fallen asleep while talking to someone,CODSTALK,Never,Integers 0-3 or blank,"0 = never, 1 = sometimes, 2 = regularly, 3 = often",Integer,Blank if unknown
+b9l,IL,11. Had trouble staying awake during the day or in the evening,CODSAWDY,Never,Integers 0-3 or blank,"0 = never, 1 = sometimes, 2 = regularly, 3 = often",Integer,Blank if unknown
+b9l,IL,12. Experienced falling asleep during the day as a problem,CODSFLDY,Never,Integers 0-3 or blank,"0 = never, 1 = sometimes, 2 = regularly, 3 = often",Integer,Blank if unknown
