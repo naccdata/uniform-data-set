@@ -1,70 +1,67 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-d1b,I,0a. D1b Biomarker and Etiological Diagnosis - Form date,FRMDATED1B,Always,mm/dd/yyyy,,Date,
+d1b,I,0a. D1b Biomarker and Etiological Diagnosis - Form date,FRMDATED1B,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 d1b,I,0b. D1b Biomarker and Etiological Diagnosis - Examiner's initials,INITIALSD1B,No,text,,String,
 d1b,I,0c. D1b Biomarker and Etiological Diagnosis - Language,LANGD1B,Always,Integers 1-2,"1, English|2, Spanish",Integer,
-d1b,I,0d. D1b Biomarker and Etiological Diagnosis - In-person or remote?,MODED1B,Always,Integers 1-2,"1, In-person|2, Remote",Integer,
-d1b,I,"0d1. If 'D1b Biomarker and Etiological Diagnosis' form was completed remotely, specify reason",RMREASD1B,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[moded1b]='2'
-d1b,I,0d1a. What modality was used to collect this remote 'D1b Biomarker and Etiological Diagnosis' form?,RMMODED1B,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[moded1b]='2'
-d1b,I,1. Were any biomarker results used to support the current etiological diagnosis?,BIOMARKDX,Always,0 or 1,"0, No|1, Yes",Integer,
+d1b,I,1. Were any biomarker results used to support the current etiological diagnosis?,BIOMARKDX,Always,Integers 0-1,"0, No|1, Yes",Integer,
 d1b,I,2. Fluid Biomarkers - Were fluid biomarkers used for assessing the etiological diagnosis?,FLUIDBIOM,Conditional (e.g. skip pattern),Integers 0-3,"0, No|1, Yes, only blood-based biomarkers were used|2, Yes, only CSF-based biomarkers were used|3, Yes, both blood- and CSF-based biomarkers were used",Integer,[biomarkdx]=1
-d1b,I,3a. Blood-based biomarkers - Consistent with AD,BLOODAD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fluidbiom]=1 or [fluidbiom]=3
-d1b,I,3b. Blood-based biomarkers - Consistent with FTLD,BLOODFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fluidbiom]=1 or [fluidbiom]=3
-d1b,I,3c. Blood-based biomarkers - Consistent with LBD,BLOODLBD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fluidbiom]=1 or [fluidbiom]=3
-d1b,I,3d. Blood-based biomarkers - Consistent with other etiology,BLOODOTH,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fluidbiom]=1 or [fluidbiom]=3
+d1b,I,3a. Blood-based biomarkers - Consistent with AD,BLOODAD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fluidbiom]=1 or [fluidbiom]=3
+d1b,I,3b. Blood-based biomarkers - Consistent with FTLD,BLOODFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fluidbiom]=1 or [fluidbiom]=3
+d1b,I,3c. Blood-based biomarkers - Consistent with LBD,BLOODLBD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fluidbiom]=1 or [fluidbiom]=3
+d1b,I,3d. Blood-based biomarkers - Consistent with other etiology,BLOODOTH,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fluidbiom]=1 or [fluidbiom]=3
 d1b,I,3d1. Blood-based biomarkers - Consistent with other etiology (specify),BLOODOTHX,Conditional (e.g. skip pattern),Any text,,String,
-d1b,I,4a. CSF-based biomarkers - Consistent with AD,CSFAD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fluidbiom]=2 or [fluidbiom]=3
-d1b,I,4b. CSF-based biomarkers - Consistent with FTLD,CSFFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fluidbiom]=2 or [fluidbiom]=3
-d1b,I,4c. CSF-based biomarkers - Consistent with LBD,CSFLBD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fluidbiom]=2 or [fluidbiom]=3
-d1b,I,4d. CSF-based biomarkers - Consistent with other etiology,CSFOTH,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fluidbiom]=2 or [fluidbiom]=3
+d1b,I,4a. CSF-based biomarkers - Consistent with AD,CSFAD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fluidbiom]=2 or [fluidbiom]=3
+d1b,I,4b. CSF-based biomarkers - Consistent with FTLD,CSFFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fluidbiom]=2 or [fluidbiom]=3
+d1b,I,4c. CSF-based biomarkers - Consistent with LBD,CSFLBD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fluidbiom]=2 or [fluidbiom]=3
+d1b,I,4d. CSF-based biomarkers - Consistent with other etiology,CSFOTH,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fluidbiom]=2 or [fluidbiom]=3
 d1b,I,4d1. CSF-based biomarkers - Consistent with other etiology (specify),CSFOTHX,Conditional (e.g. skip pattern),Any text,,String,
 d1b,I,5. Imaging - Was imaging used for assessing etiological diagnosis?,IMAGINGDX,Conditional (e.g. skip pattern),Integers 0-3,"0, No|1, Yes, only PET/SPECT imaging was used|2, Yes, only MR imaging was used|3, Yes, both PET/SPECT and MR imaging were used",Integer,[biomarkdx]='1'
 d1b,I,6a. Tracer-based PET - Were tracer-based PET measures used in assessing an etiological diagnosis?,PETDX,Conditional (e.g. skip pattern),Integers 0-2,"0, No|1, Yes, results were normal or abnormal|2, Yes, results were indeterminate",Integer,[biomarkdx]='1' and ([imagingdx]='1' or [imagingdx]='3')
-d1b,I,6a1. Elevated amyloid,AMYLPET,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[petdx]=1 or [petdx]=2
-d1b,I,6a2. Elevated tau pathology,TAUPET,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[petdx]=1 or [petdx]=2
+d1b,I,6a1. Elevated amyloid,AMYLPET,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8 | Not assessed | 9, Indeterminate",Integer,[petdx]=1 or [petdx]=2
+d1b,I,6a2. Elevated tau pathology,TAUPET,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8 | Not assessed | 9, Indeterminate",Integer,[petdx]=1 or [petdx]=2
 d1b,I,6b. FDG PET - Was FDG PET data or information used to support an etiological diagnosis?,FDGPETDX,Conditional (e.g. skip pattern),Integers 0-2,"0, No|1, Yes, results were normal or abnormal|2, Yes, results were indeterminate",Integer,[imagingdx]='1' or [imagingdx]='3'
-d1b,I,6b1. FDG PET - Consistent with AD,FDGAD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fdgpetdx]=1 or [fdgpetdx]=2
-d1b,I,6b2. FDG PET - Consistent with FTLD,FDGFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fdgpetdx]=1 or [fdgpetdx]=2
-d1b,I,6b3. FDG PET - Consistent with LBD,FDGLBD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fdgpetdx]=1 or [fdgpetdx]=2
-d1b,I,6b4. FDG PET - Consistent with other etiology,FDGOTH,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[fdgpetdx]=1 or [fdgpetdx]=2
+d1b,I,6b1. FDG PET - Consistent with AD,FDGAD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fdgpetdx]=1 or [fdgpetdx]=2
+d1b,I,6b2. FDG PET - Consistent with FTLD,FDGFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fdgpetdx]=1 or [fdgpetdx]=2
+d1b,I,6b3. FDG PET - Consistent with LBD,FDGLBD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fdgpetdx]=1 or [fdgpetdx]=2
+d1b,I,6b4. FDG PET - Consistent with other etiology,FDGOTH,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[fdgpetdx]=1 or [fdgpetdx]=2
 d1b,I,6b4a. FDG PET - Consistent with other etiology (specify),FDGOTHX,Conditional (e.g. skip pattern),Any text,,String,
 d1b,I,6c. Dopamine Transporter (DAT) Scan - Was DAT Scan data or information used to support an etiological diagnosis?,DATSCANDX,Conditional (e.g. skip pattern),Integers 0-2,"0, No|1, Yes, results were normal or abnormal|2, Yes, results were indeterminate",Integer,[biomarkdx]='1' and ([imagingdx]='1' or [imagingdx]='3')
 d1b,I,6d. Other tracer-based imaging - Were other tracer-based imaging used to support an etiological diagnosis?,TRACOTHDX,Conditional (e.g. skip pattern),Integers 0-2,"0, No|1, Yes, results were normal or abnormal|2, Yes, results were indeterminate",Integer,[biomarkdx]='1' and ([imagingdx]='1' or [imagingdx]='3')
 d1b,I,6d1a. Other tracer-based imaging - Were other tracer-based imaging used to support an etiological diagnosis? (specify),TRACOTHDXX,Conditional (e.g. skip pattern),Any text,,String,[tracothdx]='1' or [tracothdx]='2'
-d1b,I,6d1. Other tracer-based imaging - Consistent with AD,TRACERAD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[tracothdx]='1' or [tracothdx]='2'
-d1b,I,6d2. Other tracer-based imaging - Consistent with FTLD,TRACERFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[tracothdx]='1' or [tracothdx]='2'
-d1b,I,6d3. Other tracer-based imaging - Consistent with LBD,TRACERLBD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[tracothdx]='1' or [tracothdx]='2'
-d1b,I,6d4. Other tracer-based imaging - Consistent with other etiology,TRACEROTH,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[tracothdx]='1' or [tracothdx]='2'
+d1b,I,6d1. Other tracer-based imaging - Consistent with AD,TRACERAD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[tracothdx]='1' or [tracothdx]='2'
+d1b,I,6d2. Other tracer-based imaging - Consistent with FTLD,TRACERFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[tracothdx]='1' or [tracothdx]='2'
+d1b,I,6d3. Other tracer-based imaging - Consistent with LBD,TRACERLBD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[tracothdx]='1' or [tracothdx]='2'
+d1b,I,6d4. Other tracer-based imaging - Consistent with other etiology,TRACEROTH,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[tracothdx]='1' or [tracothdx]='2'
 d1b,I,6d4a. Other tracer-based imaging - Consistent with other etiology (specify),TRACEROTHX,Conditional (e.g. skip pattern),Any text,,String,
 d1b,I,"7a. Structural Imaging (i.e., MRI or CT) - Was structural imaging data or information used to support an etiological diagnosis?",STRUCTDX,Conditional (e.g. skip pattern),Integers 0-2,"0, No|1, Yes, results were normal or abnormal|2, Yes, results were indeterminate",Integer,[imagingdx]=2 or [imagingdx]=3
-d1b,I,7a1. Atrophy pattern conistent with AD,STRUCTAD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structdx]='1' or [structdx]='2'
-d1b,I,7a2. Atrophy pattern consistent with FTLD,STRUCTFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structdx]='1' or [structdx]='2'
-d1b,I,7a3. Consistent with cerebrovascular disease (CVD),STRUCTCVD,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structdx]='1' or [structdx]='2'
-d1b,I,7a3a. Large vessel infarct(s),IMAGLINF,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structcvd]='1'
-d1b,I,7a3b. Lacunar infarct(s),IMAGLAC,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structcvd]='1'
-d1b,I,7a3c. Macrohemorrhage(s),IMAGMACH,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structcvd]='1'
-d1b,I,7a3d. Microhemorrhage(s),IMAGMICH,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structcvd]='1'
-d1b,I,7a3e. Moderate white-matter hyperintensity (CHS score 5-6),IMAGMWMH,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structcvd]='1'
-d1b,I,7a3f. Extensive white-matter hyperinensity (CHS score 7-8+),IMAGEWMH,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[structcvd]='1'
+d1b,I,7a1. Atrophy pattern conistent with AD,STRUCTAD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[structdx]='1' or [structdx]='2'
+d1b,I,7a2. Atrophy pattern consistent with FTLD,STRUCTFTLD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[structdx]='1' or [structdx]='2'
+d1b,I,7a3. Consistent with cerebrovascular disease (CVD),STRUCTCVD,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[structdx]='1' or [structdx]='2'
+d1b,I,7a3a. Large vessel infarct(s),IMAGLINF,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[structcvd]='1'
+d1b,I,7a3b. Lacunar infarct(s),IMAGLAC,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[structcvd]='1'
+d1b,I,7a3c. Macrohemorrhage(s),IMAGMACH,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[structcvd]='1'
+d1b,I,7a3d. Microhemorrhage(s),IMAGMICH,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[structcvd]='1'
+d1b,I,7a3e. White-matter hyperintensity ,IMAGWMH,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[structcvd]='1'
+d1b,I,7a3e1. White-matter hyperintensity severity,IMAGWMHSEV,Conditional (e.g. skip pattern),Integers 1-2,"1, Moderate white–matter hyperintensity (CHS score 5–6)  | 2, Extensive white–matter hyperintensity (CHS score 7–8+)",Integer,[imagwmh]='1'
 d1b,I,8. Other biomarker modality - Was another biomarker modality used to support an etiological diagnosis?,OTHBIOM1,Conditional (e.g. skip pattern),Integers 0-2,"0, No|1, Yes, results were normal or abnormal|2, Yes, results were indeterminate",Integer,
 d1b,I,8a1. Other biomarker modality - Was another biomarker modality used to support an etiological diagnosis? (specify),OTHBIOMX1,Conditional (e.g. skip pattern),Any text,,String,[othbiom1]='1' or [othbiom1]='2'
-d1b,I,8a. Other biomarker modality - Consistent with AD,BIOMAD1,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
-d1b,I,8b. Other biomarker modality - Consistent with FTLD,BIOMFTLD1,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
-d1b,I,8c. Other biomarker modality - Consistent with LBD,BIOMLBD1,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
-d1b,I,8d. Other biomarker modality - Consistent with other etiology,BIOMOTH1,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
+d1b,I,8a. Other biomarker modality - Consistent with AD,BIOMAD1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
+d1b,I,8b. Other biomarker modality - Consistent with FTLD,BIOMFTLD1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
+d1b,I,8c. Other biomarker modality - Consistent with LBD,BIOMLBD1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
+d1b,I,8d. Other biomarker modality - Consistent with other etiology,BIOMOTH1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
 d1b,I,8d1. Other biomarker modality - Consistent with other etiology (specify),BIOMOTHX1,Conditional (e.g. skip pattern),Any text,,String,
 d1b,I,9. Other biomarker modality - Was another biomarker modality used to support an etiological diagnosis?,OTHBIOM2,Conditional (e.g. skip pattern),Integers 0-2,"0, No|1, Yes, results were normal or abnormal|2, Yes, results were indeterminate",Integer,[othbiom1]='1' or [othbiom1]='2'
 d1b,I,9a1. Other biomarker modality - Was another biomarker modality used to support an etiological diagnosis? (specify),OTHBIOMX2,Conditional (e.g. skip pattern),Any text,,String,[othbiom2]='1' or [othbiom2]='2'
-d1b,I,9a. Other biomarker modality - Consistent with AD,BIOMAD2,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
-d1b,I,9b. Other biomarker modality - Consistent with FTLD,BIOMFTLD2,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
-d1b,I,9c. Other biomarker modality - Consistent with LBD,BIOMLBD2,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
-d1b,I,9d. Other biomarker modality - Consistent with other etiology,BIOMOTH2,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
+d1b,I,9a. Other biomarker modality - Consistent with AD,BIOMAD2,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
+d1b,I,9b. Other biomarker modality - Consistent with FTLD,BIOMFTLD2,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
+d1b,I,9c. Other biomarker modality - Consistent with LBD,BIOMLBD2,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
+d1b,I,9d. Other biomarker modality - Consistent with other etiology,BIOMOTH2,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
 d1b,I,9d1. Other biomarker modality - Consistent with other etiology (specify),BIOMOTHX2,Conditional (e.g. skip pattern),Any text,,String,
 d1b,I,10. Other biomarker modality - Was another biomarker modality used to support an etiological diagnosis?,OTHBIOM3,Conditional (e.g. skip pattern),Integers 0-2,"0, No|1, Yes, results were normal or abnormal|2, Yes, results were indeterminate",Integer,[othbiom2]='1' or [othbiom2]='2'
 d1b,I,10a1. Other biomarker modality - Was another biomarker modality used to support an etiological diagnosis? (specify),OTHBIOMX3,Conditional (e.g. skip pattern),Any text,,String,[othbiom3]='1' or [othbiom3]='2'
-d1b,I,10a. Other biomarker modality - Consistent with AD,BIOMAD3,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom3]='1' or [othbiom3]='2'
-d1b,I,10b. Other biomarker modality - Consistent with FTLD,BIOMFTLD3,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom3]=1 or [othbiom3]=2
-d1b,I,10c. Other biomarker modality - Consistent with LBD,BIOMLBD3,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom3]='1' or [othbiom3]='2'
-d1b,I,10d. Other biomarker modality - Consistent with other etiology,BIOMOTH3,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Indeterminate",Integer,[othbiom3]='1' or [othbiom3]='2'
+d1b,I,10a. Other biomarker modality - Consistent with AD,BIOMAD3,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom3]='1' or [othbiom3]='2'
+d1b,I,10b. Other biomarker modality - Consistent with FTLD,BIOMFTLD3,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom3]=1 or [othbiom3]=2
+d1b,I,10c. Other biomarker modality - Consistent with LBD,BIOMLBD3,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom3]='1' or [othbiom3]='2'
+d1b,I,10d. Other biomarker modality - Consistent with other etiology,BIOMOTH3,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, Not consistent|1, Yes, consistent|8 | Not assessed | 9, Indeterminate",Integer,[othbiom3]='1' or [othbiom3]='2'
 d1b,I,10d1. Other biomarker modality - Consistent with other etiology (specify),BIOMOTHX3,Conditional (e.g. skip pattern),Any text,,String,
 d1b,I,11. Is there an autosomal dominant pathogenic variant to support an etiological diagnosis?,AUTDOMMUT,Conditional (e.g. skip pattern),"Integers 0, 1, 9","0, No|1, Yes|9, Unknown/Not disclosed",Integer,
 d1b,I,12. Alzheimer's disease,ALZDIS,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
@@ -72,23 +69,23 @@ d1b,I,"12a. Primary, contributing, or non-contributing - Alzheimer's disease",AL
 d1b,I,13. Lewy body disease,LBDIS,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1b,I,"13a. Primary, contributing, or non-contributing - Lewy body disease",LBDIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[lbdis] = '1'
 d1b,I,14. Frontotemporal lobar degeneration,FTLD,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
-d1b,I,"14a. Primary, contributing, or non-contributing - Frontotemporal lobar degeneration",FTLDIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[ftld] = '1'
-d1b,I,14b1. Progressive supranuclear palsy (PSP),PSP,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[ftld] = '1'
-d1b,I,"14b1a. Primary, contributing, or non-contributing - Progressive supranuclear palsy (PSP)",PSPIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[psp] = '1'
-d1b,I,14b2. Corticobasal degeneration (CBD),CORT,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[ftld] = '1'
-d1b,I,"14b2a. Primary, contributing, or non-contributing - Corticobasal degeneration (CBD)",CORTIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cort] = '1'
-d1b,I,14b3. FTLD with motor neuron disease,FTLDMO,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[ftld] = '1'
-d1b,I,"14b3a. Primary, contributing, or non-contributing - FTLD with motor neuron disease",FTLDMOIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[ftldmo] = '1'
-d1b,I,14b4. FTLD not otherwise specified (NOS),FTLDNOS,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[ftld] = '1'
-d1b,I,"14b4a. Primary, contributing, or non-contributing - FTLD not otherwise specified (NOS)",FTLDNOIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[ftldnos] = '1'
-d1b,I,14c. FTLD subtype,FTLDSUBT,Conditional (e.g. skip pattern),"Integers 1-3, 9","1, Tauopathy|2, TDP-43 proteinopathy|3, Other|9, Unknown",Integer,[ftld] = '1'
-d1b,I,14c1. Other FTLD subtype (specify),FTLDSUBX,Conditional (e.g. skip pattern),Any text,,String,[ftldsubt]=3
+d1b,I,14a. Progressive supranuclear palsy (PSP),PSP,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[ftld] = '1'
+d1b,I,"14a1. Primary, contributing, or non-contributing - Progressive supranuclear palsy (PSP)",PSPIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[psp] = '1'
+d1b,I,14b. Corticobasal degeneration (CBD),CORT,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[ftld] = '1'
+d1b,I,"14b1. Primary, contributing, or non-contributing - Corticobasal degeneration (CBD)",CORTIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cort] = '1'
+d1b,I,14c. FTLD with motor neuron disease,FTLDMO,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[ftld] = '1'
+d1b,I,"14c1. Primary, contributing, or non-contributing - FTLD with motor neuron disease",FTLDMOIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[ftldmo] = '1'
+d1b,I,14d. FTLD not otherwise specified (NOS),FTLDNOS,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[ftld] = '1'
+d1b,I,"14d1. Primary, contributing, or non-contributing - FTLD not otherwise specified (NOS)",FTLDNOIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[ftldnos] = '1'
+d1b,I,14e. FTLD subtype,FTLDSUBT,Conditional (e.g. skip pattern),"Integers 1-3, 9","1, Tauopathy|2, TDP-43 proteinopathy|3, Other|9, Unknown",Integer,[ftld] = '1'
+d1b,I,14e1. Other FTLD subtype (specify),FTLDSUBX,Conditional (e.g. skip pattern),Any text,,String,[ftldsubt]=3
 d1b,I,15. Vascular brain injury (based on clinical and imaging evidence according to your Center's standards),CVD,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1b,I,"15a.  Primary, contributing, or non-contributing - Vascular brain injury",CVDIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cvd] = '1'
 d1b,I,16. Multiple system atrophy,MSA,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1b,I,"16a. Primary, contributing, or non-contributing - Multiple system atrophy",MSAIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[msa] = '1'
-d1b,I,17. Chronic traumatic encephalopathy,CTE,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
-d1b,I,"17a. Primary, contributing, or non-contributing - Chronic traumatic encephalopathy",CTEIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cte] = '1'
+d1b,I,17. Chronic traumatic encephalopathy (CTE),CTE,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
+d1b,I,"17a. Primary, contributing, or non-contributing - CTE",CTEIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cte] = '1'
+d1b,I,17b. CTE certainty,CTECERT,Conditional (e.g. skip pattern),Integers 1-3,"1, Suggestive CTE | 2, Possible CTE | 3, Probable CTE",Integer,[cte] = '1'
 d1b,I,18. Down syndrome,DOWNS,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
 d1b,I,"18a. Primary, contributing, or non-contributing - Down syndrome",DOWNSIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[downs] = '1'
 d1b,I,19. Huntington's disease,HUNT,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,
