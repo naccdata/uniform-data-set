@@ -5,4 +5,3 @@ uds_header,F,ADRC Visit Number,VISITNUM,Yes,Any text,,String,,Can be determined 
 uds_header,F,Packet Code,PACKET,Yes,F,"F, Follow-up Visit Packet",String,,
 uds_header,F,Form version number,FORMVER,Yes,4,"4, 4",Numeric,,
 uds_header,F,Form Date,VISITDATE,Yes,mm/dd/yyyy or yyyy/mm/dd,,Date,,
-uds_header,F,Examiner's initials,INITIALS,No,Any text,,String,,
