@@ -5,4 +5,3 @@ uds_header,I,ADRC Visit Number,VISITNUM,Yes,Any text,,String,,Can be determined 
 uds_header,I,Packet Code,PACKET,Yes,"I, I4","I, Initial Visit Packet | I4, Initial UDSv4 Visit Packet",String,,"ONLY use the ""I4"" packet code for participants who had previous UDS data and are completing UDSv4 for the first time. Use ""I"" if the participant is newly enrolled"
 uds_header,I,Form version number,FORMVER,Yes,4,"4, 4",Numeric,,
 uds_header,I,Form Date,VISITDATE,Yes,mm/dd/yyyy or yyyy/mm/dd,,Date,,
-uds_header,I,Examiner's initials,INITIALS,No,Any text,,String,,
