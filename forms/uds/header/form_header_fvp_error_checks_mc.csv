@@ -1,0 +1,11 @@
+﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
+uds_header-fvp-m-001,001,Error,uds_header,F,PTID,Missingness,PTID must be present,PTID cannot be blank,Header variable PTID cannot be blank,IF PTID=blank,,,Yes,Yes
+uds_header-fvp-m-002,002,Error,uds_header,F,ADCID,Missingness,ADCID must be present,ADCID cannot be blank,Header variable ADCID cannot be blank,IF ADCID=blank ,,,Yes,Yes
+uds_header-fvp-c-003,003,Error,uds_header,F,ADCID,Conformity,ADCID conforms,ADCID must be a valid code in list_of_adcids,Header variable ADCID must be a valid code in list_of_adcids,IF ADCID is not in list_of_adcids,,,Yes,Yes
+uds_header-fvp-m-004,004,Error,uds_header,F,VISITNUM,Missingness,VISITNUM must be present,VISITNUM cannot be blank,Header variable VISITNUM cannot be blank,IF VISITNUM=blank,,,Yes,Yes
+uds_header-fvp-m-005,005,Error,uds_header,F,PACKET,Missingness,PACKET must be present,PACKET cannot be blank,Header variable PACKET cannot be blank,IF PACKET=blank ,,,Yes,Yes
+uds_header-fvp-c-006,006,Error,uds_header,F,PACKET,Conformity,PACKET conforms,"PACKET must be in (""F"")","Header variable PACKET must be in (""F"")","IF PACKET is not in (""F"")",,,Yes,Yes
+uds_header-fvp-m-007,007,Error,uds_header,F,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Header variable FORMVER cannot be blank,IF FORMVER=blank,,,Yes,Yes
+uds_header-fvp-c-008,008,Error,uds_header,F,FORMVER,Conformity,FORMVER conforms,FORMVER must equal 4,Header variable FORMVER must equal 4,IF FORMVER ne 4,,,Yes,Yes
+uds_header-fvp-m-009,009,Error,uds_header,F,VISITDATE,Missingness,VISITDATE must be present,VISITDATE cannot be blank,Header variable VISITDATE cannot be blank,IF VISITDATE=blank,,,No,No
+uds_header-fvp-c-010,010,Error,uds_header,F,VISITDATE,Conformity,VISITDATE conforms,VISITDATE must be in mm/dd/yyyy or yyyy/mm/dd format,Header variable VISITDATE must be in mm/dd/yyyy or yyyy/mm/dd format,IF VISITDATE not in (mm/dd/yyyy or yyyy/mm/dd),,,Yes,Yes
