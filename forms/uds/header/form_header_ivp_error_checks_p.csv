@@ -1,0 +1,2 @@
+﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
+uds_header-fvp-p-1001,1001,Error,uds_header,I,VISITDATE,Plausibility,VISITDATE earliest date allowed,VISITDATE must not be from date before form was released,Header variable VISITDATE must not be from date before form was released,IF VISITDATE before (01/01/2025),,,Yes,No
