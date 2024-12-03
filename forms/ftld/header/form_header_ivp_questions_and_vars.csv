@@ -1,0 +1,7 @@
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,notes
+ftld_header,IF,PTID,PTID,Yes,Any text,,String,,"Follow your Center’s Patient ID scheme; use same ID as in MDS, if subject is enrolled in MDS."
+ftld_header,IF,ADRC name,ADCID,Yes,List of current ADCIDs,List of current ADCIDs,Integer,,Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids
+ftld_header,IF,ADRC Visit Number,VISITNUM,Yes,Any text,,String,,Can be determined by Center. The Center may use its existing visit number scheme. It is not required to start with 1.
+ftld_header,IF,Packet Code,PACKET,Yes,IF,"IF, Initial Visit Packet",String,,
+ftld_header,IF,Form version number,FORMVER,Yes,3,"3, 3",Numeric,,
+ftld_header,IF,Form Date,VISITDATE,Yes,mm/dd/yyyy or yyyy/mm/dd,,Date,,
