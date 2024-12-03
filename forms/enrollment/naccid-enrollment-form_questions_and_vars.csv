@@ -27,4 +27,3 @@ enrl,6b. Please provide the previous PTID (if known):,OLDPTID,No,Any text,,Strin
 enrl,"7. If this is a transfer, is the NACCID for this participant known?",NACCIDKNWN,Conditional,"Integers 0-1, 8, or blank","0, No|1, Yes|8, Not an update",Integer,[enrltype]='2'
 enrl,7a. Please provide the NACCID: ,NACCID,Conditional (e.g. skip pattern),"10 digit alpha numeric code beginning with ""NACC""",,String,[naccidknwn] = '1'
 enrl,8. Please re-enter the participant PTID before completing the form,PTIDCONF,Always,Any text,,String,
-,,,,,,String,
