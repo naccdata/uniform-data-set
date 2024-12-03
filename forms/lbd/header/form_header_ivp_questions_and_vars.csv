@@ -1,0 +1,7 @@
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,notes
+lbd_header,IL,PTID,PTID,Yes,Any text,,String,,"Follow your Center’s Patient ID scheme; use same ID as in MDS, if subject is enrolled in MDS."
+lbd_header,IL,ADRC name,ADCID,Yes,List of current ADCIDs,List of current ADCIDs,Integer,,Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids
+lbd_header,IL,ADRC Visit Number,VISITNUM,Yes,Any text,,String,,Can be determined by Center. The Center may use its existing visit number scheme. It is not required to start with 1.
+lbd_header,IL,Packet Code,PACKET,Yes,IL,"IL, Initial Visit Packet",String,,
+lbd_header,IL,Form version number,FORMVER,Yes,3-3.1,"3, 3 | 3.1, 3.1",Numeric,,
+lbd_header,IL,Form Date,VISITDATE,Yes,mm/dd/yyyy or yyyy/mm/dd,,Date,,
