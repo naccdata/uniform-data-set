@@ -1,0 +1,7 @@
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,notes
+uds_header,I,PTID,PTID,Yes,Any text,,String,,"Follow your Center’s Patient ID scheme; use same ID as in MDS, if subject is enrolled in MDS."
+uds_header,I,ADRC name,ADCID,Yes,List of current ADCIDs,List of current ADCIDs,Integer,,Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids
+uds_header,I,ADRC Visit Number,VISITNUM,Yes,Any text,,String,,Can be determined by Center. The Center may use its existing visit number scheme. It is not required to start with 1.
+uds_header,I,Packet Code,PACKET,Yes,"I, I4","I, Initial Visit Packet | I4, Initial UDSv4 Visit Packet",String,,"ONLY use the ""I4"" packet code for participants who had previous UDS data and are completing UDSv4 for the first time. Use ""I"" if the participant is newly enrolled"
+uds_header,I,Form version number,FORMVER,Yes,4,"4, 4",Numeric,,
+uds_header,I,Form Date,VISITDATE,Yes,mm/dd/yyyy or yyyy/mm/dd,,Date,,

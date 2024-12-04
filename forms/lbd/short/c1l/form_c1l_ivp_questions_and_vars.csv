@@ -1,0 +1,7 @@
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+c1l,IL,0a. C1L Neuropsychological Battery Summary Scores - Form date,FRMDATEC1L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+c1l,IL,0b. C1L Neuropsychological Battery Summary Scores - Examiner's initials,INITIALSC1L,No,text,,String,
+c1l,IL,2a. Noise Pareidolia Task - Correct Face Responses,LBNPFACE,Always,"Integers 0-7, 95-98","0-7, 95 = physical problem, 96 = cognitive/behavior problem, 97 = other problem, 98 = verbal refusal",Integer,
+c1l,IL,2b. Noise Pareidolia Task - Correct Noise Responses,LBNPNOIS,Conditional (e.g. skip pattern),Integers 0-13,0-13,Integer,Blank if Question 2a LBNPFACE = 95-98
+c1l,IL,2c. Noise Pareidolia Task - Total Correct Responses,LBNPTCOR,Conditional (e.g. skip pattern),Integers 0-20,0-20,Integer,Blank if Question 2a LBNPFACE = 95-98
+c1l,IL,2d. Noise Pareidolia Task - Noise (Pareidolia) Responses,LBNPPARD,Conditional (e.g. skip pattern),Integers 0-13,0-13,Integer,Blank if Question 2a LBNPFACE = 95-98

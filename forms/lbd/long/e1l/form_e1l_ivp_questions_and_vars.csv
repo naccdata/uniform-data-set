@@ -1,0 +1,18 @@
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+e1l,IL,0a. E1L Genetics - Form date,FRMDATEE1L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+e1l,IL,0b. E1L Genetics - Examiner's initials,INITIALSE1L,No,text,,String,
+e1l,IL,LRRK2,LBGLRRK2,Always,"Integers 0-1, and 9","0, No | 1, Yes | 9, Unknown",Integer,
+e1l,IL,"If Yes (LRRK2), information source",LBGLRKIS,Conditional,"Integers 1-3, and 9 ","1, Commercial laboratory test documentation | 2, Research laboratory test documentation | 3, Family report (select only if no laboratory test was done) | 9, Unknown",Integer,Blank if Question 1 LBGLRRK2 = 0 (No) or 9 (Unknown)
+e1l,IL,PARK2,LBGPARK2,Always,"Integers 0-1, and 9","0, No | 1, Yes | 9, Unknown",Integer,
+e1l,IL,"If Yes (PARK2), information source",LBGPK2IS,Conditional,"Integers 1-3, and 9 ","1, Commercial laboratory test documentation | 2, Research laboratory test documentation | 3, Family report (select only if no laboratory test was done) | 9, Unknown",Integer,Blank if Question 2 LBGPARK2 = 0 (No) or 9 (Unknown)
+e1l,IL,PARK7,LBGPARK7,Always,"Integers 0-1, and 9","0, No | 1, Yes | 9, Unknown",Integer,
+e1l,IL,"If Yes (PARK7), information source",LBGPK7IS,Conditional,"Integers 1-3, and 9 ","1, Commercial laboratory test documentation | 2, Research laboratory test documentation | 3, Family report (select only if no laboratory test was done) | 9, Unknown",Integer,Blank if Question 3 LBGPARK7 = 0 (No) or 9 (Unknown)
+e1l,IL,PINK1,LBGPINK1,Always,"Integers 0-1, and 9","0, No | 1, Yes | 9, Unknown",Integer,
+e1l,IL,"If Yes (PINK1), information source",LBGPNKIS,Conditional,"Integers 1-3, and 9 ","1, Commercial laboratory test documentation | 2, Research laboratory test documentation | 3, Family report (select only if no laboratory test was done) | 9, Unknown",Integer,Blank if Question 4 LGBPINK1 = 0 (No) or 9 (Unknown)
+e1l,IL,SNCA,LBGSNCA,Always,"Integers 0-1, and 9","0, No | 1, Yes | 9, Unknown",Integer,
+e1l,IL,"If Yes (SNCA), information source",LBGSNCIS,Conditional,"Integers 1-3, and 9 ","1, Commercial laboratory test documentation | 2, Research laboratory test documentation | 3, Family report (select only if no laboratory test was done) | 9, Unknown",Integer,Blank if Question 5 LBGSNCA= 0 (No) or 9 (Unknown)
+e1l,IL,GBA,LBGGBA,Always,"Integers 0-1, and 9","0, No | 1, Yes | 9, Unknown",Integer,
+e1l,IL,"If Yes (GBA), information source",LBGGBAIS,Conditional,"Integers 1-3, and 9 ","1, Commercial laboratory test documentation | 2, Research laboratory test documentation | 3, Family report (select only if no laboratory test was done) | 9, Unknown",Integer,Blank if Question 6 LBGGBA = 0 (No) or 9 (Unknown)
+e1l,IL,Other,LBGOTHR,Always,"Integers 0-1, and 9","0, No | 1, Yes | 9, Unknown",Integer,
+e1l,IL,"If Yes (Other), information source",LBGOTHIS,Conditional,"Integers 1-3, and 9 ","1, Commercial laboratory test documentation | 2, Research laboratory test documentation | 3, Family report (select only if no laboratory test was done) | 9, Unknown",Integer,Blank if Question 7 LBGOTHR = 0 (No) or 9 (Unknown).
+e1l,IL,Specify other,LBGOTHX,Conditional,Any text,,String,Blank if Question 7 LBGOTHR = 0 (No) or 9 (Unknown).

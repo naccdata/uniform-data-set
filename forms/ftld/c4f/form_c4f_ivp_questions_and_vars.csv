@@ -1,0 +1,15 @@
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+c4f,IF,0a. C4F Behavioral Inhibition Scale - Form date,FRMDATEC4F,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+c4f,IF,0b. C4F Behavioral Inhibition Scale - Examiner's initials,INITIALSC4F,No,text,,String,
+c4f,IF,0c. C4F Behavioral Inhibition Scale - Language,LANGC4F,Always,Integers 1-2,"1, English|2, Spanish",Integer,
+c4f,IF,0d. C4F Behavioral Inhibition Scale - Submitted?,MODEC4F,Always,Integers 0-1,"0, Not completed | 1, In-person",Integer,
+c4f,IF,"0d1. If 'C4F Behavioral Inhibition Scale' not submitted, specify reason",C4FNOT,Conditional,Integers 95-99,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal|99, Unknown or inadequate information",Integer,[modec4f]='0'
+c4f,IF,0. The questionnaire was completed,FTDCPC4F,Always,Integers 0-2,"0 = Independently by informant, as described in Instructions to the center | 1 = Via in-person interview of informant by clinic staff | 2 = Via telephone interview of informant by clinic staff",Integer,
+c4f,IF,"1. If the participant thinks something unpleasant is going to happen, he/she usually gets pretty ""worked up.""",FTDWORKU,No,Integers 1-4,1 = Strongly Disagree| 2 = Disagree | 3 = Agree | 4 = Strongly Agree,Integer,Blank if question not answered
+c4f,IF,2. The participant worries about making mistakes,FTDMIST,No,Integers 1-4,1 = Strongly Disagree| 2 = Disagree | 3 = Agree | 4 = Strongly Agree,Integer,Blank if question not answered
+c4f,IF,3. Criticism or scolding hurts the participant quite a bit,FTDCRIT,No,Integers 1-4,1 = Strongly Disagree| 2 = Disagree | 3 = Agree | 4 = Strongly Agree,Integer,Blank if question not answered
+c4f,IF,4. The participant feels pretty worried or upset when he/she thinks somebody is angry at him/her,FTDWORR,No,Integers 1-4,1 = Strongly Disagree| 2 = Disagree | 3 = Agree | 4 = Strongly Agree,Integer,Blank if question not answered
+c4f,IF,"5. Even if something bad is about to happen to the participant, he/she rarely experiences fear or nervousness",FTDBAD,No,Integers 1-4,1 = Strongly Disagree| 2 = Disagree | 3 = Agree | 4 = Strongly Agree,Integer,Blank if question not answered
+c4f,IF,6. The participant feels worried when he/she thinks he/she has done poorly at something,FTDPOOR,No,Integers 1-4,1 = Strongly Disagree| 2 = Disagree | 3 = Agree | 4 = Strongly Agree,Integer,Blank if question not answered
+c4f,IF,7. The participant has very few fears compared to his/her friends,FTDFFEAR,No,Integers 1-4,1 = Strongly Disagree| 2 = Disagree | 3 = Agree | 4 = Strongly Agree,Integer,Blank if question not answered
+c4f,IF,8. BIS Total Score,FTDBIST,Always,"Integers 7-28, and 88",7-28 | 88 = Some questions were not answered,Integer,
