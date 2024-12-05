@@ -1,0 +1,16 @@
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+b8l,IL,0a. B8L Scopa Sleep — Participant - Form date,FRMDATEB8L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+b8l,IL,0b. B8L Scopa Sleep — Participant - Examiner's initials,INITIALSB8L,No,text,,String,
+b8l,IL,"0. Is the participant too cognitively impaired (e.g., CDR > 1) to complete this form",PACOGIMP,Always,Integers 0-1,"0,  No| 1, Yes",Integer,
+b8l,IL,1. Had trouble falling asleep when you went to bed at night,PANSFALL,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Not at all| 1, A little| 2 , Quite a bit| 3, A lot",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,2. Felt that you have woken too often,PANSWKOF,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Not at all| 1, A little| 2 , Quite a bit| 3, A lot",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,3. Felt that you have been lying awake for too long at night,PANSLYAW,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Not at all| 1, A little| 2 , Quite a bit| 3, A lot",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,4. Felt that you have woken too early in the morning,PANSWKER,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Not at all| 1, A little| 2 , Quite a bit| 3, A lot",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,5. Felt you have had too little sleep at night,PANSLTTL,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Not at all| 1, A little| 2 , Quite a bit| 3, A lot",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,"6. Overall, how well have you slept at night during the past month?",SCPARATE,Conditional (e.g. skip pattern),Integers 1-7 or blank,"1, Very well| 2, Well| 3, Rather well| 4, Not well but not badly| 5, Rather badly| 6, Badly| 7, Very badly",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,7. Fallen asleep unexpectedly during the day or in the evening,PADSUNEX,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Never| 1, Sometimes| 2, Regularly| 3, Often",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,8. Fallen asleep while sitting peacefully,PADSSITP,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Never| 1, Sometimes| 2, Regularly| 3, Often",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,9. Fallen asleep while watching TV or reading,PADSWATV,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Never| 1, Sometimes| 2, Regularly| 3, Often",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,10. Fallen asleep while talking to someone,PADSTALK,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Never| 1, Sometimes| 2, Regularly| 3, Often",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,11. Had trouble staying awake during the day or in the evening,PADSAWDY,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Never| 1, Sometimes| 2, Regularly| 3, Often",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
+b8l,IL,12. Experienced falling asleep during the day as a problem,PADSFLDY,Conditional (e.g. skip pattern),Integers 0-3 or blank,"0, Never| 1, Sometimes| 2, Regularly| 3, Often",Integer,Blank if Question 0 PACOGIMP = 1 (Yes)
