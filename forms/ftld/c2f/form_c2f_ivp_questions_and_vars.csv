@@ -3,7 +3,7 @@ c2f,IF,0a. C2F Social Norms Questionnaire - Form date,FRMDATEC2F,Always,mm/dd/yy
 c2f,IF,0b. C2F Social Norms Questionnaire - Examiner's initials,INITIALSC2F,No,text,,String,
 c2f,IF,0c. C2F Social Norms Questionnaire - Language,LANGC2F,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 c2f,IF,0. Reason form not completed,FTDCPC2F,Conditional,"Integers 95-98, blank",95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,Blank if form completed
-c2f,IF,1. Tell a stranger you don’t like their hairstyle?,FTDHAIRD,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
+c2f,IF,1. Tell a stranger you don't like their hairstyle?,FTDHAIRD,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,2. Spit on the floor?,FTDSPIT,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,3. Blow your nose in public?,FTDNOSE,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,4. Ask a coworker their age?,FTDCOAGE,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
@@ -12,7 +12,7 @@ c2f,IF,6. Cut in line if you are in a hurry?,FTDCUT,Conditional,"Integers 0-1, b
 c2f,IF,7. Laugh when you yourself trip and fall?,FTDYTRIP,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,8. Eat pasta with your fingers?,FTDEATP,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,9. Tell a coworker your age?,FTDTELLA,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
-c2f,IF,10. Tell someone your opinion of a movie they haven’t seen?,FTDOPIN,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
+c2f,IF,10. Tell someone your opinion of a movie they haven't seen?,FTDOPIN,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,11. Laugh when someone else trips and falls?,FTDLAUGH,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,12. Wear the same shirt every day?,FTDSHIRT,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,13. Keep money you find on the sidewalk?,FTDKEEPM,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
@@ -21,7 +21,7 @@ c2f,IF,15. Tell a coworker you think they are overweight?,FTDOVER,Conditional,"I
 c2f,IF,16. Eat ribs with your fingers?,FTDEATR,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,17. Tell a stranger you like their hairstyle?,FTDHAIRL,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,18. Wear the same shirt twice in two weeks?,FTDSHIRW,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
-c2f,IF,19. Tell someone the ending of a movie they haven’t seen?,FTDMOVE,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
+c2f,IF,19. Tell someone the ending of a movie they haven't seen?,FTDMOVE,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,20. Hug a stranger without asking first?,FTDHUGS,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,21. Talk out loud during a movie at the theater?,FTDLOUD,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)
 c2f,IF,22. Tell a coworker you think they have lost weight?,FTDLOST,Conditional,"Integers 0-1, blank",0 = No | 1 = Yes,Integer,Blank if question not answered or Question 0 FTDCPC2F in (95 -98)

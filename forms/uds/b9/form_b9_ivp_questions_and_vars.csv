@@ -12,7 +12,7 @@ b9,I,4. Does the co-participant report a decline in any cognitive domain (relati
 b9,I,5. Does the co-participant report a change in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOTIN,Yes,"Integers 0-1,8","0, No|1, Yes|8, There is no co-participant",Integer,
 b9,I,6. Does the co-participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYMIN,Yes,"Integers 0-1,8","0, No|1, Yes|8, There is no co-participant",Integer,
 b9,I,"7. Does the participant have any neuropsychiatric/behavioral symptoms, declines in any cognitive domains, or changes in any motor domains?",DECCLIN,Yes,Integers 0-1,"0, No|1, Yes",Integer,
-b9,I,"8. Based on the clinician’s judgment, is the participant currently experiencing meaningful impairment in cognition?",DECCLCOG,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1'
+b9,I,"8. Based on the clinician's judgment, is the participant currently experiencing meaningful impairment in cognition?",DECCLCOG,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1'
 b9,I,9a. Indicate whether the participant currently is meaningfully impaired in memory.,COGMEM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,
 b9,I,9b. Indicate whether the participant currently is meaningfully impaired in orientation.,COGORI,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,
 b9,I,"9c.Indicate whether the participant currently is meaningfully impaired in executive function (judgment, planning, and problem-solving)",COGJUDG,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,
@@ -25,7 +25,7 @@ b9,I,9h1. Specify other cognitive domains,COGOTHRX,No,text,,String,[cogothr]='1'
 b9,I,"9i. If any of the cognitive-related behavioral symptoms in 9a-9h are present, at what age did they begin?",COGAGE,No,Integers 9-110,9-110,Integer,[cogmem] = '1' or [cogori] = '1' or [cogjudg] = '1' or [coglang] = '1' or [cogvis] = '1' or [cogattn] = '1' or [cogfluc] = '1' or [cogothr] = '1'
 b9,I,10. Indicate the mode of onset for the most prominent cognitive problem that is causing the participant's complaints and/or affecting the participant's function.,COGMODE,No,"Integers 1-4, 99","1, Gradual|2, Subacute|3, Abrupt|4, Other|99, Unknown",Integer,[decclog] = '1'
 b9,I,10a. Specify other mode of onset of cognitive symptoms,COGMODEX,No,text,,String,[cogmode]='4'
-b9,I,"11. Based on the clinician’s judgment, does the participant manifest clinically meaningful neuropsychiatric symptoms or meaningful change in behavior?",DECCLBE,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1'
+b9,I,"11. Based on the clinician's judgment, does the participant manifest clinically meaningful neuropsychiatric symptoms or meaningful change in behavior?",DECCLBE,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1'
 b9,I,"12a. Participant currently manifests meaningful change in behavior — Apathy, withdrawal",BEAPATHY,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1'
 b9,I,12b. Participant currently manifests meaningful change in behavior — Depressed mood,BEDEP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1'
 b9,I,12c. Participant currently manifests meaningful change in behavior — Anxiety,BEANX,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1'
@@ -63,7 +63,7 @@ b9,I,12u. Other behavioral symptom,BEOTHR,No,Integers 0-1,"0, No|1, Yes",Integer
 b9,I,"12u1. Participant currently manifests meaningful change in behavior - Other, specify:",BEOTHRX,No,text,,String,[beothr]='1'
 b9,I,13. Overall mode of onset for behavioral symptoms,BEMODE,No,"Integers 1-4, 99","1, Gradual|2, Subacute|3, Abrupt|4, Other|99, Unknown",Integer,[decclbe] = '1'
 b9,I,13a. Other mode of onset - specify,BEMODEX,No,text,,String,[bemode]='4'
-b9,I,"14. Based on the clinician’s judgment, is the participant currently experiencing any meaningful changes in motor function?",DECCLMOT,No,Integers 0-1,"0, No|1, Yes",Integer,
+b9,I,"14. Based on the clinician's judgment, is the participant currently experiencing any meaningful changes in motor function?",DECCLMOT,No,Integers 0-1,"0, No|1, Yes",Integer,
 b9,I,15a. Indicate whether the participant currently has meaningful changes in motor function — Gait disorder,MOGAIT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1'
 b9,I,15b. Indicate whether the participant currently has meaningful changes in motor function — Falls,MOFALLS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1'
 b9,I,15c. Indicate whether the participant currently has meaningful changes in motor function — Slowness,MOSLOW,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1'
