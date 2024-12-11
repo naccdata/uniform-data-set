@@ -1,6 +1,6 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,
-b9l,FL,0a. B9L Scopa Sleep — Co-participant - Form date,FRMDATEB9L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,
-b9l,FL,0b. B9L Scopa Sleep — Co-participant - Examiner's initials,INITIALSB9L,No,text,,String,,
+b9l,FL,0a. B9L Scopa Sleep - Co-participant - Form date,FRMDATEB9L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,
+b9l,FL,0b. B9L Scopa Sleep - Co-participant - Examiner's initials,INITIALSB9L,No,text,,String,,
 b9l,FL,1. Had trouble falling asleep when they went to bed at night,CONSFALL,Never,Integers 0-3 or blank,"0, Not at all| 1, A little| 2 , Quite a bit| 3, A lot",Integer,Blank if unknown,
 b9l,FL,2. Felt that they have woken too often,CONSWKOF,Never,Integers 0-3 or blank,"0, Not at all| 1, A little| 2 , Quite a bit| 3, A lot",Integer,Blank if unknown,
 b9l,FL,3. Felt that they have been lying awake for too long at night,CONSLYAW,Never,Integers 0-3 or blank,"0, Not at all| 1, A little| 2 , Quite a bit| 3, A lot",Integer,Blank if unknown,

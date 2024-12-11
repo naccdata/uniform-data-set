@@ -1,6 +1,6 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-b7l,IL,0a. B7L Mayo Sleep Questionnaire — Co-participant - Form date,FRMDATEB7L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
-b7l,IL,0b. B7L Mayo Sleep Questionnaire — Co-participant - Examiner's initials,INITIALSB7L,No,text,,String,
+b7l,IL,0a. B7L Mayo Sleep Questionnaire - Co-participant - Form date,FRMDATEB7L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+b7l,IL,0b. B7L Mayo Sleep Questionnaire - Co-participant - Examiner's initials,INITIALSB7L,No,text,,String,
 b7l,IL,1. Do you live with the participant?,LBSCLIV,Always,Integers 0-1,0=No | 1=Yes ,Integer,
 b7l,IL,2. Do you sleep in the same room as the participant?,LBSCSLP,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
 b7l,IL,"2a. If no, is it because of his/ her sleep behaviors (i.e., snores too loud, acts out dreams, etc.)?",LBSCBEHV,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No) or Question 2 LBSCSLP = 1 (Yes)

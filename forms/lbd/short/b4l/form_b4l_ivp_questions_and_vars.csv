@@ -2,7 +2,7 @@
 b4l,IL,0a. B4L Neuropsychiatric Inventory (NPI)  - Form date,FRMDATEB4L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b4l,IL,0b. B4L Neuropsychiatric Inventory (NPI)  - Examiner's initials,INITIALSB4L,No,text,,String,
 b4l,IL,"1. Does the participant have beliefs that you know are not true (for example, insisting that people are trying to harm him/her or steal from him/her)? Has he/she said that family members are not who they say they are or that the house is not their home? I'm not asking about mere suspiciousness; I am interested if the participant is convinced that these things are happening to him/her.",LBDELUS,Always,"Integers 0-1, and 8",0=No | 1=Yes | 8=Not applicable,Integer,
-b4l,IL,1a. Does the participant believe that he/she is in danger — that others are planning to hurt him/her?,LBDHURT,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes)
+b4l,IL,1a. Does the participant believe that he/she is in danger - that others are planning to hurt him/her?,LBDHURT,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes)
 b4l,IL,1b. Does the participant believe that others are stealing from him/her?,LBDSTEAL,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes)
 b4l,IL,1c. Does the participant believe that his/her spouse/partner is having an affair?,LBDAFFR,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes)
 b4l,IL,1d. Does the participant believe that unwelcome guests are living in his/her house?,LBDGUEST,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes) 
