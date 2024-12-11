@@ -3,8 +3,8 @@ a4,I,0a. A4 Participant Medications - Form date,FRMDATEA4,Always,mm/dd/yyyy or y
 a4,I,0b. A4 Participant Medications - Examiner's initials,INITIALSA4,No,text,,String,
 a4,I,0c. A4 Participant Medications - Language,LANGA4,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 a4,I,"0d. A4 Participant Medications - In-person, remote, or not completed?",MODEA4,Always,Integers 1-2,"1, In-person|2, Remote",Integer,
-a4,I,"0d1. If 'A4 Participant Medications' form was completed remotely, specify reason",RMREASA4,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea4]='2'
-a4,I,0d1a. What modality was used to collect this remote 'A4 Participant Medications' form?,RMMODEA4,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modea4]='2'
+a4,I,"0d1. If 'A4 Participant Medications' form was completed remotely, specify reason",RMREASA4,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea4]='2'
+a4,I,0d1a. What modality was used to collect this remote 'A4 Participant Medications' form?,RMMODEA4,Conditional,Integers 1-2,"1, Telephone|2, Video",Integer,[modea4]='2'
 a4,I,1. Is the participant currently taking any medications?,ANYMEDS,Yes,Integers 0-1,"0, No|1, Yes",Integer,
 a4,I,Medication 1,RXNORMID1,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
 a4,I,Medication 2,RXNORMID2,No,0 or RXCUI code,RXCUI code obtained from https://mor.nlm.nih.gov/RxNav/,Integer,[anymeds] >= '1'
