@@ -2,7 +2,7 @@ form_name,packet,question,var_name,missingness,conformity,response_labels,data_t
 b6l,IL,0a. B6L Mayo Sleep Questionnaire — Participant - Form date,FRMDATEB6L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b6l,IL,0b. B6L Mayo Sleep Questionnaire — Participant - Examiner's initials,INITIALSB6L,No,text,,String,
 b6l,IL,"0. Is the participant too cognitively impaired (e.g., CDR>1) to complete this form?",LBSPCGIM,Always,Integers 0-1,0 = No | 1 = Yes,Integer,
-b6l,IL,"1. Have you ever been told that you seem to “act out your dreams” while sleeping (punched or flailed arms in the air, shouted or screamed)?",LBSPDRM,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes) 
+b6l,IL,"1. Have you ever been told that you seem to ""act out your dreams"" while sleeping (punched or flailed arms in the air, shouted or screamed)?",LBSPDRM,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes) 
 b6l,IL,1a1. How many months or years has this been going on? (years),LBSPYRS,Conditional,Integers 0-99 or blank,0 – 99,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes) or Question 1 LBSPDRM = 0 (No)
 b6l,IL,1a2. How many months or years has this been going on? (months),LBSPMOS,Conditional,Integers 0-11 or blank,0 – 11,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes) or Question 1 LBSPDRM = 0 (No)
 b6l,IL,"1b. Have you ever been injured from these behaviors (bruises, cuts, broken bones)?",LBSPINJS,Conditional,Integers 0-1 or blank,0 = No | 1 = Yes,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes) or Question 1 LBSPDRM = 0 (No)
@@ -18,5 +18,5 @@ b6l,IL,4. Have you ever walked around the bedroom or house in your sleep?,LBSPWA
 b6l,IL,5. Have you ever snorted or choked yourself awake?,LBSPAWAK,Conditional,Integers 0-1 or blank,0 = No | 1 = Yes,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes)
 b6l,IL,6. Have you ever been told that you stop breathing in your sleep?,LBSPBRTH,Conditional,Integers 0-1 or blank,0 = No | 1 = Yes,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes)
 b6l,IL,"6a. Are you currently being treated for this (e.g., CPAP)?",LBSPTRT,Conditional,Integers 0-1 or blank,0 = No | 1 = Yes,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes) or Question 6 LBSPBRTH = 0 (No)
-b6l,IL,"7. Do you experience leg cramps at night (e.g., also called a “charlie horse” with intense pain in cer-tain muscles in the leg)?",LBSPCRMP,Conditional,Integers 0-1 or blank,0 = No | 1 = Yes,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes)
+b6l,IL,"7. Do you experience leg cramps at night (e.g., also called a ""charlie horse"" with intense pain in cer-tain muscles in the leg)?",LBSPCRMP,Conditional,Integers 0-1 or blank,0 = No | 1 = Yes,Integer,Blank if Question 0 LBSPCGIM = 1 (Yes)
 b6l,IL,8. Rate your general level of alertness for the past 3 weeks on a scale from 0 to 10:,LBSPALRT,Conditional,Integers 0-10 or blank,"1 – 10; 0 = Sleep all day, 10 = Fully and normally awake",Integer,Blank if Question 0 LBSPCGIM = 1 (Yes)
