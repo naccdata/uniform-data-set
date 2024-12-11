@@ -4,7 +4,7 @@ b7l,IL,0b. B7L Mayo Sleep Questionnaire - Co-participant - Examiner's initials,I
 b7l,IL,1. Do you live with the participant?,LBSCLIV,Always,Integers 0-1,0=No | 1=Yes ,Integer,
 b7l,IL,2. Do you sleep in the same room as the participant?,LBSCSLP,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
 b7l,IL,"2a. If no, is it because of his/ her sleep behaviors (i.e., snores too loud, acts out dreams, etc.)?",LBSCBEHV,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No) or Question 2 LBSCSLP = 1 (Yes)
-b7l,IL,"3. Have you ever seen the participant appear to “act out his/her dreams” while sleeping (punched or flailed arms in the air, shouted or screamed)?",LBSCDRM,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
+b7l,IL,"3. Have you ever seen the participant appear to "act out his/her dreams” while sleeping (punched or flailed arms in the air, shouted or screamed)?",LBSCDRM,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
 b7l,IL,3a1. How many months or years has this been going on? (years),LBSCYRS,No,"Integers 0-99, or blank",0 years - 99 years,Integer,Blank if Question 1 LBSCLIV = 0 (No) or Question 3 LBSCDRM = 0 (No)
 b7l,IL,3a2. How many months or years has this been going on? (months),LBSCMOS,No,"Integers 0-11, or blank",0 months - 11 months,Integer,Blank if Question 1 LBSCLIV = 0 (No) or Question 3 LBSCDRM = 0 (No)
 b7l,IL,"3b. Has the participant ever been injured from these behaviors (bruises, cuts, broken bones)?",LBSCINJS,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No) or Question 3 LBSCDRM = 0 (No)
@@ -19,5 +19,5 @@ b7l,IL,6. Has the participant ever walked around the bedroom or house while asle
 b7l,IL,7. Has the participant ever snorted or choked him/ herself awake?,LBSCAWAK,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
 b7l,IL,8. Does the participant ever seem to stop breathing during sleep?,LBSCBRTH,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
 b7l,IL,"8a. Is the participant currently being treated for this (e.g., CPAP)?",LBSCTRT,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No) or Question 8 LBSCBRTH = 0 (No)
-b7l,IL,"9. Does the participant have leg cramps at night (e.g., also called a “charlie horse” with intense pain in certain muscles in the leg)?",LBSCCRMP,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
+b7l,IL,"9. Does the participant have leg cramps at night (e.g., also called a "charlie horse” with intense pain in certain muscles in the leg)?",LBSCCRMP,Conditional,Integers 0-1,0=No | 1=Yes ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
 b7l,IL,10. Rate the participant's general level of alertness for the past 3 weeks on a scale from 0 to 10:,LBSCALRT,Conditional,Inetgers 1-10,0=Sleep all day - 10=Fully and normally awake ,Integer,Blank if Question 1 LBSCLIV = 0 (No)
