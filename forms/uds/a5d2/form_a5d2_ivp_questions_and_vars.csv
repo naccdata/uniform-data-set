@@ -93,8 +93,8 @@ a5d2,I,5f2a. Upper extremity affected by arthritis,ARTHUPEX,Conditional (e.g. sk
 a5d2,I,5f2b. Lower extremity affected by arthritis,ARTHLOEX,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a5d2,I,5f2c. Spine affected by arthritis,ARTHSPIN,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a5d2,I,5f2d. Region affected by arthritis unknown,ARTHUNK,Conditional (e.g. skip pattern),1 or blank,,Integer,
-a5d2,I,5g. Incontinence—urinary (occurring at least weekly),INCONTU,Always,"0-2, 9","0, Absent|1, Recent/active|2, Remote/inactive|9, Unknown",Integer,
-a5d2,I,5h. Incontinence—bowel (occurring at least weekly),INCONTF,Always,"0-2, 9","0, Absent|1, Recent/active|2, Remote/inactive|9, Unknown",Integer,
+a5d2,I,5g. Incontinenceâ€”urinary (occurring at least weekly),INCONTU,Always,"0-2, 9","0, Absent|1, Recent/active|2, Remote/inactive|9, Unknown",Integer,
+a5d2,I,5h. Incontinenceâ€”bowel (occurring at least weekly),INCONTF,Always,"0-2, 9","0, Absent|1, Recent/active|2, Remote/inactive|9, Unknown",Integer,
 a5d2,I,5i. Sleep apnea,APNEA,Always,"0-2, 9","0, Absent|1, Recent/active|2, Remote/inactive|9, Unknown",Integer,
 a5d2,I,5i1. Typical use of breathing machine (e.g. CPAP) at night over the past 12 months,CPAP,Conditional (e.g. skip pattern),"0-2, 9","0, None|1, < 4 hours per night|2, > 4 hours per night|9, Unknown",Integer,[apnea]='1' or [apnea]='2'
 a5d2,I,5i2. Typical use of an oral device or implanted breathing pacemaker for sleep apnea at night over the past 12 months?,APNEAORAL,Conditional (e.g. skip pattern),"0-2, 9","0, None|1, < 4 hours per night|2, > 4 hours per night|9, Unknown",Integer,[apnea]='1' or [apnea]='2'

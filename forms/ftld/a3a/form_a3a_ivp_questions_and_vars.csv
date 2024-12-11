@@ -5,32 +5,32 @@ a3a,IF,0c. A3a Record of Consent for Biologic Specimen Use - Language,LANGA3A,Al
 a3a,IF,0d. A3a Record of Consent for Biologic Specimen Use - Submitted?,MODEA3A,Always,Integers 0-1,"0, Not completed | 1, In-person",Integer,
 a3a,IF,"0d1. If 'A3a Record of Consent for Biologic Specimen Use' not submitted, specify reason",A3ANOT,Conditional,Integers 95-99,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal|99, Unknown or inadequate information",Integer,[modea3a]='0'
 a3a,IF,1. What relative's consent is being recorded on this form?,FTDRELCO,Always,Integers 1-4,1 = Mother 2 = Father 3= Sibling 4 = Child,Integer,
-a3a,IF,1. Sibling's birth year,FTDSIBBY,Conditional,1885 – current year,1885 – current year,Integer,Blank if Question 1 FTDRELCO ne 3 (Sibling)
-a3a,IF,1. Child's birth year,FTDCHDBY,Conditional,1920 – current year,1920 – current year,Integer,Blank if Question 1 FTDRELCO ne 4 (Child)
+a3a,IF,1. Sibling's birth year,FTDSIBBY,Conditional,1885 â€“ current year,1885 â€“ current year,Integer,Blank if Question 1 FTDRELCO ne 3 (Sibling)
+a3a,IF,1. Child's birth year,FTDCHDBY,Conditional,1920 â€“ current year,1920 â€“ current year,Integer,Blank if Question 1 FTDRELCO ne 4 (Child)
 a3a,IF,1a. I permit my sample to be stored and used in future research of neurologic disease at (home institution),FTDSTORE,Always,Integers 0-1,0 = No | 1 = Yes,Integer,
 a3a,IF,"1b. I permit my sample to be stored and used in future research at (home institution) to learn about, prevent, or treat other health problems.",FTDSLEAR,Always,Integers 0-1,0 = No | 1 = Yes,Integer,
 a3a,IF,"1c. There is a small chance that some commercial value may result from my sample at the National Cell Repository for Alzheimer's Disease (NCRAD). If that would happen, I would not be offered a share in any profits. I permit (home institution) to give my sample to researchers at other institutions.",FTDCOMME,Always,Integers 0-1,0 = No | 1 = Yes,Integer,
 a3a,IF,2. What relative's consent is being recorded on this form?,FTDRELCO2,No,Integers 1-4,1 = Mother 2 = Father 3= Sibling 4 = Child,Integer,
-a3a,IF,2. Sibling's birth year,FTDSIBBY2,Conditional,1885 – current year,1885 – current year,Integer,Blank if Question 2 FTDRELCO2 ne 3 (Sibling)
-a3a,IF,2. Child's birth year,FTDCHDBY2,Conditional,1920 – current year,1920 – current year,Integer,Blank if Question 2 FTDRELCO2 ne 4 (Child)
+a3a,IF,2. Sibling's birth year,FTDSIBBY2,Conditional,1885 â€“ current year,1885 â€“ current year,Integer,Blank if Question 2 FTDRELCO2 ne 3 (Sibling)
+a3a,IF,2. Child's birth year,FTDCHDBY2,Conditional,1920 â€“ current year,1920 â€“ current year,Integer,Blank if Question 2 FTDRELCO2 ne 4 (Child)
 a3a,IF,2a. I permit my sample to be stored and used in future research of neurologic disease at (home institution),FTDSTORE2,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 2 FTDRELCO2 is blank
 a3a,IF,"2b. I permit my sample to be stored and used in future research at (home institution) to learn about, prevent, or treat other health problems.",FTDSLEAR2,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 2 FTDRELCO2 is blank
 a3a,IF,"2c. There is a small chance that some commercial value may result from my sample at the National Cell Repository for Alzheimer's Disease (NCRAD). If that would happen, I would not be offered a share in any profits. I permit (home institution) to give my sample to researchers at other institutions.",FTDCOMME2,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 2 FTDRELCO2 is blank
 a3a,IF,3. What relative's consent is being recorded on this form?,FTDRELCO3,No,Integers 1-4,1 = Mother 2 = Father 3= Sibling 4 = Child,Integer,
-a3a,IF,3. Sibling's birth year,FTDSIBBY3,Conditional,1885 – current year,1885 – current year,Integer,Blank if Question 3 FTDRELCO3 ne 3 (Sibling)
-a3a,IF,3. Child's birth year,FTDCHDBY3,Conditional,1920 – current year,1920 – current year,Integer,Blank if Question 3 FTDRELCO3 ne 4 (Child)
+a3a,IF,3. Sibling's birth year,FTDSIBBY3,Conditional,1885 â€“ current year,1885 â€“ current year,Integer,Blank if Question 3 FTDRELCO3 ne 3 (Sibling)
+a3a,IF,3. Child's birth year,FTDCHDBY3,Conditional,1920 â€“ current year,1920 â€“ current year,Integer,Blank if Question 3 FTDRELCO3 ne 4 (Child)
 a3a,IF,3a. I permit my sample to be stored and used in future research of neurologic disease at (home institution),FTDSTORE3,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 3 FTDRELCO3 is blank
 a3a,IF,"3b. I permit my sample to be stored and used in future research at (home institution) to learn about, prevent, or treat other health problems.",FTDSLEAR3,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 3 FTDRELCO3 is blank
 a3a,IF,"3c. There is a small chance that some commercial value may result from my sample at the National Cell Repository for Alzheimer's Disease (NCRAD). If that would happen, I would not be offered a share in any profits. I permit (home institution) to give my sample to researchers at other institutions.",FTDCOMME3,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 3 FTDRELCO3 is blank
 a3a,IF,4. What relative's consent is being recorded on this form?,FTDRELCO4,No,Integers 1-4,1 = Mother 2 = Father 3= Sibling 4 = Child,Integer,
-a3a,IF,4. Sibling's birth year,FTDSIBBY4,Conditional,1885 – current year,1885 – current year,Integer,Blank if Question 4 FTDRELCO4 ne 3 (Sibling)
-a3a,IF,4. Child's birth year,FTDCHDBY4,Conditional,1920 – current year,1920 – current year,Integer,Blank if Question 4 FTDRELCO4 ne 4 (Child)
+a3a,IF,4. Sibling's birth year,FTDSIBBY4,Conditional,1885 â€“ current year,1885 â€“ current year,Integer,Blank if Question 4 FTDRELCO4 ne 3 (Sibling)
+a3a,IF,4. Child's birth year,FTDCHDBY4,Conditional,1920 â€“ current year,1920 â€“ current year,Integer,Blank if Question 4 FTDRELCO4 ne 4 (Child)
 a3a,IF,4a. I permit my sample to be stored and used in future research of neurologic disease at (home institution),FTDSTORE4,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 4 FTDRELCO4 is blank
 a3a,IF,"4b. I permit my sample to be stored and used in future research at (home institution) to learn about, prevent, or treat other health problems.",FTDSLEAR4,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 4 FTDRELCO4 is blank
 a3a,IF,"4c. There is a small chance that some commercial value may result from my sample at the National Cell Repository for Alzheimer's Disease (NCRAD). If that would happen, I would not be offered a share in any profits. I permit (home institution) to give my sample to researchers at other institutions.",FTDCOMME4,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 4 FTDRELCO4 is blank
 a3a,IF,5. What relative's consent is being recorded on this form?,FTDRELCO5,No,Integers 1-4,1 = Mother 2 = Father 3= Sibling 4 = Child,Integer,
-a3a,IF,5. Sibling's birth year,FTDSIBBY5,Conditional,1885 – current year,1885 – current year,Integer,Blank if Question 5 FTDRELCO5 ne 3 (Sibling)
-a3a,IF,5. Child's birth year,FTDCHDBY5,Conditional,1920 – current year,1920 – current year,Integer,Blank if Question 5 FTDRELCO5 ne 4 (Child)
+a3a,IF,5. Sibling's birth year,FTDSIBBY5,Conditional,1885 â€“ current year,1885 â€“ current year,Integer,Blank if Question 5 FTDRELCO5 ne 3 (Sibling)
+a3a,IF,5. Child's birth year,FTDCHDBY5,Conditional,1920 â€“ current year,1920 â€“ current year,Integer,Blank if Question 5 FTDRELCO5 ne 4 (Child)
 a3a,IF,5a. I permit my sample to be stored and used in future research of neurologic disease at (home institution),FTDSTORE5,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 5 FTDRELCO5 is blank
 a3a,IF,"5b. I permit my sample to be stored and used in future research at (home institution) to learn about, prevent, or treat other health problems.",FTDSLEAR5,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 5 FTDRELCO5 is blank
 a3a,IF,"5c. There is a small chance that some commercial value may result from my sample at the National Cell Repository for Alzheimer's Disease (NCRAD). If that would happen, I would not be offered a share in any profits. I permit (home institution) to give my sample to researchers at other institutions.",FTDCOMME5,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,Blank if Question 5 FTDRELCO5 is blank
