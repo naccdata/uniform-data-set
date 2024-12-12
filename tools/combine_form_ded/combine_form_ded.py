@@ -16,21 +16,6 @@ def clean_newlines(value):
         return value.replace('\n', '').replace('\r', '')
     return value
 
-def form_name_sort(a, b):
-    """form_name key sort;
-    not quite alphanumeric so need custom sort
-    """
-    a_chars = a[0:2]
-    b_chars = b[0:2]
-
-    # this ensures a1 < a1a < a2
-    if len(a) != len(b):
-        if a_chars == b_chars:
-            return len(a) < len(b)
-
-    return a_chars < b_chars
-
-
 def main(root_directory, output_filename):
     # Initialize an empty DataFrame
     combined_df = pd.DataFrame(dtype=object)
