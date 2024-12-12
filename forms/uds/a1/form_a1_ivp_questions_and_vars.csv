@@ -3,8 +3,8 @@ a1,I,0a. A1 Participant Demographics - Form date,FRMDATEA1,Always,mm/dd/yyyy or 
 a1,I,0b. A1 Participant Demographics - Examiner's initials,INITIALSA1,No,text,,String,
 a1,I,0c. A1 Participant Demographics - Language,LANGA1,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 a1,I,0d. A1 Participant Demographics - In-person or remote?,MODEA1,Always,Integers 1-2,"1, In-person|2, Remote",Integer,
-a1,I,"0d1. If 'A1 Participant Demographics' form was completed remotely, specify reason",RMREASA1,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea1]='2'
-a1,I,0d1a. What modality was used to collect this remote 'A1 Participant Demographics' form?,RMMODEA1,Condtional,Integers 1-4,"1, Telephone|2, Video|3, Mail|4, Electronic (e.g., email)",Integer,[modea1]='2'
+a1,I,"0d1. If 'A1 Participant Demographics' form was completed remotely, specify reason",RMREASA1,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea1]='2'
+a1,I,0d1a. What modality was used to collect this remote 'A1 Participant Demographics' form?,RMMODEA1,Conditional,Integers 1-4,"1, Telephone|2, Video|3, Mail|4, Electronic (e.g., email)",Integer,[modea1]='2'
 a1,I,0e. A1 Participant Demographics - Administration?,ADMINA1,Always,Integers 1-2,"1, Self-administered|2, Staff administered",Integer,
 a1,I,1a. Participant's month of birth,BIRTHMO,Always,Integers 1-12,"1, 1 - January|2, 2 - February|3, 3 - March|4, 4 - April|5, 5 - May|6, 6 - June|7, 7 - July|8, 8 - August|9, 9 - September|10, 10 - October|11, 11 - November|12, 12 - December",Integer,
 a1,I,1b. Participant's year of birth,BIRTHYR,Always,1850 - current year minus 15,"1850 to current year minus 15,

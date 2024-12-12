@@ -3,8 +3,8 @@ b9,I,0a. B9 Clinical Judgement of Symptoms - Form date,FRMDATEB9,Always,mm/dd/yy
 b9,I,0b. B9 Clinical Judgement of Symptoms - Examiner's initials,INITIALSB9,No,text,,String,
 b9,I,0c. B9 Clinical Judgement of Symptoms - Language,LANGB9,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 b9,I,0d. B9 Clinical Judgement of Symptoms - In-person or remote?,MODEB9,Always,Integers 1-2,"1, In-person|2, Remote",Integer,
-b9,I,"0d1. If 'B9 Clinical Judgement of Symptoms' form was completed remotely, specify reason",RMREASB9,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb9]='2'
-b9,I,0d1a. What modality was used to collect this remote 'B9 Clinical Judgement of Symptoms' form?,RMMODEB9,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb9]='2'
+b9,I,"0d1. If 'B9 Clinical Judgement of Symptoms' form was completed remotely, specify reason",RMREASB9,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb9]='2'
+b9,I,0d1a. What modality was used to collect this remote 'B9 Clinical Judgement of Symptoms' form?,RMMODEB9,Conditional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb9]='2'
 b9,I,1. Does the participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOG,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,
 b9,I,2. Does the participant report a decline in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOT,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,
 b9,I,3. Does the participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYM,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,
