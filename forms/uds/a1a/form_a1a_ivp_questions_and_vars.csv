@@ -5,7 +5,7 @@ a1a,I,0c. A1a Social Determinants of Health - Language,LANGA1A,Always,Integers 1
 a1a,I,"0d. A1a Social Determinants of Health - In-person, remote, or not completed?",MODEA1A,Always,Integers 0-2,"0, Not completed|1, In-person|2, Remote",Integer,
 a1a,I,"0d1. If 'A1a Social Determinants of Health' form was completed remotely, specify reason",RMREASA1A,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea1a]='2'
 a1a,I,0d1a. What modality was used to collect this remote 'A1a Social Determinants of Health' form?,RMMODEA1A,Conditional,Integers 1-4,"1, Telephone|2, Video|3, Mail|4, Electronic (e.g., email)",Integer,[modea1a]='2'
-a1a,I,"0d2. If 'A1a Social Determinants of Health' not submitted, specify reason",A1ANOT,Condtional,Integer 93,"93, Concerns about reliability",Integer,[modea1a]='0'
+a1a,I,"0d2. If 'A1a Social Determinants of Health' not submitted, specify reason",A1ANOT,Conditional,Integer 93,"93, Concerns about reliability",Integer,[modea1a]='0'
 a1a,I,0e. A1a Social Determinants of Health - Administration?,ADMINA1A,Always,Integers 1-2,"1, Self-administered|2, Staff administered",Integer,
 a1a,I,1. Do you or someone in your household currently own a car?,OWNSCAR,Always,"Integers 0-1, 8","0, No|1, Yes|8, Prefer not to answer",Integer,
 a1a,I,2. Do you have consistent access to transportation?,TRSPACCESS,Always,"Integers 0-1, 8","0, No|1, Yes|8, Prefer not to answer",Integer,
