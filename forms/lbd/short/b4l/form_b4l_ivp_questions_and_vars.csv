@@ -1,8 +1,8 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 b4l,IL,0a. B4L Neuropsychiatric Inventory (NPI)  - Form date,FRMDATEB4L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b4l,IL,0b. B4L Neuropsychiatric Inventory (NPI)  - Examiner's initials,INITIALSB4L,No,text,,String,
-b4l,IL,"1. Does the participant have beliefs that you know are not true (for example, insisting that people are trying to harm him/her or steal from him/her)? Has he/she said that family members are not who they say they are or that the house is not their home? I’m not asking about mere suspiciousness; I am interested if the participant is convinced that these things are happening to him/her.",LBDELUS,Always,"Integers 0-1, and 8",0=No | 1=Yes | 8=Not applicable,Integer,
-b4l,IL,1a. Does the participant believe that he/she is in danger — that others are planning to hurt him/her?,LBDHURT,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes)
+b4l,IL,"1. Does the participant have beliefs that you know are not true (for example, insisting that people are trying to harm him/her or steal from him/her)? Has he/she said that family members are not who they say they are or that the house is not their home? I'm not asking about mere suspiciousness; I am interested if the participant is convinced that these things are happening to him/her.",LBDELUS,Always,"Integers 0-1, and 8",0=No | 1=Yes | 8=Not applicable,Integer,
+b4l,IL,1a. Does the participant believe that he/she is in danger - that others are planning to hurt him/her?,LBDHURT,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes)
 b4l,IL,1b. Does the participant believe that others are stealing from him/her?,LBDSTEAL,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes)
 b4l,IL,1c. Does the participant believe that his/her spouse/partner is having an affair?,LBDAFFR,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes)
 b4l,IL,1d. Does the participant believe that unwelcome guests are living in his/her house?,LBDGUEST,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 1 LBDELUS ne 1 (Yes) 
@@ -35,4 +35,4 @@ b4l,IL,4d. Does the participant contribute less to household chores?,LBAPCHOR,Co
 b4l,IL,4e. Does the participant seem less interested in the activities and plans of others?,LBAPINT,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 4 LBAPATHY ne 1 (Yes)
 b4l,IL,4f. Has the participant lost interest in friends and family members?,LBAPFAML,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 4 LBAPATHY ne 1 (Yes)
 b4l,IL,4g. Is the participant less enthusiastic about his/her usual interests?,LBAPINTR,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 4 LBAPATHY ne 1 (Yes)
-b4l,IL,4h. Does the participant show any other signs that he/ she doesn’t care about doing new things?,LBAPOTH,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 4 LBAPATHY ne 1 (Yes)
+b4l,IL,4h. Does the participant show any other signs that he/ she doesn't care about doing new things?,LBAPOTH,Conditional,Integers 0-1,0=No | 1=Yes,Integer,Blank if Question 4 LBAPATHY ne 1 (Yes)

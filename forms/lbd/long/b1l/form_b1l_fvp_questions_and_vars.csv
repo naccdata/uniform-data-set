@@ -43,7 +43,7 @@ b1l,FL,13. Has the participant had involuntary loss of stools?,LBSLSSTL,Always,"
 b1l,FL,"14. Has the participant had the feeling that after passing urine, their bladder was not completely empty?",LBSUBLAD,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
-b1l,FL,15. Has the participant’s stream of urine been weak or reduced?,LBSUSTRM,Always,"0-1, 9","0 = No
+b1l,FL,15. Has the participant's stream of urine been weak or reduced?,LBSUSTRM,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
 b1l,FL,16. Has the participant had to pass urine within two hours of the previous urination?,LBSUPASS,Always,"0-1, 9","0 = No
@@ -58,7 +58,7 @@ b1l,FL,18. Has the participant become light-headed after standing for some time?
 b1l,FL,19. Has the participant fainted?,LBSFAINT,Always,"0-1, 9","0 = No
 1 = Yes
 9 = Unknown",Integer,
-b1l,FL,20. Indicate the first predominant symptom to appear during the participant’s lifetime.,LBSPSYM,Always,"1-19, 88, 99","1 = Dribbling saliva during the day
+b1l,FL,20. Indicate the first predominant symptom to appear during the participant's lifetime.,LBSPSYM,Always,"1-19, 88, 99","1 = Dribbling saliva during the day
 2 = Difficulty swallowing
 3 = Altered interest in sex
 4 = Problems having sex
@@ -130,6 +130,6 @@ b1l,FL,"34a. If yes, which version",LBSSCLVR,Conditional,"1-2, 8","1 = NMSS
 2 = SCOPA-AUT
 8 = Other",Integer,Blank if Question 34 LBSSCLAU = 0 (No)
 b1l,FL,34a1. Other,LBSSCLOT,Conditional,Any text,,String,"Blank if Question 34 LBSSCLAU = 0 (No) or
-Question 34a LBSSCLVR ≠ 8 (Other)"
+Question 34a LBSSCLVR != 8 (Other)"
 b1l,FL,"34b. If yes, what was the score",LBSSCOR,Conditional,0 – 999,"0 – 998
 999 = Unknown",Integer,Blank if Question 34 LBSSCLAU = 0 (No)
