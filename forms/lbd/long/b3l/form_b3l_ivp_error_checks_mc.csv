@@ -113,4 +113,3 @@ b3l-lbdivp-m-111,111,Error,b3l,IL,LBUMHNYX,Missingness,LBUMHNYX conditionally pr
 b3l-lbdivp-m-112,112,Error,b3l,IL,LBUMHNYX,Missingness,LBUMHNYX conditionally blank,"If LBUMHNYR = 0-4, LBUMHNYX must be blank","If Q15. LBUMHNYR not = 8, then Q15a. LBUMHNYX (Modified Hoehn and Yahr staging- Reason Untestable) must be blank",If LBUMHNYR not = 8 and LBUMHNYX not blank,,"LBUMHNYX, LBUMHNYR",,,
 b3l-lbdivp-m-113,113,Error,b3l,IL,FRMDATEB3L,Missingness,FRMDATEB3L must be present,FRMDATEB3L cannot be blank,Q0a. FRMDATEB3L (B3L form date) cannot be blank ,If FRMDATEB3L = blank,,,Yes,No,
 b3l-lbdivp-c-114,114,Error,b3l,IL,FRMDATEB3L,Conformity,FRMDATEB3L conforms,FRMDATEB3L must be a date,Q0a. FRMDATEB3L (B3L form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATEB3L is not mm/dd/yyyy or yyyy/mm/dd,,,Yes,No,
-,,,,,,,,,,,,,,,
