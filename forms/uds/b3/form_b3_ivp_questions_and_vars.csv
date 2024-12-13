@@ -59,4 +59,4 @@ b3,I,13. Posture stability,POSSTAB,Conditional,"0-4, 8","0, Normal erect|1, Retr
 b3,I,13a. Posture stability untestable (specify),POSSTABX,Conditional,text,,String,[posstab] = '8'
 b3,I,14. Body bradykinesia and hypokinesia,BRADYKIN,Conditional,"0-4, 8","0, None|1, Minimal slowness, giving movement a deliberate character; could be normal for some persons; possibly reduced amplitude|2, Mild degree of slowness and poverty or movement which is definitely abnormal. Alternatively, some reduced amplitude.|3, Moderate slowness, poverty or small amplitude of movement|4, Marked slowness, poverty or small amplitude of movement.|8, Untestable",Integer,[pdnormal] ne '1'
 b3,I,14a. Body bradykinesia and hypokinesia untestable (specify),BRADYKIX,Conditional,text,,String,[bradykin] = '8'
-b3,I,15. Total UPDRS Score ,TOTALUPDRS,Conditional,"0-108, 888","0-108, 888 = One or more items untestable",Integer,
+b3,I,15. Total UPDRS Score ,TOTALUPDRS,Conditional,"0-108, 888","0-108, 888 = One or more items untestable",Integer,[pdnormal] ne '1'

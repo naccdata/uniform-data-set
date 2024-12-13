@@ -19,7 +19,7 @@ a4a,I,2a3b. Start date (year) (1),STARTYEAR1,Conditional (e.g. skip pattern),199
 a4a,I,2a4a. End date (month) (1),ENDMO1,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2a4b. End date (year) (1),ENDYEAR1,Conditional (e.g. skip pattern),"1990-present, 8888, 9999","1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2a5. How was the treatment provided? (1),CARETRIAL1,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1'
-a4a,I,"2a6. If clinical trial, in which group was the participant? (1)",TRIALGRP1,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1'
+a4a,I,"2a6. If clinical trial, in which group was the participant? (1)",TRIALGRP1,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial1]>'1'
 a4a,I,2b1a. Primary Drug Target - Amyloid Beta (2),TARGETAB2,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2b1b. Primary Drug Target - Tau (2),TARGETTAU2,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2b1c. Primary Drug Target - Inflammation (2),TARGETINF2,Conditional (e.g. skip pattern),1 or blank,,Integer,
@@ -33,7 +33,7 @@ a4a,I,2b3b. Start date (year) (2),STARTYEAR2,Conditional (e.g. skip pattern),199
 a4a,I,2b4a. End date (month) (2),ENDMO2,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2b4b. End date (year) (2),ENDYEAR2,Conditional (e.g. skip pattern),"1990-present, 8888, 9999","1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2b5. How was the treatment provided? (2),CARETRIAL2,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1'
-a4a,I,"2b6. If clinical trial, in which group was the participant? (2)",TRIALGRP2,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1'
+a4a,I,"2b6. If clinical trial, in which group was the participant? (2)",TRIALGRP2,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial2]>'1'
 a4a,I,2c1a. Primary Drug Target - Amyloid Beta (3),TARGETAB3,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2c1b. Primary Drug Target - Tau (3),TARGETTAU3,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2c1c. Primary Drug Target - Inflammation (3),TARGETINF3,Conditional (e.g. skip pattern),1 or blank,,Integer,
@@ -47,7 +47,7 @@ a4a,I,2c3b. Start date (year) (3),STARTYEAR3,Conditional (e.g. skip pattern),199
 a4a,I,2c4a. End date (month) (3),ENDMO3,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2c4b. End date (year) (3),ENDYEAR3,Conditional (e.g. skip pattern),"1990-present, 8888, 9999","1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2c5. How was the treatment provided? (3),CARETRIAL3,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1'
-a4a,I,"2c6. If clinical trial, in which group was the participant? (3)",TRIALGRP3,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1'
+a4a,I,"2c6. If clinical trial, in which group was the participant? (3)",TRIALGRP3,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial3]>'1'
 a4a,I,2d1a. Primary Drug Target - Amyloid Beta (4),TARGETAB4,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2d1b. Primary Drug Target - Tau (4),TARGETTAU4,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2d1c. Primary Drug Target - Inflammation (4),TARGETINF4,Conditional (e.g. skip pattern),1 or blank,,Integer,
@@ -61,7 +61,7 @@ a4a,I,2d3b. Start date (year) (4),STARTYEAR4,Conditional (e.g. skip pattern),199
 a4a,I,2d4a. End date (month) (4),ENDMO4,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2d4b. End date (year) (4),ENDYEAR4,Conditional (e.g. skip pattern),"1990-present, 8888, 9999","1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2d5. How was the treatment provided? (4),CARETRIAL4,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1'
-a4a,I,"2d6. If clinical trial, in which group was the participant? (4)",TRIALGRP4,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1'
+a4a,I,"2d6. If clinical trial, in which group was the participant? (4)",TRIALGRP4,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial4]>'1'
 a4a,I,2e1a. Primary Drug Target - Amyloid Beta (5),TARGETAB5,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2e1b. Primary Drug Target - Tau (5),TARGETTAU5,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2e1c. Primary Drug Target - Inflammation (5),TARGETINF5,Conditional (e.g. skip pattern),1 or blank,,Integer,
@@ -75,7 +75,7 @@ a4a,I,2e3b. Start date (year) (5),STARTYEAR5,Conditional (e.g. skip pattern),199
 a4a,I,2e4a. End date (month) (5),ENDMO5,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2e4b. End date (year) (5),ENDYEAR5,Conditional (e.g. skip pattern),"1990-present, 8888, 9999","1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2e5. How was the treatment provided? (5),CARETRIAL5,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1'
-a4a,I,"2e6. If clinical trial, in which group was the participant? (5)",TRIALGRP5,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1'
+a4a,I,"2e6. If clinical trial, in which group was the participant? (5)",TRIALGRP5,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial5]>'1'
 a4a,I,2f1a. Primary Drug Target - Amyloid Beta (6),TARGETAB6,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2f1b. Primary Drug Target - Tau (6),TARGETTAU6,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2f1c. Primary Drug Target - Inflammation (6),TARGETINF6,Conditional (e.g. skip pattern),1 or blank,,Integer,
@@ -89,7 +89,7 @@ a4a,I,2f3b. Start date (year) (6),STARTYEAR6,Conditional (e.g. skip pattern),199
 a4a,I,2f4a. End date (month) (6),ENDMO6,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2f4b. End date (year) (6),ENDYEAR6,Conditional (e.g. skip pattern),"1990-present, 8888, 9999","1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2f5. How was the treatment provided? (6),CARETRIAL6,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1'
-a4a,I,"2f6. If clinical trial, in which group was the participant? (6)",TRIALGRP6,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1'
+a4a,I,"2f6. If clinical trial, in which group was the participant? (6)",TRIALGRP6,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial6]>'1'
 a4a,I,2g1a. Primary Drug Target - Amyloid Beta (7),TARGETAB7,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2g1b. Primary Drug Target - Tau (7),TARGETTAU7,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2g1c. Primary Drug Target - Inflammation (7),TARGETINF7,Conditional (e.g. skip pattern),1 or blank,,Integer,
@@ -103,7 +103,7 @@ a4a,I,2g3b. Start date (year) (7),STARTYEAR7,Conditional (e.g. skip pattern),199
 a4a,I,2g4a. End date (month) (7),ENDMO7,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2g4b. End date (year) (7),ENDYEAR7,Conditional (e.g. skip pattern),"1990-present, 8888, 9999","1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2g5. How was the treatment provided? (7),CARETRIAL7,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1'
-a4a,I,"2g6. If clinical trial, in which group was the participant? (7)",TRIALGRP7,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1'
+a4a,I,"2g6. If clinical trial, in which group was the participant? (7)",TRIALGRP7,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial7]>'1'
 a4a,I,2h1a. Primary Drug Target - Amyloid Beta (8),TARGETAB8,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2h1b. Primary Drug Target - Tau (8),TARGETTAU8,Conditional (e.g. skip pattern),1 or blank,,Integer,
 a4a,I,2h1c. Primary Drug Target - Inflammation (8),TARGETINF8,Conditional (e.g. skip pattern),1 or blank,,Integer,
@@ -117,9 +117,9 @@ a4a,I,2h3b. Start date (year) (8),STARTYEAR8,Conditional (e.g. skip pattern),199
 a4a,I,2h4a. End date (month) (8),ENDMO8,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99","1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2h4b. End date (year) (8),ENDYEAR8,Conditional (e.g. skip pattern),"1990-present, 8888, 9999","1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1'
 a4a,I,2h5. How was the treatment provided? (8),CARETRIAL8,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1'
-a4a,I,"2h6. If clinical trial, in which group was the participant? (8)",TRIALGRP8,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1'
+a4a,I,"2h6. If clinical trial, in which group was the participant? (8)",TRIALGRP8,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial8]>'1'
 a4a,I,"3. Has the participant ever experienced amyloid related imaging abnormalities-edema (ARIA-E), amyloid related imaging abnormalities-hemorrhage (ARIA-H), or other major adverse events associated with treatments expected to modify ADRD biomarkers?",ADVEVENT,Conditional (e.g. skip pattern),"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[trtbiomark]='1'
-a4a,I,3a1. Adverse events to modify ADRD biomarkers - Amyloid related imaging abnormalities-edeme (ARIA-E),ARIAE,Conditional (e.g. skip pattern),1 or blank,,Integer,
-a4a,I,3a2. Adverse events to modify ADRD biomarkers - Amyloid related imaging abnormalities-hemorrhage (ARIA-H),ARIAH,Conditional (e.g. skip pattern),1 or blank,,Integer,
-a4a,I,3a3. Adverse events to modify ADRD biomarkers - Other,ADVERSEOTH,Conditional (e.g. skip pattern),1 or blank,,Integer,
+a4a,I,3a1. Adverse events to modify ADRD biomarkers - Amyloid related imaging abnormalities-edeme (ARIA-E),ARIAE,Conditional (e.g. skip pattern),1 or blank,,Integer,[advevent]='1'
+a4a,I,3a2. Adverse events to modify ADRD biomarkers - Amyloid related imaging abnormalities-hemorrhage (ARIA-H),ARIAH,Conditional (e.g. skip pattern),1 or blank,,Integer,[advevent]='1'
+a4a,I,3a3. Adverse events to modify ADRD biomarkers - Other,ADVERSEOTH,Conditional (e.g. skip pattern),1 or blank,,Integer,[advevent]='1'
 a4a,I,"3a3a. Adverse events to modify ADRD biomarkers - Other, specify",ADVERSEOTX,Conditional (e.g. skip pattern),text,,String,[adverseoth]=1
