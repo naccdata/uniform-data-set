@@ -7,7 +7,7 @@ b1l,IL,6. Does the participant report a change in the ability to taste or smell?
 b1l,IL,7. Does the participant experience excessive sweating (not related to hot weather)?,LBSSWEAT,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,IL,11. Does the participant have problems with constipation?,LBSCONST,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,IL,"14. Has the participant had the feeling that after passing urine, their bladder was not completely empty?",LBSUBLAD,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
-b1l,IL,17. Has the participant com-plained of feeling light-headed or dizzy when standing up?,LBSDZSTU,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
+b1l,IL,17. Has the participant complained of feeling light-headed or dizzy when standing up?,LBSDZSTU,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,IL,18. Has the participant become light-headed after standing for some time?,LBSDZSTN,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,IL,19. Has the participant fainted?,LBSFAINT,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,IL,21. At what age did the first pre-dominant symptom appear?,LBPSYAGE,Always,"Integers 15 – 110,  888, 999",15 – 110; 888 = Not applicable; 999 = Unknown,Integer,
