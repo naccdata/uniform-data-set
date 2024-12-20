@@ -1,7 +1,25 @@
+"""
+Generates the DED for a specific module. To use,
+update `root_directory` and `output_filename` to the
+desired values, e.g. for root_directory
 
+UDS: ../../forms/uds
+FTLD: ../../forms/ftld
+3.0 LBD: ../../forms/lbd/long
+3.1 LBD: ../../forms/lbd/short
+
+NOTE: For LBD, it is easiest to copy the `header`
+directory to the long and short directories as well (just
+don't check it in).
+"""
+import logging
 import os
 import pandas as pd
 import csv
+
+logging.basicConfig(level=logging.DEBUG)
+log = logging.getLogger(__name__)
+
 
 def ensure_directory_exists(file_path):
     # Get the directory name from the file path
@@ -10,11 +28,13 @@ def ensure_directory_exists(file_path):
     if not os.path.exists(directory):
         os.makedirs(directory)
 
+
 def clean_newlines(value):
     # Replace newline characters with an empty string
     if isinstance(value, str):
         return value.replace('\n', '').replace('\r', '')
     return value
+
 
 def concat_form(subdir, file, combined_df, header_df, qnv_found: bool = False):
      # Check if the filename matches the pattern
@@ -22,7 +42,7 @@ def concat_form(subdir, file, combined_df, header_df, qnv_found: bool = False):
         qnv_found = True
         try:
             file_path = os.path.join(subdir, file)
-            print(file_path)
+            log.info(f"Adding {file_path}")
             # Read the csv file into a DataFrame
             df = pd.read_csv(file_path, dtype=object)
             # Remove rows with NaN in 'form_name' column
@@ -37,9 +57,10 @@ def concat_form(subdir, file, combined_df, header_df, qnv_found: bool = False):
             else:
                 combined_df = pd.concat([combined_df, df], ignore_index=True)
         except Exception as e:
-            print(f'File {file_path} threw an exception: {e}')   
+            log.warning(f'File {file_path} threw an exception: {e}')   
 
     return qnv_found, combined_df, header_df
+
 
 def main(root_directory, output_filename):
     # Initialize an empty DataFrame
@@ -68,7 +89,7 @@ def main(root_directory, output_filename):
     ensure_directory_exists(output_filename)
     # Export the combined DataFrame to a CSV file
     combined_df.to_csv(output_filename, index=False, quoting=csv.QUOTE_MINIMAL)
-    print(f"Combined CSV file saved as {output_filename}")
+    log.info(f"Combined CSV file saved as {output_filename}")
 
 if __name__ == "__main__":
     root_directory = '../../forms/lbd/short'
