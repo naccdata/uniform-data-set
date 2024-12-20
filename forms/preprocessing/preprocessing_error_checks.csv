@@ -1,0 +1,18 @@
+﻿error_code,error_no,form_name,var_name,full_desc,module(s)
+preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"uds, ftld, lbd"
+preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd"
+preprocess-003,003,preprocess,VISITNUM,The FTLD module VISITNUM must match the UDS VISITNUM from the same visit date,"uds, ftld"
+preprocess-004,004,preprocess,VISITNUM,The LBD module VISITNUM must match the UDS VISITNUM from the same visit date,"uds, lbd"
+preprocess-005,005,preprocess,PACKET,A UDS Packet must be uploaded before a Milestone Form,"uds, milestone"
+preprocess-006,006,preprocess,VISITNUM,Two packets cannot have the same visit number (VISITNUM) if they are from different dates (VISITDATE),"uds, ftld, lbd"
+preprocess-007,007,preprocess,VISITDATE,Two packets cannot have the same visit date(VISITDATE) if they are from different visit numbers (VISITNUM),"uds, ftld, lbd"
+preprocess-008,008,preprocess,VISITNUM,"Visit number (VISITNUM) for Follow-Up Visit Packets must be greater than Visit number (VISITNUM) for Initial Visit Packet or Initial UDSv4 Packet (PACKET=""I"" or PACKET=""I4"")",uds
+preprocess-009,009,preprocess,VISITNUM,"Visit number (VISITNUM) for UDSv4 Initial Visit Packets (PACKET=""I4"") must be greater than Visit number (VISITNUM) for of the last UDSv3 Visit Packet",uds
+preprocess-010,010,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""F"") visit date (VISITDATE) cannot be equal to or from a date before the Initial Visit Packet or Initial UDSv4 Packet (PACKET=""I"" or PACKET=""I4"")",uds
+preprocess-011,011,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""FF"") visit date (VISITDATE) cannot be equal to or from a date before the Initial Visit Packet (PACKET=""IF"") ",ftld
+preprocess-012,012,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""FL"") visit date (VISITDATE) cannot be equal to or from a date before the Initial Visit Packet (PACKET=""IL"") ",lbd
+preprocess-013,013,preprocess,PACKET,"If submitting an Initial UDSv4 Visit Packet (PACKET=""I4""), that participant must have an existing  Initial Visit Packet (PACKET=""I"") or Follow-Up Visit Packet (PACKET=""F"") from a visit date (VISITDATE) before the Initial UDSv4 Visit Packet",uds
+preprocess-014,014,preprocess,RMMODEC2C2T,"If RMMODEC2C2T=2 or blank (C2 submission), then C2T specific variables must be blank",uds
+preprocess-015,015,preprocess,RMMODEC2C2T,"If RMMODEC2C2T=1 (C2T submission), then C2 specific variables must be blank",uds
+preprocess-016,016,preprocess,FORMVER,"If FORMVER=3.0, then version 3.1 specific variables must be blank",lbd
+preprocess-017,017,preprocess,FORMVER,"If FORMVER=3.1, then version 3.0 specific variables must be blank",lbd
