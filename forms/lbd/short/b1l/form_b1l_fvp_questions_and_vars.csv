@@ -4,7 +4,7 @@ b1l,FL,0b. B1L Clinical Symptoms and Exam - Examiner's initials,INITIALSB1L,No,t
 b1l,FL,1. Does the participant dribble saliva during the day?,LBSSALIV,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,FL,2. Does the participant have difficulty swallowing?,LBSSWALL,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,FL,6. Does the participant report a change in the ability to taste or smell?,LBSSMELL,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
-b1l,FL,7. Does the participant experi-ence excessive sweating (not related to hot weather)?,LBSSWEAT,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
+b1l,FL,7. Does the participant experience excessive sweating (not related to hot weather)?,LBSSWEAT,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,FL,11. Does the participant have problems with constipation?,LBSCONST,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,FL,"14. Has the participant had the feeling that after passing urine, their bladder was not completely empty?",LBSUBLAD,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
 b1l,FL,17. Has the participant com-plained of feeling light-headed or dizzy when standing up?,LBSDZSTU,Always,"Integers 0-1, 9",0 = No; 1 = Yes; 9 = Unknown,Integer,
