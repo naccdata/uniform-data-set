@@ -16,25 +16,30 @@ def clean_newlines(value):
         return value.replace('\n', '').replace('\r', '')
     return value
 
-def concat_form(file_path: str, combined_df, header_df):
-    try:
-        # Read the csv file into a DataFrame
-        df = pd.read_csv(file_path, dtype=object)
-        # Remove rows with NaN in 'form_name' column
-        df = df.dropna(subset=['form_name'])
-        # Remove empty rows
-        df = df.dropna(how='all')
-        # Remove newline characters from all values
-        df = df.map(clean_newlines)
-        # Append the data to the combined DataFrame
-        if 'header' in file_path:
-            return combined_df, df
-        else:
-            combined_df = pd.concat([combined_df, df], ignore_index=True)
-    except Exception as e:
-        print(f'File {file_path} threw an exception: {e}')   
+def concat_form(subdir, file, combined_df, header_df, qnv_found: bool = False):
+     # Check if the filename matches the pattern
+    if 'form_' in file and '_questions_' in file and '_ivp_' in file and file.endswith('.csv'):
+        qnv_found = True
+        try:
+            file_path = os.path.join(subdir, file)
+            print(file_path)
+            # Read the csv file into a DataFrame
+            df = pd.read_csv(file_path, dtype=object)
+            # Remove rows with NaN in 'form_name' column
+            df = df.dropna(subset=['form_name'])
+            # Remove empty rows
+            df = df.dropna(how='all')
+            # Remove newline characters from all values
+            df = df.map(clean_newlines)
+            # Append the data to the combined DataFrame
+            if 'header' in file:
+                return qnv_found, combined_df, df
+            else:
+                combined_df = pd.concat([combined_df, df], ignore_index=True)
+        except Exception as e:
+            print(f'File {file_path} threw an exception: {e}')   
 
-    return combined_df, header_df
+    return qnv_found, combined_df, header_df
 
 def main(root_directory, output_filename):
     # Initialize an empty DataFrame
@@ -46,17 +51,15 @@ def main(root_directory, output_filename):
         dirs.sort()  # ensures order
         qnv_found = False
         for file in files:
-            # Check if the filename matches the pattern
-            if 'form_' in file and '_questions_' in file and '_ivp_' in file and file.endswith('.csv'):
-                qnv_found = True
-                combined_df, header_df = concat_form(os.path.join(subdir, file), combined_df, header_df)
+            qnv_found, combined_df, header_df = \
+                concat_form(subdir, file, combined_df, header_df, qnv_found)
 
         # for LBD, get from long directory if not found
         if not qnv_found:
             long_subdir = subdir.replace('short', 'long')
             for file in os.listdir(long_subdir):
-                if 'form_' in file and '_questions_' in file and '_ivp_' in file and file.endswith('.csv'):
-                    combined_df, header_df = concat_form(os.path.join(long_subdir, file), combined_df, header_df)
+                _, combined_df, header_df = \
+                    concat_form(long_subdir, file, combined_df, header_df)
 
     if header_df is not None:
         combined_df = pd.concat([header_df, combined_df], ignore_index=True)
