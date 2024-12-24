@@ -21,7 +21,7 @@ c1f,IF,5b. Total number of words omitted from sentences (0-37),FTDSENOS,Conditio
 c1f,IF,5c. Total number of semantically related or unrelated incorrect real words (0-20),FTDSENSR,Conditional,Integers 0-20,,Integer,Blank if Question 5a FTDSENAS = 95-98
 c1f,IF,5d. Total number of phonologically related words or nonword errors (0-20),FTDSENPR,Conditional,Integers 0-20,,Integer,Blank if Question 5a FTDSENAS = 95-98
 c1f,IF,6a. Total nouns correct (0-16),FTDNOUNC,Always,"Integers 0-16, and 95-98",0 – 16 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
-c1f,IF,6b. Total verbs correct (0-16),FTDVERBC,Always,Integers 0-16,,Integer,
+c1f,IF,6b. Total verbs correct (0-16),FTDVERBC,Conditional,Integers 0-16,,Integer,Blank if Question 6a FTDNOUNC = 95-98
 c1f,IF,6c. Noun-to-verb ratio (total nouns correct/total verbs correct),FTDRATIO,Conditional,0.0000 to 1.0000,Total nouns correct/total verbs correct,Numeric,Blank if Question 6a FTDNOUNC = 95-98
 c1f,IF,7a. Number of completely accurate sentences (0-5),FTDREAAS,Always,"Integers 0-5, and 95-98",0 – 5 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
 c1f,IF,7b. Total number of words omitted from sentence (0-37),FTDREAOS,Conditional,Integers 0-37,,Integer,Blank if Question 7a FTDREAAS = 95-98
