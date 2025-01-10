@@ -3,7 +3,7 @@ a3a,IF,0a. A3a Record of Consent for Biologic Specimen Use - Form date,FRMDATEA3
 a3a,IF,0b. A3a Record of Consent for Biologic Specimen Use - Examiner's initials,INITIALSA3A,No,text,,String,
 a3a,IF,0c. A3a Record of Consent for Biologic Specimen Use - Language,LANGA3A,Always,Integers 1-2,"1, English|2, Spanish",Integer,
 a3a,IF,0d. A3a Record of Consent for Biologic Specimen Use - Submitted?,MODEA3A,Always,Integers 0-1,"0, Not completed | 1, In-person",Integer,
-a3a,IF,"0d1. If 'A3a Record of Consent for Biologic Specimen Use' not submitted, specify reason",A3ANOT,Conditional,Integers 95-99,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal|99, Unknown or inadequate information",Integer,[modea3a]='0'
+a3a,IF,"0d1. If 'A3a Record of Consent for Biologic Specimen Use' not submitted, specify reason",A3ANOT,Conditional,Integers 95-99,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal|99, Unknown or inadequate information",Integer,Blank if Question 0d MODEA3A ne 0 (Not completed)
 a3a,IF,1. What relative's consent is being recorded on this form?,FTDRELCO,Always,Integers 1-4,1 = Mother 2 = Father 3= Sibling 4 = Child,Integer,
 a3a,IF,1. Sibling's birth year,FTDSIBBY,Conditional,1885 – current year,1885 – current year,Integer,Blank if Question 1 FTDRELCO ne 3 (Sibling)
 a3a,IF,1. Child's birth year,FTDCHDBY,Conditional,1920 – current year,1920 – current year,Integer,Blank if Question 1 FTDRELCO ne 4 (Child)
