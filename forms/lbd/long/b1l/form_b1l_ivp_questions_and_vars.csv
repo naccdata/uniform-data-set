@@ -80,40 +80,40 @@ previous urination
 standing up
 18 = Feeling light-headed after stand-ing for some time
 19 = Fainting
-88 = Not applicable – never experienced
+88 = Not applicable - never experienced
 any of these symptoms
 99 = Unknown",Integer,
-b1l,IL,21. At what age did the first predominant symptom appear?,LBPSYAGE,Always,"15 – 110,  888, 999","15 – 110
+b1l,IL,21. At what age did the first predominant symptom appear?,LBPSYAGE,Always,"15 - 110,  888, 999","15 - 110
 888 = Not applicable
 999 = Unknown",Integer,
-b1l,IL,"22. Systolic blood pressure, supine position",LBSSUPSY,Always,"65 – 230, 888","65 – 230
+b1l,IL,"22. Systolic blood pressure, supine position",LBSSUPSY,Always,"65 - 230, 888","65 - 230
 888 = Not assessed",Integer,
-b1l,IL,"23. Diastolic blood pressure, supine position",LBSSUPDI,Always,"25 – 140, 888","25 – 140
+b1l,IL,"23. Diastolic blood pressure, supine position",LBSSUPDI,Always,"25 - 140, 888","25 - 140
 888 = Not assessed",Integer,
-b1l,IL,"24. Heart rate, supine position",LBSSUPHT,Always,"20 – 160, 888","20 – 160
+b1l,IL,"24. Heart rate, supine position",LBSSUPHT,Always,"20 - 160, 888","20 - 160
 888 = Not assessed",Integer,
-b1l,IL,"25. Systolic blood pressure, standing position",LBSSTNSY,Always,"50 – 240, 888","50 – 240
+b1l,IL,"25. Systolic blood pressure, standing position",LBSSTNSY,Always,"50 - 240, 888","50 - 240
 888 = Not assessed",Integer,
-b1l,IL,"26. Diastolic blood pressure, standing position",LBSSTNDI,Always,"20 – 150, 888","20 – 150
+b1l,IL,"26. Diastolic blood pressure, standing position",LBSSTNDI,Always,"20 - 150, 888","20 - 150
 888 = Not assessed",Integer,
-b1l,IL,"27. Heart rate, standing position",LBSSTNHT,Always,"33 – 180, 888","33 – 180
+b1l,IL,"27. Heart rate, standing position",LBSSTNHT,Always,"33 - 180, 888","33 - 180
 888 = Not assessed",Integer,
-b1l,IL,28. Age of onset of probable REM sleep behavior disorder,LBSAGERM,Always,"15 – 110, 888, 999","15 – 110
+b1l,IL,28. Age of onset of probable REM sleep behavior disorder,LBSAGERM,Always,"15 - 110, 888, 999","15 - 110
 888 = Not applicable
 999 = Unknown",Integer,
-b1l,IL,29. Age of onset of impaired smell,LBSAGESM,Always,"15 – 110, 888, 999","15 – 110
+b1l,IL,29. Age of onset of impaired smell,LBSAGESM,Always,"15 - 110, 888, 999","15 - 110
 888 = Not applicable
 999 = Unknown",Integer,
-b1l,IL,30. Age of onset of gait disorder,LBSAGEGT,Always,"9 – 110,  888,  999","9 – 110
+b1l,IL,30. Age of onset of gait disorder,LBSAGEGT,Always,"9 - 110,  888,  999","9 - 110
 888 = Not applicable
 999 = Unknown",Integer,
-b1l,IL,31. Age of onset of falls,LBSAGEFL,Always,"9 – 110,  888,  999","9 – 110
+b1l,IL,31. Age of onset of falls,LBSAGEFL,Always,"9 - 110,  888,  999","9 - 110
 888 = Not applicable
 999 = Unknown",Integer,
-b1l,IL,32. Age of onset of tremor,LBSAGETR,Always,"9 – 110,  888,  999","9 – 110
+b1l,IL,32. Age of onset of tremor,LBSAGETR,Always,"9 - 110,  888,  999","9 - 110
 888 = Not applicable
 999 = Unknown",Integer,
-b1l,IL,33. Age of onset of bradykinesia,LBSAGEBR,Always,"9 – 110,  888,  999","9 – 110
+b1l,IL,33. Age of onset of bradykinesia,LBSAGEBR,Always,"9 - 110,  888,  999","9 - 110
 888 = Not applicable
 999 = Unknown",Integer,
 b1l,IL,34. Was a standardized scale of autonomic symptoms completed at this visit?,LBSSCLAU,Always,0-1,"0 = No
@@ -124,5 +124,5 @@ b1l,IL,"34a. If yes, which version",LBSSCLVR,Conditional,"1-2, 8","1 = NMSS
 8 = Other",Integer,Blank if Question 34 LBSSCLAU = 0 (No)
 b1l,IL,34a1. Other,LBSSCLOT,Conditional,Any text,,String,"Blank if Question 34 LBSSCLAU = 0 (No) or
 Question 34a LBSSCLVR != 8 (Other)"
-b1l,IL,"34b. If yes, what was the score",LBSSCOR,Conditional,0 – 999,"0 – 998
+b1l,IL,"34b. If yes, what was the score",LBSSCOR,Conditional,0 - 999,"0 - 998
 999 = Unknown",Integer,Blank if Question 34 LBSSCLAU = 0 (No)

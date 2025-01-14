@@ -2,28 +2,28 @@ form_name,packet,question,var_name,missingness,conformity,response_labels,data_t
 c1f,IF,0a. C1F Neuropsychological Battery Summary Scores - Form date,FRMDATEC1F,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 c1f,IF,0b. C1F Neuropsychological Battery Summary Scores - Examiner's initials,INITIALSC1F,No,text,,String,
 c1f,IF,0c. C1F Neuropsychological Battery Summary Scores - Language,LANGC1F,Always,Integers 1-2,"1, English|2, Spanish",Integer,
-c1f,IF,1a. Total completely accurate words (0-15),FTDWORRC,Always,"Integers 0-15, and 95-98",0 – 15 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
+c1f,IF,1a. Total completely accurate words (0-15),FTDWORRC,Always,"Integers 0-15, and 95-98",0 - 15 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
 c1f,IF,1b. Total semantically related inaccurate words (0-15),FTDWORRS,Conditional,Integers 0-15,,Integer,Blank if Question 1a FTDWORRC = 95-98
-c1f,IF,1c. Total other phonologically related words or nonword errors (0 – 15),FTDWORRR,Conditional,Integers 0-15,,Integer,Blank if Question 1a FTDWORRC = 95-98
+c1f,IF,1c. Total other phonologically related words or nonword errors (0 - 15),FTDWORRR,Conditional,Integers 0-15,,Integer,Blank if Question 1a FTDWORRC = 95-98
 c1f,IF,1d. Total completely accurate words (0-15),FTDWORIC,Conditional,Integers 0-15,,Integer,Blank if Question 1a FTDWORRC = 95-98
 c1f,IF,1e. Total semantically related inaccurate words (0-15),FTDWORIS,Conditional,Integers 0-15,,Integer,Blank if Question 1a FTDWORRC = 95-98
 c1f,IF,"1f. Total words that are regularized (read using phonics, e.g., sew read as sue)",FTDWORIR,Conditional,Integers 0-15,,Integer,Blank if Question 1a FTDWORRC = 95-98
 c1f,IF,1g. Total other phonologically related words or nonword errors (0-15),FTDWORIP,Conditional,Integers 0-15,,Integer,Blank if Question 1a FTDWORRC = 95-98
-c1f,IF,2a. Total correct word-picture matches(0-20),FTDSEMMT,Always,"Integers 0-20, and 95-98",0 – 20 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
-c1f,IF,3a. Total correct animal associations (0-8),FTDSEMAA,Always,"Integers 0-8, and 95-98",0 – 8 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
+c1f,IF,2a. Total correct word-picture matches(0-20),FTDSEMMT,Always,"Integers 0-20, and 95-98",0 - 20 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
+c1f,IF,3a. Total correct animal associations (0-8),FTDSEMAA,Always,"Integers 0-8, and 95-98",0 - 8 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
 c1f,IF,3b. Total correct tool associations (0-8),FTDSEMTA,Conditional,Integers 0-8,,Integer,Blank if Question 3a FTDSEMAA = 95-98
 c1f,IF,3c. Sum of all correct associations (Semantic Associates Test total score) (0-16),FTDSEMSU,Conditional,Integers 0-16,,Integer,Blank if Question 3a FTDSEMAA = 95-98
-c1f,IF,4a. Correct subject who-questions (0-5),FTDANASW,Always,"Integers 0-5, and 95-98",0 – 5 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
+c1f,IF,4a. Correct subject who-questions (0-5),FTDANASW,Always,"Integers 0-5, and 95-98",0 - 5 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
 c1f,IF,4b. Correct object who-questions (0-5),FTDANAOW,Conditional,Integers 0-5,,Integer,Blank if Question 4a FTDANASW = 95-98
 c1f,IF,4c. Total score: sum of all correct questions (0-10),FTDANATS,Conditional,Integers 0-10,,Integer,Blank if Question 4a FTDANASW = 95-98
-c1f,IF,5a. Number of completely accurate sentences (0-5),FTDSENAS,Always,"Integers 0-5, and 95-98",0 – 5 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
+c1f,IF,5a. Number of completely accurate sentences (0-5),FTDSENAS,Always,"Integers 0-5, and 95-98",0 - 5 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
 c1f,IF,5b. Total number of words omitted from sentences (0-37),FTDSENOS,Conditional,Integers 0-37,,Integer,Blank if Question 5a FTDSENAS = 95-98
 c1f,IF,5c. Total number of semantically related or unrelated incorrect real words (0-20),FTDSENSR,Conditional,Integers 0-20,,Integer,Blank if Question 5a FTDSENAS = 95-98
 c1f,IF,5d. Total number of phonologically related words or nonword errors (0-20),FTDSENPR,Conditional,Integers 0-20,,Integer,Blank if Question 5a FTDSENAS = 95-98
-c1f,IF,6a. Total nouns correct (0-16),FTDNOUNC,Always,"Integers 0-16, and 95-98",0 – 16 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
+c1f,IF,6a. Total nouns correct (0-16),FTDNOUNC,Always,"Integers 0-16, and 95-98",0 - 16 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
 c1f,IF,6b. Total verbs correct (0-16),FTDVERBC,Conditional,Integers 0-16,,Integer,Blank if Question 6a FTDNOUNC = 95-98
 c1f,IF,6c. Noun-to-verb ratio (total nouns correct/total verbs correct),FTDRATIO,Conditional,0.0000 to 1.0000,Total nouns correct/total verbs correct,Numeric,Blank if Question 6a FTDNOUNC = 95-98
-c1f,IF,7a. Number of completely accurate sentences (0-5),FTDREAAS,Always,"Integers 0-5, and 95-98",0 – 5 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
+c1f,IF,7a. Number of completely accurate sentences (0-5),FTDREAAS,Always,"Integers 0-5, and 95-98",0 - 5 | 95 = Physical problem | 96 = Cognitive/behavoir problem | 97 = Other problem | 98 = Verbal refusal,Integer,
 c1f,IF,7b. Total number of words omitted from sentence (0-37),FTDREAOS,Conditional,Integers 0-37,,Integer,Blank if Question 7a FTDREAAS = 95-98
 c1f,IF,7c. Total number of semantically related or unrelated incorrect real words (0-20),FTDREASR,Conditional,Integers 0-20,,Integer,Blank if Question 7a FTDREAAS = 95-98
 c1f,IF,7d. Total number of phonologically related words or nonword errors (0-20),FTDREAPR,Conditional,Integers 0-20,,Integer,Blank if Question 7a FTDREAAS = 95-98
