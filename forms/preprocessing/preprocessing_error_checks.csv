@@ -1,4 +1,4 @@
-﻿error_code,error_no,form_name,var_name,full_desc,module(s)
+error_code,error_no,form_name,var_name,full_desc,module(s)
 preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"uds, ftld, lbd"
 preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd"
 preprocess-003,003,preprocess,VISITNUM,The FTLD module VISITNUM must match the UDS VISITNUM from the same visit date,"uds, ftld"
@@ -16,3 +16,4 @@ preprocess-014,014,preprocess,RMMODEC2C2T,"If RMMODEC2C2T=2 or blank (C2 submiss
 preprocess-015,015,preprocess,RMMODEC2C2T,"If RMMODEC2C2T=1 (C2T submission), then C2 specific variables must be blank",uds
 preprocess-016,016,preprocess,FORMVER,"If FORMVER=3.0, then version 3.1 specific variables must be blank",lbd
 preprocess-017,017,preprocess,FORMVER,"If FORMVER=3.1, then version 3.0 specific variables must be blank",lbd
+preprocess-018,018,preprocess,MODULE,MODULE is not in list of accepted modules,"uds, ftld, lbd"

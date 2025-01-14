@@ -1,4 +1,4 @@
-form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,notes
 e1l,FL,0a. E1L Genetics - Form date,FRMDATEE1L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,
 e1l,FL,0b. E1L Genetics - Examiner's initials,INITIALSE1L,No,text,,String,,
 e1l,FL,"1. Since the last visit, is new information available concerning the genetic mutations listed below?",LBGNEWGN,Always,Integers 0-1,"0, No | 1, Yes",Integer,,
