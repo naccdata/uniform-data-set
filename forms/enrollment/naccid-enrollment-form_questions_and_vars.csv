@@ -1,6 +1,6 @@
 ﻿form_name,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 enrl,0a. ADCID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
-enrl,0b. PTID,PTID,Always,Any text,,String,
+enrl,0b. PTID,PTID,Always,10 digit alpha numeric code,,String,
 enrl,0c. Form date,FRMDATE_ENRL,Always,mm/dd/yyyy,,Date,
 enrl,0d. Initials,INITIALS_ENRL,No,Any text,,String,
 enrl,0e. Form version,FORMVER,Always,1,"1, 1",Numeric,
@@ -23,7 +23,7 @@ enrl,5a. Please provide the NIA GUID:,GUID,Conditional (e.g. skip pattern),10 di
 enrl,6. Has the participant been previously enrolled at another ADRC? ,PREVENRL,Always,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,
 enrl,"6a. At which ADRC was this participant previously enrolled (enter
 ADCID)?",OLDADCID,Conditional (e.g. skip pattern),List of current ADCIDs,List of current ADCIDs. Valid codes are available here: https://naccdata.org/center-ids,Integer,[prevenrl] = '1'
-enrl,6b. Please provide the previous PTID (if known):,OLDPTID,No,Any text,,String,[prevenrl] = '1'
+enrl,6b. Please provide the previous PTID (if known):,OLDPTID,No,10 digit alpha numeric code,,String,[prevenrl] = '1'
 enrl,"7. If this is a transfer, is the NACCID for this participant known?",NACCIDKNWN,Conditional,"Integers 0-1, 8, or blank","0, No|1, Yes|8, Not an update",Integer,[enrltype]='2'
 enrl,7a. Please provide the NACCID: ,NACCID,Conditional (e.g. skip pattern),"10 digit alpha numeric code beginning with ""NACC""",,String,[naccidknwn] = '1'
-enrl,8. Please re-enter the participant PTID before completing the form,PTIDCONF,Always,Any text,,String,
+enrl,8. Please re-enter the participant PTID before completing the form,PTIDCONF,Always,10 digit alpha numeric code,,String,
