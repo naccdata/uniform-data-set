@@ -36,9 +36,9 @@ def clean_newlines(value):
     return value
 
 
-def concat_form(subdir, file, combined_df, header_df, qnv_found: bool = False):
-     # Check if the filename matches the pattern
-    if 'form_' in file and '_questions_' in file and '_ivp_' in file and file.endswith('.csv'):
+def concat_form(subdir, file, combined_df, header_df, visit: str, qnv_found: bool):
+    # Check if the filename matches the pattern
+    if 'form_' in file and '_questions_' in file and visit in file and file.endswith('.csv'):
         qnv_found = True
         try:
             file_path = os.path.join(subdir, file)
@@ -62,7 +62,7 @@ def concat_form(subdir, file, combined_df, header_df, qnv_found: bool = False):
     return qnv_found, combined_df, header_df
 
 
-def main(root_directory, output_filename):
+def main(root_directory, output_filename, visit: str):
     # Initialize an empty DataFrame
     combined_df = pd.DataFrame(dtype=object)
     header_df = None
@@ -73,14 +73,48 @@ def main(root_directory, output_filename):
         qnv_found = False
         for file in files:
             qnv_found, combined_df, header_df = \
-                concat_form(subdir, file, combined_df, header_df, qnv_found)
+                concat_form(subdir, file, combined_df, header_df, visit, qnv_found)
 
-        # for LBD, get from long directory if not found
-        if not qnv_found:
-            long_subdir = subdir.replace('short', 'long')
-            for file in os.listdir(long_subdir):
-                _, combined_df, header_df = \
-                    concat_form(long_subdir, file, combined_df, header_df)
+
+        ignore_short_ivp = False
+        # these will copy from 3.0 FVP, not 3.1 IVP
+        if visit == '_fvp_':
+            for form in ['b3l', 'b5l', 'b7l', 'd1l', 'e1l', 'header']:
+                if form in subdir:
+                    ignore_short_ivp = True
+
+        if not qnv_found and visit == '_fvp_' and not ignore_short_ivp:
+            # Look in IVP directory
+            for file in os.listdir(subdir):
+                qnv_found, combined_df, header_df = \
+                    concat_form(subdir, file, combined_df, header_df, '_ivp_', qnv_found)
+
+            # for LBD, get from long's IVP directory if not found
+            if not qnv_found and 'short' in subdir and 'b8l' not in subdir:
+                long_subdir = subdir.replace('short', 'long')
+                for file in os.listdir(long_subdir):
+                    qnv_found, combined_df, header_df = \
+                        concat_form(long_subdir, file, combined_df, header_df, '_ivp_', qnv_found)
+        elif not qnv_found:
+            # Look in 3.0 directory
+            for file in os.listdir(subdir):
+                qnv_found, combined_df, header_df = \
+                    concat_form(subdir, file, combined_df, header_df, visit, qnv_found)
+
+            # for LBD, get from long directory if not found
+            if not qnv_found and 'short' in subdir and 'b8l' not in subdir:
+                long_subdir = subdir.replace('short', 'long')
+                for file in os.listdir(long_subdir):
+                    qnv_found, combined_df, header_df = \
+                        concat_form(long_subdir, file, combined_df, header_df, visit, qnv_found)
+
+            # for LBD, get from long's IVP directory if not found
+            if not qnv_found and 'short' in subdir and 'b8l' not in subdir:
+                long_subdir = subdir.replace('short', 'long')
+                for file in os.listdir(long_subdir):
+                    qnv_found, combined_df, header_df = \
+                        concat_form(long_subdir, file, combined_df, header_df, '_ivp_', qnv_found)
+
 
     if header_df is not None:
         combined_df = pd.concat([header_df, combined_df], ignore_index=True)
@@ -92,6 +126,7 @@ def main(root_directory, output_filename):
     log.info(f"Combined CSV file saved as {output_filename}")
 
 if __name__ == "__main__":
-    root_directory = '../../forms/lbd/short'
-    output_filename = './combined_ded/3.1_lbd_ded.csv'
-    main(root_directory, output_filename)
+    visit = '_fvp_'
+    root_directory = '../../forms/lbd/long'
+    output_filename = './combined_ded/3.0_lbd_fvp_ded.csv'
+    main(root_directory, output_filename, visit)
