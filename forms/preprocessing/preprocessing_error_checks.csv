@@ -16,4 +16,4 @@ preprocess-014,014,preprocess,RMMODEC2C2T,"If RMMODEC2C2T=2 or blank (C2 submiss
 preprocess-015,015,preprocess,RMMODEC2C2T,"If RMMODEC2C2T=1 (C2T submission), then C2 specific variables must be blank",uds
 preprocess-016,016,preprocess,FORMVER,"If FORMVER=3.0, then version 3.1 specific variables must be blank",lbd
 preprocess-017,017,preprocess,FORMVER,"If FORMVER=3.1, then version 3.0 specific variables must be blank",lbd
-preprocess-018,018,preprocess,PTID,PTID must be a 10 digit alpha numeric code,all
+preprocess-018,018,preprocess,PTID,PTID must be an alpha numeric code that is no more than 10 digits,all
