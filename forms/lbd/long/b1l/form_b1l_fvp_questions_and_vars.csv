@@ -1,135 +1,40 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 b1l,FL,0a. B1L Clinical Symptoms and Exam - Form date,FRMDATEB1L,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b1l,FL,0b. B1L Clinical Symptoms and Exam - Examiner's initials,INITIALSB1L,No,text,,String,
-b1l,FL,1. Does the participant dribble saliva during the day?,LBSSALIV,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,2. Does the participant have difficulty swallowing?,LBSSWALL,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,3. Does the participant have altered interest in sex?,LBSINSEX,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,4. Does the participant have problems having sex?,LBSPRSEX,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,5. Does the participant have a recent change in weight (not related to dieting)?,LBSWEIGH,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,6. Does the participant report a change in the ability to taste or smell?,LBSSMELL,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,7. Does the participant experience excessive sweating (not related to hot weather)?,LBSSWEAT,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,8. Does the participant report having difficulty tolerating cold weather?,LBSTOLCD,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,9. Does the participant report having difficulty tolerating hot weather?,LBSTOLHT,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,"10. Does the participant experience double vision (two separate real objects, and not blurred vision)?",LBSDBVIS,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,11. Does the participant have problems with constipation?,LBSCONST,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,12. Does the participant have to strain to pass hard stools?,LBSHDSTL,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,13. Has the participant had involuntary loss of stools?,LBSLSSTL,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,"14. Has the participant had the feeling that after passing urine, their bladder was not completely empty?",LBSUBLAD,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,15. Has the participant's stream of urine been weak or reduced?,LBSUSTRM,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,16. Has the participant had to pass urine within two hours of the previous urination?,LBSUPASS,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,17. Has the participant complained of feeling light-headed or dizzy when standing up?,LBSDZSTU,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,18. Has the participant become light-headed after standing for some time?,LBSDZSTN,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,19. Has the participant fainted?,LBSFAINT,Always,"0-1, 9","0 = No
-1 = Yes
-9 = Unknown",Integer,
-b1l,FL,20. Indicate the first predominant symptom to appear during the participant's lifetime.,LBSPSYM,Always,"1-19, 88, 99","1 = Dribbling saliva during the day
-2 = Difficulty swallowing
-3 = Altered interest in sex
-4 = Problems having sex
-5 = Recent change in weight not relat-ed to dieting
-6 = Change in ability to taste or smell
-7 = Excessive sweating
-8 = Difficulty tolerating cold weather
-9 = Difficulty tolerating hot weather
-10 = Double vision
-11 = Constipation
-12 = Straining to pass hard stools
-13 = Involuntary loss of stools
-14 = Feeling after passing urine that
-bladder is not completely empty
-15 = Stream of urine is weak or reduced
-16 = Passing urine within two hours of
-previous urination
-17 = Feeling light-headed or dizzy when
-standing up
-18 = Feeling light-headed after stand-ing for some time
-19 = Fainting
-88 = Not applicable - never experienced
-any of these symptoms
-99 = Unknown",Integer,
-b1l,FL,21. At what age did the first predominant symptom appear?,LBPSYAGE,Always,"15 - 110,  777, 888, 999","15 - 110
-777 = Provided at previous visit
-888 = Not applicable
-999 = Unknown",Integer,
-b1l,FL,"22. Systolic blood pressure, supine position",LBSSUPSY,Always,"65 - 230, 888","65 - 230
-888 = Not assessed",Integer,
-b1l,FL,"23. Diastolic blood pressure, supine position",LBSSUPDI,Always,"25 - 140, 888","25 - 140
-888 = Not assessed",Integer,
-b1l,FL,"24. Heart rate, supine position",LBSSUPHT,Always,"20 - 160, 888","20 - 160
-888 = Not assessed",Integer,
-b1l,FL,"25. Systolic blood pressure, standing position",LBSSTNSY,Always,"50 - 240, 888","50 - 240
-888 = Not assessed",Integer,
-b1l,FL,"26. Diastolic blood pressure, standing position",LBSSTNDI,Always,"20 - 150, 888","20 - 150
-888 = Not assessed",Integer,
-b1l,FL,"27. Heart rate, standing position",LBSSTNHT,Always,"33 - 180, 888","33 - 180
-888 = Not assessed",Integer,
-b1l,FL,28. Age of onset of probable REM sleep behavior disorder,LBSAGERM,Always,"15 - 110, 777, 888, 999","15 - 110
-777 = Provided at previous visit
-888 = Not applicable
-999 = Unknown",Integer,
-b1l,FL,29. Age of onset of impaired smell,LBSAGESM,Always,"15 - 110, 777, 888, 999","15 - 110
-777 = Provided at previous visit
-888 = Not applicable
-999 = Unknown",Integer,
-b1l,FL,30. Age of onset of gait disorder,LBSAGEGT,Always,"9 - 110,  777, 888,  999","9 - 110
-777 = Provided at previous visit
-888 = Not applicable
-999 = Unknown",Integer,
-b1l,FL,31. Age of onset of falls,LBSAGEFL,Always,"9 - 110,  777, 888,  999","9 - 110
-777 = Provided at previous visit
-888 = Not applicable
-999 = Unknown",Integer,
-b1l,FL,32. Age of onset of tremor,LBSAGETR,Always,"9 - 110,  777, 888,  999","9 - 110
-777 = Provided at previous visit
-888 = Not applicable
-999 = Unknown",Integer,
-b1l,FL,33. Age of onset of bradykinesia,LBSAGEBR,Always,"9 - 110,  777, 888,  999","9 - 110
-777 = Provided at previous visit
-888 = Not applicable
-999 = Unknown",Integer,
-b1l,FL,34. Was a standardized scale of autonomic symptoms completed at this visit?,LBSSCLAU,Always,0-1,"0 = No
-1 = Yes",Integer,"If Question 34 LBSS-CLAU = 0 (No), then
-end form here"
-b1l,FL,"34a. If yes, which version",LBSSCLVR,Conditional,"1-2, 8","1 = NMSS
-2 = SCOPA-AUT
-8 = Other",Integer,Blank if Question 34 LBSSCLAU = 0 (No)
-b1l,FL,34a1. Other,LBSSCLOT,Conditional,Any text,,String,"Blank if Question 34 LBSSCLAU = 0 (No) or
-Question 34a LBSSCLVR != 8 (Other)"
-b1l,FL,"34b. If yes, what was the score",LBSSCOR,Conditional,0 - 999,"0 - 998
-999 = Unknown",Integer,Blank if Question 34 LBSSCLAU = 0 (No)
+b1l,FL,1. Does the participant dribble saliva during the day?,LBSSALIV,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,2. Does the participant have difficulty swallowing?,LBSSWALL,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,3. Does the participant have altered interest in sex?,LBSINSEX,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,4. Does the participant have problems having sex?,LBSPRSEX,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,5. Does the participant have a recent change in weight (not related to dieting)?,LBSWEIGH,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,6. Does the participant report a change in the ability to taste or smell?,LBSSMELL,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,7. Does the participant experience excessive sweating (not related to hot weather)?,LBSSWEAT,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,8. Does the participant report having difficulty tolerating cold weather?,LBSTOLCD,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,9. Does the participant report having difficulty tolerating hot weather?,LBSTOLHT,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,"10. Does the participant experience double vision (two separate real objects, and not blurred vision)?",LBSDBVIS,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,11. Does the participant have problems with constipation?,LBSCONST,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,12. Does the participant have to strain to pass hard stools?,LBSHDSTL,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,13. Has the participant had involuntary loss of stools?,LBSLSSTL,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,"14. Has the participant had the feeling that after passing urine, their bladder was not completely empty?",LBSUBLAD,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,15. Has the participant's stream of urine been weak or reduced?,LBSUSTRM,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,16. Has the participant had to pass urine within two hours of the previous urination?,LBSUPASS,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,17. Has the participant complained of feeling light-headed or dizzy when standing up?,LBSDZSTU,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,18. Has the participant become light-headed after standing for some time?,LBSDZSTN,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,19. Has the participant fainted?,LBSFAINT,Always,"0-1, 9","0 = No 1 = Yes 9 = Unknown",Integer,
+b1l,FL,20. Indicate the first predominant symptom to appear during the participant's lifetime.,LBSPSYM,Always,"1-19, 88, 99","1 = Dribbling saliva during the day 2 = Difficulty swallowing 3 = Altered interest in sex 4 = Problems having sex 5 = Recent change in weight not relat-ed to dieting 6 = Change in ability to taste or smell 7 = Excessive sweating 8 = Difficulty tolerating cold weather 9 = Difficulty tolerating hot weather 10 = Double vision 11 = Constipation 12 = Straining to pass hard stools 13 = Involuntary loss of stools 14 = Feeling after passing urine that bladder is not completely empty 15 = Stream of urine is weak or reduced 16 = Passing urine within two hours of previous urination 17 = Feeling light-headed or dizzy when standing up 18 = Feeling light-headed after stand-ing for some time 19 = Fainting 88 = Not applicable - never experienced any of these symptoms 99 = Unknown",Integer,
+b1l,FL,21. At what age did the first predominant symptom appear?,LBPSYAGE,Always,"15 - 110,  777, 888, 999","15 - 110 777 = Provided at previous visit 888 = Not applicable 999 = Unknown",Integer,
+b1l,FL,"22. Systolic blood pressure, supine position",LBSSUPSY,Always,"65 - 230, 888","65 - 230 888 = Not assessed",Integer,
+b1l,FL,"23. Diastolic blood pressure, supine position",LBSSUPDI,Always,"25 - 140, 888","25 - 140 888 = Not assessed",Integer,
+b1l,FL,"24. Heart rate, supine position",LBSSUPHT,Always,"20 - 160, 888","20 - 160 888 = Not assessed",Integer,
+b1l,FL,"25. Systolic blood pressure, standing position",LBSSTNSY,Always,"50 - 240, 888","50 - 240 888 = Not assessed",Integer,
+b1l,FL,"26. Diastolic blood pressure, standing position",LBSSTNDI,Always,"20 - 150, 888","20 - 150 888 = Not assessed",Integer,
+b1l,FL,"27. Heart rate, standing position",LBSSTNHT,Always,"33 - 180, 888","33 - 180 888 = Not assessed",Integer,
+b1l,FL,28. Age of onset of probable REM sleep behavior disorder,LBSAGERM,Always,"15 - 110, 777, 888, 999","15 - 110 777 = Provided at previous visit 888 = Not applicable 999 = Unknown",Integer,
+b1l,FL,29. Age of onset of impaired smell,LBSAGESM,Always,"15 - 110, 777, 888, 999","15 - 110 777 = Provided at previous visit 888 = Not applicable 999 = Unknown",Integer,
+b1l,FL,30. Age of onset of gait disorder,LBSAGEGT,Always,"9 - 110,  777, 888,  999","9 - 110 777 = Provided at previous visit 888 = Not applicable 999 = Unknown",Integer,
+b1l,FL,31. Age of onset of falls,LBSAGEFL,Always,"9 - 110,  777, 888,  999","9 - 110 777 = Provided at previous visit 888 = Not applicable 999 = Unknown",Integer,
+b1l,FL,32. Age of onset of tremor,LBSAGETR,Always,"9 - 110,  777, 888,  999","9 - 110 777 = Provided at previous visit 888 = Not applicable 999 = Unknown",Integer,
+b1l,FL,33. Age of onset of bradykinesia,LBSAGEBR,Always,"9 - 110,  777, 888,  999","9 - 110 777 = Provided at previous visit 888 = Not applicable 999 = Unknown",Integer,
+b1l,FL,34. Was a standardized scale of autonomic symptoms completed at this visit?,LBSSCLAU,Always,0-1,"0 = No 1 = Yes",Integer,"If Question 34 LBSS-CLAU = 0 (No), then end form here"
+b1l,FL,"34a. If yes, which version",LBSSCLVR,Conditional,"1-2, 8","1 = NMSS 2 = SCOPA-AUT 8 = Other",Integer,Blank if Question 34 LBSSCLAU = 0 (No)
+b1l,FL,34a1. Other,LBSSCLOT,Conditional,Any text,,String,"Blank if Question 34 LBSSCLAU = 0 (No) or Question 34a LBSSCLVR != 8 (Other)"
+b1l,FL,"34b. If yes, what was the score",LBSSCOR,Conditional,0 - 999,"0 - 998 999 = Unknown",Integer,Blank if Question 34 LBSSCLAU = 0 (No)
