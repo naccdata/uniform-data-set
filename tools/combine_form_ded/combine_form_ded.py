@@ -83,6 +83,8 @@ def main(root_directory, output_filename, visit: str):
                 if form in subdir:
                     ignore_short_ivp = True
 
+        # For anything not short LBD FVP uncomment this, need to refactor this to not be so messy
+        ignore_short_ivp = False
         if not qnv_found and visit == '_fvp_' and not ignore_short_ivp:
             # Look in IVP directory
             for file in os.listdir(subdir):
@@ -95,7 +97,8 @@ def main(root_directory, output_filename, visit: str):
                 for file in os.listdir(long_subdir):
                     qnv_found, combined_df, header_df = \
                         concat_form(long_subdir, file, combined_df, header_df, '_ivp_', qnv_found)
-        elif not qnv_found:
+
+        if not qnv_found:
             # Look in 3.0 directory
             for file in os.listdir(subdir):
                 qnv_found, combined_df, header_df = \
@@ -126,7 +129,7 @@ def main(root_directory, output_filename, visit: str):
     log.info(f"Combined CSV file saved as {output_filename}")
 
 if __name__ == "__main__":
-    visit = '_fvp_'
-    root_directory = '../../forms/lbd/long'
-    output_filename = './combined_ded/3.0_lbd_fvp_ded.csv'
+    visit = '_ivp_'
+    root_directory = '../../forms/lbd/short'
+    output_filename = './combined_ded/3.1_lbd_ivp_ded.csv'
     main(root_directory, output_filename, visit)
