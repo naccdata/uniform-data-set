@@ -1,3 +1,8 @@
+"""
+Some of the CSVs are encoded in cp1252 which causes issues downstream,
+this script converts them to utf-8.
+"""
+
 import logging
 from pathlib import Path
 
@@ -23,5 +28,6 @@ def convert_to_utf8(file: Path) -> None:
 
 FORMS_DIR = Path('../../forms')
 
+# ADD/ITERATE OVER WHICHEVER FILES YOU NEED TO CONVERT
 convert_to_utf8(FORMS_DIR / 'lbd/long/e2l/form_e2l_fvp_questions_and_vars.csv')
 convert_to_utf8(FORMS_DIR / 'lbd/long/e3l/form_e3l_fvp_questions_and_vars.csv')
