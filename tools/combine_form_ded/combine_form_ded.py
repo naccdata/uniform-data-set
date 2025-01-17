@@ -75,11 +75,11 @@ class DedGenerator:
         """
         visit = override_visit if override_visit else self.__visit
         # Check if the filename matches the pattern
-        if (not file.endswith('.csv')               # not a CSV
-            or not file.startswith('form_')         # not a form CSV
-            or '_questions_' not in file            # not a Q&V CSV
+        if (not file.endswith('.csv')        # not a CSV
+            or not file.startswith('form_')  # not a form CSV
+            or '_questions_' not in file     # not a Q&V CSV
             or f"_{visit}_" not in file):    # not a visit we care about
-            return qnv_found                        # return whatever the previous state was
+            return qnv_found                 # return whatever the previous state was
 
         # found the form, will always return True after this point
         try:
