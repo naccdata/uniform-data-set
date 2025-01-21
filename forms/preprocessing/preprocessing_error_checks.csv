@@ -1,4 +1,4 @@
-﻿error_code,error_no,form_name,var_name,full_desc,module(s)
+error_code,error_no,form_name,var_name,full_desc,module(s)
 preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"uds, ftld, lbd"
 preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd"
 preprocess-003,003,preprocess,VISITNUM,The FTLD module VISITNUM must match the UDS VISITNUM from the same visit date,"uds, ftld"
@@ -12,8 +12,10 @@ preprocess-010,010,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""F"") visit d
 preprocess-011,011,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""FF"") visit date (VISITDATE) cannot be equal to or from a date before the Initial Visit Packet (PACKET=""IF"") ",ftld
 preprocess-012,012,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""FL"") visit date (VISITDATE) cannot be equal to or from a date before the Initial Visit Packet (PACKET=""IL"") ",lbd
 preprocess-013,013,preprocess,PACKET,"If submitting an Initial UDSv4 Visit Packet (PACKET=""I4""), that participant must have an existing  Initial Visit Packet (PACKET=""I"") or Follow-Up Visit Packet (PACKET=""F"") from a visit date (VISITDATE) before the Initial UDSv4 Visit Packet",uds
-preprocess-014,014,preprocess,RMMODEC2C2T,"If RMMODEC2C2T=2 or blank (C2 submission), then C2T specific variables must be blank",uds
-preprocess-015,015,preprocess,RMMODEC2C2T,"If RMMODEC2C2T=1 (C2T submission), then C2 specific variables must be blank",uds
-preprocess-016,016,preprocess,FORMVER,"If FORMVER=3.0, then version 3.1 specific variables must be blank",lbd
-preprocess-017,017,preprocess,FORMVER,"If FORMVER=3.1, then version 3.0 specific variables must be blank",lbd
-preprocess-018,018,preprocess,PTID,PTID must be an alpha numeric code that is no more than 10 digits,all
+preprocess-014,014,preprocess,vary,Some fields in the input record do not match with the submitted version,"uds, ftld, lbd"
+preprocess-015,015,preprocess,PACKET,Provided PACKET code is not in the list of accepted packets for this module,"uds, ftld, lbd"
+preprocess-016,016,preprocess,FORMVER,Provided FORMVER is not in the list of accepted versions for this module,"uds, ftld, lbd"
+preprocess-017,017,preprocess,PTID,PTID must be an alpha numeric code that is no more than 10 digits,"uds, ftld, lbd"
+preprocess-018,018,preprocess,MODULE,MODULE is not in list of accepted modules,"uds, ftld, lbd"
+preprocess-019,019,preprocess,PACKET,Follow-Up visit cannot be submitted without an existing Initial Visit Packet,"uds, ftld, lbd"
+preprocess-020,020,preprocess,PACKET,More than one IVP packet found for the participant/module,"uds, ftld, lbd"
