@@ -93,6 +93,8 @@ class DedGenerator:
             df = df.dropna(how='all')
             # Remove newline characters from all values
             df = df.map(clean_newlines)
+            # Convert variable names to lowercase
+            df['var_name'] = df['var_name'].str.lower()
             # Append the data to the combined DataFrame
             if 'header' in file:
                 log.info(f"Found header file: {file}")
