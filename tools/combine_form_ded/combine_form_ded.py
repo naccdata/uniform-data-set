@@ -32,6 +32,7 @@ class ModuleType:
     FTLD = 'ftld'
     LBD_LONG = 'lbd/long'
     LBD_SHORT = 'lbd/short'
+    ENROLLMENT = 'enrollment'
 
 
 def ensure_directory_exists(file_path: str) -> None:
@@ -74,12 +75,18 @@ class DedGenerator:
             True if the Q&V was found, False otherwise
         """
         visit = override_visit if override_visit else self.__visit
+
+        # for enrollment, should just be a single file
+        if self.__module == ModuleType.ENROLLMENT:
+            if file != 'naccid-enrollment-form_questions_and_vars.csv':
+                return
+
         # Check if the filename matches the pattern
-        if (not file.endswith('.csv')        # not a CSV
-            or not file.startswith('form_')  # not a form CSV
-            or '_questions_' not in file     # not a Q&V CSV
-            or f"_{visit}_" not in file):    # not a visit we care about
-            return qnv_found                 # return whatever the previous state was
+        elif (not file.endswith('.csv')        # not a CSV
+              or not file.startswith('form_')  # not a form CSV
+              or '_questions_' not in file     # not a Q&V CSV
+              or f"_{visit}_" not in file):    # not a visit we care about
+              return qnv_found                 # return whatever the previous state was
 
         # found the form, will always return True after this point
         try:
@@ -189,8 +196,8 @@ class DedGenerator:
                 for file in os.listdir(subdir):
                     self.concat_form(subdir, file, qnv_found, override_visit=VisitType.IVP)
 
-        # Concat header to beginning of the DF
-        if self.__header_df is None:
+        # Concat header to beginning of the DF (if not enrollment form)
+        if self.__header_df is None and self.__module != ModuleType.ENROLLMENT:
             raise ValueError(f"No header file found for {self.__module}")
         self.__combined_df = pd.concat([self.__header_df, self.__combined_df], ignore_index=True)
 
@@ -207,7 +214,7 @@ if __name__ == "__main__":
     # CHANGE THESE
     # If LBD, make sure the LBD long/short directories each have
     # their own copy of the header files before running
-    module = ModuleType.LBD_SHORT
+    module = ModuleType.ENROLLMENT
     visit = VisitType.FVP
     output_filename = './combined_ded/output.csv'
 
