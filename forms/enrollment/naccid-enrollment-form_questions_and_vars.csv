@@ -21,8 +21,7 @@ enrl,4i. Gender--Prefer not to answer,ENRLGENNOANS,Conditional (e.g. skip patter
 enrl,5. Does the participant have a NIA GUID?,GUIDAVAIL,Always,Integers 0-1,"0, No|1, Yes",Integer,
 enrl,5a. Please provide the NIA GUID:,GUID,Conditional (e.g. skip pattern),Alpha numeric code up to 20 digits,,String,[guidavail] = '1'
 enrl,6. Has the participant been previously enrolled at another ADRC? ,PREVENRL,Always,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,
-enrl,"6a. At which ADRC was this participant previously enrolled (enter
-ADCID)?",OLDADCID,Conditional (e.g. skip pattern),List of current ADCIDs,List of current ADCIDs. Valid codes are available here: https://naccdata.org/center-ids,Integer,[prevenrl] = '1'
+enrl,"6a. At which ADRC was this participant previously enrolled (enter ADCID)?",OLDADCID,Conditional (e.g. skip pattern),List of current ADCIDs,List of current ADCIDs. Valid codes are available here: https://naccdata.org/center-ids,Integer,[prevenrl] = '1'
 enrl,6b. Please provide the previous PTID (if known):,OLDPTID,No,Alpha numeric code up to 10 digits,,String,[prevenrl] = '1'
 enrl,"7. If this is a transfer, is the NACCID for this participant known?",NACCIDKNWN,Conditional,"Integers 0-1, 8, or blank","0, No|1, Yes|8, Not an update",Integer,[enrltype]='2'
 enrl,7a. Please provide the NACCID: ,NACCID,Conditional (e.g. skip pattern),"10 digit alpha numeric code beginning with ""NACC""",,String,[naccidknwn] = '1'
