@@ -1,7 +1,7 @@
 error_code,error_no,form_name,var_name,full_desc,module(s)
 preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"uds, ftld, lbd"
 preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd"
-preprocess-003,003,preprocess,VISITNUM,The FTLD module VISITNUM must match the UDS VISITNUM from the same visit date,"uds, ftld"
+preprocess-003,003,preprocess,VISITNUM,Cannot find a matching UDS visit packet with the same visit number and visit date as the module packet,"lbd, ftld"
 preprocess-004,004,preprocess,VISITNUM,The LBD module VISITNUM must match the UDS VISITNUM from the same visit date,"uds, lbd"
 preprocess-005,005,preprocess,PACKET,A UDS Packet must be uploaded before a Milestone Form,"uds, milestone"
 preprocess-006,006,preprocess,VISITNUM,Two packets cannot have the same visit number (VISITNUM) if they are from different dates (VISITDATE),"uds, ftld, lbd"
