@@ -2,20 +2,21 @@ error_code,error_no,form_name,var_name,full_desc,module(s)
 preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"uds, ftld, lbd"
 preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd"
 preprocess-003,003,preprocess,VISITNUM,Cannot find a matching UDS visit packet with the same visit number and visit date as the module packet,"lbd, ftld"
-preprocess-004,004,preprocess,VISITNUM,The LBD module VISITNUM must match the UDS VISITNUM from the same visit date,"uds, lbd"
-preprocess-005,005,preprocess,PACKET,A UDS Packet must be uploaded before a Milestone Form,"uds, milestone"
+preprocess-004,004,preprocess,PACKET,"Follow-Up module packet (PACKET=""FF"" or ""FL"") cannot be submitted for a UDS Initial Visit Packet (PACKET=""I"")","lbd, ftld"
+preprocess-005,005,preprocess,PACKET,A UDS packet must be submitted before submitting this module/form,milestone
 preprocess-006,006,preprocess,VISITNUM,Two packets cannot have the same visit number (VISITNUM) if they are from different dates (VISITDATE),"uds, ftld, lbd"
-preprocess-007,007,preprocess,VISITDATE,Two packets cannot have the same visit date(VISITDATE) if they are from different visit numbers (VISITNUM),"uds, ftld, lbd"
-preprocess-008,008,preprocess,VISITNUM,"Visit number (VISITNUM) for Follow-Up Visit Packets must be greater than Visit number (VISITNUM) for Initial Visit Packet or Initial UDSv4 Packet (PACKET=""I"" or PACKET=""I4"")",uds
+preprocess-007,007,preprocess,VISITDATE,Two packets cannot have the same visit date (VISITDATE) if they are from different visit numbers (VISITNUM),"uds, ftld, lbd"
+preprocess-008,008,preprocess,VISITNUM,"Visit number (VISITNUM) for Follow-Up Visit Packets (PACKET=""F"", ""FF"", ""FL"") must be greater than the visit number (VISITNUM) for the respective Initial Visit Packet (PACKET=""I"", ""I4"", ""IF"", ""IL"")","uds, ftld, lbd"
 preprocess-009,009,preprocess,VISITNUM,"Visit number (VISITNUM) for UDSv4 Initial Visit Packets (PACKET=""I4"") must be greater than Visit number (VISITNUM) for of the last UDSv3 Visit Packet",uds
-preprocess-010,010,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""F"") visit date (VISITDATE) cannot be equal to or from a date before the Initial Visit Packet or Initial UDSv4 Packet (PACKET=""I"" or PACKET=""I4"")",uds
-preprocess-011,011,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""FF"") visit date (VISITDATE) cannot be equal to or from a date before the Initial Visit Packet (PACKET=""IF"") ",ftld
-preprocess-012,012,preprocess,VISITDATE,"Follow-Up Packet (PACKET=""FL"") visit date (VISITDATE) cannot be equal to or from a date before the Initial Visit Packet (PACKET=""IL"") ",lbd
-preprocess-013,013,preprocess,PACKET,"If submitting an Initial UDSv4 Visit Packet (PACKET=""I4""), that participant must have an existing  Initial Visit Packet (PACKET=""I"") or Follow-Up Visit Packet (PACKET=""F"") from a visit date (VISITDATE) before the Initial UDSv4 Visit Packet",uds
-preprocess-014,014,preprocess,vary,Some fields in the input record do not match with the submitted version,"uds, ftld, lbd"
-preprocess-015,015,preprocess,PACKET,Provided PACKET code is not in the list of accepted packets for this module,"uds, ftld, lbd"
-preprocess-016,016,preprocess,FORMVER,Provided FORMVER is not in the list of accepted versions for this module,"uds, ftld, lbd"
-preprocess-017,017,preprocess,PTID,PTID must be an alpha numeric code that is no more than 10 digits,"uds, ftld, lbd"
-preprocess-018,018,preprocess,MODULE,MODULE is not in list of accepted modules,"uds, ftld, lbd"
-preprocess-019,019,preprocess,PACKET,Follow-Up visit cannot be submitted without an existing Initial Visit Packet,"uds, ftld, lbd"
-preprocess-020,020,preprocess,PACKET,More than one IVP packet found for the participant/module,"uds, ftld, lbd"
+preprocess-010,010,preprocess,VISITDATE,"Follow-Up Visit Packet (PACKET=""F"", ""FF"", ""FL"") visit date (VISITDATE) cannot be equal to or from a date before the respective Initial Visit Packet (PACKET=""I"", ""I4"", ""IF"", ""IL"")","uds, ftld, lbd"
+preprocess-011,011,preprocess,PACKET,Visit date (VISITDATE) for UDSv4 Initial Visit Packet (PACKET=I4) must be a date after the last UDSv3 Visit Packet,uds
+preprocess-012,012,preprocess,vary,Some fields in the input record do not match with the submitted version,"uds, ftld, lbd"
+preprocess-013,013,preprocess,PACKET,Provided PACKET code is not in the list of accepted packets for this module,"uds, ftld, lbd"
+preprocess-014,014,preprocess,FORMVER,Provided FORMVER is not in the list of accepted versions for this module,"uds, ftld, lbd"
+preprocess-015,015,preprocess,PTID,PTID must be an alpha numeric code that is no more than 10 digits,"uds, ftld, lbd"
+preprocess-016,016,preprocess,MODULE,MODULE is not in list of accepted modules,"uds, ftld, lbd"
+preprocess-017,017,preprocess,PACKET,Follow-Up visit cannot be submitted without an existing Initial Visit Packet,"uds, ftld, lbd"
+preprocess-018,018,preprocess,PACKET,More than one IVP packet found for the participant/module,"uds, ftld, lbd"
+preprocess-019,019,preprocess,MODULE,UDS visit packet must be approved before the module visit can be processed,"lbd, ftld"
+preprocess-020,020,preprocess,PACKET,"To submit an Initial UDSv4 Visit Packet (PACKET=""I4""), participant must have an existing UDSv3 Visit Packet",uds
+preprocess-021,021,preprocess,PACKET,"Participant must have an existing Initial UDSv4 Visit Packet (PACKET=""I4"") submitted before the Follow-Up Visit Packet (PACKET=""F"") ",uds
