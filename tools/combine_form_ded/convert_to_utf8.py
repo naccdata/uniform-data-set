@@ -16,7 +16,15 @@ def convert_to_utf8(file: Path) -> None:
     """
     try:
         with file.open('r', encoding='utf-8') as fh:
-            fh.read()
+            contents = fh.read()
+
+        if contents.startswith(u'\ufeff'):
+            log.warning(f"{file} has \\ufeff character, removing")
+            contents = contents.replace(u'\ufeff', '')
+
+            with file.open('w', encoding='utf-8') as fh:
+                fh.write(contents)
+
     except UnicodeDecodeError as e:
         log.warning(f"{file} is not UTF-8 - converting")
         contents = None
