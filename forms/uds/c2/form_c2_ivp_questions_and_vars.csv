@@ -12,7 +12,7 @@ c2,I,1c. Language of MoCA administration:,MOCALAN,Conditional (e.g. skip pattern
 c2,I,1c1. Langauge of MoCA administration--Other: Specify,MOCALANX,Conditional (e.g. skip pattern),text,,String,[mocalan]='3'
 c2,I,1d. Participant was unable to complete one or more sections due to visual impairment,MOCAVIS,Conditional (e.g. skip pattern),Integers 0-1,"0, No|1, Yes",Integer,[mocacomp]='1'
 c2,I,1e. Participant was unable to complete one or more sections due to hearing impairment,MOCAHEAR,Conditional (e.g. skip pattern),Integers 0-1,"0, No|1, Yes",Integer,[mocacomp]='1'
-c2,I,1f. Total Raw Score -- Uncorrected,MOCATOTS,Conditional (e.g. skip pattern),"Integers 0-30, 88","0–30, 88 = Item not administered",Integer,[mocacomp]='1'
+c2,I,1f. Total Raw Score -- Uncorrected,MOCATOTS,Conditional (e.g. skip pattern),"Integers 0-30, 88","0-30, 88 = Item not administered",Integer,[mocacomp]='1'
 c2,I,1g. Visuospatial/executive -- Trails,MOCATRAI,Conditional (e.g. skip pattern),"Integers 0-1, 95-98","0, 0|1, 1|95, Physical problem|96, Cognitive/behavior problem|97, Other problem|98, Verbal refusal",Integer,[mocacomp]='1'
 c2,I,1h. Visuospatial/executive -- Cube,MOCACUBE,Conditional (e.g. skip pattern),"Integers 0-1, 95-98","0, 0|1, 1|95, Physical problem|96, Cognitive/behavior problem|97, Other problem|98, Verbal refusal",Integer,[mocacomp]='1'
 c2,I,1i. Visuospatial/executive -- Clock contour,MOCACLOC,Conditional (e.g. skip pattern),"Integers 0-1, 95-98","0, 0|1, 1|95, Physical problem|96, Cognitive/behavior problem|97, Other problem|98, Verbal refusal",Integer,[mocacomp]='1'
