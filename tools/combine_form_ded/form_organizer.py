@@ -119,9 +119,23 @@ class FormOrganizer(ABC):
         elif (not file.endswith(self.classification)  # needs to end with correct postfix
               or not file.startswith('form_')         # not a form CSV
               or f"_{visit}_" not in file):           # not a visit we care about
-              return False
+            return False
 
         return True
+
+    @abstractmethod
+    def handle_lbd_short_fvp(self, form: str, subdir: str, long_subdir: str, file_found: bool) -> bool:
+        """FVP LBD_SHORT is a special case and changes depending on what exactly
+        we're trying to do, so subclasses should define the behavior.
+
+        Args:
+            form: The form name
+            subdir: The short subdirectory
+            long_subdir: The long subdirectory
+            file_found: Whether or not the file was found
+        Returns:
+            Whether or not the file was found
+        """
 
     def handle_lbd(self, subdir: str, file_found: bool) -> bool:
         """Handle LBD, which needs to handle both the long and short case.
@@ -142,16 +156,9 @@ class FormOrganizer(ABC):
 
         # 3. For LBD Short (3.1) FVP, grab from either LBD Short IVP OR LBD Long FVP
         if self.visit == VisitType.FVP:
-            # LBD Short FVP specific case - these will try to pull from LBD Long FVP then LBD Long IVP
+            # LBD Short FVP special case
             if self.module == ModuleType.LBD_SHORT:
-                if form in STATIC_LBD_FORMS:
-                    for file in os.listdir(long_subdir):
-                        file_found = self.execute(long_subdir, file, file_found,
-                                                  override_visit=VisitType.FVP)
-                    if not file_found:
-                        for file in os.listdir(long_subdir):
-                            file_found = self.execute(long_subdir, file, file_found,
-                                                      override_visit=VisitType.IVP)
+                file_found = self.handle_lbd_short_fvp(form, subdir, long_subdir, file_found)
 
             # 1. In general, for any FVP, grab from the IVP directory (this case is for LBD Long FVP)
             if not file_found:

@@ -20,6 +20,7 @@ import csv
 from datetime import date
 
 from form_organizer import (
+    STATIC_LBD_FORMS,
     FileClassification,
     FormOrganizer,
     ModuleType,
@@ -99,6 +100,30 @@ class DedGenerator(FormOrganizer):
             log.warning(f'File {file_path} threw an exception: {e}')
 
         return True
+
+    def handle_lbd_short_fvp(self, form: str, subdir: str, long_subdir: str, file_found: bool) -> bool:
+        """Handles FVP LBD_SHORT specifically for DED generation. These will try to pull
+        from LBD Long FVP then LBD Long IVP.
+
+        Args:
+            form: The form name
+            subdir: The short subdirectory - not used here
+            long_subdir: The long subdirectory
+            file_found: Whether or not the file was found
+
+        Returns:
+            Whether or not the file was found
+        """
+        if form in STATIC_LBD_FORMS:
+            for file in os.listdir(long_subdir):
+                file_found = self.execute(long_subdir, file, file_found,
+                                          override_visit=VisitType.FVP)
+            if not file_found:
+                for file in os.listdir(long_subdir):
+                    file_found = self.execute(long_subdir, file, file_found,
+                                              override_visit=VisitType.IVP)
+
+        return file_found
 
     def generate(self, output_filename: str) -> None:
         """Generate the DED.
