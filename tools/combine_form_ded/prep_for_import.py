@@ -213,7 +213,7 @@ class ErrorCheckPreparer(FormOrganizer):
                     raise FileNotFoundError(f"3.1 FVP LBD form {form} must grab P from 3.1 IVP")
 
             # p same as 3.0 FVP
-            if form in ['b1l', 'b2l', 'b6l', 'b9l']:
+            if form in ['b1l', 'b2l', 'b6l']:
                 file = f'form_{form}_fvp_error_checks_p.csv'
                 file_found = self.execute(long_subdir, file, file_found)
                 if not file_found:
