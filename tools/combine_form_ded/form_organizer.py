@@ -44,6 +44,7 @@ class ModuleType:
     LBD_LONG = 'lbd/long'
     LBD_SHORT = 'lbd/short'
     ENROLLMENT = 'enrollment'
+    PREPROCESS = 'preprocessing'
 
     @classmethod
     def all(cls) -> List[str]:
@@ -52,7 +53,8 @@ class ModuleType:
             cls.FTLD,
             cls.LBD_LONG,
             cls.LBD_SHORT,
-            cls.ENROLLMENT
+            cls.ENROLLMENT,
+            cls.PREPROCESS
         ]
 
 
@@ -112,11 +114,14 @@ class FormOrganizer(ABC):
         """
         # for enrollment, should just be a single file
         if self.module == ModuleType.ENROLLMENT:
-            if not file.endswith(self.classification):
-                return False
+            return file.endswith(self.classification)
+
+        # same with preprocessing although it has a different filename, so hack it a bit
+        if self.module == ModuleType.PREPROCESS and self.classification == FileClassification.ERROR_CHECK_MC:
+            return file == 'preprocessing_error_checks.csv'
 
         # Check if the filename matches the pattern
-        elif (not file.endswith(self.classification)  # needs to end with correct postfix
+        if (not file.endswith(self.classification)  # needs to end with correct postfix
               or not file.startswith('form_')         # not a form CSV
               or f"_{visit}_" not in file):           # not a visit we care about
             return False
