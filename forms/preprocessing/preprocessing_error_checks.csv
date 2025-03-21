@@ -13,7 +13,7 @@ preprocess-011,011,preprocess,PACKET,Visit date (VISITDATE) for UDSv4 Initial Vi
 preprocess-012,012,preprocess,vary,Some fields in the input record do not match with the submitted version,"uds, ftld, lbd"
 preprocess-013,013,preprocess,PACKET,Provided PACKET code is not in the list of accepted packets for this module,"uds, ftld, lbd"
 preprocess-014,014,preprocess,FORMVER,Provided FORMVER is not in the list of accepted versions for this module,"uds, ftld, lbd"
-preprocess-015,015,preprocess,PTID,PTID must be an alpha numeric code that is no more than 10 digits,"uds, ftld, lbd"
+preprocess-015,015,preprocess,PTID,PTID must be no more than 10 characters,"uds, ftld, lbd"
 preprocess-016,016,preprocess,MODULE,MODULE is not in list of accepted modules,"uds, ftld, lbd"
 preprocess-017,017,preprocess,PACKET,Follow-Up visit cannot be submitted without an existing Initial Visit Packet,"uds, ftld, lbd"
 preprocess-018,018,preprocess,PACKET,More than one IVP packet found for the participant/module,"uds, ftld, lbd"
@@ -22,3 +22,4 @@ preprocess-020,020,preprocess,PACKET,"To submit an Initial UDSv4 Visit Packet (P
 preprocess-021,021,preprocess,PACKET,"Participant must have an existing Initial UDSv4 Visit Packet (PACKET=""I4"") submitted before the Follow-Up Visit Packet (PACKET=""F"") ",uds
 preprocess-022,022,preprocess,VISITDATE,Duplicate record with the same visit date exists in the batch CSV file for this participant,"uds, ftld, lbd"
 preprocess-023,023,preprocess,VISITNUM,Packet with higher visit date (VISITDATE) must also have a higher visit number (VISITNUM),"uds, ftld, lbd"
+preprocess-024,024,preprocess,MODExx,Missing submission status (MODE<form name> variable) for one or more optional forms,"uds, ftld, lbd"
