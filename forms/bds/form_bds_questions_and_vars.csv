@@ -1,9 +1,9 @@
-form_name,formver,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 bds,1,0a. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
-bds,1,0b. PTID,PTID,Always,Alpha numeric code up to 10 digits,,String,
-bds,1,0c. Form Date,VISITDATE,No,mm/dd/yyyy or yyyy/mm/dd,,Date,
+bds,1,0b. PTID,PTID,Always,String with max length of 10 characters,,String,
+bds,1,0c. Form Date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 bds,1,0d. Examiner's initials,INITIALS,No,Any text,,String,
-bds,1,0e. Form version number,FORMVER,No,1,"1, 1",Numeric,
+bds,1,0e. Form version number,FORMVER,Always,1,"1, 1",Numeric,
 bds,1,1a. Participant’s month of birth (MM),BIRTHMO,No,Integers 1-12,1 – 12,Integer,
 bds,1,1b. Participant’s year of birth (YYYY),BIRTHYR,No,Integers 1875 - current year,1875 – current year,Integer,
 bds,1,2. Participant’s sex,SEX,No,Integers 1-2,"1, Male | 2, Female",Integer,

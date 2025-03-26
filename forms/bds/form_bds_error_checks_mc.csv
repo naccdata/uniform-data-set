@@ -1,4 +1,4 @@
-error_code,error_no,error_type,form_name,formver,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 bds-1-m-001,001,Error,bds,1,ADCID,Missingness,ADCID must be present,ADCID cannot be blank,Q0a. ADCID (ADRC ID) cannot be blank ,IF ADCID = blank,,,,,
 bds-1-c-002,002,Error,bds,1,ADCID,Conformity,ADCID conforms,ADCID must be an integer from the current list of ADRCs,Q0a. ADCID (Center ID) must be an integer that appears on the current list of ADRCs,IF ADCID ne valid code from ADRC list,,,,,
 bds-1-m-003,003,Error,bds,1,PTID,Missingness,PTID must be present,PTID cannot be blank,Q0b. PTID (UDS/MDS patient ID) cannot be blank,IF PTID = blank,,,,,
@@ -86,3 +86,5 @@ bds-1-c-084,084,Error,bds,1,BDSFPTAV,Conformity,BDSFPTAV conforms,BDSFPTAV must 
 bds-1-c-085,085,Error,bds,1,BDSACSAV,Conformity,BDSACSAV conforms,BDSACSAV must be an integer between 0-1 or 9,Q27. BDSACSAV (Amyloid CSF assay) must be an integer between 0-1 or 9 ,IF BDSACSAV < 0 or (BDSACSAV > 1 and BDSACSAV ne 9),,,,,
 bds-1-c-086,086,Error,bds,1,BDSTCSAV,Conformity,BDSTCSAV conforms,BDSTCSAV must be an integer between 0-1 or 9,Q28. BDSTCSAV (Tau CSF assay) must be an integer between 0-1 or 9 ,IF BDSTCSAV < 0 or (BDSTCSAV > 1 and BDSTCSAV ne 9),,,,,
 bds-1-c-087,087,Error,bds,1,BDSDATAV,Conformity,BDSDATAV conforms,BDSDATAV must be an integer between 0-1 or 9,Q29. BDSDATAV (DAT scan) must be an integer between 0-1 or 9 ,IF BDSDATAV < 0 or (BDSDATAV > 1 and BDSDATAV ne 9),,,,,
+bds-1-c-088,088,Error,bds,1,VISITDATE,Conformity,VISITDATE must be present,VISITDATE cannot be blank,Q0c. VISITDATE (Form Date) cannot be blank,IF VISITDATE is blank,,,,,
+bds-1-c-089,089,Error,bds,1,FORMVER,Conformity,FORMVER must be present,FORMVER cannot be blank,Q0d. FORMVER (Form version number) cannot be blank,IF FORMVER is blank,,,,,
