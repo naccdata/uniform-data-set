@@ -1,4 +1,4 @@
-error_code,error_no,form_name,var_name,full_desc,module(s)
+error_code,error_no,form_name,var_name,full_desc,modules
 preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"uds, ftld, lbd"
 preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd"
 preprocess-003,003,preprocess,VISITNUM,Cannot find a matching UDS visit packet with the same visit number and visit date as the module packet,"lbd, ftld"
@@ -20,3 +20,6 @@ preprocess-018,018,preprocess,PACKET,More than one IVP packet found for the part
 preprocess-019,019,preprocess,MODULE,UDS visit packet must be approved before the module visit can be processed,"lbd, ftld"
 preprocess-020,020,preprocess,PACKET,"To submit an Initial UDSv4 Visit Packet (PACKET=""I4""), participant must have an existing UDSv3 Visit Packet",uds
 preprocess-021,021,preprocess,PACKET,"Participant must have an existing Initial UDSv4 Visit Packet (PACKET=""I4"") submitted before the Follow-Up Visit Packet (PACKET=""F"") ",uds
+preprocess-022,022,preprocess,VISITDATE,Duplicate record with the same visit date exists in the batch CSV file for this participant,"uds, ftld, lbd"
+preprocess-023,023,preprocess,VISITNUM,Packet with higher visit date (VISITDATE) must also have a higher visit number (VISITNUM),"uds, ftld, lbd"
+preprocess-024,024,preprocess,MODExx,Missing submission status (MODE<form name> variable) for one or more optional forms,"uds, ftld, lbd"
