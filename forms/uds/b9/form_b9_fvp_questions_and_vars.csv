@@ -1,80 +1,80 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,carry_forward
-b9,I,0a. B9 Clinical Judgement of Symptoms - Form date,FRMDATEB9,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,no
-b9,I,0b. B9 Clinical Judgement of Symptoms - Examiner's initials,INITIALSB9,No,text,,String,,no
-b9,I,0c. B9 Clinical Judgement of Symptoms - Language,LANGB9,Always,Integers 1-2,"1, English|2, Spanish",Integer,,no
-b9,I,0d. B9 Clinical Judgement of Symptoms - In-person or remote?,MODEB9,Always,Integers 1-2,"1, In-person|2, Remote",Integer,,no
-b9,I,"0d1. If 'B9 Clinical Judgement of Symptoms' form was completed remotely, specify reason",RMREASB9,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb9]='2',no
-b9,I,0d1a. What modality was used to collect this remote 'B9 Clinical Judgement of Symptoms' form?,RMMODEB9,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb9]='2',no
-b9,I,1. Does the participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOG,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
-b9,I,2. Does the participant report a decline in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOT,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
-b9,I,3. Does the participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYM,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
-b9,I,4. Does the co-participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOGIN,Yes,"Integers 0-1,8","0, No|1, Yes|8, There is no co-participant",Integer,,yes
-b9,I,5. Does the co-participant report a change in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOTIN,Yes,"Integers 0-1,8","0, No|1, Yes|8, There is no co-participant",Integer,,yes
-b9,I,6. Does the co-participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYMIN,Yes,"Integers 0-1,8","0, No|1, Yes|8, There is no co-participant",Integer,,yes
-b9,I,7. Does the participant have any neuropsychiatric/behavioral symptoms or declines in any cognitive or motor domain?,DECCLIN,Yes,Integers 0-1,"0, No|1, Yes",Integer,,yes
-b9,I,"8. Based on the clinician’s judgment, is the participant currently experiencing meaningful impairment in cognition?",DECCLCOG,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1',yes
-b9,I,9a. Indicate whether the participant currently is meaningfully impaired in memory.,COGMEM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
-b9,I,9b. Indicate whether the participant currently is meaningfully impaired in orientation.,COGORI,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
-b9,I,"9c.Indicate whether the participant currently is meaningfully impaired in executive function (judgment, planning, and problem-solving)",COGJUDG,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
-b9,I,9d. Indicate whether the participant currently is meaningfully impaired in language,COGLANG,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
-b9,I,9e. Indicate whether the participant currently is meaningfully impaired in visuospatial function,COGVIS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
-b9,I,9f. Indicate whether the participant currently is meaningfully impaired in attention/concentration,COGATTN,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
-b9,I,9g. Indicate whether the participant currently has fluctuating cognition,COGFLUC,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
-b9,I,9h. Other cognitive impairment,COGOTHR,No,Integers 0-1,"0, No|1, Yes",Integer,[decclcog] = '1',yes
-b9,I,9h1. Specify other cognitive domains,COGOTHRX,No,text,,String,[cogothr]='1',yes
-b9,I,"9i. If any of the cognitive-related behavioral symptoms in 9a-9h are present, at what age did they begin?",COGAGE,No,"Integers 9-110, 777","9-110 | 777, age provided at previous UDS visit",Integer,[cogmem] = '1' or [cogori] = '1' or [cogjudg] = '1' or [coglang] = '1' or [cogvis] = '1' or [cogattn] = '1' or [cogfluc] = '1' or [cogothr] = '1',yes
-b9,I,10. Indicate the mode of onset for the most prominent cognitive problem that is causing the participant's complaints and/or affecting the participant's function.,COGMODE,No,"Integers 1-4, 99","1, Gradual|2, Subacute|3, Abrupt|4, Other|99, Unknown",Integer,[decclog] = '1',yes
-b9,I,10a. Specify other mode of onset of cognitive symptoms,COGMODEX,No,text,,String,[cogmode]='4',yes
-b9,I,"11. Based on the clinician’s judgment, does the participant manifest clinically meaningful neuropsychiatric symptoms or meaningful change in behavior?",DECCLBE,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1',yes
-b9,I,"12a. Participant currently manifests meaningful change in behavior — Apathy, withdrawal",BEAPATHY,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12b. Participant currently manifests meaningful change in behavior — Depressed mood,BEDEP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12c. Participant currently manifests meaningful change in behavior — Anxiety,BEANX,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12d. Participant currently manifests meaningful change in behavior - Euphoria,BEEUPH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12e. Participant currently manifests meaningful change in behavior — Irritability,BEIRRIT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12f. Participant currently manifests meaningful change in behavior — Agitation,BEAGIT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,"12g. If any of the mood-related behavioral symptoms in 12a-12f are present, at what age did they begin?",BEHAGE,No,"Integers 9-110, 777","9-110 | 777, age provided at previous UDS visit",Integer,[beapathy]='1' or [bedep]='1' or [beanx]='1' or [beeuph]='1' or [beirrit]='1' or [beagit]='1',yes
-b9,I,12h. Participant currently manifests meaningful change in behavior — Psychosis — Visual hallucinations,BEVHALL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,"12h1. IF YES, do their hallucinations include patterns that are not definite objects, such as pixelation of flat uniform surfaces?",BEVPATT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[bevhall]='1',yes
-b9,I,"12h2. IF YES, do their hallucinations include well formed and detailed images of objects or people, either as independent images or as part of other objects?",BEVWELL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[bevhall]='1',yes
-b9,I,12i. Participant currently manifests meaningful change in behavior — Psychosis — Auditory hallucinations,BEAHALL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,"12i1. IF YES, do the auditory hallucinations include simple sounds like knocks or other simple sounds?",BEAHSIMP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[beahall]='1',yes
-b9,I,"12i2. IF YES, do the auditory hallucinations include complex sounds like voices speaking words, or music?",BEAHCOMP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[beahall]='1',yes
-b9,I,12j. Participant currently manifests meaningful change in behavior — Delusions ,BEDEL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe] = '1',yes
-b9,I,12k. Participant currently manifests meaningful change in behavior — Aggression,BEAGGRS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe] = '1',yes
-b9,I,"12l. If any of the psychosis and impulse control-related behavioral symptoms in 12h-12k are present, at what age did they begin?",PSYCHAGE,No,"Integers 9-110, 777","9-110 | 777, age provided at previous UDS visit",Integer,[bevhall]='1' or [bevpatt]='1' or [bevwell]='1' or [beahall]='1' or [beahsimp]='1' or [beahcomp]='1' or [bedel]='1' or [beaggrs]='1',yes
-b9,I,12m. Participant currently manifests meaningful change in behavior — Disinhibition,BEDISIN,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12n. Participant currently manifests meaningful change in behavior — Personality change,BEPERCH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12o. Participant currently manifests meaningful change in behavior — Loss of empathy,BEEMPATH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12p. Participant currently manifests meaningful change in behavior — Obsessions/compulsions,BEOBCOM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12q. Participant currently manifests meaningful change in behavior — Explosive anger,BEANGER,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12r. Participant currently manifests meaningful change in behavior - Substance use,BESUBAB,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,12r1a. Alcohol use,ALCUSE,No,1 or blank,,Integer,[besubab]='1',yes
-b9,I,12r1b. Sedative/hypnotic use,SEDUSE,No,1 or blank,,Integer,[besubab]='1',yes
-b9,I,12r1c. Opiate use,OPIATEUSE,No,1 or blank,,Integer,[besubab]='1',yes
-b9,I,12r1d. Cocaine use,COCAINEUSE,No,1 or blank,,Integer,[besubab]='1',yes
-b9,I,12r1e. Cannabis use,CANNABUSE,No,1 or blank,,Integer,[besubab]='1',yes
-b9,I,12r1f. Other substance use,OTHSUBUSE,No,1 or blank,,Integer,[besubab]='1',yes
-b9,I,12r1f1. Specify other substance use,OTHSUBUSEX,No,text,,String,[othsubuse] = '1',yes
-b9,I,"12s. If any of the personality-related behavioral symptoms in 12m-12r are present, at what age did they begin?",PERCHAGE,No,"Integers 9-110, 777","9-110 | 777, age provided at previous UDS visit",Integer,[bedisin]='1' or [beperch]='1' or [beempath]='1' or [beobcom]='1' or [beanger]='1' or [besubab]='1',yes
-b9,I,12t. Participant currently manifests meaningful change in behavior — REM sleep behavior disorder,BEREM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
-b9,I,"12t1. IF YES, at what age did the dream enactment behavior begin?",BEREMAGO,No,"Integers 9-110, 777","9-110| 777, age provided at previous UDS visit",Integer,[berem]='1',yes
-b9,I,12t2. Was REM sleep behavior disorder confirmed by polysomnography?,BEREMCONF,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[berem]='1',yes
-b9,I,12u. Other behavioral symptom,BEOTHR,No,Integers 0-1,"0, No|1, Yes",Integer,[decclbe] = '1',yes
-b9,I,"12u1. Participant currently manifests meaningful change in behavior - Other, specify:",BEOTHRX,No,text,,String,[beothr]='1',yes
-b9,I,13. Overall mode of onset for behavioral symptoms,BEMODE,No,"Integers 1-4, 99","1, Gradual|2, Subacute|3, Abrupt|4, Other|99, Unknown",Integer,[decclbe] = '1',yes
-b9,I,13a. Other mode of onset - specify,BEMODEX,No,text,,String,[bemode]='4',yes
-b9,I,"14. Based on the clinician’s judgment, is the participant currently experiencing any meaningful changes in motor function?",DECCLMOT,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1',yes
-b9,I,15a. Indicate whether the participant currently has meaningful changes in motor function — Gait disorder,MOGAIT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,15b. Indicate whether the participant currently has meaningful changes in motor function — Falls,MOFALLS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,15c. Indicate whether the participant currently has meaningful changes in motor function — Slowness,MOSLOW,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,15d. Indicate whether the participant currently has meaningful changes in motor function — Tremors,MOTREM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,15e. Indicate whether the participant currently has meaningful changes in motor function — Limb weakness,MOLIMB,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,15f. Indicate whether the participant currently has meaningful changes in motor function — Change in facial expression,MOFACE,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,15g. Indicate whether the participant currently has meaningful changes in motor function — Change in speech,MOSPEECH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,"15h. If changes in motor function are present in 15a-15g, at what age did they begin?",MOTORAGE,No,"Integers 15-110, 777","15-110 | 777, age provided at previous UDS visit",Integer,[mogait]='1' or [mofalls]='1' or [moslow]='1' or [motrem]='1' or [molimb]='1' or [moface]='1' or [mospeech]='1',yes
-b9,I,16. Indicate the mode of onset for the most prominent motor problem that is causing the participant's complaints and/or affecting the participant's function.,MOMODE,No,"Integers 1-4, 99","1, Gradual|2, Subacute|3, Abrupt|4, Other|99, Unknown",Integer,[decclmot]='1',yes
-b9,I,"16a. Indicate mode of onset for the most prominent motor problem that is causing the participant's complains and or affecting the participant's function - Other, specify",MOMODEX,No,text,,String,[momode]='4',yes
-b9,I,17. Were changes in motor function suggestive of parkinsonism?,MOMOPARK,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,18. Were changes in motor function suggestive of amyotrophic lateral sclerosis? ,MOMOALS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
-b9,I,19. Overall course of decline of cognitive / behavorial / motor syndrome:,COURSE,No,"Integers 1-5, 8-9","1, Gradually progressive|2, Stepwise|3, Static|4, Fluctuating|5, Improved|8, Not applicable|9, Unknown",Integer,[decclin]='1',yes
-b9,I,20. Indicate the predominant domain that was first recognized as changed in the participant:,FRSTCHG,No,"Integers 0-3, 8-9","0 , Assessed at a previous UDS visit|1, Cognition|2, Behavior|3, Motor function|8, Not applicable|9, Unknown",Integer,[decclin]='1',yes
+b9,F,0a. B9 Clinical Judgement of Symptoms - Form date,FRMDATEB9,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,no
+b9,F,0b. B9 Clinical Judgement of Symptoms - Examiner's initials,INITIALSB9,No,text,,String,,no
+b9,F,0c. B9 Clinical Judgement of Symptoms - Language,LANGB9,Always,Integers 1-2,"1, English|2, Spanish",Integer,,no
+b9,F,0d. B9 Clinical Judgement of Symptoms - In-person or remote?,MODEB9,Always,Integers 1-2,"1, In-person|2, Remote",Integer,,no
+b9,F,"0d1. If 'B9 Clinical Judgement of Symptoms' form was completed remotely, specify reason",RMREASB9,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb9]='2',no
+b9,F,0d1a. What modality was used to collect this remote 'B9 Clinical Judgement of Symptoms' form?,RMMODEB9,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb9]='2',no
+b9,F,1. Does the participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOG,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
+b9,F,2. Does the participant report a decline in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOT,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
+b9,F,3. Does the participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYM,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
+b9,F,4. Does the co-participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOGIN,Yes,"Integers 0-1,8","0, No|1, Yes|8, There is no co-participant",Integer,,yes
+b9,F,5. Does the co-participant report a change in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOTIN,Yes,"Integers 0-1,8","0, No|1, Yes|8, There is no co-participant",Integer,,yes
+b9,F,6. Does the co-participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYMIN,Yes,"Integers 0-1,8","0, No|1, Yes|8, There is no co-participant",Integer,,yes
+b9,F,7. Does the participant have any neuropsychiatric/behavioral symptoms or declines in any cognitive or motor domain?,DECCLIN,Yes,Integers 0-1,"0, No|1, Yes",Integer,,yes
+b9,F,"8. Based on the clinician’s judgment, is the participant currently experiencing meaningful impairment in cognition?",DECCLCOG,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1',yes
+b9,F,9a. Indicate whether the participant currently is meaningfully impaired in memory.,COGMEM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
+b9,F,9b. Indicate whether the participant currently is meaningfully impaired in orientation.,COGORI,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
+b9,F,"9c.Indicate whether the participant currently is meaningfully impaired in executive function (judgment, planning, and problem-solving)",COGJUDG,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
+b9,F,9d. Indicate whether the participant currently is meaningfully impaired in language,COGLANG,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
+b9,F,9e. Indicate whether the participant currently is meaningfully impaired in visuospatial function,COGVIS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
+b9,F,9f. Indicate whether the participant currently is meaningfully impaired in attention/concentration,COGATTN,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
+b9,F,9g. Indicate whether the participant currently has fluctuating cognition,COGFLUC,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclcog] = '1',yes
+b9,F,9h. Other cognitive impairment,COGOTHR,No,Integers 0-1,"0, No|1, Yes",Integer,[decclcog] = '1',yes
+b9,F,9h1. Specify other cognitive domains,COGOTHRX,No,text,,String,[cogothr]='1',yes
+b9,F,"9i. If any of the cognitive-related behavioral symptoms in 9a-9h are present, at what age did they begin?",COGAGE,No,"Integers 9-110, 777","9-110 | 777, age provided at previous UDS visit",Integer,[cogmem] = '1' or [cogori] = '1' or [cogjudg] = '1' or [coglang] = '1' or [cogvis] = '1' or [cogattn] = '1' or [cogfluc] = '1' or [cogothr] = '1',yes
+b9,F,10. Indicate the mode of onset for the most prominent cognitive problem that is causing the participant's complaints and/or affecting the participant's function.,COGMODE,No,"Integers 1-4, 99","1, Gradual|2, Subacute|3, Abrupt|4, Other|99, Unknown",Integer,[decclog] = '1',yes
+b9,F,10a. Specify other mode of onset of cognitive symptoms,COGMODEX,No,text,,String,[cogmode]='4',yes
+b9,F,"11. Based on the clinician’s judgment, does the participant manifest clinically meaningful neuropsychiatric symptoms or meaningful change in behavior?",DECCLBE,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1',yes
+b9,F,"12a. Participant currently manifests meaningful change in behavior — Apathy, withdrawal",BEAPATHY,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12b. Participant currently manifests meaningful change in behavior — Depressed mood,BEDEP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12c. Participant currently manifests meaningful change in behavior — Anxiety,BEANX,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12d. Participant currently manifests meaningful change in behavior - Euphoria,BEEUPH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12e. Participant currently manifests meaningful change in behavior — Irritability,BEIRRIT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12f. Participant currently manifests meaningful change in behavior — Agitation,BEAGIT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,"12g. If any of the mood-related behavioral symptoms in 12a-12f are present, at what age did they begin?",BEHAGE,No,"Integers 9-110, 777","9-110 | 777, age provided at previous UDS visit",Integer,[beapathy]='1' or [bedep]='1' or [beanx]='1' or [beeuph]='1' or [beirrit]='1' or [beagit]='1',yes
+b9,F,12h. Participant currently manifests meaningful change in behavior — Psychosis — Visual hallucinations,BEVHALL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,"12h1. IF YES, do their hallucinations include patterns that are not definite objects, such as pixelation of flat uniform surfaces?",BEVPATT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[bevhall]='1',yes
+b9,F,"12h2. IF YES, do their hallucinations include well formed and detailed images of objects or people, either as independent images or as part of other objects?",BEVWELL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[bevhall]='1',yes
+b9,F,12i. Participant currently manifests meaningful change in behavior — Psychosis — Auditory hallucinations,BEAHALL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,"12i1. IF YES, do the auditory hallucinations include simple sounds like knocks or other simple sounds?",BEAHSIMP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[beahall]='1',yes
+b9,F,"12i2. IF YES, do the auditory hallucinations include complex sounds like voices speaking words, or music?",BEAHCOMP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[beahall]='1',yes
+b9,F,12j. Participant currently manifests meaningful change in behavior — Delusions ,BEDEL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe] = '1',yes
+b9,F,12k. Participant currently manifests meaningful change in behavior — Aggression,BEAGGRS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe] = '1',yes
+b9,F,"12l. If any of the psychosis and impulse control-related behavioral symptoms in 12h-12k are present, at what age did they begin?",PSYCHAGE,No,"Integers 9-110, 777","9-110 | 777, age provided at previous UDS visit",Integer,[bevhall]='1' or [bevpatt]='1' or [bevwell]='1' or [beahall]='1' or [beahsimp]='1' or [beahcomp]='1' or [bedel]='1' or [beaggrs]='1',yes
+b9,F,12m. Participant currently manifests meaningful change in behavior — Disinhibition,BEDISIN,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12n. Participant currently manifests meaningful change in behavior — Personality change,BEPERCH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12o. Participant currently manifests meaningful change in behavior — Loss of empathy,BEEMPATH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12p. Participant currently manifests meaningful change in behavior — Obsessions/compulsions,BEOBCOM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12q. Participant currently manifests meaningful change in behavior — Explosive anger,BEANGER,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12r. Participant currently manifests meaningful change in behavior - Substance use,BESUBAB,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,12r1a. Alcohol use,ALCUSE,No,1 or blank,,Integer,[besubab]='1',yes
+b9,F,12r1b. Sedative/hypnotic use,SEDUSE,No,1 or blank,,Integer,[besubab]='1',yes
+b9,F,12r1c. Opiate use,OPIATEUSE,No,1 or blank,,Integer,[besubab]='1',yes
+b9,F,12r1d. Cocaine use,COCAINEUSE,No,1 or blank,,Integer,[besubab]='1',yes
+b9,F,12r1e. Cannabis use,CANNABUSE,No,1 or blank,,Integer,[besubab]='1',yes
+b9,F,12r1f. Other substance use,OTHSUBUSE,No,1 or blank,,Integer,[besubab]='1',yes
+b9,F,12r1f1. Specify other substance use,OTHSUBUSEX,No,text,,String,[othsubuse] = '1',yes
+b9,F,"12s. If any of the personality-related behavioral symptoms in 12m-12r are present, at what age did they begin?",PERCHAGE,No,"Integers 9-110, 777","9-110 | 777, age provided at previous UDS visit",Integer,[bedisin]='1' or [beperch]='1' or [beempath]='1' or [beobcom]='1' or [beanger]='1' or [besubab]='1',yes
+b9,F,12t. Participant currently manifests meaningful change in behavior — REM sleep behavior disorder,BEREM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1',yes
+b9,F,"12t1. IF YES, at what age did the dream enactment behavior begin?",BEREMAGO,No,"Integers 9-110, 777","9-110| 777, age provided at previous UDS visit",Integer,[berem]='1',yes
+b9,F,12t2. Was REM sleep behavior disorder confirmed by polysomnography?,BEREMCONF,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[berem]='1',yes
+b9,F,12u. Other behavioral symptom,BEOTHR,No,Integers 0-1,"0, No|1, Yes",Integer,[decclbe] = '1',yes
+b9,F,"12u1. Participant currently manifests meaningful change in behavior - Other, specify:",BEOTHRX,No,text,,String,[beothr]='1',yes
+b9,F,13. Overall mode of onset for behavioral symptoms,BEMODE,No,"Integers 1-4, 99","1, Gradual|2, Subacute|3, Abrupt|4, Other|99, Unknown",Integer,[decclbe] = '1',yes
+b9,F,13a. Other mode of onset - specify,BEMODEX,No,text,,String,[bemode]='4',yes
+b9,F,"14. Based on the clinician’s judgment, is the participant currently experiencing any meaningful changes in motor function?",DECCLMOT,No,Integers 0-1,"0, No|1, Yes",Integer,[decclin]='1',yes
+b9,F,15a. Indicate whether the participant currently has meaningful changes in motor function — Gait disorder,MOGAIT,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,15b. Indicate whether the participant currently has meaningful changes in motor function — Falls,MOFALLS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,15c. Indicate whether the participant currently has meaningful changes in motor function — Slowness,MOSLOW,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,15d. Indicate whether the participant currently has meaningful changes in motor function — Tremors,MOTREM,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,15e. Indicate whether the participant currently has meaningful changes in motor function — Limb weakness,MOLIMB,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,15f. Indicate whether the participant currently has meaningful changes in motor function — Change in facial expression,MOFACE,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,15g. Indicate whether the participant currently has meaningful changes in motor function — Change in speech,MOSPEECH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,"15h. If changes in motor function are present in 15a-15g, at what age did they begin?",MOTORAGE,No,"Integers 15-110, 777","15-110 | 777, age provided at previous UDS visit",Integer,[mogait]='1' or [mofalls]='1' or [moslow]='1' or [motrem]='1' or [molimb]='1' or [moface]='1' or [mospeech]='1',yes
+b9,F,16. Indicate the mode of onset for the most prominent motor problem that is causing the participant's complaints and/or affecting the participant's function.,MOMODE,No,"Integers 1-4, 99","1, Gradual|2, Subacute|3, Abrupt|4, Other|99, Unknown",Integer,[decclmot]='1',yes
+b9,F,"16a. Indicate mode of onset for the most prominent motor problem that is causing the participant's complains and or affecting the participant's function - Other, specify",MOMODEX,No,text,,String,[momode]='4',yes
+b9,F,17. Were changes in motor function suggestive of parkinsonism?,MOMOPARK,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,18. Were changes in motor function suggestive of amyotrophic lateral sclerosis? ,MOMOALS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
+b9,F,19. Overall course of decline of cognitive / behavorial / motor syndrome:,COURSE,No,"Integers 1-5, 8-9","1, Gradually progressive|2, Stepwise|3, Static|4, Fluctuating|5, Improved|8, Not applicable|9, Unknown",Integer,[decclin]='1',yes
+b9,F,20. Indicate the predominant domain that was first recognized as changed in the participant:,FRSTCHG,No,"Integers 0-3, 8-9","0 , Assessed at a previous UDS visit|1, Cognition|2, Behavior|3, Motor function|8, Not applicable|9, Unknown",Integer,[decclin]='1',yes
