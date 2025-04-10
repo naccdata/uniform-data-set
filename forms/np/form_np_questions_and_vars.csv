@@ -1,6 +1,6 @@
 ﻿form_name,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-np,0a. Packet code,PACKET,NP,Text,"NP, Neuropathology",String,
-np,0b. Form version number,FORMVER,No,11,"11, 11",Numeric,
+np,0a. Packet code,PACKET,Always,Text,"NP, Neuropathology",String,
+np,0b. Form version number,FORMVER,Always,11,"11, 11",Numeric,
 np,0c. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
 np,1. UDS/MDS patient ID,PTID,Always,String with max length of 10 characters,,String,
 np,2. Date form completed,NPFORMDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
@@ -10,9 +10,9 @@ np,5. Age at death,NPDAGE,Always,Integers 0-130,0 –130,Integer,
 np,6a. Date of death: month,NPDODMO,Always,Integers 1-12,1 – 12,Integer,
 np,6b. Date of death: day,NPDODDY,Always,Integers 1-31,1 – 31,Integer,
 np,6c. Date of death: year,NPDODYR,Always,Integers 1984 - current year,1984 – current year,Integer,
-np,7. Postmortem interval,NPPMIH,Always,00.0 - 99.9,"00.0 – 98.9 | 99.9, Unknown",Numeric,
+np,7. Postmortem interval,NPPMIH,Always,"00.0 - 98.9, 99.9","00.0 – 98.9 | 99.9, Unknown",Numeric,
 np,8. Fixative,NPFIX,Always,"Integers 1-2, 7","1, Formalin | 2, Paraformaldehyde | 7, Other (specify)",Integer,
-np,8a. Other fixative- specify,NPFIXX,Condtional,Any text,,String,"Blank if #8, NPFIX, ne 7 (Other)"
+np,8a. Other fixative- specify,NPFIXX,Conditional,Any text,,String,"Blank if #8, NPFIX, ne 7 (Other)"
 np,9a. Whole brain weight,NPWBRWT,Always,"Integers 100 – 2500, 9999","100 – 2500 | 9999, Unknown",Integer,
 np,9b. Fresh or fixed weight,NPWBRF,Always,"Integers 1-2, 8","1, Fresh | 2, Fixed | 8, N/A",Integer,
 np,9c1. Severity of gross findings - cerebral cortex atrophy,NPGRCCA,Always,"Integers 0-3, 8, 9","0, None | 1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,
@@ -22,19 +22,19 @@ np,9c4. Severity of gross findings - substantia nigra hypopigmentation,NPGRSNH,A
 np,9c5. Severity of gross findings - l. ceruleus hypopigmentation,NPGRLCH,Always,"Integers 0-3, 8, 9","0, None | 1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,
 np,9c6. Severity of gross findings - atherosclerosis (of the circle of Willis),NPAVAS,Always,"Integers 0-3, 8, 9","0, None | 1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,
 np,10a. Tau antibody,NPTAN,Always,"Integers 1-4, 7, 8","1,  Non-phospho specific | 2, PHF1 | 3, CP13 | 4, AT8 | 7, Other (specify) | 8, Not assessed",Integer,
-np,10a1. Other tau antibody - specify,NPTANX,Condtional,Any text,,String,"Blank if #10a, NPTAN, ne 7 (Other)"
+np,10a1. Other tau antibody - specify,NPTANX,Conditional,Any text,,String,"Blank if #10a, NPTAN, ne 7 (Other)"
 np,10b. Amyloid beta antibody,NPABAN,Always,"Integers 1-2, 7, 8","1, 4G8 | 2, 10D5 | 7, Other (specify) | 8,  Not assessed",Integer,
-np,10b1. Other amyloid beta antibody - specify,NPABANX,Condtional,Any text,,String,"Blank if #10b, NPABAN, ne 7 (Other)"
+np,10b1. Other amyloid beta antibody - specify,NPABANX,Conditional,Any text,,String,"Blank if #10b, NPABAN, ne 7 (Other)"
 np,10c. Alpha synuclein antibody,NPASAN,Always,"Integers 1-2, 7, 8","1,  Non-phospho specific (e.g., LB509) | 2, Phospho-specific (e.g., pSYN#64) | 7, Other (specify) | 8, Not assessed",Integer,
-np,10c1. Other alpha synuclein antibody - specify,NPASANX,Condtional,Any text,,String,"Blank if #10c, NPASAN, ne 7 (Other)"
+np,10c1. Other alpha synuclein antibody - specify,NPASANX,Conditional,Any text,,String,"Blank if #10c, NPASAN, ne 7 (Other)"
 np,10d. TDP-43 antibody,NPTDPAN,Always,"Integers 1-2, 7, 8","1, Non-phospho specific | 2, Phospho-specific | 7, Other (specify) | 8, Not assessed",Integer,
-np,10d1. Other TDP-43 antibody - specify,NPTDPANX,Condtional,Any text,,String,"Blank if #10d, NPTDPAN, ne 7 (Other)"
+np,10d1. Other TDP-43 antibody - specify,NPTDPANX,Conditional,Any text,,String,"Blank if #10d, NPTDPAN, ne 7 (Other)"
 np,10e1. Histochemical stains - modified Bielschowsky,NPHISMB,Always,Integers 0-1,"0, No | 1, Yes",Integer,
 np,10e2. Histochemical stains - Gallyas,NPHISG,Always,Integers 0-1,"0, No | 1, Yes",Integer,
 np,10e3. Histochemical stains - other silver stain,NPHISSS,Always,Integers 0-1,"0, No | 1, Yes",Integer,
 np,10e4. Histochemical stains - thioflavin,NPHIST,Always,Integers 0-1,"0, No | 1, Yes",Integer,
 np,10e5. Histochemical stains - other,NPHISO,Always,Integers 0-1,"0, No | 1, Yes",Integer,
-np,10ex. Histochemical stains - other specify,NPHISOX,Condtional,Any text,,String,"Blank if #10e5, NPHISO, ne 1 (Yes)"
+np,10ex. Histochemical stains - other specify,NPHISOX,Conditional,Any text,,String,"Blank if #10e5, NPHISO, ne 1 (Yes)"
 np,11a. Thal phase for amyloid plaques (A Score),NPTHAL,Always,"Integers 0-5, 8, 9","0, Phase 0 (A0) | 1, Phase 1 (A1) | 2, Phase 2 (A1) | 3, Phase 3 (A2) | 4, Phase 4 (A3) | 5, Phase 5 (A3) | 8, Not assessed | 9, Missing/unknown",Integer,
 np,11b. Braak stage for neurofibrillary degeneration (B score),NPBRAAK,Always,Integers 0-9,"0, Stage 0: AD-type neurofibrillary degeneration not present (B0) | 1, Stage I (B1) | 2, Stage II (B1) | 3, Stage III (B2) | 4, Stage IV (B2) | 5, Stage V (B3) | 6, Stage VI (B3) | 7, The presence of a tauopathy (other than aging/AD) precludes Braak staging | 8, Not assessed | 9, Missing/unknown",Integer,
 np,11c. CERAD score for density of neocortical neuritic plaques (C score),NPNEUR,Always,"Integers 0-3, 8, 9","0, No neuritic plaques (C0) | 1, Sparse neuritic plaques (C1) | 2, Moderate neuritic plaques (C2) | 3, Frequent neuritic plaques (C3) | 8, Not assessed | 9, Missing/unknown",Integer,
@@ -42,52 +42,52 @@ np,11d. NIA-AA ADNC,NPADNC,Always,"Integers 0-3, 8, 9","0, Not AD | 1, Low ADNC 
 np,11e1. CERAD semi-quantitative score for diffuse plaques,NPDIFF,Always,"Integers 0-3, 8, 9","0, No diffuse plaques | 1, Sparse diffuse plaques | 2, Moderate diffuse plaques | 3, Frequent diffuse plaques | 8, Not assessed | 9, Missing/unknown",Integer,
 np,11e2. Cerebral amyloid angiopathy,NPAMY,Always,"Integers 0-3, 8, 9","0, None | 1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,
 np,"12a. Old infarcts observed grossly, including lacunes",NPINF,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
-np,121a. Number of infarcts - cerebral cortex,NPINF1A,Condtional,"Integers 0-88, 99","0 – 87 | 88, N/A | 99, Unknown",Integer,"Blank if #12a, NPINF, ne 1 (Yes)"
-np,121b. Largest Infarct - cerebral cortex,NPINF1B,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #121a, NPINF1A, = 0, 88, or 99"
-np,121d. Second largest infarct - cerebral cortex,NPINF1D,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #121a, NPINF1A, < 2, or = 88 or 99"
-np,121f. Third largest infarct - cerebral cortex,NPINF1F,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #121a, NPINF1A, < 3, or = 88 or 99"
-np,122a. Number of infarcts - subcortical cerebral white matter and periventricular white matter,NPINF2A,Condtional,"Integers 0-88, 99","0 – 87 | 88, N/A | 99, Unknown",Integer,"Blank if #12a, NPINF, ne 1 (Yes)"
-np,122b. Largest infarct - white matter,NPINF2B,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #122a, NPINF2A, = 0, 88, or 99"
-np,122d. Second largest infarct - white matter,NPINF2D,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #122a, NPINF2A, < 2, or = 88 or 99"
-np,122f. Third largest infarct - white matter,NPINF2F,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #122a, NPINF2A, < 3, or = 88 or 99"
-np,123a. Number of infarcts - deep cerebral gray matter or internal capsule,NPINF3A,Condtional,"Integers 0-88, 99","0 – 87 | 88, N/A | 99, Unknown",Integer,"Blank if #12a, NPINF, ne 1 (Yes)"
-np,123b. Largest infarct - deep cerebral gray matter or internal capsule,NPINF3B,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #123a, NPINF3A, = 0, 88, or 99"
-np,123d. Second largest infarct - deep cerebral gray matter or internal capsule,NPINF3D,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #123a, NPINF3A, < 2, or = 88 or 99"
-np,123f. Third largest infarct - deep cerebral gray matter or internal capsule,NPINF3F,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #123a, NPINF3A, < 3, or = 88 or 99"
-np,124a. Number of infarcts - brainstem or cerebellum,NPINF4A,Condtional,"Integers 0-88, 99","0 – 87 | 88, N/A | 99, Unknown",Integer,"Blank if #12a, NPINF, ne 1 (Yes)"
-np,124b. Largest Infarct - brainstem or cerebellum,NPINF4B,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #124a, NPINF4A, = 0, 88, or 99"
-np,124d. Second largest infarct - brainstem or cerebellum,NPINF4D,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #124a, NPINF4A, < 2, or = 88 or 99"
-np,124f. Third largest infarct - brainstem or cerebellum,NPINF4F,Condtional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #124a, NPINF4A, < 3, or = 88 or 99"
+np,121a. Number of infarcts - cerebral cortex,NPINF1A,Conditional,"Integers 0-88, 99","0 – 87 | 88, N/A | 99, Unknown",Integer,"Blank if #12a, NPINF, ne 1 (Yes)"
+np,121b. Largest Infarct - cerebral cortex,NPINF1B,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #121a, NPINF1A, = 0, 88, or 99"
+np,121d. Second largest infarct - cerebral cortex,NPINF1D,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #121a, NPINF1A, < 2, or = 88 or 99"
+np,121f. Third largest infarct - cerebral cortex,NPINF1F,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #121a, NPINF1A, < 3, or = 88 or 99"
+np,122a. Number of infarcts - subcortical cerebral white matter and periventricular white matter,NPINF2A,Conditional,"Integers 0-88, 99","0 – 87 | 88, N/A | 99, Unknown",Integer,"Blank if #12a, NPINF, ne 1 (Yes)"
+np,122b. Largest infarct - white matter,NPINF2B,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #122a, NPINF2A, = 0, 88, or 99"
+np,122d. Second largest infarct - white matter,NPINF2D,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #122a, NPINF2A, < 2, or = 88 or 99"
+np,122f. Third largest infarct - white matter,NPINF2F,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #122a, NPINF2A, < 3, or = 88 or 99"
+np,123a. Number of infarcts - deep cerebral gray matter or internal capsule,NPINF3A,Conditional,"Integers 0-88, 99","0 – 87 | 88, N/A | 99, Unknown",Integer,"Blank if #12a, NPINF, ne 1 (Yes)"
+np,123b. Largest infarct - deep cerebral gray matter or internal capsule,NPINF3B,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #123a, NPINF3A, = 0, 88, or 99"
+np,123d. Second largest infarct - deep cerebral gray matter or internal capsule,NPINF3D,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #123a, NPINF3A, < 2, or = 88 or 99"
+np,123f. Third largest infarct - deep cerebral gray matter or internal capsule,NPINF3F,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #123a, NPINF3A, < 3, or = 88 or 99"
+np,124a. Number of infarcts - brainstem or cerebellum,NPINF4A,Conditional,"Integers 0-88, 99","0 – 87 | 88, N/A | 99, Unknown",Integer,"Blank if #12a, NPINF, ne 1 (Yes)"
+np,124b. Largest Infarct - brainstem or cerebellum,NPINF4B,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #124a, NPINF4A, = 0, 88, or 99"
+np,124d. Second largest infarct - brainstem or cerebellum,NPINF4D,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #124a, NPINF4A, < 2, or = 88 or 99"
+np,124f. Third largest infarct - brainstem or cerebellum,NPINF4F,Conditional,"0.0– 20.0, 88.8,  99.9","0.0– 20.0 | 88.8, N/A | 99.9, Unknown/missing",Numeric,"Blank if #12a, NPINF, ne 1 (Yes) or #124a, NPINF4A, < 3, or = 88 or 99"
 np,12b. Were single or multiple old hemorrhages observed grossly?,NPHEMO,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
-np,12b1. Subdural or epidural hemorrhage,NPHEMO1,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12b, NPHEMO, ne 1 (Yes)"
-np,12b2. Primary parenchymal hemorrhage,NPHEMO2,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12b, NPHEMO, ne 1 (Yes"
-np,"12b3. Secondary parenchymal hemorrhage (e.g., tumor, vascular malformation)",NPHEMO3,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12b, NPHEMO, ne 1 (Yes)"
+np,12b1. Subdural or epidural hemorrhage,NPHEMO1,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12b, NPHEMO, ne 1 (Yes)"
+np,12b2. Primary parenchymal hemorrhage,NPHEMO2,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12b, NPHEMO, ne 1 (Yes"
+np,"12b3. Secondary parenchymal hemorrhage (e.g., tumor, vascular malformation)",NPHEMO3,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12b, NPHEMO, ne 1 (Yes)"
 np,"12c. Old microinfarcts, not observed grossly",NPOLD,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
-np,12c1. Number of old microinfarcts - cerebral cortex,NPOLD1,Condtional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12c, NPOLD, ne 1 (Yes)"
-np,12c2. Number of old microinfarcts - subcortical and periventricular white matter,NPOLD2,Condtional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12c, NPOLD, ne 1 (Yes)"
-np,12c3. Number of old microinfarcts - subcortical gray matter,NPOLD3,Condtional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12c, NPOLD, ne 1 (Yes)"
-np,12c4. Number of old microinfarcts - brainstem and cerebellum,NPOLD4,Condtional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12c, NPOLD, ne 1 (Yes)"
+np,12c1. Number of old microinfarcts - cerebral cortex,NPOLD1,Conditional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12c, NPOLD, ne 1 (Yes)"
+np,12c2. Number of old microinfarcts - subcortical and periventricular white matter,NPOLD2,Conditional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12c, NPOLD, ne 1 (Yes)"
+np,12c3. Number of old microinfarcts - subcortical gray matter,NPOLD3,Conditional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12c, NPOLD, ne 1 (Yes)"
+np,12c4. Number of old microinfarcts - brainstem and cerebellum,NPOLD4,Conditional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12c, NPOLD, ne 1 (Yes)"
 np,12d. Old cerebral microbleeds,NPOLDD,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
-np,12d1. Number of microbleeds - cerebral cortex,NPOLDD1,Condtional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12d, NPOLDD, ne 1 (Yes)"
-np,12d2. Number of microbleeds - subcortical and periventricular white matter,NPOLDD2,Condtional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12d, NPOLDD, ne 1 (Yes)"
-np,12d3. Number of microbleeds - subcortical gray matter,NPOLDD3,Condtional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12d, NPOLDD, ne 1 (Yes)"
-np,12d4. Number of microbleeds - brainstem and cerebellum,NPOLDD4,Condtional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12d, NPOLDD, ne 1 (Yes)"
+np,12d1. Number of microbleeds - cerebral cortex,NPOLDD1,Conditional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12d, NPOLDD, ne 1 (Yes)"
+np,12d2. Number of microbleeds - subcortical and periventricular white matter,NPOLDD2,Conditional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12d, NPOLDD, ne 1 (Yes)"
+np,12d3. Number of microbleeds - subcortical gray matter,NPOLDD3,Conditional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12d, NPOLDD, ne 1 (Yes)"
+np,12d4. Number of microbleeds - brainstem and cerebellum,NPOLDD4,Conditional,"Integers 0-3, 8, 9","0, 0 | 1, 1 | 2, 2 | 3, 3 | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12d, NPOLDD, ne 1 (Yes)"
 np,12e. Arteriolosclerosis,NPARTER,Always,"Integers 0-3, 8, 9","0, None | 1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,
 np,12f. White matter rarefaction,NPWMR,Always,"Integers 0-3, 8, 9","0, None | 1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,
-np,12g. Other pathologic changes related to ischemic or vascular disease not previously specified,NPPATH,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
-np,12g1. Laminar necrosis,NPNEC,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g2. Acute neuronal necrosis,NPPATH2,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g3. Acute/subacute gross infarcts,NPPATH3,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g4. Acute/subacute microinfarcts,NPPATH4,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g5. Acute/subacute gross hemorrhage,NPPATH5,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g6. Acute/subacute microhemorrhage,NPPATH6,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g7. Vascular malformation of any type,NPPATH7,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g8. Aneurysm of any type,NPPATH8,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g9. Vasculitis of any type,NPPATH9,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g10. CADASIL,NPPATH10,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g11. Mineralization of blood vessels,NPPATH11,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12g12. Other ischemic or vascular pathology,NPPATHO,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
-np,12gx. Other ischemic or vascular pathology specify,NPPATHOX,Condtional,Any text,,String,"Blank if #12g, NPPATH, ne 1 (Yes) or #1212, NPPATHO, ne 1 (Yes)"
+np,12g. Other pathologic changes related to ischemic or vascular disease not previously specified,NPPATH,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
+np,12g1. Laminar necrosis,NPNEC,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g2. Acute neuronal necrosis,NPPATH2,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g3. Acute/subacute gross infarcts,NPPATH3,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g4. Acute/subacute microinfarcts,NPPATH4,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g5. Acute/subacute gross hemorrhage,NPPATH5,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g6. Acute/subacute microhemorrhage,NPPATH6,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g7. Vascular malformation of any type,NPPATH7,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g8. Aneurysm of any type,NPPATH8,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g9. Vasculitis of any type,NPPATH9,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g10. CADASIL,NPPATH10,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g11. Mineralization of blood vessels,NPPATH11,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12g12. Other ischemic or vascular pathology,NPPATHO,Conditional,Integers 0-1,"0, No | 1, Yes",Integer,"Blank if #12g, NPPATH, ne 1 (Yes)"
+np,12gx. Other ischemic or vascular pathology specify,NPPATHOX,Conditional,Any text,,String,"Blank if #12g, NPPATH, ne 1 (Yes) or #1212, NPPATHO, ne 1 (Yes)"
 np,13. Is there evidence of Lewy body pathology,NPLBOD,Always,"Integers 0-5, 8, 9",0 = No | 1 = Brainstem predominant | 2 = Limbic (transitional) | 3 = Neocortical (diffuse) | 4 = Amygdala predominant | 5 = Olfactory bulb | 8 = Not assessed | 9 = Missing/unknown,Integer,
 np,14. Neuron loss in the substantia nigra,NPNLOSS,Always,"Integers 0-3, 8, 9","0, None | 1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,
 np,15. Hippocampal sclerosis (CA1 and/or subiculum),NPHIPSCL,Always,"Integers 0-3, 8, 9","0, None | 1, Unilateral | 2, Bilateral | 3, Present but laterality not assessed | 8, Not assessed | 9, Missing/unknown",Integer,
@@ -97,37 +97,37 @@ np,16c. Distribution of TDP-43 immunoreactive inclusions - hippocampus,NPTDPC,Al
 np,16d. Distribution of TDP-43 immunoreactive inclusions - entorhinal/inferior temporal cortex,NPTDPD,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
 np,16e. Distribution of TDP-43 immunoreactive inclusions - neocortex,NPTDPE,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
 np,17a. FTLD with tau pathology (FTLD-tau) or other tauopathy,NPFTDTAU,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
-np,17b1. FTLD-tau subtype - FTLD-tau Pick's (PiD),NPPICK,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,17b2. FTLD-tau subtype - other 3R tauopathy (includes MAPT mutation tauopathy),NPFTDT2,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,17b3. FTLD-tau subtype - FTLD-tau corticobasal degeneration (CBD),NPCORT,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,17b4. FTLD-tau subtype - FTLD-tau progressive supranuclear palsy (PSP),NPPROG,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,17b5. FTLD-tau subtype - argyrophilic grains,NPFTDT5,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,"17b6. FTLD-tau subtype - other 4R tauopathy (includes sporadic multiple systems tauopathy, globular glial tauopathy, MAPT mutation tauopathy)",NPFTDT6,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,17b7. FTLD-tau subtype - chronic traumatic encephalopathy,NPFTDT7,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,17b8. FTLD-tau subtype - amyotrophic lateral sclerosis (ALS)/Parkinsonism-dementia,NPFTDT8,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,17b9. FTLD-tau subtype - tangle dominant disease,NPFTDT9,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,"17b10. FTLD-tau subtype - other 3R + 4R tauopathy (includes unclassifiable, focal, glial only, MAPT mutation tauopathy, NOS)",NPFTDT10,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b1. FTLD-tau subtype - FTLD-tau Pick's (PiD),NPPICK,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b2. FTLD-tau subtype - other 3R tauopathy (includes MAPT mutation tauopathy),NPFTDT2,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b3. FTLD-tau subtype - FTLD-tau corticobasal degeneration (CBD),NPCORT,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b4. FTLD-tau subtype - FTLD-tau progressive supranuclear palsy (PSP),NPPROG,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b5. FTLD-tau subtype - argyrophilic grains,NPFTDT5,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,"17b6. FTLD-tau subtype - other 4R tauopathy (includes sporadic multiple systems tauopathy, globular glial tauopathy, MAPT mutation tauopathy)",NPFTDT6,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b7. FTLD-tau subtype - chronic traumatic encephalopathy,NPFTDT7,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b8. FTLD-tau subtype - amyotrophic lateral sclerosis (ALS)/Parkinsonism-dementia,NPFTDT8,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b9. FTLD-tau subtype - tangle dominant disease,NPFTDT9,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,"17b10. FTLD-tau subtype - other 3R + 4R tauopathy (includes unclassifiable, focal, glial only, MAPT mutation tauopathy, NOS)",NPFTDT10,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
 np,17c. FTLD with TDP-43 pathology (FTLD-TDP),NPFTDTDP,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
 np,17d. ALS/motor neuron disease (MND) present,NPALSMND,Always,"Integers 0-5, 8, 9","0 = No | 1 = Yes, with TDP-43 inclusions in motor neurons | 2 = Yes, with FUS inclusions in motor neurons | 3 = Yes, with SOD1 inclusions in motor neurons | 4 = Yes, with other inclusions | 5 = Yes, with no specific inclusions | 8 = Not assessed | 9 = Missing/unknown",Integer,
 np,17e. Other FTLD,NPOFTD,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
-np,17f1. Other FTLD subtype - atypical FTLD-U (aFTLD-U),NPOFTD1,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
-np,17f2. Other FTLD subtype - NIFID (neuronal intermediate filament inclusions disease),NPOFTD2,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
-np,17f3. Other FTLD subtype - BIBD (basophilic inclusion body disease),NPOFTD3,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
-np,"17f4. Other FTLD subtype - FTLD-UPS (ubiquitin-proteasome system [ubiquitin or p62 positive, tau/TDP-43/FUS negative inclusions])",NPOFTD4,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
-np,"17f5. Other FTLD subtype - FTLD-NOS (includes dementia lacking distinctive histology (DLDH) and FTLD with no inclusions (FTLD-NI) detected by tau, TDP-43, or ubiquitin/p62 IHC)",NPOFTD5,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
+np,17f1. Other FTLD subtype - atypical FTLD-U (aFTLD-U),NPOFTD1,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
+np,17f2. Other FTLD subtype - NIFID (neuronal intermediate filament inclusions disease),NPOFTD2,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
+np,17f3. Other FTLD subtype - BIBD (basophilic inclusion body disease),NPOFTD3,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
+np,"17f4. Other FTLD subtype - FTLD-UPS (ubiquitin-proteasome system [ubiquitin or p62 positive, tau/TDP-43/FUS negative inclusions])",NPOFTD4,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
+np,"17f5. Other FTLD subtype - FTLD-NOS (includes dementia lacking distinctive histology (DLDH) and FTLD with no inclusions (FTLD-NI) detected by tau, TDP-43, or ubiquitin/p62 IHC)",NPOFTD5,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17e, NPOFTD, ne 1 (Yes)"
 np,18a. Is ARTAG pathology present?,NPARTAG,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
-np,18b. Overall severity of ARTAG pathology,NPATGSEV,Condtional,"Integers 1-3, 8, 9","1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes)"
-np,18c. Is ARTAG pathology present in the AMYGDALA?,NPATGAMY,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes)"
-np,18d1. Localization of ARTAG pathology in the amygdala: Subpial,NPATGAM1,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
-np,18d2. Localization of ARTAG pathology in the amygdala: Subependymal,NPATGAM2,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
-np,18d3. Localization of ARTAG pathology in the amygdala: Gray matter,NPATGAM3,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
-np,18d4. Localization of ARTAG pathology in the amygdala: White matter,NPATGAM4,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
-np,18d5. Localization of ARTAG pathology in the amygdala: Perivascular,NPATGAM5,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
-np,18e. Is ARTAG pathology present in the FRONTAL NEOCORTEX?,NPATGFRN,Condtional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes)"
-np,18f1. Localization of ARTAG pathology in the frontal neocortex: Subpial,NPATGFR1,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18e, NPATGFRN ne 1 (Yes)"
-np,18f2. Localization of ARTAG pathology in the frontal neocortex: Gray matter,NPATGFR2,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18e, NPATGFRN ne 1 (Yes)"
-np,18f3. Localization of ARTAG pathology in the frontal neocortex: White matter,NPATGFR3,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18e, NPATGFRN ne 1 (Yes)"
-np,18f4. Localization of ARTAG pathology in the frontal neocortex: Perivascular,NPATGFR4,Condtional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18e, NPATGFRN ne 1 (Yes)"
+np,18b. Overall severity of ARTAG pathology,NPATGSEV,Conditional,"Integers 1-3, 8, 9","1, Mild | 2, Moderate | 3, Severe | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes)"
+np,18c. Is ARTAG pathology present in the AMYGDALA?,NPATGAMY,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes)"
+np,18d1. Localization of ARTAG pathology in the amygdala: Subpial,NPATGAM1,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
+np,18d2. Localization of ARTAG pathology in the amygdala: Subependymal,NPATGAM2,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
+np,18d3. Localization of ARTAG pathology in the amygdala: Gray matter,NPATGAM3,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
+np,18d4. Localization of ARTAG pathology in the amygdala: White matter,NPATGAM4,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
+np,18d5. Localization of ARTAG pathology in the amygdala: Perivascular,NPATGAM5,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18c, NPATGAMY ne 1 (Yes)"
+np,18e. Is ARTAG pathology present in the FRONTAL NEOCORTEX?,NPATGFRN,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes)"
+np,18f1. Localization of ARTAG pathology in the frontal neocortex: Subpial,NPATGFR1,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18e, NPATGFRN ne 1 (Yes)"
+np,18f2. Localization of ARTAG pathology in the frontal neocortex: Gray matter,NPATGFR2,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18e, NPATGFRN ne 1 (Yes)"
+np,18f3. Localization of ARTAG pathology in the frontal neocortex: White matter,NPATGFR3,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18e, NPATGFRN ne 1 (Yes)"
+np,18f4. Localization of ARTAG pathology in the frontal neocortex: Perivascular,NPATGFR4,Conditional,"Integers 0-2, 8, 9","0, None | 1, Focal | 2, Widespread | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #18a, NPARTAG ne 1 (Yes) or #18e, NPATGFRN ne 1 (Yes)"
 np,19a. Pigment-spheroid degeneration/NBIA,NPPDXA,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
 np,19b. Multiple system atrophy,NPPDXB,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
 np,19c. Prion disease,NPPDXC,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
@@ -146,11 +146,11 @@ np,19o. Trisomy 21/Down syndrome,NPPDXO,Always,"Integers 0-1, 8, 9","0, No | 1, 
 np,19p. AD-related genes,NPPDXP,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
 np,19q. FTLD-related genes,NPPDXQ,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
 np,19r. First other pathologic diagnosis,NPPDXR,Always,Integers 0-1,"0, No | 1, Yes",Integer,
-np,19r1. First other pathologic diagnosis - specify,NPPDXRX,Condtional,Any text,,String,"Blank if #19r, NPPDXR, = 0 (No)"
+np,19r1. First other pathologic diagnosis - specify,NPPDXRX,Conditional,Any text,,String,"Blank if #19r, NPPDXR, = 0 (No)"
 np,19s. Second other pathologic diagnosis,NPPDXS,Always,Integers 0-1,"0, No | 1, Yes",Integer,
-np,19s1. Second other pathologic diagnosis - specify,NPPDXSX,Condtional,Any text,,String,"Blank if #19s, NPPDXS, = 0 (No)"
+np,19s1. Second other pathologic diagnosis - specify,NPPDXSX,Conditional,Any text,,String,"Blank if #19s, NPPDXS, = 0 (No)"
 np,19t. Third other pathologic diagnosis,NPPDXT,Always,Integers 0-1,"0, No | 1, Yes",Integer,
-np,19t1. Third other pathologic diagnosis - specify,NPPDXTX,Condtional,Any text,,String,"Blank if #19t, NPPDXT, = 0 (No)"
+np,19t1. Third other pathologic diagnosis - specify,NPPDXTX,Conditional,Any text,,String,"Blank if #19t, NPPDXT, = 0 (No)"
 np,20a. Banked frozen brain or half brain,NPBNKA,Always,"Integers 0-1, 9","0, No | 1, Yes | 9, Missing/unknown",Integer,
 np,20b. Banked frozen wedge of cerebellum or other sample for future DNA prep,NPBNKB,Always,"Integers 0-1, 9","0, No | 1, Yes | 9, Missing/unknown",Integer,
 np,20c. Formalin- or paraformaldehyde-fixed brain,NPBNKC,Always,"Integers 0-1, 9","0, No | 1, Yes | 9, Missing/unknown",Integer,
@@ -159,8 +159,8 @@ np,20e. Banked postmortem CSF,NPBNKE,Always,"Integers 0-1, 9","0, No | 1, Yes | 
 np,20f. Banked postmortem blood or serum,NPBNKF,Always,"Integers 0-1, 9","0, No | 1, Yes | 9, Missing/unknown",Integer,
 np,20g. Banked DNA,NPBNKG,Always,"Integers 0-1, 9","0, No | 1, Yes | 9, Missing/unknown",Integer,
 np,20h. Full autopsy performed,NPFAUT,Always,"Integers 0-1, 9","0, No | 1, Yes | 9, Missing/unknown",Integer,
-np,"20h1. If full autopsy, first major finding",NPFAUT1,Condtional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
-np,"20h2. If full autopsy, second major finding",NPFAUT2,Condtional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
-np,"20h3. If full autopsy, third major finding",NPFAUT3,Condtional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
-np,"20h4. If full autopsy, fourth major finding",NPFAUT4,Condtional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
+np,"20h1. If full autopsy, first major finding",NPFAUT1,Conditional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
+np,"20h2. If full autopsy, second major finding",NPFAUT2,Conditional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
+np,"20h3. If full autopsy, third major finding",NPFAUT3,Conditional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
+np,"20h4. If full autopsy, fourth major finding",NPFAUT4,Conditional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
 np,21. Form version,FORMVER,Always,11,"11, 11",Numeric,
