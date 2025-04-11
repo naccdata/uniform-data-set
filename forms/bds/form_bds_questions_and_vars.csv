@@ -1,53 +1,53 @@
-form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-bds,1,0a. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
-bds,1,0b. PTID,PTID,Always,String with max length of 10 characters,,String,
-bds,1,0c. Form Date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
-bds,1,0d. Examiner's initials,INITIALS,No,Any text,,String,
-bds,1,0e. Form version number,FORMVER,Always,1,"1, 1",Numeric,
-bds,1,1a. Participant’s month of birth (MM),BIRTHMO,No,Integers 1-12,1 – 12,Integer,
-bds,1,1b. Participant’s year of birth (YYYY),BIRTHYR,No,Integers 1875 - current year,1875 – current year,Integer,
-bds,1,2. Participant’s sex,SEX,No,Integers 1-2,"1, Male | 2, Female",Integer,
-bds,1,"3. Did this participant report being of Hispanic/Latino ethnicity (i.e., having origins from a mainly Spanishspeaking Latin American country), regardless of race?",HISPANIC,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,4. What did the participant report as his or her race?,BDSRACE,No,"Integers 1-6, 9","1, White | 2, Black or African American |  3, American Indian or Alaskan Native | 4, Native Hawaiian or Pacific Islander | 5, Asian | 6, Multiracial |9, Unknown, ambiguous, or not reported",Integer,
-bds,1,5. Participant’s primary language,PRIMLANG,No,"Integers 1-6, 8, 9","1, English | 2, Spanish |  3, Mandarin | 4, Cantonese | 5, Russian | 6,  Japanese | 8, Other primary language | 9, Unknown or not reported",Integer,
-bds,1,5a. Participant’s primary language - specify,PRIMLANX,Conditional,Any text,,String,"Blank if #5, PRIMLANG, ne 8 (Other primary language)"
-bds,1,"6. Participant’s years of education — select the level achieved; if an attempted level is not completed, select the number of years completed",BDSEDUC,No,"Integers 0-4, 9","0, <12 = some high school or less | 1, 12 = high school or GED|  2, 16 = bachelor’s degree | 3, 18 = master’s degree | 4, 20 = doctorate | 9, Unknown",Integer,
-bds,1,7. Cognitive status at time of death,BDSUDSD,No,"Integers 1-4, 9","1, Normal cognition |  2, Impaired, not MCI | 3, Mild cognitive impairment | 4, Dementia | 9, Unknown",Integer,
-bds,1,8. Type of mild cognitive impairment,BDSTMCI,Conditional,"Integers 1-4, 9","1, Amnestic MCI — single domain |  2, Amnestic MCI — multiple domain | 3, Non-amnestic MCI — single domain | 4, Non-amnestic MCI — multiple domain | 9, Unknown",Integer,"Blank if #7, BDSUDSD, ne 3 (MCI)"
-bds,1,9. Primary clinical etiologic diagnosis (select one),BDSETPR,Conditional,"Integers 1-11, 99","1, Alzheimer’s disease (AD) |  2, Lewy body disease (LBD) | 3, Multiple system atrophy (MSA) | 4, Progressive supranuclear palsy (PSP) |   5, Corticobasal degeneration (CBD) | 6, FTLD with motor neuron disease (e.g., ALS) | 7, FTLD, other | 8, Vascular brain injury or vascular dementia, including stroke | 9, Traumatic brain injury (TBI) | 10, Down syndrome | 11, Other | 99, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,9a. Other primary clinical etiologic diagnosis - specify,BDSETPRX,Conditional,Any text,,String,"Blank if #9, BDSETPR, ne 11 (Other)"
-bds,1,10a. Alzheimer’s disease,BDSCOALZ,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10b. Lewy body disease (LBD) ,BDSCOLBD,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10c. Multiple system atrophy (MSA),BDSCOMSA,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10d. Progressive supranuclear palsy (PSP),BDSCOPSP,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10e. Corticobasal degeneration,BDSCOCBD,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,"10f. FTLD with motor neuron disease (e.g., ALS)",BDSCOFMO,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,"10g. FTLD, other",BDSCOFOT,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,"10h. Vascular brain injury or vascular dementia, including stroke",BDSCOVAS,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10i. Traumatic brain injury (TBI),BDSCOTBI,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10j. Down syndrome,BDSCODWN,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10k. Other contributing clinical etiologic diagnosis (1),BDSCOO1F,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10k1. Other contributing clinical etiologic diagnosis (1) - specify,BDSCOO1X,Conditional,Any text,,String,"Blank if #10k, BDSCOO1F, ne 1 (Other)"
-bds,1,10l. Other contributing clinical etiologic diagnosis (2),BDSCOO2F,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10l1. Other contributing clinical etiologic diagnosis (2) - specify,BDSCOO2X,Conditional,Any text,,String,"Blank if #10l, BDSCOO2F, ne 1 (Other)"
-bds,1,10m. Other contributing clinical etiologic diagnosis (3),BDSCOO3F,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
-bds,1,10m1. Other contributing clinical etiologic diagnosis (3) - specify,BDSCOO3X,Conditional,Any text,,String,"Blank if #10m, BDSCOO3F, ne 1 (Other)"
-bds,1,11. Family health history,BDSFAMAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,12. Medications,BDSMEDAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,13. Participant health history,BDSHEAAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,14. Physical exam,BDSPEXAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,15. CDR Dementia Staging Instrument,BDSCDRAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,16. NPI-Q,BDSNPIAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,17. GDS,BDSGDSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,18. FAS,BDSFASAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,19. Neurological exam,BDSNEUAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,20. Clinical judgment of symptoms,BDSCLIAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,21. MMSE or MoCA,BDSMMSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,22. Neuropsychologic test scores,BDSNPSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,23. Structural MRI scan ,BDSSMRAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,24. Amyloid PET scan,BDSAPTAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,25. Tau PET scan,BDSTPTAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,26. FDG PET scan,BDSFPTAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,27. Amyloid CSF assay,BDSACSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,28. Tau CSF assay,BDSTCSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
-bds,1,29. DAT scan,BDSDATAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+form_name,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+bds,0a. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
+bds,0b. PTID,PTID,Always,String with max length of 10 characters,,String,
+bds,0c. Form Date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+bds,0d. Examiner's initials,INITIALS,No,Any text,,String,
+bds,0e. Form version number,FORMVER,Always,1,"1, 1",Numeric,
+bds,1a. Participant’s month of birth (MM),BIRTHMO,No,Integers 1-12,1 – 12,Integer,
+bds,1b. Participant’s year of birth (YYYY),BIRTHYR,No,Integers 1875 - current year,1875 – current year,Integer,
+bds,2. Participant’s sex,SEX,No,Integers 1-2,"1, Male | 2, Female",Integer,
+bds,"3. Did this participant report being of Hispanic/Latino ethnicity (i.e., having origins from a mainly Spanishspeaking Latin American country), regardless of race?",HISPANIC,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,4. What did the participant report as his or her race?,BDSRACE,No,"Integers 1-6, 9","1, White | 2, Black or African American |  3, American Indian or Alaskan Native | 4, Native Hawaiian or Pacific Islander | 5, Asian | 6, Multiracial |9, Unknown, ambiguous, or not reported",Integer,
+bds,5. Participant’s primary language,PRIMLANG,No,"Integers 1-6, 8, 9","1, English | 2, Spanish |  3, Mandarin | 4, Cantonese | 5, Russian | 6,  Japanese | 8, Other primary language | 9, Unknown or not reported",Integer,
+bds,5a. Participant’s primary language - specify,PRIMLANX,Conditional,Any text,,String,"Blank if #5, PRIMLANG, ne 8 (Other primary language)"
+bds,"6. Participant’s years of education — select the level achieved; if an attempted level is not completed, select the number of years completed",BDSEDUC,No,"Integers 0-4, 9","0, <12 = some high school or less | 1, 12 = high school or GED|  2, 16 = bachelor’s degree | 3, 18 = master’s degree | 4, 20 = doctorate | 9, Unknown",Integer,
+bds,7. Cognitive status at time of death,BDSUDSD,No,"Integers 1-4, 9","1, Normal cognition |  2, Impaired, not MCI | 3, Mild cognitive impairment | 4, Dementia | 9, Unknown",Integer,
+bds,8. Type of mild cognitive impairment,BDSTMCI,Conditional,"Integers 1-4, 9","1, Amnestic MCI — single domain |  2, Amnestic MCI — multiple domain | 3, Non-amnestic MCI — single domain | 4, Non-amnestic MCI — multiple domain | 9, Unknown",Integer,"Blank if #7, BDSUDSD, ne 3 (MCI)"
+bds,9. Primary clinical etiologic diagnosis (select one),BDSETPR,Conditional,"Integers 1-11, 99","1, Alzheimer’s disease (AD) |  2, Lewy body disease (LBD) | 3, Multiple system atrophy (MSA) | 4, Progressive supranuclear palsy (PSP) |   5, Corticobasal degeneration (CBD) | 6, FTLD with motor neuron disease (e.g., ALS) | 7, FTLD, other | 8, Vascular brain injury or vascular dementia, including stroke | 9, Traumatic brain injury (TBI) | 10, Down syndrome | 11, Other | 99, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,9a. Other primary clinical etiologic diagnosis - specify,BDSETPRX,Conditional,Any text,,String,"Blank if #9, BDSETPR, ne 11 (Other)"
+bds,10a. Alzheimer’s disease,BDSCOALZ,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10b. Lewy body disease (LBD) ,BDSCOLBD,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10c. Multiple system atrophy (MSA),BDSCOMSA,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10d. Progressive supranuclear palsy (PSP),BDSCOPSP,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10e. Corticobasal degeneration,BDSCOCBD,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,"10f. FTLD with motor neuron disease (e.g., ALS)",BDSCOFMO,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,"10g. FTLD, other",BDSCOFOT,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,"10h. Vascular brain injury or vascular dementia, including stroke",BDSCOVAS,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10i. Traumatic brain injury (TBI),BDSCOTBI,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10j. Down syndrome,BDSCODWN,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10k. Other contributing clinical etiologic diagnosis (1),BDSCOO1F,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10k1. Other contributing clinical etiologic diagnosis (1) - specify,BDSCOO1X,Conditional,Any text,,String,"Blank if #10k, BDSCOO1F, ne 1 (Other)"
+bds,10l. Other contributing clinical etiologic diagnosis (2),BDSCOO2F,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10l1. Other contributing clinical etiologic diagnosis (2) - specify,BDSCOO2X,Conditional,Any text,,String,"Blank if #10l, BDSCOO2F, ne 1 (Other)"
+bds,10m. Other contributing clinical etiologic diagnosis (3),BDSCOO3F,Conditional,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,"Blank if #7, BDSUDSD, =1 or 9 (Normal cognition or Unknown) or blank"
+bds,10m1. Other contributing clinical etiologic diagnosis (3) - specify,BDSCOO3X,Conditional,Any text,,String,"Blank if #10m, BDSCOO3F, ne 1 (Other)"
+bds,11. Family health history,BDSFAMAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,12. Medications,BDSMEDAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,13. Participant health history,BDSHEAAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,14. Physical exam,BDSPEXAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,15. CDR Dementia Staging Instrument,BDSCDRAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,16. NPI-Q,BDSNPIAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,17. GDS,BDSGDSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,18. FAS,BDSFASAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,19. Neurological exam,BDSNEUAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,20. Clinical judgment of symptoms,BDSCLIAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,21. MMSE or MoCA,BDSMMSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,22. Neuropsychologic test scores,BDSNPSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,23. Structural MRI scan ,BDSSMRAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,24. Amyloid PET scan,BDSAPTAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,25. Tau PET scan,BDSTPTAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,26. FDG PET scan,BDSFPTAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,27. Amyloid CSF assay,BDSACSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,28. Tau CSF assay,BDSTCSAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+bds,29. DAT scan,BDSDATAV,No,"Integers 0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
