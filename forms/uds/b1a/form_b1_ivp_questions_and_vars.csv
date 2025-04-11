@@ -1,0 +1,12 @@
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+b1a,I,0a. Packet code,PACKET,Always,"I, F","I, Initial Visit Packet | F, Follow-up Visit Packet",String,
+b1a,I,0b. Form version number,FORMVER,Always,3,3,Numeric,
+b1a,I,0c. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
+b1a,I,0d. PTID,PTID,Always,String with max length of 10 characters,,String,
+b1a,I,0e. Form date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+b1a,I,0f. Examiner's initials,INITIALS,No,Any text,,String,
+b1a,I,"1a1. Subject blood pressure (sitting; average of two readings), systolic, left arm",BPSYSL,Yes,"Integers 70-230, 888","70-230 = systolic blood pressure, 888 = unknown or not assessed",Integer,
+b1a,I,"1b1. Subject blood pressure (sitting; average of two readings), systolic, right arm",BPSYSR,Yes,"Integers 70-230, 888","70-230 = systolic blood pressure, 888 = unknown or not assessed",Integer,
+b1a,I,"1a2. Subject blood pressure (sitting; average of two readings), diastolic, left arm",BPDIASL,Yes,"Integers 30-140, 888","30-140 = diastolic blood pressure, 888 = unknown or not assessed",Integer,
+b1a,I,"1b2. Subject blood pressure (sitting; average of two readings), diastolic, right arm",BPDIASR,Yes,"Integers 30-140, 888","30-140 = diastolic blood pressure, 888 = unknown or not assessed",Integer,
+b1a,I,2. Blood pressure measured by approved device,BPDEVICE,Yes,"0, 1, 9","0 = No, 1 = Yes, 9 = Unknown",Integer,
