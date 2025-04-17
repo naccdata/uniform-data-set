@@ -1,0 +1,129 @@
+﻿form_name,packet,question,var_name,missingness,conformity,,data_type,branching_logic,carry_forward
+a4a,F,0a. A4a AD-Specific Drug Treatment - Form date,FRMDATEA4A,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,No
+a4a,F,0b. A4a AD-Specific Drug Treatment - Examiner's initials,INITIALSA4A,No,text,,String,,No
+a4a,F,0c. A4a AD-Specific Drug Treatment - Language,LANGA4A,Always,Intgers 1-2,"1, English|2, Spanish",Integer,,No
+a4a,F,0d. A4a AD-Specific Drug Treatment - In-person or remote?,MODEA4A,Always,Intgers 1-2,"1, In-person|2, Remote",Integer,,No
+a4a,F,"0d1. If 'A4a AD-Specific Drug Treatment' form was completed remotely, specify reason",RMREASA4A,Condtional,Intgers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea4a]='2',No
+a4a,F,0d1a. What modality was used to collect this remote 'A4a AD-Specific Drug Treatment' form?,RMMODEA4A,Condtional,Intgers 1-2,"1, Telephone|2, Video",Integer,[modea4a]='2',No
+a4a,F,1. Has the participant been prescribed a treatment or been enrolled in a clinical trial of a treatment expected to modify ADRD biomarkers?,TRTBIOMARK,Always,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,,Yes
+a4a,F,"1a. Since the last UDS visit, is new information available concerning any of the participant's prescribed treatments or clinical trial(s) of a treatment expected to modify ADRD biomarkers?",NEWTREAT,Conditional (e.g. skip pattern),"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,,No
+a4a,F,2a1a. Primary Drug Target - Amyloid Beta (1),TARGETAB1,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2a1b. Primary Drug Target - Tau (1),TARGETTAU1,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2a1c. Primary Drug Target - Inflammation (1),TARGETINF1,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2a1d. Primary Drug Target - Synaptic plasticity/neuroprotection (1),TARGETSYN1,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2a1e. Primary Drug Target - Other target(s) (1),TARGETOTH1,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,"2a1e1. Primary Drug Target - Other target(s), specify (1)",TARGETOTX1,Conditional (e.g. skip pattern),text,,String,[targetoth1]='1',Yes
+a4a,F,2a2a. Specific treatment and/or trial (1),TRTTRIAL1,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2a2b. Specific treatment and/or trial - NCT identifier (1),NCTNUM1,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2a3a. Start date (month) (1),STARTMO1,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12",Integer,[trtbiomark]='1',Yes
+a4a,F,2a3b. Start date (year) (1),STARTYEAR1,Conditional (e.g. skip pattern),1990-present,1990 to current year,Integer,[trtbiomark]='1',Yes
+a4a,F,2a4a. End date (month) (1),ENDMO1,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2a4b. End date (year) (1),ENDYEAR1,Conditional (e.g. skip pattern),1990-present,"1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2a5. How was the treatment provided? (1),CARETRIAL1,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1',Yes
+a4a,F,"2a6. If clinical trial, in which group was the participant? (1)",TRIALGRP1,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial1]>'1',Yes
+a4a,F,2b1a. Primary Drug Target - Amyloid Beta (2),TARGETAB2,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2b1b. Primary Drug Target - Tau (2),TARGETTAU2,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2b1c. Primary Drug Target - Inflammation (2),TARGETINF2,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2b1d. Primary Drug Target - Synaptic plasticity/neuroprotection (2),TARGETSYN2,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2b1e. Primary Drug Target - Other target(s) (2),TARGETOTH2,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,"2b1e1. Primary Drug Target - Other target(s), specify (2)",TARGETOTX2,Conditional (e.g. skip pattern),text,,String,[targetoth2]='1',Yes
+a4a,F,2b2a. Specific treatment and/or trial (2),TRTTRIAL2,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2b2b. Specific treatment and/or trial - NCT identifier (2),NCTNUM2,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2b3a. Start date (month) (2),STARTMO2,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12",Integer,[trtbiomark]='1',Yes
+a4a,F,2b3b. Start date (year) (2),STARTYEAR2,Conditional (e.g. skip pattern),1990-present,1990 to current year,Integer,[trtbiomark]='1',Yes
+a4a,F,2b4a. End date (month) (2),ENDMO2,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2b4b. End date (year) (2),ENDYEAR2,Conditional (e.g. skip pattern),1990-present,"1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2b5. How was the treatment provided? (2),CARETRIAL2,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1',Yes
+a4a,F,"2b6. If clinical trial, in which group was the participant? (2)",TRIALGRP2,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial2]>'1',Yes
+a4a,F,2c1a. Primary Drug Target - Amyloid Beta (3),TARGETAB3,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2c1b. Primary Drug Target - Tau (3),TARGETTAU3,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2c1c. Primary Drug Target - Inflammation (3),TARGETINF3,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2c1d. Primary Drug Target - Synaptic plasticity/neuroprotection (3),TARGETSYN3,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2c1e. Primary Drug Target - Other target(s) (3),TARGETOTH3,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,"2c1e1. Primary Drug Target - Other target(s), specify (3)",TARGETOTX3,Conditional (e.g. skip pattern),text,,String,[targetoth3]='1',Yes
+a4a,F,2c2a. Specific treatment and/or trial (3),TRTTRIAL3,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2c2b. Specific treatment and/or trial - NCT identifier (3),NCTNUM3,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2c3a. Start date (month) (3),STARTMO3,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12",Integer,[trtbiomark]='1',Yes
+a4a,F,2c3b. Start date (year) (3),STARTYEAR3,Conditional (e.g. skip pattern),1990-present,1990 to current year,Integer,[trtbiomark]='1',Yes
+a4a,F,2c4a. End date (month) (3),ENDMO3,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2c4b. End date (year) (3),ENDYEAR3,Conditional (e.g. skip pattern),1990-present,"1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2c5. How was the treatment provided? (3),CARETRIAL3,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1',Yes
+a4a,F,"2c6. If clinical trial, in which group was the participant? (3)",TRIALGRP3,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial3]>'1',Yes
+a4a,F,2d1a. Primary Drug Target - Amyloid Beta (4),TARGETAB4,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2d1b. Primary Drug Target - Tau (4),TARGETTAU4,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2d1c. Primary Drug Target - Inflammation (4),TARGETINF4,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2d1d. Primary Drug Target - Synaptic plasticity/neuroprotection (4),TARGETSYN4,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2d1e. Primary Drug Target - Other target(s) (4),TARGETOTH4,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,"2d1e1. Primary Drug Target - Other target(s), specify (4)",TARGETOTX4,Conditional (e.g. skip pattern),text,,String,[targetoth4]='1',Yes
+a4a,F,2d2a. Specific treatment and/or trial (4),TRTTRIAL4,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2d2b. Specific treatment and/or trial - NCT identifier (4),NCTNUM4,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2d3a. Start date (month) (4),STARTMO4,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12",Integer,[trtbiomark]='1',Yes
+a4a,F,2d3b. Start date (year) (4),STARTYEAR4,Conditional (e.g. skip pattern),1990-present,1990 to current year,Integer,[trtbiomark]='1',Yes
+a4a,F,2d4a. End date (month) (4),ENDMO4,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2d4b. End date (year) (4),ENDYEAR4,Conditional (e.g. skip pattern),1990-present,"1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2d5. How was the treatment provided? (4),CARETRIAL4,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1',Yes
+a4a,F,"2d6. If clinical trial, in which group was the participant? (4)",TRIALGRP4,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial4]>'1',Yes
+a4a,F,2e1a. Primary Drug Target - Amyloid Beta (5),TARGETAB5,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2e1b. Primary Drug Target - Tau (5),TARGETTAU5,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2e1c. Primary Drug Target - Inflammation (5),TARGETINF5,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2e1d. Primary Drug Target - Synaptic plasticity/neuroprotection (5),TARGETSYN5,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2e1e. Primary Drug Target - Other target(s) (5),TARGETOTH5,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,"2e1e1. Primary Drug Target - Other target(s), specify (5)",TARGETOTX5,Conditional (e.g. skip pattern),text,,String,[targetoth5]='1',Yes
+a4a,F,2e2a. Specific treatment and/or trial (5),TRTTRIAL5,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2e2b. Specific treatment and/or trial - NCT identifier (5),NCTNUM5,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2e3a. Start date (month) (5),STARTMO5,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12",Integer,[trtbiomark]='1',Yes
+a4a,F,2e3b. Start date (year) (5),STARTYEAR5,Conditional (e.g. skip pattern),1990-present,1990 to current year,Integer,[trtbiomark]='1',Yes
+a4a,F,2e4a. End date (month) (5),ENDMO5,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2e4b. End date (year) (5),ENDYEAR5,Conditional (e.g. skip pattern),1990-present,"1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2e5. How was the treatment provided? (5),CARETRIAL5,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1',Yes
+a4a,F,"2e6. If clinical trial, in which group was the participant? (5)",TRIALGRP5,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial5]>'1',Yes
+a4a,F,2f1a. Primary Drug Target - Amyloid Beta (6),TARGETAB6,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2f1b. Primary Drug Target - Tau (6),TARGETTAU6,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2f1c. Primary Drug Target - Inflammation (6),TARGETINF6,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2f1d. Primary Drug Target - Synaptic plasticity/neuroprotection (6),TARGETSYN6,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2f1e. Primary Drug Target - Other target(s) (6),TARGETOTH6,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,"2f1e1. Primary Drug Target - Other target(s), specify (6)",TARGETOTX6,Conditional (e.g. skip pattern),text,,String,[targetoth6]='1',Yes
+a4a,F,2f2a. Specific treatment and/or trial (6),TRTTRIAL6,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2f2b. Specific treatment and/or trial - NCT identifier (6),NCTNUM6,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2f3a. Start date (month) (6),STARTMO6,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12",Integer,[trtbiomark]='1',Yes
+a4a,F,2f3b. Start date (year) (6),STARTYEAR6,Conditional (e.g. skip pattern),1990-present,1990 to current year,Integer,[trtbiomark]='1',Yes
+a4a,F,2f4a. End date (month) (6),ENDMO6,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2f4b. End date (year) (6),ENDYEAR6,Conditional (e.g. skip pattern),1990-present,"1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2f5. How was the treatment provided? (6),CARETRIAL6,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1',Yes
+a4a,F,"2f6. If clinical trial, in which group was the participant? (6)",TRIALGRP6,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial6]>'1',Yes
+a4a,F,2g1a. Primary Drug Target - Amyloid Beta (7),TARGETAB7,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2g1b. Primary Drug Target - Tau (7),TARGETTAU7,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2g1c. Primary Drug Target - Inflammation (7),TARGETINF7,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2g1d. Primary Drug Target - Synaptic plasticity/neuroprotection (7),TARGETSYN7,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2g1e. Primary Drug Target - Other target(s) (7),TARGETOTH7,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,"2g1e1. Primary Drug Target - Other target(s), specify (7)",TARGETOTX7,Conditional (e.g. skip pattern),text,,String,[targetoth7]='1',Yes
+a4a,F,2g2a. Specific treatment and/or trial (7),TRTTRIAL7,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2g2b. Specific treatment and/or trial - NCT identifier (7),NCTNUM7,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2g3a. Start date (month) (7),STARTMO7,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12",Integer,[trtbiomark]='1',Yes
+a4a,F,2g3b. Start date (year) (7),STARTYEAR7,Conditional (e.g. skip pattern),1990-present,1990 to current year,Integer,[trtbiomark]='1',Yes
+a4a,F,2g4a. End date (month) (7),ENDMO7,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2g4b. End date (year) (7),ENDYEAR7,Conditional (e.g. skip pattern),1990-present,"1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2g5. How was the treatment provided? (7),CARETRIAL7,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1',Yes
+a4a,F,"2g6. If clinical trial, in which group was the participant? (7)",TRIALGRP7,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial7]>'1',Yes
+a4a,F,2h1a. Primary Drug Target - Amyloid Beta (8),TARGETAB8,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2h1b. Primary Drug Target - Tau (8),TARGETTAU8,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2h1c. Primary Drug Target - Inflammation (8),TARGETINF8,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2h1d. Primary Drug Target - Synaptic plasticity/neuroprotection (8),TARGETSYN8,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,2h1e. Primary Drug Target - Other target(s) (8),TARGETOTH8,Conditional (e.g. skip pattern),1 or blank,,Integer,,Yes
+a4a,F,"2h1e1. Primary Drug Target - Other target(s), specify (8)",TARGETOTX8,Conditional (e.g. skip pattern),text,,String,[targetoth8]='1',Yes
+a4a,F,2h2a. Specific treatment and/or trial (8),TRTTRIAL8,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2h2b. Specific treatment and/or trial - NCT identifier (8),NCTNUM8,Conditional (e.g. skip pattern),text,,String,[trtbiomark]='1',Yes
+a4a,F,2h3a. Start date (month) (8),STARTMO8,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12",Integer,[trtbiomark]='1',Yes
+a4a,F,2h3b. Start date (year) (8),STARTYEAR8,Conditional (e.g. skip pattern),1990-present,1990 to current year,Integer,[trtbiomark]='1',Yes
+a4a,F,2h4a. End date (month) (8),ENDMO8,Conditional (e.g. skip pattern),Integers 1-12,"1, 1|2, 2|3, 3|4, 4|5, 5|6, 6|7, 7|8, 8|9, 9|10, 10|11, 11|12, 12|88, 88 = Ongoing, 99=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2h4b. End date (year) (8),ENDYEAR8,Conditional (e.g. skip pattern),1990-present,"1990 to current year, 8888 = Ongoing, 9999=Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,2h5. How was the treatment provided? (8),CARETRIAL8,Conditional (e.g. skip pattern),Integers 1-3,"1, Clinical care|2, Clinical trial|3, Clinical care and clinical trial",Integer,[trtbiomark]='1',Yes
+a4a,F,"2h6. If clinical trial, in which group was the participant? (8)",TRIALGRP8,Conditional (e.g. skip pattern),"Integers 1-2, 9","1, Active treatment|2, Placebo|9, Unknown",Integer,[trtbiomark]='1' and [caretrial8]>'1',Yes
+a4a,F,"3. Has the participant ever experienced amyloid related imaging abnormalities-edema (ARIA-E), amyloid related imaging abnormalities-hemorrhage (ARIA-H), or other major adverse events associated with treatments expected to modify ADRD biomarkers?",ADVEVENT,Conditional (e.g. skip pattern),"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[trtbiomark]='1',Yes
+a4a,F,"3a. Since the last UDS visit, is new information available concerning the participant's experience of amyloid related imaging abnormalities-edema (ARIA-E), amyloid related imaging abnormalities-hemorrhage (ARIA-H), or other major adverse events associated with treatments expected to modify ADRD biomarkers?",NEWADEVENT,Conditional (e.g. skip pattern),"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[advevent]='1',No
+a4a,F,3b1. Adverse events to modify ADRD biomarkers - Amyloid related imaging abnormalities-edeme (ARIA-E),ARIAE,Conditional (e.g. skip pattern),1 or blank,"1, Amyloid related imaging
+abnormalities–edema (ARIA-E)",Integer,[newadevent]='1',No
+a4a,F,3b2. Adverse events to modify ADRD biomarkers - Amyloid related imaging abnormalities-hemorrhage (ARIA-H),ARIAH,Conditional (e.g. skip pattern),1 or blank,"1, Amyloid related imaging
+abnormalities–hemorrhage (ARIA-H)",Integer,[newadevent]='1',No
+a4a,F,3b3. Adverse events to modify ADRD biomarkers - Other,ADVERSEOTH,Conditional (e.g. skip pattern),1 or blank,"1, Other issues",Integer,[newadevent]='1',No
+a4a,F,"3b3a. Adverse events to modify ADRD biomarkers - Other, specify",ADVERSEOTX,Conditional (e.g. skip pattern),text,,String,[adverseoth]=1,No
