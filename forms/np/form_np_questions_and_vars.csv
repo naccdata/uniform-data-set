@@ -1,10 +1,9 @@
 ﻿form_name,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 np,0a. Packet code,PACKET,Always,Text,"NP, Neuropathology",String,
-np,0b. Form version number,FORMVER,Always,11,"11, 11",Numeric,
-np,0c. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
+np,0b. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
 np,1. UDS/MDS patient ID,PTID,Always,String with max length of 10 characters,,String,
 np,2. Date form completed,NPFORMDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
-np,3. Neuropath ID,NPID,Always,Alpha numeric code up to 10 digits,,String,
+np,3. Neuropath ID,NPID,No,String with max length of 10 characters,,String,
 np,4. Subject's sex,NPSEX,Always,Integers 1-2,"1, Male | 2, Female",Integer,
 np,5. Age at death,NPDAGE,Always,Integers 0-130,0 –130,Integer,
 np,6a. Date of death: month,NPDODMO,Always,Integers 1-12,1 – 12,Integer,
