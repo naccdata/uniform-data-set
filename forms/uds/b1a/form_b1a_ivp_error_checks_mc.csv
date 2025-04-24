@@ -18,3 +18,4 @@ b1a-ivp-m-016,016,Error ,b1a,I,BPDIASR,Missingness,BPDIASR must be present,BPDIA
 b1a-ivp-c-017,017,Error ,b1a,I,BPDIASR,Conformity,BPDIASR conforms,BPDIASR must be an integer between 30-140 or = 888,Q1b2. BPDIASR (Diastolic blood pressure right arm) must be an integer between 30-140 or 888,If BPDIASR < 30 or BPDIASR > 140 (and ne 888),,,,,
 b1a-ivp-m-018,018,Error ,b1a,I,BPDEVICE,Missingness,BPDEVICE must be present,BPDEVICE cannot be blank,Q2. BPDEVICE (Blood pressure measured by approved device) cannot be blank,If BPDEVICE = blank,,,,,
 b1a-ivp-c-019,019,Error ,b1a,I,BPDEVICE,Conformity,BPDEVICE conforms,BPDEVICE must be an integer between 0-1 or = 9,"Q2. BPDEVICE (Blood pressure measured by approved device) must be an integer between 0-1, 9",If BPDEVICE < 0 or BPDEVICE > 1 (and ne 9),,,,,
+b1a-ivp-m-020,020,Error ,b1a,I,VISITNUM,Missingness,VISITNUM must be present,VISITNUM cannot be blank,Q0g. VISITNUM (visit number) cannot be blank,IF VISITNUM=blank,,,,,

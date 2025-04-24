@@ -5,6 +5,7 @@ b1a,I,0c. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Int
 b1a,I,0d. PTID,PTID,Always,String with max length of 10 characters,,String,
 b1a,I,0e. Form date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b1a,I,0f. Examiner's initials,INITIALS,No,Any text,,String,
+b1a,I,0g. ADRC Visit Number,VISITNUM,Yes,Any text,,String,
 b1a,I,"1a1. Subject blood pressure (sitting; average of two readings), systolic, left arm",BPSYSL,Yes,"Integers 70-230, 888","70-230 = systolic blood pressure, 888 = unknown or not assessed",Integer,
 b1a,I,"1b1. Subject blood pressure (sitting; average of two readings), systolic, right arm",BPSYSR,Yes,"Integers 70-230, 888","70-230 = systolic blood pressure, 888 = unknown or not assessed",Integer,
 b1a,I,"1a2. Subject blood pressure (sitting; average of two readings), diastolic, left arm",BPDIASL,Yes,"Integers 30-140, 888","30-140 = diastolic blood pressure, 888 = unknown or not assessed",Integer,
