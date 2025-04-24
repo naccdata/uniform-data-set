@@ -1,12 +1,11 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-CLS,3,0a. Packet code,PACKET,Always,"I, Initial Visit | F, Follow-up Visit | T, Telephone Follow-up",,String,
 CLS,3,0c. Form version number,FORMVER,Always,Integer 3,,Numeric,
 CLS,3,0d. Center ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,
 CLS,3,0e. ADC subject ID,PTID,Always,String with max length of 10 characters,,String,
 CLS,3,0f. Form date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 CLS,3,0i ADC visit ID,VISITNUM,Always,,,String,
 CLS,3,0j. Examiner's initials,INITIALS,No,Any text,,String,
-CLS,3,1. In what language do you prefer to be evaluated (English or Spanish)? Please choose one (you can‚Äôt say ‚Äúboth‚Äù),APREFLAN,Always,Integers 1-2,"1, English | 2, Spanish",Integer,
+CLS,3,1. In what language do you prefer to be evaluated (English or Spanish)? Please choose one (you canít say ìbothî),APREFLAN,Always,Integers 1-2,"1, English | 2, Spanish",Integer,
 CLS,3,2. How many years have you lived in an environment where people generally speak Spanish (in a Latin American country or other Spanishspeaking country)?,AYRSPAN,Always,Integers 0-110,,Integer,
 CLS,3,"3. How many years have you lived in an environment where people generally speak English (in the USA, other English-speaking country or military base where English is the primary language)?",AYRENGL,Always,Integers 0-110,,Integer,
 CLS,3,4. Please approximate the percentage of time during a normal/average day that you use Spanish.,APCSPAN,Always,Integers 0-100,,Integer,
