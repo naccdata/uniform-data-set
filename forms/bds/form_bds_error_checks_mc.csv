@@ -86,5 +86,5 @@ bds-c-084,084,Error,bds,BDSFPTAV,Conformity,BDSFPTAV conforms,BDSFPTAV must be a
 bds-c-085,085,Error,bds,BDSACSAV,Conformity,BDSACSAV conforms,BDSACSAV must be an integer between 0-1 or 9,Q27. BDSACSAV (Amyloid CSF assay) must be an integer between 0-1 or 9 ,IF BDSACSAV < 0 or (BDSACSAV > 1 and BDSACSAV ne 9),,,,,
 bds-c-086,086,Error,bds,BDSTCSAV,Conformity,BDSTCSAV conforms,BDSTCSAV must be an integer between 0-1 or 9,Q28. BDSTCSAV (Tau CSF assay) must be an integer between 0-1 or 9 ,IF BDSTCSAV < 0 or (BDSTCSAV > 1 and BDSTCSAV ne 9),,,,,
 bds-c-087,087,Error,bds,BDSDATAV,Conformity,BDSDATAV conforms,BDSDATAV must be an integer between 0-1 or 9,Q29. BDSDATAV (DAT scan) must be an integer between 0-1 or 9 ,IF BDSDATAV < 0 or (BDSDATAV > 1 and BDSDATAV ne 9),,,,,
-bds-m-088,088,Error,bds,VISITDATE,Conformity,VISITDATE must be present,VISITDATE cannot be blank,Q0c. VISITDATE (Form Date) cannot be blank,IF VISITDATE is blank,,,,,
-bds-m-089,089,Error,bds,FORMVER,Conformity,FORMVER must be present,FORMVER cannot be blank,Q0d. FORMVER (Form version number) cannot be blank,IF FORMVER is blank,,,,,
+bds-m-088,088,Error,bds,VISITDATE,Missingness,VISITDATE must be present,VISITDATE cannot be blank,Q0c. VISITDATE (Form Date) cannot be blank,IF VISITDATE is blank,,,,,
+bds-m-089,089,Error,bds,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Q0d. FORMVER (Form version number) cannot be blank,IF FORMVER is blank,,,,,
