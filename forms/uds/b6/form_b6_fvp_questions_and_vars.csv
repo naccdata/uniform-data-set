@@ -6,7 +6,7 @@ b6,F,"0d. B6 Behavioral Assessment: GDS - In-person, remote, or not completed?",
 b6,F,"0d1. If 'B6 Behavioral Assessment: GDS' form was completed remotely, specify reason",RMREASB6,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb6]='2',no
 b6,F,0d1a. What modality was used to collect this remote 'B6 Behavioral Assessment: GDS' form?,RMMODEB6,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb6]='2',no
 b6,F,"0d2. If 'B6 Behavioral Assessment: GDS' not submitted, specify reason",B6NOT,Condtional,Integers 95-98,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal",Integer,[modeb6]='3',no
-b6,F,"G1. Check this box and enter “88” below for the Total GDS Score if and only if the subject:  1.) does not attempt the GDS, or 2.) answers fewer than 12 questions.",NOGDS,Conditional,1 or blank,"1, Not able to complete the GDS",Integer,,no
+b6,F,"G1. Check this box and enter ""88"" below for the Total GDS Score if and only if the subject:  1.) does not attempt the GDS, or 2.) answers fewer than 12 questions.",NOGDS,Conditional,1 or blank,"1, Not able to complete the GDS",Integer,,no
 b6,F,1. Are you basically satisfied with your life?,SATIS,Always,"Integers 0-1, 9","0, Yes|1, No|9, Did not answer",Integer,,no
 b6,F,2. Have you dropped many of your activities and interests?,DROPACT,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,,no
 b6,F,3. Do you feel that your life is empty?,EMPTY,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,,no

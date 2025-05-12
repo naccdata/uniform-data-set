@@ -57,7 +57,7 @@ F2,FVP,9b1a,Other specify,C19TVAC1OX,Conditional (e.g. skip pattern),text,n/a
 F2,FVP,9b2,Did you experience any symptoms within 5 days of your first COVID-19 vaccination?,C19SVAC1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9",n/a
 F2,FVP,9b3a,Which of the following symptoms did you experience after your first vaccine: Sore arm,C19VAC1ARM,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9b3a1,Number of days sore arm lasted:,C19VAC1ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
-F2,FVP,9b3b,"Which of the following symptoms did you experience after your first vaccine: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19VAC1FLU,Conditional (e.g. skip pattern),"blank, 1",n/a
+F2,FVP,9b3b,"Which of the following symptoms did you experience after your first vaccine: Flu-like feelings (fever, chills, tiredness, or ""malaise"")",C19VAC1FLU,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9b3b1,Number of days flu-like feelings lasted,C19VAC1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
 F2,FVP,9b3c,"Which of the following symptoms did you experience after your first vaccine: New problems with memory, thinking, or concentration",C19VAC1MEM,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9b3c1,"Number of days new problems with memory, thinking, or concentration lasted:",C19VAC1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
@@ -70,7 +70,7 @@ F2,FVP,9c1a,Other specify,C19TVAC2OX,Conditional (e.g. skip pattern),text,n/a
 F2,FVP,9c2,Did you experience any symptoms within 5 days of your second COVID-19 vaccination?,C19SVAC2,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9",n/a
 F2,FVP,9c3a,Which of the following symptoms did you experience after your second vaccine: Sore arm,C19VAC2ARM,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9c3a1,Number of days sore arm lasted:,C19VAC2ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
-F2,FVP,9c3b,"Which of the following symptoms did you experience after your second vaccine: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19VAC2FLU,Conditional (e.g. skip pattern),"blank, 1",n/a
+F2,FVP,9c3b,"Which of the following symptoms did you experience after your second vaccine: Flu-like feelings (fever, chills, tiredness, or ""malaise"")",C19VAC2FLU,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9c3b1,Number of days flu-like feelings lasted,C19VAC2FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
 F2,FVP,9c3c,"Which of the following symptoms did you experience after your second vaccine: New problems with memory, thinking, or concentration",C19VAC2MEM,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9c3c1,"Number of days new problems with memory, thinking, or concentration lasted:",C19VAC2MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
@@ -83,7 +83,7 @@ F2,FVP,9d1a,Other specify,C19TBST1OX,Conditional (e.g. skip pattern),text,n/a
 F2,FVP,9d2,Did you experience any symptoms within 5 days of your first COVID-19 booster vaccination?,C19SBST1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9",n/a
 F2,FVP,9d3a,Which of the following symptoms did you experience after your first booster vaccination: Sore arm,C19BST1ARM,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9d3a1,Number of days sore arm lasted:,C19BST1ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
-F2,FVP,9d3b,"Which of the following symptoms did you experience after your first booster vaccination: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19BST1FLU,Conditional (e.g. skip pattern),"blank, 1",n/a
+F2,FVP,9d3b,"Which of the following symptoms did you experience after your first booster vaccination: Flu-like feelings (fever, chills, tiredness, or ""malaise"")",C19BST1FLU,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9d3b1,Number of days flu-like feelings lasted,C19BST1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
 F2,FVP,9d3c1,"Which of the following symptoms did you experience after your first booster vaccination: New problems with memory, thinking, or concentration",C19BST1MEM,Conditional (e.g. skip pattern),"blank, 1",n/a
 F2,FVP,9d3c1,"Number of days new problems with memory, thinking, or concentration lasted:",C19BST1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",n/a
@@ -93,6 +93,6 @@ F2,FVP,9e1,When was your most recent COVID-19 vaccination/booster: month,C19BSTR
 F2,FVP,9e2,When was your most recent COVID-19 vaccination/booster: year,C19BSTRYR,Conditional (e.g. skip pattern),"2020 to current year, 9999",n/a
 F2,FVP,10,"On a scale of 1-5, how worried are you that you will get COVID-19 (or, if previously infected, worried that you will get it again)?",C19WORRY,Always,"Integers 1-5, 8",n/a
 F2,FVP,11,"On a scale of 1-5, since [last f2_form_date], how disruptive has the COVID-19 pandemic been to your everyday life?",C19DIS_F,Always,"Integers 1-5, 8",n/a
-F2,FVP,12,On a scale of 1-6 (with 1 being “I can shake off stress” and 6 being “Stress eats away at me”) how would you rate your ability to handle stress?,C19COPEST,Always,"Integers 1-6, 8",n/a
-F2,FVP,13,"In the past year, on a scale of 1-6 with 1 being “no stress” and 6 being “extreme stress” how would you rate the amount of stress in your life (at home and at work)?",C19AMST,Always,"Integers 1-6, 8",n/a
+F2,FVP,12,On a scale of 1-6 (with 1 being ""I can shake off stress"" and 6 being ""Stress eats away at me"") how would you rate your ability to handle stress?,C19COPEST,Always,"Integers 1-6, 8",n/a
+F2,FVP,13,"In the past year, on a scale of 1-6 with 1 being ""no stress"" and 6 being ""extreme stress"" how would you rate the amount of stress in your life (at home and at work)?",C19AMST,Always,"Integers 1-6, 8",n/a
 F2,FVP,14,"On a scale of 1-5, since [last f2_form_date], how much has COVID-19 changed your willingness to participate in clinical research if it requires in-person visits to the research clinic?",C19PRE_F,Always,"Integers 1-5, 8",n/a
