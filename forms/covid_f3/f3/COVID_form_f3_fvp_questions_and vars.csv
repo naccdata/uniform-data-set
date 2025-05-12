@@ -2,9 +2,9 @@ Form,Packet,Question #,Question text,Variable (limit=10 characters),MISSINGNESS:
 F3,FVP,1,"On a scale of 1-5, since [last f3_form_date], how isolated or cut off from family and friends have you felt due to the COVID-19 pandemic?",C19COISO_F,Always,"Integeres 1-5, 8",n/a
 F3,FVP,2,"On a scale of 1-5, since [last f3_form_date], how disruptive has the COVID-19 pandemic been to your everyday life?",C19CODIS_F,Always,"Integeres 1-5, 8",n/a
 F3,FVP,3,"On a scale of 1-5, since [last f3_form_date], how often have you felt that you were unable to control the important things in your life?",C19COCTL_F,Always,"Integeres 1-5, 8",n/a
-F3,FVP,4,"On a scale of 1-6 (with 1 being “I can shake off stress” and 6 being “Stress eats away at me”)
+F3,FVP,4,"On a scale of 1-6 (with 1 being ""I can shake off stress"" and 6 being ""Stress eats away at me"")
 how would you rate your ability to handle stress?",C19CPESTCP,Always,"Integers 1-6, 8",n/a
-F3,FVP,5,"In the past year, on a scale of 1-6 with 1 being “no stress” and 6 being “extreme stress”
+F3,FVP,5,"In the past year, on a scale of 1-6 with 1 being ""no stress"" and 6 being ""extreme stress""
 how would you rate the amount of stress in your life (at home and at work)?",C19AMTSTCP,Always,"Integers 1-6, 8",n/a
 F3,FVP,6,"Since [last f3_form_date], regarding your feelings of connectedness with friends and family during the COVID-19 pandemic, did you feel or have you felt…",C19CONN_F,Always,"Integers 1-3, 8",n/a
 F3,FVP,7,"Since [last f3_form_date], has the COVID-19 pandemic affected your ability to provide care for the research participant?",C19CARE_F,Always,"Integers 1-4, 8",n/a
