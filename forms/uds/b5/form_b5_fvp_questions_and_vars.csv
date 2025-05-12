@@ -22,7 +22,7 @@ b5,F,7a. Elation/euphoria - Does the patient appear to feel too good or act exce
 b5,F,7b. Elation/euphoria - Severity,ELATSEV,Conditional,"Integers 1-3, 9","1, Mild|2, Moderate|3, Severe|9, Unknown",Integer,[elat] = '1',no
 b5,F,8a. Apathy/indifference - Does the patient seem less interested in his/her usual activities or in the activities and plans of others?,APA,Always,"Integers 0-1, 9","1, Yes|0, No|9, Unknown",Integer,,no
 b5,F,8b. Apathy/ indifference - Severity,APASEV,Conditional,"Integers 1-3, 9","1, Mild|2, Moderate|3, Severe|9, Unknown",Integer,[apa] = '1',no
-b5,F,"9a. Disinhibition - Does the patient seem to act impulsively, for example, talking to strangers as if he/she knows them, or saying things that may hurt people’s feelings?",DISN,Always,"Integers 0-1, 9","1, Yes|0, No|9, Unknown",Integer,,no
+b5,F,"9a. Disinhibition - Does the patient seem to act impulsively, for example, talking to strangers as if he/she knows them, or saying things that may hurt people's feelings?",DISN,Always,"Integers 0-1, 9","1, Yes|0, No|9, Unknown",Integer,,no
 b5,F,9b. Dishinibition - Severity,DISNSEV,Conditional,"Integers 1-3, 9","1, Mild|2, Moderate|3, Severe|9, Unknown",Integer,[disn] = '1',no
 b5,F,10a. Irritability/lability - Is the patient impatient and cranky? Does he/she have difficulty coping with delays or waiting for planned activities?,IRR,Always,"Integers 0-1, 9","1, Yes|0, No|9, Unknown",Integer,,no
 b5,F,10b. Irritatbility/lability - Severity,IRRSEV,Conditional,"Integers 1-3, 9","1, Mild|2, Moderate|3, Severe|9, Unknown",Integer,[irr] = '1',no

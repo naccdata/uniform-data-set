@@ -16,8 +16,8 @@ F3,FVP,8e,"Since [last f3_form_date], what kind of care assistance, if any, has 
 F3,FVP,8f,"Since [last f3_form_date], what kind of care assistance, if any, has become harder to access: Medical care including physician appointments",C19KAPP_F,Always,"Integers 0-1, 8",n/a
 F3,FVP,8g,"Since [last f3_form_date], what kind of care assistance, if any, has become harder to access: Other",C19KOTH_F,Always,"Integers 0-1, 8",n/a
 F3,FVP,8g1,Other specify,C19KOTHX_F,Conditional (e.g. skip pattern),text,n/a
-F3,FVP,9,"On a scale of 1-5, since [last f3_form_date], how much has the COVID-19 pandemic changed your willingness to allow or encourage your care partner’s participation in clinical research if it requires in-person visits to the research clinic?",C19CORE_F,Always,"Integers 1-5, 8",n/a
+F3,FVP,9,"On a scale of 1-5, since [last f3_form_date], how much has the COVID-19 pandemic changed your willingness to allow or encourage your care partner's participation in clinical research if it requires in-person visits to the research clinic?",C19CORE_F,Always,"Integers 1-5, 8",n/a
 F3,FVP,10,"On a scale of 1-5, since [last f3_form_date], how much has the COVID-19 pandemic changed your own personal willingness to participate in clinical research, irrespective of whether in-person or telephone/remote visits are used?",C19COPRE_F,Always,"Integers 1-5, 8",n/a
 F3,FVP,11,"Do you have specific care needs that are not addressed above?
-Please list any care needs (both yours and the research participant’s) that are not being met
+Please list any care needs (both yours and the research participant's) that are not being met
 because of the COVID-19 pandemic:",C19COSPX,Never,text,n/a
