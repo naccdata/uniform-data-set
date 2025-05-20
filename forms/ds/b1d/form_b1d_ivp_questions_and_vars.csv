@@ -1,8 +1,4 @@
-﻿CHECKLIST,,,Form ,Packet,,,,
-,,,B1D,"IDS = Initial Visit Packet, DS Module",,,,
-form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-Form,,Question,Variable (limit=10 characters),MISSINGNESS: Is this required to be present if this form is submitted? ,"CONFORMITY: What values_ranges_characters, etc. are allowed for this field?",Response labels (from REDCap DED),Data type,Branching logic
-,,,,,,,,
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 b1d,IDS,0a. B1D Participant Demographics - Form date,FRMDATE_B1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b1d,IDS,0b. B1D Participant Demographics - Examiner's initials,INITIALS_B1D,No,Any text,,String,
 b1d,IDS,0c. Current living arrangement of person,DSLIV,Always,Integers 1-9,"1, Lives alone | 2, Lives with spouse or friends | 3, Lives with parents or other family members | 4, Lives with paid caregiver | 5, Lives in community group home, apartment, supervised housing, etc. | 6, Lives in senior housing | 7, Lives in congregate residential setting | 8, Lives in long term care facility | 9, Lives in other",Integer,
@@ -51,7 +47,7 @@ b1d,IDS,16b3. Type of dementia,DSDXTYPE,Conditional,Any text,,String,[dsdxhs_dem
 b1d,IDS,16d. MCI/dementia diagnosed by,DSDXBY,Conditional,Integers 1-6,"1, Geriatrician | 2, Neurologist | 3, Physician | 4, Psychiatrist | 5, Psychologist | 6, Other",Integer,[dsdxhs_mci]='1' or [dsdxhs_dem]='1'
 b1d,IDS,16d1. MCI/dementia diagnosed by other: Specify,DSDXBYX,Conditional,Any text,,String,[dsdxby]='6'
 b1d,IDS,17a. Note approximate MONTH of onset of MCI/dementia,DSONSTMO,Conditional,"Integers 1-12, 99","1, January | 2, February | 3, March | 4, April | 5, May | 6, June | 7, July | 8, August | 9, September | 10, October | 11, November | 12, December | 99, Diagnosis month is unknown",Integer,[dsdxhs_mci]='1' or [dsdxhs_dem]='1'
-b1d,IDS,17b. Note approximate YEAR of onset of MCI/dementia,DSONSTYR,Conditional,"1950- current year, 9999","1950-current year, year| 9999, unknown",,[dsdxhs_mci]='1' or [dsdxhs_dem]='1'
+b1d,IDS,17b. Note approximate YEAR of onset of MCI/dementia,DSONSTYR,Conditional,"1950- current year, 9999","1950-current year, year| 9999, unknown",Integer,[dsdxhs_mci]='1' or [dsdxhs_dem]='1'
 b1d,IDS,18. Comments/explanations about dementia suspicions,DSDEMCOM,No,Any text,,String,[dsdxhs_mci]='1' or [dsdxhs_dem]='1'
 b1d,IDS,19a. Activities of daily living: Needs help washing and/or bathing,DSADL1,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
 b1d,IDS,19b. Activities of daily living: Needs help with dressing,DSADL2,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
@@ -166,4 +162,4 @@ b1d,IDS,30a. Recommendations: Refer to treating physician for assessment,DSRE_RE
 b1d,IDS,30b. Recommendations: Review internally by clinical personnel,DSRE_INT,Conditional,Integer 0-1 or blank,,Integer,
 b1d,IDS,30c. Recommendations: Include in annual review/annual welness visit,DSRE_ANN,Conditional,Integer 0-1 or blank,,Integer,
 b1d,IDS,30d. Recommendations: Repeat in ... months,DSRE_REP,Conditional,Integer 0-1 or blank,,Integer,
-b1d,IDS,30d1. Recommendations: Specify number of months to repeat,DSREPMO,Conditional,Any text,,,[dsre_rep]='1'
+b1d,IDS,30d1. Recommendations: Specify number of months to repeat,DSREPMO,Conditional,Any text,,String,[dsre_rep]='1'
