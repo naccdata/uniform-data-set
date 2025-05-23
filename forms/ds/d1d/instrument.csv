@@ -1,8 +1,0 @@
-"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
-dsheadcm,form_d1d_clinican_exam_and_diagnosis,,text,"Head circumference (cm)",,"45-70; 888=Not assessed",integer,0,888,,,y,,1,,,
-dsheadcm_warning,form_d1d_clinican_exam_and_diagnosis,,descriptive,"<div class=""rich-text-field-label""><p><span style=""color: #e03e2d;"">Invalid circumference - must be between 45-70 cm. Enter 888 if not assessed.</span></p></div>",,,,,,,"[dsheadcm] < 45 or ([dsheadcm] > 70 and [dsheadcm] != 888)",,,,,,
-dsgrasp,form_d1d_clinican_exam_and_diagnosis,,radio,"Pathological reflexes - grasp","1, Absent | 2, Present | 9, Unknown/not assessed",,,,,,,y,,2,,,
-dssnout,form_d1d_clinican_exam_and_diagnosis,,radio,"Pathological reflexes - snout","1, Absent | 2, Present | 9, Unknown/not assessed",,,,,,,y,,3,,,
-dsroot,form_d1d_clinican_exam_and_diagnosis,,radio,"Pathological reflexes - rooting","1, Absent | 2, Present | 9, Unknown/not assessed",,,,,,,y,,4,,,
-dschrom,form_d1d_clinican_exam_and_diagnosis,,radio,"What is the participant's chromosome diagnosis?","1, Trisomy 21 | 2, Translocation DS | 3, Mosaic DS | 9, Unknown/not assessed",,,,,,,y,,5,,,
-dscogst,form_d1d_clinican_exam_and_diagnosis,,radio,"What is the participant's cognitive status?","1, Cognitively stable | 2, MCI-DS | 3, Dementia | 9, Unable to determine",,,,,,,y,,6,,,
