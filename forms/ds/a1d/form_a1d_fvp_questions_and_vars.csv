@@ -1,0 +1,72 @@
+form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
+a1d,FDS,0a. A1D Participant Health History - Form date,FRMDATE_A1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+a1d,FDS,0b. A1D PParticipant Health History - Examiner's initials,INITIALS_A1D,No,Any text,,String,
+a1d,FDS,1a. Participant's weekday activities: Day Program,DSDAYPRG,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+a1d,FDS,1b. Participant's weekday activities: Workshops,DSWRKSHP,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+a1d,FDS,1c. Participant's weekday activities: Stays at home,DSHOME,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+a1d,FDS,1d. Participant's weekday activities: Community paid job,DSJOB,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+a1d,FDS,1e. Participant's weekday activities: Other,DSOTHAC,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+a1d,FDS,1e1. Other weekday activity: Specify,DSOTHACX,Conditional (e.g. skip pattern),text,,String,"[dsothac] = ""1"""
+a1d,FDS,2. Age of participant's mother at participant's birth,DSMOMAGE,Always,"10-60, 777, 999","10-60, years | 777, Provided at previous visit| 999, Unknown",Integer,
+a1d,FDS,3. Congenital heart disease - atrial septal defect,DSCHDASD,Always,"0-3, 9","0, Absent | 1, Present - resolved | 2, Present - repaired | 3, Present - unrepaired | 9, Unknown",Integer,
+a1d,FDS,4. Congenital heart disease - ventricular septal defect,DSCHDVSD,Always,"0-3, 9","0, Absent | 1, Present - resolved | 2, Present - repaired | 3, Present - unrepaired | 9, Unknown",Integer,
+a1d,FDS,5. Congenital heart disease - atrioventricular (AV) canal defect,DSCHDACD,Always,"0-3, 9","0, Absent | 1, Present - resolved | 2, Present - repaired | 3, Present - unrepaired | 9, Unknown",Integer,
+a1d,FDS,6. Congenital heart disease - tetralogy of Fallot,DSCHDTOF,Always,"0-3, 9","0, Absent | 1, Present - resolved | 2, Present - repaired | 3, Present - unrepaired | 9, Unknown",Integer,
+a1d,FDS,7. Congenital heart disease - other,DSCHDOTH,Always,"0-3, 9","0, Absent | 1, Present - resolved | 2, Present - repaired | 3, Present - unrepaired | 9, Unknown",Integer,
+a1d,FDS,7a. Other congenital heart disease: Specify,DSCHDOTX,Conditional (e.g. skip pattern),text,,String,"[dschdoth] = ""1"" or [dschdoth] = ""2"" or [dschdoth] = ""3"""
+a1d,FDS,8. Cardiovascular disease - hypotension,DSHYPOTN,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,9. Cardiovascular disease - syncope,DSSYNC,Always,"0-2, 10","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,10. Pulmonary disease - pneumonia/aspiration,DSPNEUM,Always,"0-2, 11","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,11. Hepatic conditions,DSHEPAT,Always,"1-4, 9","1, Hepatitis B carrier | 2, Hepatitis B infected | 3, Hepatitis B immune | 4, Had hepatitis B vaccine | 9, Unknown",Integer,
+a1d,FDS,12. Dermatologic conditions - rosacea,DSROSAC,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,13. Dermatologic conditions - alopecia,DSALOP,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,14. Dermatologic conditions - psoriasis,DSPSOR,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,15. Musculoskeletal conditions - osteoporosis/osteopenia,DSOSTEO,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,16. Musculoskeletal conditions - gout,DSGOUT,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,17. Musculoskeletal conditions - atlanto-axial subluxation,DSATAXSU,Always,"0-1, 9","0, Absent | 1, Present | 9, Unknown",Integer,
+a1d,FDS,18. Musculoskeletal conditions - fractures in the past five years,DSFRACT,Always,"0-1, 9","0, Absent | 1, Present | 9, Unknown",Integer,
+a1d,FDS,18a. Fractures in the past five years: Specify,DSFRACTX,Conditional (e.g. skip pattern),text,,Integer,"[dsfract] = ""1"""
+a1d,FDS,19. Endocrine/metabolic conditions - Hypothyroidism,DSHYPOTH,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,20. Endocrine/metabolic conditions - Hashimoto's thyroiditis,DSHASHIM,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,21. Endocrine/metabolic conditions - hyperthyroidism,DSHYPER,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,22. Endocrine/metabolic conditions - currently on thyroid replacement medication,DSTHYMED,Always,"0-1, 9","0, Absent | 1, Present | 9, Unknown",Integer,
+a1d,FDS,22a. Thyroid replacement medication: Specify,DSTHYMEX,Conditional (e.g. skip pattern),text,,String,[dsthymed] = '1'
+a1d,FDS,23. Endocrine/metabolic conditions - vitamin D deficiency ,DSVDDEF,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,24. Menstrual history - has the participant ever menstruated? ,DSMENSTR,Always,"0-2, 9","0, No | 1, Yes, active | 2, Yes, menopausal | 9, Unknown/not applicable",Integer,
+a1d,FDS,25. Menstrual history - age of onset of menses,DSMNSAGE,Always,"8-20, 777, 888, 999","8-20 | 777, provided at previous visit| 888, not applicable | 999, unknown",Integer,
+a1d,FDS,26. Menstrual history - age of onset of menopause,DSMNPAGE,Always,"20-65, 777, 888, 999","20-65 | 777, provided at previous visit| 888, not applicable | 999, unknown",Integer,
+a1d,FDS,27. Hormone replacement therapy - has the participant received HRT?,DSHRT,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
+a1d,FDS,28. Hormone replacement therapy - at what age did HRT begin?,DSAGEHRT,Always,"0-110, 777, 888, 999","0-110 | 777, provided at previous visit| 888, not applicable | 999, unknown",Integer,
+a1d,FDS,29. Hormone replacement therapy - how many years has the participant been on HRT?,DSYRSHRT,Always,"1-3, 9","1, 1-3 years | 2, 4-6 years | 3, >6 years | 9, Unknown/not applicable",Integer,
+a1d,FDS,30. Gastrointestinal conditions - celiac disease,DSCELIAC,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,31. Hematopoietic/lymphatic disease - anemia with iron deficiency,DSANIRON,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,32. Hematopoietic/lymphatic disease - anemia withfolate deficiency ,DSANFOL,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,33. Autoimmune conditions - lupus,DSLUPUS,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,34. Autoimmune conditions - chronic neutropenia,DSNTRPN,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
+a1d,FDS,35. Cancer - solid tumor,DSTUMOR,Always,"0-1, 9","0, No | 1, Yes {dstumorx} | 9, Unknown",Integer,
+a1d,FDS,35a. Solid tumor: Specify primary site,DSTUMORX,Conditional (e.g. skip pattern),text,,String,[dstumor] = '1'
+a1d,FDS,36. Cancer - leukemia,DSLEUKEM,Always,"0-3, 9","0, No | 1, Yes, childhood transient myeloproliferative disorder | 2, Yes, childhood leukemia | 3, Yes, adult onset leukemia | 9, Unknown",Integer,
+a1d,FDS,37. Major surgical procedures - congenital heart-defect repair,DSHRTRPR,Always,"0-1, 9","0, No | 1, Yes {dshrtrpx} | 9, Unknown",Integer,
+a1d,FDS,37.1. Congenital heart-defect repair: Specify,DSHRTRPX,Conditional (e.g. skip pattern),text,,String,[dshrtrpr] = '1'
+a1d,FDS,37a. Year of most recent congenital heart-defect repair,DSHRTRYR,Conditional (e.g. skip pattern),"1900 - current year, 7777, 9999","1900- current year | 7777, Provided at previous visit| 9999, Unknown",Integer,[dshrtrpr] = '1'
+a1d,FDS,38. Major surgical procedures - adult cardiac surgery,DSCRDSRG,Always,"0-1, 9","0, No | 1, Yes {dscrdsrx} | 9, Unknown",Integer,
+a1d,FDS,38.1 Adult cardiac surgery: specify,DSCRDSRX,Conditional (e.g. skip pattern),text,,String,[dscrdsrg] = '1'
+a1d,FDS,38a. Year of most recent adult cardiac surgery,DSCRDSYR,Conditional (e.g. skip pattern),"1900 - current year, 7777, 9999","1900- current year | 7777, Provided at previous visit| 9999, Unknown",Integer,[dscrdsrg] = '1'
+a1d,FDS,39. Major surgical procedures - spinal surgery,DSSPIN,Always,"0-1, 9","0, No | 1, Yes {dsspinx} | 9, Unknown",Integer,
+a1d,FDS,39.1. Spinal surgery: Specify,DSSPINX,Conditional (e.g. skip pattern),text,,String,[dsspin] = '1'
+a1d,FDS,39a. Year of most recent spinal surgery,DSSPINYR,Conditional (e.g. skip pattern),"1900 - current year, 7777, 9999","1900- current year | 7777, Provided at previous visit| 9999, Unknown",Integer,[dsspin] = '1'
+a1d,FDS,40. Major surgical procedures - lower-extremity orthopedic surgery,DSLWORTH,Always,"0-1, 9","0, No | 1, Yes {dslwortx} | 9, Unknown",Integer,
+a1d,FDS,40.1. Lower-extremity orthopedic surgery: Specify,DSLWORTX,Conditional (e.g. skip pattern),text,,String,[dslworth] = '1'
+a1d,FDS,40a. Year of most recent lower-extremity orthopedic surgery,DSLWORYR,Conditional (e.g. skip pattern),"1900 - current year, 7777, 9999","1900- current year | 7777, Provided at previous visit| 9999, Unknown",Integer,[dslworth] = '1'
+a1d,FDS,41. Major surgical procedure - upper-extremity orthopedic surgery,DSUPORTH,Always,"0-1, 9 ","0, No | 1, Yes {dsuportx} | 9, Unknown",Integer,
+a1d,FDS,41.1. Upper-extremity orthopedic surgery: Specify,DSUPORTX,Conditional (e.g. skip pattern),text,,String,[dsuporth] = '1'
+a1d,FDS,41a. Year of most recent upper-extremity orthopedic surgery,DSUPORYR,Conditional (e.g. skip pattern),"1900 - current year, 7777, 9999","1900- current year | 7777, Provided at previous visit| 9999, Unknown",Integer,[dsuporth] = '1'
+a1d,FDS,42. Major surgical procedures - thyroid surgery,DSTHYSRG,Always,"0-1, 9","0, No | 1, Yes {dsthysrx} | 9, Unknown",Integer,
+a1d,FDS,42.1. Thyroid surgery: Specify,DSTHYSRX,Conditional (e.g. skip pattern),text,,String,[dsthysrg] = '1'
+a1d,FDS,42a. Year of most recent thyroid surgery,DSTHYSYR,Conditional (e.g. skip pattern),"1900 - current year, 7777, 9999","1900- current year | 7777, Provided at previous visit| 9999, Unknown",Integer,[dsthysrg] = '1'
+a1d,FDS,43. Major surgical procedures - oncology surgery,DSONCSRG,Always,"0-1, 9","0, No | 1, Yes {dsoncsrx} | 9, Unknown",Integer,
+a1d,FDS,43.1. Oncology surgery: Specify,DSONCSRX,Conditional (e.g. skip pattern),text,,String,[dsoncsrg] = '1'
+a1d,FDS,43a. Year of most recent oncology surgery,DSONCSYR,Conditional (e.g. skip pattern),"1900 - current year, 7777, 9999","1900- current year | 7777, Provided at previous visit| 9999, Unknown",Integer,[dsoncsrg] = '1'
+a1d,FDS,44. Major surgical procedures - other surgery,DSOTHSRG,Always,"0-1, 9","0, No | 1, Yes {dsothsrx} | 9, Unknown",Integer,
+a1d,FDS,44.1. Other surgery: Specify,DSOTHSRX,Conditional (e.g. skip pattern),text,,String,[dsothsrg] = '1'
+a1d,FDS,44a. Year of most recent other surgery,DSOTHSYR,Conditional (e.g. skip pattern),"1900 - current year, 7777, 9999","1900- current year | 7777, Provided at previous visit| 9999, Unknown",Integer,[dsothsrg] = '1'
