@@ -89,10 +89,10 @@ a5d2,I,5f1b. Type of arthritis: Osteoarthritis,ARTHROSTEO,Conditional (e.g. skip
 a5d2,I,5f1c. Type of arthritis: Other,ARTHROTHR,Conditional (e.g. skip pattern),1 or blank,,Integer,[arthrit]='1' or [arthrit]='2'
 a5d2,I,5f1c1. Specify other type of arthritis,ARTHTYPX,Conditional (e.g. skip pattern),text,,String,[arthrothr] = '1'
 a5d2,I,5f1d. Type of arthritis: Unknown,ARTHTYPUNK,Conditional (e.g. skip pattern),1 or blank,,Integer,[arthrit]='1' or [arthrit]='2'
-a5d2,I,5f2a. Upper extremity affected by arthritis,ARTHUPEX,Conditional (e.g. skip pattern),1 or blank,,Integer,[arthrit]='1' or [arthrit]='2'
-a5d2,I,5f2b. Lower extremity affected by arthritis,ARTHLOEX,Conditional (e.g. skip pattern),1 or blank,,Integer,[arthrit]='1' or [arthrit]='2'
-a5d2,I,5f2c. Spine affected by arthritis,ARTHSPIN,Conditional (e.g. skip pattern),1 or blank,,Integer,[arthrit]='1' or [arthrit]='2'
-a5d2,I,5f2d. Region affected by arthritis unknown,ARTHUNK,Conditional (e.g. skip pattern),1 or blank,,Integer,[arthrit]='1' or [arthrit]='2'
+a5d2,I,5f2a. Upper extremity affected by arthritis,ARTHUPEX,Conditional (e.g. skip pattern),"0, 1 or blank",,Integer,[arthrit]='1' or [arthrit]='2'
+a5d2,I,5f2b. Lower extremity affected by arthritis,ARTHLOEX,Conditional (e.g. skip pattern),"0, 1 or blank",,Integer,[arthrit]='1' or [arthrit]='2'
+a5d2,I,5f2c. Spine affected by arthritis,ARTHSPIN,Conditional (e.g. skip pattern),"0, 1 or blank",,Integer,[arthrit]='1' or [arthrit]='2'
+a5d2,I,5f2d. Region affected by arthritis unknown,ARTHUNK,Conditional (e.g. skip pattern),"0, 1 or blank",,Integer,[arthrit]='1' or [arthrit]='2'
 a5d2,I,5g. Incontinence-urinary (occurring at least weekly),INCONTU,Always,"0-2, 9","0, Absent|1, Recent/active|2, Remote/inactive|9, Unknown",Integer,
 a5d2,I,5h. Incontinence-bowel (occurring at least weekly),INCONTF,Always,"0-2, 9","0, Absent|1, Recent/active|2, Remote/inactive|9, Unknown",Integer,
 a5d2,I,5i. Sleep apnea,APNEA,Always,"0-2, 9","0, Absent|1, Recent/active|2, Remote/inactive|9, Unknown",Integer,
