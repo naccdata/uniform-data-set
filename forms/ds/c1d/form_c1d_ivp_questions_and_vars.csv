@@ -15,7 +15,7 @@ c1d,IDS,Q1d3. Memory - Total score,DSMMTOT,Conditional (e.g. skip pattern),"Inte
 c1d,IDS,Q1e1. Apraxia - Intransitive,DSAPINT,Conditional (e.g. skip pattern),"Integers 0-2, 8","0-2 | 8, Not assessed",Integer,"[dsmseadm] = ""1"""
 c1d,IDS,Q1e2. Apraxia - Transitive,DSAPTRAN,Conditional (e.g. skip pattern),"0.0 - 2.0, 8.8","0.0 - 2.0| 8.8, Not assessed",Numeric,"[dsmseadm] = ""1"""
 c1d,IDS,Q1e3. Apraxia - Total score,DSAPTOT,Conditional (e.g. skip pattern),"0.0 - 4.0, 8.8","0.0 - 4.0 | 8.8, Not assessed",Numeric,"[dsmseadm] = ""1"""
-c1d,IDS,Q1f1. Language - Naming,DSLGNAM,Conditional (e.g. skip pattern),"Integers 0-11, 88","0-11 | 8, Not assessed",Integer,"[dsmseadm] = ""1"""
+c1d,IDS,Q1f1. Language - Naming,DSLGNAM,Conditional (e.g. skip pattern),"Integers 0-11, 88","0-11 | 88, Not assessed",Integer,"[dsmseadm] = ""1"""
 c1d,IDS,Q1f2. Language - Repetitions,DSLGREP,Conditional (e.g. skip pattern),"Integers 0-30, 88","0-30 | 88, Not assessed",Integer,"[dsmseadm] = ""1"""
 c1d,IDS,Q1f3. Language - Comprehension,DSLGCOMP,Conditional (e.g. skip pattern),"0.0 - 12.0, 88.8","0.0 - 12.0 | 88.8, Not assessed",Numeric,"[dsmseadm] = ""1"""
 c1d,IDS,Q1f4. Language - Total score,DSLGTOT,Conditional (e.g. skip pattern),"0.0 - 53.0, 88.8","0.0 - 53.0 | 88.8, Not assessed",Numeric,"[dsmseadm] = ""1"""
