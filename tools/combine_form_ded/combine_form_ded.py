@@ -19,13 +19,9 @@ import pandas as pd
 import csv
 from datetime import date
 
-from form_organizer import (
-    STATIC_LBD_FORMS,
-    FileClassification,
-    FormOrganizer,
-    ModuleType,
-    VisitType
-)
+from convert_to_utf8 import convert_to_utf8
+from form_organizer import FormOrganizer
+from module_configurations import *
 
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger(__name__)
@@ -76,16 +72,26 @@ class DedGenerator(FormOrganizer):
         try:
             file_path = os.path.join(subdir, file)
             log.info(f"Adding {file_path}")
-            # Read the csv file into a DataFrame
-            df = pd.read_csv(file_path, dtype=object)
+
+            # Read the csv file into a DataFrame - if not UTF-8, convert
+            try:
+                df = pd.read_csv(file_path, dtype=object)
+            except UnicodeDecodeError:
+                convert_to_utf8(file_path, file_path)
+                df = pd.read_csv(file_path, dtype=object)
+
             # Remove rows with NaN in 'form_name' column
             df = df.dropna(subset=['form_name'])
+
             # Remove empty rows
             df = df.dropna(how='all')
+
             # Remove newline characters from all values
             df = df.map(clean_newlines)
+
             # Convert variable names to lowercase
             df['var_name'] = df['var_name'].str.lower()
+
             # Append the data to the combined DataFrame
             if 'header' in file:
                 log.info(f"Found header file: {file}")
@@ -133,9 +139,10 @@ class DedGenerator(FormOrganizer):
         """
         self.run()
 
-        # Concat header to beginning of the DF (if not enrollment form)
-        if self.header_df is None and self.module != ModuleType.ENROLLMENT:
-            raise ValueError(f"No header file found for {self.module}")
+        # Concat header to beginning of the DF (forms without packets do not have headers)
+        if self.header_df is None and ModuleType.has_packet(self.module):
+            log.warning(f"No header file found for {self.module}")
+
         self.combined_df = pd.concat([self.header_df, self.combined_df], ignore_index=True)
 
         # Ensure the output directory exists
@@ -151,9 +158,9 @@ if __name__ == "__main__":
     # CHANGE THESE
     # If LBD, make sure the LBD long/short directories each have
     # their own copy of the header files before running
-    module = ModuleType.UDS
+    module = ModuleType.DS
     visit = VisitType.IVP
-    output_filename = f'./combined_ded/{date.today()}_uds_ivp_ded.csv'
+    output_filename = f'./work/combined_ded/{date.today()}_ds_ivp_ded.csv'
 
     generator = DedGenerator(
         root_dir='../../forms',

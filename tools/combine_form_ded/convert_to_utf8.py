@@ -8,7 +8,7 @@ from pathlib import Path
 
 log = logging.getLogger(__name__)
 
-def convert_to_utf8(file: Path, outfile: Path) -> None:
+def convert_to_utf8(file: Path | str, outfile: Path | str) -> None:
     """Convert a file to UTF-8 if a different format.
     Really only have to worry about CP-1252 so just try-catch.
 
@@ -16,10 +16,15 @@ def convert_to_utf8(file: Path, outfile: Path) -> None:
         file: The file to check if is in UTF-8 format
         outfile: The target file to write to
     """
+    if not isinstance(file, Path):
+        file = Path(file)
+    if not isinstance(outfile, Path):
+        outfile = Path(outfile)
+
     contents = None
 
     try:
-        with file.open('r', encoding='utf-8') as fh:
+        with file.open('r', encoding='utf-8-sig') as fh:
             contents = fh.read()
 
         # also check if ufeff is there and remove as needed
