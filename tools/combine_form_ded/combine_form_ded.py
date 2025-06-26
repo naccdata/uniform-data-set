@@ -153,14 +153,14 @@ class DedGenerator(FormOrganizer):
         log.info(f"Combined CSV file saved as {output_filename}")
 
 
-if __name__ == "__main__":
+def main(module: ModuleType,
+         visit: VisitType | None = None,
+         target_dir: str = './work/combined_ded') -> str:
 
-    # CHANGE THESE
-    # If LBD, make sure the LBD long/short directories each have
-    # their own copy of the header files before running
-    module = ModuleType.DS
-    visit = VisitType.IVP
-    output_filename = f'./work/combined_ded/{date.today()}_ds_ivp_ded.csv'
+    if visit:
+        output_filename = f'{target_dir}/{date.today()}_{module.lower()}_{visit.lower()}_ded.csv'
+    else:
+        output_filename = f'{target_dir}/{date.today()}_{module.lower()}_ded.csv'
 
     generator = DedGenerator(
         root_dir='../../forms',
@@ -168,3 +168,15 @@ if __name__ == "__main__":
         visit=visit)
 
     generator.generate(output_filename)
+    return output_filename
+
+
+if __name__ == "__main__":
+
+    # CHANGE THESE
+    # If LBD, make sure the LBD long/short directories each have
+    # their own copy of the header files before running
+    module = ModuleType.DS
+    visit = VisitType.IVP
+
+    main(module, visit, output_filename)

@@ -115,7 +115,7 @@ class ErrorCheckPreparer(FormOrganizer):
             contents = contents.replace('-lbdivp-', target_code)
             contents = contents.replace('-lbdfvp-', target_code)
 
-        with target_filepath.open('w') as fh:
+        with target_filepath.open('w', encoding='utf-8') as fh:
             fh.write(contents)
 
         return True
@@ -176,10 +176,9 @@ class ErrorCheckPreparer(FormOrganizer):
         # always return True because we assume it is explicitly handled (error thrown otherwise)
         return True
 
-if __name__ == "__main__":
-
+def main():
     root_dir = '../../forms'
-    target_dir = './error_check_prep'
+    target_dir = './work/error_check_prep'
 
     for module in ModuleType.all():
         for visit in VisitType.all():
@@ -193,3 +192,7 @@ if __name__ == "__main__":
                                           visit=visit,
                                           classification=error_check_type)
                 prep.run()
+
+
+if __name__ == "__main__":
+    main()

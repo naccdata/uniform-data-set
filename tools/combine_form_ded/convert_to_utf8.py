@@ -42,8 +42,13 @@ def convert_to_utf8(file: Path | str, outfile: Path | str) -> None:
         fh.write(contents)
 
 
-FORMS_DIR = Path('../../forms')
+def main():
+    FORMS_DIR = Path('../../forms')
 
-# ADD/ITERATE OVER WHICHEVER FILES YOU NEED TO CONVERT
-file = FORMS_DIR / 'lbd/long/e2l/form_e2l_fvp_questions_and_vars.csv'
-convert_to_utf8(file, file)  # in this case overwriting same file
+    # ADD/ITERATE OVER WHICHEVER FILES YOU NEED TO CONVERT
+    file = FORMS_DIR / 'lbd/long/e2l/form_e2l_fvp_questions_and_vars.csv'
+    convert_to_utf8(file, file)  # in this case overwriting same file
+
+
+if __name__ == "__main__":
+    main()
