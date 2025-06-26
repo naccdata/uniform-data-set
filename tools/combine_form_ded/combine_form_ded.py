@@ -75,10 +75,10 @@ class DedGenerator(FormOrganizer):
 
             # Read the csv file into a DataFrame - if not UTF-8, convert
             try:
-                df = pd.read_csv(file_path, dtype=object)
+                df = pd.read_csv(file_path, dtype=object, encoding='utf-8')
             except UnicodeDecodeError:
                 convert_to_utf8(file_path, file_path)
-                df = pd.read_csv(file_path, dtype=object)
+                df = pd.read_csv(file_path, dtype=object, encoding='utf-8')
 
             # Remove rows with NaN in 'form_name' column
             df = df.dropna(subset=['form_name'])

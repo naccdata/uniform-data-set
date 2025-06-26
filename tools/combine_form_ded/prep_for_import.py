@@ -79,7 +79,9 @@ class ErrorCheckPreparer(FormOrganizer):
         target_filepath = self.target_dir / file
 
         # calling convert_to_utf8 will also fix encoding issues
+        # copy to self as well so we don't have non utf-8 files lingering
         log.info(f"Copying {filepath} to {target_filepath}")
+        convert_to_utf8(filepath, filepath)
         convert_to_utf8(filepath, target_filepath)
 
         # nothing more needs to be done here if there are no packets
