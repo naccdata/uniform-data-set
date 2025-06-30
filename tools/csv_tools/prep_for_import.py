@@ -14,72 +14,11 @@ import logging
 from pathlib import Path
 
 from convert_to_utf8 import convert_to_utf8
-from form_organizer import (
-    STATIC_LBD_FORMS,
-    FileClassification,
-    FormOrganizer,
-    ModuleType,
-    VisitType
-)
+from form_organizer import FormOrganizer
+from module_configurations import *
 
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger(__name__)
-
-MODULE_MAPPING = {
-    ModuleType.LBD_LONG: 'LBD',
-    ModuleType.LBD_SHORT: 'LBD',
-    ModuleType.ENROLLMENT: 'ENROLL',
-    ModuleType.PREPROCESS: 'PREPROCESS'
-}
-
-FORM_VER_MAPPING = {
-    ModuleType.UDS: '4.0',
-    ModuleType.FTLD: '3.0',
-    ModuleType.LBD_LONG: '3.0',
-    ModuleType.LBD_SHORT: '3.1',
-    ModuleType.ENROLLMENT: '1.0',
-    ModuleType.PREPROCESS: '1.0'
-}
-
-PACKET_MAPPING = {
-    ModuleType.UDS: {
-        VisitType.IVP: 'I',
-        VisitType.FVP: 'F',
-        VisitType.I4: 'I4'
-    },
-    ModuleType.FTLD: {
-        VisitType.IVP: 'IF',
-        VisitType.FVP: 'FF'
-    },
-    ModuleType.LBD_LONG: {
-        VisitType.IVP: 'IL',
-        VisitType.FVP: 'FL'
-    },
-    ModuleType.LBD_SHORT: {
-        VisitType.IVP: 'IL',
-        VisitType.FVP: 'FL'
-    }
-}
-
-ERROR_CODE_MAPPING = {
-    ModuleType.UDS: {
-        VisitType.IVP: '-ivp-',
-        VisitType.FVP: '-fvp-',
-        VisitType.I4: '-i4vp-'
-    },
-    ModuleType.FTLD: {
-        VisitType.IVP: '-ftldivp-',
-        VisitType.FVP: '-ftldfvp-'
-    },
-    ModuleType.LBD_LONG: {
-        VisitType.IVP: '-lbdivp-',
-        VisitType.FVP: '-lbdfvp-'
-    },
-    ModuleType.LBD_SHORT: {
-        VisitType.IVP: '-lbd3.1ivp-',
-        VisitType.FVP: '-lbd3.1fvp-'
-    }
-}
 
 
 class ErrorCheckPreparer(FormOrganizer):
@@ -89,11 +28,11 @@ class ErrorCheckPreparer(FormOrganizer):
         super().__init__(**kwargs)
 
         # set up the target directory. follows same structure as rule defs, e.g.
-        # MODULE / FORM_VER / PACKET
+        # MODULE / FORM_VER / PACKET*
         self.target_dir = Path(target_dir) / MODULE_MAPPING.get(self.module, self.module.upper()) / FORM_VER_MAPPING[self.module]
 
-        # enrollment/preprocess does not have a packet
-        if self.module not in [ModuleType.ENROLLMENT, ModuleType.PREPROCESS]:
+        # not all modules have packets - only those with initial/followups
+        if ModuleType.has_packet(self.module):
             self.target_dir = self.target_dir / PACKET_MAPPING[self.module][self.visit]
 
         self.target_dir.mkdir(parents=True, exist_ok=True)
@@ -140,11 +79,13 @@ class ErrorCheckPreparer(FormOrganizer):
         target_filepath = self.target_dir / file
 
         # calling convert_to_utf8 will also fix encoding issues
+        # copy to self as well so we don't have non utf-8 files lingering
         log.info(f"Copying {filepath} to {target_filepath}")
+        convert_to_utf8(filepath, filepath)
         convert_to_utf8(filepath, target_filepath)
 
-        # enrollment/preprocess doesn't hae packets so nothing more needs to be done here
-        if self.module in [ModuleType.ENROLLMENT, ModuleType.PREPROCESS]:
+        # nothing more needs to be done here if there are no packets
+        if not ModuleType.has_packet(self.module):
             return True
 
         # otherwise we need to actually look at the file contents and possibly rename things
@@ -174,7 +115,7 @@ class ErrorCheckPreparer(FormOrganizer):
             contents = contents.replace('-lbdivp-', target_code)
             contents = contents.replace('-lbdfvp-', target_code)
 
-        with target_filepath.open('w') as fh:
+        with target_filepath.open('w', encoding='utf-8') as fh:
             fh.write(contents)
 
         return True
@@ -235,10 +176,9 @@ class ErrorCheckPreparer(FormOrganizer):
         # always return True because we assume it is explicitly handled (error thrown otherwise)
         return True
 
-if __name__ == "__main__":
-
+def main():
     root_dir = '../../forms'
-    target_dir = './error_check_prep'
+    target_dir = './work/error_check_prep'
 
     for module in ModuleType.all():
         for visit in VisitType.all():
@@ -252,3 +192,7 @@ if __name__ == "__main__":
                                           visit=visit,
                                           classification=error_check_type)
                 prep.run()
+
+
+if __name__ == "__main__":
+    main()
