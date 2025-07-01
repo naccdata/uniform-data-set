@@ -1,5 +1,5 @@
 error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
-b6-ivp-c-001,1,Error,b6,I,NOGDS,Conformity,NOGDS conforms,NOGDS must be blank or 1,QG1. NOGDS (Check if GDS not attempted) must be blank or 1,If NOGDS ne (1 or blank),,,Yes,Yes,
+b6-ivp-c-001,1,Error,b6,I,NOGDS,Conformity,NOGDS conforms,"NOGDS must be blank, 0, or 1","QG1. NOGDS (Check if GDS not attempted) must be blank, 0, or 1","If NOGDS ne (0, 1, or blank)",,,Yes,Yes,
 b6-ivp-m-002,2,Error,b6,I,SATIS,Missingness,SATIS must be present,SATIS cannot be blank,Q1. SATIS (Satisfied with life?) cannot be blank,If SATIS = blank,,,Yes,Yes,
 b6-ivp-c-003,3,Error,b6,I,SATIS,Conformity,SATIS conforms,"SATIS must be an integer between 0-1, or =9 (Did not answer)","Q1. SATIS (Satisfied with life?) must be an integer between 0-1, or =9 (Did not answer)",If SATIS <0 or (SATIS > 1 and ? 9),,,Yes,Yes,
 b6-ivp-m-004,4,Error,b6,I,DROPACT,Missingness,DROPACT must be present,DROPACT cannot be blank,Q2. DROPACT (Dropped interests/activities?) cannot be blank,If DROPACT = blank,,,Yes,Yes,
