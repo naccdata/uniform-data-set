@@ -35,7 +35,7 @@ d1a,F,8a. Amnestic predominant syndrome,AMNDEM,Conditional (e.g. skip pattern),1
 d1a,F,8b. Dysexecutive predominant syndrome,DYEXECSYN,Conditional (e.g. skip pattern),1 or blank,,Integer,[predomsyn]='1',no
 d1a,F,8c. Primary visual presentation (such as posterior cortical atrophy (PCA) syndrome),PCA,Conditional (e.g. skip pattern),1 or blank,,Integer,[predomsyn]='1',no
 d1a,F,8d. Primary progressive aphasia (PPA) syndrome,PPASYN,Conditional (e.g. skip pattern),1 or blank,,Integer,[predomsyn]='1',no
-d1a,F,8d1. Primary progressive aphasia (PPA) syndrome - type,PPASYNT,Conditional (e.g. skip pattern),Integers 1-5,"1, Semantic PPA|2, Logopenic PPA|3, Nonfluent/agrammatic PPA|4, Primary progressive apraxia of speech|5, PPA other/not otherwise specified",Integer,[ppasyn] = '1',no
+d1a,F,8d1. Primary progressive aphasia (PPA) syndrome - type,PPASYNT,Conditional (e.g. skip pattern),Integers 1-5,"1, Semantic PPA|2, Logopenic PPA|3, Nonfluent/agrammatic PPA|4, PPA other/not otherwise specified|5, Primary progressive apraxia of speech",Integer,[ppasyn] = '1',no
 d1a,F,8e. Behavioral variant frontotemporal (bvFTD) syndrome,FTDSYN,Conditional (e.g. skip pattern),1 or blank,,Integer,[predomsyn]='1',no
 d1a,F,8f. Lewy body syndrome,LBDSYN,Conditional (e.g. skip pattern),1 or blank,,Integer,[predomsyn]='1',no
 d1a,F,8f1. Lewy body syndrome - type,LBDSYNT,Conditional (e.g. skip pattern),Integers 1-3,"1, Dementia with Lewy bodies|2, Parkinson's disease|3, Parkinson's disease dementia syndrome",Integer,[lbdsyn] = 1,no
