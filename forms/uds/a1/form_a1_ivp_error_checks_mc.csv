@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 a1-ivp-m-001,001,Error,a1,I,BIRTHMO,Missingness,BIRTHMO must be present,BIRTHMO cannot be blank,Q1a. BIRTHMO (birth month) cannot be blank,IF BIRTHMO=blank,,,Yes,Yes,
 a1-ivp-c-002,002,Error,a1,I,BIRTHMO,Conformity,BIRTHMO conforms,BIRTHMO must be between 1 and 12,Q1a. BIRTHMO (birth month) must be between 1 and 12,IF BIRTHMO <1 or BIRTHMO>12,,,Yes,Yes,
 a1-ivp-m-003,003,Error,a1,I,BIRTHYR,Missingness,BIRTHYR must be present,BIRTHYR cannot be blank,Q1b. BIRTHYR (birth year) cannot be blank,IF BIRTHYR=blank,,,Yes,Yes,

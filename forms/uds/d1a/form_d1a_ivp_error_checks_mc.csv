@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 d1a-ivp-m-001,001,Error,d1a,I,FRMDATED1A,Missingness,FRMDATED1A must be present,FRMDATED1A cannot be blank,Q0a. FRMDATED1A (D1a form date) cannot be blank ,If FRMDATED1A = blank,,,Yes,No,
 d1a-ivp-c-002,002,Error,d1a,I,FRMDATED1A,Conformity,FRMDATED1A conforms,FRMDATED1A must be a date,Q0a. FRMDATED1A (D1a form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATED1A is not mm/dd/yyyy or yyyy/mm/dd,,,Yes,No,
 d1a-ivp-m-003,003,Error,d1a,I,LANGD1A,Missingness,LANGD1A must be present,LANGD1A cannot be blank,Q0c. LANGD1A (Language of D1a administration) cannot be blank,If LANGD1A = blank,,,Yes,Yes,
