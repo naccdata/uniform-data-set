@@ -176,7 +176,7 @@ if __name__ == "__main__":
     # CHANGE THESE
     # If LBD, make sure the LBD long/short directories each have
     # their own copy of the header files before running
-    module = ModuleType.DS
-    visit = VisitType.IVP
+    module = ModuleType.FTLD
+    visit = VisitType.FVP
 
-    main(module, visit, output_filename)
+    main(module, visit)
