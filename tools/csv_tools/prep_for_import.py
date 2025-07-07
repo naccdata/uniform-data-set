@@ -180,7 +180,8 @@ def main():
     root_dir = '../../forms'
     target_dir = './work/error_check_prep'
 
-    for module in ModuleType.all():
+    #for module in ModuleType.all():
+    for module in [ModuleType.FTLD, ModuleType.UDS]:
         for visit in VisitType.all():
             if visit == VisitType.I4 and module != ModuleType.UDS:
                 continue

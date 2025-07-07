@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 a1a-ivp-m-001,001,Error,a1a,I,OWNSCAR,Missingness,OWNSCAR must be present,OWNSCAR cannot be blank,Q1. OWNSCAR (Owns a car?) cannot be blank,If OWNSCAR = blank,,,Yes,No,
 a1a-ivp-c-002,002,Error,a1a,I,OWNSCAR,Conformity,OWNSCAR must conform,OWNSCAR must be an integer between 0 and 1 or 8,Q1. OWNSCAR (Owns a car?) must be an integer between 0 and 1 or 8,If OWNSCAR < 0 or (OWNSCAR > 1 and ne 8),,,Yes,No,
 a1a-ivp-m-003,003,Error,a1a,I,TRSPACCESS,Missingness,TRSPACCESS must be present,TRSPACCESS cannot be blank,Q2. TRSPACCESS (Access to transportation?) cannot be blank,If TRSPACCESS = blank,,,Yes,No,

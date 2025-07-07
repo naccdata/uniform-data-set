@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 a3-ivp-m-001,001,Error,a3,I,FRMDATEA3,Missingness,FRMDATEA3 must be present,FRMDATEA3 cannot be blank,Q0a. FRMDATEA3 (A3 form date) cannot be blank,If FRMDATEA3=blank,,,Yes,No,
 a3-ivp-c-002,002,Error,a3,I,FRMDATEA3,Conformity,FRMDATEA3 conforms,FRMDATEA3 must be in mm/dd/yyyy or yyyy/mm/dd format,Q0a. FRMDATEA3 (A3 form date) must be in mm/dd/yyyy or yyyy/mm/dd format,If FRMDATEAS is not mm/dd/yyyy or yyyy/mm/dd,,,Yes,No,
 a3-ivp-m-003,003,Error,a3,I,LANGA3,Missingness,LANGA3 must be present,LANGA3 cannot be blank,Q0c. LANGA3 (Language of A3 administration) cannot be blank,If LANGA3=blank,,,Yes,Yes,
