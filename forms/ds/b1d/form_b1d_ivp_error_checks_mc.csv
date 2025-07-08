@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 b1d-dsivp-m-001,001,Error,b1d,IDS,FRMDATE_B1D,Missingness,FRMDATE_B1D must be present,FRMDATE_B1D cannot be blank,Q0a. FRMDATE_B1D (Form date - B1D) cannot be blank,IF FRMDATE_B1D=blank,,,,,
 b1d-dsivp-c-002,002,Error,b1d,IDS,FRMDATE_B1D,Conformity,FRMDATE_B1D conforms,FRMDATE_B1D must be in mm/dd/yyyy or yyyy/mm/dd format,Q0a. FRMDATE_B1D (Form date - B1D) must be in mm/dd/yyyy or yyyy/mm/dd format,IF FRMDATE_B1D not in (mm/dd/yyyy or yyyy/mm/dd),,,,,
 b1d-dsivp-m-003,003,Error,b1d,IDS,DSLIV,Missingness,DSLIV must be present,DSLIV cannot be blank,Q0c. DSLIV (Pt's current living arrangement) cannot be blank,If DSLIV = blank,,,,,

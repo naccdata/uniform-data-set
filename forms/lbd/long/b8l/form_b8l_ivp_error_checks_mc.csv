@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 b8l-lbdivp-m-001,001,Error,b8l,IL,FRMDATEB8L,Missingness,FRMDATEB8L must be present,FRMDATEB8L cannot be blank,Q0a. FRMDATEB8L (B8L form date) cannot be blank ,If FRMDATEB8L = blank,,,Yes,No,
 b8l-lbdivp-c-002,002,Error,b8l,IL,FRMDATEB8L,Conformity,FRMDATEB8L conforms,FRMDATEB8L must be a date,Q0a. FRMDATEB8L (B8L form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATEB8L is not mm/dd/yyyy or yyyy/mm/dd,,,Yes,No,
 b8l-lbdivp-m-003,003,Error,b8l,IL,PACOGIMP,Missingness,PACOGIMP must be present,PACOGIMP cannot be blank,Q0. PACOGIMP (Is participant too cognitively impaired to complete form?) cannot be blank,If PACOGIMP = blank,,,Yes,Yes,

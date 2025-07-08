@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
+error_code,error_no,error_type,form_name,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
 enrl-m-001,001,Error,enrl,ADCID,Missingness,ADCID must be present,ADCID cannot be blank,Header variable ADCID cannot be blank,IF ADCID=blank ,,,Yes,
 enrl-c-002,002,Error,enrl,ADCID,Conformity,ADCID conforms,ADCID must be a valid code in list_of_adcids,Header variable ADCID must be a valid code in list_of_adcids,IF ADCID is not in list_of_adcids,,,No,
 enrl-m-003,003,Error,enrl,PTID,Missingness,PTID must be present, PTID cannot be blank,Header variable PTID cannot be blank,IF PTID=blank,,,Yes,

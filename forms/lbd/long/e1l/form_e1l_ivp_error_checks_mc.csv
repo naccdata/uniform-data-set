@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 e1l-lbdivp-m-001,001,Error,e1l,IL,FRMDATEE1L,Missingness,FRMDATEE1L must be present,FRMDATEE1L cannot be blank,Q0a. FRMDATEE1L (E1L form date) cannot be blank ,If FRMDATEE1L = blank,,,,,
 e1l-lbdivp-c-002,002,Error,e1l,IL,FRMDATEE1L,Conformity,FRMDATEE1L conforms,FRMDATEE1L must be a date,Q0a. FRMDATEE1L (E1L form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATEE1L is not mm/dd/yyyy or yyyy/mm/dd,,,,,
 e1l-lbdivp-m-003,003,Error,e1l,IL,LBGLRRK2,Missingness,LBGLRRK2 must be present,LBGLRRK2 cannot be blank,Q1. LBGLRRK2 (LRRK2) cannot be blank,IF LBGLRRK2 = blank,,,,,

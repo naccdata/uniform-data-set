@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 milestones-m-001,001,Error,milestones,M,PACKET,Missingness,PACKET must be present,PACKET cannot be blank,Q0a. PACKET (Packet code) cannot be blank,If PACKET = blank,,,,,
 milestones-c-002,002,Error,milestones,M,PACKET,Conformity,PACKET conforms,PACKET must be a character M,Q0a. PACKET (Packet code) must be a character M (Milestones),"If PACKET ne ""M""",,,,,
 milestones-m-003,003,Error,milestones,M,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Q0b. FORMVER (Form version number) cannot be blank,If FORMVER = blank,,,,,
