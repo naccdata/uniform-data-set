@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 b1l-lbdivp-m-001,001,Error,b1l,IL,FRMDATEB1L,Missingness,FRMDATEB1L must be present,FRMDATEB1L cannot be blank,Q0a. FRMDATEB1L (B1L form date) cannot be blank ,If FRMDATEB1L = blank,,,,,
 b1l-lbdivp-c-002,002,Error,b1l,IL,FRMDATEB1L,Conformity,FRMDATEB1L conforms,FRMDATEB1L must be a date,Q0a. FRMDATEB1L (B1L form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATEB1L is not mm/dd/yyyy or yyyy/mm/dd,,,,,
 b1l-lbdivp-m-003,003,Error,b1l,IL,LBSSALIV,Missingness,LBSSALIV must be present,LBSSALIV cannot be blank,Q1. LBSSALIV (dribble saliva during the day) cannot be blank,IF LBSSALIV = blank,,,,,

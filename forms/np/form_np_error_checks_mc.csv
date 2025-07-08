@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 np-m-001,001,Error,np,PACKET,Missingness,PACKET must be present,PACKET cannot be blank,Q0a. PACKET (Packet code) cannot be blank,If PACKET = blank,,,,,
 np-c-002,002,Error,np,PACKET,Conformity,PACKET conforms,PACKET must be a string 'NP',Q0a. PACKET (Packet code) must be a string 'NP' (Neuropathology),"If PACKET ne ""NP""",,,,,
 np-m-003,003,Error,np,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Q0b. FORMVER (Form version number) cannot be blank,If FORMVER = blank,,,,,
