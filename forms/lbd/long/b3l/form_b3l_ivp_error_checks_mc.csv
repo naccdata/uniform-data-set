@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 b3l-lbdivp-m-001,001,Error,b3l,IL,LBUMSPCH,Missingness,LBUMSPCH must be present,LBUMSPCH cannot be blank,Q1. LBUMSPCH (Speech) cannot be blank,If LBUMSPCH =blank,,,,,
 b3l-lbdivp-c-002,002,Error,b3l,IL,LBUMSPCH,Conformity,LBUMSPCH conforms,LBUMSPCH must be an integer between 0-4 or 8,Q1. LBUMSPCH (Speech) must be an integer between 0-4 or 8,If LBUMSPCH < 0 or (LBUMSPCH  > 4 and not = 8),,,,,
 b3l-lbdivp-m-003,003,Error,b3l,IL,LBUMSPCX,Missingness,LBUMSPCX conditionally present,"If LBUMSPCH = 8, LBUMSPCX cannot be blank","If Q1. LBUMSPCH = 8 (Untestable), then Q1a. LBUMSPCX (Speech - Reason untestable) cannot be blank",If LBUMSPCH = 8 and LBUMSPCX = blank,,"LBUMSPCX, LBUMSPCH",,,

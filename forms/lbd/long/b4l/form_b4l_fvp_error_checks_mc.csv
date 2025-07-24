@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 b4l-lbdfvp-m-001,001,Error,b4l,FL,FRMDATEB4L,Missingness,FRMDATEB4L must be present,FRMDATEB4L cannot be blank,Q0a. FRMDATEB4L (B4L form date) cannot be blank ,If FRMDATEB4L = blank,,,Yes,No,
 b4l-lbdfvp-c-002,002,Error,b4l,FL,FRMDATEB4L,Conformity,FRMDATEB4L conforms,FRMDATEB4L must be a date,Q0a. FRMDATEB4L (B4L form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATEB4L is not mm/dd/yyyy or yyyy/mm/dd,,,Yes,No,
 b4l-lbdfvp-m-003,003,Error,b4l,FL,LBDELUS,Missingness,LBDELUS must be present,LBDELUS cannot be blank,Q1. LBDELUS (participant have beliefs that you know are not true) cannot be blank,IF LBDELUS = blank,,,,,

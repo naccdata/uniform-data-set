@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 a1-ivp-m-001,001,Error,a1,I,BIRTHMO,Missingness,BIRTHMO must be present,BIRTHMO cannot be blank,Q1a. BIRTHMO (birth month) cannot be blank,IF BIRTHMO=blank,,,Yes,Yes,
 a1-ivp-c-002,002,Error,a1,I,BIRTHMO,Conformity,BIRTHMO conforms,BIRTHMO must be between 1 and 12,Q1a. BIRTHMO (birth month) must be between 1 and 12,IF BIRTHMO <1 or BIRTHMO>12,,,Yes,Yes,
 a1-ivp-m-003,003,Error,a1,I,BIRTHYR,Missingness,BIRTHYR must be present,BIRTHYR cannot be blank,Q1b. BIRTHYR (birth year) cannot be blank,IF BIRTHYR=blank,,,Yes,Yes,
@@ -126,8 +126,8 @@ a1-ivp-m-118,118,Error,a1,I,MEMTROUB,Missingness,MEMTROUB must be present,MEMTRO
 a1-ivp-c-119,119,Error,a1,I,MEMTROUB,Conformity,MEMTROUB conforms,"MEMTROUB must be between 1 and 5, or 9","Q19. MEMTROUB (memory trouble) must be between 1 and 5, or 9",IF MEMTROUB<1 or (MEMTROUB>5 and MEMTROUB is not 9),,,Yes,No,
 a1-ivp-m-120,120,Error,a1,I,MEMTEN,Missingness,MEMTEN must be present,MEMTEN cannot be blank,Q20. MEMTEN (memory past ten years) cannot be blank,IF MEMTEN=blank,,,Yes,No,
 a1-ivp-c-121,121,Error,a1,I,MEMTEN,Conformity,MEMTEN conforms,"MEMTEN must be between 1 and 5, or 9","Q20. MEMTEN (memory past ten years) must be between 1 and 5, or 9",IF MEMTEN<1 or (MEMTEN>5 and MEMTEN is not 9),,,Yes,No,
-a1-ivp-c-122,122,Error,a1,I,ADISTATE,Conformity,ADISTATE conforms,ADISTATE must be between 1 and 10,Q21. ADISTATE (ADI state-decile) must be between 1 and 10,IF ADISTATE <1 or ADISTATE >10,,,Yes,No,
-a1-ivp-c-123,123,Error,a1,I,ADINAT,Conformity,ADINAT conforms,ADINAT must be between 1 and 100,Q22. ADINAT (ADI national percentile) must be between 1 and 100,IF ADINAT <1 or ADINAT >100,,,Yes,No,
+a1-ivp-c-122,122,Error,a1,I,ADISTATE,Conformity,ADISTATE conforms,"ADISTATE must be between 1 and 10, or 884, 885, 886, or 887","Q21. ADISTATE (ADI state-decile) must be between 1 and 10, or 884, 885, 886, or 887","IF ADISTATE <1 or  (ADISTATE >10 and is not 884, 885, 886, 887)",,,Yes,No,
+a1-ivp-c-123,123,Error,a1,I,ADINAT,Conformity,ADINAT conforms,"ADINAT must be between 1 and 100, or 884, 885, 886, or 887","Q22. ADINAT (ADI national percentile) must be between 1 and 100, or 884, 885, 886, or 887","IF ADINAT <1 or (ADINAT >100 and is not 884, 885, 886, 887)",,,Yes,No,
 a1-ivp-c-124,124,Alert,a1,I,PRIOCC,Conformity,PRIOCC conforms,"PRIOCC must be between 100 and 731, or blank","Q23. PRIOCC (primary occupation) must be between 100 and 731, or blank",IF PRIOCC is not blank and PRIOCC<100 or PRIOCC>731,,,Yes,No,
 a1-ivp-m-125,125,Error,a1,I,SOURCENW,Missingness,SOURCENW must be present,SOURCENW cannot be blank,Q24. SOURCENW (ADRC enrollment) cannot be blank,IF SOURCENW=blank,,,Yes,Yes,
 a1-ivp-c-126,126,Error,a1,I,SOURCENW,Conformity,SOURCENW conforms,SOURCENW must be 1 or 2,Q24. SOURCENW (ADRC enrollment) must be 1 or 2,IF SOURCENW<1 or SOURCENW >2,,,Yes,Yes,

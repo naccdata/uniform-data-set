@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 a2-ivp-m-001,001,Error,a2,I,INRELTO,Missingness,INRELTO must be present,INRELTO cannot be blank,Q1. INRELTO (relationship to participant) cannot be blank,IF INRELTO=blank ,,,Yes,Yes,
 a2-ivp-c-002,002,Error,a2,I,INRELTO,Conformity,INRELTO conforms,INRELTO must be an integer between 1 and 6,Q1. INRELTO (relationship to participant) must be an integer between 1 and 6,IF INRELTO <1 or INRELTO >6,,,Yes,Yes,
 a2-ivp-m-003,003,Error,a2,I,INKNOWN,Missingness,INKNOWN must be present,INKNOWN  cannot be blank,Q2. INKNOWN (length knowing participant) cannot be blank,IF INKNOWN=blank,,,Yes,Yes,

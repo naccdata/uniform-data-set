@@ -8,7 +8,7 @@ preprocess-006,006,preprocess,VISITNUM,Two packets cannot have the same visit nu
 preprocess-007,007,preprocess,VISITDATE,Two packets cannot have the same visit date (VISITDATE) if they are from different visit numbers (VISITNUM),"uds, ftld, lbd"
 preprocess-010,010,preprocess,VISITDATE,"Follow-Up Visit Packet (PACKET=""F"", ""FF"", ""FL"") visit date (VISITDATE) cannot be equal to or from a date before the respective Initial Visit Packet (PACKET=""I"", ""I4"", ""IF"", ""IL"")","uds, ftld, lbd"
 preprocess-011,011,preprocess,PACKET,Visit date (VISITDATE) for UDSv4 Initial Visit Packet (PACKET=I4) must be a date after the last UDSv3 Visit Packet,uds
-preprocess-012,012,preprocess,vary,Some fields in the input record do not match with the submitted version,"uds, ftld, lbd"
+preprocess-012,012,preprocess,vary,Following fields in the input record do not match with the submitted version/packet of the form/module: [list of field names],"uds, ftld, lbd"
 preprocess-013,013,preprocess,PACKET,Provided PACKET code is not in the list of accepted packets for this module,"uds, ftld, lbd"
 preprocess-014,014,preprocess,FORMVER,Provided FORMVER is not in the list of accepted versions for this module,"uds, ftld, lbd"
 preprocess-015,015,preprocess,PTID,PTID must be no more than 10 characters,"uds, ftld, lbd"
@@ -19,4 +19,4 @@ preprocess-019,019,preprocess,MODULE,UDS visit packet must be approved before th
 preprocess-020,020,preprocess,PACKET,"To submit an Initial UDSv4 Visit Packet (PACKET=""I4""), participant must have an existing UDSv3 Visit Packet",uds
 preprocess-021,021,preprocess,PACKET,"Participant must have an existing Initial UDSv4 Visit Packet (PACKET=""I4"") submitted before the Follow-Up Visit Packet (PACKET=""F"") ",uds
 preprocess-022,022,preprocess,VISITDATE,Duplicate record with the same visit date exists in the batch CSV file for this participant,"uds, ftld, lbd"
-preprocess-024,024,preprocess,MODExx,Missing submission status (MODE<form name> variable) for one or more optional forms,"uds, ftld, lbd"
+preprocess-024,024,preprocess,MODExx,Missing submission status (MODE<form name>) variables for one or more optional forms,"uds, ftld, lbd"

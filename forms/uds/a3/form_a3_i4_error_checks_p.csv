@@ -1,4 +1,4 @@
-﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
+error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 a3-i4vp-p-1001,1001,Error,a3,I4,MOMAGEO,Plausibility,MOMAGEO cannot be > than MOMDAGE,MOMAGEO must be <= MOMDAGE,Q1a6. MOMAGEO (Mom age of onset of primary dx) must be <= Q1a2. MOMDAGE (Mom death age) ,If MOMAGEO > MOMDAGE,,"MOMAGEO, MOMDAGE",No,No,
 a3-i4vp-p-1002,1002,Error,a3,I4,DADAGEO,Plausibility,DADAGEO cannot be > than DADDAGE,DADAGEO must be <= DADDAGE,Q1b6. DADAGEO (Dad age of onset of primary dx) must be <= Q1b2. DADDAGE (Dad death age) ,If DADAGEO > DADDAGE,,"DADAGEO, DADDAGE",No,No,
 a3-i4vp-p-1003,1003,Error,a3,I4,SIB1AGO,Plausibility,SIB1AGO cannot be > than SIB1AGD,SIB1AGO must be <= SIB1AGD,Q2a6. SIB1AGO (Sibling 1 age of onset of primary dx) must be <= Q2a2. SIB1AGD (Sibling 1 death age) ,If SIB1AGO > SIB1AGD,,"SIB1AGO, SIB1AGD",No,No,

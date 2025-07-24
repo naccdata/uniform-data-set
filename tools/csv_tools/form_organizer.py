@@ -9,56 +9,13 @@ import preparer.
 import os
 
 from abc import ABC, abstractmethod
-from typing import List
 
-
-class VisitType:
-    """Defines the visit type (initial vs followup)"""
-    IVP = 'ivp'
-    FVP = 'fvp'
-    I4 = 'i4'  # only for UDS
-
-    @classmethod
-    def all(cls) -> List[str]:
-        return [cls.IVP, cls.FVP, cls.I4]
-
-
-class FileClassification:
-    """File classification. Either question and var vs error check."""
-    QNV = '_questions_and_vars.csv'
-    ERROR_CHECK_MC = '_error_checks_mc.csv'
-    ERROR_CHECK_P = '_error_checks_p.csv'
-
-    @classmethod
-    def error_checks(cls) -> List[str]:
-        return [
-            cls.ERROR_CHECK_MC,
-            cls.ERROR_CHECK_P
-        ]
-
-
-class ModuleType:
-    """Currently handled module types."""
-    UDS = 'uds'
-    FTLD = 'ftld'
-    LBD_LONG = 'lbd/long'
-    LBD_SHORT = 'lbd/short'
-    ENROLLMENT = 'enrollment'
-    PREPROCESS = 'preprocessing'
-
-    @classmethod
-    def all(cls) -> List[str]:
-        return [
-            cls.UDS,
-            cls.FTLD,
-            cls.LBD_LONG,
-            cls.LBD_SHORT,
-            cls.ENROLLMENT,
-            cls.PREPROCESS
-        ]
-
-
-STATIC_LBD_FORMS = ['b3l', 'b5l', 'b7l', 'd1l', 'e1l', 'header']
+from module_configurations import (
+    STATIC_LBD_FORMS,
+    FileClassification,
+    ModuleType,
+    VisitType,
+)
 
 
 class FormOrganizer(ABC):
@@ -112,21 +69,24 @@ class FormOrganizer(ABC):
         Returns:
             Whether or not this is the correct file to process
         """
-        # for enrollment, should just be a single file
-        if self.module == ModuleType.ENROLLMENT:
+        # visit type only for those with packets
+        if ModuleType.has_packet(self.module):
+            # Check if the filename matches the pattern
+            return (file.endswith(self.classification)  # needs to end with correct postfix
+                    and file.startswith('form_')        # must be a form CSV
+                    and f"_{visit}_" in file)           # must be a visit we care about
+
+        # preprocessing uses different naming convention and only has error checks
+        if self.module == ModuleType.PREPROCESS:
+            if self.classification == FileClassification.ERROR_CHECK_MC:
+                return file == 'preprocessing_error_checks.csv'
+
+        # enrollment does not start with form_
+        elif self.module == ModuleType.ENROLLMENT:
             return file.endswith(self.classification)
 
-        # same with preprocessing although it has a different filename, so hack it a bit
-        if self.module == ModuleType.PREPROCESS and self.classification == FileClassification.ERROR_CHECK_MC:
-            return file == 'preprocessing_error_checks.csv'
-
-        # Check if the filename matches the pattern
-        if (not file.endswith(self.classification)  # needs to end with correct postfix
-              or not file.startswith('form_')         # not a form CSV
-              or f"_{visit}_" not in file):           # not a visit we care about
-            return False
-
-        return True
+        # all others (BDS, CLS, NP, Milestones, etc.) start with form but do not
+        return file.endswith(self.classification) and file.startswith('form_')
 
     @abstractmethod
     def handle_lbd_short_fvp(self, form: str, subdir: str, long_subdir: str, file_found: bool) -> bool:

@@ -33,5 +33,5 @@ a1,F,8. How much time in total do you spend each week exercising or engaged in p
 a1,F,9. Do you feel like your memory is becoming worse?,MEMWORS,Always,"Integers 0-2,9","0, No|1, Yes, but this does not worry me|2, Yes, and this worries me|9, Don't know / Prefer not to answer",Integer,,no
 a1,F,10. About how often do you have trouble remembering things?,MEMTROUB,Always,"Integers 1-5,9","1, Never|2, Rarely|3, Sometimes|4, Often|5, Very often|9, Don't know / Prefer not to answer",Integer,,no
 a1,F,"11. Compared to 10 years ago, would you say that your memory is much worse, a little worse, the same, a little better, or much better?",MEMTEN,Always,"Integers 1-5,9","1, Much better|2, A little better|3, The same|4, A little worse|5, Much worse|9, Don't know / Prefer not to answer",Integer,,no
-a1,F,12. ADI state-only decile,ADISTATE,Conditional (e.g. skip pattern),"1-10, or blank",,Integer,,no
-a1,F,13. ADI national percentile,ADINAT,Conditional (e.g. skip pattern),"1-100,or blank",,Integer,,no
+a1,F,12. ADI state-only decile,ADISTATE,Conditional (e.g. skip pattern),"1-10, 884, 885, 886, 887, or blank",,Integer,,no
+a1,F,13. ADI national percentile,ADINAT,Conditional (e.g. skip pattern),"1-100, 884, 885, 886, 887, or blank",,Integer,,no
