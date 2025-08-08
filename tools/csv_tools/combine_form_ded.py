@@ -2,12 +2,6 @@
 Generates the DED for a specific module. To use,
 scroll to the bottom main and update the
 `module`, `visit`, and `output_filename` variables.
-
-EXTRA STEPS:
-
-1) For LBD, you need to copy the `header` directory to
-   the long and short directories as well (just don't
-   check it in).
 """
 import argparse
 import logging
@@ -159,7 +153,7 @@ class DedGenerator(FormOrganizer):
         log.info(f"DED file saved as {output_filename}")
 
 
-def main(module: ModuleType,
+def generate_ded(module: ModuleType,
          visit: VisitType | None = None,
          target_dir: str = './work/combined_ded') -> str:
 
@@ -181,7 +175,7 @@ def main(module: ModuleType,
     return output_filename
 
 
-def entrypoint():
+def main():
     parser = argparse.ArgumentParser(prog='Generates DEDs')
     parser.add_argument('-m', '--modules', dest='modules', type=str, required=True,
                         help="Comma-deliminated list of modules to generate DED(s) for. "
@@ -195,12 +189,12 @@ def entrypoint():
     for raw_module in args.modules.split(','):
         module = ModuleType(raw_module.strip())
 
-        for visit_type in PACKET_MAPPING.get(module, [None]):
-            # ignore UDS I4 packet
-            if visit_type == VisitType.I4:
+        for visit in PACKET_MAPPING.get(module, [None]):
+            # ignore I4 packets
+            if visit == VisitType.I4:
                 continue
 
-            main(module, visit_type, args.output_dir)
+            generate_ded(module, visit, args.output_dir)
 
 if __name__ == "__main__":
-    entrypoint()
+    main()

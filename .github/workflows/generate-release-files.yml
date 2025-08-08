@@ -30,17 +30,24 @@ jobs:
           cp -r forms/lbd/header forms/lbd/long
           cp -r forms/lbd/header forms/lbd/short
 
-          # set up output directory to write results to
-          mkdir output
-
       - name: Generate DEDs
         run: |
+          mkdir -p output/DED/
+
           python tools/csv_tools/combine_form_ded.py \
             --modules ${{ github.event.inputs.modules }} \
-            --output-dir output/
+            --output-dir output/DED/
 
-      - name: Aggregate files
-        id: aggregate
+      - name: Organize Error Checks
+        run: |
+          mkdir -p output/CSV/
+
+          python tools/csv_tools/prep_for_import.py \
+            --modules ${{ github.event.inputs.modules }} \
+            --output-dir output/CSV/
+
+      - name: Zip files
+        id: zip
         run: |
           mkdir -p output
 
@@ -54,4 +61,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: release-artifact 
-          path: ${{ steps.aggregate.outputs.outfile }}
+          path: ${{ steps.zip.outputs.outfile }}

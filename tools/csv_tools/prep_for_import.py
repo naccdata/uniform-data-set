@@ -3,13 +3,8 @@ Preps the error checks for import into REDCap.
 
 Works almost identically to combine_form_ded.py but
 works on the error checks instead.
-
-EXTRA STEPS:
-
-1) For LBD, you need to copy the `header` directory to
-   ONLY the long directory as well (just don't
-   check it in).
 """
+import argparse
 import logging
 from pathlib import Path
 
@@ -29,7 +24,7 @@ class ErrorCheckPreparer(FormOrganizer):
 
         # set up the target directory. follows same structure as rule defs, e.g.
         # MODULE / FORM_VER / PACKET*
-        self.target_dir = Path(target_dir) / MODULE_MAPPING.get(self.module, self.module.upper()) / FORM_VER_MAPPING[self.module]
+        self.target_dir = Path(target_dir) / MODULE_MAPPING.get(self.module, self.module.value.upper()) / FORM_VER_MAPPING[self.module]
 
         # not all modules have packets - only those with initial/followups
         if self.module.has_packet():
@@ -37,7 +32,7 @@ class ErrorCheckPreparer(FormOrganizer):
 
         self.target_dir.mkdir(parents=True, exist_ok=True)
 
-    def execute(self, subdir: str, file: str, file_found: bool, override_visit: str = None) -> bool:
+    def execute(self, subdir: str, file: str, file_found: bool, override_visit: VisitType = None) -> bool:
         """If a valid error check CSV is found for the visit, copy it to the correct location.
 
         Args:
@@ -50,10 +45,9 @@ class ErrorCheckPreparer(FormOrganizer):
             True if the file was found, False otherwise
         """
         # for UDS I4, do NOT override
-        if self.module == ModuleType.UDS and self.visit == VisitType.I4:
-            visit = self.visit
-        else:
-            visit = override_visit if override_visit else self.visit
+        visit = self.visit.value if self.visit is not None else None
+        if override_visit and not (self.module == ModuleType.UDS and self.visit == VisitType.I4):
+            visit = override_visit.value
 
         if not self.is_correct_file(file, visit):
             return file_found  # return previous state
@@ -75,7 +69,7 @@ class ErrorCheckPreparer(FormOrganizer):
 
         # may need to replace _ivp_ with _fvp_ in filename for target filepath
         if self.visit == VisitType.FVP:
-            file = file.replace(VisitType.IVP, VisitType.FVP)
+            file = file.replace(VisitType.IVP.value, VisitType.FVP.value)
         target_filepath = self.target_dir / file
 
         # calling convert_to_utf8 will also fix encoding issues
@@ -177,16 +171,24 @@ class ErrorCheckPreparer(FormOrganizer):
         return True
 
 def main():
-    target_dir = './work/error_check_prep'
+    parser = argparse.ArgumentParser(prog='Organizes the error check CSVs for upload to S3 and import into REDCap')
+    parser.add_argument('-m', '--modules', dest='modules', type=str, required=True,
+                        help="Comma-deliminated list of modules to organize CSVs for.")
+    parser.add_argument('-o', '--output-dir', dest='output_dir', type=str, required=True,
+                        help="Target output directory to write results to")
 
-    for module in ModuleType.all():
-    #for module in [ModuleType.FTLD, ModuleType.UDS]:
+    args = parser.parse_args()
+    log.info(f"modules:\t{args.modules}")
+
+    for raw_module in args.modules.split(','):
+        module = ModuleType(raw_module.strip())
+
         for visit in VisitType.all():
             if visit == VisitType.I4 and module != ModuleType.UDS:
                 continue
 
             for error_check_type in FileClassification.error_checks():
-                prep = ErrorCheckPreparer(target_dir=target_dir,
+                prep = ErrorCheckPreparer(target_dir=args.output_dir,
                                           module=module,
                                           visit=visit,
                                           classification=error_check_type)
