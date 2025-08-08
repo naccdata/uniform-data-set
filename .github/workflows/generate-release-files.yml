@@ -1,0 +1,57 @@
+# Process to generate files required for release
+# Produces a zip file with necessary files
+name: Generate Release Files
+
+on:
+  workflow_dispatch:
+    inputs:
+      modules:
+        description: "Comma-deliminated list of modules to prepare for release."
+        default: "uds,ftld,lbd/long,lbd/short,enrollment,preprocessing,bds,cls,ds,milestones,np"
+        required: true
+
+permissions:
+  contents: read
+jobs:
+  sync: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up
+        run: |
+          # install dependencies
+          python -m pip install --upgrade pip
+          pip install -r tools/csv_tools/requirements.txt
+
+          # LBD headers need to be copied to subdirectories
+          # for various tasks
+          cp -r forms/lbd/header forms/lbd/long
+          cp -r forms/lbd/header forms/lbd/short
+
+          # set up output directory to write results to
+          mkdir output
+
+      - name: Generate DEDs
+        run: |
+          python tools/csv_tools/combine_form_ded.py \
+            --modules ${{ github.event.inputs.modules }} \
+            --output-dir output/
+
+      - name: Aggregate files
+        id: aggregate
+        run: |
+          mkdir -p output
+
+          TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
+          ZIP_NAME="$TIMESTAMP-release-files.zip"
+
+          zip -r $ZIP_NAME output/
+          echo "outfile=$ZIP_NAME" >> $GITHUB_OUTPUT
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-artifact 
+          path: ${{ steps.aggregate.outputs.outfile }}

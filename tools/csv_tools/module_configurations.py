@@ -1,10 +1,16 @@
 """
 Module configurations - basically all known module properties.
 """
+import os
+from enum import Enum
 from typing import List
 
 
-class VisitType:
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
+
+
+class VisitType(Enum):
     """Defines the visit type (initial vs followup)"""
     IVP = 'ivp'
     FVP = 'fvp'
@@ -13,6 +19,16 @@ class VisitType:
     @classmethod
     def all(cls) -> List[str]:
         return [cls.IVP, cls.FVP, cls.I4]
+
+    def __eq__(self, other):
+        if isinstance(other, VisitType):
+            return self.value == other.value
+        if isinstance(other, str):
+            return self.value == other
+
+        return False
+
+    __hash__ = Enum.__hash__
 
 
 class FileClassification:
@@ -29,7 +45,7 @@ class FileClassification:
         ]
 
 
-class ModuleType:
+class ModuleType(Enum):
     """Currently handled module types."""
     UDS = 'uds'
     FTLD = 'ftld'
@@ -59,17 +75,25 @@ class ModuleType:
             cls.NP
         ]
 
-    @classmethod
-    def has_packet(cls, module: str) -> bool:
-        """Checks if the given module has packets
-        (e.g. initial vs followup forms)."""
-        return module in [
-            cls.UDS,
-            cls.FTLD,
-            cls.LBD_LONG,
-            cls.LBD_SHORT,
-            cls.DS
+    def has_packet(self) -> bool:
+        """Checks if this module has a packet."""
+        return self.value in [
+            ModuleType.UDS.value,
+            ModuleType.FTLD.value,
+            ModuleType.LBD_LONG.value,
+            ModuleType.LBD_SHORT.value,
+            ModuleType.DS.value
         ]
+
+    def __eq__(self, other):
+        if isinstance(other, ModuleType):
+            return self.value == other.value
+        if isinstance(other, str):
+            return self.value == other
+
+        return False
+
+    __hash__ = Enum.__hash__
 
 
 STATIC_LBD_FORMS = ['b3l', 'b5l', 'b7l', 'd1l', 'e1l', 'header']

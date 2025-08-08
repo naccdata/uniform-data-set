@@ -32,7 +32,7 @@ class ErrorCheckPreparer(FormOrganizer):
         self.target_dir = Path(target_dir) / MODULE_MAPPING.get(self.module, self.module.upper()) / FORM_VER_MAPPING[self.module]
 
         # not all modules have packets - only those with initial/followups
-        if ModuleType.has_packet(self.module):
+        if self.module.has_packet():
             self.target_dir = self.target_dir / PACKET_MAPPING[self.module][self.visit]
 
         self.target_dir.mkdir(parents=True, exist_ok=True)
@@ -85,7 +85,7 @@ class ErrorCheckPreparer(FormOrganizer):
         convert_to_utf8(filepath, target_filepath)
 
         # nothing more needs to be done here if there are no packets
-        if not ModuleType.has_packet(self.module):
+        if not self.module.has_packet():
             return True
 
         # otherwise we need to actually look at the file contents and possibly rename things
@@ -177,7 +177,6 @@ class ErrorCheckPreparer(FormOrganizer):
         return True
 
 def main():
-    root_dir = '../../forms'
     target_dir = './work/error_check_prep'
 
     for module in ModuleType.all():
@@ -188,7 +187,6 @@ def main():
 
             for error_check_type in FileClassification.error_checks():
                 prep = ErrorCheckPreparer(target_dir=target_dir,
-                                          root_dir=root_dir,
                                           module=module,
                                           visit=visit,
                                           classification=error_check_type)
