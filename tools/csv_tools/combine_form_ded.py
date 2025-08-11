@@ -2,6 +2,11 @@
 Generates the DED for a specific module. To use,
 scroll to the bottom main and update the
 `module`, `visit`, and `output_filename` variables.
+
+EXTRA STEPS:
+1) For LBD, you need to copy the `header` directory to
+   the long and short directories as well (just don't
+   check it in).
 """
 import argparse
 import logging

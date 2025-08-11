@@ -3,6 +3,11 @@ Preps the error checks for import into REDCap.
 
 Works almost identically to combine_form_ded.py but
 works on the error checks instead.
+
+EXTRA STEPS:
+1) For LBD, you need to copy the `header` directory to
+   ONLY the long directory as well (just don't
+   check it in).
 """
 import argparse
 import logging
