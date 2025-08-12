@@ -14,7 +14,7 @@ permissions:
   actions: write
   contents: read
 jobs:
-  sync: 
+  generate-release-files: 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -61,5 +61,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: release-artifact 
+          name: ${{ steps.zip.outputs.outfile }}
           path: ${{ steps.zip.outputs.outfile }}
