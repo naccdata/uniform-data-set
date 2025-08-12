@@ -4,15 +4,11 @@ scroll to the bottom main and update the
 `module`, `visit`, and `output_filename` variables.
 
 EXTRA STEPS:
-
 1) For LBD, you need to copy the `header` directory to
    the long and short directories as well (just don't
    check it in).
-2) For FVP, you need to manually replace the packets
-   since most will pull from the IVP packet
-   e.g. in the raw CSV, ctrl-f for `,IF,` and replace with `,FF,`
-        note the commas to avoid accidentally replacing something unrelated
 """
+import argparse
 import logging
 import os
 import pandas as pd
@@ -45,9 +41,9 @@ def clean_newlines(value: str) -> str:
 class DedGenerator(FormOrganizer):
     """Class for generating the DED."""
 
-    def __init__(self, root_dir: str, module: str, visit: str):
+    def __init__(self, module: str, visit: str):
         """Set classification to QNV CSVs and initialize empty DFs"""
-        super().__init__(root_dir, module, visit, FileClassification.QNV)
+        super().__init__(module, visit, FileClassification.QNV)
 
         self.combined_df = pd.DataFrame(dtype=object)
         self.header_df = None
@@ -64,7 +60,12 @@ class DedGenerator(FormOrganizer):
         Returns:
             True if the Q&V was found, False otherwise
         """
-        visit = override_visit if override_visit else self.visit
+        visit = None
+        if override_visit:
+            visit = override_visit
+        elif self.visit:
+            visit = self.visit.value
+
         if not self.is_correct_file(file, visit):
             return file_found  # return previous state
 
@@ -91,6 +92,10 @@ class DedGenerator(FormOrganizer):
 
             # Convert variable names to lowercase
             df['var_name'] = df['var_name'].str.lower()
+
+            # ensure packet is consistent (some FVPs pull directly from the IVP file)
+            if 'packet' in df.columns and self.module in PACKET_MAPPING and self.visit:
+                df['packet'] = PACKET_MAPPING[self.module][self.visit]
 
             # Append the data to the combined DataFrame
             if 'header' in file:
@@ -140,7 +145,7 @@ class DedGenerator(FormOrganizer):
         self.run()
 
         # Concat header to beginning of the DF (forms without packets do not have headers)
-        if self.header_df is None and ModuleType.has_packet(self.module):
+        if self.header_df is None and self.module.has_packet():
             log.warning(f"No header file found for {self.module}")
 
         self.combined_df = pd.concat([self.header_df, self.combined_df], ignore_index=True)
@@ -150,20 +155,24 @@ class DedGenerator(FormOrganizer):
 
         # Export the combined DataFrame to a CSV file
         self.combined_df.to_csv(output_filename, index=False, quoting=csv.QUOTE_MINIMAL)
-        log.info(f"Combined CSV file saved as {output_filename}")
+        log.info(f"DED file saved as {output_filename}")
 
 
-def main(module: ModuleType,
+def generate_ded(module: ModuleType,
          visit: VisitType | None = None,
          target_dir: str = './work/combined_ded') -> str:
 
+    # replace LBD long/short with versions
+    module_name = module.value.lower().replace('/long', '_3.1').replace('/short', '_3.0')
+
     if visit:
-        output_filename = f'{target_dir}/{date.today()}_{module.lower()}_{visit.lower()}_ded.csv'
+        log.info(f"Generating DED for {module} {visit}")
+        output_filename = f'{target_dir}/{date.today()}_{module_name}_{visit.value.lower()}_ded.csv'
     else:
-        output_filename = f'{target_dir}/{date.today()}_{module.lower()}_ded.csv'
+        log.info(f"Generating DED for {module}")
+        output_filename = f'{target_dir}/{date.today()}_{module_name}_ded.csv'
 
     generator = DedGenerator(
-        root_dir='../../forms',
         module=module,
         visit=visit)
 
@@ -171,12 +180,26 @@ def main(module: ModuleType,
     return output_filename
 
 
+def main():
+    parser = argparse.ArgumentParser(prog='Generates DEDs')
+    parser.add_argument('-m', '--modules', dest='modules', type=str, required=True,
+                        help="Comma-deliminated list of modules to generate DED(s) for. "
+                            + "Will generate a DED for all relevant visits (e.g. IVP/FVP)")
+    parser.add_argument('-o', '--output-dir', dest='output_dir', type=str, required=True,
+                        help="Target output directory to write results to")
+
+    args = parser.parse_args()
+    log.info(f"modules:\t{args.modules}")
+
+    for raw_module in args.modules.split(','):
+        module = ModuleType(raw_module.strip())
+
+        for visit in PACKET_MAPPING.get(module, [None]):
+            # ignore I4 packets
+            if visit == VisitType.I4:
+                continue
+
+            generate_ded(module, visit, args.output_dir)
+
 if __name__ == "__main__":
-
-    # CHANGE THESE
-    # If LBD, make sure the LBD long/short directories each have
-    # their own copy of the header files before running
-    module = ModuleType.FTLD
-    visit = VisitType.FVP
-
-    main(module, visit)
+    main()

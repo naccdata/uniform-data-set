@@ -11,6 +11,7 @@ import os
 from abc import ABC, abstractmethod
 
 from module_configurations import (
+    REPO_ROOT,
     STATIC_LBD_FORMS,
     FileClassification,
     ModuleType,
@@ -22,19 +23,17 @@ class FormOrganizer(ABC):
     """Abstract class for handling organization of forms."""
 
     def __init__(self,
-                 root_dir: str,
                  module: ModuleType,
                  visit: VisitType,
                  classification: FileClassification):
         """Initializer
 
         Args:
-            root_dir: Root directory of forms
             module: Module to evaluate 
             visit: Visit type to evaluate
             classification: File type to evaluate
         """
-        self.root_dir = f'{root_dir}/{module}'
+        self.root_dir = f'{REPO_ROOT}/forms/{module.value}'
         self.module = module
         self.visit = visit
         self.classification = classification
@@ -70,7 +69,7 @@ class FormOrganizer(ABC):
             Whether or not this is the correct file to process
         """
         # visit type only for those with packets
-        if ModuleType.has_packet(self.module):
+        if self.module.has_packet():
             # Check if the filename matches the pattern
             return (file.endswith(self.classification)  # needs to end with correct postfix
                     and file.startswith('form_')        # must be a form CSV
