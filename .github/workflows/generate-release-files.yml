@@ -47,19 +47,16 @@ jobs:
             --modules ${{ github.event.inputs.modules }} \
             --output-dir output/CSV/
 
-      - name: Zip files
-        id: zip
+      - name: Create Timestamp
+        id: timestamp
         run: |
           mkdir -p output
 
           TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
-          ZIP_NAME="$TIMESTAMP-release-files.zip"
-
-          zip -r $ZIP_NAME output/
-          echo "outfile=$ZIP_NAME" >> $GITHUB_OUTPUT
+          echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.zip.outputs.outfile }}
-          path: ${{ steps.zip.outputs.outfile }}
+          name: ${{ steps.timestamp.outputs.timestamp }}-release-files
+          path: output
