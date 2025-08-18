@@ -43,17 +43,3 @@ b8,F,4q. Apraxia of speech,APRAXSP,Conditional (e.g. skip pattern),"Integers 0,1
 b8,F,5. Gait,GAITABN,Conditional (e.g. skip pattern),"Integers 0,1,8","0, No abnormal signs in this section are present|1, Yes (<b>IF YES</b>, consider completing additional measures as described in Section 2D)|8, Not assessed",Integer,[normnrexam]='1',yes
 b8,F,5a. Finding,GAITFIND,Conditional (e.g. skip pattern),Integers 1-7,"1, Hemiparetic gait (spastic)|2, Foot drop gait (lower motor neuron)|3, Ataxic gait|4, Apractic/magnetic gait|5, Hypokinetic/parkinsonian gait|6, Antalgic gait|7, Other ",Integer,[gaitabn]='1',yes
 b8,F,5a1. Other gait (Specify),GAITOTHRX,Conditional (e.g. skip pattern),text,,String,[gaitfind] = '7' and [gaitabn] = '1',yes
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
