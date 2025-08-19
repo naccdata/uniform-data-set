@@ -1,0 +1,62 @@
+# Process to generate files required for release
+# Produces a zip file with necessary files
+name: Generate Release Files
+
+on:
+  workflow_dispatch:
+    inputs:
+      modules:
+        description: "Comma-deliminated list of modules to prepare for release."
+        default: "uds,ftld,lbd/long,lbd/short,enrollment,preprocessing,bds,cls,ds,milestones,np"
+        required: true
+
+permissions:
+  actions: write
+  contents: read
+jobs:
+  generate-release-files: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up
+        run: |
+          # install dependencies
+          python -m pip install --upgrade pip
+          pip install -r tools/csv_tools/requirements.txt
+
+          # LBD headers need to be copied to subdirectories
+          # for various tasks
+          cp -r forms/lbd/header forms/lbd/long
+          cp -r forms/lbd/header forms/lbd/short
+
+      - name: Generate DEDs
+        run: |
+          mkdir -p output/DED/
+
+          python tools/csv_tools/combine_form_ded.py \
+            --modules ${{ github.event.inputs.modules }} \
+            --output-dir output/DED/
+
+      - name: Organize Error Checks
+        run: |
+          mkdir -p output/CSV/
+
+          python tools/csv_tools/prep_for_import.py \
+            --modules ${{ github.event.inputs.modules }} \
+            --output-dir output/CSV/
+
+      - name: Create Timestamp
+        id: timestamp
+        run: |
+          mkdir -p output
+
+          TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
+          echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.timestamp.outputs.timestamp }}-release-files
+          path: output

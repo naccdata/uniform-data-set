@@ -46,7 +46,7 @@ def main():
     FORMS_DIR = Path('../../forms')
 
     # ADD/ITERATE OVER WHICHEVER FILES YOU NEED TO CONVERT
-    file = FORMS_DIR / 'lbd/long/e2l/form_e2l_fvp_questions_and_vars.csv'
+    file = FORMS_DIR / 'uds/c2/form_c2_ivp_error_checks_mc.csv'
     convert_to_utf8(file, file)  # in this case overwriting same file
 
 
