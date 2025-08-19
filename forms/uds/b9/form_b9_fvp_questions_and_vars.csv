@@ -3,8 +3,8 @@ b9,F,0a. B9 Clinical Judgement of Symptoms - Form date,FRMDATEB9,Always,mm/dd/yy
 b9,F,0b. B9 Clinical Judgement of Symptoms - Examiner's initials,INITIALSB9,No,text,,String,,no
 b9,F,0c. B9 Clinical Judgement of Symptoms - Language,LANGB9,Always,Integers 1-2,"1, English|2, Spanish",Integer,,no
 b9,F,0d. B9 Clinical Judgement of Symptoms - In-person or remote?,MODEB9,Always,Integers 1-2,"1, In-person|2, Remote",Integer,,no
-b9,F,"0d1. If 'B9 Clinical Judgement of Symptoms' form was completed remotely, specify reason",RMREASB9,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb9]='2',no
-b9,F,0d1a. What modality was used to collect this remote 'B9 Clinical Judgement of Symptoms' form?,RMMODEB9,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb9]='2',no
+b9,F,"0d1. If 'B9 Clinical Judgement of Symptoms' form was completed remotely, specify reason",RMREASB9,Conditional (e.g. skip pattern),Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb9]='2',no
+b9,F,0d1a. What modality was used to collect this remote 'B9 Clinical Judgement of Symptoms' form?,RMMODEB9,Conditional (e.g. skip pattern),Integers 1-2,"1, Telephone|2, Video",Integer,[modeb9]='2',no
 b9,F,1. Does the participant report a decline in any cognitive domain (relative to stable baseline prior to onset of current syndrome)?,DECCOG,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
 b9,F,2. Does the participant report a decline in any motor domain (relative to stable baseline prior to onset of current syndrome)?,DECMOT,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
 b9,F,3. Does the participant report the development of any significant neuropsychiatric/behavioral symptoms (relative to stable baseline prior to onset of current syndrome)?,PSYCHSYM,Yes,"Integers 0-1,8","0, No|1, Yes|8, Could not be assessed / participant is too impaired",Integer,,yes
@@ -78,3 +78,4 @@ b9,F,17. Were changes in motor function suggestive of parkinsonism?,MOMOPARK,No,
 b9,F,18. Were changes in motor function suggestive of amyotrophic lateral sclerosis? ,MOMOALS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclmot] = '1',yes
 b9,F,19. Overall course of decline of cognitive / behavorial / motor syndrome:,COURSE,No,"Integers 1-5, 8-9","1, Gradually progressive|2, Stepwise|3, Static|4, Fluctuating|5, Improved|8, Not applicable|9, Unknown",Integer,[decclin]='1',yes
 b9,F,20. Indicate the predominant domain that was first recognized as changed in the participant:,FRSTCHG,No,"Integers 0-3, 8-9","0 , Assessed at a previous UDS visit|1, Cognition|2, Behavior|3, Motor function|8, Not applicable|9, Unknown",Integer,[decclin]='1',yes
+
