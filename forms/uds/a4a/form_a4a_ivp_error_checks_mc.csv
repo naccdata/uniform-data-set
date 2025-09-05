@@ -1,6 +1,6 @@
 error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 a4a-ivp-m-001,1,Error,a4a,I,FRMDATEA4A,Missingness,FRMDATEA4A must be present,FRMDATEA4A cannot be blank,Q0a. FRMDATEA4A (A4a form date) cannot be blank,If FRMDATEA4A=blank,,,Yes,No,
-a4a-ivp-c-002,2,Error,a4a,I,FRMDATEA4A,Conformity,FRMDATEA4A conforms,FRMDATEA4A must be in mm/dd/yyyy or yyyy/mm/dd format,Q0a. FRMDATEA4A (A4a form date) must be in mm/dd/yyyy or yyyy/mm/dd format,If FRMDATEA4A is not mm/dd/yyyy or yyyy/mm/dd,,,Yes,No,
+a4a-ivp-c-002,2,Error,a4a,I,FRMDATEA4A,Conformity,FRMDATEA4A conforms,FRMDATEA4A must be a date,Q0a. FRMDATEA4A (A4a form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATEA4A is not mm/dd/yyyy or yyyy/mm/dd,,,Yes,No,
 a4a-ivp-m-003,3,Error,a4a,I,LANGA4A,Missingness,LANGA4A must be present,LANGA4A cannot be blank,Q0c. LANGA4A (Language of A4a administration) cannot be blank,If LANGA4A=blank,,,Yes,Yes,
 a4a-ivp-c-004,4,Error,a4a,I,LANGA4A,Conformity,LANGA4A conforms,LANGA4A must be an integer between 1-2,Q0c. LANGA4A (Language of A4a administration) must be an integer between 1-2,If LANGA4A<1 or LANGA4A>2,,,Yes,Yes,
 a4a-ivp-m-005,5,Error,a4a,I,MODEA4A,Missingness,MODEA4A must be present,MODEA4A cannot be blank,Q0d. MODEA4A (A4a in person or remote) cannot be blank,If MODEA4A=blank,,,Yes,No,
