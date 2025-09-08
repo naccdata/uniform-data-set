@@ -3,8 +3,8 @@ b8,F,0a. B8 Evaluation Form: Neurological Examination Findings - Form date,FRMDA
 b8,F,0b. B8 Evaluation Form: Neurological Examination Findings - Examiner's initials,INITIALSB8,No,text,,String,,no
 b8,F,0c. B8 Evaluation Form: Neurological Examination Findings - Language,LANGB8,Always,Integers 1-2,"1, English|2, Spanish",Integer,,no
 b8,F,0d. B8 Evaluation Form: Neurological Examination Findings - In-person or remote?,MODEB8,Always,Integers 1-2,"1, In-person|2, Remote",Integer,,no
-b8,F,"0d1. If 'B8 Evaluation Form: Neurological Examination Findings' form was completed remotely, specify reason",RMREASB8,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb8]='2',no
-b8,F,0d1a. What modality was used to collect this remote 'B8 Evaluation Form: Neurological Examination Findings' form?,RMMODEB8,Condtional,Integer 2,"2, Video",Integer,[modeb8]='2',no
+b8,F,"0d1. If 'B8 Evaluation Form: Neurological Examination Findings' form was completed remotely, specify reason",RMREASB8,Conditional (e.g. skip pattern),Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb8]='2',no
+b8,F,0d1a. What modality was used to collect this remote 'B8 Evaluation Form: Neurological Examination Findings' form?,RMMODEB8,Conditional (e.g. skip pattern),Integer 2,"2, Video",Integer,[modeb8]='2',no
 b8,F,1. Which of the following was completed on this participant? ,NEUREXAM,Always,Integers 0-3,"0, No neurologic examination|1, Comprehensive neurologic examination as suggested in the UDS Coding Guidebook|2, Focused or partial neurologic examination performed in-person|3, Focused or partial neurologic examination performed via video",Integer,,no
 b8,F,2. Were there abnormal exam findings?,NORMNREXAM,Conditional (e.g. skip pattern),Integers 0-1,"0, No abnormal findings|1, Yes",Integer,[neurexam]='1' or [neurexam]='2' or [neurexam]='3',no
 b8,F,3. Parkinsonian Signs,PARKSIGN,Conditional (e.g. skip pattern),"Integers 0,1,8","0, No abnormal signs in this section are present|1, Yes (<b>IF YES</b>, consider completing additional measures as described in Section 2D)|8, Not assessed",Integer,[normnrexam]='1',yes
@@ -43,17 +43,4 @@ b8,F,4q. Apraxia of speech,APRAXSP,Conditional (e.g. skip pattern),"Integers 0,1
 b8,F,5. Gait,GAITABN,Conditional (e.g. skip pattern),"Integers 0,1,8","0, No abnormal signs in this section are present|1, Yes (<b>IF YES</b>, consider completing additional measures as described in Section 2D)|8, Not assessed",Integer,[normnrexam]='1',yes
 b8,F,5a. Finding,GAITFIND,Conditional (e.g. skip pattern),Integers 1-7,"1, Hemiparetic gait (spastic)|2, Foot drop gait (lower motor neuron)|3, Ataxic gait|4, Apractic/magnetic gait|5, Hypokinetic/parkinsonian gait|6, Antalgic gait|7, Other ",Integer,[gaitabn]='1',yes
 b8,F,5a1. Other gait (Specify),GAITOTHRX,Conditional (e.g. skip pattern),text,,String,[gaitfind] = '7' and [gaitabn] = '1',yes
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
+
