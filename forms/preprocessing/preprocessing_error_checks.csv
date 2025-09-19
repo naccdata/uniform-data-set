@@ -3,7 +3,7 @@ preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center upl
 preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd"
 preprocess-003,003,preprocess,VISITNUM,Cannot find a matching UDS visit packet with the same visit number and visit date as the module packet,"lbd, ftld"
 preprocess-004,004,preprocess,PACKET,"Follow-Up module packet (PACKET=""FF"" or ""FL"") cannot be submitted for a UDS Initial Visit Packet (PACKET=""I"")","lbd, ftld"
-preprocess-005,005,preprocess,PACKET,A UDS packet must be submitted before submitting this module/form,milestone
+preprocess-005,005,preprocess,PACKET,"Participant must have a UDS, BDS, or MDS packet submitted before a Milestone form can be submitted",milestone
 preprocess-006,006,preprocess,VISITNUM,Two packets cannot have the same visit number (VISITNUM) if they are from different dates (VISITDATE),"uds, ftld, lbd"
 preprocess-007,007,preprocess,VISITDATE,Two packets cannot have the same visit date (VISITDATE) if they are from different visit numbers (VISITNUM),"uds, ftld, lbd"
 preprocess-010,010,preprocess,VISITDATE,"Follow-Up Visit Packet (PACKET=""F"", ""FF"", ""FL"") visit date (VISITDATE) cannot be equal to or from a date before the respective Initial Visit Packet (PACKET=""I"", ""I4"", ""IF"", ""IL"")","uds, ftld, lbd"
@@ -20,3 +20,6 @@ preprocess-020,020,preprocess,PACKET,"To submit an Initial UDSv4 Visit Packet (P
 preprocess-021,021,preprocess,PACKET,"Participant must have an existing Initial UDSv4 Visit Packet (PACKET=""I4"") submitted before the Follow-Up Visit Packet (PACKET=""F"") ",uds
 preprocess-022,022,preprocess,VISITDATE,Duplicate record with the same visit date exists in the batch CSV file for this participant,"uds, ftld, lbd"
 preprocess-024,024,preprocess,MODExx,Missing submission status (MODE<form name>) variables for one or more optional forms,"uds, ftld, lbd"
+preprocess-025,025,preprocess,MODULE,"Participant must have a UDS, BDS, or MDS packet submitted before the NP form can be submitted","uds, bds, mds, np"
+preprocess-026,026,preprocess,AUTOPSY,DECEASED and AUTOPSY should both equal 1 in the most recent Milestone form in order for the NP form to be accepted,"milestones, np"
+preprocess-027,027,preprocess,DEATHYR,"Date of death of the most recent Milestone form (DEATHMO, DEATHDY, DEATHYR) must match the date of death on the on NP form (NPDODMO, NPDODDY, NPDODYR)","milestones, np"
