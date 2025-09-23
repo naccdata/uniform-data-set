@@ -104,7 +104,7 @@ np,17b4. FTLD-tau subtype - FTLD-tau progressive supranuclear palsy (PSP),NPPROG
 np,17b5. FTLD-tau subtype - argyrophilic grains,NPFTDT5,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
 np,"17b6. FTLD-tau subtype - other 4R tauopathy (includes sporadic multiple systems tauopathy, globular glial tauopathy, MAPT mutation tauopathy)",NPFTDT6,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
 np,17b7. FTLD-tau subtype - chronic traumatic encephalopathy,NPFTDT7,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
-np,17b8. FTLD-tau subtype - amyotrophic lateral sclerosis (ALS)/Parkinsonism-dementia,NPFTDT8,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
+np,17b8. FTLD-tau subtype - amyotrophic lateral sclerosis (ALS)/Parkinsonism-dementia complex of Guam,NPFTDT8,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
 np,17b9. FTLD-tau subtype - tangle dominant disease,NPFTDT9,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
 np,"17b10. FTLD-tau subtype - other 3R + 4R tauopathy (includes unclassifiable, focal, glial only, MAPT mutation tauopathy, NOS)",NPFTDT10,Conditional,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,"Blank if #17a, NPFTDTAU, ne 1 (Yes)"
 np,17c. FTLD with TDP-43 pathology (FTLD-TDP),NPFTDTDP,Always,"Integers 0-1, 8, 9","0, No | 1, Yes | 8, Not assessed | 9, Missing/unknown",Integer,
@@ -163,3 +163,4 @@ np,"20h1. If full autopsy, first major finding",NPFAUT1,Conditional,Any text,,St
 np,"20h2. If full autopsy, second major finding",NPFAUT2,Conditional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
 np,"20h3. If full autopsy, third major finding",NPFAUT3,Conditional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
 np,"20h4. If full autopsy, fourth major finding",NPFAUT4,Conditional,Any text,,String,"Blank if #20h, NPFAUT, ne 1 (Yes)"
+
