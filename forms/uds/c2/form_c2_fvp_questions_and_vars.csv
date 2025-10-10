@@ -3,8 +3,8 @@ c2,F,0a. C2/C2T Neuropsychological Battery Test Scores - Form date,FRMDATEC2C2T,
 c2,F,0b. C2/C2T Neuropsychological Battery Test Scores - Examiner's initials,INITIALSC2C2T,No,text,,String,,No
 c2,F,0c. C2/C2T Neuropsychological Battery Test Scores - Language,LANGC2C2T,Always,Integers 1-2,"1, English|2, Spanish",Integer,,No
 c2,F,0d. C2/C2T Neuropsychological Battery Test Scores - In-person or remote?,MODEC2C2T,Always,Integers 1-2,"1, In-person|2, Remote",Integer,,No
-c2,F,"0d1. If 'C2/C2T Neuropsychological Battery Test Scores' form was completed remotely, specify reason",RMREASC2C2T,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modec2c2t]='2',No
-c2,F,0d1a. What modality was used to collect this remote 'C2/C2T Neuropsychological Battery Test Scores' form?,RMMODEC2C2T,Condtional,Integer 2,"2, Video",Integer,[modec2c2t]='2',No
+c2,F,"0d1. If 'C2/C2T Neuropsychological Battery Test Scores' form was completed remotely, specify reason",RMREASC2C2T,Conditional (e.g. skip pattern),Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modec2c2t]='2',No
+c2,F,0d1a. What modality was used to collect this remote 'C2/C2T Neuropsychological Battery Test Scores' form?,RMMODEC2C2T,Conditional (e.g. skip pattern),Integer 2,"2, Video",Integer,[modec2c2t]='2',No
 c2,F,1a. Was any part of the MoCA administered?,MOCACOMP,Always,Integers 0-1,"0, No|1, Yes",Integer,,No
 c2,F,"1a1. Was any part of the MoCA administered? If No, enter reason code",MOCAREAS,Conditional (e.g. skip pattern),Integers 95-98,"95, Physical problem|96, Cognitive/behavior problem|97, Other problem|98, Verbal refusal",Integer,[mocacomp]='0',No
 c2,F,1b. MoCA was adminstered:,MOCALOC,Conditional (e.g. skip pattern),Integers 1-3,"1, In ADRC or clinic|2, In home|3, In person - other",Integer,[mocacomp]='1',No
@@ -120,3 +120,4 @@ c2,F,18b6. Validity of participant's responses - Emotional issues,RESPEMOT,Condi
 c2,F,18b7. Validity of participant's responses - Unapproved assistance,RESPASST,Conditional (e.g. skip pattern),1 or blank,,Integer,[respval]='2' or [respval]='3',No
 c2,F,18b8. Validity of participant's responses - Other,RESPOTH,Conditional (e.g. skip pattern),1 or blank,,Integer,,No
 c2,F,"18b8a. Validity of participant's responses - Other, specify",RESPOTHX,Conditional (e.g. skip pattern),text,,String,[respoth]='1',No
+
