@@ -1,0 +1,31 @@
+﻿Form ,Version,Gate question variable,Variable,TT code
+b3,4,PDNORMAL ,All subsequent non-write in variables,"If PDNORMAL = 1, then all of: (SPEECH, FACEXP, TRESTFAC, TRESTRHD, TRESTLHD, TRESTRFT, TRESTLFT, TRACTRHD, TRACTLHD, RIGDNECK, RIGDUPRT, RIGDUPLF, RIGDLORT, RIGDLOLF, TAPSRT, TAPSLF, HANDMOVR, HANDMOVL, HANDALTR, HANDALTL, LEGRT, LEGLF, ARISING, POSTURE, GAIT, POSSTAB, BRADYKIN, TOTALUPDRS) should be 0"
+b3,4,PDNORMAL ,All subsequent non-write in variables,"If PDNORMAL is blank and at least one: (SPEECH, FACEXP, TRESTFAC, TRESTRHD, TRESTLHD, TRESTRFT, TRESTLFT, TRACTRHD, TRACTLHD, RIGDNECK, RIGDUPRT, RIGDUPLF, RIGDLORT, RIGDLOLF, TAPSRT, TAPSLF, HANDMOVR, HANDMOVL, HANDALTR, HANDALTL, LEGRT, LEGLF, ARISING, POSTURE, GAIT, POSSTAB, BRADYKIN) is in 1-4, then PDNORMAL should be 0."
+b3,4,PDNORMAL ,All subsequent non-write in variables,"If PDNORMAL is blank and all of: (SPEECH, FACEXP, TRESTFAC, TRESTRHD, TRESTLHD, TRESTRFT, TRESTLFT, TRACTRHD, TRACTLHD, RIGDNECK, RIGDUPRT, RIGDUPLF, RIGDLORT, RIGDLOLF, TAPSRT, TAPSLF, HANDMOVR, HANDMOVL, HANDALTR, HANDALTL, LEGRT, LEGLF, ARISING, POSTURE, GAIT, POSSTAB, BRADYKIN) are in 0 or 8, then PDNORMAL should be 8."
+b3,4,,SPEECHX,If SPEECHX is blank then SPEECHX should remain blank
+b3,4,,FACEXPX,FACEXPX is blank then FACEXPX should remain blank
+b3,4,,TRESTFAX,TRESTFAX is blank then TRESTFAX should remain blank
+b3,4,,TRESTRHX,TRESTRHX is blank then TRESTRHX should remain blank
+b3,4,,TRESTLHX,TRESTLHX is blank then TRESTLHX should remain blank
+b3,4,,TRESTRFX,TRESTRFX is blank then TRESTRFX should remain blank
+b3,4,,TRESTLFX,TRESTLFX is blank then TRESTLFX should remain blank
+b3,4,,TRACTRHX,TRACTRHX is blank then TRACTRHX should remain blank
+b3,4,,TRACTLHX,TRACTLHX is blank then TRACTLHX should remain blank
+b3,4,,RIGDNEX,RIGDNEX is blank then RIGDNEX should remain blank
+b3,4,,RIGDUPRX,RIGDUPRX is blank then RIGDUPRX should remain blank
+b3,4,,RIGDUPLX,RIGDUPLX is blank then RIGDUPLX should remain blank
+b3,4,,RIGDLORX,RIGDLORX is blank then RIGDLORX should remain blank
+b3,4,,RIGDLOLX,RIGDLOLX is blank then RIGDLOLX should remain blank
+b3,4,,TAPSRTX,TAPSRTX is blank then TAPSRTX should remain blank
+b3,4,,TAPSLFX,TAPSLFX is blank then TAPSLFX should remain blank
+b3,4,,HANDMVRX,HANDMVRX is blank then HANDMVRX should remain blank
+b3,4,,HANDMVLX,HANDMVLX is blank then HANDMVLX should remain blank
+b3,4,,HANDATRX,HANDATRX is blank then HANDATRX should remain blank
+b3,4,,HANDATLX,HANDATLX is blank then HANDATLX should remain blank
+b3,4,,LEGRTX,LEGRTX is blank then LEGRTX should remain blank
+b3,4,,LEGLFX,LEGLFX is blank then LEGLFX should remain blank
+b3,4,,ARISINGX,ARISINGX is blank then ARISINGX should remain blank
+b3,4,,POSTUREX,POSTUREX is blank then POSTUREX should remain blank
+b3,4,,GAITX,GAITX is blank then GAITX should remain blank
+b3,4,,POSSTABX,POSSTABX is blank then POSSTABX should remain blank
+b3,4,,BRADYKIX,BRADYKIX is blank then BRADYKIX should remain blank
