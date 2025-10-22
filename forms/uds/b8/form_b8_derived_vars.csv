@@ -1,0 +1,11 @@
+﻿status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,VariableType,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
+existing,b8,1-4,2,2,NACCNREX,NACC derived variable,Were all findings unremarkable?,Numeric longitudinal,"0 = Abnormal findings
+1 = No abnormal findings or findings normal for age
+8 = No neurological exam done
+9 = Unknown
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","The first question on abnormal findings on Form B8 differed slightly between UDS v1 – v2, v3, and v4. This derived variable provides a comparable summary of the presence of abnormal findings across UDS versions. See NORMEXAM below for the more detailed information that was collected on abnormal findings in UDS v3.","UDSv1-3: No change from current code
+
+UDSv4: 
+If NORMNREXAM=0 then NACCNREX=1
+If NORMNREXAM=1 then NACCNREX=0
+If NEUREXAM=0 then NACCNREX=8"
