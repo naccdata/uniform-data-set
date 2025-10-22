@@ -1,0 +1,123 @@
+﻿Status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,Variable Type,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code,
+New,A1,1-4,5,n/a,NACCSEX,NACC derived variable,Participant's sex,Numeric cross-sectional,"1 = Male
+2 = Female
+8 = Prefer not to answer
+9 = Unknown","UDS v1-3 did not have questions on both sex and gender; participants were only asked about sex, taken to mean sex at birth, and could only choose 1=Male or 2=Female. Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","v1-3 [IVP]: NACCSEX = SEX
+v4 [IVP or I4]: NACCSEX = BIRTHSEX",
+New,A1,1-4,8,n/a,NACCLANG,NACC derived variable,Primary language,Numeric cross-sectional,"1 = English
+2 = Spanish
+3 = Chinese dialect
+5 = Russian
+6 = Japanese
+8 = Other
+9 = Don't know","UDS v1-3 allowable codes for primary language included separate codes for Mandarin and Cantonese. Russian and Japanese were only available as response codes in v1-3; Russian or Japanese would be mapped to 8=Other in v4. For original v1-3 variable, see PRIMLANG.
+Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","
+v1-3 [IVP]: 
+If PRIMLANG=1 then NACCLANG=1
+If PRIMLANG=2 then NACCLANG=2
+If PRIMLANG in (3,4) then NACCLANG=3
+If PRIMLANG=5 then NACCLANG=4
+If PRIMLANG=6 then NACCLANG=5
+If PRIMLANG in (8,9) then NACCLANG=PRIMLANG
+
+v4 [IVP or I4]: NACCLANG=PREDOMLAN",
+New,A1,1-4,8a,n/a,NACCLANGX,NACC derived variable,"Primary language, other- specify",Character cross-sectional, Any text or numbers,"If an “other” primary language is reported (NACCLANG=8), then it will be listed here, otherwise it will be blank. Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","v1-3 [IVP]: NACCLANGX=PRIMLANGX
+v4 [IVP or I4]: NACCLANGX=PREDOMLANX",
+New,A1,1-4,3d,n/a,NACCHISP,NACC derived variable,Hispanic/Latino ethnicity,Numeric cross-sectional," 0 = No
+1 = Yes
+9 = Unknown","Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","v1-3 [IVP]: NACCHISP=HISPANIC
+v4 [IVP or I4]: 
+IF ETHISPANIC =1 then NACCHISP=1
+IF ETHISPANIC is blank and RACEUNKN is blank then NACCHISP=0
+If ETHISPANIC is blank and RACEUNKN=1 then NACCHISP=9",
+New,A1,1-4,10a,n/a,NACCEDULVL,Original UDS question,Highest achieved level of education,Numeric cross-sectional,"1 = Less than high school
+2 = High school or GED
+3 = Some college
+4 = Bachelor's degree
+5 = Master's degree
+6 = Doctorate
+9 = Unknown","In v4, the level of education was reported directly in Q10a. In v1-3, this field is derived as follows:
+EDUC < 12:  1 (less than high school)
+EDUC = 12:  2 (high school or GRE)
+EDUC >12 and < 16: 3 (some college)
+EDUC => 16 and <18: 4 (bachelor's degree)
+EDUC >=18 and <20: 5 (master's degree)
+EDUC >=20 and <=36: 6 (doctorate)
+EDUC = 99: 9 (don't know)
+
+Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","v1-3 [IVP]: 
+If EDUC <12 then NACCEDUCLVL = 1
+Else if EDUC=12 then NACCEDUCLVL = 2
+Else if EDUC>12 and <16 then NACCEDUCLVL = 3
+Else if EDUC>=16 and <18 then NACCEDUCLVL = 4
+Else if EDUC >=18 and <20 then NACCEDUCLVL = 5
+Else if EDUC >=20 and <=36 then NACCEDUCLVL = 6
+Else if EDUC=99 then NACCEDUCLVL = 9
+
+v4 [IVP or I4]:
+NACCEDUCLVL = LVLEDUC",
+Existing,A1,1-4,,,NACCAGE,NACC derived variable,Participant's age at visit,Numeric longitudinal, 18  - 120,"Birth month and year are required elements in the UDS; however, birth day is not collected. To calculate age, birth day is set to 1 for all participants and computed as visit date minus birth date.",no change from v3,
+Existing,A1,1-4,,,NACCAGEB,NACC derived variable,Participant's age at initial visit,Numeric cross-sectional, 18  - 120,"Birth month and year are required elements in the UDS; however, birth day is not collected. To calculate naccageb, birth day is set to 1 for all participants. Baseline age is then computed as initial visit date minus birth date. Note that although this variable is listed for all visits, it does not change across visits; it is cross-sectional.",no change from v3,
+Existing,A1,1-4,3a-3h,n/a,NACCNIHR,NACC derived variable,Derived NIH race definitions,Numeric cross-sectional," 1 = White
+2 = Black or African American
+3 = American Indian or Alaska Native
+4 = Native Hawaiian or Pacific Islander
+5 = Asian
+6 = Multiracial
+7 = Middle Eastern or Northern African
+99 = Unknown or ambiguous","NACCNIHR is derived from race/ethnicity variables across versions to be consistent with the NIH guidelines for human participants reporting. Although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit. Note that code 7 (Middle Eastern or Northern African) was added in v4. 
+
+v4:
+NACCNIHR is derived from the RACEAIAN, RACEASIAN, RACEBLACK, RACEMENA, RACENHPI, RACEWHITE, and RACEUNKN variables:
+
+NACCNIHR = 1 	for participants with only RACEWHITE = 1
+NACCNIHR = 2 	for participants with only RACEBLACK = 1
+NACCNIHR = 3 	for participants with only RACEAIAN = 1
+NACCNIHR = 4 	for participants with only RACENHPI = 1
+NACCNIHR = 5 	for participants with only RACEASIAN = 1
+NACCNIHR = 6 	for participants with more than one of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA = 1
+NACCNIHR = 7 	for participants with only RACEMENA = 1
+NACCNIHR = 99 	for participants with RACEUNKN = 1 and/or all of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA = 0
+
+For multiracial participants (NACCNIHR =6), additional information can be found by looking at the RACEWHITE, RACEBLACK, RACEAIAIN, RACENHPI, RACEASIAN, and RACEMENA variables. 
+
+v1-3:
+Some participants reported an “other” race that is not included in the NIH race categories (e.g., Hispanic or Irish). This NACC-derived race variable attempts to include these write-in values in order to be more consistent with the NIH guidelines for human participants reporting. The categories are described as follows: 
+
+NACCNIHR =1 for participants with RACE =1 (White) or RACE =50 (Other) with a write-in response that is considered White or Caucasian race. 
+NACCNIHR =2 for participants with RACE =2 (Black or African American) or RACE =50 with a write-in response that is considered black or African American 
+NACCNIHR =3 for participants with RACE =3 (American Indian or Alaska Native) or RACE =50 with a write-in response that is considered American Indian or Alaska Native 
+NACCNIHR =4 for participants with RACE =4 (Native Hawaiian or Other Pacific Islander) or RACE =50 with a write-in response that is considered Native Hawaiian or Pacific Islander 
+NACCNIHR =5 for participants with RACE =5 (Asian) or RACE =50 with a write-in response that is considered Asian 
+NACCNIHR =6 for participants reporting multiple races or with RACE =50 and a write-in response indicating mixed race including, but not limited to, “multiracial,” “biracial,” and “mestizo” 
+NACCNIHR =99 for participants with RACE =99 (Unknown) or with race =50 and a write-in response that cannot be classified as one of the categories without additional information, including but not limited to, “Hispanic,” “American,” and “Unknown.” 
+
+Participants reporting multiple races (Codes 1–5 for RACE and RACESEC, or for RACE, RACESEC and RACETER) are coded to NACCNIHR =6 (Multiracial). For some multiracial participants (NACCNIHR =6), additional information on their primary, secondary, and/or tertiary race can be found by looking at the RACE, RACESEC, and RACETER variables. 
+
+Participants reporting codes 1–5 for RACE, followed by RACESEC =50 or RACETER =50, are assigned the original primary race reported if the write-in does not indicate a different race, or is ambiguous. For example, a participant that reports RACE =1 (white) and then RACESEC =50 (other) with a write-in of “Irish” will still have NACCNIHR =1 and will not be considered multi-racial. If write-ins for RACESEC =50 or RACETER =50 are indicative of an additional race, then NACCNIHR =6. Additionally, race =99 (unknown) or ambiguous write-ins for primary race (RACE =50) that are followed by codes 1–5 for RACESEC or RACETER are coded as NACCNIHR =99. ","v1-3: no change from current code
+
+v4: 
+If RACEWHITE = 1 and all of RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA are blank, then NACCNIHR = 1
+Else if RACEBLACK = 1 and all of RACEWHITE, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA are blank, then NACCNIHR = 2
+Else if RACEAIAN= 1 and all of RACEWHITE, RACEBLACK, RACENHPI, RACEASIAN, RACEMENA are blank, then NACCNIHR = 3
+Else if RACENHPI= 1 and all of RACEWHITE, RACEBLACK, RACEAIAN, RACEASIAN, RACEMENA are blank, then NACCNIHR = 4
+Else if RACEASIAN= 1 and all of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEMENA are blank, then NACCNIHR = 5
+Else if RACEMENA= 1 and all of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, are blank, then NACCNIHR = 7
+Else if RACEUNKN =1 or all of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA are blank, then NACCNIHR = 99
+Else if more than one of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA = 1, then NACCNIHR = 6 	",
+Existing,A1,1-4,12,4,NACCLIVS,NACC derived variable,Living situation,Numeric longitudinal,"1 = Lives alone
+2 = Lives with spouse or partner
+3 = Lives with relative or friend
+4 = Lives with group
+5 = Other
+9 = Unknown",,no change from v3,
+Existing,A1,1-4,25,n/a,NACCREFR,NACC derived variable,Principal referral source,Numeric cross-sectional,"1 = Non-professional contact: self/relative/friend 
+2 = Professional contact: clinician, nurse, doctor, other health care provider, or other staff (ADC and non-ADC)
+8 = Other
+9 = Unknown
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","Note that participants reporting self-referral, non-professional contact, or ADRC participant referral (Question 2a in v3 or Question 25 in v4=1, 2, or 3) in UDS v3 or subsequent versions will have NACCREFR=1; and those reporting “ADRC clinician, staff, or investigator referral,” “Nurse, doctor, or other health care provider,” or “Other research study clinician/staff/investigator” (Question 2a in v3 or Question 25 in v4=4, 5, or 6) will have NACCREFR=2. Participants reporting self/relative/ friend (Question 3=1) in UDS v1.2 and 2.0 will have NACCREFR=1; those reporting clinician or clinic sample (Question 3=2 or 5) will have NACCREFR=2; and those reporting ADRC solicitation, non-ADRC study, population sample, or non-ADRC media appeal (Question 3=3, 4, 6 or 7) will have NACCREFR=8.",no change from v3,
+Remove,A1,1-3,n/a,n/a,NACCREAS,NACC derived variable,Primary reason for coming to ADC,Numeric cross-sectional,"1 = To participate in a research study  
+2 = To have a clinical evaluation
+7 = Both to participate in a research study and to have a clinical evaluation, or another reason
+9 = Unknown
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","Note that participants reporting an “other” reason (Question 2=3) in v1–2 and participants reporting “both to participate in a research study and to have a clinical evaluation or other reason” (Question 1=4) in v3 of the UDS will have naccreas =7. Also note that although this variable is not collected at follow-up visits, the value from the initial visit will be shown at all follow-up visits.",,
