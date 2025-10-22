@@ -1,0 +1,3 @@
+﻿Form ,Version,Gate_question_variable,Variable,TT_code
+A4,4,ANYMEDS,RXNORM1-40,"If ANYMEDS is 0 or -4, then RXNORM1-40 should be blank"
+A4,1-3,ANYMEDS,DRUG1-40,"If ANYMEDS is 0 or -4, then DRUG1-40 should be blank"

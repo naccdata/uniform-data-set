@@ -1,0 +1,274 @@
+﻿Status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,VariableType,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
+Existing,A4,1-4,,,NACCAMD,NACC derived variable,Total number of medications reported at each visit,Numeric longitudinal,"0 – 40
+-4 = Did not complete medications form","This variable provides the total number of medications reported at a visit including all prescription and over the counter medications reported on UDS Form A4 at a single visit. If the medications form was not completed, then naccamd =-4.","v4: 
+If ANYMEDS=1, count RXNORM1-RXNORM40 that are not blank"
+Existing,A4,1-4,,,NACCAHTN,NACC derived variable,Reported current use of any type of antihypertensive or blood pressure medication,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable is an indicator of reported current use of an antiadrenergic agent, ACE inhibitor, beta-blocker, calcium channel blocking agent, diuretic, vasodilator, antihypertensive combination therapy or angiotensin II inhibitor. All of the medications used to code NACCACEI, NACCAAAS, NACCBETA, NACCCCBS, NACCDIUR, NACCVASD, NACCHTNC, or NACCANGI are included in this category.","v4: 
+If ANYMEDS=1 and any of (NACCACEI, NACCAAAS, NACCBETA, NACCCCBS, NACCDIUR, NACCVASD, NACCHTNC, NACCANGI) = 1, then NACCAHTN=1. 
+
+Else if ANYMEDS=1 and all of (NACCACEI, NACCAAAS, NACCBETA, NACCCCBS, NACCDIUR, NACCVASD, NACCHTNC, NACCANGI) = 0, then NACCAHTN=0."
+Existing,A4,1-4,,,NACCHTNC,NACC derived variable,Reported current use of an antihypertensive combination therapy,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an antihypertensive combination medication. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.
+
+[Insert prior drug table here]
+
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC classes C02L [https://mor.nlm.nih.gov/RxClass/search?query=C02L%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#], C07B [https://mor.nlm.nih.gov/RxClass/search?query=C07B%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#], C07C [https://mor.nlm.nih.gov/RxClass/search?query=C07C%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#], C09B [https://mor.nlm.nih.gov/RxClass/search?query=C09B%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#], and C09D [https://mor.nlm.nih.gov/RxClass/search?query=C09D%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C02L', 'C07B', 'C07C', 'C09B', 'C09D') then NACCHTNC=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C02L', 'C07B', 'C07C', 'C09B', 'C09D'), then NACCHTNC=0"
+Existing,A4,1-4,,,NACCACEI,NACC derived variable,Reported current use of an angiotensin converting enzyme (ACE) inhibitor,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an angiotensin converting enzyme (ACE) inhibitor. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs. 
+
+[Insert prior drug table here]
+
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class C09A [https://mor.nlm.nih.gov/RxClass/search?query=C09A%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.
+","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C09A'), then NACCACEI=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C09A'), then NACCACEI=0"
+Existing,A4,1-4,,,NACCAAAS,NACC derived variable,Reported current use of an antiadrenergic agent,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an antiadrenergic agent. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs. 
+
+[Insert prior drug table here]
+                                                                                                                            
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See lists in ATC classes C02A [https://mor.nlm.nih.gov/RxClass/search?query=C02A%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#], C02B [https://mor.nlm.nih.gov/RxClass/search?query=C02B%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] and C02C [https://mor.nlm.nih.gov/RxClass/search?query=C02C%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C02A', 'C02B', 'C02C'), then NACCAAAS=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C02A', 'C02B', 'C02C'), then NACCAAAS=0"
+Existing,A4,1-4,,,NACCBETA,NACC derived variable,Reported current use of a beta-adrenergic blocking agent (Beta-Blocker),Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an beta-adrenergic blocking agent (Beta-Blocker). In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs. 
+
+[Insert prior drug table here]
+                                                                                                                            
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class C07A [https://mor.nlm.nih.gov/RxClass/search?query=C07A%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C07A'), then NACCBETA=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C07A'), then NACCBETA=0"
+Existing,A4,1-4,,,NACCCCBS,NACC derived variable,Reported current use of a calcium channel blocking agent,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of a calcium channel blocking agent. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.
+
+[Insert prior drug table here]
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class C08 [https://mor.nlm.nih.gov/RxClass/search?query=C08%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C08'), then NACCCCBS=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C08'), then NACCCBS=0"
+Existing,A4,1-4,,,NACCDIUR,NACC derived variable,Reported current use of a diuretic,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of a diuretic. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.                                                                                           
+
+[Insert prior drug table here]
+
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class C03 [https://mor.nlm.nih.gov/RxClass/search?query=C03%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C03'), then NACCDIUR=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C03'), then NACCDIUR=0"
+Existing,A4,1-4,,,NACCVASD,NACC derived variable,Reported current use of a vasodilator,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of a vasodilator. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.   
+
+[Insert prior drug table here]
+                                                                                                                                                                                     Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See lists in ATC classes C01D [https://mor.nlm.nih.gov/RxClass/search?query=C01D%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] and C02D [https://mor.nlm.nih.gov/RxClass/search?query=C02D%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C01D' , 'C02D'), then NACCVASD=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C01D' , 'C02D'), then NACCVASD=0"
+Existing,A4,1-4,,,NACCANGI,NACC derived variable,Reported current use of an angiotensin II inhibitor,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an angiotensin II inhibitor. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs. 
+
+[Insert prior drug table here]
+
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class C09C [https://mor.nlm.nih.gov/RxClass/search?query=C09C%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.
+                                                                                                                                                         ","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C09C'), then NACCANGI=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C09D'), then NACCANGI=0"
+Existing,A4,1-4,,,NACCLIPL,NACC derived variable,Reported current use of lipid lowering medication,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of lipid lowering medication. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.  
+
+[Insert prior drug table here]
+
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class C10 [https://mor.nlm.nih.gov/RxClass/search?query=C10%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('C10'), then NACCLIPLI=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('C10'), then NACCLIPL=0"
+Existing,A4,1-4,,,NACCNSD,NACC derived variable,Reported current use of nonsteroidal anti-inflammatory medication,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of non-steroidal anti-inflammatory medication. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs. 
+
+[Insert prior drug table here]
+
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class M01A [https://mor.nlm.nih.gov/RxClass/search?query=M01A%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('M01A'), then NACCNSD=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('M01A'), then NACCNSD=0"
+Existing,A4,1-4,,,NACCAC,NACC derived variable,Reported current use of an anticoagulant or antiplatelet agent,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an anticoagulant or antiplatelet agent. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.
+
+[Insert prior drug table here]
+ 
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class B01 [https://mor.nlm.nih.gov/RxClass/search?query=B01%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('B01'), then NACCAC=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('B01'), then NACCAC=0"
+Existing,A4,1-4,,,NACCADEP,NACC derived variable,Reported current use of an antidepressant,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an antidepressant. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs. 
+
+[Insert prior drug table here]
+                                                                                                                                                                                                                                                                      Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class N06A [https://mor.nlm.nih.gov/RxClass/search?query=N06A%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('N06A'), then NACCADEP=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('N06A'), then NACCADEP=0"
+Existing,A4,1-4,,,NACCAPSY,NACC derived variable,Reported current use of an antipsychotic agent,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an antipsychotic agent. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.
+
+[Insert prior drug table here]
+                                                                                                                                                                                                                                         Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class N05A [https://mor.nlm.nih.gov/RxClass/search?query=N05A%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('N05A'), then NACCAPSY=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('N05A'), then NACCAPSY=0"
+Existing,A4,1-4,,,NACCAANX,NACC derived variable,"Reported current use of an anxiolytic, sedative, or hypnotic agent",Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an anxiolytic, sedative, or hypnotic agent. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs. 
+
+[Insert prior drug table here]
+
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See lists in ATC classes N05B [https://mor.nlm.nih.gov/RxClass/search?query=N05B%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] and N05C [https://mor.nlm.nih.gov/RxClass/search?query=N05C%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('N05B' , 'N05C'), then NACCAANX=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('N05B' , 'N05C'), then NACCAANX=0"
+Existing,A4,1-4,,,NACCADMD,NACC derived variable,Reported current use of a FDA-approved medication for Alzheimer’s disease symptoms,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an FDA-approved medication for Alzheimer's disease symptoms. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.   
+
+[Insert prior drug table here]              
+                                                                                                                           
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class N06D [https://mor.nlm.nih.gov/RxClass/search?query=N06D%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('N06D'), then NACCADMD=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('N06D'), then NACCADMD=0"
+Existing,A4,1-4,,,NACCPDMD,NACC derived variable,Reported current use of an antiparkinson agent,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of an antiparkinson agent. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs. 
+
+[Insert prior drug table here]
+
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class N04 [https://mor.nlm.nih.gov/RxClass/search?query=N04%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('N04'), then NACCPDMD=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('N04'), then NACCPDMD=0"
+Existing,A4,1-4,,,NACCEMD,NACC derived variable,Reported current use of estrogen hormone therapy,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of estrogen hormone therapy. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.                                                        
+
+[Insert prior drug table here]
+                                                                                                                           
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class G03C [https://mor.nlm.nih.gov/RxClass/search?query=G03C%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('G03C'), then NACCEMD=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('G03C'), then NACCEMD=0"
+Existing,A4,1-4,,,NACCEPMD,NACC derived variable,Reported current use of estrogen + progestin hormone therapy,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of estrogen + progestin hormone therapy. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.
+
+[Insert prior drug table here]
+                                                                                                                           
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class G03F [https://mor.nlm.nih.gov/RxClass/search?query=G03F%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('G03F'), then NACCEPMD=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('G03F'), then NACCEPMD=0"
+Existing,A4,1-4,,,NACCDBMD,NACC derived variable,Reported current use of a diabetes medication,Numeric longitudinal,"0 = Did not report use at visit
+1 = Reported use at visit
+-4 = Did not complete medications form","This variable indicates reported current use of a diabetes medication. In UDSv1-3, medications were derived from the Multum/Lexi-Comp© therapeutic drug categories and included the following drugs.
+
+[Insert prior drug table here]
+                                                                                                                           
+Starting in UDSv4, medications were derived from drug (product-level) ATC class membership curated by the National Library of Medicine. See list in ATC class A10 [https://mor.nlm.nih.gov/RxClass/search?query=A10%7CATC1-4&searchBy=class&sourceIds=&drugSources=atc1-4%7Catcprod%2Cepc%7Cdailymed%2Cdisease%7Cmedrt%2Cchem%7Cdailymed%2Cmoa%7Cdailymed%2Cpe%7Cdailymed%2Cpk%7Cmedrt%2Ctc%7Cfmtsme%2Cva%7Cva%2Cdispos%7Csnomedct%2Cstruct%7Csnomedct%2Cschedule%7Crxnorm%2Ccvx%7Ccdc#] from RxClass.","v4: 
+If any of RXNORM1-40 has classID [https://lhncbc.nlm.nih.gov/RxNav/APIs/api-RxClass.findClassesById.html] in ('A10'), then NACCDBMD=1
+
+Else if ANYMEDS=1 and RXNORM1-40 do not have classID in ('A10'), then NACCDBMD=0"
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
