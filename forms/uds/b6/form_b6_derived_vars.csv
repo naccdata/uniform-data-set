@@ -1,5 +1,6 @@
 ﻿status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,VariableType,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
-existing,b6,4-Jan,16,16,NACCGDS,NACC derived variable,Total GDS Score,Numeric longitudinal,"0 - 15
+existing,b6,1-4,16,16,NACCGDS,NACC derived variable,Total GDS Score,Numeric longitudinal,"0 - 15
 88 = Could not be calculated
 -4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In earlier versions of the UDS, Centers were not given instructions on how to calculate the total GDS score if three or fewer GDS items were missing. NACC has created a new derived variable for Total GDS score so that participants who were given the GDS in the earlier versions of UDS v1 will have a total GDS score if they skipped three or fewer items on the questionnaire. If the participant was missing more than three of the 15 items on the GDS for any UDS version, NACCGDS = 88. The UDS Coding Guidebook for Form B6 provides the algorithm for calculating the GDS score when three or fewer items are missing.","UDSv1-3: No change from current code
 UDSv4: Same as UDSv1-3 code"
+
