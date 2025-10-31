@@ -1,0 +1,203 @@
+﻿Status,v4 Form ,v3 Form,Version,v4 IVP Q#,v4 FVP Q#,Variable,VariableType,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
+New,A5D2,A5,v1-4,"UDSv1-2: A5: 7c1
+UDSv3: A5: 6b
+UDSv4: 1i1","UDSv1-2: A5: 7c1
+UDSv3: A5: n/a
+UDSv4: 1i1",NACCSUBST,NACC derived variable,"Participant used substances including prescription or recreational drugs that caused significant impairment in work, legal, driving, or social areas within the past 12 months",Numeric longitudinal,"0 = No
+1 = Yes
+9 = Unknown
+- 4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In v1-3, if ABUSOTHR = 0 or 2 (absent or remote/inactive), NACCSUBST=0. If ABUSOTHR = 1 (remote/active), NACCSUBT=1. If ABUSOTHR=9 (unknown), NACCSUBT=9.
+","v1-3:
+If ABUSOTHR = 0 or 2 then NACCSUBST=0.
+If ABUSOTHR = 1 then NACCSUBT=1.
+If ABUSOTHR = 9 then NACCSUBT=9.
+
+v4: 
+If SUBSTYEAR is blank then NACCSUBST=-4
+Else NACCSUBST = SUBSTYEAR"
+New,A5D2,"A5, D2",v1-4,"UDSv1-2: A5: 1a
+UDSv3: A5: 2a; D2: 3
+UDSv4: 2a","UDSv1-2: A5: 1a
+UDSv3: A5: n/a; D2: 3
+UDSv4: 2a",NACCHEART,NACC derived variable,Heart attack / cardiac arrest,Numeric longitudinal,"0 = Absent
+1 = Recent/Active
+2 = Remote/Inactive
+9 = Unknown
+- 4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In v1-2, this variable is set to the value of CVHATT (Heart attack/cardiac arrest).
+
+In v3, this variable is derived from CVHATT ('Heart attack/cardiac arrest' from A5: Participant Health History) and MYOINF ('Myocardial infarct present within the past 12 months' from D2: Clinician-Assessed Medical Conditions), as follows:
+
+If heart attack/cardiac arrest is recent/active or myocardial infarct is present (CVHATT=1 or MYOINF=1) then NACCHEART=1
+If heart attack/cardiac arrest is absent or myocardial infarct is absent then (CVHATT=0 or MYOINF=0) then NACCHEART=0
+If heart attack/cardiac arrest is remote/inactive (CVHATT=2) then NACCHEART=2
+If heart attack/cardiac arrest is unknown and myocardial infarct was not assessed (CVHATT=9 and MYOINF =8) then NACCHEART=9
+If heart attack/cardiac arrest and myocardial infarct are both -4 then NACCHEART=-4
+
+In v4, this variable is derived from HRTATTACK (heart attack (heart artery blockage)) and CARDARREST (Cardiac arrest (heart stopped)) as follows:
+
+If heart attack or cardiac arrest are recent/active (HRTATTACK=1 or CARDARREST=1) then NACCHEART=1
+If heart attack or cardiac arrest are remote/inactive (HRTATTACK=2 or CARDARREST=2) then NACCHEART=2
+If heart attack or cardiac arrest are absent (HRTATTACK=0 or CARDARREST=0) then NACCHEART=0
+If heart attack and cardiac arrest are both unknown (HRTATTACK=9 and CARDARREST=9) then NACCHEART=9
+If more than one heart attack and cardiac arrest are both -4 then NACCHEART=-4","v1-2:
+If CVHATT is blank then NACCHEART=-4
+Else NACCHEART = CVHATT.
+
+v3:
+If CVHATT=1 or MYOINF=1 then NACCHEART=1.
+Else if CVHATT=0 or MYOINF=0 then NACCHEART=0.
+Else if CVHATT=2 then NACCHEART=2.
+Else if CVHATT is blank and MYOINF is blank then NACCHEART=-4.
+Else if CVHATT=9 and MYOINF =8 then NACCHEART=9.
+
+v4: 
+If HRTATTACK=1 or CARDARREST=1 then NACCHEART=1.
+Else if HRTATTACK=2 or CARDARREST=2 then NACCHEART=2.
+Else if HRTATTACK=0 or CARDARREST=0 then NACCHEART=0.
+Else if HRTATTACK is blank and CARDARREST is blank then NACCHEART=-4.
+Else if HRTATTACK=9 and CARDARREST=9 then NACCHEART=9."
+New,A5D2,,v3-4,"5f1a, 5f1d","5f1a, 5f1d",NACCRHEUM,NACC derived variable,Type of arthritis: Rheumatoid,Numeric longitudinal,"0 = No
+1 = Yes
+8 = Not applicable, no reported arthritis
+9 = Unknown
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In v3, this variable was derived as follows: 
+If the participant has rheumatoid arthritis (ARTHTYPE=1 or ARTYPE= 1) then NACCRHEUM=1. If the particpant had osteoarthritis or another type (ARTHTYPE=2,3 or ARTYPE=2,3), then NACCRHEUM=0. If the type of arthritis is unknown (ARTHTYPE=9 and ARTYPE=9) then NACCRHEUM=9. If the participant does not have arthritis (ARTHRIT=0 or ARTH=0), then NACCRHEUM=8.
+
+Note that in UDS v4, participants can report multiple types of arthritis. See NACCOSTEO and NACCARTOTH.","v3:
+If ARTHRIT is blank and ARTH is blank then NACCRHEUM=-4.
+Else if ARTHTYPE=1 or ARTYPE = 1 then NACCRHEUM=1.
+Else if ARTHTYPE in (2,3) or ARTYPE in (2,3) then NACCRHEUM=0.
+Else if ARTHRIT=0 or ARTH=0 then NACCRHEUM=8.
+Else if ARTHTYPE=9 and ARTYPE = 9 then NACCRHEUM=9.
+
+v4:
+If ARTHRRHEUM=1 then NACCRHEUM=1.
+Else if ARTHRIT in (1,2) and ARTHRRHEUM is blank and ARTHTYPUNK is blank, then NACCRHEUM=0.
+Else if ARTHRIT=0 then NACCRHEUM=8.
+Else if ARTHTYPUNK=1 then NACCRHEUM=9."
+New,A5D2,,v3-4,"5f1b, 5f1d","5f1b, 5f1d",NACCOSTEO,NACC derived variable,Type of arthritis: Osteoarthritis,Numeric longitudinal,"0 = No
+1 = Yes
+8 = Not applicable, no reported arthritis
+9 = Unknown
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In v3, this variable was derived as follows: 
+If the participant has osteoarthritis (ARTHTYPE=2 or ARTYPE= 2) then NACCOSTEO=1. If the particpant had rheumatoid arthritis or another type (ARTHTYPE=1,3 or ARTYPE=1,3), then NACCOSTEO=0. If the type of arthritis is unknown (ARTHTYPE=9 and ARTYPE=9) then NACCOSTEO=9. If the participant does not have arthritis (ARTHRIT=0 or ARTH=0), then NACCOSTEO=8.
+
+Note that in UDS v4, participants can report mutliple types of arthritis. See NACCRHEUM and NACCARTOTH.","v3:
+If ARTHRIT is blank and ARTH is blank then NACCOSTEO=-4.
+Else if ARTHTYPE=2 or ARTYPE = 2 then NACCOSTEO=1.
+Else if ARTHTYPE in (1,3) or ARTYPE in (1,3) then NACCOSTEO=0.
+Else if ARTHRIT=0 or ARTH= 0 then NACCOSTEO=8.
+Else if ARTHTYPE=9 and ARTYPE = 9 then NACCOSTEO=9.
+
+v4:
+If ARTHROSTEO=1 then NACCOSTEO=1.
+Else if ARTHRIT in (1,2) and ARTHROSTEO is blank and ARTHTYPUNK is blank, then NACCOSTEO=0.
+Else if ARTHRIT=0 then NACCOSTEO=8.
+Else if ARTHTYPUNK=1 then NACCOSTEO=9."
+New,A5D2,,v3-4,"5f1c, 5f1d","5f1c, 5f1d",NACCARTOTH,NACC derived variable,Type of arthritis: Other,Numeric longitudinal,"0 = No
+1 = Yes
+8 = Not applicable, no reported arthritis
+9 = Unknown
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In v3, this variable was derived as follows: 
+If the participant has other type of arthritis (ARTHTYPE=3 or ARTYPE= 3) then NACCARTOTH=1. If the particpant had rheumatoid arthritis or osteroarthritis (ARTHTYPE=1,2 or ARTYPE=1,2), then NACCARTOTH=0. If the type of arthritis is unknown (ARTHTYPE=9 and ARTYPE=9) then NACCARTOTH=9. If the participant does not have arthritis (ARTHRIT=0 or ARTH=0), then NACCARTOTH=8.
+
+ARTHTYPUNK. Note that in UDS v4, participants can report mutliple types of arthritis. See NACCRHEUM and NACCOSTEO.
+
+In UDS v3 and v4, ""other"" arthritis type was specified in the following variables: ARTHTYPX and ARTYPEX.","v3:
+If ARTHRIT is blank and ARTH is blank then NACCARTOTH=-4.
+Else if ARTHTYPE=3 or ARTYPE=3 then NACCARTOTH=1.
+Else if ARTHTYPE in (1,2) or ARTYPE in (1,2) then NACCARTOTH=0.
+Else if ARTHRIT=0 or ARTH= 0 then NACCARTOTH=8.
+Else if ARTHTYPE=9 and ARTYPE = 9 or then NACCARTOTH=9.
+
+v4:
+If ARTHROTHR=1 then NACCARTOTH=1.
+Else if ARTHRIT in (1,2) and ARTHROTHR is blank and ARTHTYPUNK is blank, then NACCARTOTH=0.
+Else if ARTHRIT=0 then NACCARTOTH=8.
+Else if ARTHTYPUNK=1 then NACCARTOTH=9."
+New,A5D2,D2,v3-4,5m,5m,NACCCANCER,NACC derived variable,Cancer present in the last 12 months (excluding non-melanoma skin cancer),Numeric longitudinal,"0 = No
+1 = Yes
+9 = Unknown
+- 4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","This variable was not collected in v1-2. 
+
+In v3, this variable is derived from the variable CANCER in Form D2: Clincian-assessed Medical Conditions. If a participant did not have cancer (CANCER=0), NACCCANCER=0. If the participant had primary/non-metastatic cancer or metastatic cancer (CANCER=1 or 2) then NACCCANCER=1. If it was unknown whether a participant had cancer, NACCCANCER=9.
+
+In v4, this variable is derived from the variable CANCERACTV in Form A5/D2: Participant Health History/Clinician-assessed Medical Conditions. If a participant did not have cancer (CANCERACTV=0), NACCCANCER=0. If the participant had recent/active or remote/inactive primary or metastatic cancer (CANCERACTV=1 or 2) then NACCCANCER=1. If it was unknown whether a participant had cancer, NACCCANCER=9.","v3:
+If CANCER=0 then NACCCANCER=0.
+If CANCER=1 or 2 then NACCCANCER=1.
+If CANCER=9 then NACCCANCER=9.
+If CANCER is blank then NACCCANCER=-4.
+
+v4:
+If CANCERACTV=0 then NACCCANCER=0.
+If CANCERACTV=1 or 2 then NACCCANCER=1.
+If CANCERACTV=9 then NACCCANCER=9.
+If CANCERACTV is blank then NACCCANCER=-4."
+New,A5D2,D2,v3-4,5t,5t,NACCOTHCON,NACC derived variable,Other medical conditions or procedures within the past 12 months,Numeric longitudinal,"0 = No
+1 = Yes
+9 = Unknown
+- 4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","This variable was not collected in v1-2. 
+
+In v3, this variable is derived from Form D2: Clincian-assessed Medical Conditions. If a participant was reported to have another medical condition that was not listed, it is reported as NACCOTHCON=1. If a participant did not have another medical condition, NACCOTHCON=0. 
+
+In v4, this variable is derived from the variable OTHERCOND in Form A5/D2: Participant Health History/Clinician-assessed Medical Conditions. If other medical conditions or procedures were absent or remote/inactive, NACCOTHCON=0. If other medical conditions or procedures were recent/active, NACCOTHCON=1. If it is unknown whether a participant had other medical conditions or procedures, NACCOTHCON=9.","v3: 
+If OTHCOND is blank then NACCOTHCON=-4
+Else NACCOTHCON = OTHCOND.
+
+v4: 
+If OTHERCOND=1 then NACCOTHCON=1.
+If OTHERCOND=0 or OTHERCOND=2 then NACCOTHCON=0.
+If OTHERCOND=9 then NACCOTHCON=9.
+if OTHERCOND is blank then NACCOTHCON=-4."
+New,A5D2,A5,v1-4,6a1-6a2,6a1-6a2,NACCDEP,NACC derived variable,Depression (recent or remote),Numeric longitudinal,"0 = No
+1 = Yes
+9 = Unknown
+- 4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In v1-3, this variable is derived from the variables DEP2YRS and DEPOTHR in Form A5: Participant Health History. For v3, it may be advisable to use the depression variable collected on Form D1 (Clinician Diagnosis), because depression as reported on Form A5 is collected using mainly participant and co-participant report. If a participant had active depression in the last two years or depression episodes from more than two years ago, NACCDEP=1. If the participant did not report any depression, NACCDEP=0. If it is unknown whether a participant had depression, NACCDEP=9.
+
+In v4, this variable is derived from the variables MAJORDEP and OTHERDEP in Form A5/D2: Participant Health History/Clinician-assessed Medical Conditions. Diagnoses were restricted to those meeting DSM-5-TR criteria. If a participant had recent/active or remote/inactive major depressive disorder or another specified depressive disorder, NACCDEP=1. If the participant did not have major depressive disorder or another specified depressive disorder, NACCDEP=0. If it is unknown whether a participant had depression, NACCDEP=9.","v1-3:
+If DEP2YRS or DEPOTHR=1 then NACCDEP=1.
+Else if DEP2YRS and DEPOTHR=0 then NACCDEP=0.
+Else if DEP2YRS or DEPOTHR=9 then NACCDEP=9.
+Else if DEP2YRS or DEPOTHR is blank then NACCDEP=-4.
+
+v4:
+If MAJORDEP or OTHERDEP=1 or 2 then NACCDEP=1.
+Else if MAJORDEP and OTHERDEP=0 then NACCDEP=0.
+Else if MAJORDEP or OTHERDEP=9 then NACCDEP=9.
+Else if MAJORDEP or OTHERDEP is blank then NACCDEP=-4."
+New,A5D2,A5,v3-4,6d,6d,NACCANX,NACC derived variable,Anxiety disorder (including OCD),Numeric longitudinal,"0 = Absent
+1 = Recent/Active
+2 = Remote/Inactive
+9 = Unknown
+- 4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","Note that this variable was not collected in UDS v1-2; thus, report of this condition may be recorded as “Other psychiatric disorder” for subjects assessed using UDS v1–2. 
+
+In v3, this variable is derived from the variables ANXIETY and OCD in Form A5: Participant Health History. For v3, it may be advisable to use the anxiety variable collected on Form D1 (Clinician Diagnosis), because anxiety as reported on Form A5 is collected using mainly participant and co-participant report. 
+
+In v4, this variable is set equal to ANXIETY; OCD is included in the list of anxiety disorders in v4.  For v4, ANXIETY was restricted to diagnoses meeting DSM-5-TR criteria. If a participant had recent/active anxiety or OCD, NACCANX=1. If a participant had remote/inactive anxiety or OCD, NACCANX=2. If the participant did not report any anxiety or OCD, then NACCANX=0. If it is unknown whether a participant had anxiety or OCD, NACCANX=9.
+","v3:
+If ANXIETY or OCD=1 then NACCANX=1.
+Else if ANXIETY or OCD=2 then NACCANX=2.
+Else if ANXIETY and OCD=0 then NACCANX=0.
+Else if ANXIETY or OCD=9 then NACCANX=9.
+Else if ANXIETY is blank and OCD is blank then NACCANX=-4.
+
+v4:
+NACCANX = ANXIETY."
+Existing,,A5,v1-3,,,NACCSTYR,NACC derived variable,Most recently reported year of stroke as of the Initial Visit,Numeric cross-sectional,"1900 - current year
+8888 = Not applicable, no reported history of stroke at the Initial Visit
+9999 = Unknown
+- 4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","If a participant was reported to have multiple strokes, only the most recent stroke year as of the Initial Visit is reported, if applicable. Note that in UDS v1.2 and v2.0, stroke history was collected at every UDS visit on Form A5, whereas it is not collected at any Follow-up Visit in UDS v3; therefore, NACCSTYR focuses on most recent stroke year reported at the Initial Visit to maintain consistency across versions. Upon request, researchers can obtain the stroke year variables collected in UDS v1.2 and v2.0 follow-up visits (up to six possible stroke years were reported in v1.2 and v2.0).","v1-3: no change
+
+v4: -4"
+Existing,,A5,v1-3,,,NACCTIYR,NACC derived variable,Most recently reported year of TIA as of the Initial Visit,Numeric cross-sectional,"1900 - current year
+8888 = Not applicable, no reported history of TIA
+9999 = Unknown
+- 4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","If a participant was reported to have multiple TIAs, only the most recent TIA year as of the Initial Visit is reported. Note that in UDS v1.2 and v2.0, TIA history was collected at every UDS visit on Form A5, whereas in UDS v3, it was collected only at the Initial Visit. Therefore, to maintain consistency across versions, NACCTIYR focuses on most recent TIA year reported at the Initial Visit. Upon request, researchers can obtain the TIA year variables collected in UDS v1.2 and 2.0 follow-up visits (up to six possible TIA years were reported in v1.2 and v2.0).","v1-3: no change
+
+v4: -4"
+Existing,A5D2,A5,v1-4,4h,4h,NACCTBI,NACC derived variable,History of traumatic brain injury (TBI),Numeric longitudinal,"0 = No
+1 = Yes
+9 = Unknown
+- 4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","If any type of TBI is reported at the visit on Form A5 (HEADINJURY or TBI or TRAUMBRF or TRAUMCHR or TRAUMEXT), NACCTBI =1. For v3, it may be advisable to use the TBI variable collected on Form D1 (Clinician Diagnosis), because TBI as reported on Form A5 was collected using mainly participant and co-participant report. ","v1-3: no change
+
+v4: NACCTBI = HEADINJURY"
