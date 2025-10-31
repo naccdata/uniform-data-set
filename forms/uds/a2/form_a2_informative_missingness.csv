@@ -1,0 +1,4 @@
+﻿Form ,Version,Gate question variable,Variable,TT code
+a2,4,INLIVWTH,INCNTMOD,If INLIVWTH=1 then INCNTMOD=8
+a2,4,INLIVWTH,INCNTTIM,If INLIVWTH=1 then INCNTTIM=8
+a2,4,,INCNTMDX,If INCNTMDX is blank then INCNTMDX should remain blank
