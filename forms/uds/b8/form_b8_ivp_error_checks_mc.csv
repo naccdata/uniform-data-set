@@ -123,4 +123,4 @@ b8-ivp-c-121,121,Error,b8,I,RMREASB8,Conformity,RMREASB8 conforms,RMREASB8 must 
 b8-ivp-m-122,122,Error,b8,I,RMMODEB8,Missingness,RMMODEB8 conditionally present,"If MODEB8 = 2, RMMODEB8 cannot be blank","If Q0d. MODEB8 (B8 in person, remote, or not completed) = 2 (Remote) then Q0d1a. RMMODEB8 (Mode of remote B8 administration) cannot be blank",If MODEB8 = 2 and RMMODEB8 = blank,,"MODEB8,  RMMODEB8  ",Yes,No,
 b8-ivp-m-123,123,Error,b8,I,RMMODEB8,Missingness,RMMODEB8 conditionally blank,"If MODEB8 = 0 or 1, RMMODEB8 must be blank","If Q0d. MODEB8 (B8 in person, remote, or not completed) = 0 or 1 (In-person or not completed) then Q0d1a. RMMODEB8 (Mode of remote B8 administration) must be blank","If MODEB8 in (0,1) and RMMODEB8 is not blank",,"MODEB8, RMMODEB8",Yes,No,
 b8-ivp-c-124,124,Error,b8,I,RMMODEB8,Conformity,RMMODEB8 conforms,RMMODEB8 must be an integer between 1-2,Q0d1a. RMMODEB8 (Mode of remote B8 administration) must be an integer between 1-2,If RMMODEB8 < 1 or RMMODEB8 > 2,,,Yes,No,
-,,,,,,,,,,,,,,,
+
