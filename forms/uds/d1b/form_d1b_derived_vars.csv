@@ -1,5 +1,5 @@
 ﻿status,Form ,v3 Form,Version,v4 IVP Q#,v4 FVP Q#,Variable,Variable Type,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
-new,d1b,,4-Mar,"UDSv3: 7c-7d
+new,d1b,,3-4,"UDSv3: 7c-7d
 UDSv4: 7a3e1","UDSv3: 7c-7d
 UDSv4: 7a3e1",NACCWMHSEV,NACC Derived variable,White-matter hyperintensity severity,Numeric longitudinal,"1 = Moderate white-matter hyperintensity (CHS score 5–6)
 2 = Extensive white-matter hyperintensity (CHS score 7–8+)
@@ -12,12 +12,12 @@ If FORMVER in (3,4):
 
 If IMAGMWMH=1 or IMAGWMHSEV=1 then NACCWMHSEV=1
 If IMAGEWMH=1 or IMAGWMHSEV=2 then NACCWMHSEV=2
-If IMAGWMH=0 or (IMAGEMWMH=0 and IMAGEWMH=0) then NACCWMHSEV=7
+If IMAGWMH=0 or (IMAGMWMH=0 and IMAGEWMH=0) then NACCWMHSEV=7
 If IMAGWMH=8 or (IMAGMWMH=8 and IMAGEWMH=8) then NACCWMHSEV=8
 If IMAGWMH=9 then NACCWMHSEV=9
 
 ELSE NACCWMHSEV = -4"
-existing,d1b,d1,4-Jan,12,12,NACCALZD,NACC Derived variable,Presumptive etiologic diagnosis of the cognitive disorder - Alzheimer's disease,Numeric longitudinal,"0 = No (assumed assessed and found not present)
+existing,d1b,d1,1-4,12,12,NACCALZD,NACC Derived variable,Presumptive etiologic diagnosis of the cognitive disorder - Alzheimer's disease,Numeric longitudinal,"0 = No (assumed assessed and found not present)
 1 = Yes
 8 = No cognitive impairment","Participants with normal cognition have NACCALZD = 8. Participants with any cognitive impairment (dementia, MCI, or impaired, not MCI) and Alzheimer’s disease indicated as the etiologic diagnosis have NACCALZD=1. Participants with cognitive impairment and no Alzheimer’s disease etiologic diagnosis have NACCALZD=0. To determine whether the participant was cognitively impaired, not MCI, or had MCI or dementia, refer to the NACCUDSD variable. 
 
@@ -33,9 +33,9 @@ Note that among cognitively or behaviorally impaired participants who had visits
 
 v4:
 If ALZDIS=1 then NACCALZD=1
-If ALZDIS is blank then NACCALZD=0
+If ALZDIS is 0 or blank then NACCALZD=0
 If NORMCOG=1 then NACCALZD=8"
-existing,d1b,d1,4-Jan,12a,12a,NACCALZP,NACC Derived variable,"Primary, contributing, or non-contributing cause of observed cognitive impairment - Alzheimer's disease (AD)",Numeric longitudinal,"1 = Primary
+existing,d1b,d1,1-4,12a,12a,NACCALZP,NACC Derived variable,"Primary, contributing, or non-contributing cause of observed cognitive impairment - Alzheimer's disease (AD)",Numeric longitudinal,"1 = Primary
 2 = Contributing
 3 = Non-contributing
 7 = Cognitively impaired but not AD diagnosis
@@ -53,7 +53,7 @@ If ALZDISIF=2 then NACCALZP=2
 If ALZDISIF=3 then NACCALZP=3
 If (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and ALZDIS is blank then NACCALZP=7
 If NORMCOG=1 then NACCALZP=8"
-existing,d1b,d1,4-Jan,13,13,NACCLBDE,NACC Derived variable,Presumptive etiologic diagnosis - Lewy body disease,Numeric longitudinal,"0 = No (assumed assessed and found not present)
+existing,d1b,d1,1-4,13,13,NACCLBDE,NACC Derived variable,Presumptive etiologic diagnosis - Lewy body disease,Numeric longitudinal,"0 = No (assumed assessed and found not present)
 1 = Yes
 8 = No cognitive impairment","Participants with Lewy body disease indicated as the etiologic diagnosis (DLB or Parkinson’s disease) have NACCLBDE = 1. Participants with normal cognition and no Lewy body disease indicated as the etiologic diagnosis (DLB or Parkinson’s disease) have NACCLBDE = 8. Note that in UDS v4, Parkinson's disease is not assessed as an etiologic diagnosis. To focus on individuals with Parkinson’s disease in UDS v1-3, refer to the variable PARK. In UDS v4, refer to NACCLBDS and LBDSYNT to determine whether participants have Parkinson's disease as a clinical syndrome.
 
@@ -71,8 +71,8 @@ Note that among cognitively or behaviorally impaired participants who had visits
 v4:
 If LBDIS=1 then NACCLBDE=1
 If LBDIS is blank then NACCLBDE=0
-If LBDIS=1 then NACCLBDE=8"
-existing,d1b,d1,4-Jan,13a,13a,NACCLBDP,NACC Derived variable,"Primary, contributing, or non-contributing cause of cognitive impairment - Lewy body disease (LBD)",Numeric longitudinal,"1 = Primary
+If NORMCOG=1 then NACCLBDE=8"
+existing,d1b,d1,1-4,13a,13a,NACCLBDP,NACC Derived variable,"Primary, contributing, or non-contributing cause of cognitive impairment - Lewy body disease (LBD)",Numeric longitudinal,"1 = Primary
 2 = Contributing
 3 = Non-contributing
 7 = Cognitively impaired but not LBD diagnosis
@@ -90,16 +90,16 @@ If LBDIF=2 then NACCLBDP=2
 If LBDIF=3 then NACCLBDP=3
 If (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and LBDIS is blank then NACCLBDP=7
 If NORMCOG=1 then NACCLBDP=8"
-existing,d1b,d1,4-Mar,na - NP form only,na - NP form only,NACCADMU,NACC derived variable,Does the participant have a dominantly inherited AD mutation?,Numeric cross-sectional,"0 = No/unknown
+existing,d1b,d1,3-4,na - NP form only,na - NP form only,NACCADMU,NACC derived variable,Does the participant have a dominantly inherited AD mutation?,Numeric cross-sectional,"0 = No/unknown
 1 = Yes","This derived variable combines data across all UDS v3 visits and the Neuropathology data, if available. If the participant reported evidence of an AD mutation at any visit (UDS Form D1 Question 8 = 1) or if evidence of an AD mutation is determined at autopsy (NP v1,8,9 Question 19 = 1–3; v10 Question 18p = 1; , v11 Question 19p = 1), then the presence will be indicated in NACCADMU.","v1-3: no change from current code
 
 v4: 
 If NPPDXP=1 then NACCADMU=1
 Else NACCADMU=0"
-existing,d1b,d1,4-Mar,na - NP form only,na - NP form only,NACCFTDM,NACC derived variable,Does the participant have a hereditary FTLD mutation?,Numeric cross-sectional,"0 = No/unknown
+existing,d1b,d1,3-4,na - NP form only,na - NP form only,NACCFTDM,NACC derived variable,Does the participant have a hereditary FTLD mutation?,Numeric cross-sectional,"0 = No/unknown
 1 = Yes","This derived variable combines data across all UDS v3 visits and the Neuropathology data, if available. If the participant reported evidence of an FTLD mutation at any visit (UDS Form D1 Question 9 = 1) or if evidence of an FTLD mutation is determined at autopsy (NP v1,8,9 Question 19 = 4; v10 Question 18q = 1 ; v11 Question 19q=1), then the presence will be indicated in NACCFTDM.","v1-3: no change from current code
 
 v4: 
 If NPPDXQ=1 then NACCFTDM=1
 Else NNACCFTDM=0"
-existing,d1b,d1,4-Jan,na - no table for NACCTEPR,na - no table for NACCTEPR,NACCETPR,NACC derived variable,"Primary etiologic diagnosis (MCI; impaired, not MCI; or dementia)",Numeric longitudinal,https://uwnetid.sharepoint.com/:w:/r/sites/og_national_alzheimers_coordinating_center/Shared%20Documents/Projects/UDSv4/UDSv4%20Data%20Quality/UDSv4%20NACC%20derived%20variables/Form_D1b_Derived_Variables_Description.docx?d=w9975d4b4e763422ab1391d303e1cc40b&csf=1&web=1&e=sJHJdX&nav=eyJoIjoiNjIxMDExNTA1In0,Form_D1b_Derived_Variables_Description.docx,Form_D1b_Derived_Variables_Description.docx
+existing,d1b,d1,1-4,na - no table for NACCTEPR,na - no table for NACCTEPR,NACCETPR,NACC derived variable,"Primary etiologic diagnosis (MCI; impaired, not MCI; or dementia)",Numeric longitudinal,https://uwnetid.sharepoint.com/:w:/r/sites/og_national_alzheimers_coordinating_center/Shared%20Documents/Projects/UDSv4/UDSv4%20Data%20Quality/UDSv4%20NACC%20derived%20variables/Form_D1b_Derived_Variables_Description.docx?d=w9975d4b4e763422ab1391d303e1cc40b&csf=1&web=1&e=sJHJdX&nav=eyJoIjoiNjIxMDExNTA1In0,Form_D1b_Derived_Variables_Description.docx,Form_D1b_Derived_Variables_Description.docx
