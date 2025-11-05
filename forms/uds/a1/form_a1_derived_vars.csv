@@ -1,10 +1,12 @@
-﻿Status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,Variable Type,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code,
-New,A1,1-4,5,n/a,NACCSEX,NACC derived variable,Participant's sex,Numeric cross-sectional,"1 = Male
+﻿Status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,Variable Type,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
+New,A1,v1-4,5,n/a,NACCSEX,NACC derived variable,Participant's sex,Numeric cross-sectional,"1 = Male
 2 = Female
 8 = Prefer not to answer
 9 = Unknown","UDS v1-3 did not have questions on both sex and gender; participants were only asked about sex, taken to mean sex at birth, and could only choose 1=Male or 2=Female. Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","v1-3 [IVP]: NACCSEX = SEX
-v4 [IVP or I4]: NACCSEX = BIRTHSEX",
-New,A1,1-4,8,n/a,NACCLANG,NACC derived variable,Primary language,Numeric cross-sectional,"1 = English
+v4 [IVP or I4]: NACCSEX = BIRTHSEX
+
+FVP: pull forward value from initial visit"
+New,A1,v1-4,8,n/a,NACCLANG,NACC derived variable,Primary language,Numeric cross-sectional,"1 = English
 2 = Spanish
 3 = Chinese dialect
 5 = Russian
@@ -20,17 +22,22 @@ If PRIMLANG=5 then NACCLANG=4
 If PRIMLANG=6 then NACCLANG=5
 If PRIMLANG in (8,9) then NACCLANG=PRIMLANG
 
-v4 [IVP or I4]: NACCLANG=PREDOMLAN",
-New,A1,1-4,8a,n/a,NACCLANGX,NACC derived variable,"Primary language, other- specify",Character cross-sectional, Any text or numbers,"If an “other” primary language is reported (NACCLANG=8), then it will be listed here, otherwise it will be blank. Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","v1-3 [IVP]: NACCLANGX=PRIMLANGX
-v4 [IVP or I4]: NACCLANGX=PREDOMLANX",
-New,A1,1-4,3d,n/a,NACCHISP,NACC derived variable,Hispanic/Latino ethnicity,Numeric cross-sectional," 0 = No
+v4 [IVP or I4]: NACCLANG=PREDOMLAN
+
+FVP: pull forward value from initial visit"
+New,A1,v1-4,8a,n/a,NACCLANGX,NACC derived variable,"Primary language, other- specify",Character cross-sectional, Any text or numbers,"If an “other” primary language is reported (NACCLANG=8), then it will be listed here, otherwise it will be blank. Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","v1-3 [IVP]: NACCLANGX=PRIMLANGX
+v4 [IVP or I4]: NACCLANGX=PREDOMLANX
+
+FVP: pull forward value from initial visit"
+New,A1,v1-4,3d,n/a,NACCHISP,NACC derived variable,Hispanic/Latino ethnicity,Numeric cross-sectional," 0 = No
 1 = Yes
 9 = Unknown","Note that although this variable is not collected at follow-up visits, the value will be carried forward from the prior visit.","v1-3 [IVP]: NACCHISP=HISPANIC
 v4 [IVP or I4]: 
 IF ETHISPANIC =1 then NACCHISP=1
 IF ETHISPANIC is blank and RACEUNKN is blank then NACCHISP=0
-If ETHISPANIC is blank and RACEUNKN=1 then NACCHISP=9",
-New,A1,1-4,10a,n/a,NACCEDULVL,Original UDS question,Highest achieved level of education,Numeric cross-sectional,"1 = Less than high school
+If ETHISPANIC is blank and RACEUNKN=1 then NACCHISP=9
+FVP: pull forward value from initial visit"
+New,A1,v1-4,10a,n/a,NACCEDULVL,Original UDS question,Highest achieved level of education,Numeric cross-sectional,"1 = Less than high school
 2 = High school or GED
 3 = Some college
 4 = Bachelor's degree
@@ -55,10 +62,12 @@ Else if EDUC >=20 and <=36 then NACCEDUCLVL = 6
 Else if EDUC=99 then NACCEDUCLVL = 9
 
 v4 [IVP or I4]:
-NACCEDUCLVL = LVLEDUC",
-Existing,A1,1-4,,,NACCAGE,NACC derived variable,Participant's age at visit,Numeric longitudinal, 18  - 120,"Birth month and year are required elements in the UDS; however, birth day is not collected. To calculate age, birth day is set to 1 for all participants and computed as visit date minus birth date.",no change from v3,
-Existing,A1,1-4,,,NACCAGEB,NACC derived variable,Participant's age at initial visit,Numeric cross-sectional, 18  - 120,"Birth month and year are required elements in the UDS; however, birth day is not collected. To calculate naccageb, birth day is set to 1 for all participants. Baseline age is then computed as initial visit date minus birth date. Note that although this variable is listed for all visits, it does not change across visits; it is cross-sectional.",no change from v3,
-Existing,A1,1-4,3a-3h,n/a,NACCNIHR,NACC derived variable,Derived NIH race definitions,Numeric cross-sectional," 1 = White
+NACCEDUCLVL = LVLEDUC
+
+FVP: pull forward value from initial visit"
+Existing,A1,v1-4,,,NACCAGE,NACC derived variable,Participant's age at visit,Numeric longitudinal, 18  - 120,"Birth month and year are required elements in the UDS; however, birth day is not collected. To calculate age, birth day is set to 1 for all participants and computed as visit date minus birth date.",no change from v3
+Existing,A1,v1-4,,,NACCAGEB,NACC derived variable,Participant's age at initial visit,Numeric cross-sectional, 18  - 120,"Birth month and year are required elements in the UDS; however, birth day is not collected. To calculate naccageb, birth day is set to 1 for all participants. Baseline age is then computed as initial visit date minus birth date. Note that although this variable is listed for all visits, it does not change across visits; it is cross-sectional.",no change from v3
+Existing,A1,v1-4,3a-3h,n/a,NACCNIHR,NACC derived variable,Derived NIH race definitions,Numeric cross-sectional," 1 = White
 2 = Black or African American
 3 = American Indian or Alaska Native
 4 = Native Hawaiian or Pacific Islander
@@ -104,20 +113,20 @@ Else if RACENHPI= 1 and all of RACEWHITE, RACEBLACK, RACEAIAN, RACEASIAN, RACEME
 Else if RACEASIAN= 1 and all of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEMENA are blank, then NACCNIHR = 5
 Else if RACEMENA= 1 and all of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, are blank, then NACCNIHR = 7
 Else if RACEUNKN =1 or all of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA are blank, then NACCNIHR = 99
-Else if more than one of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA = 1, then NACCNIHR = 6 	",
-Existing,A1,1-4,12,4,NACCLIVS,NACC derived variable,Living situation,Numeric longitudinal,"1 = Lives alone
+Else if more than one of RACEWHITE, RACEBLACK, RACEAIAN, RACENHPI, RACEASIAN, RACEMENA = 1, then NACCNIHR = 6 	"
+Existing,A1,v1-4,12,4,NACCLIVS,NACC derived variable,Living situation,Numeric longitudinal,"1 = Lives alone
 2 = Lives with spouse or partner
 3 = Lives with relative or friend
 4 = Lives with group
 5 = Other
-9 = Unknown",,no change from v3,
-Existing,A1,1-4,25,n/a,NACCREFR,NACC derived variable,Principal referral source,Numeric cross-sectional,"1 = Non-professional contact: self/relative/friend 
+9 = Unknown",,no change from v3
+Existing,A1,v1-4,25,n/a,NACCREFR,NACC derived variable,Principal referral source,Numeric cross-sectional,"1 = Non-professional contact: self/relative/friend 
 2 = Professional contact: clinician, nurse, doctor, other health care provider, or other staff (ADC and non-ADC)
 8 = Other
 9 = Unknown
--4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","Note that participants reporting self-referral, non-professional contact, or ADRC participant referral (Question 2a in v3 or Question 25 in v4=1, 2, or 3) in UDS v3 or subsequent versions will have NACCREFR=1; and those reporting “ADRC clinician, staff, or investigator referral,” “Nurse, doctor, or other health care provider,” or “Other research study clinician/staff/investigator” (Question 2a in v3 or Question 25 in v4=4, 5, or 6) will have NACCREFR=2. Participants reporting self/relative/ friend (Question 3=1) in UDS v1.2 and 2.0 will have NACCREFR=1; those reporting clinician or clinic sample (Question 3=2 or 5) will have NACCREFR=2; and those reporting ADRC solicitation, non-ADRC study, population sample, or non-ADRC media appeal (Question 3=3, 4, 6 or 7) will have NACCREFR=8.",no change from v3,
-Remove,A1,1-3,n/a,n/a,NACCREAS,NACC derived variable,Primary reason for coming to ADC,Numeric cross-sectional,"1 = To participate in a research study  
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","Note that participants reporting self-referral, non-professional contact, or ADRC participant referral (Question 2a in v3 or Question 25 in v4=1, 2, or 3) in UDS v3 or subsequent versions will have NACCREFR=1; and those reporting “ADRC clinician, staff, or investigator referral,” “Nurse, doctor, or other health care provider,” or “Other research study clinician/staff/investigator” (Question 2a in v3 or Question 25 in v4=4, 5, or 6) will have NACCREFR=2. Participants reporting self/relative/ friend (Question 3=1) in UDS v1.2 and 2.0 will have NACCREFR=1; those reporting clinician or clinic sample (Question 3=2 or 5) will have NACCREFR=2; and those reporting ADRC solicitation, non-ADRC study, population sample, or non-ADRC media appeal (Question 3=3, 4, 6 or 7) will have NACCREFR=8.",no change from v3
+Remove,A1,45660,n/a,n/a,NACCREAS,NACC derived variable,Primary reason for coming to ADC,Numeric cross-sectional,"1 = To participate in a research study  
 2 = To have a clinical evaluation
 7 = Both to participate in a research study and to have a clinical evaluation, or another reason
 9 = Unknown
--4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","Note that participants reporting an “other” reason (Question 2=3) in v1–2 and participants reporting “both to participate in a research study and to have a clinical evaluation or other reason” (Question 1=4) in v3 of the UDS will have naccreas =7. Also note that although this variable is not collected at follow-up visits, the value from the initial visit will be shown at all follow-up visits.",,
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","Note that participants reporting an “other” reason (Question 2=3) in v1–2 and participants reporting “both to participate in a research study and to have a clinical evaluation or other reason” (Question 1=4) in v3 of the UDS will have naccreas =7. Also note that although this variable is not collected at follow-up visits, the value from the initial visit will be shown at all follow-up visits.",

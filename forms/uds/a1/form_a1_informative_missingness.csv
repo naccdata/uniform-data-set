@@ -1,79 +1,150 @@
 ﻿Form ,Version,Gate_question_variable,Variable,TT_code
-A1,4,,NACCLANGX,If NACCLANGX is blank then NACCLANGX should = 0
-A1,4,,RACEAIAN,If RACEAIAN is blank then RACEAIAN should = 0
-A1,4,,RACEAIANX,If RACEAIANX is blank then RACEAIANX should remain blank
-A1,4,,RACEASIAN,If RACEASIAN is blank then RACEASIAN should = 0
-A1,4,,ETHCHINESE,If ETHCHINESE is blank then ETHCHINESE should = 0
-A1,4,,ETHINDIA,If ETHINDIA is blank then ETHINDIA should = 0
-A1,4,,ETHFILIP,If ETHFILIP is blank then ETHFILIP should = 0
-A1,4,,ETHVIETNAM,If ETHVIETNAM is blank then ETHVIETNAM should = 0
-A1,4,,ETHKOREAN,If ETHKOREAN is blank then ETHKOREAN should = 0
-A1,4,,ETHJAPAN,If ETHJAPAN is blank then ETHJAPAN should = 0
-A1,4,,ETHASNOTH,If ETHASNOTH is blank then ETHASNOTH should = 0
-A1,4,,ETHASNOTHX,If ETHASNOTHX is blank then ETHASNOTHX should remain blank
-A1,4,,RACEBLACK,If RACEBLACK is blank then RACEBLACK should = 0
-A1,4,,ETHAFAMER,If ETHAFAMER is blank then ETHAFAMER should = 0
-A1,4,,ETHJAMAICA,If ETHJAMAICA is blank then ETHJAMAICA should = 0
-A1,4,,ETHHAITIAN,If ETHHAITIAN is blank then ETHHAITIAN should = 0
-A1,4,,ETHNIGERIA,If ETHNIGERIA is blank then ETHNIGERIA should = 0
-A1,4,,ETHETHIOP,If ETHETHIOP is blank then ETHETHIOP should = 0
-A1,4,,ETHSOMALI,If ETHSOMALI is blank then ETHSOMALI should = 0
-A1,4,,ETHBLKOTH,If ETHBLKOTH is blank then ETHBLKOTH should = 0
-A1,4,,ETHBLKOTHX,If ETHBLKOTHX is blank then ETHBLKOTHX should remain blank
-A1,4,,ETHMEXICAN,If ETHMEXICAN is blank then ETHMEXICAN should = 0
-A1,4,,ETHPUERTO,If ETHPUERTO is blank then ETHPUERTO should = 0
-A1,4,,ETHSALVA,If ETHSALVA is blank then ETHSALVA should = 0
-A1,4,,ETHCUBAN,If ETHCUBAN is blank then ETHCUBAN should = 0
-A1,4,,ETHDOMIN,If ETHDOMIN is blank then ETHDOMIN should = 0
-A1,4,,ETHGUATEM,If ETHGUATEM is blank then ETHGUATEM should = 0
-A1,4,,ETHHISOTH,If ETHHISOTH is blank then ETHHISOTH should = 0
-A1,4,,ETHHISOTHX,If ETHHISOTHX is blank then ETHHISOTHX should remain blank
-A1,4,,RACEMENA,If RACEMENA is blank then RACEMENA should = 0
-A1,4,,ETHLEBANON,If ETHLEBANON is blank then ETHLEBANON should = 0
-A1,4,,ETHIRAN,If ETHIRAN is blank then ETHIRAN should = 0
-A1,4,,ETHEGYPT,If ETHEGYPT is blank then ETHEGYPT should = 0
-A1,4,,ETHSYRIA,If ETHSYRIA is blank then ETHSYRIA should = 0
-A1,4,,ETHIRAQI,If ETHIRAQI is blank then ETHIRAQI should = 0
-A1,4,,ETHISRAEL,If ETHISRAEL is blank then ETHISRAEL should = 0
-A1,4,,ETHMENAOTH,If ETHMENAOTH is blank then ETHMENAOTH should = 0
-A1,4,,ETHMENAOTX,If ETHMENAOTX is blank then ETHMENAOTX should remain blank
-A1,4,,RACENHPI,If RACENHPI is blank then RACENHPI should = 0
-A1,4,,ETHHAWAII,If ETHHAWAII is blank then ETHHAWAII should = 0
-A1,4,,ETHSAMOAN,If ETHSAMOAN is blank then ETHSAMOAN should = 0
-A1,4,,ETHCHAMOR,If ETHCHAMOR is blank then ETHCHAMOR should = 0
-A1,4,,ETHTONGAN,If ETHTONGAN is blank then ETHTONGAN should = 0
-A1,4,,ETHFIJIAN,If ETHFIJIAN is blank then ETHFIJIAN should = 0
-A1,4,,ETHMARSHAL,If ETHMARSHAL is blank then ETHMARSHAL should = 0
-A1,4,,ETHNHPIOTH,If ETHNHPIOTH is blank then ETHNHPIOTH should = 0
-A1,4,,ETHNHPIOTX,If ETHNHPIOTX is blank then ETHNHPIOTX should remain blank
-A1,4,,RACEWHITE,If RACEWHITE is blank then RACEWHITE should = 0
-A1,4,,ETHENGLISH,If ETHENGLISH is blank then ETHENGLISH should = 0
-A1,4,,ETHGERMAN,If ETHGERMAN is blank then ETHGERMAN should = 0
-A1,4,,ETHIRISH,If ETHIRISH is blank then ETHIRISH should = 0
-A1,4,,ETHITALIAN,If ETHITALIAN is blank then ETHITALIAN should = 0
-A1,4,,ETHPOLISH,If ETHPOLISH is blank then ETHPOLISH should = 0
-A1,4,,ETHSCOTT,If ETHSCOTT is blank then ETHSCOTT should = 0
-A1,4,,ETHWHIOTH,If ETHWHIOTH is blank then ETHWHIOTH should = 0
-A1,4,,ETHWHIOTHX,If ETHWHIOTHX is blank then ETHWHIOTHX should remain blank
-A1,4,,RACEUNKN,If RACEUNKN is blank then RACEUNKN should = 0
-A1,4,,GENMAN,If GENMAN is blank then GENMAN should = 0
-A1,4,,GENWOMAN,If GENWOMAN is blank then GENWOMAN should = 0
-A1,4,,GENTRMAN,If GENTRMAN is blank then GENTRMAN should = 0
-A1,4,,GENTRWOMAN,If GENTRWOMAN is blank then GENTRWOMAN should = 0
-A1,4,,GENNONBI,If GENNONBI is blank then GENNONBI should = 0
-A1,4,,GENTWOSPIR,If GENTWOSPIR is blank then GENTWOSPIR should = 0
-A1,4,,GENOTH,If GENOTH is blank then GENOTH should = 0
-A1,4,,GENOTHX,If GENOTHX is blank then GENOTHX should remain blank
-A1,4,,GENDKN,If GENDKN is blank then GENDKN should = 0
-A1,4,,GENNOANS,If GENNOANS is blank then GENNOANS should = 0
-A1,4,,SEXORNGAY,If SEXORNGAY is blank then SEXORNGAY should = 0
-A1,4,,SEXORNHET,If SEXORNHET is blank then SEXORNHET should = 0
-A1,4,,SEXORNBI,If SEXORNBI is blank then SEXORNBI should = 0
-A1,4,,SEXORNTWOS,If SEXORNTWOS is blank then SEXORNTWOS should = 0
-A1,4,,SEXORNOTH,If SEXORNOTH is blank then SEXORNOTH should = 0
-A1,4,,SEXORNOTHX,If SEXORNOTHX is blank then SEXORNOTHX should remain blank
-A1,4,,SEXORNDNK,If SEXORNDNK is blank then SEXORNDNK should = 0
-A1,4,,SEXORNNOAN,If SEXORNNOAN is blank then SEXORNNOAN should = 0
-A1,4,,ADISTATE,If ADISTATE is blank then ADISTATE should = 999
-A1,4,,ADINAT,If ADINAT is blank then ADINAT should = 999
-A1,4,,PRIOCC,If PRIOCC is blank then PRIOCC should = 999
+A1,4 IVP,,RACEAIAN,If RACEAIAN is blank then RACEAIAN should = 0
+A1,4 IVP,,RACEAIANX,If RACEAIANX is blank then RACEAIANX should remain blank
+A1,4 IVP,,RACEASIAN,If RACEASIAN is blank then RACEASIAN should = 0
+A1,4 IVP,,ETHCHINESE,If ETHCHINESE is blank then ETHCHINESE should = 0
+A1,4 IVP,,ETHINDIA,If ETHINDIA is blank then ETHINDIA should = 0
+A1,4 IVP,,ETHFILIP,If ETHFILIP is blank then ETHFILIP should = 0
+A1,4 IVP,,ETHVIETNAM,If ETHVIETNAM is blank then ETHVIETNAM should = 0
+A1,4 IVP,,ETHKOREAN,If ETHKOREAN is blank then ETHKOREAN should = 0
+A1,4 IVP,,ETHJAPAN,If ETHJAPAN is blank then ETHJAPAN should = 0
+A1,4 IVP,,ETHASNOTH,If ETHASNOTH is blank then ETHASNOTH should = 0
+A1,4 IVP,,ETHASNOTHX,If ETHASNOTHX is blank then ETHASNOTHX should remain blank
+A1,4 IVP,,RACEBLACK,If RACEBLACK is blank then RACEBLACK should = 0
+A1,4 IVP,,ETHAFAMER,If ETHAFAMER is blank then ETHAFAMER should = 0
+A1,4 IVP,,ETHJAMAICA,If ETHJAMAICA is blank then ETHJAMAICA should = 0
+A1,4 IVP,,ETHHAITIAN,If ETHHAITIAN is blank then ETHHAITIAN should = 0
+A1,4 IVP,,ETHNIGERIA,If ETHNIGERIA is blank then ETHNIGERIA should = 0
+A1,4 IVP,,ETHETHIOP,If ETHETHIOP is blank then ETHETHIOP should = 0
+A1,4 IVP,,ETHSOMALI,If ETHSOMALI is blank then ETHSOMALI should = 0
+A1,4 IVP,,ETHBLKOTH,If ETHBLKOTH is blank then ETHBLKOTH should = 0
+A1,4 IVP,,ETHBLKOTHX,If ETHBLKOTHX is blank then ETHBLKOTHX should remain blank
+A1,4 IVP,,ETHMEXICAN,If ETHMEXICAN is blank then ETHMEXICAN should = 0
+A1,4 IVP,,ETHPUERTO,If ETHPUERTO is blank then ETHPUERTO should = 0
+A1,4 IVP,,ETHSALVA,If ETHSALVA is blank then ETHSALVA should = 0
+A1,4 IVP,,ETHCUBAN,If ETHCUBAN is blank then ETHCUBAN should = 0
+A1,4 IVP,,ETHDOMIN,If ETHDOMIN is blank then ETHDOMIN should = 0
+A1,4 IVP,,ETHGUATEM,If ETHGUATEM is blank then ETHGUATEM should = 0
+A1,4 IVP,,ETHHISOTH,If ETHHISOTH is blank then ETHHISOTH should = 0
+A1,4 IVP,,ETHHISOTHX,If ETHHISOTHX is blank then ETHHISOTHX should remain blank
+A1,4 IVP,,RACEMENA,If RACEMENA is blank then RACEMENA should = 0
+A1,4 IVP,,ETHLEBANON,If ETHLEBANON is blank then ETHLEBANON should = 0
+A1,4 IVP,,ETHIRAN,If ETHIRAN is blank then ETHIRAN should = 0
+A1,4 IVP,,ETHEGYPT,If ETHEGYPT is blank then ETHEGYPT should = 0
+A1,4 IVP,,ETHSYRIA,If ETHSYRIA is blank then ETHSYRIA should = 0
+A1,4 IVP,,ETHIRAQI,If ETHIRAQI is blank then ETHIRAQI should = 0
+A1,4 IVP,,ETHISRAEL,If ETHISRAEL is blank then ETHISRAEL should = 0
+A1,4 IVP,,ETHMENAOTH,If ETHMENAOTH is blank then ETHMENAOTH should = 0
+A1,4 IVP,,ETHMENAOTX,If ETHMENAOTX is blank then ETHMENAOTX should remain blank
+A1,4 IVP,,RACENHPI,If RACENHPI is blank then RACENHPI should = 0
+A1,4 IVP,,ETHHAWAII,If ETHHAWAII is blank then ETHHAWAII should = 0
+A1,4 IVP,,ETHSAMOAN,If ETHSAMOAN is blank then ETHSAMOAN should = 0
+A1,4 IVP,,ETHCHAMOR,If ETHCHAMOR is blank then ETHCHAMOR should = 0
+A1,4 IVP,,ETHTONGAN,If ETHTONGAN is blank then ETHTONGAN should = 0
+A1,4 IVP,,ETHFIJIAN,If ETHFIJIAN is blank then ETHFIJIAN should = 0
+A1,4 IVP,,ETHMARSHAL,If ETHMARSHAL is blank then ETHMARSHAL should = 0
+A1,4 IVP,,ETHNHPIOTH,If ETHNHPIOTH is blank then ETHNHPIOTH should = 0
+A1,4 IVP,,ETHNHPIOTX,If ETHNHPIOTX is blank then ETHNHPIOTX should remain blank
+A1,4 IVP,,RACEWHITE,If RACEWHITE is blank then RACEWHITE should = 0
+A1,4 IVP,,ETHENGLISH,If ETHENGLISH is blank then ETHENGLISH should = 0
+A1,4 IVP,,ETHGERMAN,If ETHGERMAN is blank then ETHGERMAN should = 0
+A1,4 IVP,,ETHIRISH,If ETHIRISH is blank then ETHIRISH should = 0
+A1,4 IVP,,ETHITALIAN,If ETHITALIAN is blank then ETHITALIAN should = 0
+A1,4 IVP,,ETHPOLISH,If ETHPOLISH is blank then ETHPOLISH should = 0
+A1,4 IVP,,ETHSCOTT,If ETHSCOTT is blank then ETHSCOTT should = 0
+A1,4 IVP,,ETHWHIOTH,If ETHWHIOTH is blank then ETHWHIOTH should = 0
+A1,4 IVP,,ETHWHIOTHX,If ETHWHIOTHX is blank then ETHWHIOTHX should remain blank
+A1,4 IVP,,RACEUNKN,If RACEUNKN is blank then RACEUNKN should = 0
+A1,4 IVP,,GENMAN,If GENMAN is blank then GENMAN should = 0
+A1,4 IVP,,GENWOMAN,If GENWOMAN is blank then GENWOMAN should = 0
+A1,4 IVP,,GENTRMAN,If GENTRMAN is blank then GENTRMAN should = 0
+A1,4 IVP,,GENTRWOMAN,If GENTRWOMAN is blank then GENTRWOMAN should = 0
+A1,4 IVP,,GENNONBI,If GENNONBI is blank then GENNONBI should = 0
+A1,4 IVP,,GENTWOSPIR,If GENTWOSPIR is blank then GENTWOSPIR should = 0
+A1,4 IVP,,GENOTH,If GENOTH is blank then GENOTH should = 0
+A1,4 IVP,,GENOTHX,If GENOTHX is blank then GENOTHX should remain blank
+A1,4 IVP,,GENDKN,If GENDKN is blank then GENDKN should = 0
+A1,4 IVP,,GENNOANS,If GENNOANS is blank then GENNOANS should = 0
+A1,4 IVP,,SEXORNGAY,If SEXORNGAY is blank then SEXORNGAY should = 0
+A1,4 IVP,,SEXORNHET,If SEXORNHET is blank then SEXORNHET should = 0
+A1,4 IVP,,SEXORNBI,If SEXORNBI is blank then SEXORNBI should = 0
+A1,4 IVP,,SEXORNTWOS,If SEXORNTWOS is blank then SEXORNTWOS should = 0
+A1,4 IVP,,SEXORNOTH,If SEXORNOTH is blank then SEXORNOTH should = 0
+A1,4 IVP,,SEXORNOTHX,If SEXORNOTHX is blank then SEXORNOTHX should remain blank
+A1,4 IVP,,SEXORNDNK,If SEXORNDNK is blank then SEXORNDNK should = 0
+A1,4 IVP,,SEXORNNOAN,If SEXORNNOAN is blank then SEXORNNOAN should = 0
+A1,4 IVP,,ADISTATE,If ADISTATE is blank then ADISTATE should = 999
+A1,4 IVP,,ADINAT,If ADINAT is blank then ADINAT should = 999
+A1,4 IVP,,PRIOCC,If PRIOCC is blank then PRIOCC should = 999
+A1,4 FVP,,CHLDHDCTRY,Carry forward initial visit value to FVP
+A1,4 FVP,,RACEAIAN,Carry forward initial visit value to FVP
+A1,4 FVP,,RACEAIANX,Carry forward initial visit value to FVP
+A1,4 FVP,,RACEASIAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHCHINESE,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHINDIA,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHFILIP,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHVIETNAM,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHKOREAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHJAPAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHASNOTH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHASNOTHX,Carry forward initial visit value to FVP
+A1,4 FVP,,RACEBLACK,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHAFAMER,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHJAMAICA,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHHAITIAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHNIGERIA,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHETHIOP,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHSOMALI,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHBLKOTH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHBLKOTHX,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHMEXICAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHPUERTO,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHSALVA,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHCUBAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHDOMIN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHGUATEM,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHHISOTH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHHISOTHX,Carry forward initial visit value to FVP
+A1,4 FVP,,RACEMENA,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHLEBANON,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHIRAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHEGYPT,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHSYRIA,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHIRAQI,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHISRAEL,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHMENAOTH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHMENAOTX,Carry forward initial visit value to FVP
+A1,4 FVP,,RACENHPI,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHHAWAII,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHSAMOAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHCHAMOR,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHTONGAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHFIJIAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHMARSHAL,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHNHPIOTH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHNHPIOTX,Carry forward initial visit value to FVP
+A1,4 FVP,,RACEWHITE,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHENGLISH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHGERMAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHIRISH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHITALIAN,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHPOLISH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHSCOTT,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHWHIOTH,Carry forward initial visit value to FVP
+A1,4 FVP,,ETHWHIOTHX,Carry forward initial visit value to FVP
+A1,4 FVP,,RACEUNKN,Carry forward initial visit value to FVP
+A1,4 FVP,,INTERSEX,Carry forward initial visit value to FVP
+A1,4 FVP,,SERVED,Carry forward initial visit value to FVP
+A1,4 FVP,,PRIOCC,Carry forward initial visit value to FVP
+A1,1-4 FVP,,BIRTHMO,Carry forward initial visit value to FVP
+A1,1-4 FVP,,BIRTHYR,Carry forward initial visit value to FVP
+A1,1-3 FVP,,HISPOR,Carry forward initial visit value to FVP
+A1,1-3 FVP,,HISPORX,Carry forward initial visit value to FVP
+A1,1-3 FVP,,RACE,Carry forward initial visit value to FVP
+A1,1-3 FVP,,RACEX,Carry forward initial visit value to FVP
+A1,1-3 FVP,,RACESEC,Carry forward initial visit value to FVP
+A1,1-3 FVP,,RACESECX,Carry forward initial visit value to FVP
+A1,1-3 FVP,,RACETER,Carry forward initial visit value to FVP
+A1,1-3 FVP,,RACETERX,Carry forward initial visit value to FVP
+A1,1-4 FVP,,HANDED,Carry forward initial visit value to FVP
+A1,1-4 FVP,,EDUC,Carry forward initial visit value to FVP
