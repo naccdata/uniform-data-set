@@ -1,10 +1,10 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,carry_forward
 B3,F,0a. B3 UPDRS-Parkinson's - Form date,FRMDATEB3,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,no
 B3,F,0b. B3 UPDRS-Parkinson's - Examiner's initials,INITIALSB3,No,text,,String,,no
-B3,F,0c. B3 UPDRS-Parkinson's - Language,LANGB3,Always,Intgers 1-2,"1, English|2, Spanish",Integer,,no
+B3,F,0c. B3 UPDRS-Parkinson's - Language,LANGB3,Always,Integers 1-2,"1, English|2, Spanish",Integer,,no
 B3,F,0d. B3 UPDRS-Parkinson's - In-person or not completed?,MODEB3,Always,"Integers 0,1","0, Not completed|1, In-person",Integer,,no
-B3,F,"0d1. If 'B3 UPDRS-Parkinson's' not submitted, specify reason",B3NOT,Condtional,Intgers 94-98,"94, Remote visit|95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal",Integer,"[modeb3]=""0""",no
-B3,F,UPDRS is normal,PDNORMAL,No,0-1,,Integer,,yes
+B3,F,"0d1. If 'B3 UPDRS-Parkinson's' not submitted, specify reason",B3NOT,Conditional,Integers 94-98,"94, Remote visit|95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal",Integer,"[modeb3]=""0""",no
+B3,F,UPDRS is normal,PDNORMAL,No,1 or blank,,Integer,,yes
 B3,F,1. Speech,SPEECH,Conditional,"0-4, 8","0, Normal|1, Slight loss of expression, diction and/or volume|2, Monotone, slurred but understandable; moderately impaired.|3, Marked impairment, difficult to understand|4, Unintelligible|8, Untestable",Integer,[pdnormal] ne '1',yes
 B3,F,1a. Speech untestable (specify),SPEECHX,Conditional,text,,String,[speech] = '8',yes
 B3,F,2. Facial expression,FACEXP,Conditional,"0-4, 8","0, Normal|1, Minimal hypomimia, could be normal ""poker face""|2, Slight but definitely abnormal diminution of facial expression|3, Moderate hypomimia; lips parted some of the time|4, Masked or fixed facies with severe or complete loss of facial expression; lips parted 1/4 inches or more|8, Untestable",Integer,[pdnormal] ne '1',yes
@@ -60,3 +60,4 @@ B3,F,13a. Posture stability untestable (specify),POSSTABX,Conditional,text,,Stri
 B3,F,14. Body bradykinesia and hypokinesia,BRADYKIN,Conditional,"0-4, 8","0, None|1, Minimal slowness, giving movement a deliberate character; could be normal for some persons; possibly reduced amplitude|2, Mild degree of slowness and poverty or movement which is definitely abnormal. Alternatively, some reduced amplitude.|3, Moderate slowness, poverty or small amplitude of movement|4, Marked slowness, poverty or small amplitude of movement.|8, Untestable",Integer,[pdnormal] ne '1',yes
 B3,F,14a. Body bradykinesia and hypokinesia untestable (specify),BRADYKIX,Conditional,text,,String,[bradykin] = '8',yes
 B3,F,15. Total UPDRS Score ,TOTALUPDRS,Conditional,"0-108, 888","0-108, 888 = One or more items untestable",Integer,[pdnormal] ne '1',yes
+

@@ -2,10 +2,10 @@ form_name,packet,question,var_name,missingness,conformity,response_labels,data_t
 b6,F,0a. B6 Behavioral Assessment: GDS - Form date,FRMDATEB6,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,no
 b6,F,0b. B6 Behavioral Assessment: GDS - Examiner's initials,INITIALSB6,No,text,,String,,no
 b6,F,0c. B6 Behavioral Assessment: GDS - Language,LANGB6,Always,Integers 1-2,"1, English|2, Spanish",Integer,,no
-b6,F,"0d. B6 Behavioral Assessment: GDS - In-person, remote, or not completed?",MODEB6,Always,Integers 0-2,"0, Not completed | 1, In-person|2, Remote",Integer,,no
-b6,F,"0d1. If 'B6 Behavioral Assessment: GDS' form was completed remotely, specify reason",RMREASB6,Condtional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb6]='2',no
-b6,F,0d1a. What modality was used to collect this remote 'B6 Behavioral Assessment: GDS' form?,RMMODEB6,Condtional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb6]='2',no
-b6,F,"0d2. If 'B6 Behavioral Assessment: GDS' not submitted, specify reason",B6NOT,Condtional,Integers 95-98,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal",Integer,[modeb6]='3',no
+b6,F,"0d. B6 Behavioral Assessment: GDS - In-person, remote, or not completed?",MODEB6,Always,Integers 0-2,"1, In-person|2, Remote|0, Not completed",Integer,,no
+b6,F,"0d1. If 'B6 Behavioral Assessment: GDS' form was completed remotely, specify reason",RMREASB6,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modeb6]='2',no
+b6,F,0d1a. What modality was used to collect this remote 'B6 Behavioral Assessment: GDS' form?,RMMODEB6,Conditional,Integers 1-2,"1, Telephone|2, Video",Integer,[modeb6]='2',no
+b6,F,"0d2. If 'B6 Behavioral Assessment: GDS' not submitted, specify reason",B6NOT,Conditional,Integers 95-98,"95, Physical problem|96, Cognitive/behavioral problem|97, Other|98, Verbal refusal",Integer,[modeb6]='3',no
 b6,F,"G1. Check this box and enter ""88"" below for the Total GDS Score if and only if the subject:  1.) does not attempt the GDS, or 2.) answers fewer than 12 questions.",NOGDS,Conditional,"0, 1 or blank","1, Not able to complete the GDS",Integer,,no
 b6,F,1. Are you basically satisfied with your life?,SATIS,Always,"Integers 0-1, 9","0, Yes|1, No|9, Did not answer",Integer,,no
 b6,F,2. Have you dropped many of your activities and interests?,DROPACT,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,,no
@@ -23,3 +23,4 @@ b6,F,13. Do you feel full of energy?,ENERGY,Always,"Integers 0-1, 9","0, Yes|1, 
 b6,F,14. Do you feel that your situation is hopeless?,HOPELESS,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,,no
 b6,F,15. Do you think that most people are better off than you are?,BETTER,Always,"Integers 0-1, 9","1, Yes|0, No|9, Did not answer",Integer,,no
 b6,F,16. Sum all checked answers for a Total GDS Score ,GDS,Always,"Integers 0-15, 88","0-15, 88 = Did not complete",Integer,,no
+

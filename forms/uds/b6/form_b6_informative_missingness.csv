@@ -1,0 +1,3 @@
+﻿Form ,Version,Gate question variable,Variable,TT code
+b6,4,NOGDS,NACCGDS,"If NOGDS = 1, NACCGDS should be 88"
+b6,4,,NOGDS,"If NOGDS = blank, then NOGDS = 0"
