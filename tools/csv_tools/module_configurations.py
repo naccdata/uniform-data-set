@@ -98,13 +98,14 @@ class ModuleType(Enum):
 
 STATIC_LBD_FORMS = ['b3l', 'b5l', 'b7l', 'd1l', 'e1l', 'header']
 
-# for those whose modlue name/location does not match
+# for those whose module name/location does not match
 # the form directory name
 MODULE_MAPPING = {
     ModuleType.LBD_LONG: 'LBD',
     ModuleType.LBD_SHORT: 'LBD',
     ModuleType.ENROLLMENT: 'ENROLL',
-    ModuleType.PREPROCESS: 'PREPROCESS'
+    ModuleType.PREPROCESS: 'PREPROCESS',
+    ModuleType.MILESTONES: 'MLST'
 }
 
 FORM_VER_MAPPING = {
