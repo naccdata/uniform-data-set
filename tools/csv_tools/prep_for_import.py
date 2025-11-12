@@ -57,10 +57,10 @@ class ErrorCheckPreparer(FormOrganizer):
         if not self.is_correct_file(file, visit):
             return file_found  # return previous state
 
-        # UDS FVP not ready yet, only copy headers over
-        if self.module == ModuleType.UDS and self.visit == VisitType.FVP:
-            if not file.startswith('form_header'):
-                return True
+        # # UDS FVP not ready yet, only copy headers over
+        # if self.module == ModuleType.UDS and self.visit == VisitType.FVP:
+        #     if not file.startswith('form_header'):
+        #         return True
 
         # for LBD_SHORT we do not necessarily copy all files over, as it will just
         # use the long versions, so check if it's something we need to copy over
