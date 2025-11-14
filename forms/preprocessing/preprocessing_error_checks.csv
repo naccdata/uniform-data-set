@@ -1,8 +1,8 @@
 error_code,error_no,form_name,var_name,full_desc,modules
 preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"uds, ftld, lbd, ds"
-preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd, ds"
+preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"", ""IDS"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd, ds"
 preprocess-003,003,preprocess,VISITNUM,Cannot find a matching UDS visit packet with the same visit number and visit date as the module packet,"lbd, ftld, ds"
-preprocess-004,004,preprocess,PACKET,"Follow-Up module packet (PACKET=""FF"" or ""FL"") cannot be submitted for a UDS Initial Visit Packet (PACKET=""I"")","lbd, ftld, ds"
+preprocess-004,004,preprocess,PACKET,"Follow-Up module packet (PACKET=""FF"" or ""FL"", ""FDS"") cannot be submitted for a UDS Initial Visit Packet (PACKET=""I"")","lbd, ftld, ds"
 preprocess-005,005,preprocess,PACKET,"Participant must have an approved UDS, BDS, or MDS packet before a Milestone form can be submitted",milestone
 preprocess-006,006,preprocess,VISITNUM,Two packets cannot have the same visit number (VISITNUM) if they are from different dates (VISITDATE),"uds, ftld, lbd, ds"
 preprocess-007,007,preprocess,VISITDATE,Two packets cannot have the same visit date (VISITDATE) if they are from different visit numbers (VISITNUM),"uds, ftld, lbd, ds"
