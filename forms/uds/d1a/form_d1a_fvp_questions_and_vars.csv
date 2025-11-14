@@ -108,4 +108,3 @@ d1a,F,31b. Cognitive impairment NOS (specify),COGOTH2X,Conditional (e.g. skip pa
 d1a,F,32. Cognitive impairment not otherwise specified (NOS) (present),COGOTH3,Conditional (e.g. skip pattern),"0, 1 or blank","1, Present",Integer,[normcog] ='0',no
 d1a,F,32a. Cognitive impairment NOS (primary/contributing/non-contributing),COGOTH3F,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cogoth3]='1',no
 d1a,F,32b. Cognitive impairment NOS (specify),COGOTH3X,Conditional (e.g. skip pattern),text,,String,[cogoth3]='1',no
-
