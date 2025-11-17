@@ -10,16 +10,16 @@ d1a,F,3. Does the participant meet criteria for dementia?,DEMENTED,Conditional (
 d1a,F,4a1. MCI criteria - Clinical concern about decline in cognition compared to participant's prior level of lifelong or usual cognitive function,MCICRITCLN,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '0',no
 d1a,F,"4a2. MCI criteria - Impairment in one or more cognitive domains, compared to participant's estimated prior level of lifelong or usual cognitive function, or supported by objective longitudinal neuropsychological evidence of decline",MCICRITIMP,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '0',no
 d1a,F,4a3. MCI criteria - Largely preserved functional independence OR functional dependence that is not related to cognitive decline,MCICRITFUN,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '0',no
-d1a,F,4b. Does the participant meet criteria for MCI (amnestic or non-amnestic)?,MCI ,Conditional (e.g. skip pattern),Integers 0-1,"0, No|1, Yes",Integer,[demented] = '0',no
+d1a,F,4b. Does the participant meet criteria for MCI (amnestic or non-amnestic)?,MCI,Conditional (e.g. skip pattern),Integers 0-1,"0, No|1, Yes",Integer,[demented] = '0',no
 d1a,F,"5a1. Cognitively impaired, not MCI reason - Evidence of functional impairment (e.g., CDR SB>0 and/or FAS>0), but available cognitive testing is judged to be normal",IMPNOMCIFU,Conditional (e.g. skip pattern),1 or blank,,Integer,[mci]='0',no
 d1a,F,"5a2. Cognitively impaired, not MCI reason - Cognitive testing is abnormal but no clinical concern or functional decline (e.g., CDR SB=0 and FAS=0)",IMPNOMCICG,Conditional (e.g. skip pattern),1 or blank,,Integer,[mci]='0',no
 d1a,F,"5a3. Cognitively impaired, not MCI reason - Longstanding cognitive difficulties, not representing a change from their usual function",IMPNOMCLCD,Conditional (e.g. skip pattern),1 or blank,,Integer,[mci]='0',no
 d1a,F,"5a4. Cognitively impaired, not MCI reason - Other",IMPNOMCIO,Conditional (e.g. skip pattern),1 or blank,,Integer,[mci]='0',no
 d1a,F,"5a4a. Cognitively impaired, not MCI reason - Other (specify)",IMPNOMCIOX,Conditional (e.g. skip pattern),text,,String,[impnomcio] = '1',no
 d1a,F,"5b. Cognitively impaired, not MCI",IMPNOMCI,Conditional (e.g. skip pattern),Integers 0-1,"0, No|1, Yes",Integer,[mci]='0',no
-d1a,F,6a. Dementia and MCI affected domains - Memory,CDOMMEM ,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '1' or [mci]='1',no
+d1a,F,6a. Dementia and MCI affected domains - Memory,CDOMMEM,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '1' or [mci]='1',no
 d1a,F,6b. Dementia and MCI affected domains - Language ,CDOMLANG,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '1' or [mci]='1',no
-d1a,F,6c. Dementia and MCI affected domains - Attention,CDOMATTN ,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '1' or [mci]='1',no
+d1a,F,6c. Dementia and MCI affected domains - Attention,CDOMATTN,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '1' or [mci]='1',no
 d1a,F,6d. Dementia and MCI affected domains - Executive ,CDOMEXEC,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '1' or [mci]='1',no
 d1a,F,6e. Dementia and MCI affected domains - Visuospatial ,CDOMVISU,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '1' or [mci]='1',no
 d1a,F,6f. Dementia and MCI affected domains - Behavioral ,CDOMBEH,Conditional (e.g. skip pattern),1 or blank,,Integer,[demented] = '1' or [mci]='1',no
@@ -91,7 +91,7 @@ d1a,F,24a. Post COVID-19 cognitive impairment (primary/contributing/non-contribu
 d1a,F,"25. Sleep apnea (i.e., obstructive, central, mixed or complex sleep apnea) (present)",APNEADX,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[normcog] ='0',no
 d1a,F,"25a. Sleep apnea (i.e., obstructive, central, mixed or complex sleep apnea) (primary/contributing/non-contributing)",APNEADXIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[apneadx]='1',no
 d1a,F,"26. Cognitive impairment due to other neurologic, genetic, infectious conditions (not listed above), or systemic disease/medical illness (as indicated on Form A5/D2) (present)",OTHCOGILL,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,[normcog] ='0',no
-d1a,F,"26a. Cognitive impairment due to other neurologic, genetic, infectious conditions (not listed above), or systemic disease/medical illness (as indicated on Form A5/D2) (primary/contributing/non-contributing)",OTHCILLIF ,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[othcogill]='1',no
+d1a,F,"26a. Cognitive impairment due to other neurologic, genetic, infectious conditions (not listed above), or systemic disease/medical illness (as indicated on Form A5/D2) (primary/contributing/non-contributing)",OTHCILLIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[othcogill]='1',no
 d1a,F,"26b. Specify cognitive impairment due to other neurologic, genetic, infection conditions or systemic disease",OTHCOGILLX,Conditional (e.g. skip pattern),text,,String,[othcogill]='1',no
 d1a,F,27. Cognitive impairment due to alcohol abuse (present),ALCDEM,Conditional (e.g. skip pattern),"0, 1 or blank","1, Present",Integer,[normcog] ='0',no
 d1a,F,27a. Cognitive impairment due to alcohol abuse (primary/contributing/non-contributing),ALCDEMIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[alcdem]='1',no
