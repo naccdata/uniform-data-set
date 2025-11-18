@@ -5,7 +5,7 @@ a1a,F,0c. A1a Social Determinants of Health - Language,LANGA1A,Always,Integers 1
 a1a,F,"0d. A1a Social Determinants of Health - In-person, remote, or not completed?",MODEA1A,Always,Integers 0-2,"0, Not completed|1, In-person|2, Remote",Integer,,no
 a1a,F,"0d1. If 'A1a Social Determinants of Health' form was completed remotely, specify reason",RMREASA1A,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea1a]='2',no
 a1a,F,0d1a. What modality was used to collect this remote 'A1a Social Determinants of Health' form?,RMMODEA1A,Conditional,Integers 1-4,"1, Telephone|2, Video|3, Mail|4, Electronic (e.g., email)",Integer,[modea1a]='2',no
-a1a,F,"0d2. If 'A1a Social Determinants of Health' not submitted, specify reason",A1ANOT,Condtional,"Integers 88, 93","88, Optional | 93, Concerns about reliability",Integer,[modea1a]='0',no
+a1a,F,"0d2. If 'A1a Social Determinants of Health' not submitted, specify reason",A1ANOT,Conditional,"Integers 88, 93","88, Optional | 93, Concerns about reliability",Integer,[modea1a]='0',no
 a1a,F,0e. A1a Social Determinants of Health - Administration?,ADMINA1A,Always,Integers 1-2,"1, Self-administered|2, Staff administered",Integer,,no
 a1a,F,1. Do you or someone in your household currently own a car?,OWNSCAR,Always,"Integers 0-1, 8","0, No|1, Yes|8, Prefer not to answer",Integer,,no
 a1a,F,2. Do you have consistent access to transportation?,TRSPACCESS,Always,"Integers 0-1, 8","0, No|1, Yes|8, Prefer not to answer",Integer,,no
@@ -45,19 +45,19 @@ a1a,F,33. In your day-to-day life how often do people act as if they think you a
 a1a,F,34. In your day-to-day life how often do people act as if they are afraid of you?,ACTAFRAID,Always,"Integers 1-6, 8","1, Almost every day|2, At least once a week|3, A few times a month|4, A few times a year|5, Less than once a year|6, Never|8, Prefer not to answer",Integer,,no
 a1a,F,35. In your day-to-day life how often are you threatened or harassed?,THREATENED,Always,"Integers 1-6, 8","1, Almost every day|2, At least once a week|3, A few times a month|4, A few times a year|5, Less than once a year|6, Never|8, Prefer not to answer",Integer,,no
 a1a,F,36. How frequently did you receive poorer service or treatment from doctors or in hospitals compared to other people?,POORMEDTRT,Always,"Integers 1-5, 8","1, All of the time|2, Most of the time|3, Sometimes|4, None or almost none of the time|5, Not applicable|8, Prefer not to answer",Integer,,no
-a1a,F,37a1. Main reason--Your Ancestry or National Origins,EXPANCEST,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a2. Main reason--Your gender,EXPGENDER,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a3. Main reason--Your race,EXPRACE,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a4. Main reason--Your age,EXPAGE,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a5. Main reason--Your religion,EXPRELIG,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a6. Main reason--Your height,EXPHEIGHT,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a7. Main reason--Your weight,EXPWEIGHT,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a8. Main reason--Some other aspect of your physical appearance,EXPAPPEAR,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a9. Main reason--Your sexual orientation,EXPSEXORN,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a10. Main reason--Your education or income level,EXPEDUCINC,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a11. Main reason--A physical disability,EXPDISAB,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a12. Main reason--Your shade of skin color,EXPSKIN,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a13. Main reason -- Other,EXPOTHER,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a14. Main reason -- not applicable - I do not have these experiences in my day to day life,EXPNOTAPP,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,37a15. Main reason--Prefer not to answer,EXPNOANS,Conditional (e.g. skip pattern),Integer 1 or blank,,Integer,,no
-a1a,F,"38. When you have had day-to-day experiences like those in questions 31 to 36, would you say they have been very stressful, moderately stressful, or not stressful? ",EXPSTRS,Conditional (e.g. skip pattern),"Integers 1-3, 8-9","1, Very stressful|2, Moderately stressful|3, Not stressful|9, Don't know|8, Prefer not to answer",Integer,[expancest] = '1' or [expgender] = '1' or [exprace] = '1' or [expage] = '1' or [exprelig] = '1' or [expheight] = '1' or [expweight] = '1' or [expappear] = '1' or [expsexorn] = '1' or [expeducinc] = '1' or [expdisab] = '1' or [expskin] = '1' or [expother] = '1',no
+a1a,F,37a1. Main reason--Your Ancestry or National Origins,EXPANCEST,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a2. Main reason--Your gender,EXPGENDER,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a3. Main reason--Your race,EXPRACE,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a4. Main reason--Your age,EXPAGE,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a5. Main reason--Your religion,EXPRELIG,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a6. Main reason--Your height,EXPHEIGHT,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a7. Main reason--Your weight,EXPWEIGHT,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a8. Main reason--Some other aspect of your physical appearance,EXPAPPEAR,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a9. Main reason--Your sexual orientation,EXPSEXORN,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a10. Main reason--Your education or income level,EXPEDUCINC,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a11. Main reason--A physical disability,EXPDISAB,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a12. Main reason--Your shade of skin color,EXPSKIN,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a13. Main reason -- Other,EXPOTHER,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a14. Main reason -- not applicable - I do not have these experiences in my day to day life,EXPNOTAPP,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,37a15. Main reason--Prefer not to answer,EXPNOANS,Conditional,Integer 1 or blank,,Integer,,no
+a1a,F,"38. When you have had day-to-day experiences like those in questions 31 to 36, would you say they have been very stressful, moderately stressful, or not stressful? ",EXPSTRS,Conditional,"Integers 1-3, 8-9","1, Very stressful|2, Moderately stressful|3, Not stressful|9, Don't know|8, Prefer not to answer",Integer,[expancest] = '1' or [expgender] = '1' or [exprace] = '1' or [expage] = '1' or [exprelig] = '1' or [expheight] = '1' or [expweight] = '1' or [expappear] = '1' or [expsexorn] = '1' or [expeducinc] = '1' or [expdisab] = '1' or [expskin] = '1' or [expother] = '1',no
