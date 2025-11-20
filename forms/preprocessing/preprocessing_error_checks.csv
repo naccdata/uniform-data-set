@@ -1,5 +1,5 @@
 error_code,error_no,form_name,var_name,full_desc,modules
-preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"uds, ftld, lbd, ds"
+preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center uploading the data,"all"
 preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"", ""IDS"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd, ds"
 preprocess-003,003,preprocess,VISITNUM,Cannot find a matching UDS visit packet with the same visit number and visit date as the module packet,"lbd, ftld, ds"
 preprocess-004,004,preprocess,PACKET,"Follow-Up module packet (PACKET=""FF"" or ""FL"", ""FDS"") cannot be submitted for a UDS Initial Visit Packet (PACKET=""I"")","lbd, ftld, ds"
