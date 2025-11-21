@@ -1,0 +1,83 @@
+﻿Form ,Version,Gate question variable,Variable,TT code
+d1b,4,,BLOODOTHX,If BLOODOTHX is blank then BLOODOTHX should remain blank
+d1b,4,,CSFOTHX,If CSFOTHX is blank then CSFOTHX should remain blank
+d1b,4,,FDGOTHX,If FDGOTHX is blank then FDGOTHX should remain blank
+d1b,4,,TRACOTHDXX,If TRACOTHDXX is blank then TRACOTHDXX should remain blank
+d1b,4,,TRACEROTHX,If TRACEROTHX is blank then TRACEROTHX should remain blank
+d1b,4,,OTHBIOMX1,If OTHBIOMX1 is blank then OTHBIOMX1 should remain blank
+d1b,4,,BIOMOTHX1,If BIOMOTHX1 is blank then BIOMOTHX1 should remain blank
+d1b,4,,OTHBIOMX2,If OTHBIOMX2 is blank then OTHBIOMX2 should remain blank
+d1b,4,,BIOMOTHX2,If BIOMOTHX2 is blank then BIOMOTHX2 should remain blank
+d1b,4,,OTHBIOMX3,If OTHBIOMX3 is blank then OTHBIOMX3 should remain blank
+d1b,4,,BIOMOTHX3,If BIOMOTHX3 is blank then BIOMOTHX3 should remain blank
+d1b,4,BIOMARKDX,FLUIDBIOM,If BIOMARKDX=0 then FLUIDBIOM should = 0
+d1b,4,BIOMARKDX,IMAGINGDX,If BIOMARKDX=0 then IMAGINGDX should = 0
+d1b,4,BIOMARKDX,PETDX,If BIOMARKDX=0 then PETDX should = 0
+d1b,4,BIOMARKDX,FDGPETDX,If BIOMARKDX=0 then FDGPETDX should = 0
+d1b,4,BIOMARKDX,DATSCANDX,If BIOMARKDX=0 then DATSCANDX should = 0
+d1b,4,BIOMARKDX,TRACOTHDX,If BIOMARKDX=0 then TRACOTHDX should = 0
+d1b,4,BIOMARKDX,STRUCTDX,If BIOMARKDX=0 then STRUCTDX should = 0
+d1b,4,BIOMARKDX,OTHBIOM1,If BIOMARKDX=0 then OTHBIOM1 should = 0
+d1b,4,BIOMARKDX,OTHBIOM2,If BIOMARKDX=0 then OTHBIOM2 should = 0
+d1b,4,BIOMARKDX,OTHBIOM3,If BIOMARKDX=0 then OTHBIOM3 should = 0
+d1b,4,BIOMARKDX,AUTDOMMUT,If BIOMARKDX=0 then AUTDOMMUT should = 0
+d1b,4,FORMVER,FTLD,If FORMVER=4 and FTLD is blank then FTLD should = 0
+d1b,4,FORMVER,CTE,If FORMVER=4 and CTE is blank then CTE should = 0
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, CTE",CTEIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and CTE is blank, then CTEIF=7; 
+IF NORMCOG=1 then CTEIF=8;
+ELSE CTEIF= -4"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, CTE",CTECERT,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and CTE is blank, then CTECERT=7; 
+IF NORMCOG=1 then CTECERT=8;
+ELSE CTECERT= -4"
+d1b,4,FORMVER,CAA,If FORMVER=4 and CAA is blank then CAA should = 0
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, CAA",CAAIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and CAA is blank, then CAAIF=7; 
+IF NORMCOG=1 then CAAIF=8;
+ELSE CAAIF= -4"
+d1b,4,FORMVER,LATE,If FORMVER=4 and LATE is blank then LATE should = 0
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, LATE",LATEIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and LATE is blank, then LATEIF=7; 
+IF NORMCOG=1 then LATEIF=8;
+ELSE LATEIF= -4"
+d1b,4,FORMVER,MSA,If FORMVER=4 and MSA is blank then MSA should = 0
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, MSA",MSAIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and MSA is blank or 0, then MSAIF=7; 
+IF NORMCOG=1 then MSAIF=8;
+ELSE MSAIF= -4"
+d1b,4,"FORMVER, FTLD",PSP,"If (FORMVER=4 and PSP is blank) or if FTLD is blank, then PSP should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, PSP",PSPIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and PSP is blank or 0, then PSPIF=7; 
+IF NORMCOG=1 then PSPIF=8;
+ELSE PSPIF= -4"
+d1b,4,"FORMVER, FTLD",CORT,"If (FORMVER=4 and CORT is blank) or if FTLD is blank, then CORT should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, CORT",CORTIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and CORT is blank or 0, then CORTIF=7; 
+IF NORMCOG=1 then CORTIF=8;
+ELSE CORTIF= -4"
+d1b,4,"FORMVER, FTLD",FTLDMO,"If (FORMVER=4 and FTLDMO is blank) or if FTLD is blank, then FTLDMO should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, FTLDMO",FTLDMOIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and FTLDMO is blank or 0, then FTLDMOIF=7; 
+IF NORMCOG=1 then FTLDMOIF=8;
+ELSE FTLDMOIF= -4"
+d1b,4,"FORMVER, FTLD",FTLDNOS,"If (FORMVER=4 and FTLDNOS is blank) or if FTLD is blank, then FTLDNOS should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, FTLDNOS",FTLDNOIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and FTLDNOS is blank or 0, then FTLDNOIF=7; 
+IF NORMCOG=1 then FTLDNOIF=8;
+ELSE FTLDNOIF= -4"
+d1b,4,"DEMENTED, MCI, IMPNOMCI, FTLD",FTLDSUBT,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and FTLD is blank or 0, then FTLDSUBT=7; 
+ELSE FTLDSUBT= -4"
+d1b,4,,FTLDSUBX,If FTLDSUBX is blank then FTLDSUBX should remain blank
+d1b,4,"FORMVER, FTLD",CVD,"If (FORMVER=4 and CVD is blank) or if FTLD is blank, then CVD should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, CVD",CVDIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and CVD is blank or 0, then CVDIF=7; 
+IF NORMCOG=1 then CVDIF=8;
+ELSE CVDIF= -4"
+d1b,4,"FORMVER, FTLD",DOWNS,"If (FORMVER=4 and DOWNS is blank) or if FTLD is blank, then DOWNS should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, DOWNS",DOWNSIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and DOWNS is blank or 0, then DOWNSIF=7; 
+IF NORMCOG=1 then DOWNSIF=8;
+ELSE DOWNSIF= -4"
+d1b,4,"FORMVER, FTLD",HUNT,"If (FORMVER=4 and HUNT is blank) or if FTLD is blank, then HUNT should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, HUNT",HUNTIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and HUNT is blank or 0, then HUNTIF=7; 
+IF NORMCOG=1 then HUNTIF=8;
+ELSE HUNTIF= -4"
+d1b,4,"FORMVER, FTLD",PRION,"If (FORMVER=4 and PRION is blank) or if FTLD is blank, then PRION should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, PRION",PRIONIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and PRION is blank or 0, then PRIONIF=7; 
+IF NORMCOG=1 then PRIONIF=8;
+ELSE PRIONIF= -4"
+d1b,4,"FORMVER, FTLD",OTHCOG,"If (FORMVER=4 and OTHCOG is blank) or if FTLD is blank, then OTHCOG should = 0"
+d1b,4,"NORMCOG, DEMENTED, MCI, IMPNOMCI, OTHCOG",OTHCOGIF,"IF (DEMENTED=1 or MCI=1 or IMPNOMCI=1) and OTHCOG is blank or 0, then OTHCOGIF=7; 
+IF NORMCOG=1 then OTHCOGIF=8;
+ELSE OTHCOGIF= -4"
+d1b,4,,OTHCOGX,If OTHCOGX is blank then OTHCOGX should remain blank
