@@ -1,0 +1,39 @@
+﻿status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,Variable Type,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
+new,a2,4,"UDSv1-3: 9a, 9b
+UDSv4: 4a1","UDSv1-3: 10a, 10b
+UDSv4: 5a1",NACCINCNTFQ,NACC derived variable,What is the frequency of all types of contact?,Numeric longitudinal,"1 = Daily
+2 = At least three times per week
+3 = Weekly
+4 = At least three times per month
+5 = Monthly
+6 = Less than once a month
+8 = Not applicable, co-participant lives with participant
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In UDS v1-3, the co-participant was asked about their frequency of in-person visits (INVISITS) and their frequency of telephone calls (INCALLS) separately. In UDS v4, this was combined into one question asking about the frequency of all types of contact, including in-person, telephone, video conferencing, texting/email, and social media platforms. 
+
+For UDS v1-3 visits, NACCINCNTFQ takes the lower (more frequent) value between INCALLS (telephone contact) and INVISITS ( in-person visits). ","v1-3:
+NACCINCNTFQ = min(INVISITS, INCALLS)
+
+v4: 
+If INLIVWTH=1 then NACCINCNTFQ = 8
+If INLIVWTH=0 then NACCINCNTFQ = INCNTFRQ "
+existing,a2,3-Jan,n/a,n/a,NACCNINR,NACC derived variable,Derived NIH race definitions,Numeric longitudinal,"1 = White
+2 = Black or African American
+3 = American Indian or Alaska Native
+4 = Native Hawaiian or Pacific Islander
+5 = Asian
+6 = Multiracial
+99 = Unknown or ambiguous
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","Some co-participants have reported an “other” race that is not included in the NIH race categories (e.g., Hispanic or Irish). This NACC-derived race variable attempts to include these write-in values in order to be more consistent with the NIH guidelines for human subjects reporting. The categories are described as follows:
+
+NACCNINR = 1 for co-participants with INRACE  =  1 (White) or INRACE  =  50 (Other) with a write-in response that is considered White or Caucasian race.
+NACCNINR = 2 for co-participants with INRACE  =  2 (Black or African American) or INRACE  =  50 with a write-in response that is considered black or African American
+NACCNINR = 3 for co-participants with INRACE  =  3 (American Indian or Alaska Native) or INRACE  =  50 with a write-in response that is considered American Indian or Alaska Native
+NACCNINR = 4 for co-participants with INRACE  =  4 (Native Hawaiian or Other Pacific Islander) or INRACE  =  50 with a write-in response that is considered Native Hawaiian or Pacific Islander
+NACCNINR = 5 for co-participants with INRACE  =  5 (Asian) or INRACE  =  50 with a write-in response that is considered Asian
+NACCNINR = 6 for co-participants reporting multiple races or with INRACE  =  50 and a write-in response indicating mixed race including, but not limited to, “multiracial,” “biracial,” and “mestizo”
+NACCNINR = 99 for co-participants with INRACE  =  99 (Unknown) or with INRACE  =  50 and a write-in response that cannot be classified as one of the categories without additional information, including but not limited to, “Hispanic,” “American,” and “Unknown.”
+
+Co-participants reporting multiple races (Codes 1– 5 for INRACE and INRASEC, or for INRACE, inrasec and INRATER) are coded to NACCNINR = 6 (Multiracial). For some multiracial co-participants (NACCNINR = 6), additional information on their primary, secondary, and/or tertiary race can be found by looking at the INRACE, INRASEC, and INRATER variables. 
+
+Co-participants reporting codes 1– 5 for INRACE, followed by INRASEC = 50 or INRATER = 50, are assigned the original primary race reported if the write-in does not indicate a different race, or is ambiguous. For example, a co-participant that reports INRACE = 1 (white) and then INRASEC =50 (other) with a write-in of “Irish” will still have NACCNINR = 1 and will not be considered multi-racial. If write-ins for INRASEC = 50 or INRATER = 50 are indicative of an additional race, then NACCNINR = 6. Additionally, INRACE = 99 (unknown) or ambiguous write-ins for primary race (INRACE = 50) that are followed by codes 1– 5 for INRASEC or INRATER are coded as NACCNINR = 99. Note that if there is no change in co-participant at a follow-up visit, the co-participant data from a previous visit (visit where reported) will be carried forward to the current visit.","v1-3: no change from current code
+v4: -4"
