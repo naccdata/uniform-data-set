@@ -1,0 +1,15 @@
+﻿Status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,Variable Type,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
+Existing,c2,v3-4,1f,1f,NACCMOCA,NACC derived variable,MoCA Total Score - corrected for education,Numeric longitudinal," 0 - 30
+88 = Item(s) or whole test not administered
+99=Years of education missing/unknown
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","This variable adds 1 point to the uncorrected MoCA Total Score (MOCATOTS) if the participant has 12 years or fewer of formal education reported at their initial UDS visit. Participants with years of education missing or unknown are assigned NACCMOCA=99. The maximum possible score is 30. For participants with the maximum uncorrected MoCA Total Score of 30 and 12 or fewer years of education, no point is added.",no change from v3
+Existing,c2,v3-4,,,NACCC2,NACC derived variable,Form date discrepancy between UDS Form A1 and Form C2,Numeric longitudinal," 0 = UDS Form C2 completed within 90 days of Form A1
+1 = UDS Form C2 completed >90 days before or after Form A1
+-4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","This variable flags any visit in which the Form C2 date (the date the neuropsychological test battery was conducted) is greater than 90 days before or after the Form A1 (Subject Demographics) date. For all UDS subjects, NACC uses the Form A1 date to determine the visit date (visitmo, visitdy, visityr).",no change from v3
+Existing,c1,v1-3,,,NACCMMSE,NACC derived variable,Total MMSE score (using D-L-R-O-W),Numeric longitudinal,,,no change from v3
+Existing,c1,v1-3,,,NACCC1,NACC derived variable,Form date discrepancy between UDS Form A1 and Form C1,Numeric longitudinal,,,no change from v3
+Existing,c2t,v3-4,1d,1d,NACCMOCB,NACC derived variable,MoCA-Blind Total Score — corrected for education,Numeric longitudinal,"0–22
+88=Item(s) or whole test not administered
+99=Years of education missing/unknown
+-4=Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","This variable adds 1 point to the uncorrected MoCA-Blind Total Score (MOCBTOTS) if the participant has 12 years or fewer of formal education reported at their initial UDS visit. Participants with years of education missing or unknown are assigned NACCMOCB = 99. The maximum possible score is 22. For participants with the maximum uncorrected MoCA-Blind Total Score of 22 and 12 or fewer years of education, no point is added. Note that UDS subjects not receiving Form C2T have a value of -4 for NACCMOCB.",no change from v3
+,,,,,,,,,,,
