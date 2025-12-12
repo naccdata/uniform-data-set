@@ -1,0 +1,57 @@
+﻿status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,VariableType,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
+existing,a3,1-4,"1a3, 1b3, 2a3 ... 2t3, 3a3 ... 3o3","1a3, 1b3, 2a3 ... 2t3, 3a3 ... 3o3",NACCFAM,NACC derived variable,Indicator of first-degree family member with cognitive impairment,Numeric cross-sectional,"0 = No report of a first-degree family member with cognitive impairment
+1 = Report of at least one first-degree family member with cognitive impairment
+9 = Unknown
+-4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes re-sponse to this question",https://uwnetid.sharepoint.com/:w:/r/sites/og_national_alzheimers_coordinating_center/Shared%20Documents/Projects/UDSv4/UDSv4%20Data%20Quality/UDSv4%20NACC%20derived%20variables/Form_A3_Derived_Variables_Description.docx?d=wad7389a4d2d849dabd30a0b00966c9de&csf=1&web=1&e=1d8Czx&nav=eyJoIjoiMjg3MzAzNzkwIn0%3D,https://uwnetid.sharepoint.com/:w:/r/sites/og_national_alzheimers_coordinating_center/Shared%20Documents/Projects/UDSv4/UDSv4%20Data%20Quality/UDSv4%20NACC%20derived%20variables/Form_A3_Derived_Variables_Description.docx?d=wad7389a4d2d849dabd30a0b00966c9de&csf=1&web=1&e=r7i9d5&nav=eyJoIjoiMzc1ODczODE5In0
+existing,a3,1-4,1a3,1a3,NACCMOM,NACC derived variable,Indicator of mother with cognitive impairment,Numeric cross-sectional,"0 = No report of mother with cognitive impairment
+1 = Mother was reported to have cognitive impairment
+9 = Unknown
+-4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes re-sponse to this question",https://uwnetid.sharepoint.com/:w:/r/sites/og_national_alzheimers_coordinating_center/Shared%20Documents/Projects/UDSv4/UDSv4%20Data%20Quality/UDSv4%20NACC%20derived%20variables/Form_A3_Derived_Variables_Description.docx?d=wad7389a4d2d849dabd30a0b00966c9de&csf=1&web=1&e=TJqvHg&nav=eyJoIjoiMTIzNzAzNzU0MCJ9,"v1-3: no change from current code
+
+v4:
+[IVP] 
+If PACKET in (""I"", ""4"") and MOMETPR is blank, then NACCMOM=- 4 
+If PACKET in (""I"", ""4"") and MOMETPR in (01,02,03,04,05,06,07,08,09,11,12) then NACCMOM=1 
+If PACKET in (""I"", ""4"") and MOMETPR in '00' then NACCMOM=0 
+
+ELSE NACCMOM=9
+
+[FVP] 
+If PACKET in (""F"") and NWINFPAR=0 then NACCMOM=NACCMOM[prev_vis]  
+If PACKET in (""F"") and NWINFPAR=1 and ((NACCMOM[prev_vis]=1 and MOMETPR in '66') or MOMETPR is in (01,02,03,04,05,06,07,08,09,11,12)) then NACCMOM=1
+If PACKET in (""F"") and NWINFPAR=1 and ((NACCMOM[prev_vis]=0 and MOMETPR in '66') or MOMETPR is in '00') then NACCMOM=0 
+
+ELSE NACCMOM=9"
+existing,a3,1-4,1b3,1b3,NACCDAD,NACC derived variable,Indicator of father with cognitive impairment,Numeric cross-sectional,"0 = No report of father with cognitive impairment
+1 = Father was reported to have cognitive impairment
+9 = Unknown
+-4 =  Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes re-sponse to this question",https://uwnetid.sharepoint.com/:w:/r/sites/og_national_alzheimers_coordinating_center/Shared%20Documents/Projects/UDSv4/UDSv4%20Data%20Quality/UDSv4%20NACC%20derived%20variables/Form_A3_Derived_Variables_Description.docx?d=wad7389a4d2d849dabd30a0b00966c9de&csf=1&web=1&e=8kODPv&nav=eyJoIjoiNjU2ODQ5NzY1In0%3D,"v1-3: no change from current code
+
+v4:
+[IVP] 
+If PACKET in (""I"", ""4"") and DADETPR is blank, then NACCDAD=- 4 
+If PACKET in (""I"", ""4"") and DADETPR in (01,02,03,04,05,06,07,08,09,11,12) then NACCDAD=1 
+If PACKET in (""I"", ""4"") and DADETPR in '00' then NACCDAD=0 
+
+ELSE NACCDAD=9
+
+[FVP] 
+If PACKET in (""F"") and NWINFPAR=0 then NACCDAD=NACCDAD[prev_vis]  
+If PACKET in (""F"") and NWINFPAR=1 and ((NACCDAD[prev_vis]=1 and DADETPR in '66') or DADETPR is in (01,02,03,04,05,06,07,08,09,11,12)) then NACCDAD=1
+If PACKET in (""F"") and NWINFPAR=1 and ((NACCDAD[prev_vis]=0 and DADETPR in '66') or DADETPR is in '00') then NACCDAD=0 
+
+ELSE NACCDAD=9"
+remove,a3,,,,NACCFADM,,,,,,
+remove,a3,,,,NACCAM,,,,,,
+remove,a3,,,,NACCAMX,,,,,,
+remove,a3,,,,NACCAMS,,,,,,
+remove,a3,,,,NACCAMSX,,,,,,
+remove,a3,,,,NACCFFTD,,,,,,
+remove,a3,,,,NACCFM,,,,,,
+remove,a3,,,,NACCFMX,,,,,,
+remove,a3,,,,NACCFMS,,,,,,
+remove,a3,,,,NACCFMSX,,,,,,
+remove,a3,,,,NACCOM,,,,,,
+remove,a3,,,,NACCOMX,,,,,,
+remove,a3,,,,NACCOMS,,,,,,
+remove,a3,,,,NACCOMSX,,,,,,
