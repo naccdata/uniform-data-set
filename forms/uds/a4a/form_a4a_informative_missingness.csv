@@ -1,0 +1,78 @@
+﻿Form ,Version,Gate question variable,Variable,TT code
+a4a,4,,NEWTREAT," If NEWTREAT = 0 or 9, all subsequent variables Q.2a1a-3b3a should be autofilled to prior visit"
+a4a,4,,NEWADEVENT," If NEWADEVENT = 0 or 9, all  subsequent variables Q.3b1-3b3a should be autofilled to prior visit"
+a4a,4,,TARGETAB1,If TARGETAB1 is blank then TARGETAB1 should = 0
+a4a,4,,TARGETTAU1,If TARGETTAU1 is blank then TARGETTAU1 should = 0
+a4a,4,,TARGETINF1,If TARGETINF1 is blank then TARGETINF1 should = 0
+a4a,4,,TARGETSYN1,If TARGETSYN1 is blank then TARGETSYN1 should = 0
+a4a,4,,TARGETOTH1,If TARGETOTH1 is blank then TARGETOTH1 should = 0
+a4a,4,,TARGETOTX1,If TARGETOTX1 is blank then TARGETOTX1 should remain blank
+a4a,4,,TRTTRIAL1,If TRTTRIAL1 is blank then TRTTRIAL1 should remain blank
+a4a,4,,NCTNUM1,If NCTNUM1 is blank then NCTNUM1 should remain blank
+a4a,4,,TARGETAB2,If TARGETAB2 is blank then TARGETAB2 should = 0
+a4a,4,,TARGETTAU2,If TARGETTAU2 is blank then TARGETTAU2 should = 0
+a4a,4,,TARGETINF2,If TARGETINF2 is blank then TARGETINF2 should = 0
+a4a,4,,TARGETSYN2,If TARGETSYN2 is blank then TARGETSYN2 should = 0
+a4a,4,,TARGETOTH2,If TARGETOTH2 is blank then TARGETOTH2 should = 0
+a4a,4,,TARGETOTX2,If TARGETOTX2 is blank then TARGETOTX2 should remain blank
+a4a,4,,TRTTRIAL2,If TRTTRIAL2 is blank then TRTTRIAL2 should remain blank
+a4a,4,,NCTNUM2,If NCTNUM2 is blank then NCTNUM2 should remain blank
+a4a,4,,TARGETAB3,If TARGETAB3 is blank then TARGETAB3 should = 0
+a4a,4,,TARGETTAU3,If TARGETTAU3 is blank then TARGETTAU3 should = 0
+a4a,4,,TARGETINF3,If TARGETINF3 is blank then TARGETINF3 should = 0
+a4a,4,,TARGETSYN3,If TARGETSYN3 is blank then TARGETSYN3 should = 0
+a4a,4,,TARGETOTH3,If TARGETOTH3 is blank then TARGETOTH3 should = 0
+a4a,4,,TARGETOTX3,If TARGETOTX3 is blank then TARGETOTX3 should remain blank
+a4a,4,,TRTTRIAL3,If TRTTRIAL3 is blank then TRTTRIAL3 should remain blank
+a4a,4,,NCTNUM3,If NCTNUM3 is blank then NCTNUM3 should remain blank
+a4a,4,,TARGETAB4,If TARGETAB4 is blank then TARGETAB4 should = 0
+a4a,4,,TARGETTAU4,If TARGETTAU4 is blank then TARGETTAU4 should = 0
+a4a,4,,TARGETINF4,If TARGETINF4 is blank then TARGETINF4 should = 0
+a4a,4,,TARGETSYN4,If TARGETSYN4 is blank then TARGETSYN4 should = 0
+a4a,4,,TARGETOTH4,If TARGETOTH4 is blank then TARGETOTH4 should = 0
+a4a,4,,TARGETOTX4,If TARGETOTX4 is blank then TARGETOTX4 should remain blank
+a4a,4,,TRTTRIAL4,If TRTTRIAL4 is blank then TRTTRIAL4 should remain blank
+a4a,4,,NCTNUM4,If NCTNUM4 is blank then NCTNUM4 should remain blank
+a4a,4,,TARGETAB5,If TARGETAB5 is blank then TARGETAB5 should = 0
+a4a,4,,TARGETTAU5,If TARGETTAU5 is blank then TARGETTAU5 should = 0
+a4a,4,,TARGETINF5,If TARGETINF5 is blank then TARGETINF5 should = 0
+a4a,4,,TARGETSYN5,If TARGETSYN5 is blank then TARGETSYN5 should = 0
+a4a,4,,TARGETOTH5,If TARGETOTH5 is blank then TARGETOTH5 should = 0
+a4a,4,,TARGETOTX5,If TARGETOTX5 is blank then TARGETOTX5 should remain blank
+a4a,4,,TRTTRIAL5,If TRTTRIAL5 is blank then TRTTRIAL5 should remain blank
+a4a,4,,NCTNUM5,If NCTNUM5 is blank then NCTNUM5 should remain blank
+a4a,4,,TARGETAB6,If TARGETAB6 is blank then TARGETAB6 should = 0
+a4a,4,,TARGETTAU6,If TARGETTAU6 is blank then TARGETTAU6 should = 0
+a4a,4,,TARGETINF6,If TARGETINF6 is blank then TARGETINF6 should = 0
+a4a,4,,TARGETSYN6,If TARGETSYN6 is blank then TARGETSYN6 should = 0
+a4a,4,,TARGETOTH6,If TARGETOTH6 is blank then TARGETOTH6 should = 0
+a4a,4,,TARGETOTX6,If TARGETOTX6 is blank then TARGETOTX6 should remain blank
+a4a,4,,TRTTRIAL6,If TRTTRIAL6 is blank then TRTTRIAL6 should remain blank
+a4a,4,,NCTNUM6,If NCTNUM6 is blank then NCTNUM6 should remain blank
+a4a,4,,TARGETAB7,If TARGETAB7 is blank then TARGETAB7 should = 0
+a4a,4,,TARGETTAU7,If TARGETTAU7 is blank then TARGETTAU7 should = 0
+a4a,4,,TARGETINF7,If TARGETINF7 is blank then TARGETINF7 should = 0
+a4a,4,,TARGETSYN7,If TARGETSYN7 is blank then TARGETSYN7 should = 0
+a4a,4,,TARGETOTH7,If TARGETOTH7 is blank then TARGETOTH7 should = 0
+a4a,4,,TARGETOTX7,If TARGETOTX7 is blank then TARGETOTX7 should remain blank
+a4a,4,,TRTTRIAL7,If TRTTRIAL7 is blank then TRTTRIAL7 should remain blank
+a4a,4,,NCTNUM7,If NCTNUM7 is blank then NCTNUM7 should remain blank
+a4a,4,,TARGETAB8,If TARGETAB8 is blank then TARGETAB8 should = 0
+a4a,4,,TARGETTAU8,If TARGETTAU8 is blank then TARGETTAU8 should = 0
+a4a,4,,TARGETINF8,If TARGETINF8 is blank then TARGETINF8 should = 0
+a4a,4,,TARGETSYN8,If TARGETSYN8 is blank then TARGETSYN8 should = 0
+a4a,4,,TARGETOTH8,If TARGETOTH8 is blank then TARGETOTH8 should = 0
+a4a,4,,TARGETOTX8,If TARGETOTX8 is blank then TARGETOTX8 should remain blank
+a4a,4,,TRTTRIAL8,If TRTTRIAL8 is blank then TRTTRIAL8 should remain blank
+a4a,4,,NCTNUM8,If NCTNUM8 is blank then NCTNUM8 should remain blank
+a4a,4,TRTBIOMARK,ADVEVENT,If TRTBIOMARK=0 then ADVEVENT should =8; If TRTBIOMARK=9 then ADVEVENT should =9
+a4a,4,TRTBIOMARK,ARIAE,If TRTBIOMARK=0 then ARIAE should =8; If TRTBIOMARK=9 then ARIAE should =9
+a4a,4,TRTBIOMARK,ARIAH,If TRTBIOMARK=0 then ARIAH should =8; If TRTBIOMARK=9 then ARIAH should =9
+a4a,4,TRTBIOMARK,ADVERSEOTH,If TRTBIOMARK=0 then ADVERSEOTH should =8; If TRTBIOMARK=9 then ADVERSEOTH should =9
+a4a,4,TRTBIOMARK,NEWTREAT,If TRTBIOMARK=0 then NEWTREAT should =8; If TRTBIOMARK=9 then NEWTREAT should =9
+a4a,4,TRTBIOMARK,NEWADEVENT,If TRTBIOMARK=0 then NEWADEVENT should =8; If TRTBIOMARK=9 then NEWADEVENT should =9
+a4a,4,ADVEVENT,ARIAE,If ADVEVENT=0 then ARIAE should =8; If ADVEVENT=9 then ARIAE should =9
+a4a,4,ADVEVENT,ARIAH,If ADVEVENT=0 then ARIAH should =8; If ADVEVENT=9 then ARIAH should =9
+a4a,4,ADVEVENT,ADVERSEOTH,If ADVEVENT=0 then ADVERSEOTH should =8; If ADVEVENT=9 then ADVERSEOTH should =9
+a4a,4,ADVEVENT,NEWADEVENT,If ADVEVENT=0 then NEWADEVENT should =8; If ADVEVENT=9 then NEWADEVENT should =9
+a4a,4,,ADVERSEOTX,If ADVERSEOTX is blank then ADVERSEOTX should remain blank
