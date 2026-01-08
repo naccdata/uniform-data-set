@@ -7,7 +7,7 @@ c5f,IF,"0d1. If 'C5F Interpersonal Reactivity Index' not submitted, specify reas
 c5f,IF,0. This questionnaire was completed,FTDCPC5F,Always,Integers 0-2,"0 = Independently by informant, as described in Instructions to the center | 1 = Via in-person interview of informant by clinic staff | 2 = Via telephone interview of informant by clinic staff",Integer,
 c5f,IF,0a. Sex of informant,FTDINSEX,Always,Integers 1-2,1 = Male | 2 = Female,Integer,
 c5f,IF,0b1. Informant's month of birth,FTDINFMO,Always,Integers 1-12,,Integer,
-c5f,IF,0b2. Informant's year of birth,FTDINFYR,Always,Integers 1900-1990,,Integer,
+c5f,IF,0b2. Informant's year of birth,FTDINFYR,Always,Integers 1900 to current year minus 15,,Integer,
 c5f,IF,0c. Informant's relationship to subject,FTDINFRE,Always,Integers 1-6,"1 = Spouse or spouse equivalent | 2 = Child | 3 = Daughter- or son-in law |4 = Parent | 5 = Sibling | 6 = Other (other relative, friend, neighbor, paid caregiver)",Integer,
 c5f,IF,"1. The subject shows tender, concerned feelings for people less fortunate than him/her",FTDFEEL,No,Integers 1-5,1 - 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
 c5f,IF,"2. The subject sometimes finds it difficult to see things from the ""other guy's"" point of view.",FTDDIFF,No,Integers 1-5,1 - 5 (1=Does not describe well through 5=Describes very well),Integer,Blank if question not answered
