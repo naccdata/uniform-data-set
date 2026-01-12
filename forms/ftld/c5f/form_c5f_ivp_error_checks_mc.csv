@@ -6,7 +6,7 @@ c5f-ftldivp-c-004,4,Error,c5f,IF,FTDINSEX,Conformity,FTDINSEX conforms,FTDINSEX 
 c5f-ftldivp-m-005,5,Error,c5f,IF,FTDINFMO,Missingness,FTDINFMO must be present,FTDINFMO cannot be blank,Q0b1. FTDINFMO (informant birth month) cannot be blank,FTDINFMO=blank,,,,,
 c5f-ftldivp-c-006,6,Error,c5f,IF,FTDINFMO,Conformity,FTDINFMO conforms,FTDINFMO must be between 1 and 12,Q0b1. FTDINFMO (informant birth month) must be between 1 and 12,FTDINFMO<1 or FTDINFMO>12,,,,,
 c5f-ftldivp-m-007,7,Error,c5f,IF,FTDINFYR,Missingness,FTDINFYR must be present,FTDINFYR cannot be blank,Q0b2. FTDINFYR (informant birth year) cannot be blank,FTDINFYR=blank,,,,,
-c5f-ftldivp-c-008,8,Error,c5f,IF,FTDINFYR,Conformity,FTDINFYR conforms,FTDINFYR must be between 1900 and 1990,Q0b2. FTDINFYR (informant birth year) must be between 1900 and 1990,FTDINFYR<1900 or FTDINFYR>1990,,,,,
+c5f-ftldivp-c-008,8,Error,c5f,IF,FTDINFYR,Conformity,FTDINFYR conforms,FTDINFYR must be a year between 1900 and the current year minus 15,Q0b2. FTDINFYR (informant birth year) must be a year between 1900 and the current year minus 15,If FTDINFYR<1900 or FTDINFYR > (current year-15),,,,,
 c5f-ftldivp-m-009,9,Error,c5f,IF,FTDINFRE,Missingness,FTDINFRE must be present,FTDINFRE cannot be blank,Q0c. FTDINFRE (informant relationship) cannot be blank,FTDINFRE=blank,,,,,
 c5f-ftldivp-c-010,10,Error,c5f,IF,FTDINFRE,Conformity,FTDINFRE conforms,FTDINFRE must be between 1 and 6,Q0c. FTDINFRE (informant relationship) must be between 1 and 6,"FTDINFRE ne 1,2,3,4,5,6",,,,,
 c5f-ftldivp-c-011,11,Error,c5f,IF,FTDFEEL,Conformity,FTDFEEL conforms,FTDFEEL must be between 1 and 5,Q1. FTDFEEL (tender feelings) must be between 1 and 5,"FTDFEEL ne 1,2,3,4,5",,,,,
