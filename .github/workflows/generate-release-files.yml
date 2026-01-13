@@ -9,6 +9,12 @@ on:
         description: "Comma-deliminated list of modules to prepare for release."
         default: "uds,ftld,lbd/long,lbd/short,enrollment,preprocessing,bds,cls,ds,milestones,np"
         required: true
+      generate_ded:
+        description: "Whether or not to generate the DED (true or false)"
+        default: "true"
+      generate_error_checks:
+        description: "Whether or not to organize and generate the error check CSVs (true or false)"
+        default: "true"
 
 permissions:
   actions: write
@@ -32,6 +38,7 @@ jobs:
           cp -r forms/lbd/header forms/lbd/short
 
       - name: Generate DEDs
+        if: ${{ inputs.generate_ded == 'true' }}
         run: |
           mkdir -p output/DED/
 
@@ -40,6 +47,7 @@ jobs:
             --output-dir output/DED/
 
       - name: Organize Error Checks
+        if: ${{ inputs.generate_error_checks == 'true' }}
         run: |
           mkdir -p output/CSV/
 
@@ -48,6 +56,7 @@ jobs:
             --output-dir output/CSV/
 
       - name: Create Timestamp
+        if: ${{ inputs.generate_ded == 'true' || inputs.generate_error_checks == 'true' }}
         id: timestamp
         run: |
           mkdir -p output
@@ -56,6 +65,7 @@ jobs:
           echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
 
       - name: Upload artifact
+        if: ${{ inputs.generate_ded == 'true' || inputs.generate_error_checks == 'true' }}
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.timestamp.outputs.timestamp }}-release-files
