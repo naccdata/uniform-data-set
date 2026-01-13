@@ -189,9 +189,10 @@ def main():
                         help="Target output directory to write results to")
 
     args = parser.parse_args()
-    log.info(f"modules:\t{args.modules}")
+    modules = args.modules.lower()
+    log.info(f"modules:\t{modules}")
 
-    for raw_module in args.modules.split(','):
+    for raw_module in modules.split(','):
         module = ModuleType(raw_module.strip())
 
         for visit in PACKET_MAPPING.get(module, [None]):
