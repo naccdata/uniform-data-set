@@ -40,7 +40,7 @@ b9,I,12i. Participant currently manifests meaningful change in behavior - Psycho
 b9,I,"12i1. IF YES, do the auditory hallucinations include simple sounds like knocks or other simple sounds?",BEAHSIMP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[beahall]='1'
 b9,I,"12i2. IF YES, do the auditory hallucinations include complex sounds like voices speaking words, or music?",BEAHCOMP,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[beahall]='1'
 b9,I,12j. Participant currently manifests meaningful change in behavior - Delusions ,BEDEL,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe] = '1'
-b9,I,12k. Participant currently manifests meaningful change in behavior — Aggression,BEAGGRS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe] = '1'
+b9,I,12k. Participant currently manifests meaningful change in behavior â€” Aggression,BEAGGRS,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe] = '1'
 b9,I,"12l. If any of the psychosis and impulse control-related behavioral symptoms in 12h-12k are present, at what age did they begin?",PSYCHAGE,No,Integers 5-110,5-110,Integer,[bevhall]='1' or [bevpatt]='1' or [bevwell]='1' or [beahall]='1' or [beahsimp]='1' or [beahcomp]='1' or [bedel]='1' or [beaggrs]='1'
 b9,I,12m. Participant currently manifests meaningful change in behavior - Disinhibition,BEDISIN,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1'
 b9,I,12n. Participant currently manifests meaningful change in behavior - Personality change,BEPERCH,No,"Integers 0-1, 9","0, No|1, Yes|9, Unknown",Integer,[decclbe]='1'

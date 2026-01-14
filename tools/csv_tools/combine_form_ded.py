@@ -167,7 +167,10 @@ def generate_ded(module: ModuleType,
     Filename follows module-version-packet-ded-date.csv format
     """
     module_name = module.value
-    formver = FORM_VER_MAPPING.get(module.value)
+    formver = FORM_VER_MAPPING.get(module)
+    if not formver:
+        raise ValueError(f"no formver found for {module.value}")
+
     if not target_date:
         target_date = datetime.today().strftime("%m%d%Y")
 
@@ -178,11 +181,16 @@ def generate_ded(module: ModuleType,
         # all formvers reduce to ints unless LBD
         formver = str(int(float(formver)))
 
+        # also update module names for enrollment
+        if module.value == ModuleType.ENROLLMENT.value:
+            module_name = "enroll"
+
     if visit:
         filename = f"{module_name}-v{formver}-{visit.value}-ded-{target_date}.csv"
     else:
         filename = f"{module_name}-v{formver}-ded-{target_date}.csv"
 
+    filename = f'{target_dir}/{filename}'
     log.info(f"Generating DED {filename}")
 
     generator = DedGenerator(module=module, visit=visit)
