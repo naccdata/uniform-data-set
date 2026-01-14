@@ -13,7 +13,7 @@ import logging
 import os
 import pandas as pd
 import csv
-from datetime import date
+from datetime import datetime
 
 from convert_to_utf8 import convert_to_utf8
 from form_organizer import FormOrganizer
@@ -159,25 +159,43 @@ class DedGenerator(FormOrganizer):
 
 
 def generate_ded(module: ModuleType,
-         visit: VisitType | None = None,
-         target_dir: str = './work/combined_ded') -> str:
+                 visit: VisitType | None = None,
+                 target_dir: str = './work/combined_ded',
+                 target_date: str = None) -> str:
+    """Generate the DED.
 
-    # replace LBD long/short with versions
-    module_name = module.value.lower().replace('/long', '_3.1').replace('/short', '_3.0')
+    Filename follows module-version-packet-ded-date.csv format
+    """
+    module_name = module.value
+    formver = FORM_VER_MAPPING.get(module)
+    if not formver:
+        raise ValueError(f"no formver found for {module.value}")
+
+    if not target_date:
+        target_date = datetime.today().strftime("%m%d%Y")
+
+    if module.value in [ModuleType.LBD_LONG.value, ModuleType.LBD_SHORT.value]:
+        # long/short lbd determined by version in naming scheme
+        module_name = "lbd"
+    else:
+        # all formvers reduce to ints unless LBD
+        formver = str(int(float(formver)))
+
+        # also update module names for enrollment
+        if module.value == ModuleType.ENROLLMENT.value:
+            module_name = "enroll"
 
     if visit:
-        log.info(f"Generating DED for {module} {visit}")
-        output_filename = f'{target_dir}/{date.today()}_{module_name}_{visit.value.lower()}_ded.csv'
+        filename = f"{module_name}-v{formver}-{visit.value}-ded-{target_date}.csv"
     else:
-        log.info(f"Generating DED for {module}")
-        output_filename = f'{target_dir}/{date.today()}_{module_name}_ded.csv'
+        filename = f"{module_name}-v{formver}-ded-{target_date}.csv"
 
-    generator = DedGenerator(
-        module=module,
-        visit=visit)
+    filename = f'{target_dir}/{filename}'
+    log.info(f"Generating DED {filename}")
 
-    generator.generate(output_filename)
-    return output_filename
+    generator = DedGenerator(module=module, visit=visit)
+    generator.generate(filename)
+    return filename
 
 
 def main():
@@ -187,11 +205,15 @@ def main():
                             + "Will generate a DED for all relevant visits (e.g. IVP/FVP)")
     parser.add_argument('-o', '--output-dir', dest='output_dir', type=str, required=True,
                         help="Target output directory to write results to")
+    parser.add_argument('-d', '--target-date', dest='target_date', type=str, required=False,
+                        help="Target date (in MMDDYYYY format) to use for DED filenames; "
+                             + "defaults to today if not specified")
 
     args = parser.parse_args()
-    log.info(f"modules:\t{args.modules}")
+    modules = args.modules.lower()
+    log.info(f"modules:\t{modules}")
 
-    for raw_module in args.modules.split(','):
+    for raw_module in modules.split(','):
         module = ModuleType(raw_module.strip())
 
         for visit in PACKET_MAPPING.get(module, [None]):
@@ -199,7 +221,7 @@ def main():
             if visit == VisitType.I4:
                 continue
 
-            generate_ded(module, visit, args.output_dir)
+            generate_ded(module, visit, args.output_dir, args.target_date)
 
 if __name__ == "__main__":
     main()
