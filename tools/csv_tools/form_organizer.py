@@ -206,6 +206,6 @@ class FormOrganizer(ABC):
 
         # Copy legacy DS forms identical to current version
         if self.module == ModuleType.DS_LEGACY:
-            ds_current_root = subdir.replace('legacy', 'current')
+            ds_current_root = self.root_dir.replace('legacy', 'current')
             for subdir, dirs, files in os.walk(ds_current_root):
                 self.handle_legacy_ds(subdir)
