@@ -221,10 +221,6 @@ def main():
     for raw_module in modules.split(','):
         module = ModuleType(raw_module.strip())
 
-        # Skip legacy DS module (no change in DED)
-        if module.value == 'ds/legacy':
-            continue
-
         for visit in PACKET_MAPPING.get(module, [None]):
             # ignore I4 packets
             if visit == VisitType.I4:
