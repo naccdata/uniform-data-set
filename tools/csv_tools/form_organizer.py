@@ -205,7 +205,7 @@ class FormOrganizer(ABC):
                                  override_visit=VisitType.IVP)
 
         # Copy legacy DS forms identical to current version
-        if self.module in [ModuleType.DS_LEGACY]:
+        if self.module == ModuleType.DS_LEGACY:
             ds_current_root = subdir.replace('legacy', 'current')
             for subdir, dirs, files in os.walk(ds_current_root):
-                self.handle_legacy_ds(subdir, file_found)
+                self.handle_legacy_ds(subdir)
