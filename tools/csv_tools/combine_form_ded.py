@@ -106,7 +106,8 @@ class DedGenerator(FormOrganizer):
                 self.header_df = df
                 return True
             else:
-                self.combined_df = pd.concat([self.combined_df, df], ignore_index=True)
+                self.combined_df = pd.concat(
+                    [self.combined_df, df], ignore_index=True)
         except Exception as e:
             log.warning(f'File {file_path} threw an exception: {e}')
 
@@ -148,13 +149,15 @@ class DedGenerator(FormOrganizer):
         if self.header_df is None and self.module.has_packet():
             log.warning(f"No header file found for {self.module}")
 
-        self.combined_df = pd.concat([self.header_df, self.combined_df], ignore_index=True)
+        self.combined_df = pd.concat(
+            [self.header_df, self.combined_df], ignore_index=True)
 
         # Ensure the output directory exists
         ensure_directory_exists(output_filename)
 
         # Export the combined DataFrame to a CSV file
-        self.combined_df.to_csv(output_filename, index=False, quoting=csv.QUOTE_MINIMAL)
+        self.combined_df.to_csv(
+            output_filename, index=False, quoting=csv.QUOTE_MINIMAL)
         log.info(f"DED file saved as {output_filename}")
 
 
@@ -177,6 +180,8 @@ def generate_ded(module: ModuleType,
     if module.value in [ModuleType.LBD_LONG.value, ModuleType.LBD_SHORT.value]:
         # long/short lbd determined by version in naming scheme
         module_name = "lbd"
+    elif module.value in [ModuleType.DS_CURRENT.value, ModuleType.DS_LEGACY.value]:
+        module_name = "ds"
     else:
         # all formvers reduce to ints unless LBD
         formver = str(int(float(formver)))
@@ -202,7 +207,7 @@ def main():
     parser = argparse.ArgumentParser(prog='Generates DEDs')
     parser.add_argument('-m', '--modules', dest='modules', type=str, required=True,
                         help="Comma-deliminated list of modules to generate DED(s) for. "
-                            + "Will generate a DED for all relevant visits (e.g. IVP/FVP)")
+                        + "Will generate a DED for all relevant visits (e.g. IVP/FVP)")
     parser.add_argument('-o', '--output-dir', dest='output_dir', type=str, required=True,
                         help="Target output directory to write results to")
     parser.add_argument('-d', '--target-date', dest='target_date', type=str, required=False,
@@ -222,6 +227,7 @@ def main():
                 continue
 
             generate_ded(module, visit, args.output_dir, args.target_date)
+
 
 if __name__ == "__main__":
     main()

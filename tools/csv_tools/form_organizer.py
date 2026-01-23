@@ -12,7 +12,8 @@ from abc import ABC, abstractmethod
 
 from module_configurations import (
     REPO_ROOT,
-    STATIC_LBD_FORMS,
+    IDENTICAL_LEGACY_DS_FORMS,
+    FVP_SAME_AS_IVP_DS_FORMS,
     FileClassification,
     ModuleType,
     VisitType,
@@ -43,7 +44,7 @@ class FormOrganizer(ABC):
                 subdir: str,
                 file: str,
                 file_found: bool,
-                override_visit: str = None) -> bool:
+                override_visit: VisitType = None) -> bool:
         """Abstract method for subclasses to define. Performs
         the main executional function of the subclass.
 
@@ -73,7 +74,8 @@ class FormOrganizer(ABC):
             # Check if the filename matches the pattern
             return (file.endswith(self.classification)  # needs to end with correct postfix
                     and file.startswith('form_')        # must be a form CSV
-                    and f"_{visit}_" in file)           # must be a visit we care about
+                    # must be a visit we care about
+                    and f"_{visit}_" in file)
 
         # preprocessing uses different naming convention and only has error checks
         if self.module == ModuleType.PREPROCESS:
@@ -84,7 +86,7 @@ class FormOrganizer(ABC):
         elif self.module == ModuleType.ENROLLMENT:
             return file.endswith(self.classification)
 
-        # all others (BDS, CLS, NP, Milestones, etc.) start with form but do not
+        # all others (BDS, CLS, NP, Milestones, etc.) start with form but do not have packet
         return file.endswith(self.classification) and file.startswith('form_')
 
     @abstractmethod
@@ -122,7 +124,8 @@ class FormOrganizer(ABC):
         if self.visit == VisitType.FVP:
             # LBD Short FVP special case
             if self.module == ModuleType.LBD_SHORT:
-                file_found = self.handle_lbd_short_fvp(form, subdir, long_subdir, file_found)
+                file_found = self.handle_lbd_short_fvp(
+                    form, subdir, long_subdir, file_found)
 
             # 1. In general, for any FVP, grab from the IVP directory (this case is for LBD Long FVP)
             if not file_found:
@@ -136,6 +139,41 @@ class FormOrganizer(ABC):
                 file_found = self.execute(long_subdir, file, file_found)
 
         # LBD Long IVP should have had its own file, so we're done here
+        return file_found
+
+    def handle_legacy_ds(self, subdir: str, file_found: bool) -> bool:
+        """Handle legacy DS checks,
+        some forms needs to be copied from current checks.
+
+        Args:
+            subdir: The subdirectory to search in
+            file_found: Whether or not we've found a file for this form yet
+
+        Returns:
+            Whether or not the file was found
+        """
+        current_subdir = subdir.replace('legacy', 'current')
+        form = subdir.split('/')[-1].strip()
+
+        # B1D and D1D have legacy specific error checks
+        # return False here, so any missing FVP will be copied from legacy IVP version
+        if form not in IDENTICAL_LEGACY_DS_FORMS:
+            return False
+
+        # For DSM v3 IVP, grab from DSM v4
+        if self.visit == VisitType.IVP:
+            for file in os.listdir(current_subdir):
+                file_found = self.execute(current_subdir, file, file_found)
+
+        # For DSM v3 FVP, grab from DSM v4
+        if self.visit == VisitType.FVP:
+            for file in os.listdir(current_subdir):
+                if form in FVP_SAME_AS_IVP_DS_FORMS:
+                    file_found = self.execute(current_subdir, file, file_found,
+                                              override_visit=VisitType.IVP)
+                else:
+                    file_found = self.execute(current_subdir, file, file_found)
+
         return file_found
 
     def run(self) -> None:
@@ -159,13 +197,19 @@ class FormOrganizer(ABC):
             #   3. For LBD Short (3.1) FVP, grab from either LBD Short IVP OR for special cases:
             #       - Look for LBD Long FVP
             #       - If not found, look at LBD Long IVP
+            #   4. For legacy DS, copy from current DS
 
             # Handle the LBD cases
             if self.module in [ModuleType.LBD_LONG, ModuleType.LBD_SHORT]:
                 file_found = self.handle_lbd(subdir, file_found)
 
+            # Handle legacy DS cases
+            if self.module in [ModuleType.DS_LEGACY]:
+                file_found = self.handle_legacy_ds(subdir, file_found)
+
             # everything else should be an FVP grabbing from the IVP directory; this is
             # the last case so we don't care about the result
             if not file_found:
                 for file in os.listdir(subdir):
-                    self.execute(subdir, file, file_found, override_visit=VisitType.IVP)
+                    self.execute(subdir, file, file_found,
+                                 override_visit=VisitType.IVP)
