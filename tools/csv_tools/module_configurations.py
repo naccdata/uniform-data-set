@@ -177,11 +177,11 @@ ERROR_CODE_MAPPING = {
         VisitType.FVP: '-lbd3.1fvp-'
     },
     ModuleType.DS_LEGACY: {
-        VisitType.IVP: '-ivp-',
-        VisitType.FVP: '-fvp-'
+        VisitType.IVP: '-dsivp-',
+        VisitType.FVP: '-dsfvp-'
     },
     ModuleType.DS_CURRENT: {
-        VisitType.IVP: '-ivp-',
-        VisitType.FVP: '-fvp-'
+        VisitType.IVP: '-dsivp-',
+        VisitType.FVP: '-dsfvp-'
     }
 }

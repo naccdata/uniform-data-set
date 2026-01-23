@@ -29,11 +29,13 @@ class ErrorCheckPreparer(FormOrganizer):
 
         # set up the target directory. follows same structure as rule defs, e.g.
         # MODULE / FORM_VER / PACKET*
-        self.target_dir = Path(target_dir) / MODULE_MAPPING.get(self.module, self.module.value.upper()) / FORM_VER_MAPPING[self.module]
+        self.target_dir = Path(target_dir) / MODULE_MAPPING.get(self.module,
+                                                                self.module.value.upper()) / FORM_VER_MAPPING[self.module]
 
         # not all modules have packets - only those with initial/followups
         if self.module.has_packet():
-            self.target_dir = self.target_dir / PACKET_MAPPING[self.module][self.visit]
+            self.target_dir = self.target_dir / \
+                PACKET_MAPPING[self.module][self.visit]
 
         self.target_dir.mkdir(parents=True, exist_ok=True)
 
@@ -106,7 +108,7 @@ class ErrorCheckPreparer(FormOrganizer):
             fvp_code = ERROR_CODE_MAPPING[self.module][VisitType.FVP]
             contents = contents.replace(ivp_code, fvp_code)
 
-        # for LBD SHORT (e.g. 3.1), error codes also need the 3.1 in them 
+        # for LBD SHORT (e.g. 3.1), error codes also need the 3.1 in them
         if self.module == ModuleType.LBD_SHORT:
             target_code = ERROR_CODE_MAPPING[self.module][self.visit]
 
@@ -143,7 +145,8 @@ class ErrorCheckPreparer(FormOrganizer):
                 file_found = self.execute(subdir, file, file_found,
                                           override_visit=VisitType.IVP)
                 if not file_found:
-                    raise FileNotFoundError(f"3.1 FVP LBD form {form} must grab M/C from 3.1 IVP")
+                    raise FileNotFoundError(
+                        f"3.1 FVP LBD form {form} must grab M/C from 3.1 IVP")
 
         elif self.classification == FileClassification.ERROR_CHECK_P:
             # p same as 3.1 IVP
@@ -152,14 +155,16 @@ class ErrorCheckPreparer(FormOrganizer):
                 file_found = self.execute(subdir, file, file_found,
                                           override_visit=VisitType.IVP)
                 if not file_found:
-                    raise FileNotFoundError(f"3.1 FVP LBD form {form} must grab P from 3.1 IVP")
+                    raise FileNotFoundError(
+                        f"3.1 FVP LBD form {form} must grab P from 3.1 IVP")
 
             # p same as 3.0 FVP
             if form in ['b1l', 'b2l', 'b6l']:
                 file = f'form_{form}_fvp_error_checks_p.csv'
                 file_found = self.execute(long_subdir, file, file_found)
                 if not file_found:
-                    raise FileNotFoundError(f"3.1 FVP LBD form {form} must grab P from 3.0 FVP")
+                    raise FileNotFoundError(
+                        f"3.1 FVP LBD form {form} must grab P from 3.0 FVP")
 
             # c1l specifically is same as 3.0 IVP
             if form in ['c1l']:
@@ -167,16 +172,18 @@ class ErrorCheckPreparer(FormOrganizer):
                 file_found = self.execute(long_subdir, file, file_found,
                                           override_visit=VisitType.IVP)
                 if not file_found:
-                    raise FileNotFoundError(f"3.1 FVP LBD form {form} must grab P from 3.0 IVP")
+                    raise FileNotFoundError(
+                        f"3.1 FVP LBD form {form} must grab P from 3.0 IVP")
         else:
             raise ValueError(f"Invalid classification: {self.classification}")
-
 
         # always return True because we assume it is explicitly handled (error thrown otherwise)
         return True
 
+
 def main():
-    parser = argparse.ArgumentParser(prog='Organizes the error check CSVs for upload to S3 and import into REDCap')
+    parser = argparse.ArgumentParser(
+        prog='Organizes the error check CSVs for upload to S3 and import into REDCap')
     parser.add_argument('-m', '--modules', dest='modules', type=str, required=True,
                         help="Comma-deliminated list of modules to organize CSVs for.")
     parser.add_argument('-o', '--output-dir', dest='output_dir', type=str, required=True,
