@@ -141,40 +141,34 @@ class FormOrganizer(ABC):
         # LBD Long IVP should have had its own file, so we're done here
         return file_found
 
-    def handle_legacy_ds(self, subdir: str, file_found: bool) -> bool:
+    def handle_legacy_ds(self, subdir: str):
         """Handle legacy DS checks,
-        some forms needs to be copied from current checks.
+        some forms need to be copied from current checks.
 
         Args:
             subdir: The subdirectory to search in
-            file_found: Whether or not we've found a file for this form yet
-
-        Returns:
-            Whether or not the file was found
         """
-        current_subdir = subdir.replace('legacy', 'current')
         form = subdir.split('/')[-1].strip()
 
         # B1D and D1D have legacy specific error checks
-        # return False here, so any missing FVP will be copied from legacy IVP version
+        # these are already handled in the regular workflow
         if form not in IDENTICAL_LEGACY_DS_FORMS:
-            return False
+            return
 
         # For DSM v3 IVP, grab from DSM v4
+        file_found = False
         if self.visit == VisitType.IVP:
-            for file in os.listdir(current_subdir):
-                file_found = self.execute(current_subdir, file, file_found)
+            for file in os.listdir(subdir):
+                file_found = self.execute(subdir, file, file_found)
 
         # For DSM v3 FVP, grab from DSM v4
         if self.visit == VisitType.FVP:
-            for file in os.listdir(current_subdir):
+            for file in os.listdir(subdir):
                 if form in FVP_SAME_AS_IVP_DS_FORMS:
-                    file_found = self.execute(current_subdir, file, file_found,
+                    file_found = self.execute(subdir, file, file_found,
                                               override_visit=VisitType.IVP)
                 else:
-                    file_found = self.execute(current_subdir, file, file_found)
-
-        return file_found
+                    file_found = self.execute(subdir, file, file_found)
 
     def run(self) -> None:
         """Loop through the forms."""
@@ -203,13 +197,15 @@ class FormOrganizer(ABC):
             if self.module in [ModuleType.LBD_LONG, ModuleType.LBD_SHORT]:
                 file_found = self.handle_lbd(subdir, file_found)
 
-            # Handle legacy DS cases
-            if self.module in [ModuleType.DS_LEGACY]:
-                file_found = self.handle_legacy_ds(subdir, file_found)
-
             # everything else should be an FVP grabbing from the IVP directory; this is
             # the last case so we don't care about the result
             if not file_found:
                 for file in os.listdir(subdir):
                     self.execute(subdir, file, file_found,
                                  override_visit=VisitType.IVP)
+
+        # Copy legacy DS forms identical to current version
+        if self.module in [ModuleType.DS_LEGACY]:
+            ds_current_root = subdir.replace('legacy', 'current')
+            for subdir, dirs, files in os.walk(ds_current_root):
+                self.handle_legacy_ds(subdir, file_found)
