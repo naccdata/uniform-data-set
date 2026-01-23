@@ -180,6 +180,8 @@ def generate_ded(module: ModuleType,
     if module.value in [ModuleType.LBD_LONG.value, ModuleType.LBD_SHORT.value]:
         # long/short lbd determined by version in naming scheme
         module_name = "lbd"
+    elif module.value in [ModuleType.DS_CURRENT.value, ModuleType.DS_LEGACY.value]:
+        module_name = "ds"
     else:
         # all formvers reduce to ints unless LBD
         formver = str(int(float(formver)))
