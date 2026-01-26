@@ -58,7 +58,7 @@ class ModuleType(Enum):
     DS_CURRENT = 'ds/current'
     DS_LEGACY = 'ds/legacy'
     MILESTONES = 'milestones'
-    NP = 'np',
+    NP = 'np'
     UDS_LEGACY = 'udsv3'
 
     @classmethod
