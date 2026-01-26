@@ -180,15 +180,17 @@ def generate_ded(module: ModuleType,
     if module.value in [ModuleType.LBD_LONG.value, ModuleType.LBD_SHORT.value]:
         # long/short lbd determined by version in naming scheme
         module_name = "lbd"
-    elif module.value in [ModuleType.DS_CURRENT.value, ModuleType.DS_LEGACY.value]:
+    if module.value in [ModuleType.DS_CURRENT.value, ModuleType.DS_LEGACY.value]:
         module_name = "ds"
-    else:
+    if module.value == ModuleType.UDS_LEGACY.value:
+        module_name = "uds"
+    if module.value == ModuleType.ENROLLMENT.value:
+        # also update module names for enrollment
+        module_name = "enroll"
+
+    if module_name != "lbd":
         # all formvers reduce to ints unless LBD
         formver = str(int(float(formver)))
-
-        # also update module names for enrollment
-        if module.value == ModuleType.ENROLLMENT.value:
-            module_name = "enroll"
 
     if visit:
         filename = f"{module_name}-v{formver}-{visit.value}-ded-{target_date}.csv"
