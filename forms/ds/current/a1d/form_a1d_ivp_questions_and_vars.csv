@@ -25,7 +25,7 @@ a1d,IDS,15. Musculoskeletal conditions - osteoporosis/osteopenia,DSOSTEO,Always 
 a1d,IDS,16. Musculoskeletal conditions - gout,DSGOUT,Always ,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
 a1d,IDS,17. Musculoskeletal conditions - atlanto-axial subluxation,DSATAXSU,Always ,"0-1, 9","0, Absent | 1, Present | 9, Unknown",Integer,
 a1d,IDS,18. Musculoskeletal conditions - fractures in the past five years,DSFRACT,Always ,"0-1, 9","0, Absent | 1, Present | 9, Unknown",Integer,
-a1d,IDS,18a. Fractures in the past five years: Specify,DSFRACTX,Conditional (e.g. skip pattern),text,,Integer,"[dsfract] = ""1"""
+a1d,IDS,18a. Fractures in the past five years: Specify,DSFRACTX,Conditional (e.g. skip pattern),text,,String,"[dsfract] = ""1"""
 a1d,IDS,19. Endocrine/metabolic conditions - Hypothyroidism,DSHYPOTH,Always ,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
 a1d,IDS,20. Endocrine/metabolic conditions - Hashimoto's thyroiditis,DSHASHIM,Always ,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
 a1d,IDS,21. Endocrine/metabolic conditions - hyperthyroidism,DSHYPER,Always ,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
@@ -70,3 +70,4 @@ a1d,IDS,43a. Year of most recent oncology surgery,DSONCSYR,Conditional (e.g. ski
 a1d,IDS,44. Major surgical procedures - other surgery,DSOTHSRG,Always ,"0-1, 9","0, No | 1, Yes {dsothsrx} | 9, Unknown",Integer,
 a1d,IDS,44.1. Other surgery: Specify,DSOTHSRX,Conditional (e.g. skip pattern),text,,String,[dsothsrg] = '1'
 a1d,IDS,44a. Year of most recent other surgery,DSOTHSYR,Conditional (e.g. skip pattern),"1900 - current year, 9999","1900- current year | 9999, Unknown",Integer,[dsothsrg] = '1'
+
