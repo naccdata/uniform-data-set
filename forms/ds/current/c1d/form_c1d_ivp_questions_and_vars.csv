@@ -49,8 +49,8 @@ c1d,IDS,"Q2d10. Test trial - Trial 3, intrusions to free recall",DSCRT3IF,Condit
 c1d,IDS,"Q2d11. Test trial - Trial 3, cued recall",DSCRT3CR,Conditional (e.g. skip pattern),Integers 0-12,0-12,Integer,"[dscradm] = ""1"""
 c1d,IDS,"Q2d12. Test trial - Trial 3, intrusions to cued recall",DSCRT3IC,Conditional (e.g. skip pattern),Integers 0-999,0-999,Integer,"[dscradm] = ""1"""
 c1d,IDS,Q2d13. Free recall - Total,DSCRTTFR,Conditional (e.g. skip pattern),Integers 0-36,0-36,Integer,"[dscradm] = ""1"""
-c1d,IDS,Q2d14. Intrusions to free recall - Total,DSCRTTIF,Conditional (e.g. skip pattern),Integers 0-999,0-999,Integer,"[dscradm] = ""1"""
+c1d,IDS,Q2d14. Intrusions to free recall - Total,DSCRTTIF,Conditional (e.g. skip pattern),Integers 0-2997,0-2997,Integer,"[dscradm] = ""1"""
 c1d,IDS,Q2d15. Cued recall - Total,DSCRTTCR,Conditional (e.g. skip pattern),Integers 0-36,0-36,Integer,"[dscradm] = ""1"""
-c1d,IDS,Q2d16. Intrusions to cued recall - Total,DSCRTTIC,Conditional (e.g. skip pattern),Integers 0-999,0-999,Integer,"[dscradm] = ""1"""
+c1d,IDS,Q2d16. Intrusions to cued recall - Total,DSCRTTIC,Conditional (e.g. skip pattern),Integers 0-2997,0-2997,Integer,"[dscradm] = ""1"""
 c1d,IDS,Q3a. Participant behavior during: DSMSE,DSMSEBEH,Always,"Integers 1-3, 9","1, Cooperative and engaged | 2, Cooperative but distracted | 3, Uncooperative | 9, Not administered",Integer,
 c1d,IDS,Q3b. Participant behavior during: Cued Recall Task,DSCRBEH,Always,"Integers 1-3, 9","1, Cooperative and engaged | 2, Cooperative but distracted | 3, Uncooperative | 9, Not administered",Integer,
