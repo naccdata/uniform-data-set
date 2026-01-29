@@ -153,7 +153,7 @@ a1-ivp-m-145,145,Error,a1,I,REFOTHX,Missingness,REFOTHX conditionally blank,If R
 a1-ivp-m-146,146,Error,a1,I,FRMDATEA1,Missingness,FRMDATEA1 must be present,FRMDATEA1 cannot be blank,Q0a. FRMDATEA1 (A1 form date) cannot be blank,If FRMDATEA1=blank,,,Yes,No,
 a1-ivp-c-147,147,Error,a1,I,FRMDATEA1,Conformity,FRMDATEA1 conforms,FRMDATEA1 must be a date,Q0a. FRMDATEA1 (A1 form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATEA1 is not mm/dd/yyyy or yyyy/mm/dd,,,Yes,No,
 a1-ivp-m-148,148,Error,a1,I,LANGA1,Missingness,LANGA1 must be present,LANGA1 cannot be blank,Q0c. LANGA1 (Language of A1 administration) cannot be blank,If LANGA1=blank,,,Yes,Yes,
-a1-ivp-c-149,149,Error,a1,I,LANGA1,Conformity,LANGA1 conforms,LANGA1 must be an integer between 1-2,Q0c. LANGA1 (Language of A1 administration) must be an integer between 1-2,If LANGA1<1 or LANGA1>2,,,Yes,Yes,
+a1-ivp-c-149,149,Error,a1,I,LANGA1,Conformity,LANGA1 conforms,LANGA1 must be an integer between 1-6,Q0c. LANGA1 (Language of A1 administration) must be an integer between 1-6,If LANGA1<1 or LANGA1>6,,,Yes,Yes,
 a1-ivp-m-150,150,Error,a1,I,MODEA1,Missingness,MODEA1 must be present,MODEA1 cannot be blank,Q0d. MODEA1 (A1 in person or remote) cannot be blank,If MODEA1=blank,,,Yes,No,
 a1-ivp-c-151,151,Error,a1,I,MODEA1,Conformity,MODEA1 conforms,MODEA1 must be an integer between 1-2,Q0d. MODEA1 (A1 in person or remote) must be an integer between 1-2,If MODEA1 < 1 or MODEA1 > 2,,,Yes,No,
 a1-ivp-m-152,152,Error,a1,I,RMREASA1,Missingness,RMREASA1 conditionally present,"If MODEA1= 2, RMREASA1 cannot be blank",If Q0d. MODEA1 (A1 in person or remote) = 2 (Remote) then Q0d1. RMREASA1 (Reason for remote A1) cannot be blank,If MODEA1 = 2 and RMREASA1 = blank,,"MODEA1, RMREASA1",Yes,No,
