@@ -1,7 +1,7 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
 a5d2,I,0a. A5D2 Participant Health History - Form date,FRMDATEA5D2,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 a5d2,I,0b. A5D2 Participant Health History - Examiner's initials,INITIALSA5D2,No,text,,String,
-a5d2,I,0c. A5D2 Participant Health History - Language,LANGA5D2,Always,Integers 1-2,"1, English|2, Spanish",Integer,
+a5d2,I,0c. A5D2 Participant Health History - Language,LANGA5D2,Always,Integers 1-6,"1, English|2, Spanish|3, Mandarin - Traditional |4, Mandarin - Simplified|5, Cantonese- Traditional |6, Cantonese - Simplified",Integer,
 a5d2,I,0d. A5D2 Participant Health History - In-person or remote?,MODEA5D2,Always,Integers 1-2,"1, In-person|2, Remote",Integer,
 a5d2,I,"0d1. If 'A5D2 Participant Health History'  form was completed remotely, specify reason",RMREASA5D2,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea5d2]='2'
 a5d2,I,0d1a. What modality was used to collect this remote 'A5D2 Participant Health History' form?,RMMODEA5D2,Conditional,Integers 1-2,"1, Telephone|2, Video",Integer,[modea5d2]='2'
