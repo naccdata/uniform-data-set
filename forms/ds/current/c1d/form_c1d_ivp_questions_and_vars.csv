@@ -1,6 +1,6 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-c1d,IDS,0a. C1D Neuropsychological Battery Scores - Form date,FRMDATE_C1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
-c1d,IDS,0b. C1D Neuropsychological Battery Scores - Examiner's initials,INITIALS_C1D,No,Any text,,String,
+c1d,IDS,0a. C1D Neuropsychological Battery Scores - Form date,FRMDATEC1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+c1d,IDS,0b. C1D Neuropsychological Battery Scores - Examiner's initials,INITIALSC1D,No,Any text,,String,
 c1d,IDS,Q1. Was any part of the DSMSE administered?,DSMSEADM,Always,Integers 0-1,"0, No | 1, Yes",Integer,
 c1d,IDS,Q1a. Was not administered: Specify reason,DSMSEREA,Conditional (e.g. skip pattern),Integers 95-98,"95, Physical problem | 96, Cognitive/behavior problem | 97, Other problem | 98, Verbal refusal",Integer,"[dsmseadm] = ""0"""
 c1d,IDS,Q1a1. Personal information,DSPRSINF,Conditional (e.g. skip pattern),Integers 0-8,"0-7 | 8, Not assessed",Integer,"[dsmseadm] = ""1"""
