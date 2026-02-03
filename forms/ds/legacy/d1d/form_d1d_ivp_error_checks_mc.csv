@@ -1,6 +1,6 @@
 error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
-d1d-dsivp-m-001,001,Error,d1d,IDS,FRMDATE_D1D,Missingness,FRMDATE_D1D must be present,FRMDATE_D1D cannot be blank,Q0a. FRMDATE_D1D (D1D form date) cannot be blank ,If FRMDATE_D1D = blank,,,,,
-d1d-dsivp-c-002,002,Error,d1d,IDS,FRMDATE_D1D,Conformity,FRMDATE_D1D conforms,FRMDATE_D1D must be a date,Q0a. FRMDATE_D1D (D1D form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATE_D1D is not mm/dd/yyyy or yyyy/mm/dd,,,,,
+d1d-dsfvp-m-001,001,Error,d1d,FDS,FRMDATED1D,Missingness,FRMDATED1D must be present,FRMDATED1D cannot be blank,Q0a. FRMDATED1D (D1D form date) cannot be blank ,If FRMDATED1D = blank,,,,,
+d1d-dsfvp-c-002,002,Error,d1d,FDS,FRMDATED1D,Conformity,FRMDATED1D conforms,FRMDATED1D must be a date,Q0a. FRMDATED1D (D1D form date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If FRMDATED1D is not mm/dd/yyyy or yyyy/mm/dd,,,,,
 d1d-dsivp-m-003,003,Error,d1d,IDS,DSHEADCM,Missingness,DSHEADCM must be present,DSHEADCM cannot be blank,Q1. DSHEADCM (Head circumference (cm)) cannot be blank,IF DSHEADCM = blank,,,,,
 d1d-dsivp-c-004,004,Error,d1d,IDS,DSHEADCM,Conformity,DSHEADCM conforms,DSHEADCM must be an integer between 45-70 or 888,Q1. DSHEADCM (Head circumference (cm)) must be an integer between 45-70 or 888,IF DSHEADCM < 45 or (DSHEADCM > 70 and ne 888),,,,,
 d1d-dsivp-m-005,005,Error,d1d,IDS,DSGRASP,Missingness,DSGRASP must be present,DSGRASP cannot be blank,Q2. DSGRASP (Pathological reflexes - grasp) cannot be blank,IF DSGRASP = blank,,,,,

@@ -1,6 +1,6 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-a1d,IDS,0a. A1D Participant Health History - Form date,FRMDATE_A1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
-a1d,IDS,0b. A1D PParticipant Health History - Examiner's initials,INITIALS_A1D,No,Any text,,String,
+a1d,IDS,0a. A1D Participant Health History - Form date,FRMDATEA1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+a1d,IDS,0b. A1D Participant Health History - Examiner's initials,INITIALSA1D,No,Any text,,String,
 a1d,IDS,1a. Participant's weekday activities: Day Program,DSDAYPRG,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
 a1d,IDS,1b. Participant's weekday activities: Workshops,DSWRKSHP,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
 a1d,IDS,1c. Participant's weekday activities: Stays at home,DSHOME,Always,"0-1, 9","0, No | 1, Yes | 9, Unknown",Integer,
@@ -70,4 +70,3 @@ a1d,IDS,43a. Year of most recent oncology surgery,DSONCSYR,Conditional (e.g. ski
 a1d,IDS,44. Major surgical procedures - other surgery,DSOTHSRG,Always ,"0-1, 9","0, No | 1, Yes {dsothsrx} | 9, Unknown",Integer,
 a1d,IDS,44.1. Other surgery: Specify,DSOTHSRX,Conditional (e.g. skip pattern),text,,String,[dsothsrg] = '1'
 a1d,IDS,44a. Year of most recent other surgery,DSOTHSYR,Conditional (e.g. skip pattern),"1900 - current year, 9999","1900- current year | 9999, Unknown",Integer,[dsothsrg] = '1'
-

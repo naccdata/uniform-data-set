@@ -1,6 +1,6 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-b2d,IDS,0a. B2D Participant Demographics - Form date,FRMDATE_B2D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
-b2d,IDS,0b. B2D Participant Demographics - Examiner's initials,INITIALS_B2D,No,text,,String,
+b2d,IDS,0a. B2D Participant Demographics - Form date,FRMDATEB2D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+b2d,IDS,0b. B2D Participant Demographics - Examiner's initials,INITIALSB2D,No,text,,String,
 b2d,IDS,"1a. Short-term memory, page 2",DSDLDST2,Always,Integers 0-4,"0, 0|1,1|2, 2|3, 3|4,4",Integer,
 b2d,IDS,"1b. Short-term memory, page 4",DSDLDST4,Always,Integers 0-2,"0, 0|1,1|2, 2",Integer,
 b2d,IDS,"1c. Short-term memory, page 5",DSDLDST5,Always,Integers 0-4,"0, 0|1,1|2, 2|3, 3|4,4",Integer,
