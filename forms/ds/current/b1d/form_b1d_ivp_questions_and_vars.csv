@@ -1,6 +1,6 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-b1d,IDS,0a. B1D Participant Demographics - Form date,FRMDATE_B1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
-b1d,IDS,0b. B1D Participant Demographics - Examiner's initials,INITIALS_B1D,No,Any text,,String,
+b1d,IDS,0a. B1D Participant Demographics - Form date,FRMDATEB1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+b1d,IDS,0b. B1D Participant Demographics - Examiner's initials,INITIALSB1D,No,Any text,,String,
 b1d,IDS,0c. Current living arrangement of person,DSLIV,Always,Integers 1-9,"1, Lives alone | 2, Lives with spouse or friends | 3, Lives with parents or other family members | 4, Lives with paid caregiver | 5, Lives in community group home, apartment, supervised housing, etc. | 6, Lives in senior housing | 7, Lives in congregate residential setting | 8, Lives in long term care facility | 9, Lives in other",Integer,
 b1d,IDS,0c1. Other living arrangement: Specify,DSLIVX,Conditional,Any text,,String,[dsliv]='1'
 b1d,IDS,7. Sex,DSSEX,Always,Integers 0-1,"0, Female | 1, Male",Integer,
