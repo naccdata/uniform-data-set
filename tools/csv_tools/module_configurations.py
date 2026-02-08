@@ -59,7 +59,7 @@ class ModuleType(Enum):
     DS_LEGACY = 'ds/legacy'
     MILESTONES = 'milestones'
     NP = 'np'
-    UDS_LEGACY = 'udsv3'
+    B1A = 'udsv3/b1a'
 
     @classmethod
     def all(cls) -> List[str]:
@@ -76,7 +76,7 @@ class ModuleType(Enum):
             cls.DS_LEGACY,
             cls.MILESTONES,
             cls.NP,
-            cls.UDS_LEGACY,
+            cls.B1A,
         ]
 
     def has_packet(self) -> bool:
@@ -88,7 +88,7 @@ class ModuleType(Enum):
             ModuleType.LBD_SHORT.value,
             ModuleType.DS_CURRENT.value,
             ModuleType.DS_LEGACY.value,
-            ModuleType.UDS_LEGACY.value
+            ModuleType.B1A.value
         ]
 
     def __eq__(self, other):
@@ -116,7 +116,7 @@ MODULE_MAPPING = {
     ModuleType.MILESTONES: 'MLST',
     ModuleType.DS_CURRENT: 'DS',
     ModuleType.DS_LEGACY: 'DS',
-    ModuleType.UDS_LEGACY: 'UDS'
+    ModuleType.B1A: 'B1A'
 }
 
 FORM_VER_MAPPING = {
@@ -132,7 +132,7 @@ FORM_VER_MAPPING = {
     ModuleType.DS_LEGACY: '1.0',
     ModuleType.MILESTONES: '3.0',
     ModuleType.NP: '11.0',
-    ModuleType.UDS_LEGACY: '3.0',
+    ModuleType.B1A: '3.0',
 }
 
 PACKET_MAPPING = {
@@ -161,7 +161,7 @@ PACKET_MAPPING = {
         VisitType.IVP: 'IDS',
         VisitType.FVP: 'FDS'
     },
-    ModuleType.UDS_LEGACY: {
+    ModuleType.B1A: {
         VisitType.IVP: 'I',
         VisitType.FVP: 'F'
     }
@@ -193,7 +193,7 @@ ERROR_CODE_MAPPING = {
         VisitType.IVP: '-dsivp-',
         VisitType.FVP: '-dsfvp-'
     },
-    ModuleType.UDS_LEGACY: {
+    ModuleType.B1A: {
         VisitType.IVP: '-ivp-',
         VisitType.FVP: '-fvp-'
     }

@@ -182,8 +182,8 @@ def generate_ded(module: ModuleType,
         module_name = "lbd"
     if module.value in [ModuleType.DS_CURRENT.value, ModuleType.DS_LEGACY.value]:
         module_name = "ds"
-    if module.value == ModuleType.UDS_LEGACY.value:
-        module_name = "uds"
+    if module.value == ModuleType.B1A.value:
+        module_name = "b1a"
     if module.value == ModuleType.ENROLLMENT.value:
         # also update module names for enrollment
         module_name = "enroll"
