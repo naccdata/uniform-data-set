@@ -1,12 +1,12 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,comments
-b1a,I,0a. Packet code,PACKET,Always,"I, F","I, Initial Visit Packet | F, Follow-up Visit Packet",String,,See bottom of current form; use integer portion of version number
-b1a,I,0b. Form version number,FORMVER,Always,3,3,Numeric,,Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids
-b1a,I,0c. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,,"Follow your Center’s Patient ID scheme; use same ID as in MDS, if participant is enrolled in MDS."
-b1a,I,0d. PTID,PTID,Always,String with max length of 10 characters,,String,,
+b1a,I,0a. Packet code,PACKET,Always,"I","I, Initial Visit Packet",String,,"For B1a data collected for UDSv3 IVP (packet code I or IT), use code I"
+b1a,I,0b. Form version number,FORMVER,Always,3,3,Numeric,,"See bottom of current form for version number"
+b1a,I,0c. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,,"Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids"
+b1a,I,0d. PTID,PTID,Always,String with max length of 10 characters,,String,,"Follow your Center's Patient ID scheme, must be the same as the UDSv3 visit"
 b1a,I,0e. UDSv3 Visit date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,"This must be the same as the UDSv3 visit date (i.e., Form A1 form date)"
 b1a,I,0f. B1a Blood Pressure Addendum - Form date,FRMDATEB1A,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,
 b1a,I,0g. B1a Blood Pressure Addendum - Examiner's initials,INITIALSB1A,No,Any text,,String,,
-b1a,I,0h. ADRC Visit Number,VISITNUM,Yes,Any text,,String,,Can be determined by Center. The Center may use its existing visit number scheme. It is not required to start with 1.
+b1a,I,0h. ADRC Visit Number,VISITNUM,Yes,Any text,,String,,"This must be the same as the UDSv3 visit number"
 b1a,I,"1a1. Subject blood pressure (sitting; average of two readings), systolic, left arm",BPSYSL,Yes,"Integers 70-230, 888","70-230 = systolic blood pressure, 888 = unknown or not assessed",Integer,,
 b1a,I,"1b1. Subject blood pressure (sitting; average of two readings), systolic, right arm",BPSYSR,Yes,"Integers 70-230, 888","70-230 = systolic blood pressure, 888 = unknown or not assessed",Integer,,
 b1a,I,"1a2. Subject blood pressure (sitting; average of two readings), diastolic, left arm",BPDIASL,Yes,"Integers 30-140, 888","30-140 = diastolic blood pressure, 888 = unknown or not assessed",Integer,,
