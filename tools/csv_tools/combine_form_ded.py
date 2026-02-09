@@ -48,7 +48,7 @@ class DedGenerator(FormOrganizer):
         self.combined_df = pd.DataFrame(dtype=object)
         self.header_df = None
 
-    def execute(self, subdir: str, file: str, file_found: bool, override_visit: str = None) -> bool:
+    def execute(self, subdir: str, file: str, file_found: bool, override_visit: VisitType = None) -> bool:
         """If a valid Q&V CSV for the visit, concat to the DED
 
         Args:
@@ -62,16 +62,17 @@ class DedGenerator(FormOrganizer):
         """
         visit = None
         if override_visit:
-            visit = override_visit
+            visit = override_visit.value
         elif self.visit:
             visit = self.visit.value
 
-        log.info(
-            f"{subdir},{file},{file_found},{self.visit},{override_visit},{visit}")
+        # log.info(
+        #     f"{subdir},{file},{file_found},{self.visit},{override_visit},{visit}")
         if not self.is_correct_file(file, visit):
             return file_found  # return previous state
 
-        log.info(f"Found file {file} - {self.visit},{visit}")
+        log.info(
+            f"Found file {file} - original: {self.visit}, override: {visit}")
         # found the form, will always return True after this point
         try:
             file_path = os.path.join(subdir, file)
