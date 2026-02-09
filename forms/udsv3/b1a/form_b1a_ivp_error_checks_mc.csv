@@ -1,6 +1,6 @@
 error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions,questions
 b1a-ivp-m-001,001,Error,b1a,I,PACKET,Missingness,PACKET must be present,PACKET cannot be blank,Q0a. PACKET (Packet code) cannot be blank,If PACKET = blank,,,,,
-b1a-ivp-c-002,002,Error,b1a,I,PACKET,Conformity,PACKET conforms,PACKET must be a character I or F,Q0a. PACKET (Packet code) must be a character I or F,"If PACKET not in (""I"", ""F"")",,,,,
+b1a-ivp-c-002,002,Error,b1a,I,PACKET,Conformity,PACKET conforms,PACKET must be a character I,Q0a. PACKET (Packet code) must be a character I,"If PACKET ne I",,,,,
 b1a-ivp-m-003,003,Error,b1a,I,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Q0b. FORMVER (Form version number) cannot be blank,If FORMVER = blank,,,,,
 b1a-ivp-c-004,004,Error,b1a,I,FORMVER,Conformity,FORMVER conforms,FORMVER must equal 3,Q0b. FORMVER (Form version number) must equal 3,If FORMVER ne 3,,,,,
 b1a-ivp-m-005,005,Error,b1a,I,ADCID,Missingness,ADCID must be present,ADCID cannot be blank,Q0c. ADCID (ADCID) cannot be blank,If ADCID = blank,,,,,

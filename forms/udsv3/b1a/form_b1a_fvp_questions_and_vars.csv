@@ -1,5 +1,5 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,comments
-b1a,I,0a. Packet code,PACKET,Always,"I","I, Initial Visit Packet",String,,"For B1a data collected for UDSv3 IVP (packet code I or IT), use code I"
+b1a,I,0a. Packet code,PACKET,Always,"F","F, Follow-up Visit Packet",String,,"For B1a data collected for a UDSv3 FVP (packet code F or T), use code F"
 b1a,I,0b. Form version number,FORMVER,Always,3,3,Numeric,,"See bottom of current form for version number"
 b1a,I,0c. ADRC ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,,"Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids"
 b1a,I,0d. PTID,PTID,Always,String with max length of 10 characters,,String,,"Follow your Center's Patient ID scheme, must be the same as the UDSv3 visit"
