@@ -66,9 +66,12 @@ class DedGenerator(FormOrganizer):
         elif self.visit:
             visit = self.visit.value
 
+        log.info(
+            f"{subdir},{file},{file_found},{self.visit},{override_visit},{visit}")
         if not self.is_correct_file(file, visit):
             return file_found  # return previous state
 
+        log.info(f"Found file {file} - {self.visit},{visit}")
         # found the form, will always return True after this point
         try:
             file_path = os.path.join(subdir, file)
