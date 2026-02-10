@@ -1,7 +1,7 @@
 form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,carry_forward
 a1,F,0a. A1 Participant Demographics - Form date,FRMDATEA1,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,no
 a1,F,0b. A1 Participant Demographics - Examiner's initials,INITIALSA1,No,text,,String,,no
-a1,F,0c. A1 Participant Demographics - Language,LANGA1,Always,Integers 1-2,"1, English|2, Spanish",Integer,,no
+a1,F,0c. A1 Participant Demographics - Language,LANGA1,Always,Integers 1-6,"1, English|2, Spanish|3, Mandarin - Traditional |4, Mandarin - Simplified|5, Cantonese- Traditional |6, Cantonese - Simplified",Integer,,no
 a1,F,0d. A1 Participant Demographics - In-person or remote?,MODEA1,Always,Integers 1-2,"1, In-person|2, Remote",Integer,,no
 a1,F,"0d1. If 'A1 Participant Demographics' form was completed remotely, specify reason",RMREASA1,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other",Integer,[modea1]='2',no
 a1,F,0d1a. What modality was used to collect this remote 'A1 Participant Demographics' form?,RMMODEA1,Conditional,Integers 1-4,"1, Telephone|2, Video|3, Mail|4, Electronic (e.g., email)",Integer,[modea1]='2',no
