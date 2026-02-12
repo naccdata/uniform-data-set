@@ -1,7 +1,7 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,notes
-ds_header,FDS,PTID,PTID,Yes,String with max length of 10 characters,,String,,"Follow your Center’s Patient ID scheme; use same ID as in MDS, if subject is enrolled in MDS."
+ds_header,FDS,PTID,PTID,Yes,String with max length of 10 characters,,String,,"Follow your Center’s Patient ID scheme; must be the same as the UDS visit"
 ds_header,FDS,ADRC name,ADCID,Yes,List of current ADCIDs,List of current ADCIDs,Integer,,Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids
-ds_header,FDS,ADRC Visit Number,VISITNUM,Yes,Any text,,String,,Can be determined by Center. The Center may use its existing visit number scheme. It is not required to start with 1.
+ds_header,FDS,ADRC Visit Number,VISITNUM,Yes,Any text,,String,,This must be the same as the UDS packet visit number
 ds_header,FDS,Packet Code,PACKET,Yes,FDS,"FDS, Follow-up Visit Packet, DS Module",String,,
 ds_header,FDS,Form version number,FORMVER,Yes,1,"1, 1",Numeric,,
-ds_header,FDS,Form Date,VISITDATE,Yes,mm/dd/yyyy or yyyy/mm/dd,,Date,,
+ds_header,FDS,Form Date,VISITDATE,Yes,mm/dd/yyyy or yyyy/mm/dd,,Date,,"This must be the same as the UDS packet visit date (i.e., Form A1 form date)"
