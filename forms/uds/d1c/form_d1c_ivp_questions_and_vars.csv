@@ -1,111 +1,76 @@
-﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic
-d1c,I,0a. D1c Biologocal and Clinical Staging - Form date,FRMDATED1C,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
-d1c,I,0b. D1c Biologocal and Clinical Staging - Examiner's initials,INITIALSD1C,No,text,,String,
-d1c,I,0c. D1c Biologocal and Clinical Staging - Language,LANGD1C,Always,Integers 1-2,"1, English|2, Spanish",Integer,
-d1c,I,1. Were plasma biomarkers used in the etiologic diagnosis?,DXPLSMABIO,Always,Integers 0-1,"0, No|1, Yes",Integer,
-d1c,I,1a. p-tau 217 used in diagnosis,DXPTAU217,No,1 or blank,,Integer,[dxplsmabio] = '1'
-d1c,I,1a1. p-tau 217 result,PTAU217RS,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxptau217] = '1'
-d1c,I,1a2. Where were the p-tau 217 values used in the diagnosis analyzed?,PT217ANLYS,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[dxptau217] = '1'
-d1c,I,1b. %p-tau 217 used in diagnosis,DXPCPT217,No,1 or blank,,Integer,[dxplsmabio] = '1'
-d1c,I,1b1. %p-tau 217 result,PCPT217RS,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxpcpt217] = '1'
-d1c,I,1c. Other plasma biomarker used in the diagnosis,DXOTHPLSMA,No,1 or blank,,Integer,[dxplsmabio] = '1'
-d1c,I,1c1. Other plasma biomarker used in the diagnosis - Specify,DXOTHPLSMX,Conditional,Any text,,String,[dxothplsma] = '1'
-d1c,I,1c2. Other plasma biomarker result,OTHPLSMARS,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxothplsma] = '1'
-d1c,I,1c3. Where were the other plasma biomarker values used in the diagnosis analyzed?,OPLSMANLYS,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[dxothplsma] = '1'
-d1c,I,2. Were CSF biomarkers used in the etiologic diagnosis?,DXCSFBIO,Always,Integers 0-1,"0, No|1, Yes",Integer,
-d1c,I,2a. p-tau 181/ Aβ42 used in diagnosis,DXPT181AB,No,1 or blank,,Integer,[dxcsfbio]= '1'
-d1c,I,2a1. p-tau 181/ Aβ42 result,PT181ABRS,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxpt181ab] = '1'
-d1c,I,2a2. Where were the p-tau 181/ Aβ42 values used in the diagnosis analyzed?,PT181ABAYS,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[dxpt181ab] = '1'
-d1c,I,2b. t-tau / Aβ42 used in the diagnosis,DXTTABETA,No,1 or blank,,Integer,[dxcsfbio]= '1'
-d1c,I,2b1. t-tau / Aβ42 result,TTABETARS,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[ttabetars] = '1'
-d1c,I,2c. Aβ42/40 used in diagnosis,DXAB42AB40,No,1 or blank,,Integer,[dxcsfbio]= '1'
-d1c,I,2c1. Aβ42/40 result,AB42AB40RS,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[ab42ab40rs] = '1'
-d1c,I,2c2. Where were the Aβ42/40 values used in the diagnosis analyzed?,AB42AB40AY,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[ab42ab40rs] = '1'
-d1c,I,2d. Other CSF biomarker used in diagnosis,DXOTHCSF,No,1 or blank,,Integer,[dxcsfbio]= '1'
-d1c,I,2d1. Other CSF biomarker used in diagnosis - Specify,DXOTHCSFX,Conditional,Any text,,String,[dxothcsf] = '1'
-d1c,I,2d2. Other CSF biomarker result,OTHCSFRS,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxothcsf] = '1'
-d1c,I,2d3. Where were the other CSF biomarker values used in the diagnosis analyzed?,OCSFANLYS,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[dxothcsf] = '1'
-d1c,I,3. Was Amyloid PET used in the etiologic diagnosis?,DXAPET,Always,Integers 0-1,"0, No|1, Yes",Integer,
-d1c,I,3a. Amyloid PET result,APETRS,Conditional,Integers 0-1,"0, Not elevated|1, Elevated",Integer,[dxapet] = '1'
-d1c,I,3b1. How were amyloid PET results obtained - Visual Read,APETVIS,Conditional,1 or blank,,Integer,[dxapet] = '1'
-d1c,I,3b2. How were amyloid PET results obtained - Quantitative,APETQUANT,Conditional,1 or blank,,Integer,[dxapet] = '1'
-d1c,I,3c. Where were amyloid PET results obtained?,APETANLYS,Conditional,Integers 1-2,"1, Central (CLARiTI, ADNI, LEADS)|2, Local or other interpretation (e.g., SCAN, other clinical trials)",Integer,[dxapet] = '1'
-d1c,I,4. Was tau PET used in the etiologic diagnosis?,DXTAUPET,Always,Integers 0-1,"0, No|1, Yes",Integer,
-d1c,I,4a. Tau PET MTL result,TPETMTLRS,Conditional,Integers 0-1,"0, Not elevated|1, Elevated",Integer,[dxtaupet] = '1'
-d1c,I,4b1. How were tau PET MTL results obtained - Visual Read,TPETMTLVIS,Conditional,1 or blank,,Integer,[dxtaupet] = '1'
-d1c,I,4b2. How were tau PET MTL results obtained - Quantitative,TPETMTLQNT,Conditional,1 or blank,,Integer,[dxtaupet] = '1'
-d1c,I,4c. Where were tau PET MTL results obtained?,TPETMTLAYS,Conditional,Integers 1-2,"1, Central (CLARiTI, LEADS)|2, Local or other interpretation (e.g., SCAN, other clinical trials)",Integer,[dxtaupet] = '1'
-d1c,I,4d. Tau PET Neocortical result,TPETNEORS,Conditional,Integers 0-1,"0, Not elevated|1, Elevated",Integer,[dxtaupet] = '1'
-,I,4e1. How were tau PET neocortical results obtained - Visual Read,TPETNEOVIS,Conditional,1 or blank,,Integer,[dxtaupet] = '1'
-,I,4e2. How were tau PET neocortical results obtained - Quantitative,TPETNEOQNT,Conditional,1 or blank,,Integer,[dxtaupet] = '1'
-,I,4f. Where were tau PET neocortical results obtained?,TPETNEOAYS,Conditional,Integers 1-2,"1, Central (CLARiTI, LEADS)|2, Local or other interpretation (e.g., SCAN, other clinical trials)",Integer,[dxtaupet] = '1'
-,I,5. Was infarction on MRI or WMH consistent with ischemia or blood products consistent with CAA used in the etiologic diagnosis?,INFORISCH,Always,Integers 0-1,"0, No|1, Yes",Integer,
-,I,5a1. Imaging result - Infarction on MRI,IMGRSINF,Conditional,1 or blank,,Integer,[inforisch] = '1'
-,I,5a1a. Imaging result - Infarction on MRI - Lacunar,IMGRSINFLC,Conditional,1 or blank,,Integer,[imgrsinf] = '1'
-,I,5a1b. Imaging result - Infarction on MRI - Cortical,IMGRSINFCT,Conditional,1 or blank,,Integer,[imgrsinf] = '1'
-,I,5a2. Imaging result - Microbleeds,IMGRSMICR,Conditional,1 or blank,,Integer,[inforisch] = '1'
-,I,5a3. Imaging result - WMH,IMGRSWMH,Conditional,1 or blank,,Integer,[inforisch] = '1'
-,I,5a4. Imaging result - Superficial siderosis,IMGRSSPSID,Conditional,1 or blank,,Integer,[inforisch] = '1'
-,I,6. Was αSyn-SAA used in the etiologic diagnosis?,DXASYN,Always,Integers 0-1,"0, No|1, Yes",Integer,
-,I,6a. αSyn-SAA result,ASYNRS,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxasyn] = '1'
-,I,6b. αSyn-SAA assay,ASYNASSAY,Conditional,Integers 1-2,"1, CSF|2, Other",Integer,[dxasyn] = '1'
-,,6b1. Other αSyn-SAA assay - Specify,ASYNASSAYX,Conditional,Any text,,String,[asynassay] = '2'
-,I,6c. Where were αSyn-SAA values obtained?,ASYNANLYSX,Conditional,Any text,,String,[dxasyn] = '1'
-,I,7. Did the participant meet the AA biological biomarker criteria for Alzheimer’s based on a positive Core 1 biomarker?,AACRITMET,Always,Integers 0-1,"0, No|1, Yes",Integer,
-,I,8a. Which Core 1 biomarker was used to make this determination - Amyloid PET,CR1APET,Conditional,1 or blank,,Integer,[aacritmet] = '1'
-,I,8b. Which Core 1 biomarker was used to make this determination - p-tau217,CR1PTAU217,Conditional,1 or blank,,Integer,[aacritmet] = '1'
-,I,8c. Which Core 1 biomarker was used to make this determination - %p-tau217,CR1PCPT217,Conditional,1 or blank,,Integer,[aacritmet] = '1'
-,I,8d. Which Core 1 biomarker was used to make this determination - p-tau181/Aβ42,CR1PT181AB,Conditional,1 or blank,,Integer,[aacritmet] = '1'
-,I,8e. Which Core 1 biomarker was used to make this determination - t-tau/Aβ42,CR1TTABETA,Conditional,1 or blank,,Integer,[aacritmet] = '1'
-,I,8f. Which Core 1 biomarker was used to make this determination - Aβ42/40,C1AB42AB40,Conditional,1 or blank,,Integer,[aacritmet] = '1'
-,I,8g. Which Core 1 biomarker was used to make this determination - Other,CR1OTH,Conditional,1 or blank,,Integer,[aacritmet] = '1'
-,I,8g1. Other Core 1 biomarker was used to make this determination - Specify,CR1OTHX,Conditional,1 or blank,,Integer,[aacritmet] = '1'
-,I,9. Select the biological stage of the participant,BIOSTAGE,Conditional,"Integers 1-3, 9","1, A|2, B |3, C-D |9, Unable to determine stage (e.g., missing biomarkers)",Integer,[aacritmet] = '1'
-,I,10. Clinical AD stage,CLINSTAGE,Conditional,"Integers 1-6, 9","1, Stage 0|2, Stage 1 |3, Stage 2 |4, Stage 4 |5, Stage 5 |6, Stage 6 |9, Unable to determine stage (e.g., missing biomarkers)",Integer,[aacritmet] = '1'
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
-,,. ,,,,,,
+﻿form_name,packet,question,var_name,DELETE_upon_github_upload,missingness,conformity,response_labels,data_type,branching_logic
+d1c,I,0a. D1c Biologocal and Clinical Staging - Form date,FRMDATED1C,10,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
+d1c,I,0b. D1c Biologocal and Clinical Staging - Examiner's initials,INITIALSD1C,11,No,text,,String,
+d1c,I,0c. D1c Biologocal and Clinical Staging - Language,LANGD1C,7,Always,Integers 1-2,"1, English|2, Spanish",Integer,
+d1c,I,1. Were plasma biomarkers used in the etiologic diagnosis?,DXPLSMABIO,10,Always,Integers 0-1,"0, No|1, Yes",Integer,
+d1c,I,1a. p-tau 217 used in diagnosis,DXPTAU217,9,No,1 or blank,,Integer,[dxplsmabio] = '1'
+d1c,I,1a1. p-tau 217 result,PTAU217RS,9,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxptau217] = '1'
+d1c,I,1a2. Where were the p-tau 217 values used in the diagnosis analyzed?,PT217ANLYS,10,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[dxptau217] = '1'
+d1c,I,1a3. Was the plasma p-tau 217 sample used in the diagnosis from a date within +/- 12 months of the current UDS visit?,PT217INT,8,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxptau217] = '1'
+d1c,I,1b. %p-tau 217 used in diagnosis,DXPCPT217,9,No,1 or blank,,Integer,[dxplsmabio] = '1'
+d1c,I,1b1. %p-tau 217 result,PCPT217RS,9,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxpcpt217] = '1'
+d1c,I,1b2. Was the plasma %p-tau 217 sample used in the diagnosis from a date within +/- 12 months of the current UDS visit?,PCPT217INT,10,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxpcpt217] = '1'
+d1c,I,1c. Other plasma biomarker used in the diagnosis,DXOTHPLSMA,10,No,1 or blank,,Integer,[dxplsmabio] = '1'
+d1c,I,1c1. Other plasma biomarker used in the diagnosis - Specify,DXOTHPLSMX,10,Conditional,Any text,,String,[dxothplsma] = '1'
+d1c,I,1c2. Other plasma biomarker result,OTHPLSMARS,10,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxothplsma] = '1'
+d1c,I,1c3. Where were the other plasma biomarker values used in the diagnosis analyzed?,OPLSMANLYS,10,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[dxothplsma] = '1'
+d1c,I,1c4. Was the plasma sample used in the diagnosis from a date within +/- 12 months of the current UDS visit?,OPLSMAINT,9,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxothplsma] = '1'
+d1c,I,2. Were CSF biomarkers used in the etiologic diagnosis?,DXCSFBIO,8,Always,Integers 0-1,"0, No|1, Yes",Integer,[dxothplsma] = '1'
+d1c,I,2a. p-tau 181/ Aβ42 used in diagnosis,DXPT181AB,9,No,1 or blank,,Integer,[dxcsfbio]= '1'
+d1c,I,2a1. p-tau 181/ Aβ42 result,PT181ABRS,9,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxpt181ab] = '1'
+d1c,I,2a2. Where were the p-tau 181/ Aβ42 values used in the diagnosis analyzed?,PT181ABAYS,10,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[dxpt181ab] = '1'
+d1c,I,2a3. Was the CSF p-tau 181/ Aβ42 sample used in the diagnosis from a date within +/- 12 months of the current UDS visit?,PT181ABINT,10,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxpt181ab] = '1'
+d1c,I,2b. t-tau / Aβ42 used in the diagnosis,DXTTABETA,9,No,1 or blank,,Integer,[dxcsfbio]= '1'
+d1c,I,2b1. t-tau / Aβ42 result,TTABETARS,9,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[ttabetars] = '1'
+d1c,I,2b2. Was the CSF t-tau / Aβ42 sample used in the diagnosis from a date within +/- 12 months of the current UDS visit?,TTABETAINT,10,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[ttabetars] = '1'
+d1c,I,2c. Aβ42/40 used in diagnosis,DXAB42AB40,10,No,1 or blank,,Integer,[dxcsfbio]= '1'
+d1c,I,2c1. Aβ42/40 result,AB42AB40RS,10,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[ab42ab40rs] = '1'
+d1c,I,2c2. Where were the Aβ42/40 values used in the diagnosis analyzed?,AB42AB40AY,10,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[ab42ab40rs] = '1'
+d1c,I,2c3. Was the Aβ42 / 40 sample used in the diagnosis from a date within +/- 12 months of the current UDS visit?,AB42AB40IT,10,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[ab42ab40rs] = '1'
+d1c,I,2d. Other CSF biomarker used in diagnosis,DXOTHCSF,8,No,1 or blank,,Integer,[dxcsfbio]= '1'
+d1c,I,2d1. Other CSF biomarker used in diagnosis - Specify,DXOTHCSFX,9,Conditional,Any text,,String,[dxothcsf] = '1'
+d1c,I,2d2. Other CSF biomarker result,OTHCSFRS,8,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxothcsf] = '1'
+d1c,I,2d3. Where were the other CSF biomarker values used in the diagnosis analyzed?,OCSFANLYS,9,Conditional,Integers 1-2,"1, Analyzed by NCRAD|2, Analyzed in-house or elsewhere",Integer,[dxothcsf] = '1'
+d1c,I,2d4. Was the CSF sample used in the diagnosis from a date within +/- 12 months of the current UDS visit?,OCSFINT,7,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxothcsf] = '1'
+d1c,I,3. Was Amyloid PET used in the etiologic diagnosis?,DXAPET,6,Always,Integers 0-1,"0, No|1, Yes",Integer,
+d1c,I,3a. Amyloid PET result,APETRS,6,Conditional,Integers 0-1,"0, Not elevated|1, Elevated",Integer,[dxapet] = '1'
+d1c,I,3b1. How were amyloid PET results obtained - Visual Read,APETVIS,7,Conditional,1 or blank,,Integer,[dxapet] = '1'
+d1c,I,3b2. How were amyloid PET results obtained - Quantitative,APETQUANT,9,Conditional,1 or blank,,Integer,[dxapet] = '1'
+d1c,I,3c. Where were amyloid PET results obtained?,APETANLYS,9,Conditional,Integers 1-2,"1, Central (CLARiTI, ADNI, LEADS, SCAN)|2, Local or other interpretation (e.g., other clinical trials)",Integer,[dxapet] = '1'
+d1c,I,3d. Was the amyloid PET scan used in the diagnosis from a date within +/- 12 months of the current UDS visit?,APETINT,7,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxapet] = '1'
+d1c,I,4. Was tau PET used in the etiologic diagnosis?,DXTAUPET,8,Always,Integers 0-1,"0, No|1, Yes",Integer,
+d1c,I,4a. Tau PET MTL result,TPETMTLRS,9,Conditional,Integers 0-1,"0, Not elevated|1, Elevated",Integer,[dxtaupet] = '1'
+d1c,I,4b1. How were tau PET MTL results obtained - Visual Read,TPETMTLVIS,10,Conditional,1 or blank,,Integer,[dxtaupet] = '1'
+d1c,I,4b2. How were tau PET MTL results obtained - Quantitative,TPETMTLQNT,10,Conditional,1 or blank,,Integer,[dxtaupet] = '1'
+d1c,I,4c. Where were tau PET MTL results obtained?,TPETMTLAYS,10,Conditional,Integers 1-2,"1, Central (CLARiTI, ADNI, LEADS, SCAN)|2, Local or other interpretation (e.g., other clinical trials)",Integer,[dxtaupet] = '1'
+d1c,I,4d. Was the tau PET scan used in the diagnosis from a date within +/- 12 months of the current UDS visit?,TPETMTLINT,10,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxtaupet] = '1'
+d1c,I,4e. Tau PET Neocortical result,TPETNEORS,9,Conditional,Integers 0-1,"0, Not elevated|1, Elevated",Integer,[dxtaupet] = '1'
+d1c,I,4f1. How were tau PET neocortical results obtained - Visual Read,TPETNEOVIS,10,Conditional,1 or blank,,Integer,[dxtaupet] = '1'
+d1c,I,4f2. How were tau PET neocortical results obtained - Quantitative,TPETNEOQNT,10,Conditional,1 or blank,,Integer,[dxtaupet] = '1'
+d1c,I,4g. Where were tau PET neocortical results obtained?,TPETNEOAYS,10,Conditional,Integers 1-2,"1, Central (CLARiTI, ADNI, LEADS, SCAN)|2, Local or other interpretation (e.g., other clinical trials)",Integer,[dxtaupet] = '1'
+d1c,I,4h. Was the tau PET scan used in the diagnosis from a date within +/- 12 months of the current UDS visit?,TPETNEOINT,10,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxtaupet] = '1'
+d1c,I,5. Was infarction on MRI or WMH consistent with ischemia or blood products consistent with CAA used in the etiologic diagnosis?,INFORISCH,9,Always,Integers 0-1,"0, No|1, Yes",Integer,[dxtaupet] = '1'
+d1c,I,5a1. Imaging result - Infarction on MRI,IMGRSINF,8,Conditional,1 or blank,,Integer,[inforisch] = '1'
+d1c,I,5a1a. Imaging result - Infarction on MRI - Lacunar,IMGRSINFLC,10,Conditional,1 or blank,,Integer,[imgrsinf] = '1'
+d1c,I,5a1b. Imaging result - Infarction on MRI - Cortical,IMGRSINFCT,10,Conditional,1 or blank,,Integer,[imgrsinf] = '1'
+d1c,I,5a2. Imaging result - Microbleeds,IMGRSMICR,9,Conditional,1 or blank,,Integer,[inforisch] = '1'
+d1c,I,5a3. Imaging result - WMH,IMGRSWMH,8,Conditional,1 or blank,,Integer,[inforisch] = '1'
+d1c,I,5a4. Imaging result - Superficial siderosis,IMGRSSPSID,10,Conditional,1 or blank,,Integer,[inforisch] = '1'
+d1c,I,5b. Was the imaging scan used in the diagnosis from a date within +/- 12 months of the current UDS visit?,IMGRSINT,8,Conditional,1 or blank,,Integer,[inforisch] = '1'
+d1c,I,6. Was αSyn-SAA used in the etiologic diagnosis?,DXASYN,6,Always,Integers 0-1,"0, No|1, Yes",Integer,
+d1c,I,6a. αSyn-SAA result,ASYNRS,6,Conditional,Integers 0-1,"0, Normal|1, Abnormal",Integer,[dxasyn] = '1'
+d1c,I,6b. αSyn-SAA assay,ASYNASSAY,9,Conditional,Integers 1-2,"1, CSF|2, Other",Integer,[dxasyn] = '1'
+d1c,I,6b1. Other αSyn-SAA assay - Specify,ASYNASSAYX,10,Conditional,Any text,,String,[asynassay] = '2'
+d1c,I,6c. Where were αSyn-SAA values obtained?,ASYNANLYSX,10,Conditional,Any text,,String,[dxasyn] = '1'
+d1c,I,6d. Was the αSyn-SAA sample used in the diagnosis from a date within +/- 12 months of the current UDS visit?,ASYNINT,7,Conditional,Integers 0-1,"0, No|1, Yes",Integer,[dxasyn] = '1'
+d1c,I,7. Did the participant meet the AA biological biomarker criteria for Alzheimer’s based on a positive Core 1 biomarker?,AACRITMET,9,Always,Integers 0-1,"0, No|1, Yes",Integer,[dxasyn] = '1'
+d1c,I,8a. Which Core 1 biomarker was used to make this determination - Amyloid PET,CR1APET,7,Conditional,1 or blank,,Integer,[aacritmet] = '1'
+d1c,I,8b. Which Core 1 biomarker was used to make this determination - p-tau217,CR1PTAU217,10,Conditional,1 or blank,,Integer,[aacritmet] = '1'
+d1c,I,8c. Which Core 1 biomarker was used to make this determination - %p-tau217,CR1PCPT217,10,Conditional,1 or blank,,Integer,[aacritmet] = '1'
+d1c,I,8d. Which Core 1 biomarker was used to make this determination - p-tau181/Aβ42,CR1PT181AB,10,Conditional,1 or blank,,Integer,[aacritmet] = '1'
+d1c,I,8e. Which Core 1 biomarker was used to make this determination - t-tau/Aβ42,CR1TTABETA,10,Conditional,1 or blank,,Integer,[aacritmet] = '1'
+d1c,I,8f. Which Core 1 biomarker was used to make this determination - Aβ42/40,C1AB42AB40,10,Conditional,1 or blank,,Integer,[aacritmet] = '1'
+d1c,I,8g. Which Core 1 biomarker was used to make this determination - Other,CR1OTH,6,Conditional,1 or blank,,Integer,[aacritmet] = '1'
+d1c,I,8g1. Other Core 1 biomarker was used to make this determination - Specify,CR1OTHX,7,Conditional,1 or blank,,Integer,[aacritmet] = '1'
+d1c,I,9. Select the biological stage of the participant,BIOSTAGE,8,Conditional,"Integers 1-3, 9","1, A|2, B |3, C-D |9, Unable to determine stage (e.g., missing necessary biomarkers like tau PET)",Integer,[aacritmet] = '1'
+d1c,I,10. Clinical AD stage,CLINSTAGE,9,Conditional,"Integers 1-6, 9","1, Stage 0|2, Stage 1 |3, Stage 2 |4, Stage 4 |5, Stage 5 |6, Stage 6 |9, Unable to determine stage (e.g., missing biomarkers)",Integer,[aacritmet] = '1'
