@@ -27,4 +27,3 @@ c1f,IF,7a. Number of completely accurate sentences (0-5),FTDREAAS,Always,"Intege
 c1f,IF,7b. Total number of words omitted from sentence (0-37),FTDREAOS,Conditional,Integers 0-37,,Integer,Blank if Question 7a FTDREAAS = 95-98
 c1f,IF,7c. Total number of semantically related or unrelated incorrect real words (0-20),FTDREASR,Conditional,Integers 0-20,,Integer,Blank if Question 7a FTDREAAS = 95-98
 c1f,IF,7d. Total number of phonologically related words or nonword errors (0-20),FTDREAPR,Conditional,Integers 0-20,,Integer,Blank if Question 7a FTDREAAS = 95-98
-
