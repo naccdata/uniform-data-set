@@ -47,5 +47,4 @@ e2f,IF,4a. Other PET or SPECT scans: Is a dopaminergic scan available?,FTDOTDOP,
 e2f,IF,4b. Other PET or SPECT scans: Is a serotonergic scan available?,FTDOTSER,Conditional,"Integers 0-1, and 9",0 = No | 1 = Yes | 9= Unknown,Integer,"Blank if Question 4, FTDOTHER, = 0 (No)"
 e2f,IF,4c. Other PET or SPECT scans: Is a cholinergic scan available?,FTDOTCHO,Conditional,"Integers 0-1, and 9",0 = No | 1 = Yes | 9= Unknown,Integer,"Blank if Question 4, FTDOTHER, = 0 (No)"
 e2f,IF,4d. Other PET or SPECT scans: Is another kind of scan available?,FTDOTANO,Conditional,Integers 0-1,0 = No | 1 = Yes,Integer,"Blank if Question 4, FTDOTHER, = 0 (No)"
-
 e2f,IF,4d1. Other scan specify,FTDOTANS,Conditional,"Any text or numbers, but cannot include single quotes ('), double quotes (""), ampersands (&) or percentage signs (%)",,String,"Blank if Question 4, FTDOTHER, = 0 (No) or Question 4d, FTDOTANO ne 1 (Yes)"
