@@ -2,11 +2,11 @@
 New,B1,4,"3a, 3b","3a, 3b",NACCWAIST,NACC derived variable,"Waist circumference (inches), average of two measurements",Numeric longitudinal,"20-60
 888 = Unknown or not assessed
 -4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question",,"v1-3: -4
-v4: If WAIST1=888 or WAIST2=888, then =888. Else average(WAIST1, WAIST2)."
+v4: If WAIST1=888 and WAIST2=888, then =888. Else if WAIST1=888 or WAIST2=888, min(WAIST1, WAIST2). Else average(WAIST1, WAIST2)."
 New,B1,4,"4a, 4b","4a, 4b",NACCHIP,NACC derived variable,"Hip circumference (inches), average of two measurements",Numeric longitudinal,"25-70
 888 = Unknown or not assessed
 -4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question",,"v1-3: -4
-v4: If HIP1=888 or HIP2=888, then =888. Else average(HIP1, HIP2)."
+v4: If HIP1=888 and HIP2=888, then =888. Else if HIP1=888 or HIP2=888, min(HIP1, HIP2). Else average(HIP1, HIP2)."
 New,B1,3-4,"5a1a, 5a2a","5a1a, 5a2a",NACCBPSYSL,NACC derived variable,"Participant blood pressure (average of two readings), systolic, left arm",Numeric longitudinal,"70-230
 888 = Unknown or not assessed
 -4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","In November 2020, a standard procedure for measuring blood pressure was introduced to UDSv3 and subsequent versions. When blood pressure is not measured using the standard protocol, NACCBPSYSL=-4.","v1-2: -4
