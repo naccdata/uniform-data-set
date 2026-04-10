@@ -84,7 +84,7 @@ d1b,F,"15a.  Primary, contributing, or non-contributing - Vascular brain injury"
 d1b,F,16. Multiple system atrophy,MSA,Conditional (e.g. skip pattern),"0, 1 or blank","1, Present",Integer,,yes
 d1b,F,"16a. Primary, contributing, or non-contributing - Multiple system atrophy",MSAIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[msa] = '1',yes
 d1b,F,17. Chronic traumatic encephalopathy (CTE),CTE,Conditional (e.g. skip pattern),1 or blank,"1, Present",Integer,,yes
-d1b,F,"17a. Primary, contributing, or non-contributing - CTE",CTEIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[cte] = '1',yes
+d1b,F,"17a. Primary, contributing, or non-contributing - CTE",CTEIF,Conditional (e.g. skip pattern),Integers 1-4,"1, Primary|2, Contributing|3, Non-contributing | 4, Indeterminate",Integer,[cte] = '1',yes
 d1b,F,17b. CTE certainty,CTECERT,Conditional (e.g. skip pattern),Integers 1-3,"1, Suggestive CTE | 2, Possible CTE | 3, Probable CTE",Integer,[cte] = '1',yes
 d1b,F,18. Down syndrome,DOWNS,Conditional (e.g. skip pattern),"0, 1 or blank","1, Present",Integer,,yes
 d1b,F,"18a. Primary, contributing, or non-contributing - Down syndrome",DOWNSIF,Conditional (e.g. skip pattern),Integers 1-3,"1, Primary|2, Contributing|3, Non-contributing",Integer,[downs] = '1',yes
