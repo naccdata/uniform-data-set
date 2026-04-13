@@ -1,5 +1,5 @@
 ﻿Status,Form ,Version,v4 IVP Q#,v4 FVP Q#,Variable,Variable Type,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
-New,B9,1-4,9i,9i,NACCCOGAGE,NACC derived,Age that participant's cognitive impairment began,Numeric longitudinal,"9-110
+New,B9,1-4,9i,9i,NACCCOGAGE,NACC derived,Age that participant's cognitive impairment began,Numeric longitudinal,"9-120
 888 = No impairment in cognition
 999 = Age unknown
 -4 = Not available: UDS form submitted did not collect data in this way, or a skip pattern precludes response to this question","For follow-up visits where it is recorded that the age at which cognition symptoms began is the same as previously reported, the previous value is carried forward to facilitate analysis.
