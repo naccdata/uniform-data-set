@@ -2,7 +2,7 @@
 d1c,F,0a. D1c Biological and Clinical Staging - Form date,FRMDATED1C,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 d1c,F,0b. D1c Biological and Clinical Staging - Examiner's initials,INITIALSD1C,No,text,,String,
 d1c,F,0c. D1c Biological and Clinical Staging - Language,LANGD1C,Always,Integers 1-2,"1, English|2, Spanish",Integer,
-d1c,F,0d. D1c Biological and Clinical Staging - Not completed?,MODED1C,No,0 or blank,"0, Not completed",Integer,
+d1c,F,0d. D1c Biological and Clinical Staging - Completed?,MODED1C,Always,Integers 0-1,"0, Not completed|1, Completed",Integer,
 d1c,F,"0d1. If 'D1c Biological and Clinical Staging' not completed, specify reason",D1CNOT,Conditional,Integers 88,"88, Optional",Integer,[moded1c]='0'
 d1c,F,1. Were plasma biomarkers used in the etiologic diagnosis?,DXPLSMABIO,Always,Integers 0-1,"0, No|1, Yes",Integer,
 d1c,F,1a. p-tau 217 used in diagnosis,DXPTAU217,No,1 or blank,,Integer,[dxplsmabio] = '1'
