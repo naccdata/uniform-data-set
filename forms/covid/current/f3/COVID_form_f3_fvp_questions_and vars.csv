@@ -1,5 +1,5 @@
 ﻿form_name,packet,question,varname,missingness,conformity,response_labels
-F3,FCV,0G. F3 - Form date,VISITDATEF3,Always,mm/dd/yyyy or yyyy/mm/dd,
+F3,FCV,0G. F3 - Form date,FRMDATEF3,Always,mm/dd/yyyy or yyyy/mm/dd,
 F3,FCV,0H. F3 - In-person or remote?,MODEF3,Always,Integers 1-2,"1, In-person|2, Remote"
 F3,FCV,"0H1. If F3 form was completed remotely, specify reason",RMREASF3,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other"
 F3,FCV,0J. F3 - Examiner's initials,INITIALSF3,No,Any text,
