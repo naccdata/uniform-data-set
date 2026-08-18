@@ -1,13 +1,11 @@
-form_name,packet,question,varname,missingness,conformity,response_labels
-F2,FCV,0A. Packet code,PACKET,Always,Character,CV | FCV
-F2,FCV,0C. Form version number,FORMVER,Always,Integer,2
-F2,FCV,0D. Center ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs
-F2,FCV,0E. ADC subject ID,PTID,Always,String with max length of 10 characters,
-F2,FCV,0F. Form date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,
-F2,FCV,0J. Examiner's initials,INITIALS,No,Any text,
-F2,FCV,OK. Is the participant's CDRÆ > 0.5?,C19CDR,Always,Integers 0-1,"0, No|1, Yes"
-F2,FCV,OL. Who will be filling in the F2 Participant form?,C19F2CP,Always,Integers 1-3,"1, Participant|2, Co-participant |3, Clinician"
-F2,FCV,OM. How are you admininstering the F2 form?,C19F2D,Always,Integers 1-4,"1, In-person electronic|2, In-person printed form|3, Email |4, Mail"
+Ôªøform_name,packet,question,varname,missingness,conformity,response_labels
+F2,FCV,0G. F2 - Form date,FRMDATEF2,Always,mm/dd/yyyy or yyyy/mm/dd,
+F2,FCV,0H. F2 - In-person or remote?,MODEF2,Always,Integers 1-2,"1, In-person|2, Remote"
+F2,FCV,"0H1. If F2 form was completed remotely, specify reason",RMREASF2,Conditional,Integers 1-5,"1, Too cognitively impaired|2, Too physically impaired|3, Homebound or nursing home|4, Refused in-person visit|5, Other"
+F2,FCV,0J. F2 - Examiner's initials,INITIALSF2,No,Any text,
+F2,FCV,0K. Is the participant's CDR¬Æ > 0.5?,C19CDR,Always,Integers 0-1,"0, No|1, Yes"
+F2,FCV,0L. Who will be filling in the F2 Participant form?,C19F2CP,Always,Integers 1-3,"1, Participant|2, Co-participant |3, Clinician"
+F2,FCV,0N. Will a co-participant complete the F3 form?,F3_PARTICIPATION,Always,Integers 0-1,"0, No|1, Yes"
 F2,FCV,1. Have you ever tested positive for COVID-19 and/or been diagnosed with COVID-19 by a healthcare provider)?,C19DIAG,Always,"Integers 0-2, 8-9","0, No|1, Yes, based on a positive test for acute infection|2, Yes, presumed COVID-19 diagnosis by healthcare provider but not tested|8, Decline to answer|9, Unsure/unknown"
 F2,FCV,"2. If 100% is feeling perfectly normal (fully recovered from your COVID-19 symptoms),
 what percent of normal do you feel?",C19NORM,Conditional (e.g. skip pattern),0-100,
@@ -63,7 +61,7 @@ F2,FCV,9b1a. Other specify,C19TVAC1OX,Conditional (e.g. skip pattern),text,
 F2,FCV,9b2. Did you experience any symptoms within 5 days of your first COVID-19 vaccination?,C19SVAC1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
 F2,FCV,9b3a. Which of the following symptoms did you experience after your first vaccine: Sore arm,C19VAC1ARM,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,9b3a1. Number of days sore arm lasted:,C19VAC1ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,FCV,"9b3b. Which of the following symptoms did you experience after your first vaccine: Flu-like feelings (fever, chills, tiredness, or ìmalaiseî)",C19VAC1FLU,Conditional (e.g. skip pattern),"blank, 1",
+F2,FCV,"9b3b. Which of the following symptoms did you experience after your first vaccine: Flu-like feelings (fever, chills, tiredness, or ‚Äúmalaise‚Äù)",C19VAC1FLU,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,9b3b1. Number of days flu-like feelings lasted,C19VAC1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
 F2,FCV,"9b3c. Which of the following symptoms did you experience after your first vaccine: New problems with memory, thinking, or concentration",C19VAC1MEM,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,"9b3c1. Number of days new problems with memory, thinking, or concentration lasted:",C19VAC1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
@@ -76,7 +74,7 @@ F2,FCV,9c1a. Other specify,C19TVAC2OX,Conditional (e.g. skip pattern),text,
 F2,FCV,9c2. Did you experience any symptoms within 5 days of your second COVID-19 vaccination?,C19SVAC2,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
 F2,FCV,9c3a. Which of the following symptoms did you experience after your second vaccine: Sore arm,C19VAC2ARM,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,9c3a1. Number of days sore arm lasted:,C19VAC2ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,FCV,"9c3b. Which of the following symptoms did you experience after your second vaccine: Flu-like feelings (fever, chills, tiredness, or ìmalaiseî)",C19VAC2FLU,Conditional (e.g. skip pattern),"blank, 1",
+F2,FCV,"9c3b. Which of the following symptoms did you experience after your second vaccine: Flu-like feelings (fever, chills, tiredness, or ‚Äúmalaise‚Äù)",C19VAC2FLU,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,9c3b1. Number of days flu-like feelings lasted,C19VAC2FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
 F2,FCV,"9c3c. Which of the following symptoms did you experience after your second vaccine: New problems with memory, thinking, or concentration",C19VAC2MEM,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,"9c3c1. Number of days new problems with memory, thinking, or concentration lasted:",C19VAC2MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
@@ -89,7 +87,7 @@ F2,FCV,9d1a. Other specify,C19TBST1OX,Conditional (e.g. skip pattern),text,
 F2,FCV,9d2. Did you experience any symptoms within 5 days of your first COVID-19 booster vaccination?,C19SBST1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
 F2,FCV,9d3a. Which of the following symptoms did you experience after your first booster vaccination: Sore arm,C19BST1ARM,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,9d3a1. Number of days sore arm lasted:,C19BST1ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,FCV,"9d3b. Which of the following symptoms did you experience after your first booster vaccination: Flu-like feelings (fever, chills, tiredness, or ìmalaiseî)",C19BST1FLU,Conditional (e.g. skip pattern),"blank, 1",
+F2,FCV,"9d3b. Which of the following symptoms did you experience after your first booster vaccination: Flu-like feelings (fever, chills, tiredness, or ‚Äúmalaise‚Äù)",C19BST1FLU,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,9d3b1. Number of days flu-like feelings lasted,C19BST1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
 F2,FCV,"9d3c. Which of the following symptoms did you experience after your first booster vaccination: New problems with memory, thinking, or concentration",C19BST1MEM,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,"9d3c1. Number of days new problems with memory, thinking, or concentration lasted:",C19BST1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
@@ -99,6 +97,6 @@ F3,FCV,90. When was your most recent COVID-19 vaccination/booster: month,C19BSTR
 F4,FCV,900. When was your most recent COVID-19 vaccination/booster: year,C19BSTRYR,Conditional (e.g. skip pattern),"2019 to current year, 9999",
 F5,FCV,"10. On a scale of 1-5, how worried are you that you will get COVID-19 (or, if previously infected, worried that you will get it again)?",C19WORRY,Always,"Integers 1-5, 8","1, Not at all worried| 2, A little worried| 3, Somewhat worried|4, Very worried |5, Extremely worried|8, Decline to answer"
 F6,FCV,"11. On a scale of 1-5, since [last f2_form_date], how disruptive has the COVID-19 pandemic been to your everyday life?",C19DIS_F,Always,"Integers 1-5, 8","1, Not at all disruptive| 2, A little disruptive| 3, Somewhat disruptive|4, Very disruptive|5, Extremely disruptive|8, Decline to answer"
-F7,FCV,12. On a scale of 1-6 (with 1 being ìI can shake off stressî and 6 being ìStress eats away at meî) how would you rate your ability to handle stress?,C19COPEST,Always,"Integers 1-6, 8",
-F8,FCV,"13. In the past year, on a scale of 1-6 with 1 being ìno stressî and 6 being ìextreme stressî how would you rate the amount of stress in your life (at home and at work)?",C19AMST,Always,"Integers 1-6, 8",
+F7,FCV,12. On a scale of 1-6 (with 1 being ‚ÄúI can shake off stress‚Äù and 6 being ‚ÄúStress eats away at me‚Äù) how would you rate your ability to handle stress?,C19COPEST,Always,"Integers 1-6, 8",
+F8,FCV,"13. In the past year, on a scale of 1-6 with 1 being ‚Äúno stress‚Äù and 6 being ‚Äúextreme stress‚Äù how would you rate the amount of stress in your life (at home and at work)?",C19AMST,Always,"Integers 1-6, 8",
 F9,FCV,"14. On a scale of 1-5, since [last f2_form_date], how much has COVID-19 changed your willingness to participate in clinical research if it requires in-person visits to the research clinic?",C19PRE_F,Always,"Integers 1-5, 8","1, Not at all| 2, A little| 3, Somewhat |4, Very much|5, Extremely|8, Decline to answer"

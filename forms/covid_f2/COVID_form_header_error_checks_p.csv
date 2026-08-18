@@ -1,0 +1,2 @@
+error_code,error_no,error_type,form_name,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
+covid_header-c-1001,1001,Error,covid_header,VISITDATE,Plausibility,VISITDATE earliest date allowed,VISITDATE must not be from date before form was released,Header variable VISITDATE must not be from date before form was released,IF VISITDATE before (07/01/2022),,,,
