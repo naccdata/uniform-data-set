@@ -84,11 +84,11 @@ F2,CV,"10d4c. Which of the following symptoms did you experience after your seco
 F2,CV,"10d4c1. Number of days new problems with memory, thinking, or concentration lasted:",C19VAC2MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
 F2,CV,10d4d. Which of the following symptoms did you experience after your second vaccine: Decline to answer,C19VAC2DEC,Conditional (e.g. skip pattern),"blank, 1",
 F2,CV,10d4e. Which of the following symptoms did you experience after your second vaccine: Unknown,C19VAC2UNK,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10e1a. When did you receive your first COVID-19 booster vaccination: year?,C19BST1MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
+F2,CV,10e1a. When did you receive your first COVID-19 booster vaccination: month?,C19BST1MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
 F2,CV,10e1b. When did you receive your first COVID-19 booster vaccination: year?,C19BST1YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,1000. Which COVID-19 vaccine did you receive?,C19TBST1,Conditional (e.g. skip pattern),"Integers 1-3, 8, 9","1, Pfizer|2, Moderna|3, Other (Specify)|8, Decline to answer|9, Unsure/unknown"
+F2,CV,10e2. Which COVID-19 vaccine did you receive?,C19TBST1,Conditional (e.g. skip pattern),"Integers 1-3, 8, 9","1, Pfizer|2, Moderna|3, Other (Specify)|8, Decline to answer|9, Unsure/unknown"
 F2,CV,10e2a. Other specify,C19TBST1OX,Conditional (e.g. skip pattern),text,
-F2,CV,10000. Did you experience any symptoms within 5 days of your first COVID-19 booster vaccination?,C19SBST1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
+F2,CV,10e3. Did you experience any symptoms within 5 days of your first COVID-19 booster vaccination?,C19SBST1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
 F2,CV,10e4a. Which of the following symptoms did you experience after your first booster vaccination: Sore arm,C19BST1ARM,Conditional (e.g. skip pattern),"blank, 1",
 F2,CV,10e4a1. Number of days sore arm lasted:,C19BST1ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
 F2,CV,"10e4b. Which of the following symptoms did you experience after your first booster vaccination: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19BST1FLU,Conditional (e.g. skip pattern),"blank, 1",
