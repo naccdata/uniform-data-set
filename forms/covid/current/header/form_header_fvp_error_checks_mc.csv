@@ -1,6 +1,6 @@
 ﻿error_code,error_no,error_type,form_name,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
 covid_header-m-001,001,Error,covid_header,PACKET,Missingness,PACKET must be present,PACKET cannot be blank,Q0a. PACKET (Packet code) cannot be blank ,If PACKET = blank,,,Yes,Yes
-covid_header-c-002,002,Error,covid_header,PACKET,Conformity,PACKET conforms,PACKET must be CV or FCV,Q0a. PACKET (Packet code) must be FCV (follow-up COVID form),If PACKET FCV,,,Yes,Yes
+covid_header-c-002,002,Error,covid_header,PACKET,Conformity,PACKET conforms,PACKET must be FCV,Q0a. PACKET (Packet code) must be FCV (follow-up COVID form),If PACKET ne FCV,,,Yes,Yes
 covid_header-m-003,003,Error,covid_header,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Q0c. FORMVER (Form version number) cannot be blank ,If FORMVER = blank,,,Yes,Yes
 covid_header-c-004,004,Error,covid_header,FORMVER,Conformity,FORMVER conforms,FORMVER must be 2,Q0c. FORMVER (Form version number) must be 2,If FORMVER ne 2,,,Yes,Yes
 covid_header-m-005,005,Error,covid_header,ADCID,Missingness,ADCID must be present,ADCID cannot be blank,Q0d. ADCID (ADCID) cannot be blank,If ADCID = blank,,,Yes,Yes
