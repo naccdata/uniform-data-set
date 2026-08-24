@@ -1,10 +1,10 @@
 ﻿form_name,packet,question,varname,missingness,conformity,response_labels
 F2,CV,0G. F2 - Form date,FRMDATEF2,Always,mm/dd/yyyy or yyyy/mm/dd,
-F2,CV,0H. F2 - In-person or remote?,MODEF2,Always,Integers 1-2,"1, In-person|2, Remote"
+F2,CV,OH. F2 - In-person or remote?,MODEF2,Always,Integers 1-2,"1, In-person|2, Remote"
 F2,CV,0J. F2 - Examiner's initials,INITIALSF2,No,Any text,
-F2,CV,0K. Is the participant's CDR® > 0.5?,C19CDR,Always,Integers 0-1,"0, No|1, Yes"
-F2,CV,0L. Who will be filling in the F2 Participant form?,C19F2CP,Always,Integers 1-3,"1, Participant|2, Co-participant |3, Clinician"
-F2,CV,0M. How are you admininstering the F2 form?,C19F2D,Always,Integers 1-4,"1, In-person electronic|2, In-person printed form|3, Email |4, Mail"
+F2,CV,OK. Is the participant's CDR® > 0.5?,C19CDR,Always,Integers 0-1,"0, No|1, Yes"
+F2,CV,OL. Who will be filling in the F2 Participant form?,C19F2CP,Always,Integers 1-3,"1, Participant|2, Co-participant |3, Clinician"
+F2,CV,OM. How are you admininstering the F2 form?,C19F2D,Always,Integers 1-4,"1, In-person electronic|2, In-person printed form|3, Email |4, Mail"
 F2,CV,"1. During the COVID-19 pandemic, have you tested positive for COVID-19 and/or were diagnosed with COVID-19 by a healthcare provider?",C19DIAG,Always,"Integers 0-2, 8-9","0, No|1, Yes, based on a positive test for acute infection|2, Yes, presumed COVID-19 diagnosis by healthcare provider but not tested|8, Decline to answer|9, Unsure/unknown"
 F2,CV,"2. During the COVID-19 pandemic, have you experienced new or worsening symptoms (see below) that led you to think you had COVID-19 (novel coronavirus) such as fever, cough, difficulty breathing, persistent pain or pressure in the chest, chills, repeated shaking with chills, muscle pain, headache, sore throat, new loss of taste or smell, new confusion or inability to arouse, or bluish lips or face?",C19SYMPT,Conditional (e.g. skip pattern),"Integers 0-2, 8-9","0, No|1, Yes|2, Other|8, Decline to answer|9, Unsure/unknown"
 F2,CV,2a. Other specify,C19SYOTX,Conditional (e.g. skip pattern),text,
@@ -28,8 +28,8 @@ F2,CV,"8. During any of your COVID-19 infections, did you experience new problem
 or concentration (e.g., brain fog)?",C19BRF,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
 F2,CV,"8a1. When did you first experience changes in thinking, remembering, or concentration: month?",C19BRFBMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
 F2,CV,"8a2. When did you first experience changes in thinking, remembering, or concentration: year?",C19BRFBYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,"8b. How long did it take to recover changes in thinking, remembering, or concentration?",C19BRFDUR,Conditional (e.g. skip pattern),"Integers 0-5, 8","1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer"
-F2,CV,9. Did you ever seek medical care for COVID-19?,C19MEDC,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
+F2,CV,"8b. How long did it take to recover changes in thinking, remembering, or concentration?",C19BRFDUR,Conditional (e.g. skip pattern),"Integers 1-5, 8, 9","1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer"
+F2,CV,9. Did you ever seek medical care for COVID-19?,C19MEDC,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9",
 F2,CV,"9a. Did you receive any type of outpatient treatment for your COVID-19 infection such as monoclonal antibody treatment, oral antiviral, subcutaneous injection of antiviral, or other treatment?",C19OPATR,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
 F2,CV,9a1a. When did you receive this outpatient treatment: month?,C19OPATRMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
 F2,CV,9a1b. When did you receive this outpatient treatment: year?,C19OPATRYR,Conditional (e.g. skip pattern),"2020 to current year, 8888, 9999",
@@ -95,8 +95,8 @@ F2,CV,"10e4b. Which of the following symptoms did you experience after your firs
 F2,CV,10e4b1. Number of days flu-like feelings lasted,C19BST1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
 F2,CV,"10e4c. Which of the following symptoms did you experience after your first booster vaccination: New problems with memory, thinking, or concentration",C19BST1MEM,Conditional (e.g. skip pattern),"blank, 1",
 F2,CV,"10e4c1. Number of days new problems with memory, thinking, or concentration lasted:",C19BST1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,10e4c. Which of the following symptoms did you experience after your first booster vaccination: Decline to answer,C19BST1DEC,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10e4c1. Which of the following symptoms did you experience after your first booster vaccination: Unknown,C19BST1UNK,Conditional (e.g. skip pattern),"blank, 1",
+F2,CV,10e4d. Which of the following symptoms did you experience after your first booster vaccination: Decline to answer,C19BST1DEC,Conditional (e.g. skip pattern),"blank, 1",
+F2,CV,10e4e. Which of the following symptoms did you experience after your first booster vaccination: Unknown,C19BST1UNK,Conditional (e.g. skip pattern),"blank, 1",
 F2,CV,10fa. When was your most recent COVID-19 vaccination/booster: month,C19BSTRMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
 F2,CV,10fb. When was your most recent COVID-19 vaccination/booster: year,C19BSTRYR,Conditional (e.g. skip pattern),"2020 to current year, 8888, 9999",
 F2,CV,11. Do you need help in setting up a COVID vaccination for yourself?,C19VHELP,Always,"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"

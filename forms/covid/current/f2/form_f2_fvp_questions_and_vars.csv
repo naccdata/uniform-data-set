@@ -5,14 +5,15 @@ F2,FCV,"0H1. If F2 form was completed remotely, specify reason",RMREASF2,Conditi
 F2,FCV,0J. F2 - Examiner's initials,INITIALSF2,No,Any text,
 F2,FCV,0K. Is the participant's CDR® > 0.5?,C19CDR,Always,Integers 0-1,"0, No|1, Yes"
 F2,FCV,0L. Who will be filling in the F2 Participant form?,C19F2CP,Always,Integers 1-3,"1, Participant|2, Co-participant |3, Clinician"
-F2,FCV,0N. Will a co-participant complete the F3 form?,F3_PARTICIPATION,Always,Integers 0-1,"0, No|1, Yes"
+F2,FCV,0N. Will a co-participant complete the F3 form?,"F3_PARTICIPATION
+",Always,Integers 0-1,"0, No|1, Yes"
 F2,FCV,1. Have you ever tested positive for COVID-19 and/or been diagnosed with COVID-19 by a healthcare provider)?,C19DIAG,Always,"Integers 0-2, 8-9","0, No|1, Yes, based on a positive test for acute infection|2, Yes, presumed COVID-19 diagnosis by healthcare provider but not tested|8, Decline to answer|9, Unsure/unknown"
 F2,FCV,"2. If 100% is feeling perfectly normal (fully recovered from your COVID-19 symptoms),
 what percent of normal do you feel?",C19NORM,Conditional (e.g. skip pattern),0-100,
 F2,FCV,"2a. If not 100%, why are you not feeling perfectly normal?",C19NORMX,Conditional (e.g. skip pattern),text,
 F2,FCV,"3. Over the past month, how often did symptoms from past or current COVID-19 infection(s) affect your daily life?",C19SYMAF,Conditional (e.g. skip pattern),"Integers 1-5, 8","1, Never|2, Seldom (1-2 days per week)|3, Sometimes (3-4 days per week)|4, Often (5-6 days per week)|5, Everyday |8, Decline to answer"
 F2,FCV,4. Have you tested positive for COVID-19 and/or been diagnosed with COVID-19 by a healthcare professional since [last f2_form_date]?,C19RECDIAG,Conditional (e.g. skip pattern),"Integers 0, 1, 8","0, No|1, Yes|8, Decline to answer"
-F2,FCV,5. How many distinct episodes of COVID-19 infection have you had since your last study visit?,C19NDIAG_F,Conditional (e.g. skip pattern),"Integers 1-3, 9","1, Once|2, Twice|3, Three or more times|9, Unsure/unknown"
+F2,FCV,5. How many distinct episodes of COVID-19 infection have you had since your last study visit?,C19NDIAG_F,Conditional (e.g. skip pattern),"Integers 1-3, 9","1, One|2, Two|3, Three or more times|9, Unsure/unknown"
 F2,FCV,5a1. When did your first COVID-19 infection since the last study visit begin: month?,C19INF1BMO_F,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
 F2,FCV,5a2. When did your first COVID-19 infection since the last study visit begin: year?,C19INF1BYR_F,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
 F2,FCV,5b. What was the duration of symptoms from that first COVID-19 infection?,C19SMDUR1,Conditional (e.g. skip pattern),"Integers 0-5, 8","0, Never had symptoms|1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer"
@@ -53,7 +54,7 @@ hospitalization: year",C19H3YR,Conditional (e.g. skip pattern),"2019 to current 
 F2,FCV,"8c6. How many days were you
 hospitalized?",C19H3DYS,Conditional (e.g. skip pattern),"Integers 1-887, 888, 999",
 F2,FCV,9. Have you received at least one vaccination against COVID-19 since [last f2_form_date]?,C19VAC_F,Always,"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,FCV,"9a. Since [last f2_form_date], how many COVID-19 vaccine doses have you received?",C19NVAC_F,Conditional (e.g. skip pattern),Integers 1-9,"1, One: Partial vaccination (one dose of two-dose series)|2, One: One-dose series, e.g., Janssen (Johnson & Johnson) without booster|3, Two: Two-dose series without booster|4, Two: One-dose series with one booster|5, Three: Two-dose series with one booster|6, Three +: One-dose series with more than one booster|7, Four +: Two-dose series with more than one booster|8, Decline to answer|9, Unsure/unknown"
+F2,FCV,"9a. Since [last f2_form_date], how many COVID-19 vaccine doses have you received?",C19NVAC_F,Conditional (e.g. skip pattern),"Integers 1-5, 7-9","1, One: Partial vaccination (one dose of two-dose series)|2, One: One booster|3, Two +: Two-dose series without booster|4, Two+: More than one booster|5, Three: Two-dose series with one booster|7, Four +: Two-dose series with more than one booster|8, Decline to answer|9, Unsure/unknown"
 F2,FCV,9ba. When did you receive your first COVID-19 vaccination since [last f2_form_date]: month?,C19VAC1MO_F,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
 F2,FCV,9bb. When did you receive your first COVID-19 vaccination since [last f2_form_date]: year?,C19VAC1YR_F,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
 F2,FCV,9b1. Which COVID-19 vaccine did you first receive?,C19TVAC1,Conditional (e.g. skip pattern),"Integers 1-4, 8, 9","1, Pfizer|2, Moderna|3, Janssen (Johnson & Johnson)|4, Other (Specify)|8, Decline to answer|9, Unsure/unknown"
@@ -93,10 +94,10 @@ F2,FCV,"9d3c. Which of the following symptoms did you experience after your firs
 F2,FCV,"9d3c1. Number of days new problems with memory, thinking, or concentration lasted:",C19BST1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
 F2,FCV,9d3d. Which of the following symptoms did you experience after your first booster vaccination: Decline to answer,C19BST1DEC,Conditional (e.g. skip pattern),"blank, 1",
 F2,FCV,9d3e. Which of the following symptoms did you experience after your first booster vaccination: Unknown,C19BST1UNK,Conditional (e.g. skip pattern),"blank, 1",
-F3,FCV,90. When was your most recent COVID-19 vaccination/booster: month,C19BSTRMO,Conditional (e.g. skip pattern),"Integers 1-12, 99",
-F4,FCV,900. When was your most recent COVID-19 vaccination/booster: year,C19BSTRYR,Conditional (e.g. skip pattern),"2019 to current year, 9999",
-F5,FCV,"10. On a scale of 1-5, how worried are you that you will get COVID-19 (or, if previously infected, worried that you will get it again)?",C19WORRY,Always,"Integers 1-5, 8","1, Not at all worried| 2, A little worried| 3, Somewhat worried|4, Very worried |5, Extremely worried|8, Decline to answer"
-F6,FCV,"11. On a scale of 1-5, since [last f2_form_date], how disruptive has the COVID-19 pandemic been to your everyday life?",C19DIS_F,Always,"Integers 1-5, 8","1, Not at all disruptive| 2, A little disruptive| 3, Somewhat disruptive|4, Very disruptive|5, Extremely disruptive|8, Decline to answer"
-F7,FCV,12. On a scale of 1-6 (with 1 being “I can shake off stress” and 6 being “Stress eats away at me”) how would you rate your ability to handle stress?,C19COPEST,Always,"Integers 1-6, 8",
-F8,FCV,"13. In the past year, on a scale of 1-6 with 1 being “no stress” and 6 being “extreme stress” how would you rate the amount of stress in your life (at home and at work)?",C19AMST,Always,"Integers 1-6, 8",
-F9,FCV,"14. On a scale of 1-5, since [last f2_form_date], how much has COVID-19 changed your willingness to participate in clinical research if it requires in-person visits to the research clinic?",C19PRE_F,Always,"Integers 1-5, 8","1, Not at all| 2, A little| 3, Somewhat |4, Very much|5, Extremely|8, Decline to answer"
+F2,FCV,9e1. When was your most recent COVID-19 vaccination/booster: month,C19BSTRMO,Conditional (e.g. skip pattern),"Integers 1-12, 99",
+F2,FCV,9e2. When was your most recent COVID-19 vaccination/booster: year,C19BSTRYR,Conditional (e.g. skip pattern),"2019 to current year, 9999",
+F2,FCV,"10. On a scale of 1-5, how worried are you that you will get COVID-19 (or, if previously infected, worried that you will get it again)?",C19WORRY,Always,"Integers 1-5, 8","1, Not at all worried| 2, A little worried| 3, Somewhat worried|4, Very worried |5, Extremely worried|8, Decline to answer"
+F2,FCV,"11. On a scale of 1-5, since [last f2_form_date], how disruptive has the COVID-19 pandemic been to your everyday life?",C19DIS_F,Always,"Integers 1-5, 8","1, Not at all disruptive| 2, A little disruptive| 3, Somewhat disruptive|4, Very disruptive|5, Extremely disruptive|8, Decline to answer"
+F2,FCV,12. On a scale of 1-6 (with 1 being “I can shake off stress” and 6 being “Stress eats away at me”) how would you rate your ability to handle stress?,C19COPEST,Always,"Integers 1-6, 8","1, 1= I can shake off stress | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6= Stress eats away at me | 8, Decline to answer "
+F2,FCV,"13. In the past year, on a scale of 1-6 with 1 being “no stress” and 6 being “extreme stress” how would you rate the amount of stress in your life (at home and at work)?",C19AMST,Always,"Integers 1-6, 8","1, 1= No Stress | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6= Extreme Stress | 8, Decline to answer "
+F2,FCV,"14. On a scale of 1-5, since [last f2_form_date], how much has COVID-19 changed your willingness to participate in clinical research if it requires in-person visits to the research clinic?",C19PRE_F,Always,"Integers 1-5, 8","1, Not at all| 2, A little| 3, Somewhat |4, Very much|5, Extremely|8, Decline to answer"
