@@ -29,3 +29,4 @@ preprocess-030,030,preprocess,NPDAGE,Age at death (NPDAGE) reported on the NP fo
 preprocess-031,031,preprocess,MODULE,A UDS packet must be submitted before submitting this module/form,cls
 preprocess-032,032,preprocess,MODULE,"Multiple submissions not allowed for [module name] module, delete the existing submissions for this participant with dates [list of dates] and retry","bds,np"
 preprocess-033,033,preprocess,VISITDATE,"Duplicate record with the same visit date exists in the legacy submissions for this participant/module","mlst"
+preprocess-034,034,preprocess,PACKET,"Participant with an existing UDSv3 Visit Packet must use PACKET=I4 for the Initial UDSv4 Visit Packet, PACKET=I is not accepted","uds"
