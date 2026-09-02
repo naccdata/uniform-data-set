@@ -1,107 +1,107 @@
-﻿form_name,packet,question,varname,missingness,conformity,response_labels
-F2,CV,0G. F2 - Form date,FRMDATEF2,Always,mm/dd/yyyy or yyyy/mm/dd,
-F2,CV,OH. F2 - In-person or remote?,MODEF2,Always,Integers 1-2,"1, In-person|2, Remote"
-F2,CV,0J. F2 - Examiner's initials,INITIALSF2,No,Any text,
-F2,CV,OK. Is the participant's CDR® > 0.5?,C19CDR,Always,Integers 0-1,"0, No|1, Yes"
-F2,CV,OL. Who will be filling in the F2 Participant form?,C19F2CP,Always,Integers 1-3,"1, Participant|2, Co-participant |3, Clinician"
-F2,CV,OM. How are you admininstering the F2 form?,C19F2D,Always,Integers 1-4,"1, In-person electronic|2, In-person printed form|3, Email |4, Mail"
-F2,CV,"1. During the COVID-19 pandemic, have you tested positive for COVID-19 and/or were diagnosed with COVID-19 by a healthcare provider?",C19DIAG,Always,"Integers 0-2, 8-9","0, No|1, Yes, based on a positive test for acute infection|2, Yes, presumed COVID-19 diagnosis by healthcare provider but not tested|8, Decline to answer|9, Unsure/unknown"
-F2,CV,"2. During the COVID-19 pandemic, have you experienced new or worsening symptoms (see below) that led you to think you had COVID-19 (novel coronavirus) such as fever, cough, difficulty breathing, persistent pain or pressure in the chest, chills, repeated shaking with chills, muscle pain, headache, sore throat, new loss of taste or smell, new confusion or inability to arouse, or bluish lips or face?",C19SYMPT,Conditional (e.g. skip pattern),"Integers 0-2, 8-9","0, No|1, Yes|2, Other|8, Decline to answer|9, Unsure/unknown"
-F2,CV,2a. Other specify,C19SYOTX,Conditional (e.g. skip pattern),text,
-F2,CV,3. Have you ever been tested for acute COVID-19 infection?,C19TESTED,Conditional (e.g. skip pattern),"Integers 1-4, 8, 9","1, No, not tested (wanted to but unable)|2, No, not tested (did not want to get tested)|3, Yes, I was tested once|4, Yes, I was tested more than once|8, Decline to answer|9, Unsure/unknown"
+﻿form_name,packet,question,varname,missingness,conformity,response_labels,data_type
+F2,CV,0G. F2 - Form date,FRMDATEF2,Always,mm/dd/yyyy or yyyy/mm/dd,,Date
+F2,CV,OH. F2 - In-person or remote?,MODEF2,Always,Integers 1-2,"1, In-person|2, Remote",Integer
+F2,CV,0J. F2 - Examiner's initials,INITIALSF2,No,Any text,,String
+F2,CV,OK. Is the participant's CDR® > 0.5?,C19CDR,Always,Integers 0-1,"0, No|1, Yes",Integer
+F2,CV,OL. Who will be filling in the F2 Participant form?,C19F2CP,Always,Integers 1-3,"1, Participant|2, Co-participant |3, Clinician",Integer
+F2,CV,OM. How are you admininstering the F2 form?,C19F2D,Always,Integers 1-4,"1, In-person electronic|2, In-person printed form|3, Email |4, Mail",Integer
+F2,CV,"1. During the COVID-19 pandemic, have you tested positive for COVID-19 and/or were diagnosed with COVID-19 by a healthcare provider?",C19DIAG,Always,"Integers 0-2, 8-9","0, No|1, Yes, based on a positive test for acute infection|2, Yes, presumed COVID-19 diagnosis by healthcare provider but not tested|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,"2. During the COVID-19 pandemic, have you experienced new or worsening symptoms (see below) that led you to think you had COVID-19 (novel coronavirus) such as fever, cough, difficulty breathing, persistent pain or pressure in the chest, chills, repeated shaking with chills, muscle pain, headache, sore throat, new loss of taste or smell, new confusion or inability to arouse, or bluish lips or face?",C19SYMPT,Conditional (e.g. skip pattern),"Integers 0-2, 8-9","0, No|1, Yes|2, Other|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,2a. Other specify,C19SYOTX,Conditional (e.g. skip pattern),text,,String
+F2,CV,3. Have you ever been tested for acute COVID-19 infection?,C19TESTED,Conditional (e.g. skip pattern),"Integers 1-4, 8, 9","1, No, not tested (wanted to but unable)|2, No, not tested (did not want to get tested)|3, Yes, I was tested once|4, Yes, I was tested more than once|8, Decline to answer|9, Unsure/unknown",Integer
 F2,CV,"4. If 100% is feeling perfectly normal (fully recovered from your COVID-19 symptoms),
-what percent of normal do you feel?",C19NORM,Conditional (e.g. skip pattern),0-100,
-F2,CV,"4a. If not 100%, why are you not feeling perfectly normal?",C19NORMX,Conditional (e.g. skip pattern),text,
-F2,CV,"5. Over the past month, how often did symptoms from past or current COVID-19 infection(s) affect your daily life?",C19SYMAF,Conditional (e.g. skip pattern),"Integers 1-5, 8","1, Never|2, Seldom (1-2 days per week)|3, Sometimes (3-4 days per week)|4, Often (5-6 days per week)|5, Everyday |8, Decline to answer"
-F2,CV,6. How many times have you been diagnosed with COVID-19 infection (distinct episodes of infection)?,C19NDIAG,Conditional (e.g. skip pattern),"Integers 1-3, 9","1, Once|2, Twice|3, Three or more times|9, Unsure/unknown"
-F2,CV,6a1. When did your first COVID-19 infection begin: month?,C19INF1BMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,6a2. When did your first COVID-19 infection begin: year?,C19INF1BYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,6b. What was the duration of symptoms from your first COVID-19 infection?,C19SMDUR1,Conditional (e.g. skip pattern),"Integers 0-5, 8","0, Never had symptoms|1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer"
-F2,CV,6c1. When did your most recent COVID-19 infection begin: month?,C19INFRBMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,6c2. When did your most recent COVID-19 infection begin: year?,C19INFRBYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,6d. What was the duration of symptoms from your most recent COVID-19 infection?,C19SMDURR,Conditional (e.g. skip pattern),"Integers 0-5, 8","0, Never had symptoms|1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer"
-F2,CV,"7. During any of your COVID-19 infections, did you lose the ability to smell or taste, experience lower ability to determine smells or tastes, or experience episodes of unprovoked, unfamiliar, or strange smells or tastes?",C19ANOS,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,CV,7a1. When did you first experience changes in smell or taste: month?,C19ANOSBMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,7a2. When did you first experience changes in smell or taste: year?,C19ANOSBYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,7b. How long did it take to recover smell and taste fully?,C19ANOSDUR,Conditional (e.g. skip pattern),"Integers 1-5, 8","1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer"
+what percent of normal do you feel?",C19NORM,Conditional (e.g. skip pattern),0-100,,Integer
+F2,CV,"4a. If not 100%, why are you not feeling perfectly normal?",C19NORMX,Conditional (e.g. skip pattern),text,,String
+F2,CV,"5. Over the past month, how often did symptoms from past or current COVID-19 infection(s) affect your daily life?",C19SYMAF,Conditional (e.g. skip pattern),"Integers 1-5, 8","1, Never|2, Seldom (1-2 days per week)|3, Sometimes (3-4 days per week)|4, Often (5-6 days per week)|5, Everyday |8, Decline to answer",Integer
+F2,CV,6. How many times have you been diagnosed with COVID-19 infection (distinct episodes of infection)?,C19NDIAG,Conditional (e.g. skip pattern),"Integers 1-3, 9","1, Once|2, Twice|3, Three or more times|9, Unsure/unknown",Integer
+F2,CV,6a1. When did your first COVID-19 infection begin: month?,C19INF1BMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,6a2. When did your first COVID-19 infection begin: year?,C19INF1BYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
+F2,CV,6b. What was the duration of symptoms from your first COVID-19 infection?,C19SMDUR1,Conditional (e.g. skip pattern),"Integers 0-5, 8","0, Never had symptoms|1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer",Integer
+F2,CV,6c1. When did your most recent COVID-19 infection begin: month?,C19INFRBMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,6c2. When did your most recent COVID-19 infection begin: year?,C19INFRBYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
+F2,CV,6d. What was the duration of symptoms from your most recent COVID-19 infection?,C19SMDURR,Conditional (e.g. skip pattern),"Integers 0-5, 8","0, Never had symptoms|1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer",Integer
+F2,CV,"7. During any of your COVID-19 infections, did you lose the ability to smell or taste, experience lower ability to determine smells or tastes, or experience episodes of unprovoked, unfamiliar, or strange smells or tastes?",C19ANOS,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,7a1. When did you first experience changes in smell or taste: month?,C19ANOSBMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,7a2. When did you first experience changes in smell or taste: year?,C19ANOSBYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
+F2,CV,7b. How long did it take to recover smell and taste fully?,C19ANOSDUR,Conditional (e.g. skip pattern),"Integers 1-5, 8","1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer",Integer
 F2,CV,"8. During any of your COVID-19 infections, did you experience new problems with thinking, remembering,
-or concentration (e.g., brain fog)?",C19BRF,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,CV,"8a1. When did you first experience changes in thinking, remembering, or concentration: month?",C19BRFBMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,"8a2. When did you first experience changes in thinking, remembering, or concentration: year?",C19BRFBYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,"8b. How long did it take to recover changes in thinking, remembering, or concentration?",C19BRFDUR,Conditional (e.g. skip pattern),"Integers 1-5, 8, 9","1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer"
-F2,CV,9. Did you ever seek medical care for COVID-19?,C19MEDC,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9",
-F2,CV,"9a. Did you receive any type of outpatient treatment for your COVID-19 infection such as monoclonal antibody treatment, oral antiviral, subcutaneous injection of antiviral, or other treatment?",C19OPATR,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,CV,9a1a. When did you receive this outpatient treatment: month?,C19OPATRMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,9a1b. When did you receive this outpatient treatment: year?,C19OPATRYR,Conditional (e.g. skip pattern),"2020 to current year, 8888, 9999",
-F2,CV,9b. What was the highest level of medical care you received for COVID-19?,C19MEDCTYP,Conditional (e.g. skip pattern),"Integers 1-5, 8, 9","1,Phone consultation or virtual care visit|2, In-person physician or urgent care visit |3, Emergency department|4, Hospitalized but not the intensive care unit (ICU) |5, Hospitalized, including a stay in the ICU and/or ventilator support (breathing tube in your throat)|8, Decline to answer|9,Unsure/unknown"
-F2,CV,9c. How many times have you been admitted to the hospital for COVID-19?,C19HOSPN,Conditional (e.g. skip pattern),"Integers 1-3, 9","1, Once |2, Twice|3, Three or more times|9, Unsure/unknown"
+or concentration (e.g., brain fog)?",C19BRF,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,"8a1. When did you first experience changes in thinking, remembering, or concentration: month?",C19BRFBMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,"8a2. When did you first experience changes in thinking, remembering, or concentration: year?",C19BRFBYR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
+F2,CV,"8b. How long did it take to recover changes in thinking, remembering, or concentration?",C19BRFDUR,Conditional (e.g. skip pattern),"Integers 1-5, 8","1, < 1 week|2, 1-2 weeks |3, 2-4 weeks|4, >4 weeks |5, Not yet recovered (symptoms persist to the present) |8, Decline to answer",Integer
+F2,CV,9. Did you ever seek medical care for COVID-19?,C19MEDC,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9",,Integer
+F2,CV,"9a. Did you receive any type of outpatient treatment for your COVID-19 infection such as monoclonal antibody treatment, oral antiviral, subcutaneous injection of antiviral, or other treatment?",C19OPATR,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,9a1a. When did you receive this outpatient treatment: month?,C19OPATRMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,9a1b. When did you receive this outpatient treatment: year?,C19OPATRYR,Conditional (e.g. skip pattern),"2020 to current year, 8888, 9999",,Integer
+F2,CV,9b. What was the highest level of medical care you received for COVID-19?,C19MEDCTYP,Conditional (e.g. skip pattern),"Integers 1-5, 8, 9","1,Phone consultation or virtual care visit|2, In-person physician or urgent care visit |3, Emergency department|4, Hospitalized but not the intensive care unit (ICU) |5, Hospitalized, including a stay in the ICU and/or ventilator support (breathing tube in your throat)|8, Decline to answer|9,Unsure/unknown",Integer
+F2,CV,9c. How many times have you been admitted to the hospital for COVID-19?,C19HOSPN,Conditional (e.g. skip pattern),"Integers 1-3, 9","1, Once |2, Twice|3, Three or more times|9, Unsure/unknown",Integer
 F2,CV,"9c1a. Date of most recent hospitalization:
-month",C19H1MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
+month",C19H1MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
 F2,CV,"9c1b. Date of most recent hospitalization:
-year",C19H1YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
+year",C19H1YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
 F2,CV,"9c2. How many days were you
-hospitalized?",C19H1DYS,Conditional (e.g. skip pattern),"Integers 1-887, 888, 999",
+hospitalized?",C19H1DYS,Conditional (e.g. skip pattern),"Integers 1-888, 999",,Integer
 F2,CV,"9c3a. Date of next most recent
-hospitalization: month",C19H2MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
+hospitalization: month",C19H2MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
 F2,CV,"9c3b. Date of next most recent
-hospitalization: year",C19H2YR,Conditional (e.g. skip pattern),"2020 to current year, 8888, 9999",
+hospitalization: year",C19H2YR,Conditional (e.g. skip pattern),"2020 to current year, 8888, 9999",,Integer
 F2,CV,"9c4. How many days were you
-hospitalized?",C19H2DYS,Conditional (e.g. skip pattern),"Integers 1-887, 888, 999",
+hospitalized?",C19H2DYS,Conditional (e.g. skip pattern),"Integers 1-888, 999",,Integer
 F2,CV,"9c5a. Date of next most recent
-hospitalization: month",C19H3MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
+hospitalization: month",C19H3MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
 F2,CV,"9c5b. Date of next most recent
-hospitalization: year",C19H3YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
+hospitalization: year",C19H3YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
 F2,CV,"9c6. How many days were you
-hospitalized?",C19H3DYS,Conditional (e.g. skip pattern),"Integers 1-887, 888,999",
-F2,CV,10. Have you received at least one vaccination against COVID-19?,C19VAC,Always,"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10a. Why have you not received a COVID-19 vaccination?,C19UNVAC,Conditional (e.g. skip pattern),"Integers 1-5, 8, 9","1, Wanted to but unable|2, Did not want to get vaccinated|3,Allergy|4,Medical contraindication|5,Other|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10a1. Medical contraindication specify,C19UNVACMX,Conditional (e.g. skip pattern),text,
-F2,CV,10a2. Other specify,C19UNVACOX,Conditional (e.g. skip pattern),text,
-F2,CV,10b. How many COVID-19 vaccine doses have you received?,C19NVAC,Conditional (e.g. skip pattern),Integers 1-9,"1, One: Partial vaccination (one dose of two-dose series)|2, One: One-dose series, e.g., Janssen (Johnson & Johnson) without booster|3, Two: Two-dose series without booster|4, Two: One-dose series with one booster|5, Three: Two-dose series with one booster|6, Three +: One-dose series with more than one booster|7, Four +: Two-dose series with more than one booster|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10c1a. When did you receive your first COVID-19 vaccination: month?,C19VAC1MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,10c1b. When did you receive your first COVID-19 vaccination: year?,C19VAC1YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,10c2. Which COVID-19 vaccine did you first receive?,C19TVAC1,Conditional (e.g. skip pattern),"Integers 1-4, 8, 9","1, Pfizer|2, Moderna|3, Janssen (Johnson & Johnson)|4, Other (Specify)|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10c2a. Other specify,C19TVAC1OX,Conditional (e.g. skip pattern),text,
-F2,CV,10c3. Did you experience any symptoms within 5 days of your first COVID-19 vaccination?,C19SVAC1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10c4a. Which of the following symptoms did you experience after your first vaccine: Sore arm,C19VAC1ARM,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10c4a1. Number of days sore arm lasted:,C19VAC1ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,"10c4b. Which of the following symptoms did you experience after your first vaccine: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19VAC1FLU,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10c4b1. Number of days flu-like feelings lasted,C19VAC1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,"10c4c. Which of the following symptoms did you experience after your first vaccine: New problems with memory, thinking, or concentration",C19VAC1MEM,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,"10c4c1. Number of days new problems with memory, thinking, or concentration lasted:",C19VAC1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,10c4d. Which of the following symptoms did you experience after your first vaccine: Decline to answer,C19VAC1DEC,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10c4e. Which of the following symptoms did you experience after your first vaccine: Unknown,C19VAC1UNK,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10d1a. When did you receive your second COVID-19 vaccination: month?,C19VAC2MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,10d1b. When did you receive your second COVID-19 vaccination: year?,C19VAC2YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,10d2. Which COVID-19 vaccine did you receive?,C19TVAC2,Conditional (e.g. skip pattern),"Integers 1-3, 8, 9","1, Pfizer|2, Moderna|3, Other (Specify)|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10d2a. Other specify,C19TVAC2OX,Conditional (e.g. skip pattern),text,
-F2,CV,10d3. Did you experience any symptoms within 5 days of your second COVID-19 vaccination?,C19SVAC2,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10d4a. Which of the following symptoms did you experience after your second vaccine: Sore arm,C19VAC2ARM,Conditional (e.g. skip pattern),"blank, 1 ",
-F2,CV,10d4a1. Number of days sore arm lasted:,C19VAC2ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,"10d4b. Which of the following symptoms did you experience after your second vaccine: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19VAC2FLU,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10d4b1. Number of days flu-like feelings lasted,C19VAC2FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,"10d4c. Which of the following symptoms did you experience after your second vaccine: New problems with memory, thinking, or concentration",C19VAC2MEM,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,"10d4c1. Number of days new problems with memory, thinking, or concentration lasted:",C19VAC2MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,10d4d. Which of the following symptoms did you experience after your second vaccine: Decline to answer,C19VAC2DEC,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10d4e. Which of the following symptoms did you experience after your second vaccine: Unknown,C19VAC2UNK,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10e1a. When did you receive your first COVID-19 booster vaccination: month?,C19BST1MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,10e1b. When did you receive your first COVID-19 booster vaccination: year?,C19BST1YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",
-F2,CV,10e2. Which COVID-19 vaccine did you receive?,C19TBST1,Conditional (e.g. skip pattern),"Integers 1-3, 8, 9","1, Pfizer|2, Moderna|3, Other (Specify)|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10e2a. Other specify,C19TBST1OX,Conditional (e.g. skip pattern),text,
-F2,CV,10e3. Did you experience any symptoms within 5 days of your first COVID-19 booster vaccination?,C19SBST1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,CV,10e4a. Which of the following symptoms did you experience after your first booster vaccination: Sore arm,C19BST1ARM,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10e4a1. Number of days sore arm lasted:,C19BST1ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,"10e4b. Which of the following symptoms did you experience after your first booster vaccination: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19BST1FLU,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10e4b1. Number of days flu-like feelings lasted,C19BST1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,"10e4c. Which of the following symptoms did you experience after your first booster vaccination: New problems with memory, thinking, or concentration",C19BST1MEM,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,"10e4c1. Number of days new problems with memory, thinking, or concentration lasted:",C19BST1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",
-F2,CV,10e4d. Which of the following symptoms did you experience after your first booster vaccination: Decline to answer,C19BST1DEC,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10e4e. Which of the following symptoms did you experience after your first booster vaccination: Unknown,C19BST1UNK,Conditional (e.g. skip pattern),"blank, 1",
-F2,CV,10fa. When was your most recent COVID-19 vaccination/booster: month,C19BSTRMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",
-F2,CV,10fb. When was your most recent COVID-19 vaccination/booster: year,C19BSTRYR,Conditional (e.g. skip pattern),"2020 to current year, 8888, 9999",
-F2,CV,11. Do you need help in setting up a COVID vaccination for yourself?,C19VHELP,Always,"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown"
-F2,CV,"12. On a scale of 1-5, how worried are you that you will get COVID-19 (or, if previously infected, worried that you will get it again)?",C19WORRY,Always,"Integers 1-5, 8","1, Not at all worried| 2, A little worried| 3, Somewhat worried|4, Very worried |5, Extremely worried|8, Decline to answer"
-F2,CV,"13. On a scale of 1-5, how disruptive has the COVID-19 pandemic been to your everyday life?",C19DIS,Always,"Integers 1-5, 8","1, Not at all disruptive| 2, A little disruptive| 3, Somewhat disruptive|4, Very disruptive|5, Extremely disruptive|8, Decline to answer"
-F2,CV,14. On a scale of 1-6 (with 1 being “I can shake off stress” and 6 being “Stress eats away at me”) how would you rate your ability to handle stress?,C19COPEST,Always,"Integers 1-6, 8",
-F2,CV,"15. In the past year, on a scale of 1-6 with 1 being “no stress” and 6 being “extreme stress” how would you rate the amount of stress in your life (at home and at work)?",C19AMST,Always,"Integers 1-6, 8",
-F2,CV,"16. On a scale of 1-5, how much has COVID-19 changed your willingness to participate in clinical research if it requires in-person visits to the research clinic?",C19PRE,Always,"Integers 1-5, 8","1, Not at all| 2, A little| 3, Somewhat |4, Very much|5, Extremely|8, Decline to answer"
+hospitalized?",C19H3DYS,Conditional (e.g. skip pattern),"Integers 1-888,999",,Integer
+F2,CV,10. Have you received at least one vaccination against COVID-19?,C19VAC,Always,"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10a. Why have you not received a COVID-19 vaccination?,C19UNVAC,Conditional (e.g. skip pattern),"Integers 1-5, 8, 9","1, Wanted to but unable|2, Did not want to get vaccinated|3,Allergy|4,Medical contraindication|5,Other|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10a1. Medical contraindication specify,C19UNVACMX,Conditional (e.g. skip pattern),text,,String
+F2,CV,10a2. Other specify,C19UNVACOX,Conditional (e.g. skip pattern),text,,String
+F2,CV,10b. How many COVID-19 vaccine doses have you received?,C19NVAC,Conditional (e.g. skip pattern),Integers 1-9,"1, One: Partial vaccination (one dose of two-dose series)|2, One: One-dose series, e.g., Janssen (Johnson & Johnson) without booster|3, Two: Two-dose series without booster|4, Two: One-dose series with one booster|5, Three: Two-dose series with one booster|6, Three +: One-dose series with more than one booster|7, Four +: Two-dose series with more than one booster|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10c1a. When did you receive your first COVID-19 vaccination: month?,C19VAC1MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,10c1b. When did you receive your first COVID-19 vaccination: year?,C19VAC1YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
+F2,CV,10c2. Which COVID-19 vaccine did you first receive?,C19TVAC1,Conditional (e.g. skip pattern),"Integers 1-4, 8, 9","1, Pfizer|2, Moderna|3, Janssen (Johnson & Johnson)|4, Other (Specify)|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10c2a. Other specify,C19TVAC1OX,Conditional (e.g. skip pattern),text,,String
+F2,CV,10c3. Did you experience any symptoms within 5 days of your first COVID-19 vaccination?,C19SVAC1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10c4a. Which of the following symptoms did you experience after your first vaccine: Sore arm,C19VAC1ARM,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10c4a1. Number of days sore arm lasted:,C19VAC1ADY,Conditional (e.g. skip pattern),"Integers 1-777, 999",,Integer
+F2,CV,"10c4b. Which of the following symptoms did you experience after your first vaccine: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19VAC1FLU,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10c4b1. Number of days flu-like feelings lasted,C19VAC1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",,Integer
+F2,CV,"10c4c. Which of the following symptoms did you experience after your first vaccine: New problems with memory, thinking, or concentration",C19VAC1MEM,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,"10c4c1. Number of days new problems with memory, thinking, or concentration lasted:",C19VAC1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",,Integer
+F2,CV,10c4d. Which of the following symptoms did you experience after your first vaccine: Decline to answer,C19VAC1DEC,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10c4e. Which of the following symptoms did you experience after your first vaccine: Unknown,C19VAC1UNK,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10d1a. When did you receive your second COVID-19 vaccination: month?,C19VAC2MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,10d1b. When did you receive your second COVID-19 vaccination: year?,C19VAC2YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
+F2,CV,10d2. Which COVID-19 vaccine did you receive?,C19TVAC2,Conditional (e.g. skip pattern),"Integers 1-3, 8, 9","1, Pfizer|2, Moderna|3, Other (Specify)|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10d2a. Other specify,C19TVAC2OX,Conditional (e.g. skip pattern),text,,String
+F2,CV,10d3. Did you experience any symptoms within 5 days of your second COVID-19 vaccination?,C19SVAC2,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10d4a. Which of the following symptoms did you experience after your second vaccine: Sore arm,C19VAC2ARM,Conditional (e.g. skip pattern),"blank, 1 ",,Integer
+F2,CV,10d4a1. Number of days sore arm lasted:,C19VAC2ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",,Integer
+F2,CV,"10d4b. Which of the following symptoms did you experience after your second vaccine: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19VAC2FLU,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10d4b1. Number of days flu-like feelings lasted,C19VAC2FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",,Integer
+F2,CV,"10d4c. Which of the following symptoms did you experience after your second vaccine: New problems with memory, thinking, or concentration",C19VAC2MEM,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,"10d4c1. Number of days new problems with memory, thinking, or concentration lasted:",C19VAC2MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",,Integer
+F2,CV,10d4d. Which of the following symptoms did you experience after your second vaccine: Decline to answer,C19VAC2DEC,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10d4e. Which of the following symptoms did you experience after your second vaccine: Unknown,C19VAC2UNK,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10e1a. When did you receive your first COVID-19 booster vaccination: month?,C19BST1MO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,10e1b. When did you receive your first COVID-19 booster vaccination: year?,C19BST1YR,Conditional (e.g. skip pattern),"2019 to current year, 8888, 9999",,Integer
+F2,CV,10e2. Which COVID-19 vaccine did you receive?,C19TBST1,Conditional (e.g. skip pattern),"Integers 1-3, 8, 9","1, Pfizer|2, Moderna|3, Other (Specify)|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10e2a. Other specify,C19TBST1OX,Conditional (e.g. skip pattern),text,,String
+F2,CV,10e3. Did you experience any symptoms within 5 days of your first COVID-19 booster vaccination?,C19SBST1,Conditional (e.g. skip pattern),"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,10e4a. Which of the following symptoms did you experience after your first booster vaccination: Sore arm,C19BST1ARM,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10e4a1. Number of days sore arm lasted:,C19BST1ADY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",,Integer
+F2,CV,"10e4b. Which of the following symptoms did you experience after your first booster vaccination: Flu-like feelings (fever, chills, tiredness, or “malaise”)",C19BST1FLU,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10e4b1. Number of days flu-like feelings lasted,C19BST1FDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",,Integer
+F2,CV,"10e4c. Which of the following symptoms did you experience after your first booster vaccination: New problems with memory, thinking, or concentration",C19BST1MEM,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,"10e4c1. Number of days new problems with memory, thinking, or concentration lasted:",C19BST1MDY,Conditional (e.g. skip pattern),"Integers 1-776, 777, 999",,Integer
+F2,CV,10e4d. Which of the following symptoms did you experience after your first booster vaccination: Decline to answer,C19BST1DEC,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10e4e. Which of the following symptoms did you experience after your first booster vaccination: Unknown,C19BST1UNK,Conditional (e.g. skip pattern),"blank, 1",,Integer
+F2,CV,10fa. When was your most recent COVID-19 vaccination/booster: month,C19BSTRMO,Conditional (e.g. skip pattern),"Integers 1-12, 88, 99",,Integer
+F2,CV,10fb. When was your most recent COVID-19 vaccination/booster: year,C19BSTRYR,Conditional (e.g. skip pattern),"2020 to current year, 8888, 9999",,Integer
+F2,CV,11. Do you need help in setting up a COVID vaccination for yourself?,C19VHELP,Always,"Integers 0, 1, 8, 9","0, No|1, Yes|8, Decline to answer|9, Unsure/unknown",Integer
+F2,CV,"12. On a scale of 1-5, how worried are you that you will get COVID-19 (or, if previously infected, worried that you will get it again)?",C19WORRY,Always,"Integers 1-5, 8","1, Not at all worried| 2, A little worried| 3, Somewhat worried|4, Very worried |5, Extremely worried|8, Decline to answer",Integer
+F2,CV,"13. On a scale of 1-5, how disruptive has the COVID-19 pandemic been to your everyday life?",C19DIS,Always,"Integers 1-5, 8","1, Not at all disruptive| 2, A little disruptive| 3, Somewhat disruptive|4, Very disruptive|5, Extremely disruptive|8, Decline to answer",Integer
+F2,CV,14. On a scale of 1-6 (with 1 being “I can shake off stress” and 6 being “Stress eats away at me”) how would you rate your ability to handle stress?,C19COPEST,Always,"Integers 1-6, 8",,Integer
+F2,CV,"15. In the past year, on a scale of 1-6 with 1 being “no stress” and 6 being “extreme stress” how would you rate the amount of stress in your life (at home and at work)?",C19AMST,Always,"Integers 1-6, 8",,Integer
+F2,CV,"16. On a scale of 1-5, how much has COVID-19 changed your willingness to participate in clinical research if it requires in-person visits to the research clinic?",C19PRE,Always,"Integers 1-5, 8","1, Not at all| 2, A little| 3, Somewhat |4, Very much|5, Extremely|8, Decline to answer",Integer
