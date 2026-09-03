@@ -1,6 +1,6 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,notes
-COVID_header,CV,0A. Packet code,PACKET,Always,CV,"CV, Initial",String,,
-COVID_header,CV,0C. Form version number,FORMVER,Always,2,"2, 2",Numeric,,
-COVID_header,CV,0D. Center ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,,Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids
-COVID_header,CV,0E. ADC subject ID,PTID,Always,String with max length of 10 characters,,String,,"Follow your Center's Patient ID scheme; use same ID as in UDS, if subject is enrolled in UDS."
-COVID_header,CV,0F. Form date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,
+covid_header,CV,0A. Packet code,PACKET,Always,CV,"CV, Initial",String,,
+covid_header,CV,0C. Form version number,FORMVER,Always,2,"2, 2",Numeric,,
+covid_header,CV,0D. Center ID,ADCID,Always,List of current ADCIDs,List of current ADCIDs,Integer,,Use your Center ID. Valid codes are available here: https://naccdata.org/center-ids
+covid_header,CV,0E. ADC subject ID,PTID,Always,String with max length of 10 characters,,String,,"Follow your Center's Patient ID scheme; use same ID as in UDS, if subject is enrolled in UDS."
+covid_header,CV,0F. Form date,VISITDATE,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,

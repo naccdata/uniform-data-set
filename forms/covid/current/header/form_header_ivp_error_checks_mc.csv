@@ -1,10 +1,10 @@
-﻿error_code,error_no,error_type,form_name,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
-covid_header-m-001,001,Error,covid_header,PACKET,Missingness,PACKET must be present,PACKET cannot be blank,Q0a. PACKET (Packet code) cannot be blank ,If PACKET = blank,,,Yes,Yes
-covid_header-c-002,002,Error,covid_header,PACKET,Conformity,PACKET conforms,PACKET must be CV,Q0a. PACKET (Packet code) must be CV (initial COVID form),If PACKET ne CV,,,Yes,Yes
-covid_header-m-003,003,Error,covid_header,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Q0c. FORMVER (Form version number) cannot be blank ,If FORMVER = blank,,,Yes,Yes
-covid_header-c-004,004,Error,covid_header,FORMVER,Conformity,FORMVER conforms,FORMVER must be 2,Q0c. FORMVER (Form version number) must be 2,If FORMVER ne 2,,,Yes,Yes
-covid_header-m-005,005,Error,covid_header,ADCID,Missingness,ADCID must be present,ADCID cannot be blank,Q0d. ADCID (ADCID) cannot be blank,If ADCID = blank,,,Yes,Yes
-covid_header-c-006,006,Error,covid_header,ADCID,Conformity,ADCID conforms,ADCID must be a valid code in list_of_adcids,Q0d. ADCID (ADCID) must be a valid code in list_of_adcids,IF ADCID is not in list_of_adcids,,,Yes,Yes
-covid_header-m-007,007,Error,covid_header,PTID,Missingness,PTID must be present,PTID cannot be blank,Q0e. PTID (ADRC Participant ID) cannot be blank,If PTID = blank,,,Yes,Yes
-covid_header-m-008,008,Error,covid_header,VISITDATE,Missingness,VISITDATE must be present,VISITDATE cannot be blank,Q0f. VISITDATE (visit date) cannot be blank ,If VISITDATE = blank,,,Yes,Yes
-covid_header-c-009,009,Error,covid_header,VISITDATE,Conformity,VISITDATE conforms,VISITDATE must be a date in format mm/dd/yyyy or yyyy/mm/dd,Q0f. VISITDATE (visit date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If VISITDATE is not mm/dd/yyyy or yyyy/mm/dd,,,No,No
+﻿error_code,error_no,error_type,form_name,packet,var_name,check_type,test_name,short_desc,full_desc,test_logic,comp_forms,comp_vars,do_in_redcap,in_prev_versions
+covid_header-cv-m-001,001,Error,covid_header,CV,PACKET,Missingness,PACKET must be present,PACKET cannot be blank,Q0a. PACKET (Packet code) cannot be blank ,If PACKET = blank,,,Yes,Yes
+covid_header-cv-c-002,002,Error,covid_header,CV,PACKET,Conformity,PACKET conforms,PACKET must be CV,Q0a. PACKET (Packet code) must be CV (initial COVID form),If PACKET ne CV,,,Yes,Yes
+covid_header-cv-m-003,003,Error,covid_header,CV,FORMVER,Missingness,FORMVER must be present,FORMVER cannot be blank,Q0c. FORMVER (Form version number) cannot be blank ,If FORMVER = blank,,,Yes,Yes
+covid_header-cv-c-004,004,Error,covid_header,CV,FORMVER,Conformity,FORMVER conforms,FORMVER must be 2,Q0c. FORMVER (Form version number) must be 2,If FORMVER ne 2,,,Yes,Yes
+covid_header-cv-m-005,005,Error,covid_header,CV,ADCID,Missingness,ADCID must be present,ADCID cannot be blank,Q0d. ADCID (ADCID) cannot be blank,If ADCID = blank,,,Yes,Yes
+covid_header-cv-c-006,006,Error,covid_header,CV,ADCID,Conformity,ADCID conforms,ADCID must be a valid code in list_of_adcids,Q0d. ADCID (ADCID) must be a valid code in list_of_adcids,IF ADCID is not in list_of_adcids,,,Yes,Yes
+covid_header-cv-m-007,007,Error,covid_header,CV,PTID,Missingness,PTID must be present,PTID cannot be blank,Q0e. PTID (ADRC Participant ID) cannot be blank,If PTID = blank,,,Yes,Yes
+covid_header-cv-m-008,008,Error,covid_header,CV,VISITDATE,Missingness,VISITDATE must be present,VISITDATE cannot be blank,Q0f. VISITDATE (visit date) cannot be blank ,If VISITDATE = blank,,,Yes,Yes
+covid_header-cv-c-009,009,Error,covid_header,CV,VISITDATE,Conformity,VISITDATE conforms,VISITDATE must be a date in format mm/dd/yyyy or yyyy/mm/dd,Q0f. VISITDATE (visit date) must be a date formatted mm/dd/yyyy or yyyy/mm/dd,If VISITDATE is not mm/dd/yyyy or yyyy/mm/dd,,,No,No
