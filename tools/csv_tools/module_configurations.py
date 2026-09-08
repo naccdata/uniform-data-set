@@ -55,6 +55,7 @@ class ModuleType(Enum):
     PREPROCESS = 'preprocessing'
     BDS = 'bds'
     CLS = 'cls'
+    COVID_CURRENT = 'covid/current'
     DS_CURRENT = 'ds/current'
     DS_LEGACY = 'ds/legacy'
     MILESTONES = 'milestones'
@@ -72,6 +73,7 @@ class ModuleType(Enum):
             cls.PREPROCESS,
             cls.BDS,
             cls.CLS,
+            cls.COVID_CURRENT,
             cls.DS_CURRENT,
             cls.DS_LEGACY,
             cls.MILESTONES,
@@ -86,6 +88,7 @@ class ModuleType(Enum):
             ModuleType.FTLD.value,
             ModuleType.LBD_LONG.value,
             ModuleType.LBD_SHORT.value,
+            ModuleType.COVID_CURRENT.value,
             ModuleType.DS_CURRENT.value,
             ModuleType.DS_LEGACY.value,
             ModuleType.B1A.value
@@ -114,6 +117,7 @@ MODULE_MAPPING = {
     ModuleType.ENROLLMENT: 'ENROLL',
     ModuleType.PREPROCESS: 'PREPROCESS',
     ModuleType.MILESTONES: 'MLST',
+    ModuleType.COVID_CURRENT: 'COVID',
     ModuleType.DS_CURRENT: 'DS',
     ModuleType.DS_LEGACY: 'DS',
     ModuleType.B1A: 'B1A'
@@ -128,6 +132,7 @@ FORM_VER_MAPPING = {
     ModuleType.PREPROCESS: '1.0',
     ModuleType.BDS: '1.0',
     ModuleType.CLS: '3.0',
+    ModuleType.COVID_CURRENT: '2.0',
     ModuleType.DS_CURRENT: '1.0',
     ModuleType.DS_LEGACY: '1.0',
     ModuleType.MILESTONES: '3.0',
@@ -152,6 +157,10 @@ PACKET_MAPPING = {
     ModuleType.LBD_SHORT: {
         VisitType.IVP: 'IL',
         VisitType.FVP: 'FL'
+    },
+    ModuleType.COVID_CURRENT: {
+        VisitType.IVP: 'CV',
+        VisitType.FVP: 'FCV'
     },
     ModuleType.DS_CURRENT: {
         VisitType.IVP: 'IDS',
@@ -184,6 +193,10 @@ ERROR_CODE_MAPPING = {
     ModuleType.LBD_SHORT: {
         VisitType.IVP: '-lbd3.1ivp-',
         VisitType.FVP: '-lbd3.1fvp-'
+    },
+    ModuleType.COVID_CURRENT: {
+        VisitType.IVP: '-cv-',
+        VisitType.FVP: '-fcv-'
     },
     ModuleType.DS_LEGACY: {
         VisitType.IVP: '-dsivp-',
