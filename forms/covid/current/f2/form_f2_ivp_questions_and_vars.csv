@@ -1,4 +1,4 @@
-﻿form_name,packet,question,varname,missingness,conformity,response_labels,data_type
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type
 F2,CV,0G. F2 - Form date,FRMDATEF2,Always,mm/dd/yyyy or yyyy/mm/dd,,Date
 F2,CV,OH. F2 - In-person or remote?,MODEF2,Always,Integers 1-2,"1, In-person|2, Remote",Integer
 F2,CV,0J. F2 - Examiner's initials,INITIALSF2,No,Any text,,String
