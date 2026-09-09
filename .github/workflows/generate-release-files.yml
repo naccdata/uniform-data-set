@@ -7,7 +7,7 @@ on:
     inputs:
       modules:
         description: "Comma-deliminated list of modules to prepare for release."
-        default: "enrollment,preprocessing,uds,ftld,lbd/long,lbd/short,bds,cls,milestones,np,ds/current"
+        default: "enrollment,preprocessing,uds,ftld,lbd/long,lbd/short,bds,cls,milestones,np,ds/current,covid/current"
         required: true
       generate_ded:
         description: "Whether or not to generate the DED (true or false)"
