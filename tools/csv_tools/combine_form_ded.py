@@ -13,6 +13,7 @@ import logging
 import os
 import pandas as pd
 import csv
+import re
 from datetime import datetime
 
 from convert_to_utf8 import convert_to_utf8
@@ -32,9 +33,16 @@ def ensure_directory_exists(file_path: str) -> None:
 
 
 def clean_newlines(value: str) -> str:
-    # Replace newline characters with an empty string
-    if isinstance(value, str):
-        return value.replace('\n', '').replace('\r', '')
+    """Collapse any line break inside a cell to a single space.
+
+    The Q&V CSVs wrap long questions across lines. Removing the break outright glued
+    the words on either side together - "How many days were youhospitalized?" - so
+    replace it, and any whitespace around it, with one space. Only cells that actually
+    contain a break are rewritten, which leaves the incidental leading and trailing
+    whitespace elsewhere in the sources untouched.
+    """
+    if isinstance(value, str) and ('\n' in value or '\r' in value):
+        return re.sub(r'\s*[\r\n]+\s*', ' ', value).strip()
     return value
 
 
