@@ -180,7 +180,13 @@ def generate_ded(module: ModuleType,
 
     Filename follows module-version-packet-ded-date.csv format
     """
-    module_name = module.value
+    # A module value may name a variant in a subdirectory - lbd/long, ds/current,
+    # covid/current - and only the module belongs in the filename. Keeping the slash
+    # would write the DED into a subdirectory named after the module and strip the
+    # module from the filename itself (covid/current-v2-ivp-ded-...), so drop it here
+    # rather than special-casing each variant as it is added. The long/short LBD and
+    # current/legacy DS distinctions are carried by the version instead.
+    module_name = module.value.split('/')[0]
     formver = FORM_VER_MAPPING.get(module)
     if not formver:
         raise ValueError(f"no formver found for {module.value}")
@@ -188,11 +194,7 @@ def generate_ded(module: ModuleType,
     if not target_date:
         target_date = datetime.today().strftime("%m%d%Y")
 
-    if module.value in [ModuleType.LBD_LONG.value, ModuleType.LBD_SHORT.value]:
-        # long/short lbd determined by version in naming scheme
-        module_name = "lbd"
-    if module.value in [ModuleType.DS_CURRENT.value, ModuleType.DS_LEGACY.value]:
-        module_name = "ds"
+    # B1A is the exception: it is the variant, not the module, that names the file
     if module.value == ModuleType.B1A.value:
         module_name = "b1a"
     if module.value == ModuleType.ENROLLMENT.value:
