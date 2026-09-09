@@ -74,10 +74,10 @@ class DedGenerator(FormOrganizer):
         log.info(
             f"Found file {file} - original: {self.visit}, override: {visit}")
         # found the form, will always return True after this point
-        try:
-            file_path = os.path.join(subdir, file)
-            log.info(f"Adding {file_path}")
+        file_path = os.path.join(subdir, file)
+        log.info(f"Adding {file_path}")
 
+        try:
             # Read the csv file into a DataFrame - if not UTF-8, convert
             try:
                 df = pd.read_csv(file_path, dtype=object, encoding='utf-8')
@@ -104,7 +104,9 @@ class DedGenerator(FormOrganizer):
             # Append the data to the combined DataFrame
             if 'header' in file:
                 log.info(f"Found header file: {file}")
-                if self.header_df:
+                # `is not None`, not truthiness - a DataFrame raises on bool(), so this
+                # guard used to throw "truth value is ambiguous" instead of its own error
+                if self.header_df is not None:
                     raise ValueError("Multiple header DFs found")
 
                 self.header_df = df
@@ -113,7 +115,12 @@ class DedGenerator(FormOrganizer):
                 self.combined_df = pd.concat(
                     [self.combined_df, df], ignore_index=True)
         except Exception as e:
-            log.warning(f'File {file_path} threw an exception: {e}')
+            # Anything thrown here drops the form from the DED entirely, and this method
+            # returns True either way, so run() will not retry it from another visit.
+            # Warning and continuing therefore ships a release artifact that is quietly
+            # missing a whole form - which is how COVID F3 went out empty. Fail instead.
+            raise RuntimeError(
+                f'Failed to add {file_path} to the {self.module.value} DED: {e}') from e
 
         return True
 
