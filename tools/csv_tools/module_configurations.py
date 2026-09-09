@@ -195,8 +195,8 @@ ERROR_CODE_MAPPING = {
         VisitType.FVP: '-lbd3.1fvp-'
     },
     ModuleType.COVID_CURRENT: {
-        VisitType.IVP: '-cv-',
-        VisitType.FVP: '-fcv-'
+        VisitType.IVP: '-covidivp-',
+        VisitType.FVP: '-covidfvp-'
     },
     ModuleType.DS_LEGACY: {
         VisitType.IVP: '-dsivp-',
