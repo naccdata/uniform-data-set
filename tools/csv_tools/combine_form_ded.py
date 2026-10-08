@@ -93,12 +93,6 @@ class DedGenerator(FormOrganizer):
                 convert_to_utf8(file_path, file_path)
                 df = pd.read_csv(file_path, dtype=object, encoding='utf-8')
 
-            # Strip stray whitespace from column headers before anything reads
-            # them by name. A single trailing space (e.g. "response_labels ") makes
-            # pd.concat treat it as a distinct column, so one such form split the
-            # combined DED into two response_labels columns.
-            df.columns = df.columns.str.strip()
-
             # Remove rows with NaN in 'form_name' column
             df = df.dropna(subset=['form_name'])
 

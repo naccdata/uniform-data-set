@@ -1,4 +1,4 @@
-﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type,branching_logic,carry_forward
+﻿form_name,packet,question,var_name,missingness,conformity,response_labels ,data_type,branching_logic,carry_forward
 a4a,F,0a. A4a AD-Specific Drug Treatment - Form date,FRMDATEA4A,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,,No
 a4a,F,0b. A4a AD-Specific Drug Treatment - Examiner's initials,INITIALSA4A,No,text,,String,,No
 a4a,F,0c. A4a AD-Specific Drug Treatment - Language,LANGA4A,Always,Intgers 1-2,"1, English|2, Spanish",Integer,,No
