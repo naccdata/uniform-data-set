@@ -1,6 +1,6 @@
 ﻿form_name,packet,question,var_name,missingness,conformity,response_labels,data_type
 F3,CV,0G. F3 - Form date,FRMDATEF3,Always,mm/dd/yyyy or yyyy/mm/dd,,Date
-F3,CV,OH. F3 - In-person or remote?,MODEF3,Always,Integers 1-2,"1, In-person|2, Remote",Integer
+F3,CV,0H. F3 - In-person or remote?,MODEF3,Always,Integers 1-2,"1, In-person|2, Remote",Integer
 F3,CV,0J. F3 - Examiner's initials,INITIALSF3,No,Any text,,String
 F3,CV,"1. On a scale of 1-5, how isolated or cut off from family and friends have you felt due to the COVID-19 pandemic?",C19COISO,Always,"Integers 1-5, 8","1, Not at all isolated| 2, A little isolated| 3, Somewhat isolated|4, Very isolated |5, Extremely isolated|8, Decline to answer",Integer
 F3,CV,"2. On a scale of 1-5, how disruptive has the COVID-19 pandemic been to your everyday life?",C19CODIS,Always,"Integers 1-5, 8","1, Not at all disruptive| 2, A little disruptive| 3, Somewhat disruptive|4, Very disruptive|5, Extremely disruptive|8, Decline to answer",Integer
