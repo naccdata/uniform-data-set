@@ -3,7 +3,7 @@ preprocess-001,001,preprocess,ADCID,ADCID must match the ADCID of the center upl
 preprocess-002,002,preprocess,PACKET,"Only one Initial Visit Packet (PACKET=""I"", ""IF"", ""IL"", ""IDS"") and Initial UDSv4 Visit Packet (PACKET=""I4) is allowed per participant","uds, ftld, lbd, ds"
 preprocess-003,003,preprocess,VISITNUM,Cannot find a matching UDS visit packet with the same visit number and visit date as the module packet,"lbd, ftld, ds"
 preprocess-004,004,preprocess,PACKET,"Follow-Up module packet (PACKET=""FF"" or ""FL"", ""FDS"") cannot be submitted for a UDS Initial Visit Packet (PACKET=""I"")","lbd, ftld, ds"
-preprocess-005,005,preprocess,PACKET,"Participant must have an approved UDS, BDS, or MDS packet before a Milestone form can be submitted",milestone
+preprocess-005,005,preprocess,PACKET,"Participant must have an approved UDS, BDS, or MDS packet before a Milestone form can be submitted",mlst
 preprocess-006,006,preprocess,VISITNUM,Two packets cannot have the same visit number (VISITNUM) if they are from different dates (VISITDATE),"uds, ftld, lbd, ds"
 preprocess-007,007,preprocess,VISITDATE,Two packets cannot have the same visit date (VISITDATE) if they are from different visit numbers (VISITNUM),"uds, ftld, lbd, ds"
 preprocess-010,010,preprocess,VISITDATE,"Follow-Up Visit Packet (PACKET=""F"", ""FF"", ""FL"",""FDS"") visit date (VISITDATE) cannot be equal to or from a date before the respective Initial Visit Packet (PACKET=""I"", ""I4"", ""IF"", ""IL"",""IDS"")","uds, ftld, lbd, ds"
@@ -30,3 +30,8 @@ preprocess-031,031,preprocess,MODULE,A UDS packet must be submitted before submi
 preprocess-032,032,preprocess,MODULE,"Multiple submissions not allowed for [module name] module, delete the existing submissions for this participant with dates [list of dates] and retry","bds,np"
 preprocess-033,033,preprocess,VISITDATE,"Duplicate record with the same visit date exists in the legacy submissions for this participant/module","mlst"
 preprocess-034,034,preprocess,PACKET,"Participant with an existing UDSv3 Visit Packet must use PACKET=I4 for the Initial UDSv4 Visit Packet, PACKET=I is not accepted","uds"
+preprocess-035,035,preprocess,VISITDATE,"Initial Visit Packet visit date (VISITDATE) cannot be equal to or from a date after an existing Follow-Up Visit Packet for the participant/module",covid
+preprocess-036,036,preprocess,MODExx,"No existing Initial Visit Packet found containing the optional form(s) submitted with this Follow-Up Visit Packet: [list of form names]",covid
+preprocess-037,037,preprocess,PACKET,"A packet with a different PACKET code ([existing packet code]) already exists for this visit date (VISITDATE); delete the existing visit before submitting a different packet",covid
+preprocess-038,038,preprocess,VISITDATE,"Form(s) submitted for this visit date (VISITDATE) do not match the form(s) previously submitted for the same visit date; delete the existing visit or use a different visit date",covid
+preprocess-039,039,preprocess,MODExx,"At least one of the following optional form(s) must be submitted with this visit packet: [list of form names]",covid
