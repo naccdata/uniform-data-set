@@ -1,0 +1,16 @@
+﻿Form ,Version,Gate question variable,Variable,TT code
+bds,1,BDSUDSD,BDSTMCI,If BDSUDSD =3 then BDSTMCI should =8
+bds,1,BDSUDSD,BDSETPR,If BDSUDSD=1 then BDSETPR should =88; else if BDSUDSD=9 then BDSETPR should equal 99
+bds,1,BDSUDSD,BDSCOALZ,If BDSUDSD=1 then BDSCOALZ should =8; else if BDSUDSD=9 then BDSCOALZ should equal 9
+bds,1,BDSUDSD,BDSCOLBD,If BDSUDSD=1 then BDSCOLBD should =8; else if BDSUDSD=9 then BDSCOLBD should equal 9
+bds,1,BDSUDSD,BDSCOMSA,If BDSUDSD=1 then BDSCOMSA should =8; else if BDSUDSD=9 then BDSCOMSA should equal 9
+bds,1,BDSUDSD,BDSCOPSP,If BDSUDSD=1 then BDSCOPSP should =8; else if BDSUDSD=9 then BDSCOPSP should equal 9
+bds,1,BDSUDSD,BDSCOCBD,If BDSUDSD=1 then BDSCOCBD should =8; else if BDSUDSD=9 then BDSCOCBD should equal 9
+bds,1,BDSUDSD,BDSCOFMO,If BDSUDSD=1 then BDSCOFMO should =8; else if BDSUDSD=9 then BDSCOFMO should equal 9
+bds,1,BDSUDSD,BDSCOFOT,If BDSUDSD=1 then BDSCOFOT should =8; else if BDSUDSD=9 then BDSCOFOT should equal 9
+bds,1,BDSUDSD,BDSCOVAS,If BDSUDSD=1 then BDSCOVAS should =8; else if BDSUDSD=9 then BDSCOVAS should equal 9
+bds,1,BDSUDSD,BDSCOTBI,If BDSUDSD=1 then BDSCOTBI should =8; else if BDSUDSD=9 then BDSCOTBI should equal 9
+bds,1,BDSUDSD,BDSCODWN,If BDSUDSD=1 then BDSCODWN should =8; else if BDSUDSD=9 then BDSCODWN should equal 9
+bds,1,BDSUDSD,BDSCOO1F,If BDSUDSD=1 then BDSCOO1F should =8; else if BDSUDSD=9 then BDSCOO1F should equal 9
+bds,1,BDSUDSD,BDSCOO2F,If BDSUDSD=1 then BDSCOO2F should =8; else if BDSUDSD=9 then BDSCOO2F should equal 9
+bds,1,BDSUDSD,BDSCOO3F,If BDSUDSD=1 then BDSCOO3F should =8; else if BDSUDSD=9 then BDSCOO3F should equal 9

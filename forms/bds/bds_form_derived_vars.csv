@@ -1,0 +1,69 @@
+﻿status,Form ,Version,Variable,Variable Type,Short Descriptor,Data Type,Allowable Codes,Description/derivation,TT code
+existing,bds,1,NACCSEX,NACC derived variable,Participant's sex,Numeric cross-sectional,"1 = Male
+2 = Female
+8 = Prefer not to answer
+9 = Unknown
+-4 = Not available: BDS form submitted did not collect data in this way, BDS question is not required, or a skip pattern precludes response to this question","The BDS does not have questions on both sex and gender; only sex is collected, taken to mean sex at birth.","Add this to the NACCSEX code: 
+
+If BDS is submitted and no UDS is submitted, then 
+
+If SEX is not blank, NACCSEX = SEX
+Else if SEX is blank, NACCSEX = -4"
+existing,bds,1,NACCLANG,NACC derived variable,Primary language,Numeric cross-sectional,"1 = English
+2 = Spanish
+3 = Chinese dialect
+5 = Russian
+6 = Japanese
+8 = Other
+9 = Unknown
+-4 = Not available: BDS form submitted did not collect data in this way, BDS question is not required, or a skip pattern precludes response to this question",,"Add this to the NACCLANG code: 
+
+If BDS is submitted and no UDS is submitted, then 
+
+If PRIMLANG=1 then NACCLANG=1
+If PRIMLANG=2 then NACCLANG=2
+If PRIMLANG in (3,4) then NACCLANG=3
+If PRIMLANG=5 then NACCLANG=5
+If PRIMLANG=6 then NACCLANG=6
+If PRIMLANG in (8,9) then NACCLANG=PRIMLANG
+Else if PRIMLANG is blank, NACCNIHR = -4"
+existing,bds,1,NACCLANGX,NACC derived variable,"Primary language, other- specify",Character cross-sectional, Any text or numbers,"If an “other” primary language is reported (NACCLANG=8), then it will be listed here, otherwise it will be blank.","Add this to the NACCLANGX code: 
+
+If BDS is submitted and no UDS is submitted, then NACCLANGX=PRIMLANGX"
+existing,bds,1,NACCHISP,NACC derived variable,Hispanic/Latino ethnicity,Numeric cross-sectional,"0 = No
+1 = Yes
+9 = Unknown
+-4 = Not available: BDS form submitted did not collect data in this way, BDS question is not required, or a skip pattern precludes response to this question",,"Add this to the NACHISP code: 
+
+If BDS is submitted and no UDS is submitted, then 
+
+If HISPANIC is not blank, NACCHISP=HISPANIC
+Else if HISPANIC is blank, NACCHISP = -4"
+existing,bds,1,NACCNIHR,NACC derived variable,Derived NIH race definitions,Numeric cross-sectional,"1 = White
+2 = Black or African American
+3 = American Indian or Alaska Native
+4 = Native Hawaiian or Pacific Islander
+5 = Asian
+6 = Multiracial
+7 = Middle Eastern or Northern African
+99 = Unknown or ambiguous
+-4 = Not available: BDS form submitted did not collect data in this way, BDS question is not required, or a skip pattern precludes response to this question","NACCNIHR is derived from race/ethnicity variables to be consistent with the NIH guidelines for human participants reporting. The categories are described as follows: 
+
+NACCNIHR =1 for participants with BDSRACE =1 (White)
+NACCNIHR =2 for participants with BDSRACE =2 (Black or African American)
+NACCNIHR =3 for participants with BDSRACE =3 (American Indian or Alaska Native)
+NACCNIHR =4 for participants with BDSRACE =4 (Native Hawaiian or Other Pacific Islander)
+NACCNIHR =5 for participants with BDSRACE =5 (Asian) 
+NACCNIHR =6 for participants reporting that they are multiracial
+NACCNIHR =99 for participants with BDSRACE =9 (Unknown, ambiguous, or not reported)","Add this to the NACCNIHR code: 
+
+If BDS is submitted and no UDS is submitted, then
+
+If BDSRACE = 1, then NACCNIHR = 1
+Else if BDSRACE = 2, then NACCNIHR = 2
+Else if BDSRACE = 3, then NACCNIHR = 3
+Else if BDSRACE = 4, then NACCNIHR = 4
+Else if BDSRACE = 5, then NACCNIHR = 5
+Else if BDSRACE = 6, then NACCNIHR = 6
+Else if BDSRACE = 9, then NACCNIHR = 99
+Else if BDSRACE is blank, NACCNIHR = -4"
