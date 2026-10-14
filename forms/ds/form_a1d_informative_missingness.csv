@@ -1,0 +1,23 @@
+Form ,Version,Gate question variable,Variable,TT code
+a1d,1,n/a,all numeric,"If the DS module is not submitted then the following variables should equal -4: DSDAYPRG, DSWRKSHP, DSHOME, DSJOB, DSOTHAC, DSMOMAGE, DSCHDASD, DSCHDVSD, DSCHDACD, DSCHDTOF, DSCHDOTH, DSHYPOTN, DSSYNC, DSPNEUM, DSHEPAT, DSROSAC, DSALOP, DSPSOR, DSOSTEO, DSGOUT, DSATAXSU, DSFRACT, DSHYPOTH, DSHASHIM, DSHYPER, DSTHYMED, DSVDDEF, DSMENSTR, DSMNSAGE, DSMNPAGE, DSHRT, DSAGEHRT, DSYRSHRT, DSCELIAC, DSANIRON, DSANFOL, DSLUPUS, DSNTRPN, DSTUMOR, DSLEUKEM, DSHRTRPR, DSHRTRYR, DSCRDSRG, DSCRDSYR, DSSPIN, DSSPINYR, DSLWORTH, DSLWORYR, DSUPORTH, DSUPORYR, DSTHYSRG, DSTHYSYR, DSONCSRG, DSONCSYR, DSOTHSRG, DSOTHSYR"
+a1d,1,n/a,all write-in,"If the following variables are blank, they should remain blank: DSOTHACX, DSCHDOTX, DSFRACTX, DSTHYMEX, DSTUMORX, DSHRTRPX, DSCRDSRX, DSSPINX, DSLWORTX, DSUPORTX, DSTHYSRX, DSONCSRX, DSOTHSRX"
+a1d,1,n/a,DSMOMAGE,"If DSMOMAGE = 777, carry forward value from previous visit"
+a1d,1,n/a,DSMNSAGE,"If DSMNSAGE = 777, carry forward value from previous visit"
+a1d,1,n/a,DSMNPAGE,"If DSMNPAGE = 777, carry forward value from previous visit"
+a1d,1,n/a,DSAGEHRT,"If DSAGEHRT = 777, carry forward value from previous visit"
+a1d,1,n/a,DSHRTRYR,"If DSHRTRYR = 777, carry forward value from previous visit"
+a1d,1,n/a,DSCRDSYR,"If DSCRDSYR = 777, carry forward value from previous visit"
+a1d,1,n/a,DSSPINYR,"If DSSPINYR = 777, carry forward value from previous visit"
+a1d,1,n/a,DSLWORYR,"If DSLWORYR = 777, carry forward value from previous visit"
+a1d,1,n/a,DSUPORYR,"If DSUPORYR = 777, carry forward value from previous visit"
+a1d,1,n/a,DSTHYSYR,"If DSTHYSYR = 777, carry forward value from previous visit"
+a1d,1,n/a,DSONCSYR,"If DSONCSYR = 777, carry forward value from previous visit"
+a1d,1,n/a,DSOTHSYR,"If DSOTHSYR = 777, carry forward value from previous visit"
+a1d,1,DSHRTRPR,DSHRTRYR,If DSHRTRPR is =0 or 9 then DSHRTRYR should = 8888
+a1d,1,DSCRDSRG,DSCRDSYR,If DSCRDSRG is =0 or 9 then DSCRDSYR should = 8888
+a1d,1,DSSPIN,DSSPINYR,If DSSPIN is =0 or 9 then DSSPINYR should = 8888
+a1d,1,DSLWORTH,DSLWORYR,If DSLWORTH is =0 or 9 then DSLWORYR should = 8888
+a1d,1,DSUPORTH,DSUPORYR,If DSUPORTH is =0 or 9 then DSUPORYR should = 8888
+a1d,1,DSTHYSRG,DSTHYSYR,If DSTHYSRG is =0 or 9 then DSTHYSYR should = 8888
+a1d,1,DSONCSRG,DSONCSYR,If DSONCSRG is =0 or 9 then DSONCSYR should = 8888
+a1d,1,DSOTHSRG,DSOTHSYR,If DSOTHSRG is =0 or 9 then DSOTHSYR should = 8888
