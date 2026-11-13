@@ -1,5 +1,5 @@
 ﻿Form ,Version,Gate question variable,Variable,TT code
-bds,1,BDSUDSD,BDSTMCI,If BDSUDSD =3 then BDSTMCI should =8
+bds,1,BDSUDSD,BDSTMCI,If BDSUDSD ne 3 then BDSTMCI should =8
 bds,1,BDSUDSD,BDSETPR,If BDSUDSD=1 then BDSETPR should =88; else if BDSUDSD=9 then BDSETPR should equal 99
 bds,1,BDSUDSD,BDSCOALZ,If BDSUDSD=1 then BDSCOALZ should =8; else if BDSUDSD=9 then BDSCOALZ should equal 9
 bds,1,BDSUDSD,BDSCOLBD,If BDSUDSD=1 then BDSCOLBD should =8; else if BDSUDSD=9 then BDSCOLBD should equal 9

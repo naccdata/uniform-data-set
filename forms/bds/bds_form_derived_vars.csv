@@ -26,10 +26,10 @@ If PRIMLANG in (3,4) then NACCLANG=3
 If PRIMLANG=5 then NACCLANG=5
 If PRIMLANG=6 then NACCLANG=6
 If PRIMLANG in (8,9) then NACCLANG=PRIMLANG
-Else if PRIMLANG is blank, NACCNIHR = -4"
+Else if PRIMLANG is blank, NACCLANG = -4"
 existing,bds,1,NACCLANGX,NACC derived variable,"Primary language, other- specify",Character cross-sectional, Any text or numbers,"If an “other” primary language is reported (NACCLANG=8), then it will be listed here, otherwise it will be blank.","Add this to the NACCLANGX code: 
 
-If BDS is submitted and no UDS is submitted, then NACCLANGX=PRIMLANGX"
+If BDS is submitted and no UDS is submitted, then NACCLANGX=PRIMLANX"
 existing,bds,1,NACCHISP,NACC derived variable,Hispanic/Latino ethnicity,Numeric cross-sectional,"0 = No
 1 = Yes
 9 = Unknown
