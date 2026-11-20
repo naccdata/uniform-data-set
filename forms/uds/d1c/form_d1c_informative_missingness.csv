@@ -1,0 +1,96 @@
+﻿Form ,Version,Gate question variable,Variable,TT code
+d1c,4,DXPLSMABIO,DXPTAU217,"If DXPLSMABIO=0 and DXPTAU217 is blank, then DXPTAU217 should =8;
+If DXPLSMABIO=1 and DXPTAU217 is blank, then DXPTAU217 should =0"
+d1c,4,DXPTAU217,PTAU217RS,"If DXPTAU217 is blank and PTAU217RS is blank, then PTAU217RS should =8"
+d1c,4,DXPTAU217,PT217ANLYS,"If DXPTAU217 is blank and PT217ANLYS is blank, then PT217ANLYS should =8"
+d1c,4,DXPTAU217,PT217INT,"If DXPTAU217 is blank and PT217INT is blank, then PT217INT should =8"
+d1c,4,DXPLSMABIO,DXPCPT217,"If DXPLSMABIO=0 and DXPCPT217 is blank, then DXPCPT217 should =8;
+If DXPLSMABIO=1 and DXPCPT217 is blank, then DXPCPT217 should =0"
+d1c,4,DXPCPT217,PCPT217RS,"If DXPCPT217 is blank and PCPT217RS is blank, then PCPT217RS should =8"
+d1c,4,DXPCPT217,PCPT217INT,"If DXPCPT217 is blank and PCPT217INT is blank, then PCPT217INT should =8"
+d1c,4,DXPLSMABIO,DXOTHPLSMA,"If DXPLSMABIO=0 and DXOTHPLSMA is blank, then DXOTHPLSMA should =8;
+If DXPLSMABIO=1 and DXOTHPLSMA is blank, then DXOTHPLSMA should =0"
+d1c,4,DXOTHPLSMA,OTHPLSMARS,"If DXOTHPLSMA is blank and OTHPLSMARS is blank, then OTHPLSMARS should =8"
+d1c,4,DXOTHPLSMA,OPLSMANLYS,"If DXOTHPLSMA is blank and OPLSMANLYS is blank, then OPLSMANLYS should =8"
+d1c,4,DXOTHPLSMA,OPLSMAINT,"If DXOTHPLSMA is blank and OPLSMAINT is blank, then OPLSMAINT should =8"
+d1c,4,DXCSFBIO,DXPT181AB,"If DXCSFBIO=0 and DXPT181AB is blank, then DXPT181AB should =8;
+If DXCSFBIO=1 and DXPT181AB is blank, then DXPT181AB should =0"
+d1c,4,DXPT181AB,PT181ABRS,"If DXPT181AB is blank and PT181ABRS is blank, then PT181ABRS should =8"
+d1c,4,DXPT181AB,PT181ABAYS,"If DXPT181AB is blank and PT181ABAYS is blank, then PT181ABAYS should =8"
+d1c,4,DXPT181AB,PT181ABINT,"If DXPT181AB is blank and PT181ABINT is blank, then PT181ABINT should =8"
+d1c,4,DXCSFBIO,DXTTABETA,"If DXCSFBIO=0 and DXTTABETA is blank, then DXTTABETA should =8;
+If DXCSFBIO=1 and DXTTABETA is blank, then DXTTABETA should =0"
+d1c,4,DXTTABETA,TTABETARS,"If DXTTABETA is blank and TTABETARS is blank, then TTABETARS should =8"
+d1c,4,DXTTABETA,TTABETAINT,"If DXTTABETA is blank and TTABETAINT is blank, then TTABETAINT should =8"
+d1c,4,DXCSFBIO,DXAB42AB40,"If DXCSFBIO=0 and DXAB42AB40 is blank, then DXAB42AB40 should =8;
+If DXCSFBIO=1 and DXAB42AB40 is blank, then DXAB42AB40 should =0"
+d1c,4,DXAB42AB40,AB42AB40RS,"If DXAB42AB40 is blank and AB42AB40RS is blank, then AB42AB40RS should =8"
+d1c,4,DXAB42AB40,AB42AB40AY,"If DXAB42AB40 is blank and AB42AB40AY is blank, then AB42AB40AY should =8"
+d1c,4,DXAB42AB40,AB42AB40IT,"If DXAB42AB40 is blank and AB42AB40IT is blank, then AB42AB40IT should =8"
+d1c,4,DXCSFBIO,DXOTHCSF,"If DXCSFBIO=0 and DXOTHCSF is blank, then DXOTHCSF should =8;
+If DXCSFBIO=1 and DXOTHCSF is blank, then DXOTHCSF should =0"
+d1c,4,DXOTHCSF,OTHCSFRS,"If DXOTHCSF is blank and OTHCSFRS is blank, then OTHCSFRS should =8"
+d1c,4,DXOTHCSF,OCSFANLYS,"If DXOTHCSF is blank and OCSFANLYS is blank, then OCSFANLYS should =8"
+d1c,4,DXOTHCSF,OCSFINT,"If DXOTHCSF is blank and OCSFINT is blank, then OCSFINT should =8"
+d1c,4,DXAPET,APETRS,"If DXAPET=0 and APETRS is blank, then APETRS should =8"
+d1c,4,DXAPET,APETVIS,"If DXAPET=0 and APETVIS is blank, then APETVIS should =8;
+If DXAPET=1 and APETVIS is blank, then APETVIS should =0"
+d1c,4,DXAPET,APETQUANT,"If DXAPET=0 and APETQUANT is blank, then APETQUANT should =8;
+If DXAPET=1 and APETQUANT is blank, then APETQUANT should =0"
+d1c,4,DXAPET,APETANLYS,"If DXAPET=0 and APETANLYS is blank, then APETANLYS should =8"
+d1c,4,DXAPET,APETINT,"If DXAPET=0 and APETINT is blank, then APETINT should =8"
+d1c,4,DXTAUPET,TPETMTLRS,"If DXTAUPET=0 and TPETMTLRS is blank, then TPETMTLRS should =8"
+d1c,4,DXTAUPET,TPETMTLVIS,"If DXTAUPET=0 and TPETMTLVIS is blank, then TPETMTLVIS should =8;
+If DXTAUPET=1 and TPETMTLVIS is blank, then TPETMTLVIS should =0"
+d1c,4,DXTAUPET,TPETMTLQNT,"If DXTAUPET=0 and TPETMTLQNT is blank, then TPETMTLQNT should =8;
+If DXTAUPET=1 and TPETMTLQNT is blank, then TPETMTLQNT should =0"
+d1c,4,DXTAUPET,TPETMTLAYS,"If DXTAUPET=0 and TPETMTLAYS is blank, then TPETMTLAYS should =8"
+d1c,4,DXTAUPET,TPETNEORS,"If DXTAUPET=0 and TPETNEORS is blank, then TPETNEORS should =8"
+d1c,4,DXTAUPET,TPETNEOVIS,"If DXTAUPET=0 and TPETNEOVIS is blank, then TPETNEOVIS should =8;
+If DXTAUPET=1 and TPETNEOVIS is blank, then TPETNEOVIS should =0"
+d1c,4,DXTAUPET,TPETNEOQNT,"If DXTAUPET=0 and TPETNEOQNT is blank, then TPETNEOQNT should =8;
+If DXTAUPET=1 and TPETNEOQNT is blank, then TPETNEOQNT should =0"
+d1c,4,DXTAUPET,TPETNEOAYS,"If DXTAUPET=0 and TPETNEOAYS is blank, then TPETNEOAYS should =8"
+d1c,4,DXTAUPET,DXTAUPTINT,"If DXTAUPET=0 and DXTAUPTINT is blank, then DXTAUPTINT should =8"
+d1c,4,INFORISCH,IMGRSINF,"If INFORISCH=0 and IMGRSINF is blank, then IMGRSINF should =8;
+If INFORISCH=1 and IMGRSINF is blank, then IMGRSINF should =0"
+d1c,4,"INFORISCH, IMGRSINF",IMGRSINFLC,"If INFORISCH=0 and IMGRSINFLC is blank, then IMGRSINFLC should =8;
+If INFORISCH=1 and IMGRSINF is blank, then IMGRSINFLC should =8;
+If IMGRSINF=1 and IMGRSINFLC is blank, then IMGRSINFLC should =0"
+d1c,4,"INFORISCH, IMGRSINF",IMGRSINFCT,"If INFORISCH=0 and IMGRSINFCT is blank, then IMGRSINFCT should =8;
+If INFORISCH=1 and IMGRSINF is blank, then IMGRSINFCT should =8;
+If IMGRSINF=1 and IMGRSINFCT is blank, then IMGRSINFCT should =0"
+d1c,4,INFORISCH,IMGRSMICR,"If INFORISCH=0 and IMGRSMICR is blank, then IMGRSMICR should =8;
+If INFORISCH=1 and IMGRSMICR is blank, then IMGRSMICR should =0"
+d1c,4,INFORISCH,IMGRSWMH,"If INFORISCH=0 and IMGRSWMH is blank, then IMGRSWMH should =8;
+If INFORISCH=1 and IMGRSWMH is blank, then IMGRSWMH should =0"
+d1c,4,INFORISCH,IMGRSSPSID,"If INFORISCH=0 and IMGRSSPSID is blank, then IMGRSSPSID should =8;
+If INFORISCH=1 and IMGRSSPSID is blank, then IMGRSSPSID should =0"
+d1c,4,INFORISCH,IMGRSOTH,"If INFORISCH=0 and IMGRSOTH is blank, then IMGRSOTH should =8;
+If INFORISCH=1 and IMGRSOTH is blank, then IMGRSOTH should =0"
+d1c,4,INFORISCH,IMGRSINT,"If INFORISCH=0 and IMGRSINT is blank, then IMGRSINT should =8"
+d1c,4,DXASYN,ASYNRS,"If DXASYN=0 and ASYNRS is blank, then ASYNRS should =8"
+d1c,4,DXASYN,ASYNASSAY,"If DXASYN=0 and ASYNASSAY is blank, then ASYNASSAY should =8"
+d1c,4,DXASYN,ASYNINT,"If DXASYN=0 and ASYNINT is blank, then ASYNINT should =8"
+d1c,4,AACRITMET,CR1APET,"If AACRITMET=0 and CR1APET is blank, then CR1APET should =8;
+If AACRITMET=1 and CR1APET is blank, then CR1APET should =0"
+d1c,4,AACRITMET,CR1PTAU217,"If AACRITMET=0 and CR1PTAU217 is blank, then CR1PTAU217 should =8;
+If AACRITMET=1 and CR1PTAU217 is blank, then CR1PTAU217 should =0"
+d1c,4,AACRITMET,CR1PCPT217,"If AACRITMET=0 and CR1PCPT217 is blank, then CR1PCPT217 should =8;
+If AACRITMET=1 and CR1PCPT217 is blank, then CR1PCPT217 should =0"
+d1c,4,AACRITMET,CR1PT181AB,"If AACRITMET=0 and CR1PT181AB is blank, then CR1PT181AB should =8;
+If AACRITMET=1 and CR1PT181AB is blank, then CR1PT181AB should =0"
+d1c,4,AACRITMET,CR1TTABETA,"If AACRITMET=0 and CR1TTABETA is blank, then CR1TTABETA should =8;
+If AACRITMET=1 and CR1TTABETA is blank, then CR1TTABETA should =0"
+d1c,4,AACRITMET,C1AB42AB40,"If AACRITMET=0 and C1AB42AB40 is blank, then C1AB42AB40 should =8;
+If AACRITMET=1 and C1AB42AB40 is blank, then C1AB42AB40 should =0"
+d1c,4,AACRITMET,CR1OTH,"If AACRITMET=0 and CR1OTH is blank, then CR1OTH should =8;
+If AACRITMET=1 and CR1OTH is blank, then CR1OTH should =0"
+d1c,4,AACRITMET,BIOSTAGE,"If AACRITMET=0 and BIOSTAGE is blank, then BIOSTAGE should =8"
+d1c,4,AACRITMET,CLINSTAGE,"If AACRITMET=0 and CLINSTAGE is blank, then CLINSTAGE should =8"
+d1c,4,DXOTHPLSMX,DXOTHPLSMX,"If DXOTHPLSMX is blank, then DXOTHPLSMX should remain blank"
+d1c,4,DXOTHCSFX,DXOTHCSFX,"If DXOTHCSFX is blank, then DXOTHCSFX should remain blank"
+d1c,4,IMGRSOTHX,IMGRSOTHX,"If IMGRSOTHX is blank, then IMGRSOTHX should remain blank"
+d1c,4,ASYNASSAYX,ASYNASSAYX,"If ASYNASSAYX is blank, then ASYNASSAYX should remain blank"
+d1c,4,ASYNANLYSX,ASYNANLYSX,"If ASYNANLYSX is blank, then ASYNANLYSX should remain blank"
+d1c,4,CR1OTHX,CR1OTHX,"If CR1OTHX is blank, then CR1OTHX should remain blank"
