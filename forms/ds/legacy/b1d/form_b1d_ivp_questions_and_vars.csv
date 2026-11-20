@@ -162,4 +162,4 @@ b1d,IDS,30a. Recommendations: Refer to treating physician for assessment,DSRE_RE
 b1d,IDS,30b. Recommendations: Review internally by clinical personnel,DSRE_INT,Conditional,Integer 0-1 or blank,,Integer,
 b1d,IDS,30c. Recommendations: Include in annual review/annual welness visit,DSRE_ANN,Conditional,Integer 0-1 or blank,,Integer,
 b1d,IDS,30d. Recommendations: Repeat in ... months,DSRE_REP,Conditional,Integer 0-1 or blank,,Integer,
-b1d,IDS,30d1. Recommendations: Specify number of months to repeat,DSREPMO,Conditional,Any text,,String,[dsre_rep]='1'
+b1d,IDS,30d1. Recommendations: Specify number of months to repeat,DSREPMO,Conditional,Any number,,Numeric,[dsre_rep]='1'
