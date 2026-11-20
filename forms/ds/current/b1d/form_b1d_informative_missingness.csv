@@ -1,0 +1,49 @@
+Form,Version,Gate question variable,Variable,TT code
+B1D,1,DSLIV,DSLIVX,Blank if Question 0c DSLIV ne 9 (Lives in other)
+B1D,1,n/a,DSDX_AUT,0 if FRMDATEB1D not blank (B1d was completed) and DSDX_AUT is blank
+B1D,1,n/a,DSDX_CP,0 if FRMDATEB1D not blank (B1d was completed) and DSDX_CP is blank
+B1D,1,n/a,DSDX_DS,0 if FRMDATEB1D not blank (B1d was completed) and DSDX_DS is blank
+B1D,1,n/a,DSDX_FRX,0 if FRMDATEB1D not blank (B1d was completed) and DSDX_FRX is blank
+B1D,1,n/a,DSDX_ID,0 if FRMDATEB1D not blank (B1d was completed) and DSDX_ID is blank
+B1D,1,n/a,DSDX_PW,0 if FRMDATEB1D not blank (B1d was completed) and DSDX_PW is blank
+B1D,1,n/a,DSDX_OTH,0 if FRMDATEB1D not blank (B1d was completed) and DSDX_OTH is blank
+B1D,1,DSDX_OTH,DSDXOTHX,Blank if Question 9g DSDX_OTH ne 1 (Diagnosed condition: other)
+B1D,1,n/a,DSCN_VIM,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_VIM is blank
+B1D,1,n/a,DSCN_BLD,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_BLD is blank
+B1D,1,n/a,DSCN_GLS,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_GLS is blank
+B1D,1,n/a,DSCN_HIM,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_HIM is blank
+B1D,1,n/a,DSCN_DF,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_DF is blank
+B1D,1,n/a,DSCN_HAD,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_HAD is blank
+B1D,1,n/a,DSCN_MIM,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_MIM is blank
+B1D,1,n/a,DSCN_UW,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_UW is blank
+B1D,1,n/a,DSCN_MIW,0 if FRMDATEB1D not blank (B1d was completed) and DSCN_MIW is blank
+B1D,1,n/a,DSLE_CD,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_CD is blank
+B1D,1,n/a,DSLE_CHL,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_CHL is blank
+B1D,1,n/a,DSLE_CHS,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_CHS is blank
+B1D,1,n/a,DSLE_NRM,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_NRM is blank
+B1D,1,n/a,DSLE_ILL,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_ILL is blank
+B1D,1,n/a,DSLE_SEM,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_SEM is blank
+B1D,1,n/a,DSLE_SEI,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_SEI is blank
+B1D,1,n/a,DSLE_SEV,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_SEV is blank
+B1D,1,n/a,DSLE_OTH,0 if FRMDATEB1D not blank (B1d was completed) and DSLE_OTH is blank
+B1D,1,DSLE_OTH,DSLEOTHX,Blank if Question 14i DSLE_OTH ne 1 (Significant life event: other)
+B1D,1,"DSDXHS_MCI, DSDXHS_DEM",DSDXHS_NO,0 if Question 16b DSDXHS_MCI = 1 (MCI) or Question 16c DSDXHS_DEM = 1 (Dementia)
+B1D,1,"DSDXHS_NO, DSDXHS_DEM",DSDXHS_MCI,0 if DSDXHS_MCI is blank and (Question 16a DSDXHS_NO = 1 (No diagnosis of MCI or dementia) or Question 16c DSDXHS_DEM = 1 (Dementia))
+B1D,1,"DSDXHS_NO, DSDXHS_MCI",DSDXHS_DEM,0 if DSDXHS_DEM is blank and (Question 16a DSDXHS_NO = 1 (No diagnosis of MCI or dementia) or Question 16b DSDXHS_MCI = 1 (MCI))
+B1D,1,DSDXHS_MCI,DSMCIMO,88 if Question 16b DSDXHS_MCI = 0 (no MCI)
+B1D,1,DSDXHS_MCI,DSMCIYR,8888 if Question 16b DSDXHS_MCI = 0 (no MCI)
+B1D,1,DSDXHS_DEM,DSDEMMO,88 if Question 16c DSDXHS_DEM = 0 (no dementia)
+B1D,1,DSDXHS_DEM,DSDEMYR,8888 if Question 16c DSDXHS_DEM = 0 (no dementia)
+B1D,1,DSDXHS_DEM,DSDXTYPE,Blank if Question 16c DSDXHS_DEM = 0 (no dementia)
+B1D,1,DSDXHS_NO,DSDXBY,8 if Question 16a DSDXHS_NO = 1 (No diagnosis of MCI or dementia)
+B1D,1,DSDXBY,DSDXBYX,Blank if Question 16d DSDXBY ne 6 (Diagnosed by: other)
+B1D,1,DSDXHS_NO,DSONSTMO,88 if Question 16a DSDXHS_NO = 1 (No diagnosis of MCI or dementia)
+B1D,1,DSDXHS_NO,DSONSTYR,8888 if Question 16a DSDXHS_NO = 1 (No diagnosis of MCI or dementia)
+B1D,1,DSDXHS_NO,DSDEMCOM,Blank if Question 16a DSDXHS_NO = 1 (No diagnosis of MCI or dementia)
+B1D,1,DSMHOTH,DSMHOTHX,Blank if Question 27v DSMHOTH = 0 (Mental health: Other condition not present)
+B1D,1,DSCANCER,DSCANCX,Blank if Question 27gg DSCANCER = 0 (Cancer is not present)
+B1D,1,n/a,DSRE_REF,0 if FRMDATEB1D not blank (B1d was completed) and DSRE_REF is blank
+B1D,1,n/a,DSRE_INT,0 if FRMDATEB1D not blank (B1d was completed) and DSRE_INT is blank
+B1D,1,n/a,DSRE_ANN,0 if FRMDATEB1D not blank (B1d was completed) and DSRE_ANN is blank
+B1D,1,n/a,DSRE_REP,0 if FRMDATEB1D not blank (B1d was completed) and DSRE_REP is blank
+B1D,1,DSRE_REP,DSREPMO,888 if Question 30d DSRE_REP = 0 (No recommendation to repeat in __ months)
