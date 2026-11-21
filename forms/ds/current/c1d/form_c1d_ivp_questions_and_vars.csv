@@ -24,7 +24,7 @@ c1d,IDS,Q1g2. Visuospatial - Total score,DSVISTT,Conditional (e.g. skip pattern)
 c1d,IDS,Q1h1. Knowledge of the examiner,DSKNOWL,Conditional (e.g. skip pattern),"Integers 0-3, 8","0-3 | 8, Not assessed",Integer,"[dsmseadm] = ""1"""
 c1d,IDS,Q1h2. Knowledge of the examiner - Total score,DSKNWTT,Conditional (e.g. skip pattern),"Integers 0-3, 8","0-3 | 8, Not assessed",Integer,"[dsmseadm] = ""1"""
 c1d,IDS,Q1i1. DSMSE total score,DSMSETT,Conditional (e.g. skip pattern),"0.0 - 103.0, 995.0, 996.0, 997.0. 998.0","0.0 - 103.0 | 995.0, Physical problem | 996.0, Cognitive/behavior problem | 997.0, Other problem | 998.0, Verbal refusal",Numeric,"[dsmseadm] = ""1"""
-c1d,IDS,Q2a. Was any part of the Cued Recall Task admiistered?,DSCRADM,Always,Integers 0-1,"0, No | 1, Yes",Integer,
+c1d,IDS,Q2a. Was any part of the Cued Recall Task administered?,DSCRADM,Always,Integers 0-1,"0, No | 1, Yes",Integer,
 c1d,IDS,Q2a1. Cued Recall Task not administered: Specify reason,DSCRREAS,Conditional (e.g. skip pattern),Integers 95-98,"95, Physical problem | 96, Cognitive/behavior problem | 97, Other problem | 98, Verbal refusal",Integer,"[dscradm] = ""0"""
 c1d,IDS,Q2b. Which cue card set was used?,DSCRVERS,Conditional (e.g. skip pattern),Integers 1-2,"1, Version 1 (Set A) | 2, Version 2 (Set B)",Integer,"[dscradm] = ""1"""
 c1d,IDS,"Q2c1. Training trial - Trial 1, Card 1",DSCRT1C1,Conditional (e.g. skip pattern),Integers 0-4,0-4,Integer,"[dscradm] = ""1"""
