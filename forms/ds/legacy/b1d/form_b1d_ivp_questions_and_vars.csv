@@ -2,7 +2,7 @@
 b1d,IDS,0a. B1D Participant Demographics - Form date,FRMDATEB1D,Always,mm/dd/yyyy or yyyy/mm/dd,,Date,
 b1d,IDS,0b. B1D Participant Demographics - Examiner's initials,INITIALSB1D,No,Any text,,String,
 b1d,IDS,0c. Current living arrangement of person,DSLIV,Always,Integers 1-9,"1, Lives alone | 2, Lives with spouse or friends | 3, Lives with parents or other family members | 4, Lives with paid caregiver | 5, Lives in community group home, apartment, supervised housing, etc. | 6, Lives in senior housing | 7, Lives in congregate residential setting | 8, Lives in long term care facility | 9, Lives in other",Integer,
-b1d,IDS,0c1. Other living arrangement: Specify,DSLIVX,Conditional,Any text,,String,[dsliv]='1'
+b1d,IDS,0c1. Other living arrangement: Specify,DSLIVX,Conditional,Any text,,String,[dsliv]='9'
 b1d,IDS,7. Sex,DSSEX,Always,Integers 0-1,"0, Female | 1, Male",Integer,
 b1d,IDS,8 Best description of intellectual disability,DSDISLEV,Always,"Integers 1-6, 9","1, No discernible intellectual disability | 2, Borderline  (IQ 70-75) | 3, Mild ID (IQ 55-69) | 4, Moderate ID (IQ 40-54) | 5, Severe ID (IQ 25-39) | 6, Profound ID (IQ 24 and below) | 9, Unknown",Integer,
 b1d,IDS,9a. Diagnosed condition: Autism,DSDX_AUT,No,Integer 0-1 or blank,,Integer,
@@ -53,7 +53,7 @@ b1d,IDS,19a. Activities of daily living: Needs help washing and/or bathing,DSADL
 b1d,IDS,19b. Activities of daily living: Needs help with dressing,DSADL2,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
 b1d,IDS,"19c. Activities of daily living: Dresses inappropriately (e.g., back to front, incomplete, inadequately for weather)",DSADL3,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
 b1d,IDS,"19d. Activities of daily living: Undresses inappropriately (e.g., in public)",DSADL4,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
-b1d,IDS,"19e. Activities of dialy living: Needs help eating (cutting food, mouthful amounts, choking)",DSADL5,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
+b1d,IDS,"19e. Activities of daily living: Needs help eating (cutting food, mouthful amounts, choking)",DSADL5,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
 b1d,IDS,"19f. Activities of daily living: Needs help using the bathroom (finding, toileting)",DSADL6,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
 b1d,IDS,19g. Activities of daily living: Incontinent (including occasional accidents),DSADL7,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
 b1d,IDS,20a. Language and communication: Does not initiate conversation,DSLANG1,Always,Integers 0-3,"0, Does not apply | 1, New symptom in past year | 2, Always but worse | 3, Always been the case",Integer,
@@ -160,6 +160,6 @@ b1d,IDS,28c. Reason for current medication: Treatment of pain,DSPAINRX,Always,In
 b1d,IDS,29. Comments related to other notable changes or concerns,DSCOMM,No,Any text,,String,
 b1d,IDS,30a. Recommendations: Refer to treating physician for assessment,DSRE_REF,Conditional,Integer 0-1 or blank,,Integer,
 b1d,IDS,30b. Recommendations: Review internally by clinical personnel,DSRE_INT,Conditional,Integer 0-1 or blank,,Integer,
-b1d,IDS,30c. Recommendations: Include in annual review/annual welness visit,DSRE_ANN,Conditional,Integer 0-1 or blank,,Integer,
+b1d,IDS,30c. Recommendations: Include in annual review/annual wellness visit,DSRE_ANN,Conditional,Integer 0-1 or blank,,Integer,
 b1d,IDS,30d. Recommendations: Repeat in ... months,DSRE_REP,Conditional,Integer 0-1 or blank,,Integer,
 b1d,IDS,30d1. Recommendations: Specify number of months to repeat,DSREPMO,Conditional,Any number,,Numeric,[dsre_rep]='1'
