@@ -25,7 +25,7 @@ a1d,FDS,15. Musculoskeletal conditions - osteoporosis/osteopenia,DSOSTEO,Always,
 a1d,FDS,16. Musculoskeletal conditions - gout,DSGOUT,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
 a1d,FDS,17. Musculoskeletal conditions - atlanto-axial subluxation,DSATAXSU,Always,"0-1, 9","0, Absent | 1, Present | 9, Unknown",Integer,
 a1d,FDS,18. Musculoskeletal conditions - fractures in the past five years,DSFRACT,Always,"0-1, 9","0, Absent | 1, Present | 9, Unknown",Integer,
-a1d,FDS,18a. Fractures in the past five years: Specify,DSFRACTX,Conditional (e.g. skip pattern),text,,Integer,"[dsfract] = ""1"""
+a1d,FDS,18a. Fractures in the past five years: Specify,DSFRACTX,Conditional (e.g. skip pattern),text,,String,"[dsfract] = ""1"""
 a1d,FDS,19. Endocrine/metabolic conditions - Hypothyroidism,DSHYPOTH,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
 a1d,FDS,20. Endocrine/metabolic conditions - Hashimoto's thyroiditis,DSHASHIM,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
 a1d,FDS,21. Endocrine/metabolic conditions - hyperthyroidism,DSHYPER,Always,"0-2, 9","0, Absent | 1, Recent/active | 2, Remote/inactive | 9, Unknown",Integer,
